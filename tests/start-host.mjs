@@ -1,0 +1,10 @@
+import { readFile,writeFile,mkdir } from "node:fs/promises";
+import { resolve } from "node:path";
+import { startRelationalEngineNodeJsHost } from "@super-app/relational-engine-node-js-service";
+const root=resolve("..");
+const config=JSON.parse(await readFile(resolve(root,"relational-host.json"),"utf8"));
+config.workingDirectory=root;config.webHost.port=43122;
+await mkdir(resolve(root,".runtime"),{recursive:true});
+const path=resolve(root,".runtime/acceptance.json");await writeFile(path,JSON.stringify(config));
+const host=await startRelationalEngineNodeJsHost(path);
+process.on("SIGTERM",async()=>{await host.stop();process.exit(0)});

@@ -1,0 +1,1093 @@
+{
+  "format": "browser-recording-v1",
+  "scenario": "reviewed navigation supports nested channels and persistent cross-template pins",
+  "observations": [
+    {
+      "phase": "initial",
+      "afterInput": {
+        "ordinal": 1,
+        "label": "Personal composition offers Perso then Btr then Default"
+      },
+      "document": {
+        "kind": "complete",
+        "lines": [
+          "<body>",
+          "  <div id=\"app\">",
+          "    <super-app-template-frame class=\"super-app-template-frame\">",
+          "      <header class=\"super-app-topbar\">",
+          "        <div class=\"channel-pins\">",
+          "          <button aria-controls=\"channel-pins-1\" aria-expanded=\"false\" aria-label=\"Pinned channels\" class=\"channel-pins-trigger\" title=\"Pinned channels · Right-click to manage pins\" type=\"button\">",
+          "          </button>",
+          "          <relational-ui-anchored-surface alignment=\"start\" collision-padding=\"8\" dismiss-on-escape=\"\" dismiss-on-outside-pointer=\"\" gap=\"4\" placement=\"below\">",
+          "            <section class=\"channel-pins-panel\" id=\"channel-pins-1\">",
+          "            </section>",
+          "            <template shadowrootmode=\"open\">",
+          "              <div class=\"surface\" popover=\"manual\">",
+          "                <slot>",
+          "                </slot>",
+          "              </div>",
+          "            </template>",
+          "          </relational-ui-anchored-surface>",
+          "        </div>",
+          "        <div class=\"template-picker\">",
+          "          <button aria-controls=\"super-app-template-frame-1-template-menu\" aria-expanded=\"true\" aria-haspopup=\"menu\" aria-label=\"Active template\" class=\"template-picker-trigger\" type=\"button\">",
+          "            <span>",
+          "              Perso",
+          "            </span>",
+          "          </button>",
+          "          <div aria-label=\"Templates\" class=\"template-menu\" id=\"super-app-template-frame-1-template-menu\" role=\"menu\">",
+          "            <div class=\"template-menu-row\" data-template-id=\"personal\">",
+          "              <button aria-checked=\"true\" class=\"template-activate\" role=\"menuitemradio\" tabindex=\"-1\" type=\"button\">",
+          "                Perso",
+          "              </button>",
+          "            </div>",
+          "            <div class=\"template-menu-row\" data-template-id=\"btr-organisation\">",
+          "              <button aria-checked=\"false\" class=\"template-activate\" role=\"menuitemradio\" tabindex=\"-1\" type=\"button\">",
+          "                Btr Organisation",
+          "              </button>",
+          "            </div>",
+          "            <div class=\"template-menu-row\" data-template-id=\"default\">",
+          "              <button aria-checked=\"false\" class=\"template-activate\" role=\"menuitemradio\" tabindex=\"-1\" type=\"button\">",
+          "                Default",
+          "              </button>",
+          "            </div>",
+          "          </div>",
+          "        </div>",
+          "        <nav aria-label=\"Private spaces and communities\" class=\"community-navigation\">",
+          "          <button aria-pressed=\"true\" class=\"community-choice\" data-kind=\"private\" title=\"Your personal channels\" type=\"button\">",
+          "            Private space",
+          "          </button>",
+          "        </nav>",
+          "      </header>",
+          "      <div class=\"channel-navigation-body\">",
+          "        <nav aria-label=\"Channels\" class=\"channel-navigation\" id=\"channel-navigation-1\">",
+          "          <div class=\"channel-navigation-row\">",
+          "            <button aria-current=\"page\" class=\"channel-choice\" title=\"Your saved environments for building across systems.\" type=\"button\">",
+          "              Buildspaces",
+          "            </button>",
+          "          </div>",
+          "        </nav>",
+          "        <relational-ui-splitter class=\"relational-ui-splitter\" data-after-collapsed=\"false\" data-before-collapsed=\"false\" data-controls=\"hover\" for=\"channel-navigation-1\" min=\"112\" opposite-for=\"channel-navigation-1-content\" opposite-min=\"180\" orientation=\"vertical\" resize-label=\"Resize channels\">",
+          "          <div aria-controls=\"channel-navigation-1 channel-navigation-1-content\" aria-label=\"Resize channels\" aria-orientation=\"vertical\" aria-valuemax=\"1096\" aria-valuemin=\"0\" aria-valuenow=\"184\" class=\"relational-ui-splitter-handle\" role=\"separator\" tabindex=\"0\">",
+          "          </div>",
+          "          <div class=\"relational-ui-splitter-controls\">",
+          "            <button aria-label=\"Show only right panel\" aria-pressed=\"false\" class=\"relational-ui-splitter-preset\" data-ratio=\"0\" title=\"Show only right panel\" type=\"button\">",
+          "            </button>",
+          "            <button aria-label=\"Left panel: one quarter\" aria-pressed=\"false\" class=\"relational-ui-splitter-preset\" data-ratio=\"0.25\" title=\"Left panel: one quarter\" type=\"button\">",
+          "            </button>",
+          "            <button aria-label=\"Left panel: one third\" aria-pressed=\"false\" class=\"relational-ui-splitter-preset\" data-ratio=\"0.3333333333333333\" title=\"Left panel: one third\" type=\"button\">",
+          "            </button>",
+          "            <button aria-label=\"Equal panels\" aria-pressed=\"false\" class=\"relational-ui-splitter-preset\" data-ratio=\"0.5\" title=\"Equal panels\" type=\"button\">",
+          "            </button>",
+          "            <button aria-label=\"Right panel: one third\" aria-pressed=\"false\" class=\"relational-ui-splitter-preset\" data-ratio=\"0.6666666666666666\" title=\"Right panel: one third\" type=\"button\">",
+          "            </button>",
+          "            <button aria-label=\"Right panel: one quarter\" aria-pressed=\"false\" class=\"relational-ui-splitter-preset\" data-ratio=\"0.75\" title=\"Right panel: one quarter\" type=\"button\">",
+          "            </button>",
+          "            <button aria-label=\"Show only left panel\" aria-pressed=\"false\" class=\"relational-ui-splitter-preset\" data-ratio=\"1\" title=\"Show only left panel\" type=\"button\">",
+          "            </button>",
+          "          </div>",
+          "        </relational-ui-splitter>",
+          "        <main aria-label=\"Buildspaces\" class=\"channel-content\" id=\"channel-navigation-1-content\">",
+          "          <section class=\"information-panel\">",
+          "            <h1>",
+          "              Buildspaces",
+          "            </h1>",
+          "            <p>",
+          "              Your saved environments for building across systems.",
+          "            </p>",
+          "          </section>",
+          "        </main>",
+          "      </div>",
+          "    </super-app-template-frame>",
+          "  </div>",
+          "</body>"
+        ]
+      },
+      "browser": {
+        "kind": "complete",
+        "metadata": {
+          "baseUrl": "http://127.0.0.1:43122/?token=local-super-app-review",
+          "language": "en",
+          "title": "SuperApp relational UI",
+          "url": "http://127.0.0.1:43122/?token=local-super-app-review"
+        },
+        "runtime": {
+          "controls": [],
+          "focus": {
+            "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)"
+          },
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 740,
+            "width": 1100
+          }
+        }
+      }
+    },
+    {
+      "phase": "change",
+      "afterInput": {
+        "ordinal": 2,
+        "label": "Manage pins lists unopened templates without navigating away"
+      },
+      "document": {
+        "kind": "patch",
+        "changes": [
+          {
+            "start": 5,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"channel-pins-1\" aria-expanded=\"true\" aria-label=\"Pinned channels\" class=\"channel-pins-trigger\" title=\"Pinned channels · Right-click to manage pins\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 7,
+            "deleteCount": 2,
+            "lines": [
+              "          <relational-ui-anchored-surface alignment=\"start\" collision-padding=\"8\" dismiss-on-escape=\"\" dismiss-on-outside-pointer=\"\" gap=\"4\" open=\"\" placement=\"below\" resolved-placement=\"below\">",
+              "            <section aria-label=\"Manage pins\" class=\"channel-pins-panel\" id=\"channel-pins-1\">",
+              "              <div class=\"channel-pins-heading\">",
+              "                <strong>",
+              "                  Manage pins",
+              "                </strong>",
+              "                <button type=\"button\">",
+              "                  Done",
+              "                </button>",
+              "              </div>",
+              "              <section aria-label=\"Perso\">",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 0px;\">",
+              "                  <button type=\"button\">",
+              "                    Perso",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Perso\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 12px;\">",
+              "                  <button type=\"button\">",
+              "                    Private space",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Private space\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 24px;\">",
+              "                  <button type=\"button\">",
+              "                    Buildspaces",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Buildspaces\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "              </section>",
+              "              <section aria-label=\"Btr Organisation\">",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 0px;\">",
+              "                  <button type=\"button\">",
+              "                    Btr Organisation",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Btr Organisation\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 12px;\">",
+              "                  <button type=\"button\">",
+              "                    Btr",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Btr\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 24px;\">",
+              "                  <button type=\"button\">",
+              "                    Systems",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Systems\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 36px;\">",
+              "                  <button type=\"button\">",
+              "                    The Broccoli",
+              "                  </button>",
+              "                  <input aria-label=\"Pin The Broccoli\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 36px;\">",
+              "                  <button type=\"button\">",
+              "                    Space game",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Space game\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 36px;\">",
+              "                  <button type=\"button\">",
+              "                    EDF mods",
+              "                  </button>",
+              "                  <input aria-label=\"Pin EDF mods\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "              </section>",
+              "              <section aria-label=\"Default\">",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 0px;\">",
+              "                  <button type=\"button\">",
+              "                    Default",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Default\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "              </section>"
+            ]
+          },
+          {
+            "start": 11,
+            "deleteCount": 1,
+            "lines": [
+              "              <div class=\"surface\" popover=\"manual\" style=\"visibility: visible; max-width: 1084px; max-height: 696.5px; left: 8px; top: 36px;\">"
+            ]
+          },
+          {
+            "start": 19,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"super-app-template-frame-1-template-menu\" aria-expanded=\"false\" aria-haspopup=\"menu\" aria-label=\"Active template\" class=\"template-picker-trigger\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 24,
+            "deleteCount": 17,
+            "lines": []
+          }
+        ]
+      },
+      "browser": {
+        "kind": "change",
+        "runtime": {
+          "controls": [
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(3) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(2) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(3) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(4) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(5) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(6) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > input:nth-of-type(1)",
+              "value": "on"
+            }
+          ],
+          "focus": {
+            "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)"
+          },
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 740,
+            "width": 1100
+          }
+        }
+      }
+    },
+    {
+      "phase": "change",
+      "afterInput": {
+        "ordinal": 3,
+        "label": "Btr owns three project channels inside Systems"
+      },
+      "document": {
+        "kind": "patch",
+        "changes": [
+          {
+            "start": 5,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"channel-pins-2\" aria-expanded=\"false\" aria-label=\"Pinned channels\" class=\"channel-pins-trigger\" title=\"Pinned channels · Right-click to manage pins\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 7,
+            "deleteCount": 86,
+            "lines": [
+              "          <relational-ui-anchored-surface alignment=\"start\" collision-padding=\"8\" dismiss-on-escape=\"\" dismiss-on-outside-pointer=\"\" gap=\"4\" placement=\"below\">",
+              "            <section class=\"channel-pins-panel\" id=\"channel-pins-2\">"
+            ]
+          },
+          {
+            "start": 95,
+            "deleteCount": 1,
+            "lines": [
+              "              <div class=\"surface\" popover=\"manual\">"
+            ]
+          },
+          {
+            "start": 103,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"super-app-template-frame-2-template-menu\" aria-expanded=\"false\" aria-haspopup=\"menu\" aria-label=\"Active template\" class=\"template-picker-trigger\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 105,
+            "deleteCount": 1,
+            "lines": [
+              "              Btr Organisation"
+            ]
+          },
+          {
+            "start": 110,
+            "deleteCount": 2,
+            "lines": [
+              "          <button aria-pressed=\"true\" class=\"community-choice\" data-kind=\"community\" title=\"Btr organisation channels\" type=\"button\">",
+              "            Btr"
+            ]
+          },
+          {
+            "start": 116,
+            "deleteCount": 1,
+            "lines": [
+              "        <nav aria-label=\"Channels\" class=\"channel-navigation\" id=\"channel-navigation-2\">"
+            ]
+          },
+          {
+            "start": 118,
+            "deleteCount": 3,
+            "lines": [
+              "            <button class=\"channel-choice\" title=\"Understand and work on Btr systems.\" type=\"button\">",
+              "              Systems",
+              "            </button>",
+              "            <button aria-expanded=\"true\" aria-label=\"Expand Systems\" class=\"channel-expand\" title=\"Show or hide channels within Systems\" type=\"button\">",
+              "              ▾",
+              "            </button>",
+              "          </div>",
+              "          <div class=\"channel-children\">",
+              "            <div class=\"channel-navigation-row\">",
+              "              <button class=\"channel-choice\" title=\"Understand and improve the Broccoli harness.\" type=\"button\">",
+              "                The Broccoli",
+              "              </button>",
+              "            </div>",
+              "            <div class=\"channel-navigation-row\">",
+              "              <button class=\"channel-choice\" title=\"Work on the spaceship game.\" type=\"button\">",
+              "                Space game",
+              "              </button>",
+              "            </div>",
+              "            <div class=\"channel-navigation-row\">",
+              "              <button aria-current=\"page\" class=\"channel-choice\" title=\"Work on EDF mods.\" type=\"button\">",
+              "                EDF mods",
+              "              </button>",
+              "            </div>"
+            ]
+          },
+          {
+            "start": 123,
+            "deleteCount": 2,
+            "lines": [
+              "        <relational-ui-splitter class=\"relational-ui-splitter\" data-after-collapsed=\"false\" data-before-collapsed=\"false\" data-controls=\"hover\" for=\"channel-navigation-2\" min=\"112\" opposite-for=\"channel-navigation-2-content\" opposite-min=\"180\" orientation=\"vertical\" resize-label=\"Resize channels\">",
+              "          <div aria-controls=\"channel-navigation-2 channel-navigation-2-content\" aria-label=\"Resize channels\" aria-orientation=\"vertical\" aria-valuemax=\"1096\" aria-valuemin=\"0\" aria-valuenow=\"184\" class=\"relational-ui-splitter-handle\" role=\"separator\" tabindex=\"0\">"
+            ]
+          },
+          {
+            "start": 143,
+            "deleteCount": 1,
+            "lines": [
+              "        <main aria-label=\"EDF mods\" class=\"channel-content\" id=\"channel-navigation-2-content\">"
+            ]
+          },
+          {
+            "start": 146,
+            "deleteCount": 1,
+            "lines": [
+              "              EDF mods"
+            ]
+          },
+          {
+            "start": 149,
+            "deleteCount": 1,
+            "lines": [
+              "              Work on EDF mods.",
+              "            </p>",
+              "            <p>",
+              "              No views configured for this channel yet."
+            ]
+          }
+        ]
+      },
+      "browser": {
+        "kind": "change",
+        "runtime": {
+          "controls": [],
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 740,
+            "width": 1100
+          }
+        }
+      }
+    },
+    {
+      "phase": "change",
+      "afterInput": {
+        "ordinal": 4,
+        "label": "Pin Space game for access across templates"
+      },
+      "document": {
+        "kind": "patch",
+        "changes": [
+          {
+            "start": 5,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"channel-pins-2\" aria-expanded=\"true\" aria-label=\"Pinned channels\" class=\"channel-pins-trigger\" title=\"Pinned channels · Right-click to manage pins\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 7,
+            "deleteCount": 2,
+            "lines": [
+              "          <relational-ui-anchored-surface alignment=\"start\" collision-padding=\"8\" dismiss-on-escape=\"\" dismiss-on-outside-pointer=\"\" gap=\"4\" open=\"\" placement=\"below\" resolved-placement=\"below\">",
+              "            <section aria-label=\"Pinned channels\" class=\"channel-pins-panel\" id=\"channel-pins-2\">",
+              "              <section aria-label=\"Btr Organisation\">",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 0px;\">",
+              "                  <button type=\"button\">",
+              "                    Btr Organisation",
+              "                  </button>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 36px;\">",
+              "                  <button type=\"button\">",
+              "                    Space game",
+              "                  </button>",
+              "                </div>",
+              "              </section>"
+            ]
+          },
+          {
+            "start": 11,
+            "deleteCount": 1,
+            "lines": [
+              "              <div class=\"surface\" popover=\"manual\" style=\"visibility: visible; max-width: 1084px; max-height: 696.5px; left: 8px; top: 36px;\">"
+            ]
+          },
+          {
+            "start": 48,
+            "deleteCount": 1,
+            "lines": [
+              "              <button aria-current=\"page\" class=\"channel-choice\" title=\"Work on the spaceship game.\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 53,
+            "deleteCount": 1,
+            "lines": [
+              "              <button class=\"channel-choice\" title=\"Work on EDF mods.\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 79,
+            "deleteCount": 1,
+            "lines": [
+              "        <main aria-label=\"Space game\" class=\"channel-content\" id=\"channel-navigation-2-content\">"
+            ]
+          },
+          {
+            "start": 82,
+            "deleteCount": 1,
+            "lines": [
+              "              Space game"
+            ]
+          },
+          {
+            "start": 85,
+            "deleteCount": 1,
+            "lines": [
+              "              Work on the spaceship game."
+            ]
+          }
+        ]
+      },
+      "browser": {
+        "kind": "change",
+        "runtime": {
+          "controls": [],
+          "focus": {
+            "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)"
+          },
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 740,
+            "width": 1100
+          }
+        }
+      }
+    },
+    {
+      "phase": "change",
+      "afterInput": {
+        "ordinal": 5,
+        "label": "Reload Perso and open its saved cross-template pin"
+      },
+      "document": {
+        "kind": "patch",
+        "changes": [
+          {
+            "start": 5,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"channel-pins-1\" aria-expanded=\"true\" aria-label=\"Pinned channels\" class=\"channel-pins-trigger\" title=\"Pinned channels · Right-click to manage pins\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 8,
+            "deleteCount": 1,
+            "lines": [
+              "            <section aria-label=\"Pinned channels\" class=\"channel-pins-panel\" id=\"channel-pins-1\">"
+            ]
+          },
+          {
+            "start": 15,
+            "deleteCount": 1,
+            "lines": [
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 12px;\">"
+            ]
+          },
+          {
+            "start": 31,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"super-app-template-frame-1-template-menu\" aria-expanded=\"false\" aria-haspopup=\"menu\" aria-label=\"Active template\" class=\"template-picker-trigger\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 33,
+            "deleteCount": 1,
+            "lines": [
+              "              Perso"
+            ]
+          },
+          {
+            "start": 38,
+            "deleteCount": 2,
+            "lines": [
+              "          <button aria-pressed=\"true\" class=\"community-choice\" data-kind=\"private\" title=\"Your personal channels\" type=\"button\">",
+              "            Private space"
+            ]
+          },
+          {
+            "start": 44,
+            "deleteCount": 1,
+            "lines": [
+              "        <nav aria-label=\"Channels\" class=\"channel-navigation\" id=\"channel-navigation-1\">"
+            ]
+          },
+          {
+            "start": 46,
+            "deleteCount": 23,
+            "lines": [
+              "            <button aria-current=\"page\" class=\"channel-choice\" title=\"Your saved environments for building across systems.\" type=\"button\">",
+              "              Buildspaces",
+              "            </button>"
+            ]
+          },
+          {
+            "start": 71,
+            "deleteCount": 2,
+            "lines": [
+              "        <relational-ui-splitter class=\"relational-ui-splitter\" data-after-collapsed=\"false\" data-before-collapsed=\"false\" data-controls=\"hover\" for=\"channel-navigation-1\" min=\"112\" opposite-for=\"channel-navigation-1-content\" opposite-min=\"180\" orientation=\"vertical\" resize-label=\"Resize channels\">",
+              "          <div aria-controls=\"channel-navigation-1 channel-navigation-1-content\" aria-label=\"Resize channels\" aria-orientation=\"vertical\" aria-valuemax=\"1096\" aria-valuemin=\"0\" aria-valuenow=\"184\" class=\"relational-ui-splitter-handle\" role=\"separator\" tabindex=\"0\">"
+            ]
+          },
+          {
+            "start": 91,
+            "deleteCount": 1,
+            "lines": [
+              "        <main aria-label=\"Buildspaces\" class=\"channel-content\" id=\"channel-navigation-1-content\">"
+            ]
+          },
+          {
+            "start": 94,
+            "deleteCount": 1,
+            "lines": [
+              "              Buildspaces"
+            ]
+          },
+          {
+            "start": 97,
+            "deleteCount": 4,
+            "lines": [
+              "              Your saved environments for building across systems."
+            ]
+          }
+        ]
+      },
+      "browser": {
+        "kind": "change",
+        "runtime": {
+          "controls": [],
+          "focus": {
+            "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)"
+          },
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 740,
+            "width": 1100
+          }
+        }
+      }
+    },
+    {
+      "phase": "change",
+      "afterInput": {
+        "ordinal": 6,
+        "label": "A saved pin mounts Btr and selects the nested channel"
+      },
+      "document": {
+        "kind": "patch",
+        "changes": [
+          {
+            "start": 5,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"channel-pins-2\" aria-expanded=\"false\" aria-label=\"Pinned channels\" class=\"channel-pins-trigger\" title=\"Pinned channels · Right-click to manage pins\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 7,
+            "deleteCount": 14,
+            "lines": [
+              "          <relational-ui-anchored-surface alignment=\"start\" collision-padding=\"8\" dismiss-on-escape=\"\" dismiss-on-outside-pointer=\"\" gap=\"4\" placement=\"below\">",
+              "            <section class=\"channel-pins-panel\" id=\"channel-pins-2\">"
+            ]
+          },
+          {
+            "start": 23,
+            "deleteCount": 1,
+            "lines": [
+              "              <div class=\"surface\" popover=\"manual\">"
+            ]
+          },
+          {
+            "start": 31,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"super-app-template-frame-2-template-menu\" aria-expanded=\"false\" aria-haspopup=\"menu\" aria-label=\"Active template\" class=\"template-picker-trigger\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 33,
+            "deleteCount": 1,
+            "lines": [
+              "              Btr Organisation"
+            ]
+          },
+          {
+            "start": 38,
+            "deleteCount": 2,
+            "lines": [
+              "          <button aria-pressed=\"true\" class=\"community-choice\" data-kind=\"community\" title=\"Btr organisation channels\" type=\"button\">",
+              "            Btr"
+            ]
+          },
+          {
+            "start": 44,
+            "deleteCount": 1,
+            "lines": [
+              "        <nav aria-label=\"Channels\" class=\"channel-navigation\" id=\"channel-navigation-2\">"
+            ]
+          },
+          {
+            "start": 46,
+            "deleteCount": 3,
+            "lines": [
+              "            <button class=\"channel-choice\" title=\"Understand and work on Btr systems.\" type=\"button\">",
+              "              Systems",
+              "            </button>",
+              "            <button aria-expanded=\"true\" aria-label=\"Expand Systems\" class=\"channel-expand\" title=\"Show or hide channels within Systems\" type=\"button\">",
+              "              ▾",
+              "            </button>",
+              "          </div>",
+              "          <div class=\"channel-children\">",
+              "            <div class=\"channel-navigation-row\">",
+              "              <button class=\"channel-choice\" title=\"Understand and improve the Broccoli harness.\" type=\"button\">",
+              "                The Broccoli",
+              "              </button>",
+              "            </div>",
+              "            <div class=\"channel-navigation-row\">",
+              "              <button aria-current=\"page\" class=\"channel-choice\" title=\"Work on the spaceship game.\" type=\"button\">",
+              "                Space game",
+              "              </button>",
+              "            </div>",
+              "            <div class=\"channel-navigation-row\">",
+              "              <button class=\"channel-choice\" title=\"Work on EDF mods.\" type=\"button\">",
+              "                EDF mods",
+              "              </button>",
+              "            </div>"
+            ]
+          },
+          {
+            "start": 51,
+            "deleteCount": 2,
+            "lines": [
+              "        <relational-ui-splitter class=\"relational-ui-splitter\" data-after-collapsed=\"false\" data-before-collapsed=\"false\" data-controls=\"hover\" for=\"channel-navigation-2\" min=\"112\" opposite-for=\"channel-navigation-2-content\" opposite-min=\"180\" orientation=\"vertical\" resize-label=\"Resize channels\">",
+              "          <div aria-controls=\"channel-navigation-2 channel-navigation-2-content\" aria-label=\"Resize channels\" aria-orientation=\"vertical\" aria-valuemax=\"1096\" aria-valuemin=\"0\" aria-valuenow=\"184\" class=\"relational-ui-splitter-handle\" role=\"separator\" tabindex=\"0\">"
+            ]
+          },
+          {
+            "start": 71,
+            "deleteCount": 1,
+            "lines": [
+              "        <main aria-label=\"Space game\" class=\"channel-content\" id=\"channel-navigation-2-content\" tabindex=\"-1\">"
+            ]
+          },
+          {
+            "start": 74,
+            "deleteCount": 1,
+            "lines": [
+              "              Space game"
+            ]
+          },
+          {
+            "start": 77,
+            "deleteCount": 1,
+            "lines": [
+              "              Work on the spaceship game.",
+              "            </p>",
+              "            <p>",
+              "              No views configured for this channel yet."
+            ]
+          }
+        ]
+      },
+      "browser": {
+        "kind": "change",
+        "runtime": {
+          "controls": [],
+          "focus": {
+            "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1)"
+          },
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 740,
+            "width": 1100
+          }
+        }
+      }
+    },
+    {
+      "phase": "change",
+      "afterInput": {
+        "ordinal": 7,
+        "label": "The pin list fits a constrained window"
+      },
+      "document": {
+        "kind": "patch",
+        "changes": [
+          {
+            "start": 5,
+            "deleteCount": 1,
+            "lines": [
+              "          <button aria-controls=\"channel-pins-2\" aria-expanded=\"true\" aria-label=\"Pinned channels\" class=\"channel-pins-trigger\" title=\"Pinned channels · Right-click to manage pins\" type=\"button\">"
+            ]
+          },
+          {
+            "start": 7,
+            "deleteCount": 2,
+            "lines": [
+              "          <relational-ui-anchored-surface alignment=\"start\" collision-padding=\"8\" dismiss-on-escape=\"\" dismiss-on-outside-pointer=\"\" gap=\"4\" open=\"\" placement=\"below\" resolved-placement=\"below\">",
+              "            <section aria-label=\"Pinned channels\" class=\"channel-pins-panel\" id=\"channel-pins-2\">",
+              "              <section aria-label=\"Btr Organisation\">",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 0px;\">",
+              "                  <button type=\"button\">",
+              "                    Btr Organisation",
+              "                  </button>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 36px;\">",
+              "                  <button type=\"button\">",
+              "                    Space game",
+              "                  </button>",
+              "                </div>",
+              "              </section>"
+            ]
+          },
+          {
+            "start": 11,
+            "deleteCount": 1,
+            "lines": [
+              "              <div class=\"surface\" popover=\"manual\" style=\"visibility: visible; max-width: 538px; max-height: 538.5px; left: 8px; top: 36px;\">"
+            ]
+          },
+          {
+            "start": 60,
+            "deleteCount": 1,
+            "lines": [
+              "          <div aria-controls=\"channel-navigation-2 channel-navigation-2-content\" aria-label=\"Resize channels\" aria-orientation=\"vertical\" aria-valuemax=\"550\" aria-valuemin=\"0\" aria-valuenow=\"184\" class=\"relational-ui-splitter-handle\" role=\"separator\" tabindex=\"0\">"
+            ]
+          },
+          {
+            "start": 67,
+            "deleteCount": 1,
+            "lines": [
+              "            <button aria-label=\"Left panel: one third\" aria-pressed=\"true\" class=\"relational-ui-splitter-preset\" data-ratio=\"0.3333333333333333\" title=\"Left panel: one third\" type=\"button\">"
+            ]
+          }
+        ]
+      },
+      "browser": {
+        "kind": "change",
+        "runtime": {
+          "controls": [],
+          "focus": {
+            "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)"
+          },
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 582,
+            "width": 554
+          }
+        }
+      }
+    },
+    {
+      "phase": "change",
+      "afterInput": {
+        "ordinal": 8,
+        "label": "Manage pins in a constrained window"
+      },
+      "document": {
+        "kind": "patch",
+        "changes": [
+          {
+            "start": 8,
+            "deleteCount": 1,
+            "lines": [
+              "            <section aria-label=\"Manage pins\" class=\"channel-pins-panel\" id=\"channel-pins-2\">",
+              "              <div class=\"channel-pins-heading\">",
+              "                <strong>",
+              "                  Manage pins",
+              "                </strong>",
+              "                <button type=\"button\">",
+              "                  Done",
+              "                </button>",
+              "              </div>",
+              "              <section aria-label=\"Perso\">",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 0px;\">",
+              "                  <button type=\"button\">",
+              "                    Perso",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Perso\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 12px;\">",
+              "                  <button type=\"button\">",
+              "                    Private space",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Private space\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 24px;\">",
+              "                  <button type=\"button\">",
+              "                    Buildspaces",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Buildspaces\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "              </section>"
+            ]
+          },
+          {
+            "start": 14,
+            "deleteCount": 0,
+            "lines": [
+              "                  <input aria-label=\"Pin Btr Organisation\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 12px;\">",
+              "                  <button type=\"button\">",
+              "                    Btr",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Btr\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 24px;\">",
+              "                  <button type=\"button\">",
+              "                    Systems",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Systems\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 36px;\">",
+              "                  <button type=\"button\">",
+              "                    The Broccoli",
+              "                  </button>",
+              "                  <input aria-label=\"Pin The Broccoli\" type=\"checkbox\">",
+              "                  </input>"
+            ]
+          },
+          {
+            "start": 19,
+            "deleteCount": 0,
+            "lines": [
+              "                  <input aria-label=\"Pin Space game\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 36px;\">",
+              "                  <button type=\"button\">",
+              "                    EDF mods",
+              "                  </button>",
+              "                  <input aria-label=\"Pin EDF mods\" type=\"checkbox\">",
+              "                  </input>",
+              "                </div>",
+              "              </section>",
+              "              <section aria-label=\"Default\">",
+              "                <div class=\"channel-pin-row\" style=\"padding-left: 0px;\">",
+              "                  <button type=\"button\">",
+              "                    Default",
+              "                  </button>",
+              "                  <input aria-label=\"Pin Default\" type=\"checkbox\">",
+              "                  </input>"
+            ]
+          }
+        ]
+      },
+      "browser": {
+        "kind": "change",
+        "runtime": {
+          "controls": [
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(2) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(3) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(1) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(2) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(3) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(4) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": true,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(5) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(2) > div:nth-of-type(6) > input:nth-of-type(1)",
+              "value": "on"
+            },
+            {
+              "checked": false,
+              "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > section:nth-of-type(3) > div:nth-of-type(1) > input:nth-of-type(1)",
+              "value": "on"
+            }
+          ],
+          "focus": {
+            "path": "html:nth-of-type(1) > body:nth-of-type(1) > div:nth-of-type(1) > super-app-template-frame:nth-of-type(1) > header:nth-of-type(1) > div:nth-of-type(1) > relational-ui-anchored-surface:nth-of-type(1) > section:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)"
+          },
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 582,
+            "width": 554
+          }
+        }
+      }
+    },
+    {
+      "phase": "change",
+      "afterInput": {
+        "ordinal": 9,
+        "label": "Saved channels can be unpinned"
+      },
+      "document": {
+        "kind": "patch",
+        "changes": [
+          {
+            "start": 8,
+            "deleteCount": 85,
+            "lines": [
+              "            <section aria-label=\"Pinned channels\" class=\"channel-pins-panel\" id=\"channel-pins-2\">",
+              "              <p>",
+              "                No pins yet. Right-click the broccoli button to manage pins.",
+              "              </p>"
+            ]
+          }
+        ]
+      },
+      "browser": {
+        "kind": "change",
+        "runtime": {
+          "controls": [],
+          "scroll": [],
+          "viewport": {
+            "deviceScaleFactor": 1,
+            "height": 582,
+            "width": 554
+          }
+        }
+      }
+    },
+    {
+      "phase": "no-change",
+      "verification": "final settled state unchanged"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@perso/acceptance",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@super-app/browser-test-support": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-browser-test-support-0.1.0.tgz",
+    "@playwright/test": "^1.62.1",
+    "@super-app/relational-engine-node-js-service": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-engine-node-js-service-0.1.0.tgz"
+  }
+}

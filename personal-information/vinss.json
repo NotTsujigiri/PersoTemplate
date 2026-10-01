@@ -1,0 +1,27 @@
+{
+  "experience": [
+    "Experienced software developer with deep C++ desktop and industrial-software experience."
+  ],
+  "learning": [
+    "Learning production TypeScript and web development."
+  ],
+  "projects": [
+    "Pursuing independent, AI-assisted work on AI tooling and a game with a long-standing collaborator."
+  ],
+  "goals": [
+    "Financial independence to choose what to do, when to do it, and how to do it, rather than to maximize consumption."
+  ],
+  "workingPreferences": [
+    "Considers laziness one of his greatest qualities: repeated manual effort is a reason to consider a better foundation, abstraction, or process.",
+    "Willingly invests in foundations that create lasting leverage while balancing that investment against concrete results."
+  ],
+  "aiExpectations": [
+    "Increase the quality, throughput, and parallelism of what he can accomplish."
+  ],
+  "accessibility": [
+    "Readable font sizes.",
+    "Manageable information density.",
+    "Stable spatial organization.",
+    "Avoid extensive horizontal visual scanning."
+  ]
+}

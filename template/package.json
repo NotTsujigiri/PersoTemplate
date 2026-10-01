@@ -1,0 +1,45 @@
+{
+  "name": "@perso/template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && esbuild src/index.ts --bundle --format=esm --platform=browser --outfile=dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./channels/source": "./src/channels.ts",
+    "./vault": "./vault.mjs"
+  },
+  "files": [
+    "dist",
+    "src",
+    "tsconfig.json",
+    "vault.mjs"
+  ],
+  "dependencies": {
+    "@super-app/default-super-app-template": "file:../../../Btr/TheBroccoli/Systems/Depth2/DefaultSuperAppTemplate",
+    "@super-app/relational-ui-contributor": "file:../../../Btr/TheBroccoli/Systems/Depth1/RelationalUi"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "esbuild": "0.28.1"
+  },
+  "superAppTemplate": {
+    "id": "personal",
+    "label": "Perso",
+    "entry": "dist/index.js",
+    "sourceEntry": "src/index.ts",
+    "assets": [],
+    "sources": [
+      "package.json",
+      "tsconfig.json",
+      "src/index.ts",
+      "src/channels.ts",
+      "src/profile-fields.ts"
+    ]
+  }
+}
