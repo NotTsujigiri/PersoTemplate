@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "repositories": [
+    {
+      "url": "file:///C:/Users/vince/Documents/GitHub/Btr/TheBroccoli",
+      "path": "TheBroccoli",
+      "policy": {
+        "kind": "branch",
+        "value": "codex/repo-composition-trial"
+      }
+    }
+  ]
+}
