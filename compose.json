@@ -3,10 +3,10 @@
   "repositories": [
     {
       "url": "file:///C:/Users/vince/Documents/GitHub/Btr/TheBroccoli",
-      "path": "TheBroccoli",
+      "path": "Btr/TheBroccoli",
       "policy": {
         "kind": "branch",
-        "value": "codex/repo-composition-trial"
+        "value": "master"
       }
     }
   ]

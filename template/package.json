@@ -21,8 +21,8 @@
     "vault.mjs"
   ],
   "dependencies": {
-    "@super-app/default-super-app-template": "file:../../TheBroccoli/Systems/Depth2/DefaultSuperAppTemplate",
-    "@super-app/relational-ui-contributor": "file:../../TheBroccoli/Systems/Depth1/RelationalUi"
+    "@super-app/default-super-app-template": "file:../../../Btr/TheBroccoli/Systems/Depth2/DefaultSuperAppTemplate",
+    "@super-app/relational-ui-contributor": "file:../../../Btr/TheBroccoli/Systems/Depth1/RelationalUi"
   },
   "devDependencies": {
     "typescript": "^5.9.2",
