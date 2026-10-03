@@ -10,11 +10,11 @@
     "strict": true,
     "declaration": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": "Depth0/Template",
     "skipLibCheck": false,
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "Depth0/Template/**/*.ts"
   ]
 }

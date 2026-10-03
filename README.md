@@ -1,14 +1,16 @@
 # Personal application
 
-The root package owns this local app assembly. The personal template is the separate workspace package in template/. Btr is an installed dependency from its own repository.
+The root package owns this local app assembly. The personal template is the separate workspace package in Systems/Depth0/PersonalTemplate/. Btr is an installed dependency from its own repository.
 
 Run npm install --offline, npm run build, then npm start. Open http://127.0.0.1:43121/?token=local-super-app-review. Use npm stop to stop the managed service.
 
-Run npm test for the recorded integration scenarios; it starts an isolated acceptance host on port 43122. Review test-results/ui-review/manifest.json and the screenshots beside tests/assembly.spec.ts. Normal tests do not replace expected recordings.
+Run npm test for the recorded integration scenarios; it starts an isolated acceptance host on port 43122. Review test-results/ui-review/manifest.json and the screenshots beside Systems/Depth0/Acceptance/assembly.spec.ts. Normal tests do not replace expected recordings.
 
 Dependencies currently use local release archives produced by Broccoli's scripts/pack-local-packages.mjs, plus the independently built Btr package. After updating Btr, build it in its repository and install its new package archive here. No source imports into the Broccoli checkout are used. GitHub hosting has not been configured.
 
-Navigation definitions are authored in template/src/index.ts and the Btr template's source. Perso currently has an empty private space pending the choice of initial channels. Community navigation does not implement network membership or access control.
+Navigation definitions are authored in `Systems/Depth0/PersonalTemplate/Depth0/Template` and the Btr template's source. Community navigation does not implement network membership or access control.
+
+`npm run check:organisation` uses Broccoli's shared ProjectTools package to enforce workspace and source-folder depths. `npm run build` runs that check before building the template. Depth is computed within each repository or parent system; external package dependencies remain explicit in the owning `package.json`.
 
 To refresh local Broccoli packages, run `build.ps1` in its checkout, then:
 

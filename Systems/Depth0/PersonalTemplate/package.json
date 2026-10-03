@@ -1,0 +1,48 @@
+{
+  "name": "@perso/template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && esbuild Depth0/Template/index.ts --bundle --format=esm --platform=browser --outfile=dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./channels/source": "./Depth0/Template/channels.ts",
+    "./vault": "./vault.mjs"
+  },
+  "files": [
+    "dist",
+    "Depth0/Template",
+    "tsconfig.json",
+    "vault.mjs"
+  ],
+  "dependencies": {
+    "@super-app/default-super-app-template": "file:../../../../../Btr/TheBroccoli/Systems/Depth2/DefaultSuperAppTemplate",
+    "@super-app/relational-ui-contributor": "file:../../../../../Btr/TheBroccoli/Systems/Depth1/RelationalUi"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "esbuild": "0.28.1"
+  },
+  "superAppTemplate": {
+    "id": "personal",
+    "label": "Perso",
+    "entry": "dist/index.js",
+    "sourceEntry": "Depth0/Template/index.ts",
+    "assets": [],
+    "sources": [
+      "package.json",
+      "tsconfig.json",
+      "Depth0/Template/index.ts",
+      "Depth0/Template/channels.ts",
+      "Depth0/Template/profile-fields.ts"
+    ]
+  },
+  "broccoli": {
+    "compositionRoot": "../../.."
+  }
+}

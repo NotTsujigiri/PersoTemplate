@@ -4,29 +4,33 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "template",
-    "tests"
+    "Systems/Depth0/PersonalTemplate",
+    "Systems/Depth0/Acceptance"
   ],
   "scripts": {
     "start": "powershell -NoProfile -File ./start-service.ps1",
     "test": "npm run test --workspace @perso/acceptance",
     "service": "relational-engine-node-js-service relational-host.json",
     "stop": "powershell -NoProfile -File ./stop-service.ps1",
-    "build": "npm run build --workspace @perso/template"
+    "build": "npm run check:organisation && npm run build --workspace @perso/template",
+    "check:organisation": "check-system-organisation"
   },
   "dependencies": {
-    "@btr/template": "file:C:/Users/vince/Documents/GitHub/Btr/BtrTemplate/.runtime/decisions-review-release/btr-template-0.1.0.tgz",
+    "@btr/template": "file:../../Btr/BtrTemplate/.runtime/decisions-review-release/btr-template-0.1.0.tgz",
     "@perso/template": "0.1.0",
-    "@super-app/relational-engine-node-js-service": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-engine-node-js-service-0.1.0.tgz",
-    "@super-app/relational-ui-browser-app": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-ui-browser-app-0.1.0.tgz",
-    "@super-app/relational-ui-contributor": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-ui-contributor-0.1.0.tgz",
-    "@super-app/default-super-app-template": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-default-super-app-template-0.1.0.tgz",
-    "@super-app/relational-engine-web-bridge-contributor": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-engine-web-bridge-contributor-0.1.0.tgz",
-    "@super-app/filesystem-contributor": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-filesystem-contributor-0.1.0.tgz",
-    "@super-app/typescript-contributor": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/authoring-ready-packages/super-app-typescript-contributor-0.1.0.tgz",
-    "@super-app/repository-organisation": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-repository-organisation-0.1.0.tgz",
-    "@super-app/harness-contributor": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-harness-contributor-0.1.0.tgz",
-    "@super-app/systems-engineering-contributor": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-systems-engineering-contributor-0.1.0.tgz",
-    "@super-app/tagging-contributor": "file:C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-tagging-contributor-0.1.0.tgz"
+    "@super-app/relational-engine-node-js-service": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-engine-node-js-service-0.1.0.tgz",
+    "@super-app/relational-ui-browser-app": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-ui-browser-app-0.1.0.tgz",
+    "@super-app/relational-ui-contributor": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-ui-contributor-0.1.0.tgz",
+    "@super-app/default-super-app-template": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-default-super-app-template-0.1.0.tgz",
+    "@super-app/relational-engine-web-bridge-contributor": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-relational-engine-web-bridge-contributor-0.1.0.tgz",
+    "@super-app/filesystem-contributor": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-filesystem-contributor-0.1.0.tgz",
+    "@super-app/typescript-contributor": "file:../../Btr/TheBroccoli/.runtime/authoring-ready-packages/super-app-typescript-contributor-0.1.0.tgz",
+    "@super-app/repository-organisation": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-repository-organisation-0.1.0.tgz",
+    "@super-app/harness-contributor": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-harness-contributor-0.1.0.tgz",
+    "@super-app/systems-engineering-contributor": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-systems-engineering-contributor-0.1.0.tgz",
+    "@super-app/tagging-contributor": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-tagging-contributor-0.1.0.tgz"
+  },
+  "devDependencies": {
+    "@super-app/project-tools": "file:../../Btr/TheBroccoli/Systems/Depth0/ProjectTools"
   }
 }

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdtemp,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {createPersonalVault} from '../template/vault.mjs';
+import {createPersonalVault} from '@perso/template/vault';
 test('personal information persists structured lists and rejects unsupported fields',async t=>{
  const root=await mkdtemp(join(tmpdir(),'personal-vault-'));t.after(()=>rm(root,{recursive:true,force:true}));
  const options={storagePath:join(root,'profile.json')};const operations=createPersonalVault(options).operationDefinitions();

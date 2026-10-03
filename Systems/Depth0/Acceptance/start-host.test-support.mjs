@@ -1,7 +1,7 @@
 import { readFile,writeFile,mkdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { startRelationalEngineNodeJsHost } from "@super-app/relational-engine-node-js-service";
-const root=resolve("..");
+const root=resolve("../../..");
 const config=JSON.parse(await readFile(resolve(root,"relational-host.json"),"utf8"));
 config.workingDirectory=root;config.webHost.port=43122;
 await mkdir(resolve(root,".runtime"),{recursive:true});

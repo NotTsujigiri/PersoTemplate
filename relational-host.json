@@ -28,7 +28,7 @@
           "templates": {
             "templatePackages": [
               {
-                "root": "$workingDirectory/template",
+                "root": "$workingDirectory/Systems/Depth0/PersonalTemplate",
                 "sourceAccess": "editable"
               },
               {
@@ -173,7 +173,7 @@
       {
         "id": "personal-vault",
         "label": "Personal information",
-        "module": "file:///C:/Users/vince/Documents/GitHub/Perso/PersoTemplate/template/vault.mjs",
+        "module": "file:///C:/Users/vince/Documents/GitHub/Perso/PersoTemplate/Systems/Depth0/PersonalTemplate/vault.mjs",
         "export": "createPersonalVault",
         "enabled": true,
         "required": true,
