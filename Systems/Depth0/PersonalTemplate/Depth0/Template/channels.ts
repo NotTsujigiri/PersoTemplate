@@ -1,28 +1,29 @@
-import { createSchemaForm, type FormValues } from '@super-app/relational-ui-contributor/schema-form';
+import { createSchemaForm } from '@super-app/relational-ui-contributor/schema-form';
 import { profileFields } from './profile-fields.js';
+import { parsePersonalProfile, type PersonalProfile } from './profile-values.js';
 import type { ChannelDefinition, ChannelTemplateNavigation } from '@super-app/default-super-app-template';
 import type { SuperAppTemplateMountContext } from '@super-app/relational-ui-contributor/template-runtime/contract';
 
 export interface PersonalInformationAdapter {
-  read(): Promise<FormValues>;
-  save(values: FormValues): Promise<void>;
+  read(): Promise<PersonalProfile>;
+  save(values: PersonalProfile): Promise<void>;
 }
 export interface ContributionSurfaceRequest {
   area: 'files' | 'spaces';
   buildspaceId?: string;
 }
-export type ContributionChannel = Omit<ChannelDefinition, 'children'> & {
+export type ContributionChannel<Context=SuperAppTemplateMountContext> = Omit<ChannelDefinition<Context>, 'children'> & {
   contribution?: ContributionSurfaceRequest;
-  children?: readonly ContributionChannel[];
+  children?: readonly ContributionChannel<Context>[];
 };
-export type PersonalCommunities = readonly (Omit<ChannelTemplateNavigation['communities'][number], 'channels'> & {channels: readonly ContributionChannel[]})[];
-export interface PersonalTemplateOptions {
-  personalInformation?: PersonalInformationAdapter | ((context: SuperAppTemplateMountContext) => PersonalInformationAdapter);
+export type PersonalCommunities<Context=SuperAppTemplateMountContext> = readonly (Omit<ChannelTemplateNavigation<Context>['communities'][number], 'channels'> & {channels: readonly ContributionChannel<Context>[]})[];
+export interface PersonalTemplateOptions<Context=SuperAppTemplateMountContext> {
+  personalInformation?: PersonalInformationAdapter | ((context: Context) => PersonalInformationAdapter);
   /** Saved buildspaces supplied by their owner, never template-specific examples. */
   buildspaces?: readonly Readonly<{id: string; name: string}>[];
   createContributionSurface?: (request: ContributionSurfaceRequest) => HTMLElement;
 }
-export function createUserChannels(options: PersonalTemplateOptions = {}): readonly ChannelDefinition[] {
+export function createUserChannels<Context=SuperAppTemplateMountContext>(options: PersonalTemplateOptions<Context> = {}): readonly ChannelDefinition<Context>[] {
   return [{
       id: 'personal-information', label: 'Personal information', description: 'Your structured personal information.',
       create(context) {
@@ -34,15 +35,15 @@ export function createUserChannels(options: PersonalTemplateOptions = {}): reado
           const adapter = typeof options.personalInformation === 'function' ? options.personalInformation(context) : options.personalInformation;
           if (!adapter) throw Error('Personal information is not connected.');
           const values = await adapter.read();
-          host.replaceChildren(createSchemaForm({label: 'Personal information', fields: profileFields, values, save: values => adapter.save(values)}));
-        })().catch(error => { host.textContent = String(error); });
+          host.replaceChildren(createSchemaForm({label: 'Personal information', fields: profileFields, values, save: values => adapter.save(parsePersonalProfile(values))}));
+        })().catch((error: unknown) => { host.textContent = String(error); });
         return host;
       },
     }];
 }
 
-export function createCommunities(options: PersonalTemplateOptions = {}): PersonalCommunities {
-  const children: ContributionChannel[] = (options.buildspaces ?? []).map(space => ({
+export function createCommunities<Context=SuperAppTemplateMountContext>(options: PersonalTemplateOptions<Context> = {}): PersonalCommunities<Context> {
+  const children: ContributionChannel<Context>[] = (options.buildspaces ?? []).map(space => ({
     id: space.id, label: space.name, description: `Open ${space.name}`,
     contribution: {area: 'files', buildspaceId: space.id},
     create() {
@@ -51,7 +52,7 @@ export function createCommunities(options: PersonalTemplateOptions = {}): Person
     },
   }));
   return [{
-    id: 'private', label: 'Private space', description: 'Your personal channels', kind: 'private',
+    id: 'private', label: 'Private', description: 'Your personal channels', kind: 'private',
     channels: [{
       contribution: {area: 'spaces'},
       id: 'buildspaces', label: 'Buildspaces', description: 'Your saved environments for building across systems.',
@@ -67,3 +68,5 @@ export function createCommunities(options: PersonalTemplateOptions = {}): Person
   }];
 }
 export const communities = createCommunities();
+
+export {parsePersonalProfileSnapshot,type PersonalProfile} from './profile-values.js';

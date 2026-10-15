@@ -1,40 +1,34 @@
-import { readFile, writeFile, mkdir, rename, rm, open } from 'node:fs/promises';
+export {parsePersonalProfile, parsePersonalProfileSnapshot} from './Depth0/Template/profile-values.ts';
+import { readFile, writeFile, mkdir, rename, rm, open, type FileHandle } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { randomUUID, createHash } from 'node:crypto';
-import { profileFields } from './dist/profile-fields.js';
+import type { OperationDefinition, OperationInvocation, RelationalContributor } from '@super-app/relational-engine';
+import { emptyPersonalProfile, parsePersonalProfile, type PersonalProfile, type PersonalProfileSnapshot } from './Depth0/Template/profile-values.ts';
 const json = 'application/json';
-const revisionOf = text => createHash('sha256').update(text).digest('hex');
+const revisionOf = (text: string) => createHash('sha256').update(text).digest('hex');
 
-export function createPersonalVault({ storagePath }) {
-  function validate(value) {
-    if (!value || typeof value !== 'object' || Array.isArray(value) || Object.keys(value).some(key => !profileFields.some(field => field.key === key)))
-      throw Error('Unsupported personal information fields.');
-    for (const field of profileFields)
-      if (!Array.isArray(value[field.key]) || !value[field.key].every(item => typeof item === 'string' && item.trim()))
-        throw Error(`${field.label} requires a list of non-empty strings.`);
-    return Object.fromEntries(profileFields.map(field => [field.key, [...value[field.key]]]));
-  }
-  async function read() {
+export function createPersonalVault({ storagePath }: Readonly<{storagePath: string}>) {
+  async function read(): Promise<PersonalProfileSnapshot> {
     try {
       const text = await readFile(storagePath, 'utf8');
-      return { values: validate(JSON.parse(text)), revision: revisionOf(text) };
+      return { values: parsePersonalProfile(JSON.parse(text)), revision: revisionOf(text) };
     } catch (error) {
-      if (error.code === 'ENOENT') return {
-        values: Object.fromEntries(profileFields.map(field => [field.key, []])), revision: 'missing',
+      if (error instanceof Error && 'code' in error && error.code === 'ENOENT') return {
+        values: emptyPersonalProfile(), revision: 'missing',
       };
       throw error;
     }
   }
-  async function save(data, expectedRevision) {
+  async function save(data: PersonalProfile, expectedRevision: string): Promise<PersonalProfileSnapshot> {
     if (typeof expectedRevision !== 'string' || !expectedRevision)
       throw Error('Read personal information before saving; an expected revision is required.');
-    const values = validate(data);
+    const values = parsePersonalProfile(data);
     await mkdir(dirname(storagePath), { recursive: true });
     const lockPath = storagePath + '.lock';
-    let lock;
+    let lock: FileHandle;
     try { lock = await open(lockPath, 'wx'); }
     catch (error) {
-      if (error.code === 'EEXIST') throw Error('Personal information is being saved elsewhere. Try again after that save finishes.');
+      if (error instanceof Error && 'code' in error && error.code === 'EEXIST') throw Error('Personal information is being saved elsewhere. Try again after that save finishes.');
       throw error;
     }
     const temporary = storagePath + '.' + randomUUID() + '.tmp';
@@ -51,21 +45,23 @@ export function createPersonalVault({ storagePath }) {
       finally { await lock.close(); await rm(lockPath); }
     }
   }
-  const output = data => ({ outputs: { result: { type: json, data } } });
-  return {
-    read, save, id: 'personal-vault', label: 'Personal information',
+  const output = (data: PersonalProfileSnapshot) => ({ outputs: { result: { type: json, data } } });
+  const contributor = {
+    id: 'personal-vault', label: 'Personal information',
     contribute({ rootGraphId }) { return { nodeTypes: [], edgeTypes: [], rootNodes: [], rootEdges: [], graphs: [{ id: rootGraphId, title: 'Personal information', caption: 'Personal information stored by this composition.', levelLabel: 'Profile', worldWidth: 800, worldHeight: 600, nodes: [], edges: [] }] }; },
     operationDefinitions() { return [
       { descriptor: { id: 'personal-vault:read', label: 'Read personal information', inputs: [], outputs: [{ id: 'result', label: 'Profile snapshot', channel: 'data', valueType: json }] }, execute: async () => output(await read()) },
       { descriptor: { id: 'personal-vault:save', label: 'Save personal information', inputs: [
         { id: 'profile', label: 'Profile', channel: 'data', valueType: json, literal: { kind: 'json', defaultValue: {} } },
         { id: 'expectedRevision', label: 'Revision read before editing', channel: 'data', valueType: json, literal: { kind: 'json', defaultValue: null } },
-      ], outputs: [{ id: 'result', label: 'Saved profile snapshot', channel: 'data', valueType: json }] }, execute(request) {
-        const input = request.inputs.profile, revision = request.inputs.expectedRevision;
-        if (!input || input.type !== json) throw Error('Profile requires JSON.');
-        if (!revision || revision.type !== json || typeof revision.data !== 'string') throw Error('Expected profile revision is required.');
-        return save(input.data, revision.data).then(output);
+      ], outputs: [{ id: 'result', label: 'Saved profile snapshot', channel: 'data', valueType: json }] }, execute(request: OperationInvocation) {
+        const input = request.inputs['profile'], revision = request.inputs['expectedRevision'];
+        if (!input || !('type' in input) || input.type !== json) throw Error('Profile requires JSON.');
+        if (!revision || !('type' in revision) || revision.type !== json || typeof revision.data !== 'string') throw Error('Expected profile revision is required.');
+        return save(parsePersonalProfile(input.data), revision.data).then(output);
       } },
-    ]; },
-  };
+    ] satisfies readonly OperationDefinition[]; },
+  } satisfies RelationalContributor;
+  return {...contributor, read, save};
 }
+

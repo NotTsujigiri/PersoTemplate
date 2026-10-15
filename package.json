@@ -9,11 +9,12 @@
   ],
   "scripts": {
     "start": "powershell -NoProfile -File ./start-service.ps1",
-    "test": "npm run test --workspace @perso/acceptance",
+    "test": "npm run check:types && npm run test --workspace @perso/acceptance",
     "service": "relational-engine-node-js-service relational-host.json",
     "stop": "powershell -NoProfile -File ./stop-service.ps1",
-    "build": "npm run check:organisation && npm run build --workspace @perso/template",
-    "check:organisation": "check-system-organisation"
+    "build": "npm run check:types && npm run check:organisation && npm run build --workspace @perso/template",
+    "check:organisation": "check-system-organisation",
+    "check:types": "check-type-safety"
   },
   "dependencies": {
     "@btr/template": "file:../../Btr/BtrTemplate/.runtime/decisions-review-release/btr-template-0.1.0.tgz",
@@ -32,5 +33,18 @@
   },
   "devDependencies": {
     "@super-app/project-tools": "file:../../Btr/TheBroccoli/Systems/Depth0/ProjectTools"
+  },
+  "broccoli": {
+    "checks": {
+      "check:organisation": {
+        "name": "Repository structure"
+      },
+      "test": {
+        "name": "Acceptance tests"
+      },
+      "check:types": {
+        "name": "Type safety"
+      }
+    }
   }
 }

@@ -3,7 +3,7 @@ test('reviewed navigation supports nested channels and persistent cross-template
  await runBrowserRecordedScenario(page, info, [
   {label:'Personal composition offers Perso then Btr then Default', execute:async()=>{
    await page.goto('http://127.0.0.1:43122/?token=local-super-app-review');
-   await expect(page.getByRole('navigation',{name:'Private spaces and communities',exact:true}).getByRole('button',{name:'Private space',exact:true})).toBeVisible();
+   await expect(page.getByRole('navigation',{name:'Private spaces and communities',exact:true}).getByRole('button',{name:'Private',exact:true})).toBeVisible();
    await page.getByRole('button',{name:'Active template',exact:true}).click();
    await expect(page.getByRole('menuitemradio')).toHaveText(['Perso','Btr Organisation','Default']);
   }},
@@ -12,7 +12,7 @@ test('reviewed navigation supports nested channels and persistent cross-template
    await page.getByRole('button',{name:'Pinned channels',exact:true}).click({button:'right'});
    await expect(page.getByRole('checkbox',{name:'Pin Space game',exact:true})).not.toBeChecked();
    await expect(page.getByRole('checkbox',{name:'Pin Default',exact:true})).toBeVisible();
-   await expect(page.getByRole('navigation',{name:'Private spaces and communities',exact:true}).getByRole('button',{name:'Private space',exact:true})).toBeVisible();
+   await expect(page.getByRole('navigation',{name:'Private spaces and communities',exact:true}).getByRole('button',{name:'Private',exact:true})).toBeVisible();
   }},
   {label:'Btr owns three project channels inside Systems', execute:async()=>{
    await page.keyboard.press('Escape');
@@ -37,7 +37,7 @@ test('reviewed navigation supports nested channels and persistent cross-template
    await page.getByRole('button',{name:'Active template',exact:true}).click();
    await page.getByRole('menuitemradio',{name:'Perso',exact:true}).click();
    await page.reload();
-   await expect(page.getByRole('navigation',{name:'Private spaces and communities',exact:true}).getByRole('button',{name:'Private space',exact:true})).toBeVisible();
+   await expect(page.getByRole('navigation',{name:'Private spaces and communities',exact:true}).getByRole('button',{name:'Private',exact:true})).toBeVisible();
    await page.getByRole('button',{name:'Pinned channels',exact:true}).click();
    await expect(page.getByRole('region',{name:'Pinned channels',exact:true}).getByRole('button',{name:'Space game',exact:true})).toBeVisible();
   }},

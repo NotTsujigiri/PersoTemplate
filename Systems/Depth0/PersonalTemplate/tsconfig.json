@@ -10,11 +10,24 @@
     "strict": true,
     "declaration": true,
     "outDir": "dist",
-    "rootDir": "Depth0/Template",
+    "rootDir": ".",
     "skipLibCheck": false,
-    "types": []
+    "types": [
+      "node"
+    ],
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowJs": false,
+    "checkJs": false,
+    "noEmitOnError": true,
+    "noUncheckedSideEffectImports": true,
+    "rewriteRelativeImportExtensions": true,
+    "noImplicitOverride": true
   },
   "include": [
-    "Depth0/Template/**/*.ts"
+    "Depth0/Template/**/*.ts",
+    "vault.ts"
   ]
 }

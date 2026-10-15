@@ -55,7 +55,7 @@
           "        </div>",
           "        <nav aria-label=\"Private spaces and communities\" class=\"community-navigation\">",
           "          <button aria-pressed=\"true\" class=\"community-choice\" data-kind=\"private\" title=\"Your personal channels\" type=\"button\">",
-          "            Private space",
+          "            Private",
           "          </button>",
           "        </nav>",
           "      </header>",
@@ -165,9 +165,9 @@
               "                </div>",
               "                <div class=\"channel-pin-row\" style=\"padding-left: 12px;\">",
               "                  <button type=\"button\">",
-              "                    Private space",
+              "                    Private",
               "                  </button>",
-              "                  <input aria-label=\"Pin Private space\" type=\"checkbox\">",
+              "                  <input aria-label=\"Pin Private\" type=\"checkbox\">",
               "                  </input>",
               "                </div>",
               "                <div class=\"channel-pin-row\" style=\"padding-left: 24px;\">",
@@ -602,7 +602,7 @@
             "deleteCount": 2,
             "lines": [
               "          <button aria-pressed=\"true\" class=\"community-choice\" data-kind=\"private\" title=\"Your personal channels\" type=\"button\">",
-              "            Private space"
+              "            Private"
             ]
           },
           {
@@ -914,9 +914,9 @@
               "                </div>",
               "                <div class=\"channel-pin-row\" style=\"padding-left: 12px;\">",
               "                  <button type=\"button\">",
-              "                    Private space",
+              "                    Private",
               "                  </button>",
-              "                  <input aria-label=\"Pin Private space\" type=\"checkbox\">",
+              "                  <input aria-label=\"Pin Private\" type=\"checkbox\">",
               "                  </input>",
               "                </div>",
               "                <div class=\"channel-pin-row\" style=\"padding-left: 24px;\">",

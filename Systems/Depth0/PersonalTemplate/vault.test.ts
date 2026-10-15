@@ -5,7 +5,9 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import path from 'node:path';
 import os from 'node:os';
-import { createPersonalVault } from './vault.mjs';
+import { createPersonalVault } from './vault.ts';
+import { parsePersonalProfile, parsePersonalProfileSnapshot, type PersonalProfile } from './Depth0/Template/profile-values.ts';
+import { fileURLToPath } from 'node:url';
 const run = promisify(execFile);
 async function fixture() {
   const root = await mkdtemp(path.join(os.tmpdir(), 'personal-vault-'));
@@ -23,7 +25,7 @@ test('stale or missing revisions cannot overwrite another client and valid revis
     assert.notEqual(saved.revision, first.revision);
     stale.values.learning = ['Stale client update'];
     await assert.rejects(other.save(stale.values, stale.revision), /changed since/);
-    await assert.rejects(other.save(stale.values), /expected revision/);
+    await assert.rejects(other.save(stale.values, ''), /expected revision/);
     assert.deepEqual(await other.read(), saved);
     saved.values.learning = ['Current client update'];
     const next = await other.save(saved.values, saved.revision);
@@ -37,20 +39,19 @@ test('separate processes cannot both save the same revision', async () => {
   const f = await fixture();
   try {
     const initial = await f.vault.read();
-    const moduleUrl = new URL('./vault.mjs', import.meta.url).href;
-    const source = `import {createPersonalVault} from ${JSON.stringify(moduleUrl)};
-      const vault=createPersonalVault({storagePath:process.argv[1]});
-      const values=JSON.parse(process.argv[3]);
-      try {const result=await vault.save(values,process.argv[2]);console.log(JSON.stringify({saved:true,values:result.values}));}
-      catch(error){console.log(JSON.stringify({saved:false,message:error.message}));}`;
+    const worker = fileURLToPath(new URL('./vault-save.test-support.ts', import.meta.url));
     const attempts = await Promise.all(['First', 'Second'].map(async label => {
       const values = {...initial.values, experience: [label]};
-      const result = await run(process.execPath, ['--input-type=module', '-e', source, f.storagePath, initial.revision, JSON.stringify(values)], {windowsHide: true});
-      return JSON.parse(result.stdout);
+      const result = await run(process.execPath, ['--experimental-strip-types', worker, f.storagePath, initial.revision, JSON.stringify(values)], {windowsHide: true});
+      return parseAttempt(JSON.parse(result.stdout));
     }));
     assert.equal(attempts.filter(result => result.saved).length, 1);
-    assert.match(attempts.find(result => !result.saved).message, /changed since|being saved elsewhere/);
-    assert.deepEqual((await f.vault.read()).values, attempts.find(result => result.saved).values);
+    const rejected = attempts.find(result => !result.saved);
+    const accepted = attempts.find(result => result.saved);
+    assert.ok(rejected && !rejected.saved);
+    assert.ok(accepted && accepted.saved);
+    assert.match(rejected.message, /changed since|being saved elsewhere/);
+    assert.deepEqual((await f.vault.read()).values, accepted.values);
     assert.deepEqual(await readdir(f.root), ['profile.json']);
   } finally { await f.close(); }
 });
@@ -72,11 +73,20 @@ test('relational operations require and return the same revision contract', asyn
     const definitions = f.vault.operationDefinitions();
     const read = definitions.find(operation => operation.descriptor.id === 'personal-vault:read');
     const save = definitions.find(operation => operation.descriptor.id === 'personal-vault:save');
-    const initial = (await read.execute()).outputs.result.data;
+    assert.ok(read && save);
+    const initial = parsePersonalProfileSnapshot((await read.execute({operationId: 'personal-vault:read', inputs: {}})).outputs['result']?.data);
     const profile = {type: 'application/json', data: {...initial.values, goals: ['Useful software']}};
-    assert.throws(() => save.execute({inputs: {profile}}), /Expected profile revision/);
-    const result = await save.execute({inputs: {profile, expectedRevision: {type: 'application/json', data: initial.revision}}});
-    assert.deepEqual(result.outputs.result.data, await f.vault.read());
-    await assert.rejects(save.execute({inputs: {profile, expectedRevision: {type: 'application/json', data: initial.revision}}}), /changed since/);
+    assert.throws(() => save.execute({operationId: 'personal-vault:save', inputs: {profile}}), /Expected profile revision/);
+    const result = await save.execute({operationId: 'personal-vault:save', inputs: {profile, expectedRevision: {type: 'application/json', data: initial.revision}}});
+    assert.deepEqual(result.outputs['result']?.data, await f.vault.read());
+    await assert.rejects(save.execute({operationId: 'personal-vault:save', inputs: {profile, expectedRevision: {type: 'application/json', data: initial.revision}}}), /changed since/);
   } finally { await f.close(); }
 });
+
+type SaveAttempt = {saved: true; values: PersonalProfile} | {saved: false; message: string};
+function parseAttempt(value: unknown): SaveAttempt {
+  if (!value || typeof value !== 'object' || !('saved' in value)) throw Error('Invalid save worker result.');
+  if (value.saved === true && 'values' in value) return {saved: true, values: parsePersonalProfile(value.values)};
+  if (value.saved === false && 'message' in value && typeof value.message === 'string') return {saved: false, message: value.message};
+  throw Error('Invalid save worker result.');
+}

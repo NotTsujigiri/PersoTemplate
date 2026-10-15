@@ -173,7 +173,7 @@
       {
         "id": "personal-vault",
         "label": "Personal information",
-        "module": "file:///C:/Users/vince/Documents/GitHub/Perso/PersoTemplate/Systems/Depth0/PersonalTemplate/vault.mjs",
+        "module": "@perso/template/vault",
         "export": "createPersonalVault",
         "enabled": true,
         "required": true,
