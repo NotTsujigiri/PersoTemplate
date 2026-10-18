@@ -14,7 +14,14 @@
     "stop": "powershell -NoProfile -File ./stop-service.ps1",
     "build": "npm run check:types && npm run check:organisation && npm run build --workspace @perso/template",
     "check:organisation": "check-system-organisation",
-    "check:types": "check-type-safety"
+    "check:types": "check-type-safety",
+    "check:components:single-file": "check-web-components single-file . .harness/component-checks",
+    "check:components:identity": "check-web-components identity . .harness/component-checks",
+    "check:components:construction": "check-web-components construction . .harness/component-checks",
+    "check:components:empty-default": "check-web-components empty-default . .harness/component-checks",
+    "check:components:lit": "check-web-components lit . .harness/component-checks",
+    "check:components:decorators": "check-web-components decorators . .harness/component-checks",
+    "check:components:element-interfaces": "check-web-components element-interfaces . .harness/component-checks"
   },
   "dependencies": {
     "@btr/template": "file:../../Btr/BtrTemplate/.runtime/decisions-review-release/btr-template-0.1.0.tgz",
@@ -32,10 +39,18 @@
     "@super-app/tagging-contributor": "file:../../Btr/TheBroccoli/.runtime/decisions-review-packages/super-app-tagging-contributor-0.1.0.tgz"
   },
   "devDependencies": {
+    "@super-app/web-component-contributor": "file:../../Btr/TheBroccoli/Systems/Depth1/WebComponent",
     "@super-app/project-tools": "file:../../Btr/TheBroccoli/Systems/Depth0/ProjectTools"
   },
   "broccoli": {
     "checks": {
+      "check:components:element-interfaces": {"name":"Concrete element types"},
+      "check:components:decorators": {"name":"Components use Lit decorators"},
+      "check:components:single-file": {"name": "One component per file"},
+      "check:components:identity": {"name": "Custom element identity"},
+      "check:components:construction": {"name": "Construction without arguments"},
+      "check:components:empty-default": {"name": "Visible without supplied data"},
+      "check:components:lit": {"name": "Components use Lit"},
       "check:organisation": {
         "name": "Repository structure"
       },

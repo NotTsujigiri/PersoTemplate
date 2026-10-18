@@ -1,4 +1,4 @@
-import { createSchemaForm } from '@super-app/relational-ui-contributor/schema-form';
+import { SchemaFormElement } from '@super-app/relational-ui-contributor/schema-form';
 import { profileFields } from './profile-fields.js';
 import { parsePersonalProfile, type PersonalProfile } from './profile-values.js';
 import type { ChannelDefinition, ChannelTemplateNavigation } from '@super-app/default-super-app-template';
@@ -35,7 +35,7 @@ export function createUserChannels<Context=SuperAppTemplateMountContext>(options
           const adapter = typeof options.personalInformation === 'function' ? options.personalInformation(context) : options.personalInformation;
           if (!adapter) throw Error('Personal information is not connected.');
           const values = await adapter.read();
-          host.replaceChildren(createSchemaForm({label: 'Personal information', fields: profileFields, values, save: values => adapter.save(parsePersonalProfile(values))}));
+          host.replaceChildren(SchemaFormElement.create({label: 'Personal information', fields: profileFields, values, save: values => adapter.save(parsePersonalProfile(values))}));
         })().catch((error: unknown) => { host.textContent = String(error); });
         return host;
       },
@@ -70,3 +70,4 @@ export function createCommunities<Context=SuperAppTemplateMountContext>(options:
 export const communities = createCommunities();
 
 export {parsePersonalProfileSnapshot,type PersonalProfile} from './profile-values.js';
+
