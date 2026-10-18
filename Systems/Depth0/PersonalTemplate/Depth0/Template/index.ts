@@ -1,4 +1,4 @@
-import { isContributorNode } from '@super-app/relational-engine';
+import { readContributor } from '@super-app/relational-engine';
 import type { SuperAppTemplateFrameElement } from '@super-app/default-super-app-template';
 import type { SuperAppTemplateModule, SuperAppTemplateMountContext } from '@super-app/relational-ui-contributor/template-runtime/contract';
 import { createCommunities, createUserChannels as userChannels, type PersonalTemplateOptions, type PersonalInformationAdapter } from './channels.js';
@@ -11,7 +11,7 @@ function personalInformation(context: SuperAppTemplateMountContext): PersonalInf
   return {
     async read() {
       const bootstrap = await context.engine.query({kind: 'bootstrap'});
-      const owner = bootstrap.graphs.flatMap(graph => graph.nodes).filter(isContributorNode).find(node => node.contributorId === 'personal-vault');
+      const owner = bootstrap.graphs.flatMap(graph => graph.nodes).map(readContributor).find(contributor => contributor?.contributorId === 'personal-vault');
       if (!owner) throw Error('Personal information is not connected.');
       await context.engine.query({kind: 'graphs', graphIds: [owner.rootGraphId]});
       const result = await context.engine.invokeOperation({operationId: 'personal-vault:read', inputs: {}});

@@ -48,7 +48,7 @@ export function createPersonalVault({ storagePath }: Readonly<{storagePath: stri
   const output = (data: PersonalProfileSnapshot) => ({ outputs: { result: { type: json, data } } });
   const contributor = {
     id: 'personal-vault', label: 'Personal information',
-    contribute({ rootGraphId }) { return { nodeTypes: [], edgeTypes: [], rootNodes: [], rootEdges: [], graphs: [{ id: rootGraphId, title: 'Personal information', caption: 'Personal information stored by this composition.', levelLabel: 'Profile', worldWidth: 800, worldHeight: 600, nodes: [], edges: [] }] }; },
+    contribute({ rootGraphId }) { return { componentTypes: [], edgeTypes: [], rootNodes: [], rootEdges: [], graphs: [{ id: rootGraphId, title: 'Personal information', caption: 'Personal information stored by this composition.', levelLabel: 'Profile', worldWidth: 800, worldHeight: 600, nodes: [], edges: [] }] }; },
     operationDefinitions() { return [
       { descriptor: { id: 'personal-vault:read', label: 'Read personal information', inputs: [], outputs: [{ id: 'result', label: 'Profile snapshot', channel: 'data', valueType: json }] }, execute: async () => output(await read()) },
       { descriptor: { id: 'personal-vault:save', label: 'Save personal information', inputs: [
