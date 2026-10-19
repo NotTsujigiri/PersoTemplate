@@ -21,7 +21,8 @@
     "check:components:empty-default": "check-web-components empty-default . .harness/component-checks",
     "check:components:lit": "check-web-components lit . .harness/component-checks",
     "check:components:decorators": "check-web-components decorators . .harness/component-checks",
-    "check:components:element-interfaces": "check-web-components element-interfaces . .harness/component-checks"
+    "check:components:element-interfaces": "check-web-components element-interfaces . .harness/component-checks",
+    "check:components:documentation": "check-web-components documentation . .harness/component-checks"
   },
   "dependencies": {
     "@btr/template": "file:../../Btr/BtrTemplate/.runtime/decisions-review-release/btr-template-0.1.0.tgz",
