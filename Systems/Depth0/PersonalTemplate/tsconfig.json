@@ -28,6 +28,7 @@
   },
   "include": [
     "Depth0/Template/**/*.ts",
-    "vault.ts"
+    "vault.ts",
+    "configuration.ts"
   ]
 }

@@ -4,13 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run check:types --prefix ../../.. && tsc -p tsconfig.json && esbuild Depth0/Template/index.ts --bundle --format=esm --platform=browser --outfile=dist/index.js",
+    "build": "npm run check:types --prefix ../../.. && tsc -p tsconfig.json",
     "test": "npm run check:types --prefix ../../.. && node --experimental-strip-types --test vault.test.ts"
   },
   "exports": {
+    "./configuration": {"types":"./dist/configuration.d.ts","import":"./dist/configuration.js"},
+    "./application/source": "./Depth0/Template/application.ts",
     ".": {
-      "types": "./dist/Depth0/Template/index.d.ts",
-      "import": "./dist/index.js"
+      "types": "./dist/Depth0/Template/application.d.ts",
+      "import": "./dist/Depth0/Template/application.js"
     },
     "./channels/source": "./Depth0/Template/channels.ts",
     "./vault": {
@@ -25,29 +27,14 @@
     "vault.ts"
   ],
   "dependencies": {
+    "@btr/template": "file:../../../../../Btr/BtrTemplate",
     "@super-app/default-super-app-template": "file:../../../../../Btr/TheBroccoli/Systems/Depth2/DefaultSuperAppTemplate",
     "@super-app/relational-ui-contributor": "file:../../../../../Btr/TheBroccoli/Systems/Depth1/RelationalUi",
     "@super-app/relational-engine": "file:../../../../../Btr/TheBroccoli/Systems/Depth0/RelationEngine"
   },
   "devDependencies": {
     "typescript": "^5.9.2",
-    "esbuild": "0.28.1",
     "@types/node": "24.19.1"
-  },
-  "superAppTemplate": {
-    "id": "personal",
-    "label": "Perso",
-    "entry": "dist/index.js",
-    "sourceEntry": "Depth0/Template/index.ts",
-    "assets": [],
-    "sources": [
-      "package.json",
-      "tsconfig.json",
-      "Depth0/Template/index.ts",
-      "Depth0/Template/channels.ts",
-      "Depth0/Template/profile-fields.ts",
-      "Depth0/Template/profile-values.ts"
-    ]
   },
   "broccoli": {
     "compositionRoot": "../../.."
