@@ -1,8 +1,10 @@
+import {type OperationDefinition, type RelationalContributor} from "@super-app/relational-engine/Depth0/Contracts/relational-contributor";
+import {type OperationInvocation} from "@super-app/relational-engine/Depth0/Contracts/operation-graph";
 export {parsePersonalProfile, parsePersonalProfileSnapshot} from './Depth0/Template/profile-values.ts';
 import { readFile, writeFile, mkdir, rename, rm, open, type FileHandle } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { randomUUID, createHash } from 'node:crypto';
-import type { OperationDefinition, OperationInvocation, RelationalContributor } from '@super-app/relational-engine';
+
 import { emptyPersonalProfile, parsePersonalProfile, type PersonalProfile, type PersonalProfileSnapshot } from './Depth0/Template/profile-values.ts';
 const json = 'application/json';
 const revisionOf = (text: string) => createHash('sha256').update(text).digest('hex');

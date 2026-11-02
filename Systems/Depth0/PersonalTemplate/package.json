@@ -30,7 +30,7 @@
     "@btr/template": "file:../../../../../Btr/BtrTemplate",
     "@super-app/default-super-app-template": "file:../../../../../Btr/TheBroccoli/Systems/Depth3/DefaultSuperAppTemplate",
     "@super-app/relational-ui-contributor": "file:../../../../../Btr/TheBroccoli/Systems/Depth2/RelationalUi",
-    "@super-app/relational-engine": "file:../../../../../Btr/TheBroccoli/Systems/Depth0/RelationEngine"
+    "@super-app/relational-engine": "file:../../../../../Btr/TheBroccoli/Systems/Depth0/RelationalEngine"
   },
   "devDependencies": {
     "typescript": "^5.9.2",
