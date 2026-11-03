@@ -1,5 +1,6 @@
-import {type OperationDefinition, type RelationalContributor} from "@super-app/relational-engine/Depth0/Contracts/relational-contributor";
-import {type OperationInvocation} from "@super-app/relational-engine/Depth0/Contracts/operation-graph";
+import type { OperationDefinition } from "@super-app/relational-engine/Depth12/Contracts/OperationDefinition";
+import type { RelationalContributor } from "@super-app/relational-engine/Depth13/Contracts/RelationalContributor";
+import type { OperationInvocation } from "@super-app/relational-engine/Depth1/Contracts/OperationInvocation";
 export {parsePersonalProfile, parsePersonalProfileSnapshot} from './Depth0/Template/profile-values.ts';
 import { readFile, writeFile, mkdir, rename, rm, open, type FileHandle } from 'node:fs/promises';
 import { dirname } from 'node:path';
@@ -66,4 +67,3 @@ export function createPersonalVault({ storagePath }: Readonly<{storagePath: stri
   } satisfies RelationalContributor;
   return {...contributor, read, save};
 }
-
