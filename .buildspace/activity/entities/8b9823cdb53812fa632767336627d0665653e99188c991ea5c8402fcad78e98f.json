@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc5a0dc-6518-44d5-bfcb-fcfbf4137f72.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc5a0dc-6518-44d5-bfcb-fcfbf4137f72.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T14:07:31.093Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 544,
+        "description": "",
+        "title": "Independent subagent migration_plan_review, round 1 (candidate revision 534): R1/P1 — require runtime rejection checks and a disposable data-cutover rehearsal b",
+        "updatedAt": "2026-10-17T14:10:13.848Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc5a0dc-6518-44d5-bfcb-fcfbf4137f72.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc5a0dc-6518-44d5-bfcb-fcfbf4137f72.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Independent subagent migration_plan_review, round 1 (candidate revision 534): R1/P1 — require runtime rejection checks and a disposable data-cutover rehearsal before the first live cutover. Full findings and correction tasks are under Agent review: migration plan."
+          },
+          {
+            "kind": "fix",
+            "text": "Independent subagent migration_plan_review, round 1 (candidate revision 534): R2/P2 — prove compatibility with the existing model compiler and derive runtime validation/inspection from the same owned definitions. Do not introduce a second schema authority."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc5a0dc-6518-44d5-bfcb-fcfbf4137f72.json"
+}

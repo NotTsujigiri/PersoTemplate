@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a61c3b6-f266-4f08-bfbf-9a98ec7a0ebe.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a61c3b6-f266-4f08-bfbf-9a98ec7a0ebe.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T21:42:52.851Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 410,
+        "description": "Immutable attached evidence",
+        "title": "Task boundaries and approved plan repairs verification.json",
+        "updatedAt": "2026-10-08T21:43:01.713Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a61c3b6-f266-4f08-bfbf-9a98ec7a0ebe.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a61c3b6-f266-4f08-bfbf-9a98ec7a0ebe.json",
+      "properties": {
+        "artifact": {
+          "hash": "70c92e610bf0dd3989a3cf4787d0854429e8c3315e5f23babd689a40b48edca7",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/70c92e610bf0dd3989a3cf4787d0854429e8c3315e5f23babd689a40b48edca7",
+          "mime": "application/json",
+          "size": 2352
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a61c3b6-f266-4f08-bfbf-9a98ec7a0ebe.json"
+}

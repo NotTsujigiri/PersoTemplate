@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f584e9a-cb8f-4cd9-8735-fdd76e814b8c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f584e9a-cb8f-4cd9-8735-fdd76e814b8c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Let the user perform every supported planning operation independently through reusable UI components.\n\nScope\n\n• Implement every UI/MCP parity row using existing controls, targeted rework and approved shared additions.\n\n• Use the reviewed V1-V4 layouts for task/input relationships, queue/state actions, evidence and review.\n\n• Include create/delete, link/unlink, priorities, import/export and structured conflict/error handling.\n\n• Implement schema/reflection-driven Node view and one view matching adapter over existing types/fields/relations.\n\n• Reuse persisted graph-reference resolution and existing navigation; implement node revision comparison with shared controls. New URL UI is excluded.\n\n• Compose shared Review tabs, Author readiness, grouped-feedback display/composer, single-column Checks hierarchy and shared selection/toolbar components. Integrate existing files/diff/Preview views without custom substitutes.\n\nSuccess criteria\n\n1. Every exposed planning tool operation has a tested, discoverable UI path; no routine operation requires Codex or hand-edited JSON.\n\n2. UI and MCP use identical owning operation contracts and actor-specific restrictions.\n\n3. No surface-specific form, selector, command menu, thread widget or graph renderer duplicates a reusable component.\n\n4. Unselected panel is blank; keyboard/focus/draft behavior survives unrelated updates.\n\n5. Node works for editable and read-only nodes; creator is a read-only relation. No schema-specific task screen duplicates the shared renderer.\n\n6. Node and evidence navigation resolve deserialized graph links to the correct target/revision using existing contracts; missing/deleted targets are explicit. No new URL UI or external browser-entry acceptance requirement.\n\n7. No/inline/side-by-side comparison handles fields and relations. Historical read-only selection never changes expectedRevision for live writes.\n\n8. Review has Overview/Changes/Preview, Author readiness and Checks -> Reviewers/Runnables -> Mandatory/Optional. Four right-aligned Runnables tree-row actions operate highlights; no checkboxes, per-item play controls, duplicate outcome/action panels or URL strip.\n\n9. Both new comments and replies use the same editable typed-row component with row removal, clear boundaries and bottom actions; top-level content spans available width and replies alone indent.\n\n10. Changes exposes all/modified files and exact target/composed iteration diff, line-anchored feedback and Preview reuse; view switching preserves unrelated panel state.\n\n11. Runnables is an ordinary nested row under Checks; the Overview inner splitter begins below the toolbar and every far-right view tool remains inside the toolbar spanning both subpanes.\n\nEvidence\n\n• UI/MCP parity acceptance matrix\n\n• V1-V4 browser screenshots\n\n• Independent user CRUD walkthrough\n\n",
+        "title": "Compose complete UI CRUD and review controls",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f584e9a-cb8f-4cd9-8735-fdd76e814b8c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f584e9a-cb8f-4cd9-8735-fdd76e814b8c.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f584e9a-cb8f-4cd9-8735-fdd76e814b8c.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/611bc0b3-0c24-46fc-9724-b87f8485d01b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/611bc0b3-0c24-46fc-9724-b87f8485d01b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:15:52.266Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 389,
+        "description": "Compare the current implementation and Git composition evidence with the parent task's accepted requirements. Deliver an explicit gap inventory, owned scope/persistence/access contracts, resolution rules and deterministic rejection cases. Present open decisions and a bounded serial implementation plan. No implicit approval of a new resolver, compatibility rule or privacy boundary.",
+        "title": "Audit and propose the remaining buildspace and privacy contracts",
+        "updatedAt": "2026-10-08T21:30:58.251Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/611bc0b3-0c24-46fc-9724-b87f8485d01b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/611bc0b3-0c24-46fc-9724-b87f8485d01b.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "design",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/611bc0b3-0c24-46fc-9724-b87f8485d01b.json"
+}

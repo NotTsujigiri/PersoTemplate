@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dde0e855-4538-46a2-b05a-c07a17c8ed83.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dde0e855-4538-46a2-b05a-c07a17c8ed83.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-02T00:35:24.698Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 309,
+        "description": "Deferred beyond the MVP at the user's request. Low priority; do not add the settings icon or implement the inspector in the MVP.\n\nPurpose: make the data/request behind a view, its applicable presentations, and the connections in a composed UI inspectable without mixing them together.\n\nDiscussion: codex://threads/01a0f501-1ed3-79c1-b149-c5ca4f09243d\n\nAttach the two generated proposal screenshots: Data settings and Composition settings. These are exploratory mockups, not an accepted implementation design.\n\nUser feedback and scope for future refinement:\n- A settings gear to the left of the view selector toggles settings across the full view content area, preserving the view toolbar.\n- Keep a dedicated Data tab. Show the actual request made to the frontend relational engine and faithfully represent its real structure. The current Buildspace directory is supplied by host projections, so the illustrated Engine / Scope / Node type / Sort by form is not the current request contract.\n- Returned data should be visible through an appropriate reusable existing view, with support for larger collections. Do not reduce it to a count-only summary or hard-code a short list of returned nodes.\n- The mockups name three tabs (Data, Views, Composition), but only Data and Composition were illustrated. Define and review Views if this work resumes; applicable views must follow their input shape (collection versus selected node).\n- Composition is an exploratory starting point connected to prior operation-graph and UI-designer experiments. Refine it for complex nested layouts. Connections use labels on directed edges (for example Selected node), not artificial intermediate nodes. A hierarchy plus a graph focused on one level may help, but needs review.\n\nKeep this deferred inspector separate from the current work on structured runtime data types, invariants and reusable typed editing. Revisit only when it becomes a product priority.",
+        "title": "Inspect view data, available views and nested composition",
+        "updatedAt": "2026-11-04T00:06:38.248Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dde0e855-4538-46a2-b05a-c07a17c8ed83.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dde0e855-4538-46a2-b05a-c07a17c8ed83.json",
+      "properties": {
+        "placement": "backlog",
+        "priority": 5,
+        "purpose": "design",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dde0e855-4538-46a2-b05a-c07a17c8ed83.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dde0e855-4538-46a2-b05a-c07a17c8ed83.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T07:06:36.048Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-02T00:38:12.523Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dde0e855-4538-46a2-b05a-c07a17c8ed83.json"
+}

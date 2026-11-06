@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cb454c8-e1f4-4be5-86f4-ea5b1519794b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cb454c8-e1f4-4be5-86f4-ea5b1519794b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T16:22:06.795Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 379,
+        "description": "Required human review before focused navigation. Inspect expanded and collapsed nested tasks, retained parent information and avatars, child count, circle-to-circle curved edge continuity, compact dependency rows, left-aligned branches/merges, deep graphs and local Now separators. Confirm actual rendered UI and verification evidence.",
+        "title": "Review recursive graph layout and nested task display",
+        "updatedAt": "2026-10-08T16:25:42.600Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cb454c8-e1f4-4be5-86f4-ea5b1519794b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cb454c8-e1f4-4be5-86f4-ea5b1519794b.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cb454c8-e1f4-4be5-86f4-ea5b1519794b.json"
+}

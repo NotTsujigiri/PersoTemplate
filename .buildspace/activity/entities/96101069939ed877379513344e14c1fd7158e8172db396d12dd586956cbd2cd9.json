@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/379d5bd1-72e0-442f-b5ea-b9fb2445cd04.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/379d5bd1-72e0-442f-b5ea-b9fb2445cd04.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T15:33:08.634Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 372,
+        "description": "Apply the agreed owner contracts through typed mutators used by UI and agents. Parent queue/backlog/start actions propagate consistently without starting unrelated work. Pending mandatory human reviews wait for Start review. Enforce justified Waiting and required acceptance without self-blocking review cycles. Correct and resubmit inside the existing work scope; preserve immutable actor/outcome/evidence history and reject stale edits. Do not require feedback classification or create a new outer task per correction. Critical criteria 1–6, 13.",
+        "title": "Implement atomic readiness and review iteration",
+        "updatedAt": "2026-10-08T21:30:58.251Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/379d5bd1-72e0-442f-b5ea-b9fb2445cd04.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/379d5bd1-72e0-442f-b5ea-b9fb2445cd04.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/02dbbae1-1ec2-4144-8168-23fe20abc67d.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/379d5bd1-72e0-442f-b5ea-b9fb2445cd04.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/02dbbae1-1ec2-4144-8168-23fe20abc67d.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/379d5bd1-72e0-442f-b5ea-b9fb2445cd04.json"
+}

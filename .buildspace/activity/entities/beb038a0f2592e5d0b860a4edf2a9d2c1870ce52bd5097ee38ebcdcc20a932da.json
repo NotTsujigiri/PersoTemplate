@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46cab2e9-0263-4d65-80e2-415119bca9bc.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46cab2e9-0263-4d65-80e2-415119bca9bc.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T23:39:25.670Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 774,
+        "description": "User report, 2026-10-20, annotation 4\nTask graph tools added to the graph reached by double-clicking a task do not appear when switching from Node editor to Task graph within the Activity board. The user identifies this as a view-reuse architecture problem and wants the same Task graph view reused.\n\nTarget task: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json\nTarget: Task graph tools group, div#pane-4 > relational-ui-view-toolbar.view-toolbar > div.view-tools, reported point (286,45) in 1159x764.\nThe marked screenshot shows the graph toolbar with Current revision selection but the expected graph tools absent. Compare against the graph reached by double-clicking the same task with equivalent revision, permissions and context.\n\nExpected behavior and investigation\nUse one Task graph view and its owned tool contribution across both entry points. View behavior and applicable tools should not diverge merely because of the entry route. Avoid copying toolbar implementation or maintaining competing graph views.\nReproduce and record the actual tool differences before changing behavior. Establish whether view composition, toolbar mounting, or another boundary causes the omission; the architecture cause is currently the user's hypothesis.\nVerify that existing graph actions, revision controls, navigation and task selection remain available and consistent in both placements. Coordinate with the separate slow graph-navigation report without losing independent coverage of the missing tools.\n\nPrioritized and implemented in the current performance pass. Include this task URL in implementation commit messages.\n\nVerification progress — 2026-10-20\nReproduced missing embedded graph tools. Both graph entry points now use the same graph renderer and its tool contribution, including graph creation/navigation actions, zoom and completed-branch visibility. Exact controls and pending-navigation recordings pass.\n\nCompleted verification — 2026-10-20\nCommits: a3e1da7, a912ade, bfaeb66. Their messages contain the canonical task URLs. Build passed; final type gate checked 1,066 authored files with zero violations. Focused exact recordings, storage/stale-save checks and rendered screenshots pass. The full browser run recorded 267 passes and four failures; all four cases pass after focused recorder updates/rechecks. The full checkpoint still has four previously tracked Windows cancellation timing failures under load (task 916da876-ea04-42b3-ac05-93bba5129a8f remains Queued); no timing thresholds were weakened. The app has been restarted with the committed changes. See attached Performance pass verification 2026-10-20.json for measurements, coverage and limitations.",
+        "title": "Bug: Task graph tools differ between Activity board and task navigation",
+        "updatedAt": "2026-10-20T04:42:26.048Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46cab2e9-0263-4d65-80e2-415119bca9bc.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46cab2e9-0263-4d65-80e2-415119bca9bc.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 97,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46cab2e9-0263-4d65-80e2-415119bca9bc.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46cab2e9-0263-4d65-80e2-415119bca9bc.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:08:33.929Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T04:42:26.048Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46cab2e9-0263-4d65-80e2-415119bca9bc.json"
+}

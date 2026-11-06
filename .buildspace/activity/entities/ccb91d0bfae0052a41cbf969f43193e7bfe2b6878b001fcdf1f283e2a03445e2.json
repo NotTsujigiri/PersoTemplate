@@ -1,0 +1,61 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b607a592-b883-4ad3-925d-61e9774fc201.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b607a592-b883-4ad3-925d-61e9774fc201.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Resolve ownership, storage, components and verification before implementation.\n\nScope\n\n• SOFTWARE-DESIGN.md and canonical product requirements; independent clean-context reviewer.\n\nSuccess criteria\n\n1. Independent review has no unresolved material implementation-design findings.\n\n2. Delivery checkpoints, data ownership, actor rules and success criteria agree with the latest user instructions.\n\nEvidence\n\n• SOFTWARE-DESIGN.md\n\n• Independent review dispositions\n\nIndependent software_design_review converged after two rounds; canonical gate text, predecessor checkpoint retirement and isolated trusted-check execution dispositions resolved. No user questions remain.",
+        "title": "Review the software implementation design",
+        "updatedAt": "2026-09-30T09:21:53.006Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b607a592-b883-4ad3-925d-61e9774fc201.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b607a592-b883-4ad3-925d-61e9774fc201.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "agent:independent-design-review": {
+              "historical": true,
+              "reason": "software_design_review round 2: findings 2/3 resolved; only mechanical canonical gate cleanup remained and is recorded in this revision.",
+              "source": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/b9789e157fd8192bc63f9dbd7035f11b93c2c426d1c173b4aeedb530159a99de",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "agent:independent-design-review",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "historicalSource": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/b9789e157fd8192bc63f9dbd7035f11b93c2c426d1c173b4aeedb530159a99de",
+            "nodes": {},
+            "revision": 1,
+            "sessions": []
+          }
+        }
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b6276354-fa31-44ca-a055-cd856952702d.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b607a592-b883-4ad3-925d-61e9774fc201.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b6276354-fa31-44ca-a055-cd856952702d.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b607a592-b883-4ad3-925d-61e9774fc201.json"
+}

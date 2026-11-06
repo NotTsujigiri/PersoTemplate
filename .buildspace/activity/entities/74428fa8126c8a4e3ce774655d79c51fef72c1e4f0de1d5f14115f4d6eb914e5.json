@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e825c108-454e-43fa-b94d-394f10f0b79d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e825c108-454e-43fa-b94d-394f10f0b79d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-02T05:17:35.945Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 316,
+        "description": "Immutable attached evidence",
+        "title": "Model inspection using the existing node editor — corrected proposal",
+        "updatedAt": "2026-10-02T05:17:36.061Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e825c108-454e-43fa-b94d-394f10f0b79d.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e825c108-454e-43fa-b94d-394f10f0b79d.json",
+      "properties": {
+        "artifact": {
+          "hash": "e2602961e70677a93ef56a5a17d6ee4fdcd7e6592b80bf75ae864e9074cb0997",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/e2602961e70677a93ef56a5a17d6ee4fdcd7e6592b80bf75ae864e9074cb0997",
+          "mime": "image/png",
+          "size": 1329885
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e825c108-454e-43fa-b94d-394f10f0b79d.json"
+}

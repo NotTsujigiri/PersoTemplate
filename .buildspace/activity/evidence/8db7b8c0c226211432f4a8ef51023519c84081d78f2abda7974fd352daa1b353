@@ -1,0 +1,120 @@
+
+> the-broccoli@0.1.0 build
+> npm run build --workspace @super-app/mcp-contributor && node app/build-template-services.mjs && npm --workspace @broccoli/harness run check
+
+
+> @super-app/mcp-contributor@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @perso/template@0.1.0 build
+> tsc -p tsconfig.json && esbuild src/index.ts --bundle --format=esm --platform=browser --outfile=dist/index.js
+
+
+  dist\index.js  13.2kb
+
+Done in 279ms
+
+> @broccoli/harness@0.1.0 check
+> node syntax-check.mjs
+
+
+
+> the-broccoli@0.1.0 test
+> npm --workspace @broccoli/harness test
+
+
+> @broccoli/harness@0.1.0 test
+> node --test test/*.test.mjs
+
+✔ answer reserves the checkout while answer evidence is persisted (2947.3674ms)
+✔ initial prompt persistence failure leaves the checkout available and task unstarted (1214.5547ms)
+✔ failed resume keeps its question in the feed and records the failed resume (1261.5699ms)
+✔ a real failed write does not poison later prompt persistence (2013.1589ms)
+✔ preview input, refresh, stop and restart preserve the app server and restore the page (2555.4279ms)
+✔ preview drag releases the pointer and validates coordinates (647.6513ms)
+✔ own application preview waits for authenticated shell hydration and its theme (557.4397ms)
+✔ file filters distinguish root commit, range, worktree, deleted and untracked files (3579.6746ms)
+✔ one task edits two repositories; locks, checks and review cover both (16261.0329ms)
+✔ test output becomes result rows without treating diagnostics as tests (0.7169ms)
+✔ inline changes retain the whole file and both line numbers (496.7703ms)
+✔ historical source preserves exact revision bytes and reports deleted or unsupported files (2842.5675ms)
+✔ safe npm pipeline records real exits and serializes nested stage evidence (7008.278ms)
+✔ a failed npm stage stops its pipeline and reports remaining stages as not executed (1978.2519ms)
+✔ npm scripts with parent hooks retain opaque execution and execute the hooks (3060.1313ms)
+✔ arbitrary shell syntax, npm options and non-pipeline scripts are never split (6.1631ms)
+✔ recorded pipeline stages contain their tests and local diagnostics (4.175ms)
+✔ nested TAP suites preserve reported parent child relationships (0.401ms)
+✔ unstructured output does not invent test results or pipeline stages (0.211ms)
+✔ items, optional conversations, questions and feed survive restart without starting saved work (6606.4301ms)
+✔ busy or concurrent immediate starts do not create orphan conversations (2237.0338ms)
+✔ accepted changes remain feed attention until commit and queue state exposes canonical blockers (7531.0874ms)
+✔ feed quotes the latest written assistant result with bounded preview and preserves error details (1.155ms)
+✔ file operations reject traversal and stale overwrites; batch outcomes identify errors (956.1354ms)
+✔ sessions capture edits, survive restart and move to another checkout (3305.7699ms)
+✔ commit gate rejects failed and stale checks then accepts current checked changes (10707.0625ms)
+✔ command denial prevents execution and cancellation ends a running command (1404.7099ms)
+✔ HTTP requires token, rejects foreign origins and supports human edits (1193.4348ms)
+✔ dismissed notification snapshots survive resolution and restart, restore and collect feedback without running work (1540.7089ms)
+✔ text diff preserves unchanged context and addition/removal line numbers (1.9623ms)
+✔ official Pi SDK executes a workspace call with a deterministic local provider (1735.2736ms)
+✔ official Pi completes an edit, reusable verification and review with a deterministic model (8971.1663ms)
+✔ parallel branches and review correction loops retain distinct ranges and real endpoints (206.6162ms)
+✔ submitted source blocks every legacy execution path and exact files survive live edits (2816.4195ms)
+✔ source-mutating checks cannot affect live files or make later evidence pass (4704.6288ms)
+✔ export restores portable identity, evidence and historical reads without restoring live approval (2425.2417ms)
+✔ successor exposes earlier passed checks as stale until explicit human acceptance (4393.6537ms)
+✔ isolated multi-repository checks retain repository-relative dependency paths (2405.0217ms)
+✔ workspace imports resolve rebuilt submitted sources instead of copied live outputs (1570.213ms)
+✔ checks cannot pass after changing a sibling repository and unborn repositories are captured (4248.5074ms)
+✔ parallel reviews share a target; edits remain locked until both reviews release it (247.2268ms)
+✔ title-only graph CRUD is atomic, restart-stable and context checked without execution (104.6997ms)
+✔ idempotency survives restart, changed request and stale/concurrent writes cannot overwrite (100.094ms)
+✔ queue brackets move/reindex atomically and containment is independent from prerequisites (93.3314ms)
+✔ review freezes targets, blocks author impersonation, requires discussion closure and seals passed history (154.9832ms)
+✔ failed review successor preserves obligation and only transfers explicit pending gates (239.2852ms)
+✔ real MCP discovery/calls and UI invocation share one owner and actor boundary (34.4168ms)
+✔ internal result publication survives another owner holding the writer lock (134.8232ms)
+✔ evidence attachment preserves content and session range; frozen targets reject attachment (110.7308ms)
+✔ preview configuration repairs only obsolete built-ins and follows the actual app origin (3.9705ms)
+✔ default combined preview has isolated origin, authentication and runtime state (2418.3721ms)
+{"recorder":"cold-startup-budget","phase":"initial","elapsedMs":10955,"output":""}
+{"recorder":"cold-startup-ready","phase":"initial","elapsedMs":11348,"originalBudgetMissed":true,"output":"The Broccoli is ready: http://127.0.0.1:58106\n"}
+✖ supervised backend restart preserves task data and authentication (11762.7217ms)
+✔ selected check batches deduplicate aliases, hold locks and only full configured selection satisfies verification (5579.458ms)
+✔ capture and consolidate inputs, enforce acyclic prerequisites, queue only after human acceptance (12112.6133ms)
+✔ review becomes stale on changes; commit evidence travels in Git notes and artifacts import without trusting old acceptance (8651.0104ms)
+✔ fork isolates files and permits distinct checkouts while shared checkout is locked (2788.392ms)
+✔ clearing a file review revokes acceptance before commit (3650.8984ms)
+✔ dismissing an accepted stale result releases its obsolete commit requirement (3607.9287ms)
+✔ an unanswered question pauses overlapping queued work until the decision is resolved (2212.9691ms)
+✔ verification gates reject changed default and project commands without requiring file changes (8487.1058ms)
+✔ a newer failing rerun supersedes an earlier passing check on unchanged files (3821.5142ms)
+ℹ tests 61
+ℹ suites 0
+ℹ pass 60
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 55446.5247
+
+✖ failing tests:
+
+test at test\restart.test.mjs:9:1
+✖ supervised backend restart preserves task data and authentication (11762.7217ms)
+  Error: Original startup readiness budget exceeded; observation recorded eventual readiness.
+      at waitForReady (file:///C:/Users/vince/AppData/Local/Temp/broccoli-check-target-6tQZaE/workspace/Btr/TheBroccoli/app/test/restart.test.mjs:68:55)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async TestContext.<anonymous> (file:///C:/Users/vince/AppData/Local/Temp/broccoli-check-target-6tQZaE/workspace/Btr/TheBroccoli/app/test/restart.test.mjs:82:21)
+      at async Test.run (node:internal/test_runner/test:1208:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    observedReady: true
+  }
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path C:\Users\vince\AppData\Local\Temp\broccoli-check-target-6tQZaE\workspace\Btr\TheBroccoli\app
+npm error workspace @broccoli/harness@0.1.0
+npm error location C:\Users\vince\AppData\Local\Temp\broccoli-check-target-6tQZaE\workspace\Btr\TheBroccoli\app
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c node --test test/*.test.mjs

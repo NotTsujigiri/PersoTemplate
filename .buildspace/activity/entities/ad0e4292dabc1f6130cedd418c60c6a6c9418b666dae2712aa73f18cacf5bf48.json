@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cc99b20d-7a52-4d88-9200-ad9389564e84.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cc99b20d-7a52-4d88-9200-ad9389564e84.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T05:26:46.725Z",
+        "createdBy": "agent:codex",
+        "description": "The review Changes side-by-side file diff marks content incorrectly (reported on .agents/skills/ui-antipatterns/SKILL.md). Reproduce the before/after comparison and correct diff calculation/rendering. Deferred explicitly during the fourteen-annotation review; do not fix in that pass.",
+        "title": "Fix incorrect file diff display",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cc99b20d-7a52-4d88-9200-ad9389564e84.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cc99b20d-7a52-4d88-9200-ad9389564e84.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cc99b20d-7a52-4d88-9200-ad9389564e84.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cc99b20d-7a52-4d88-9200-ad9389564e84.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T07:03:28.038Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-29T22:37:05.018Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cc99b20d-7a52-4d88-9200-ad9389564e84.json"
+}

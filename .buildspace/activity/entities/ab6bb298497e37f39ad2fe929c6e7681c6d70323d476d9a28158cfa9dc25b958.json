@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f58bc10-c53b-4a7b-a3db-d6a6057c81c9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f58bc10-c53b-4a7b-a3db-d6a6057c81c9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T07:41:38.516Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 626,
+        "description": "",
+        "title": "Resolved in 26bfec3. Independent reviewer accepts authoritative component/property/data-type inspection and owner editing restrictions. Both refresh orderings n",
+        "updatedAt": "2026-10-18T07:41:48.315Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f58bc10-c53b-4a7b-a3db-d6a6057c81c9.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f58bc10-c53b-4a7b-a3db-d6a6057c81c9.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f75cc7-d21f-4b85-acbe-7ad3f6043861.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Resolved in 26bfec3. Independent reviewer accepts authoritative component/property/data-type inspection and owner editing restrictions. Both refresh orderings now have exact before/after recordings; pending detail renders cannot replace a newer inspection."
+          },
+          {
+            "kind": "explain",
+            "text": "Build, 41 model tests, 563 unit/integration tests and the final 1,038-file strict type check pass. Shutdown preserves full pipelined responses. Feed fixture cleanup drains every handler (5/5 repeats); annotation capture waits for completion (6/6). Full browser checkpoint continues in the final verification task."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f58bc10-c53b-4a7b-a3db-d6a6057c81c9.json"
+}

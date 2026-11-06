@@ -1,0 +1,362 @@
+{
+  "authored": {
+    "actions": [
+      "create running root and nested implementation with two reviews",
+      "submit first review",
+      "attempt Running, Completed, Queued, Backlog and direct owner bypass",
+      "submit overlapping review",
+      "withdraw first review",
+      "restart",
+      "pass remaining review",
+      "explicitly resume root"
+    ]
+  },
+  "before": [
+    {
+      "after": "configure",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "first submit",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "attempt running",
+      "result": "accepted",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "attempt completed",
+      "result": "accepted",
+      "root": "completed",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "attempt queued",
+      "result": "accepted",
+      "root": "queued",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "attempt backlog",
+      "result": "accepted",
+      "root": "backlog",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "direct write",
+      "result": "accepted",
+      "targetUnchanged": true,
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "second submit",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "submitted",
+      "blockers": 0
+    },
+    {
+      "after": "withdraw first",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "submitted",
+      "blockers": 0
+    },
+    {
+      "after": "restart",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "submitted",
+      "blockers": 0
+    },
+    {
+      "after": "pass second",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "passed",
+      "blockers": 0
+    },
+    {
+      "after": "explicit resume",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "passed",
+      "blockers": 0
+    }
+  ],
+  "actual": [
+    {
+      "after": "configure",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "first submit",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "attempt running",
+      "result": "rejected",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "attempt completed",
+      "result": "rejected",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "attempt queued",
+      "result": "rejected",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "attempt backlog",
+      "result": "rejected",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "direct write",
+      "result": "rejected",
+      "targetUnchanged": true,
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "second submit",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "submitted",
+      "blockers": 2
+    },
+    {
+      "after": "withdraw first",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "submitted",
+      "blockers": 1
+    },
+    {
+      "after": "restart",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "submitted",
+      "blockers": 1
+    },
+    {
+      "after": "pass second",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "passed",
+      "blockers": 0
+    },
+    {
+      "after": "explicit resume",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "passed",
+      "blockers": 0
+    }
+  ],
+  "expected": [
+    {
+      "after": "configure",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "draft",
+      "blockers": 0
+    },
+    {
+      "after": "first submit",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "attempt running",
+      "result": "rejected",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "attempt completed",
+      "result": "rejected",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "attempt queued",
+      "result": "rejected",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "attempt backlog",
+      "result": "rejected",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "direct write",
+      "result": "rejected",
+      "targetUnchanged": true,
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "draft",
+      "blockers": 1
+    },
+    {
+      "after": "second submit",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "submitted",
+      "second": "submitted",
+      "blockers": 2
+    },
+    {
+      "after": "withdraw first",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "submitted",
+      "blockers": 1
+    },
+    {
+      "after": "restart",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "submitted",
+      "blockers": 1
+    },
+    {
+      "after": "pass second",
+      "root": "blocked",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "passed",
+      "blockers": 0
+    },
+    {
+      "after": "explicit resume",
+      "root": "running",
+      "group": "completed",
+      "work": "completed",
+      "first": "draft",
+      "second": "passed",
+      "blockers": 0
+    }
+  ]
+}

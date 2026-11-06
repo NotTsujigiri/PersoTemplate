@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68a4a6c6-3569-45b3-8cd6-781cdf2a80cd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68a4a6c6-3569-45b3-8cd6-781cdf2a80cd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T10:13:27.869Z",
+        "createdBy": "agent:codex",
+        "description": "Observed during direct Broccoli Local plugin verification on 2026-09-28: planning_read requests narrowed to one node still return substantial schema and revision/history information; reading a review also includes large nested target/check-result data. This increases response volume and agent context cost for simple inspection. It conflicts with the existing Efficient tool use input. No measured token-cost or latency benchmark has been established. Investigate an API contract that returns the requested information and lets consumers explicitly request schema, history and expanded evidence, with bounded retrieval where needed. Record this as an observed issue; scope and priority remain to be decided during the MVP regroup discussion.",
+        "title": "Narrow planning reads return excessive schema and history",
+        "updatedAt": "2026-10-19T04:08:36.825Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68a4a6c6-3569-45b3-8cd6-781cdf2a80cd.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68a4a6c6-3569-45b3-8cd6-781cdf2a80cd.json",
+      "properties": {
+        "meaning": "issue"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68a4a6c6-3569-45b3-8cd6-781cdf2a80cd.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68a4a6c6-3569-45b3-8cd6-781cdf2a80cd.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:16:28.819Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T04:08:36.825Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68a4a6c6-3569-45b3-8cd6-781cdf2a80cd.json"
+}

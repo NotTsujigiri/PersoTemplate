@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9892d2fc-0ed9-4108-9886-2ce666b79c91.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9892d2fc-0ed9-4108-9886-2ce666b79c91.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T15:33:08.632Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 372,
+        "description": "# Reviewable model proposal\n\n## What you will review\nThe proposed Task, Input/feedback, Actor, Evidence, state-transition, review submission/outcome and check-attempt types in the Data models view. For each: typed fields, optionality, relations/cardinality, owned invariants and mutators, and changes from the current model. The proposal is isolated from the live runtime; inspecting or type-checking it does not install it or approve it.\n\n## Work\nUse the preceding, reviewed model inspection surface to compare proposed declarations with the current contracts and their runtime constraints. Prefer existing compiler inspection, tree, graph and node-editor components. Native source is the authority; no parallel handwritten UI schema. Explicitly show rules that are runtime-only or not yet implemented. Include stable links to each reviewed model element.\n\n## Decisions for review\nParent placement aggregation across mixed children; optional titles by task type; assignment; readiness versus acceptance; correction/resubmission inside the same task; immutable attempt evidence; cancellation and abandonment; independent reviewer outcomes and task completion.\n\n## Deliverable\nA complete state table and proposed native types with executable invariant examples and typed mutation signatures. Demonstrate valid/invalid examples including rejected review without deadlock, queuing descendants, stale check evidence and already accepted boundaries.\n\n## Boundary\nThis stage prepares a proposed model and its inspection. It does not change live task execution semantics. Implement the agreed behavior only in the following implementation stage after the named model review passes.",
+        "title": "Propose the planning, execution and review model",
+        "updatedAt": "2026-10-08T18:37:28.369Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9892d2fc-0ed9-4108-9886-2ce666b79c91.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9892d2fc-0ed9-4108-9886-2ce666b79c91.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "design",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/51975588-9b47-46dd-a501-05c97fe4c041.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9892d2fc-0ed9-4108-9886-2ce666b79c91.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/51975588-9b47-46dd-a501-05c97fe4c041.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9892d2fc-0ed9-4108-9886-2ce666b79c91.json"
+}

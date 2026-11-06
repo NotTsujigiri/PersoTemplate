@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0aeb96e-3413-4fbc-858c-633c61c0564b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0aeb96e-3413-4fbc-858c-633c61c0564b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-26T01:30:40.827Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1155,
+        "description": "Let users collapse and expand regions of a document using folding ranges supplied by its available LSP servers. RelationalUi consumes the shared LspContributor capabilities; language-specific rules remain in the language contributors.\n\nRefresh ranges as the document changes, preserve useful fold state where possible, and discard stale responses. Folding changes only the presentation, never the file contents. Files without folding support remain editable normally.\n\nDeliver this after the initial TypeScript/JSON language-support and coloring work.\r\n\r\nCompleted 2026-10-31: Implemented on master in 7bec3b3. The shared LSP contract supplies folding ranges; text and expression modes share fold state while preserving canonical file contents, source positions and nested folds. Document edits rebase useful folds and reject stale results. TypeScript folding, editing around folded content, undo, completion and mode continuity passed browser verification. An outdated token-control test selector was corrected and its unchanged expected recording passed on rerun.\r\nCheckpoint: build, type/dependency checks and all 751 model/unit tests passed. The full browser sweep recorded 381 passes and two failures: the selector issue above (fixed and rerun successfully) and the pre-existing Windows newline recovery issue tracked separately in 5bb32ab9-aa94-4b84-bde6-6d059cfec2d4. Service rebuilt and restarted.",
+        "title": "Add folding and unfolding to the text editor using LSP folding ranges",
+        "updatedAt": "2026-10-31T07:08:57.649Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0aeb96e-3413-4fbc-858c-633c61c0564b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0aeb96e-3413-4fbc-858c-633c61c0564b.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0aeb96e-3413-4fbc-858c-633c61c0564b.json"
+}

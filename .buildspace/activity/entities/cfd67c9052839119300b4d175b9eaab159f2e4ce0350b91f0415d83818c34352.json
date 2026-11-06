@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c8a3b54-f87c-4c10-89e0-590268961fc3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c8a3b54-f87c-4c10-89e0-590268961fc3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T21:41:25.245Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 709,
+        "description": "- The selected component source is visible, but its authored element children disappear under a component filter.\n- Keep the opened component's authoring hierarchy accessible while preserving repository filtering.",
+        "title": "Opening a filtered UI component hides its element hierarchy",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c8a3b54-f87c-4c10-89e0-590268961fc3.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c8a3b54-f87c-4c10-89e0-590268961fc3.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c8a3b54-f87c-4c10-89e0-590268961fc3.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c8a3b54-f87c-4c10-89e0-590268961fc3.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:47:43.061Z",
+            "disposition": "later",
+            "observedUpdatedAt": "2026-10-20T01:53:47.642Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c8a3b54-f87c-4c10-89e0-590268961fc3.json"
+}

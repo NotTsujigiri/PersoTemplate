@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/421aeb98-4531-45c1-9e5c-96b76334e6d0.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/421aeb98-4531-45c1-9e5c-96b76334e6d0.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T16:22:06.792Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 379,
+        "description": "Required human review of the implemented model before graph implementation. Inspect invariants and focused verification evidence for readiness, child propagation, pending acceptance, rejection/correction/resubmission, and UI/API parity. Rejected work is corrected and reviewed before continuing.",
+        "title": "Review readiness and review iteration behavior",
+        "updatedAt": "2026-10-08T16:24:26.160Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/421aeb98-4531-45c1-9e5c-96b76334e6d0.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/421aeb98-4531-45c1-9e5c-96b76334e6d0.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/421aeb98-4531-45c1-9e5c-96b76334e6d0.json"
+}

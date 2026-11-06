@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/396cf948-8146-4fee-b1c5-3a8cbd06c653.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/396cf948-8146-4fee-b1c5-3a8cbd06c653.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T15:28:20.545Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 436,
+        "description": "Implement the accepted review/annotation mockups in small serial batches following their plan and human checkpoints. Reuse the existing UI components and the UI editor in Review → Changes. Keep artifacts and revisions traceable, feedback linked, and mutations owned and validated by the responsible model.\n\nVerify persistence, invalid and stale edits, revision changes and independent view refresh. Provide reviewable UI and evidence at each checkpoint. Keep proposal formats open rather than requiring a particular document template. Do not implement Task graph CRUD in this stage.",
+        "title": "Develop proposal review and annotations following the agreed plan",
+        "updatedAt": "2026-10-10T09:48:42.791Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/396cf948-8146-4fee-b1c5-3a8cbd06c653.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/396cf948-8146-4fee-b1c5-3a8cbd06c653.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/396cf948-8146-4fee-b1c5-3a8cbd06c653.json"
+}

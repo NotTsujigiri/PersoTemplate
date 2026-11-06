@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96d804ac-3b28-4eb5-adee-dcf671f79780.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96d804ac-3b28-4eb5-adee-dcf671f79780.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:24:16.476Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 393,
+        "description": "Use Data models to inspect the actual planning model and engine model. Verify fields, relationships, predicates and typed bindings, their source/owner and enforcing mutation boundary. Confirm current/proposed model comparison is usable before reviewing the redesigned planning model. Coverage gaps must be visible; a rendered diagram alone is insufficient.",
+        "title": "Review composed model inspection and invariant visibility",
+        "updatedAt": "2026-10-08T18:28:28.166Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96d804ac-3b28-4eb5-adee-dcf671f79780.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96d804ac-3b28-4eb5-adee-dcf671f79780.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96d804ac-3b28-4eb5-adee-dcf671f79780.json"
+}

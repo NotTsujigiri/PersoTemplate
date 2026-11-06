@@ -1,0 +1,49 @@
+BEFORE FIX
+
+Running 1 test using 1 worker
+
+(node:9876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 test\queue-navigation-ui.spec.mjs:3:1 › a delayed queue-control response does not navigate away from Feed (6.8s)
+
+
+  1) test\queue-navigation-ui.spec.mjs:3:1 › a delayed queue-control response does not navigate away from Feed 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /area=feed/
+    Received string:  "http://localhost:49679/?area=items&template=personal&community=private&channel=76802923-2595-4840-a400-6a1a59913c15&space=76802923-2595-4840-a400-6a1a59913c15"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        14 × locator resolved to <html lang="en">…</html>
+           - unexpected value "http://localhost:49679/?area=items&template=personal&community=private&channel=76802923-2595-4840-a400-6a1a59913c15&space=76802923-2595-4840-a400-6a1a59913c15"
+
+
+      24 |   // Drain the response handler and its pending render, without a timed sleep.
+      25 |   await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    > 26 |   await expect(page).toHaveURL(/area=feed/);
+         |                      ^
+      27 |   await expect(feed).toHaveAttribute('aria-pressed', 'true');
+      28 |   await expect(page.getByRole('region', { name: 'Feed', exact: true })).toBeVisible();
+      29 | });
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\queue-navigation-ui.spec.mjs:26:22
+
+    Error Context: test-results\queue-navigation-ui-a-dela-3c1a7-not-navigate-away-from-Feed\error-context.md
+
+  1 failed
+    test\queue-navigation-ui.spec.mjs:3:1 › a delayed queue-control response does not navigate away from Feed 
+
+AFTER FIX
+
+Running 3 tests using 1 worker
+
+(node:26700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 test\queue-navigation-ui.spec.mjs:3:1 › a delayed queue-control response does not navigate away from Feed (1.8s)
+  ok 2 test\review-queue-ui.spec.mjs:10:1 › queued work is reviewed, accepted and committed through the feed before the next item starts (15.2s)
+  ok 3 test\trigger-control-ui.spec.mjs:3:1 › scheduled execution control is explicitly default-off and respects the paused queue (1.8s)
+
+  3 passed (24.1s)
+

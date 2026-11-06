@@ -1,0 +1,50 @@
+{
+  "name": "Authentication shutdown verification",
+  "date": "2026-10-24",
+  "commit": "6a04fdf",
+  "status": "focused checks passed",
+  "observations": [
+    {
+      "case": "pending revocation poll",
+      "before": {
+        "databaseQueriesAfterShutdown": 1,
+        "responseEnded": true
+      },
+      "after": {
+        "databaseQueriesAfterShutdown": 0,
+        "responseEnded": true
+      }
+    },
+    {
+      "case": "poll after authentication close",
+      "before": {
+        "databaseQueriesAfterShutdown": 1,
+        "responseEnded": true
+      },
+      "after": {
+        "databaseQueriesAfterShutdown": 0,
+        "responseEnded": true
+      }
+    }
+  ],
+  "expected": {
+    "databaseQueriesAfterShutdown": 0,
+    "responseEnded": true
+  },
+  "simulatedInput": {
+    "responseCloseEvent": "delayed",
+    "advanceMs": 10000,
+    "observationWindowMs": 100
+  },
+  "focusedTests": {
+    "passed": 6,
+    "failed": 0,
+    "log": ".harness/local-auth-shutdown-after.log"
+  },
+  "recordings": "Systems/Depth3/HarnessApp/.harness/recordings/local-auth-shutdown/",
+  "nativeCrash": {
+    "causalLink": "Unconfirmed",
+    "evidence": ".harness/native-worker-new-failure-20261024.json"
+  },
+  "fullCheckpoint": ".harness/overnight-shutdown-checkpoint.log"
+}

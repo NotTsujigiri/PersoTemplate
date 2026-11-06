@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75321101-1215-4fff-9178-0c7ddf5a73b2.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75321101-1215-4fff-9178-0c7ddf5a73b2.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T13:08:55.754Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 268,
+        "description": "Post-review correction: reproduce tool link omission and cross-tab navigation/authentication; return application-owned links from planning operations, preserve canonical graph identity, and verify exact node selection without credentials in URLs or tool output.\n\nCompleted: MCP create/read/update outputs include application-owned credential-free links; new tabs reuse an authenticated same-origin session. Exact recorded regression passed, build passed, 130 server and 106 browser tests passed. Actual live MCP read link opened the exact existing task in the user browser. Attached correction report, checkpoint log and screenshot. Existing immutable review candidate unchanged; no acceptance, commit or merge.",
+        "title": "Return usable browser links from planning tools",
+        "updatedAt": "2026-09-30T13:24:59.837Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75321101-1215-4fff-9178-0c7ddf5a73b2.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75321101-1215-4fff-9178-0c7ddf5a73b2.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75321101-1215-4fff-9178-0c7ddf5a73b2.json"
+}

@@ -1,0 +1,890 @@
+{
+  "input": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4764cc13-d70f-4e04-885b-96f34471cebf.json",
+  "gate": "Both authored UI scenarios failed before production edits. Expected records have remained unchanged.",
+  "sequence": [
+    [
+      "Conversation and workspace",
+      "Show only right panel"
+    ],
+    [
+      "Conversation and workspace",
+      "Show only left panel"
+    ],
+    [
+      "Conversation and workspace",
+      "Equal panels"
+    ],
+    [
+      "Planning board width",
+      "Show only left panel"
+    ],
+    [
+      "Activity Inputs width",
+      "Show only right panel"
+    ],
+    [
+      "Activity Active width",
+      "Show only left panel"
+    ],
+    [
+      "Activity Inputs width",
+      "Equal panels"
+    ],
+    [
+      "Activity Active width",
+      "Equal panels"
+    ],
+    [
+      "Activity blocked height",
+      "Show only bottom panel"
+    ],
+    [
+      "Activity running height",
+      "Show only bottom panel"
+    ],
+    [
+      "Activity queued height",
+      "Show only bottom panel"
+    ],
+    [
+      "Activity queued height",
+      "Equal panels"
+    ],
+    [
+      "Activity running height",
+      "Equal panels"
+    ],
+    [
+      "Activity blocked height",
+      "Equal panels"
+    ],
+    [
+      "Planning board width",
+      "Equal panels"
+    ],
+    [
+      "Conversation and workspace",
+      "Show only left panel"
+    ],
+    [
+      "Conversation and workspace",
+      "Equal panels"
+    ]
+  ],
+  "cases": {
+    "composed-layout": {
+      "actual": [
+        {
+          "step": "Conversation and workspace: Show only right panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Conversation and workspace: Show only left panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            }
+          ]
+        },
+        {
+          "step": "Conversation and workspace: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Planning board width: Show only left panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity Inputs width: Show only right panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity Active width: Show only left panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity Inputs width: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity Active width: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity blocked height: Show only bottom panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity running height: Show only bottom panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity queued height: Show only bottom panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity queued height: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity running height: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity blocked height: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": false,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Planning board width: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": false
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Conversation and workspace: Show only left panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": false,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Conversation and workspace: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "step": "Conversation and workspace: Show only right panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Conversation and workspace: Show only left panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Conversation and workspace: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Planning board width: Show only left panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity Inputs width: Show only right panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity Active width: Show only left panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity Inputs width: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity Active width: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity blocked height: Show only bottom panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity running height: Show only bottom panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity queued height: Show only bottom panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity queued height: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity running height: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Activity blocked height: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Planning board width: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Conversation and workspace: Show only left panel",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        },
+        {
+          "step": "Conversation and workspace: Equal panels",
+          "groups": [
+            {
+              "selector": "#buildspace-main",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".planning-body",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-columns",
+              "covered": true,
+              "adjoining": true
+            },
+            {
+              "selector": ".activity-active-sections",
+              "covered": true,
+              "adjoining": true
+            }
+          ]
+        }
+      ]
+    },
+    "node-editor": {
+      "actual": {
+        "unrelatedFieldFullWidth": false,
+        "sectionsFlush": false,
+        "compactHeading": false,
+        "creationUsesNodeEditor": false,
+        "creationHasFieldSection": false,
+        "creationHasRelationsSection": false
+      },
+      "expected": {
+        "unrelatedFieldFullWidth": true,
+        "sectionsFlush": true,
+        "compactHeading": true,
+        "creationUsesNodeEditor": true,
+        "creationHasFieldSection": true,
+        "creationHasRelationsSection": true
+      }
+    }
+  }
+}

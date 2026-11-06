@@ -1,0 +1,26 @@
+{
+  "name": "Activity data migration",
+  "date": "2026-10-24",
+  "status": "passed",
+  "revision": 1045,
+  "currentTasks": 1452,
+  "convertedCurrentTasks": 406,
+  "restoredHistoricalActivity": 99,
+  "activityLeftUnset": 307,
+  "placementChanges": 0,
+  "convertedCapturedTaskValues": 18,
+  "changedFilesAcrossRetainedRevisions": 308939,
+  "validation": [
+    "Verified original generation hashes before conversion.",
+    "Verified all resulting generation hashes and strict task properties, including captured review targets.",
+    "Loaded the current generation through PlanningStore and paged all 1,452 tasks through the restarted service.",
+    "Verified the live schema contains exactly seven activity choices.",
+    "Removed the disposable migration program; no compatibility reader is retained."
+  ],
+  "boundary": "Historical relationship constraints predating the current schema were not rewritten by this task; storage hashes and migrated task contracts were checked for every retained generation.",
+  "evidenceDirectory": "Systems/Depth3/HarnessApp/.harness/activity-data-migration-20261024-v2",
+  "commits": [
+    "b80339b",
+    "c957885"
+  ]
+}

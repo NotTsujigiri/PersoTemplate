@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b57fd22-c164-4d63-b754-64b03d01caf5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b57fd22-c164-4d63-b754-64b03d01caf5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T15:10:16.372Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 432,
+        "description": "Implement only the approved proposal after its human review passes. Support the agreed task and dependency CRUD interactions directly in Task graph, including the agreed drag/drop reorganization. Keep validation and atomic graph mutations in the data-model owner. Preserve identity, evidence, submitted review history, prerequisite and sibling-boundary invariants; reject invalid or stale operations without partial changes.\n\nVerify durable saves, cancellation and rejected operations, dependency/readiness updates, and independent views using service notifications rather than editor-to-graph coupling. Exercise the agreed reorganization in isolated fixtures, inspect the resulting UI, and provide evidence for the following human review. Do not move or complete the user’s existing tasks on their behalf.",
+        "title": "Implement the approved Task graph editing proposal",
+        "updatedAt": "2026-10-09T15:10:45.961Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b57fd22-c164-4d63-b754-64b03d01caf5.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b57fd22-c164-4d63-b754-64b03d01caf5.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ed823e97-644d-477c-b0f9-5c974f0d7651.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b57fd22-c164-4d63-b754-64b03d01caf5.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ed823e97-644d-477c-b0f9-5c974f0d7651.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b57fd22-c164-4d63-b754-64b03d01caf5.json"
+}

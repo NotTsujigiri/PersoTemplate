@@ -1,0 +1,9 @@
+Five annotation fixes completed.
+
+1. Former choice fields use Engine-owned named enums or unique enum sets. Allowed values drive dropdown discovery and validation; field-level choice metadata has been removed.
+2. Read-only scalar/list values use a transparent, muted presentation distinct from editable controls.
+3. Read-only status belongs to the Engine ValueField/node-type contract and appears in the editor heading with an explanatory tooltip. Owner validation still rejects authored changes to protected fields.
+4. Revision options now show Current or the numeric revision; the dropdown keeps its revision tooltip and accessible label.
+5. SchemaForm owns every heading and value wrapper. JSON disclosures and contributed renderer bodies appear beneath the same name/type/status row.
+
+Validation: identical authored input and expected recording failed before the fixes and match exactly afterwards. Engine: 68 passed. Shared UI: 218 passed. Full app checkpoint: 71 backend and 79 browser tests passed. Final focused browser recording passed after the narrow-heading adjustment. Screenshots inspected. Live app refreshed and verified, with two unsaved drafts restored without saving.

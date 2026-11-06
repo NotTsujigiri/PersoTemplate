@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab27dc12-b573-44d0-a4e8-8032e7f67bfe.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab27dc12-b573-44d0-a4e8-8032e7f67bfe.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T04:54:36.154Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 970,
+        "description": "Analyze and agree on relational engine isolation requirements and their configuration before implementing additional isolation mechanisms.\n\nWhy this task exists\nDuring the composed TypeScript configuration discussion, the user identified a tradeoff between sharing engines for efficiency and using separate instances for isolation and increased memory use. Their initial meaning of isolation is separate contributor configuration and materialized state. Separate processes may be considered later for additional isolation in local deployments. The user explicitly deferred this design question to keep the first composed-configuration iteration manageable, but requested a task because it needs deliberate thought.\n\nThis is a separate deferred analysis task, not an implementation prerequisite or added scope for the first composition iteration. Origin: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/67e7eb8b-7d65-4255-b3d0-3b183afd2265.json.\n\nQuestions to resolve\n- Define the intended guarantees of separate engine instances: contributor configuration, materialized graph state, active queries, execution failures, and access to underlying durable data.\n- Distinguish sharing a configuration from sharing a running instance; identify which service/frontend instances and browser tabs may share state.\n- Determine whether separate in-process instances meet each identified need, and whether separate processes or other execution boundaries are justified. Determine the appropriate granularity rather than assuming one process per contributor.\n- Establish the configuration controls, ownership and defaults needed to make sharing and separation explicit.\n- Assess lifecycle, memory, repeated acquisition and maintenance costs using concrete Broccoli/Btr/Perso scenarios.\n- Specify how to verify the agreed boundaries. Keep operational separation and security guarantees distinct; separate instances alone must not be claimed to provide unspecified guarantees.\n\nExpected outcome\nAn agreed explanation of what isolation means, the scenarios requiring it, and a bounded implementation scope with validation criteria. The questions above are investigation prompts, not accepted design decisions.\n\nUser clarification (verbatim)\n> Next, about the configurable isolation you mentioned: **for the MVP, does isolation mean separate contributor configuration and materialized state, or do you also require contributors to run in separate processes?** &#x20;\n\n\n\nI was thinking more about the former even if locally we could consider the later as well as an additional way to enforce isolation.\n\n\n\nFor the MVP however i would defer this specific question for later honestly so the first iteration of composed configuration isn't to complex.\n\nUser follow-up (verbatim)\nbut i would say make a task of it its clearly something we need to think about.",
+        "title": "Define isolation for shared and separate relational engines",
+        "updatedAt": "2026-10-22T04:55:57.478Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab27dc12-b573-44d0-a4e8-8032e7f67bfe.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab27dc12-b573-44d0-a4e8-8032e7f67bfe.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "investigation",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab27dc12-b573-44d0-a4e8-8032e7f67bfe.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab27dc12-b573-44d0-a4e8-8032e7f67bfe.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-24T22:51:18.466Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-22T04:55:57.478Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab27dc12-b573-44d0-a4e8-8032e7f67bfe.json"
+}

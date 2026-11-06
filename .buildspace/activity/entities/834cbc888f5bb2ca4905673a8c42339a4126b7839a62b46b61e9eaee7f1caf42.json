@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f3da006-7b8a-4852-862c-1fb66397c59b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f3da006-7b8a-4852-862c-1fb66397c59b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:47:03.818Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 653,
+        "description": "",
+        "title": "Request-cleanup correction passed all five node-editor browser scenarios, including the exact independent repeated-component values. The reviewer approved drain",
+        "updatedAt": "2026-10-18T09:47:16.900Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f3da006-7b8a-4852-862c-1fb66397c59b.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f3da006-7b8a-4852-862c-1fb66397c59b.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/630568cb-ced9-4135-a26b-1369bb3fea31.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Request-cleanup correction passed all five node-editor browser scenarios, including the exact independent repeated-component values. The reviewer approved draining post-save traffic before unrouteAll(wait); handler errors remain failures. Evidence: .harness/migration-viewport-readiness-after.log (node-editor cases all passed; its separate draft viewport witness failed and is being corrected). No production behavior or component-value expectations changed."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f3da006-7b8a-4852-862c-1fb66397c59b.json"
+}

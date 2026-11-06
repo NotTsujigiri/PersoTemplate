@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40a7ab5d-bca9-4389-bf85-d021b8ab1dd3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40a7ab5d-bca9-4389-bf85-d021b8ab1dd3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-13T05:57:13.322Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 503,
+        "description": "Checks now reuses the Repositories fileTree builder, showing repository folders and declaring files with individual tests underneath. Npm scripts appear under package.json. Discovery owns explicit repository-relative declaration locations and runnable file scopes; execution parent coverage stays separate from folder containment. Supporting implementation references still drive Code. Unlocated checks remain accessible with an explanatory tooltip. Empty repositories are omitted. File scopes appear once, are individually runnable, and filtered branch Run includes only visible matches. Shared filtering adds Path and Kind; existing selection, latest outcomes, timings, Results and Code remain.\n\nRecorded reproduction: .harness/check-folders-before.log and test-results-check-folders-before/*/tree-{actual,expected}.json demonstrate the original suite-first mismatch. The same tree recording passes after the change. Eight focused unit tests pass, plus six distinct focused UI scenarios covering folder/file/case structure, scoped Run, filtering, Code, progress, scrolling and the actual component-check runner. Logs: .harness/check-folders-unit.log, check-folders-ui.log, check-folders-ui-final.log and check-folders-consumers.log. Screenshots under Systems/Depth3/HarnessApp/test-results-check-folders-consumers/ were inspected.\n\nFinal .\\\\build.ps1 passed, including type-safety and organisation checks (.harness/check-folders-build-final.log). Guarded restart succeeded; the live catalog reports 354 entries, 351 located declarations and 118 runnable browser-test files with no discovery errors. Refresh Checks for the updated UI. Human visual acceptance remains with the parent review.",
+        "title": "Show checks within their repository folders and declaring files",
+        "updatedAt": "2026-10-13T06:20:20.573Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40a7ab5d-bca9-4389-bf85-d021b8ab1dd3.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40a7ab5d-bca9-4389-bf85-d021b8ab1dd3.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40a7ab5d-bca9-4389-bf85-d021b8ab1dd3.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b661f1ae-8d17-4e7d-aa50-3e322f334843.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b661f1ae-8d17-4e7d-aa50-3e322f334843.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-10T09:48:39.958Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 444,
+        "description": "Enable the user and agent to progressively mock up UI together and review those mockups in a UI editor inside Review → Changes. Build the editor incrementally, then use it to review its own UI.\n\nSerial children: joint needs analysis → several image-generation rounds for the overall structure → agent development → human self-review using the editor. The needs and design rounds decide the initial capabilities and architecture; this plan does not preselect an editor framework, representation or interaction model. Keep mockups and feedback durable and traceable. Reuse the existing app UI and leave proposal formats open.\n\nAcceptance is the user reviewing and iterating on the UI editor's own mockup through this editor in Changes. Only afterward resume review-surface mockup work.",
+        "title": "Build a UI editor for progressive mockups in Review Changes",
+        "updatedAt": "2026-10-26T07:21:36.763Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b661f1ae-8d17-4e7d-aa50-3e322f334843.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b661f1ae-8d17-4e7d-aa50-3e322f334843.json",
+      "properties": {
+        "placement": "queued",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b661f1ae-8d17-4e7d-aa50-3e322f334843.json"
+}

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/60eebf29-6f5e-4693-8de0-e3d6a7a0c8ff.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/60eebf29-6f5e-4693-8de0-e3d6a7a0c8ff.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T14:03:36.098Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 346,
+        "description": "",
+        "title": "Addressed with an initial required human review. Both first tasks depend on it and all later work depends transitively on those tasks. No work task has been que",
+        "updatedAt": "2026-10-06T14:03:36.290Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/60eebf29-6f5e-4693-8de0-e3d6a7a0c8ff.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/60eebf29-6f5e-4693-8de0-e3d6a7a0c8ff.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b4042787-1816-46ef-846d-8a39f6561c70.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Addressed with an initial required human review. Both first tasks depend on it and all later work depends transitively on those tasks. No work task has been queued or started."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/60eebf29-6f5e-4693-8de0-e3d6a7a0c8ff.json"
+}

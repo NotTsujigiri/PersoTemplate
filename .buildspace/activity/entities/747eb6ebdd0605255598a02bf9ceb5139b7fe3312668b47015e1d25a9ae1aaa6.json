@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/52b6e4c5-409a-4075-ae13-043ad5156464.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/52b6e4c5-409a-4075-ae13-043ad5156464.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T01:18:50.347Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 954,
+        "description": "Reported reproduction: use a depth-one graph, Fit, then scroll one increment. The viewport flickers as scrollbars appear. The graph uses the shared Relational UI ScrollArea. Reproduce through authored simulated input and a persistent exact recording before changing behavior; identify the owning feedback loop and preserve shared scrolling consumers.\n\nCompleted: authored an 80-node depth-one star at fractional display scale, then Fit and one wheel increment. The unchanged implementation alternated viewport dimensions across the 40-frame recordings (stable=false); reviewed expectation was stable=true for each step. The same input now exactly matches both expected records. Cause: CircleGraph used rounded clientWidth/clientHeight for its spacer, creating a scrollbar/resize loop. CSS fractional scrollport sizing fixes that integration; ScrollArea continues to own native scrolling. Repeated in the live app after restart. Before/expected/after recordings and raw geometry: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2dddb630-5e2e-4d4c-83ed-38a84d43b0db.json. Focused browser regression: graph-controls-ui.spec.ts. Full build and affected-system verification passed.",
+        "title": "Bug: graph flickers when scrollbars appear after Fit",
+        "updatedAt": "2026-10-22T02:19:10.393Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/52b6e4c5-409a-4075-ae13-043ad5156464.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/52b6e4c5-409a-4075-ae13-043ad5156464.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/52b6e4c5-409a-4075-ae13-043ad5156464.json"
+}

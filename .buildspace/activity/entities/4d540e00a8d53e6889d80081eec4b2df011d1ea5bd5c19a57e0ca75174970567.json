@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bfc824fe-6f7a-4d6d-89ad-b3b49934e521.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bfc824fe-6f7a-4d6d-89ad-b3b49934e521.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.388Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Required human review after development. The user exercises real check runs and inspects individual tests: duration, what the test does/checks, progress/results and supporting detail. Confirm the UI matches the agreed needs and mockups and that timing has a clear scope. Approval precedes the broader performance investigation.",
+        "title": "Review per-test timing and detail through the Checks UI",
+        "updatedAt": "2026-10-09T13:02:10.963Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bfc824fe-6f7a-4d6d-89ad-b3b49934e521.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bfc824fe-6f7a-4d6d-89ad-b3b49934e521.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bfc824fe-6f7a-4d6d-89ad-b3b49934e521.json"
+}

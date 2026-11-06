@@ -1,0 +1,346 @@
+{
+  "screenshots": [
+    "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\.runtime\\planning\\overnight-editors-20261029\\node-expansion\\after\\collapsed-after-selection.png",
+    "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\.runtime\\planning\\overnight-editors-20261029\\node-expansion\\after\\task-graph-expansion.png",
+    "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\.runtime\\planning\\overnight-editors-20261029\\node-expansion\\before\\task-graph-expansion.png"
+  ],
+  "recordings": {
+    "after": {
+      "expected": [
+        {
+          "step": "initial first",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "collapse first",
+          "node": "Expansion first",
+          "mode": "Collapse all components",
+          "allExpanded": false,
+          "noneExpanded": true,
+          "taskExpanded": false
+        },
+        {
+          "step": "select second",
+          "node": "Expansion second",
+          "mode": "Collapse all components",
+          "allExpanded": false,
+          "noneExpanded": true,
+          "taskExpanded": false
+        },
+        {
+          "step": "expand second",
+          "node": "Expansion second",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "select first",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "collapse Task",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart first",
+          "node": "Expansion first",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart second",
+          "node": "Expansion second",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart back",
+          "node": "Expansion first",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        }
+      ],
+      "input": [
+        "initial first",
+        "collapse first",
+        "select second",
+        "expand second",
+        "select first",
+        "collapse Task",
+        "smart first",
+        "smart second",
+        "smart back"
+      ],
+      "actual": [
+        {
+          "step": "initial first",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "collapse first",
+          "node": "Expansion first",
+          "mode": "Collapse all components",
+          "allExpanded": false,
+          "noneExpanded": true,
+          "taskExpanded": false
+        },
+        {
+          "step": "select second",
+          "node": "Expansion second",
+          "mode": "Collapse all components",
+          "allExpanded": false,
+          "noneExpanded": true,
+          "taskExpanded": false
+        },
+        {
+          "step": "expand second",
+          "node": "Expansion second",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "select first",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "collapse Task",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart first",
+          "node": "Expansion first",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart second",
+          "node": "Expansion second",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart back",
+          "node": "Expansion first",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        }
+      ]
+    },
+    "before": {
+      "expected": [
+        {
+          "step": "initial first",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "collapse first",
+          "node": "Expansion first",
+          "mode": "Collapse all components",
+          "allExpanded": false,
+          "noneExpanded": true,
+          "taskExpanded": false
+        },
+        {
+          "step": "select second",
+          "node": "Expansion second",
+          "mode": "Collapse all components",
+          "allExpanded": false,
+          "noneExpanded": true,
+          "taskExpanded": false
+        },
+        {
+          "step": "expand second",
+          "node": "Expansion second",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "select first",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "collapse Task",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart first",
+          "node": "Expansion first",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart second",
+          "node": "Expansion second",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart back",
+          "node": "Expansion first",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        }
+      ],
+      "input": [
+        "initial first",
+        "collapse first",
+        "select second",
+        "expand second",
+        "select first",
+        "collapse Task",
+        "smart first",
+        "smart second",
+        "smart back"
+      ],
+      "actual": [
+        {
+          "step": "initial first",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "collapse first",
+          "node": "Expansion first",
+          "mode": "Collapse all components",
+          "allExpanded": false,
+          "noneExpanded": true,
+          "taskExpanded": false
+        },
+        {
+          "step": "select second",
+          "node": "Expansion second",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "expand second",
+          "node": "Expansion second",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "select first",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "collapse Task",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart first",
+          "node": "Expansion first",
+          "mode": "Smart expansion: reuse matching component types",
+          "allExpanded": false,
+          "noneExpanded": false,
+          "taskExpanded": false
+        },
+        {
+          "step": "smart second",
+          "node": "Expansion second",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        },
+        {
+          "step": "smart back",
+          "node": "Expansion first",
+          "mode": "Expand all components",
+          "allExpanded": true,
+          "noneExpanded": false,
+          "taskExpanded": true
+        }
+      ]
+    }
+  },
+  "task": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35e60e58-2416-4a24-9754-92d7d9394a3f.json",
+  "checks": {
+    "build": "passed",
+    "focusedEditorRegressions": "passed",
+    "unitAndIntegration": "passed",
+    "types": "passed",
+    "browser": {
+      "passed": 379,
+      "existingFailure": "private-space-recovery-ui.spec.ts: CRLF expected, LF saved; also failed in run-QKb1QB.",
+      "failed": 1
+    },
+    "checkpoint": ".harness/checkpoints/run-zMLbCh/report.json",
+    "commit": "6331198",
+    "models": "passed"
+  }
+}

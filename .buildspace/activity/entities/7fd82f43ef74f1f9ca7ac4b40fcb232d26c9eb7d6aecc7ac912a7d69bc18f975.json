@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8a1a15ea-9ef5-4adf-b6a2-cdde28a7499c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8a1a15ea-9ef5-4adf-b6a2-cdde28a7499c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T19:48:45.343Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1080,
+        "description": "User browser annotation 2, 2026-10-24. Pressing Alt over the Activity board opens the global nested splitter overview. In a complex arrangement with many nested or collapsed panes, it is difficult to tell which dropdown controls which area of the board. The compact mode symbols and nested boxes do not give enough recognizable pane identity or visual correspondence. Users need to identify the affected area before changing its pane mode.\nReproduce on the Activity board with Inputs, Active and Closed plus nested processing and New/Later/Acknowledged groups, including collapsed areas. The annotated control was a closed pane inside a nested group in the Alt overview; viewport 1480x764 is contextual evidence. Record and investigate this as an Inputs issue; a specific redesign is not yet selected.",
+        "title": "Alt splitter overview makes pane controls hard to identify in complex layouts",
+        "updatedAt": "2026-10-24T19:48:45.816Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8a1a15ea-9ef5-4adf-b6a2-cdde28a7499c.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8a1a15ea-9ef5-4adf-b6a2-cdde28a7499c.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8a1a15ea-9ef5-4adf-b6a2-cdde28a7499c.json"
+}

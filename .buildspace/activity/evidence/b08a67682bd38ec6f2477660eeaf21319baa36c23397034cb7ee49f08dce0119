@@ -1,0 +1,131 @@
+[
+  {
+    "commits": [
+      {
+        "hash": "448dc40cd48da90ef5f73a2e49f555a083bd2748",
+        "title": "Implement typed component entities and lazy predicate views"
+      },
+      {
+        "hash": "7cfa174bfa6b1b479c699856fc50fc5febadb0ce",
+        "title": "Persist planning components and inspect component properties in the node editor"
+      },
+      {
+        "hash": "fcf6cf22e5a76c817dc79f8786d366c634cfdab4",
+        "title": "Migrate contributors and inspectors to entity components"
+      },
+      {
+        "hash": "a857cbda2aaae59b56cfb6dff3657dd1deafd878",
+        "title": "Enforce component ownership and preserve inspector navigation"
+      },
+      {
+        "hash": "bc817116e01003fce352da6a04c4fb40c4344115",
+        "title": "Store buildspace history as component entities"
+      },
+      {
+        "hash": "26bfec3b9a70f89d5a10844a4f7753361afc3972",
+        "title": "Complete component inspection and migration regression coverage"
+      },
+      {
+        "hash": "ccca084b47610d9763eb2ea69f9ff642e80412cb",
+        "title": "Stabilize component migration browser verification"
+      },
+      {
+        "hash": "5cc2572dee1d383886aad3a59c48c036166b8720",
+        "title": "Avoid redundant planning snapshot validation and historical reads"
+      },
+      {
+        "hash": "11f5607b7f29f40ef299de713a9cc86b1eb6f1ad",
+        "title": "Report check fixture startup failures without hanging"
+      },
+      {
+        "hash": "73821eed3a4a8798f3b24a128c3d0cb25ece960f",
+        "title": "Bound concurrent harness verification workers"
+      },
+      {
+        "hash": "a51e11fefdd423f6063d7c0ba63606d560459ce8",
+        "title": "Preserve check discovery with bounded Node test workers"
+      },
+      {
+        "hash": "1f2c3854ac1e061b383c1326b40f28b408c64020",
+        "title": "Preserve the first property editor during planning startup"
+      },
+      {
+        "hash": "3da490e10a52909becbae99b0d215a21ed6c056d",
+        "title": "Use the supported typed fixture gate in startup regression"
+      },
+      {
+        "hash": "33113db491a5ba55a5bdf360dad897925f3a880c",
+        "title": "Wait for rendered board revisions between drag gestures"
+      },
+      {
+        "hash": "d4e8a60ca64027f2aacce9d18dac7cf41f9f9bdb",
+        "title": "Observe completed editor refreshes in browser recordings"
+      },
+      {
+        "hash": "eb61a948d7ca9d623c82d589843e86a33e3126db",
+        "title": "Keep newer component drafts when preview acknowledgements arrive late"
+      },
+      {
+        "hash": "e4c718b177620ff57dacd0c8bdb3d8abff9465fa",
+        "title": "Make browser recordings observe completed lifecycle boundaries"
+      },
+      {
+        "hash": "d9a611e3a192de691091e97c15092d0bad762d7a",
+        "title": "Restore self-relation deduplication browser coverage"
+      },
+      {
+        "hash": "3694c9b535e1f272ee03f84f9d85306c8ab5de48",
+        "title": "Test self-edge inspection at the generic engine boundary"
+      },
+      {
+        "hash": "222950480b2c4dacdeb5d542a7b9a97c5e05d8cd",
+        "title": "Keep refreshed feeds current and oversized graph ranges stable"
+      },
+      {
+        "hash": "d28fffa2bf7ac646544b0daadbd9ead4d81aa17b",
+        "title": "Preserve component observations and authoring state across updates"
+      },
+      {
+        "hash": "8f780ea5dd117c74d160f93122cab628b6d924a6",
+        "title": "Remove obsolete planning node-type identity helper"
+      },
+      {
+        "hash": "e5e9ed20691c4ae8fcfb628f44fef9ca16ab5a20",
+        "title": "Wait for owned work in final migration browser recordings"
+      }
+    ],
+    "repository": "TheBroccoli",
+    "baseline": "1a61b2ad10fa079dcefb7f75a3310c13983552cb",
+    "head": "e5e9ed20691c4ae8fcfb628f44fef9ca16ab5a20"
+  },
+  {
+    "commits": [
+      {
+        "hash": "35f32a4d81692b98287d283f980f09db66cb460e",
+        "title": "Refresh declared template component dependencies"
+      },
+      {
+        "hash": "4fe314d17f8e728bec1cce184b3ba452611f0609",
+        "title": "Store template buildspace history as component entities"
+      }
+    ],
+    "repository": "BtrTemplate",
+    "baseline": "cd2baeb201d93eb7f8127c76ff2d0492eb8a099f",
+    "head": "4fe314d17f8e728bec1cce184b3ba452611f0609"
+  },
+  {
+    "commits": [
+      {
+        "hash": "c2e9a0fedd6de2b6f2e6a491f0577a158d904701",
+        "title": "Consume engine components in the personal template"
+      },
+      {
+        "hash": "0a77019cf69e05b5c864a4994fefb6ad7b551dde",
+        "title": "Store personal buildspace history as component entities"
+      }
+    ],
+    "repository": "PersoTemplate",
+    "baseline": "e85bd3be2cd5a23b0d0dbdea074f1e26cef798a5",
+    "head": "0a77019cf69e05b5c864a4994fefb6ad7b551dde"
+  }
+]

@@ -1,0 +1,2532 @@
+{
+  "commit": "e002802",
+  "capturedAt": "2026-10-24T14:55:57.1788524+00:00",
+  "requirement": "Only the dragged divider moves, following the pointer direction and displacement while retaining its grab offset. Neighboring dividers remain fixed; movement stops at their bounds.",
+  "before": {
+    "nested": [
+      {
+        "input": {
+          "axis": "columns",
+          "target": {
+            "group": "outer",
+            "index": 1
+          },
+          "grabOffset": -2,
+          "deltas": [
+            0,
+            40,
+            -20,
+            0,
+            60
+          ]
+        },
+        "actual": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 40
+              },
+              {
+                "id": "inner:0",
+                "delta": 20
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": -20
+              },
+              {
+                "id": "inner:0",
+                "delta": -10
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 60
+              },
+              {
+                "id": "inner:0",
+                "delta": 30
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 60
+              },
+              {
+                "id": "inner:0",
+                "delta": 30
+              }
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 40
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": -20
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 60
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 60
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "axis": "columns",
+          "target": {
+            "group": "outer",
+            "index": 0
+          },
+          "grabOffset": -2,
+          "deltas": [
+            0,
+            40,
+            -20,
+            0,
+            60
+          ]
+        },
+        "actual": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 40
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 20
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -20
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": -10
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 60
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 30
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 60
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 30
+              }
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 40
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -20
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 60
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 60
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "axis": "rows",
+          "target": {
+            "group": "outer",
+            "index": 0
+          },
+          "grabOffset": -2,
+          "deltas": [
+            0,
+            40,
+            -20,
+            0,
+            60
+          ]
+        },
+        "actual": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 40
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 20
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -20
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": -10
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 60
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 30
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 60
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 30
+              }
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 40
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -20
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 60
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 60
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "axis": "rows",
+          "target": {
+            "group": "inner",
+            "index": 0
+          },
+          "grabOffset": -2,
+          "deltas": [
+            0,
+            40,
+            -20,
+            0,
+            60
+          ]
+        },
+        "actual": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -22.1875
+              },
+              {
+                "id": "outer:1",
+                "delta": 22.15625
+              },
+              {
+                "id": "inner:0",
+                "delta": 44.421875
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -10.515625
+              },
+              {
+                "id": "outer:1",
+                "delta": 10.484375
+              },
+              {
+                "id": "inner:0",
+                "delta": -21.0625
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -35.234375
+              },
+              {
+                "id": "outer:1",
+                "delta": 35.203125
+              },
+              {
+                "id": "inner:0",
+                "delta": 70.546875
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -35.234375
+              },
+              {
+                "id": "outer:1",
+                "delta": 35.203125
+              },
+              {
+                "id": "inner:0",
+                "delta": 70.546875
+              }
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 40
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": -20
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 60
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 60
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "axis": "columns",
+          "target": {
+            "group": "inner",
+            "index": 0
+          },
+          "grabOffset": -2,
+          "deltas": [
+            0,
+            40,
+            -20,
+            0,
+            60
+          ]
+        },
+        "actual": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -22.1875
+              },
+              {
+                "id": "outer:1",
+                "delta": 22.15625
+              },
+              {
+                "id": "inner:0",
+                "delta": 44.421875
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -10.515625
+              },
+              {
+                "id": "outer:1",
+                "delta": 10.484375
+              },
+              {
+                "id": "inner:0",
+                "delta": -21.0625
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -35.234375
+              },
+              {
+                "id": "outer:1",
+                "delta": 35.203125
+              },
+              {
+                "id": "inner:0",
+                "delta": 70.546875
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": -35.234375
+              },
+              {
+                "id": "outer:1",
+                "delta": 35.203125
+              },
+              {
+                "id": "inner:0",
+                "delta": 70.546875
+              }
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 40
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": -20
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 60
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 60
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "axis": "rows",
+          "target": {
+            "group": "outer",
+            "index": 1
+          },
+          "grabOffset": -2,
+          "deltas": [
+            0,
+            40,
+            -20,
+            0,
+            60
+          ]
+        },
+        "actual": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 40
+              },
+              {
+                "id": "inner:0",
+                "delta": 20
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": -20
+              },
+              {
+                "id": "inner:0",
+                "delta": -10
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 60
+              },
+              {
+                "id": "inner:0",
+                "delta": 30
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 60
+              },
+              {
+                "id": "inner:0",
+                "delta": 30
+              }
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 40
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer -20",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": -20
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 0
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "pointer 60",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 60
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          },
+          {
+            "step": "released",
+            "dividers": [
+              {
+                "id": "outer:0",
+                "delta": 0
+              },
+              {
+                "id": "outer:1",
+                "delta": 60
+              },
+              {
+                "id": "inner:0",
+                "delta": 0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "collapsedSelection": [
+      {
+        "case": "multi-pane-splitter-ui-col-0ec24-actly-while-switching-panes",
+        "actual": [
+          {
+            "step": "before",
+            "positions": [
+              298,
+              598
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              298,
+              556,
+              598
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              298,
+              558
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              298,
+              538
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              298,
+              538
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "before",
+            "positions": [
+              298,
+              598
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              298,
+              558,
+              598
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              298,
+              558
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              298,
+              538
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              298,
+              538
+            ]
+          }
+        ]
+      },
+      {
+        "case": "multi-pane-splitter-ui-col-3775a-actly-while-switching-panes",
+        "actual": [
+          {
+            "step": "before",
+            "positions": [
+              0,
+              450
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              40,
+              450
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              0,
+              42,
+              450
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              0,
+              62,
+              450
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              0,
+              62,
+              450
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "before",
+            "positions": [
+              0,
+              450
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              40,
+              450
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              0,
+              40,
+              450
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              0,
+              60,
+              450
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              0,
+              60,
+              450
+            ]
+          }
+        ]
+      },
+      {
+        "case": "multi-pane-splitter-ui-col-48e0c-actly-while-switching-panes",
+        "actual": [
+          {
+            "step": "before",
+            "positions": [
+              299
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              299,
+              341
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              299,
+              341
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              299,
+              361
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              299,
+              361
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "before",
+            "positions": [
+              299
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              299,
+              339
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              299,
+              339
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              299,
+              359
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              299,
+              359
+            ]
+          }
+        ]
+      },
+      {
+        "case": "multi-pane-splitter-ui-col-67f05-actly-while-switching-panes",
+        "actual": [
+          {
+            "step": "before",
+            "positions": [
+              0,
+              300
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              40,
+              300
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              0,
+              42,
+              300
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              0,
+              62,
+              300
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              0,
+              62,
+              300
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "before",
+            "positions": [
+              0,
+              300
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              40,
+              300
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              0,
+              40,
+              300
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              0,
+              60,
+              300
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              0,
+              60,
+              300
+            ]
+          }
+        ]
+      },
+      {
+        "case": "multi-pane-splitter-ui-col-d902f-actly-while-switching-panes",
+        "actual": [
+          {
+            "step": "before",
+            "positions": [
+              448,
+              898
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              448,
+              856,
+              898
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              448,
+              858
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              448,
+              838
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              448,
+              838
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "before",
+            "positions": [
+              448,
+              898
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              448,
+              858,
+              898
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              448,
+              858
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              448,
+              838
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              448,
+              838
+            ]
+          }
+        ]
+      },
+      {
+        "case": "multi-pane-splitter-ui-col-f587e-actly-while-switching-panes",
+        "actual": [
+          {
+            "step": "before",
+            "positions": [
+              449
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              449,
+              491
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              449,
+              491
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              449,
+              511
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              449,
+              511
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "before",
+            "positions": [
+              449
+            ]
+          },
+          {
+            "step": "first pane",
+            "positions": [
+              449,
+              489
+            ]
+          },
+          {
+            "step": "second pane",
+            "positions": [
+              449,
+              489
+            ]
+          },
+          {
+            "step": "continued",
+            "positions": [
+              449,
+              509
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              449,
+              509
+            ]
+          }
+        ]
+      }
+    ],
+    "fullCollapse": [
+      {
+        "case": "multi-pane-splitter-ui-col-0c8ec-ps-the-other-dividers-fixed",
+        "actual": [
+          {
+            "step": "pointer 150.5",
+            "positions": [
+              149,
+              449
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "positions": [
+              148.5,
+              339,
+              449.5
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "positions": [
+              148.5,
+              299,
+              449.5
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              148.5,
+              299,
+              449.5
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer 150.5",
+            "positions": [
+              148.5,
+              449.5
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "positions": [
+              148.5,
+              339,
+              449.5
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "positions": [
+              148.5,
+              299,
+              449.5
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              148.5,
+              299,
+              449.5
+            ]
+          }
+        ]
+      },
+      {
+        "case": "multi-pane-splitter-ui-col-2916b-ps-the-other-dividers-fixed",
+        "actual": [
+          {
+            "step": "pointer -225.5",
+            "positions": [
+              224,
+              674
+            ]
+          },
+          {
+            "step": "pointer -40",
+            "positions": [
+              223.5,
+              409,
+              674.5
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "positions": [
+              223.5,
+              449,
+              674.5
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              223.5,
+              449,
+              674.5
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer -225.5",
+            "positions": [
+              223.5,
+              674.5
+            ]
+          },
+          {
+            "step": "pointer -40",
+            "positions": [
+              223.5,
+              409,
+              674.5
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "positions": [
+              223.5,
+              449,
+              674.5
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              223.5,
+              449,
+              674.5
+            ]
+          }
+        ]
+      },
+      {
+        "case": "multi-pane-splitter-ui-col-bac7b-ps-the-other-dividers-fixed",
+        "actual": [
+          {
+            "step": "pointer -150.5",
+            "positions": [
+              149,
+              449
+            ]
+          },
+          {
+            "step": "pointer -40",
+            "positions": [
+              148.5,
+              259,
+              449.5
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "positions": [
+              148.5,
+              299,
+              449.5
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              148.5,
+              299,
+              449.5
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer -150.5",
+            "positions": [
+              148.5,
+              449.5
+            ]
+          },
+          {
+            "step": "pointer -40",
+            "positions": [
+              148.5,
+              259,
+              449.5
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "positions": [
+              148.5,
+              299,
+              449.5
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              148.5,
+              299,
+              449.5
+            ]
+          }
+        ]
+      },
+      {
+        "case": "multi-pane-splitter-ui-col-dff57-ps-the-other-dividers-fixed",
+        "actual": [
+          {
+            "step": "pointer 225.5",
+            "positions": [
+              224,
+              674
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "positions": [
+              223.5,
+              489,
+              674.5
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "positions": [
+              223.5,
+              449,
+              674.5
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              223.5,
+              449,
+              674.5
+            ]
+          }
+        ],
+        "expected": [
+          {
+            "step": "pointer 225.5",
+            "positions": [
+              223.5,
+              674.5
+            ]
+          },
+          {
+            "step": "pointer 40",
+            "positions": [
+              223.5,
+              489,
+              674.5
+            ]
+          },
+          {
+            "step": "pointer 0",
+            "positions": [
+              223.5,
+              449,
+              674.5
+            ]
+          },
+          {
+            "step": "released",
+            "positions": [
+              223.5,
+              449,
+              674.5
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "focusedResults": [
+    {
+      "name": "empty nested groups release columns space and remain restorable",
+      "status": "Passed",
+      "durationMs": 2487,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/empty-pane-groups-ui.spec.ts",
+        "line": 25
+      }
+    },
+    {
+      "name": "empty nested groups release rows space and remain restorable",
+      "status": "Passed",
+      "durationMs": 2183,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/empty-pane-groups-ui.spec.ts",
+        "line": 25
+      }
+    },
+    {
+      "name": "Chat Min fills Buildspace when the other content panes are hidden",
+      "status": "Passed",
+      "durationMs": 1783,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/empty-pane-groups-ui.spec.ts",
+        "line": 119
+      }
+    },
+    {
+      "name": "collapsing columns pane in direction -1 keeps the other dividers fixed",
+      "status": "Passed",
+      "durationMs": 934,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 38
+      }
+    },
+    {
+      "name": "collapsing columns pane in direction 1 keeps the other dividers fixed",
+      "status": "Passed",
+      "durationMs": 933,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 38
+      }
+    },
+    {
+      "name": "collapsing rows pane in direction -1 keeps the other dividers fixed",
+      "status": "Passed",
+      "durationMs": 926,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 38
+      }
+    },
+    {
+      "name": "collapsing rows pane in direction 1 keeps the other dividers fixed",
+      "status": "Passed",
+      "durationMs": 918,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 38
+      }
+    },
+    {
+      "name": "collapsed columns leading divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1103,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 69
+      }
+    },
+    {
+      "name": "collapsed columns middle divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1086,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 69
+      }
+    },
+    {
+      "name": "collapsed columns trailing divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1138,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 69
+      }
+    },
+    {
+      "name": "collapsed rows leading divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1156,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 69
+      }
+    },
+    {
+      "name": "collapsed rows middle divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1104,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 69
+      }
+    },
+    {
+      "name": "collapsed rows trailing divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1090,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 69
+      }
+    },
+    {
+      "name": "collapsed borders share a rail and wheel switches the resized pane during a held drag",
+      "status": "Passed",
+      "durationMs": 1031,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 110
+      }
+    },
+    {
+      "name": "collapsed middle and trailing panes remain selectable on columns",
+      "status": "Passed",
+      "durationMs": 1188,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 151
+      }
+    },
+    {
+      "name": "collapsed middle and trailing panes remain selectable on rows",
+      "status": "Passed",
+      "durationMs": 1209,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 151
+      }
+    },
+    {
+      "name": "multi-pane columns allocation, thin collapse, drag and restore",
+      "status": "Passed",
+      "durationMs": 1319,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 191
+      }
+    },
+    {
+      "name": "multi-pane rows allocation, thin collapse, drag and restore",
+      "status": "Passed",
+      "durationMs": 1261,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 191
+      }
+    },
+    {
+      "name": "global mini layout keeps nesting and directional controls when live ancestors collapse",
+      "status": "Passed",
+      "durationMs": 870,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/multi-pane-splitter-ui.spec.ts",
+        "line": 302
+      }
+    },
+    {
+      "name": "nested columns allocation follows restored modes before opening the menu",
+      "status": "Passed",
+      "durationMs": 2154,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/nested-pane-modes-ui.spec.ts",
+        "line": 7
+      }
+    },
+    {
+      "name": "nested rows allocation follows restored modes before opening the menu",
+      "status": "Passed",
+      "durationMs": 2204,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/nested-pane-modes-ui.spec.ts",
+        "line": 7
+      }
+    },
+    {
+      "name": "leaf width modes govern sharing through nested column groups",
+      "status": "Passed",
+      "durationMs": 2076,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/nested-pane-modes-ui.spec.ts",
+        "line": 154
+      }
+    },
+    {
+      "name": "Chat and the only visible activity column share surplus proportionally",
+      "status": "Passed",
+      "durationMs": 1780,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/nested-pane-modes-ui.spec.ts",
+        "line": 226
+      }
+    },
+    {
+      "name": "Chat Min retains a usable conversation and composer width",
+      "status": "Passed",
+      "durationMs": 1510,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/pane-minimum-ui.spec.ts",
+        "line": 5
+      }
+    },
+    {
+      "name": "unequal columns minima lose equal amounts and recover after a shortage",
+      "status": "Passed",
+      "durationMs": 2129,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/pane-minimum-ui.spec.ts",
+        "line": 61
+      }
+    },
+    {
+      "name": "unequal rows minima lose equal amounts and recover after a shortage",
+      "status": "Passed",
+      "durationMs": 2072,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/pane-minimum-ui.spec.ts",
+        "line": 61
+      }
+    },
+    {
+      "name": "homogeneous columns modes fill space using content minimum proportions",
+      "status": "Passed",
+      "durationMs": 2052,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/pane-minimum-ui.spec.ts",
+        "line": 123
+      }
+    },
+    {
+      "name": "homogeneous rows modes fill space using content minimum proportions",
+      "status": "Passed",
+      "durationMs": 2056,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/pane-minimum-ui.spec.ts",
+        "line": 123
+      }
+    },
+    {
+      "name": "tree and field minima follow visible content through nested splitters",
+      "status": "Passed",
+      "durationMs": 2149,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/pane-minimum-ui.spec.ts",
+        "line": 182
+      }
+    },
+    {
+      "name": "nested columns inner:0 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1058,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested columns outer:0 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1115,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested columns outer:1 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1114,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested columns outer:0 drag follows the pointer without moving other dividers at pane limits",
+      "status": "Passed",
+      "durationMs": 986,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested columns outer:1 drag follows the pointer without moving other dividers at pane limits",
+      "status": "Passed",
+      "durationMs": 992,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested columns inner:0 drag follows the pointer without moving other dividers and Escape restores allocations",
+      "status": "Passed",
+      "durationMs": 1086,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested rows inner:0 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1097,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested rows outer:0 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1077,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested rows outer:1 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1060,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested rows outer:0 drag follows the pointer without moving other dividers at pane limits",
+      "status": "Passed",
+      "durationMs": 1022,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested rows outer:1 drag follows the pointer without moving other dividers at pane limits",
+      "status": "Passed",
+      "durationMs": 990,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "nested rows inner:0 drag follows the pointer without moving other dividers and Escape restores allocations",
+      "status": "Passed",
+      "durationMs": 1096,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-drag-isolation-ui.spec.ts",
+        "line": 13
+      }
+    },
+    {
+      "name": "mini layout anchors a responsive dropdown at center",
+      "status": "Passed",
+      "durationMs": 2803,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-menu-anchor-ui.spec.ts",
+        "line": 21
+      }
+    },
+    {
+      "name": "mini layout anchors a responsive dropdown at top left",
+      "status": "Passed",
+      "durationMs": 2834,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-menu-anchor-ui.spec.ts",
+        "line": 21
+      }
+    },
+    {
+      "name": "mini layout anchors a responsive dropdown at bottom right",
+      "status": "Passed",
+      "durationMs": 2812,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-menu-anchor-ui.spec.ts",
+        "line": 21
+      }
+    },
+    {
+      "name": "Buildspace composes multi-pane groups and independently restores collapsed content",
+      "status": "Passed",
+      "durationMs": 5489,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-nested-ui.spec.ts",
+        "line": 15
+      }
+    },
+    {
+      "name": "catalog panes use the global system",
+      "status": "Passed",
+      "durationMs": 1977,
+      "declaration": {
+        "uri": "Systems/Depth3/HarnessApp/splitter-nested-ui.spec.ts",
+        "line": 180
+      }
+    }
+  ],
+  "screenshotsInspected": true,
+  "fullCheckpoint": "Running separately; focused verification is complete.",
+  "recordingsDirectory": ".harness/splitter-drag-final/test-results"
+}

@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5bb32ab9-aa94-4b84-bde6-6d059cfec2d4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5bb32ab9-aa94-4b84-bde6-6d059cfec2d4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-31T06:59:05.211Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1297,
+        "description": "The overnight browser sweep reproduced a pre-existing Windows line-ending problem in the private-space recovery view. After Restore missing setup loads a CRLF private-space.ts, the untouched textarea exposes LF text, while dirty detection compares it directly with the raw CRLF service response. Retry startup incorrectly says \"Save the edited script before retrying startup.\"\n\nFix dirty-state comparison at the recovery view boundary without changing the source revision used for stale-write protection. Keep unchanged files unchanged. Verify inspect, reload, restore, save and retry for both LF and CRLF, with real edits still requiring Save. The existing private-space-recovery-ui fixture also assumes textarea repair preserves CRLF; author deterministic input and retain exact saved-content assertions.\n\nEvidence: .harness/checkpoints/run-Yimvuc/report.json; Systems/Depth4/HarnessApp/test-results/run-1793429319085-beb4688c/private-space-recovery-ui--4769b-it-through-the-local-engine/error-context.md; isolated restoration failure in test-results/run-1793429800328-5767beba. Recovery production code is unchanged from 81fede0. This is separate from task deletion, multi-selection and LSP folding.",
+        "title": "Fix recovery dirty detection for Windows line endings",
+        "updatedAt": "2026-10-31T06:59:05.453Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5bb32ab9-aa94-4b84-bde6-6d059cfec2d4.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5bb32ab9-aa94-4b84-bde6-6d059cfec2d4.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "task",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5bb32ab9-aa94-4b84-bde6-6d059cfec2d4.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5bb32ab9-aa94-4b84-bde6-6d059cfec2d4.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-03T22:39:28.057Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-31T06:59:05.453Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5bb32ab9-aa94-4b84-bde6-6d059cfec2d4.json"
+}

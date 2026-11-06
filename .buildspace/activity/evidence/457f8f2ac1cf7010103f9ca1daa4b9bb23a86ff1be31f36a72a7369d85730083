@@ -1,0 +1,26 @@
+[
+  {
+    "step": "submitted",
+    "startControls": 0,
+    "pauseControls": 0,
+    "placement": "blocked",
+    "status": "submitted",
+    "humanOutcome": "pending"
+  },
+  {
+    "step": "agent approved",
+    "startControls": 0,
+    "pauseControls": 0,
+    "placement": "blocked",
+    "status": "submitted",
+    "humanOutcome": "pending"
+  },
+  {
+    "step": "both approved",
+    "startControls": 0,
+    "pauseControls": 0,
+    "placement": "completed",
+    "status": "passed",
+    "humanOutcome": "approved"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a88d0569-aa78-4369-9555-2764b57ccbfb.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a88d0569-aa78-4369-9555-2764b57ccbfb.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T08:22:23.942Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Verified plan import receipt",
+        "updatedAt": "2026-09-29T22:37:05.019Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a88d0569-aa78-4369-9555-2764b57ccbfb.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a88d0569-aa78-4369-9555-2764b57ccbfb.json",
+      "properties": {
+        "artifact": {
+          "hash": "5499b8e1a69079887e7d022906bae7b414461de2f8be5c0bd3d6dde1ed122076",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/5499b8e1a69079887e7d022906bae7b414461de2f8be5c0bd3d6dde1ed122076",
+          "mime": "application/json",
+          "size": 5023
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a88d0569-aa78-4369-9555-2764b57ccbfb.json"
+}

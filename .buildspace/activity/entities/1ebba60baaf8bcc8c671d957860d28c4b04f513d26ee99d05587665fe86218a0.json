@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/641e5573-33b3-4f7e-be06-a4e5ccb65e0c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/641e5573-33b3-4f7e-be06-a4e5ccb65e0c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T22:48:56.675Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 716,
+        "description": "- Edit Description, press Save, receive an unrelated planning update, then release the mouse.\n- The draft remains visible but no save mutation is sent; the stored Description stays empty.\n- Existing exact-output recording reproduced this during the editor checkpoint and an isolated run.",
+        "title": "Save can lose its click during a background planning refresh",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/641e5573-33b3-4f7e-be06-a4e5ccb65e0c.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/641e5573-33b3-4f7e-be06-a4e5ccb65e0c.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/641e5573-33b3-4f7e-be06-a4e5ccb65e0c.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/641e5573-33b3-4f7e-be06-a4e5ccb65e0c.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:58:40.149Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T01:53:47.642Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/641e5573-33b3-4f7e-be06-a4e5ccb65e0c.json"
+}

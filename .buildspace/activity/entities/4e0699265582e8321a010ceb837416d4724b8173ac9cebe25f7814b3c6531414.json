@@ -1,0 +1,66 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2625b13d-60f6-429a-8510-5ca848cf817b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2625b13d-60f6-429a-8510-5ca848cf817b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T06:57:45.458Z",
+        "createdBy": "agent:codex",
+        "description": "First, I want to optimize the number of tool calls models have to make to achieve things so :\r\n- token usage efficiency improves\r\n- time to reach a result improves\r\n- reliability and repeatability improve",
+        "title": "Efficient tool use",
+        "updatedAt": "2026-10-19T05:28:07.949Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2625b13d-60f6-429a-8510-5ca848cf817b.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2625b13d-60f6-429a-8510-5ca848cf817b.json",
+      "properties": {
+        "capture": {
+          "context": {
+            "kind": "source",
+            "label": "Recorded harness needs",
+            "path": ".runtime/planning/01a0c5f4-7593-7072-8985-289e55a9faf9/harness-effects.md",
+            "quote": "First, I want to optimize the number of tool calls models have to make to achieve things so :\r\n- token usage efficiency improves\r\n- time to reach a result improves\r\n- reliability and repeatability improve"
+          },
+          "createdAt": "2026-09-24T14:56:10.152Z",
+          "description": "First, I want to optimize the number of tool calls models have to make to achieve things so :\r\n- token usage efficiency improves\r\n- time to reach a result improves\r\n- reliability and repeatability improve",
+          "history": [
+            {
+              "actor": "agent",
+              "description": "First, I want to optimize the number of tool calls models have to make to achieve things so :\r\n- token usage efficiency improves\r\n- time to reach a result improves\r\n- reliability and repeatability improve",
+              "status": "open",
+              "time": "2026-09-24T14:56:10.152Z",
+              "title": "Efficient tool use"
+            }
+          ],
+          "id": "71913c2b-a95e-48d9-9556-7293f81ede24",
+          "root": "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli",
+          "status": "open",
+          "title": "Efficient tool use",
+          "type": "user story"
+        },
+        "meaning": "user story"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2625b13d-60f6-429a-8510-5ca848cf817b.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2625b13d-60f6-429a-8510-5ca848cf817b.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:13:37.570Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T05:28:07.949Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2625b13d-60f6-429a-8510-5ca848cf817b.json"
+}

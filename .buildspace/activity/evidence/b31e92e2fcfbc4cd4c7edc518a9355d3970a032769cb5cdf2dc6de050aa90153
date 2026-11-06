@@ -1,0 +1,22 @@
+{
+  "conversations": [
+    {
+      "error": "This checkout is frozen for review.",
+      "reply": false,
+      "read": "before\n",
+      "writeBlocked": true,
+      "commandBlocked": true,
+      "verifyBlocked": false
+    },
+    {
+      "error": "This checkout is frozen for review.",
+      "reply": false,
+      "read": "verify",
+      "writeBlocked": true,
+      "commandBlocked": true,
+      "verifyBlocked": false
+    }
+  ],
+  "file": "verify",
+  "candidateUnchanged": true
+}

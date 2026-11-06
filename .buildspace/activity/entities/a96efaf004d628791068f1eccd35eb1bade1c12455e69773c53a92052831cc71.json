@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b466d788-831e-48b6-95e3-5d1a82a72778.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b466d788-831e-48b6-95e3-5d1a82a72778.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-11T12:38:36.375Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 456,
+        "description": "Implement the filtering needs agreed in .harness/design/search-filter-needs-analysis.md. Views supply input nodes and edges and own the presentation of filtered results. Reflect only their node/edge type definitions to discover fields; do not recursively fetch related instances. RelationEngine owns query evaluation, primitive/logical operators and reflection; RelationalUi owns the shared composer and autocomplete. Apply query edits manually, reevaluate the applied predicate when data changes, retain ancestors in bushes. Save a flat Windows-user-wide query list outside repositories under %USERPROFILE%\\.TheBroccoli; compose saved queries by reference. Agents can discover and complete queries and evaluate the same predicates. Reuse current controls; contributor-specific operators, search presentation and Ctrl+F are deferred. Verify with focused engine, persistence, agent and UI tests, then the checkpoint and rendered review.",
+        "title": "Develop the shared filtering upgrade",
+        "updatedAt": "2026-10-11T15:23:31.861Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b466d788-831e-48b6-95e3-5d1a82a72778.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b466d788-831e-48b6-95e3-5d1a82a72778.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b466d788-831e-48b6-95e3-5d1a82a72778.json"
+}

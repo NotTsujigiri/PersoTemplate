@@ -1,0 +1,143 @@
+{
+  "authored": {
+    "comments": [
+      null,
+      "",
+      "  ",
+      12,
+      "UTC instant when this record was first persisted."
+    ],
+    "actions": [
+      "declare fields",
+      "define node types",
+      "register raw contributor definitions",
+      "render built-in and contributed field controls"
+    ]
+  },
+  "before": {
+    "invalid": [
+      {
+        "comment": null,
+        "validation": false,
+        "factory": false,
+        "registration": false
+      },
+      {
+        "comment": "",
+        "validation": false,
+        "factory": false,
+        "registration": false
+      },
+      {
+        "comment": "  ",
+        "validation": false,
+        "factory": false,
+        "registration": false
+      },
+      {
+        "comment": 12,
+        "validation": false,
+        "factory": false,
+        "registration": false
+      }
+    ],
+    "help": [
+      {
+        "key": "createdAt",
+        "nameTitle": "Created at",
+        "controlTitle": "",
+        "description": null
+      },
+      {
+        "key": "custom",
+        "nameTitle": "Custom",
+        "controlTitle": "",
+        "description": null
+      }
+    ]
+  },
+  "actual": {
+    "invalid": [
+      {
+        "comment": null,
+        "validation": true,
+        "factory": true,
+        "registration": true
+      },
+      {
+        "comment": "",
+        "validation": true,
+        "factory": true,
+        "registration": true
+      },
+      {
+        "comment": "  ",
+        "validation": true,
+        "factory": true,
+        "registration": true
+      },
+      {
+        "comment": 12,
+        "validation": true,
+        "factory": true,
+        "registration": true
+      }
+    ],
+    "help": [
+      {
+        "key": "createdAt",
+        "nameTitle": "UTC instant when this record was first persisted.",
+        "controlTitle": "UTC instant when this record was first persisted.",
+        "description": "UTC instant when this record was first persisted."
+      },
+      {
+        "key": "custom",
+        "nameTitle": "Evidence captured by this contributor.",
+        "controlTitle": "Evidence captured by this contributor.",
+        "description": "Evidence captured by this contributor."
+      }
+    ]
+  },
+  "expected": {
+    "invalid": [
+      {
+        "comment": null,
+        "validation": true,
+        "factory": true,
+        "registration": true
+      },
+      {
+        "comment": "",
+        "validation": true,
+        "factory": true,
+        "registration": true
+      },
+      {
+        "comment": "  ",
+        "validation": true,
+        "factory": true,
+        "registration": true
+      },
+      {
+        "comment": 12,
+        "validation": true,
+        "factory": true,
+        "registration": true
+      }
+    ],
+    "help": [
+      {
+        "key": "createdAt",
+        "nameTitle": "UTC instant when this record was first persisted.",
+        "controlTitle": "UTC instant when this record was first persisted.",
+        "description": "UTC instant when this record was first persisted."
+      },
+      {
+        "key": "custom",
+        "nameTitle": "Evidence captured by this contributor.",
+        "controlTitle": "Evidence captured by this contributor.",
+        "description": "Evidence captured by this contributor."
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2157234-040b-425d-815d-93fc647a37ca.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2157234-040b-425d-815d-93fc647a37ca.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T10:15:07.052Z",
+        "createdBy": "agent:codex",
+        "description": "Ergonomics is a broad, crucial MVP readiness requirement. Workflow refinement will resolve some gaps, but there are also independent interaction-design gaps. Every level need not be perfect; essential human activities must be coherent and comfortable. Layout, scrolling, field presentation, terminology, discoverability, context retention and recovery all matter. Annotation and agent supervision do not exhaust this requirement; manual relation editing and text diffs remain lower priorities.\n\nScale should be conceived as years or decades of accumulated activity by teams of collaborators and agents. Do not design solely for the short reciprocal experiment. This is an ergonomic horizon; performance engineering can respond as usage grows.\n\nInputs should be grouped by what the user intends to do with them. Bug reports and monitoring alerts need investigation to establish existence and priority, with priority determined by impact on users and systems. Feedback and requests are useful when adding or reworking features. When removing things, why they exist should be recoverable through relations and deterministic/agent-assisted impact analysis, rather than manually hunting through the board.\n\nThe current small top-level backlog and useful timeline do not establish long-term scalability. Task representations differ mainly by title and expansion control. The user needs continuity when tasks move between Queued, Running and Blocked. They explicitly identify a missing Completed column, which must remain usable as finished work accumulates.\n\nTask/Input field semantics need refinement: raw Capture data is not meaningful to the user; Queued omits priority-bracket membership; generic relation lists become noisy. Persistence of hidden bracket state does not satisfy the node editor's obligation to present the actual node/relationship model and invariants. Invariant enforcement and encapsulation are usability requirements for humans and agents. No crash-recovery defect has been reproduced.\n\nRecency and changes by agents or future other users require explicit user-controlled acknowledgement, recorded in a separate Input. The listed concerns are illustrative rather than exhaustive. No blanket human/tool parity or implementation plan has been agreed.\n\nImplementation acceptance setup, clarified 29 September 2026: no special demo feature development. Set up multiple ordinary local repositories, configure an ordinary build space for testing, and populate placeholder Inputs/tasks once using throwaway generation code. Include enough representative items and history to evaluate ergonomics at scale without touching the real Broccoli board. Existing versioning provides rollback; no custom reset/reseed UI, permanent generator, or configurable population feature is required.\n\nInput processing clarified by the user: an input has been read and then either rejected, delayed into Later, or linked to a task representing investigation or action. Acknowledgement of an update alone is not this disposition. Later is therefore a processed-but-deferred disposition. A linked task need not be finished for the input to count as processed.\n\nNode-editor ordering clarified: the earliest field in declaration order may bring later related fields forward to group them locally; preserve declaration order within each group. Fields can belong to multiple invariant groups, so do not represent these as nested containers or duplicate fields. Show overlapping memberships through links in the right gutter. Keep ordering stable while editing.",
+        "title": "MVP ergonomics remain insufficient for everyday use",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2157234-040b-425d-815d-93fc647a37ca.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2157234-040b-425d-815d-93fc647a37ca.json",
+      "properties": {
+        "meaning": "feedback"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2157234-040b-425d-815d-93fc647a37ca.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2157234-040b-425d-815d-93fc647a37ca.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:54:47.981Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-29T22:37:05.018Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2157234-040b-425d-815d-93fc647a37ca.json"
+}

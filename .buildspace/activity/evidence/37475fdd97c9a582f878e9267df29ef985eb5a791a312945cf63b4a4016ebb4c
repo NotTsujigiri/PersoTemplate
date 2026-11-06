@@ -1,0 +1,14 @@
+# Planning snapshot responsiveness verification
+
+Read-only profiling of published revision 180: 1,666 nodes. No live store mutations, second harness, or provider calls.
+
+| Phase | Before | After |
+| --- | ---: | ---: |
+| Snapshot disk load | 1,320 ms | 1,424 ms |
+| Semantic preparation | 9 ms | 24 ms |
+| Full candidate validation | 7,158 ms | 99 ms |
+| Projection of all nodes | 2,732 ms | 12 ms |
+
+The owner now prepares one immutable graph and indexes relations once per snapshot. Domain reference, prerequisite, parent-stage and review-blocking calculations reuse that index. Current-revision requests reuse the current in-memory snapshot, avoiding the disk-load phase. This preserves candidate immutability rather than dropping validation.
+
+Verification: 33 focused tests passed (engine 5, owner 21, dispatcher 7). Engine TypeScript build passed. `perf-owner-read.mjs` is a throwaway read-only profiler; it imports the adjacent TheBroccoli checkout and reads CURRENT then the immutable published revision.

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T13:41:11.786Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 477,
+        "description": "Implement independently runnable deterministic checks that inventory the current UI components and identify violations of the agreed component constraints. Cover one component per source file, registered custom-element identity, safe construction without arguments, and a visible empty default without sample data, service setup or per-component editor adapters. Derive discovery from source and contributor-owned contracts; report unsupported or uncertain cases explicitly so the inventory is not silently incomplete. Report each check separately with exact component/source identities, observed results and reproducible evidence. Distinguish measurable rendering checks from visual usability, which remains a human review. Provide clear commands and results the user can run and inspect. Do not start component rework before the following check review is accepted.",
+        "title": "Develop granular deterministic UI component checks",
+        "updatedAt": "2026-10-12T15:15:21.062Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json"
+}

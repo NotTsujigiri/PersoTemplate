@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8642e04c-bb36-4ec6-a7ad-a532ee26886e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8642e04c-bb36-4ec6-a7ad-a532ee26886e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-23T06:03:38.496Z",
+        "createdBy": "human:user",
+        "createdRevision": 1017,
+        "description": "User annotation (verbatim):\nfor some reason clusters are really far apart\n\nObserved in the Graph editor at http://localhost:43130/?template=personal&community=private&channel=99a62c14-535f-4d9a-9ab2-642ed280b795&space=99a62c14-535f-4d9a-9ab2-642ed280b795&area=graph-editor. The supplied screenshot shows several compact groups separated by large empty areas, with zoom displayed as 2.279%. Selected node: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6d26b73-1851-49e7-9105-c66bf3c342bc.json.\n\nRecord and reproduce this observation before diagnosing or changing layout behavior. The exact query and graph size are not available from the screenshot. This is separate from the Query composer discussion and does not reopen the completed component-expansion work.",
+        "title": "Investigate excessive spacing between graph clusters",
+        "updatedAt": "2026-10-23T06:03:38.828Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8642e04c-bb36-4ec6-a7ad-a532ee26886e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8642e04c-bb36-4ec6-a7ad-a532ee26886e.json",
+      "properties": {
+        "placement": "queued",
+        "purpose": "investigation",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8642e04c-bb36-4ec6-a7ad-a532ee26886e.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1c0dec23-588e-4224-84a2-91c2bb85ed1e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1c0dec23-588e-4224-84a2-91c2bb85ed1e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T15:55:54.338Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 565,
+        "description": "- Replace abstract task descriptions with concrete API, caller-migration and stored-data examples.\n- Cover all affected consumers equally; keep the UI editor as one peer consumer.\n- Preserve agent-before-human checkpoints and record a revised plan snapshot for independent review.\n- Track four annotation bugs and defer multi-reviewer coordination; no product migration in this iteration.",
+        "title": "Clarify migration scope from human planning feedback",
+        "updatedAt": "2026-10-17T16:00:45.213Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1c0dec23-588e-4224-84a2-91c2bb85ed1e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1c0dec23-588e-4224-84a2-91c2bb85ed1e.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "planning",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1c0dec23-588e-4224-84a2-91c2bb85ed1e.json"
+}

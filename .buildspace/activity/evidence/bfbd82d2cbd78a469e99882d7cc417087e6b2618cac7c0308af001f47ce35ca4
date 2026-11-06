@@ -1,0 +1,100 @@
+{
+  "commits": [
+    "97f2c1d",
+    "574799c",
+    "e26980c",
+    "885a8ef",
+    "d0b1910"
+  ],
+  "task": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0eeb2840-caaa-46e4-a813-d5926c5fcb36.json",
+  "recordings": [
+    {
+      "content": {
+        "detailReads": 0,
+        "title": "Cached inspection one"
+      },
+      "name": "cached-selection.actual.json"
+    },
+    {
+      "content": {
+        "detailReads": 0,
+        "title": "Cached inspection one"
+      },
+      "name": "cached-selection.expected.json"
+    },
+    {
+      "content": {
+        "boundaries": {
+          "headerOutsideScroll": true,
+          "headerFullWidth": true
+        },
+        "groups": [
+          {
+            "name": "New",
+            "independentScroll": true,
+            "dropSlot": true
+          },
+          {
+            "name": "Later",
+            "independentScroll": true,
+            "dropSlot": true
+          }
+        ],
+        "selectedImmediately": true,
+        "selectedTitle": "Second inspected entry"
+      },
+      "name": "entry.actual.json"
+    },
+    {
+      "content": {
+        "boundaries": {
+          "headerOutsideScroll": true,
+          "headerFullWidth": true
+        },
+        "groups": [
+          {
+            "name": "New",
+            "independentScroll": true,
+            "dropSlot": true
+          },
+          {
+            "name": "Later",
+            "independentScroll": true,
+            "dropSlot": true
+          }
+        ],
+        "selectedImmediately": true,
+        "selectedTitle": "Second inspected entry"
+      },
+      "name": "entry.expected.json"
+    },
+    {
+      "content": {
+        "attention": "later",
+        "descriptionSpellcheck": "false",
+        "parentFields": 0,
+        "attributionRows": 2,
+        "hasAcknowledgement": 1
+      },
+      "name": "input-attention.actual.json"
+    },
+    {
+      "content": {
+        "attention": "later",
+        "descriptionSpellcheck": "false",
+        "parentFields": 0,
+        "attributionRows": 2,
+        "hasAcknowledgement": 1
+      },
+      "name": "input-attention.expected.json"
+    }
+  ],
+  "screenshotsInspected": [
+    "entry-layout.png",
+    "input-attention.png",
+    "attention-component.png",
+    "mvp-activity-board.png",
+    "narrow-node.png",
+    "blocked-awaiting-review.png"
+  ]
+}

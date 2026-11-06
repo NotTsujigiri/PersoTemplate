@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5c6201b3-cd2b-4987-9493-663f82faee30.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5c6201b3-cd2b-4987-9493-663f82faee30.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T01:04:43.727Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1217,
+        "description": "Discuss and implement the PredicateComposer UI additions and corrections identified by the user after reviewing the first implementation. Some desired behavior is deliberately absent from the mock, so define this iteration from the new feedback rather than treating the mock as exhaustive. Update the shared behavior document where accepted behavior changes and verify the affected usage sites before returning the result for review.",
+        "title": "10. Refine PredicateComposer after the first usage review",
+        "updatedAt": "2026-10-29T01:43:45.064Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5c6201b3-cd2b-4987-9493-663f82faee30.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5c6201b3-cd2b-4987-9493-663f82faee30.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/15f0048d-3a21-4ed6-8ca6-20c69011f4ae.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5c6201b3-cd2b-4987-9493-663f82faee30.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/15f0048d-3a21-4ed6-8ca6-20c69011f4ae.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5c6201b3-cd2b-4987-9493-663f82faee30.json"
+}

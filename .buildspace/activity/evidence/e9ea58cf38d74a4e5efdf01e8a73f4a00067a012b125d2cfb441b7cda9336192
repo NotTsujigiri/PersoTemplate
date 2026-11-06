@@ -1,0 +1,325 @@
+{
+  "observation": "All cancellation scenarios stopped their children, but four tests exceeded their response-time bounds.",
+  "records": {
+    "check-timeout/explicit-deadline-actual.json": {
+      "stopped": true,
+      "returnedPromptly": false
+    },
+    "check-startup-cancellation/actual.json": [
+      {
+        "attempt": 0,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 1,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 2,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 3,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 4,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 5,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 6,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 7,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 8,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 9,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 10,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 11,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 12,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 13,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 14,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 15,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 16,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 17,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 18,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 19,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 20,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 21,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 22,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 23,
+        "stopped": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      }
+    ],
+    "check-startup-cancellation/expected.json": [
+      {
+        "attempt": 0,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 1,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 2,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 3,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 4,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 5,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 6,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 7,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 8,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 9,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 10,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 11,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 12,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 13,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 14,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 15,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 16,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 17,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 18,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 19,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 20,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 21,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 22,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      {
+        "attempt": 23,
+        "stopped": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      }
+    ],
+    "check-timeout/manual-cancellation-expected.json": {
+      "stopped": true,
+      "returnedPromptly": true
+    },
+    "check-timeout/explicit-deadline-expected.json": {
+      "stopped": true,
+      "returnedPromptly": true
+    },
+    "check-timeout/manual-cancellation-actual.json": {
+      "stopped": true,
+      "returnedPromptly": false
+    },
+    "check-orphan-cancellation/expected.json": {
+      "cancelled": true,
+      "completedPromptly": true,
+      "descendantAlive": false
+    },
+    "check-orphan-cancellation/actual.json": {
+      "cancelled": true,
+      "completedPromptly": false,
+      "descendantAlive": false
+    }
+  },
+  "run": ".harness/activity-checkpoint.log",
+  "sourceCommit": "9feeb292470ec149da3d69e4c5eccbbf7974520c"
+}

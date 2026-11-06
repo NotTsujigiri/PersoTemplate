@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d5b4b9ab-607c-4971-a096-0f01bccfa466.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d5b4b9ab-607c-4971-a096-0f01bccfa466.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.390Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Work sequentially through bottlenecks established by the performance investigation. Prefer removing redundant work and correcting ownership/data flow over adding complexity. Re-measure the same scenarios after each meaningful change, retain correctness and freshness checks, and present before/after evidence for first load and UI actions. No parallel task branches or unmeasured performance claims.",
+        "title": "Implement measured application performance improvements",
+        "updatedAt": "2026-10-09T13:04:04.789Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d5b4b9ab-607c-4971-a096-0f01bccfa466.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d5b4b9ab-607c-4971-a096-0f01bccfa466.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d5b4b9ab-607c-4971-a096-0f01bccfa466.json"
+}

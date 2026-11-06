@@ -1,0 +1,24 @@
+{
+  "labels": [
+    "Personal buildspace",
+    "Ergonomics playground"
+  ],
+  "selectedSpace": "917e4c4f-a958-4b1c-914f-9887b972d58e",
+  "selectedChannel": "917e4c4f-a958-4b1c-914f-9887b972d58e",
+  "cards": 488,
+  "boards": [
+    {
+      "visible": true,
+      "rect": {
+        "x": 772.46875,
+        "y": 36,
+        "width": 667.53125,
+        "height": 914
+      },
+      "cards": 488,
+      "loading": false,
+      "text": "Activity board\n⌕\nErgonomics playground\nInputs\n300\n+\nNew 98\nQuery composer — observation 2\nY\nFeedback\nTask linked\n11h\nAnnotation capture — observation 1\nY\nIssue\nTask linked\n11h\nHistory navigation — observation 39\nY\nIdea\nTask linked\n11h\nChat transcript"
+    }
+  ],
+  "errors": []
+}

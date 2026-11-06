@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59123b9e-9665-4256-aef0-8503d653caa7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59123b9e-9665-4256-aef0-8503d653caa7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.898Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Allow the same engine model to host environment-compatible contributors and acquire remote data. Remove the authoritative-versus-frontend capability split. Preserve explicit, bounded acquisition and validated ownership, revision and coverage semantics.\n\nProgress: recorded the original rejection of remote data by a locally contributing engine and the omission of local contributions without explicit root display options. The same fixture now passes with one frontend and two service instances, retaining acquired peers after local refresh. Roots have defaults; inspection graphs/records are engine-scoped; identical declarations retain all provider identities. Candidate catalogs validate before commit. Focused composition, entity-store, query, refresh and bootstrap coverage tests passed. Continuing transport integration, replacement/invalidation coverage and consumer verification.\n\nCompleted engine foundation: one public engine service contract now owns native entities, explicit peer connections, canonical selection acquisition and operation results carrying materialization. Scoped acquisitions retain unrelated pages and replace refreshed membership. Snapshot graph authorities survive relays. Generic exchanges dispatch query, materialized state, operations, actions and revision observation without application routes. Recorded relay discrepancy was fixed; 150/151 engine tests passed in the broad run and the remaining metadata-refresh expectation plus all eight focused transport/composition tests now pass. Repository types passed before the exchange extension; the next verification pass covers newly updated consumers. HTTP bridge and application migration continue in their child tasks.",
+        "title": "Unify local and remote engine capabilities",
+        "updatedAt": "2026-10-22T10:18:10.065Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59123b9e-9665-4256-aef0-8503d653caa7.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59123b9e-9665-4256-aef0-8503d653caa7.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59123b9e-9665-4256-aef0-8503d653caa7.json"
+}

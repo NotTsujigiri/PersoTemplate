@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T21:46:52.158Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1081,
+        "description": "",
+        "title": "Apply supplied insert-before, insert-after and remove-expression triggers",
+        "updatedAt": "2026-10-27T03:59:42.435Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json"
+}

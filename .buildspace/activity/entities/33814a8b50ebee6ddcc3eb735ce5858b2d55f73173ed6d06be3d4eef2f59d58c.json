@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc9b7fa-f342-4a3d-9746-b61229b1d635.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc9b7fa-f342-4a3d-9746-b61229b1d635.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T15:28:20.543Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 436,
+        "description": "After the user approves the review-surface mockups, plan small serial implementation batches and human checkpoints in Task graph. Use the accepted UI-editor artifact and recorded needs as inputs. Identify ownership, persistence, revision comparison, annotation targets, invariants and cross-view updates without duplicating those contracts.\n\nEach checkpoint must have a concrete behavior to try in Review → Changes. Preserve the progressively built mockup as review context; do not reinstate the superseded requirement to prepare and replay an external proposal document.",
+        "title": "Plan proposal-review development and review checkpoints",
+        "updatedAt": "2026-10-10T09:48:42.791Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc9b7fa-f342-4a3d-9746-b61229b1d635.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc9b7fa-f342-4a3d-9746-b61229b1d635.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "planning",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f5323bdf-1cc3-45ba-924d-f0fc7398d919.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc9b7fa-f342-4a3d-9746-b61229b1d635.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f5323bdf-1cc3-45ba-924d-f0fc7398d919.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc9b7fa-f342-4a3d-9746-b61229b1d635.json"
+}

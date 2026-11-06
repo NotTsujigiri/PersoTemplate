@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f740d0cf-0a9f-486f-8fde-628918b0ed70.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f740d0cf-0a9f-486f-8fde-628918b0ed70.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T05:20:46.337Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1046,
+        "title": "running",
+        "updatedAt": "2026-10-24T05:20:46.685Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f740d0cf-0a9f-486f-8fde-628918b0ed70.json#planning%3Atask-transition",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f740d0cf-0a9f-486f-8fde-628918b0ed70.json",
+      "properties": {
+        "from": "queued",
+        "reason": "mutate",
+        "taskId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/325ee24e-34af-44fa-8e20-dbb6695a5254.json",
+        "timestamp": "2026-10-24T05:20:46.335Z",
+        "to": "running"
+      },
+      "typeId": "planning:task-transition"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f740d0cf-0a9f-486f-8fde-628918b0ed70.json"
+}

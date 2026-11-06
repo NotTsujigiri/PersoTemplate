@@ -1,0 +1,386 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2f58204-28c3-4bbb-92d9-12acb83284f8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2f58204-28c3-4bbb-92d9-12acb83284f8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-27T02:19:29.553Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1190,
+        "description": "Review the TypeScript autocomplete and expression-editing implementation against [the portable behavior reference](C:/Users/vince/Documents/GitHub/Btr/QueryComposerContext/README.md).\n\n1. Open a real TypeScript file in Repositories. The view toolbar offers Text mode and Expression mode as two IconRadioButton choices; switching preserves the document.\n2. In Expression mode, select a token to replace it or a gap to insert. Try project-aware member completion, entered text, Copy full input, Paste and Remove. Escape cancels pending input.\n3. Use Insert expression before/after and Remove expression in the supplied suggestion area. Check wrapping, continued editing and undo/redo across both modes.\n4. Expand an expression to inspect nested operation numbers and result references. This is a static evaluation outline, not a running debugger. Optional chains and reference-sensitive operations remain whole rather than show misleading steps.\n5. In Text mode, normal editing and coloring remain available; Ctrl+Space requests completion. Unsupported files retain ordinary Text mode.\n\nThe completion panel was also exercised with an unrelated suggestion layout to demonstrate reuse without a language dependency. LspContributor coordinates language capabilities; TypeScriptContributor supplies language semantics; RelationalUi owns presentation and editing. No external dependency was added. JSON autocomplete and runtime/debugging capabilities are outside this review.\n\nImplementation screenshots and verification evidence are attached to the covered task. Human acceptance is pending; subsequent execution-system work remains gated on this review.\n\nVerification: affected browser checks and type checks pass. The broad checkpoint is not fully green: isolated planning-timing, planning-UI and preview reruns passed, while the separate unchanged recovery editor still fails a CRLF/LF comparison. See the attached verification.md on the covered task for exact counts, corrections and remaining limits. Review branch: codex/typescript-autocomplete, latest commit 13ace5b.",
+        "title": "Human review: accept autocomplete and token editing in real TypeScript files",
+        "updatedAt": "2026-10-29T01:43:45.064Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2f58204-28c3-4bbb-92d9-12acb83284f8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2f58204-28c3-4bbb-92d9-12acb83284f8.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "human:user": {
+              "reason": "",
+              "time": "2026-10-28T22:52:21.443Z",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6172e647-fb10-4c02-abdd-766e711cff57.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6172e647-fb10-4c02-abdd-766e711cff57.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6172e647-fb10-4c02-abdd-766e711cff57.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.154Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Provide TypeScript token ranges, expression structure and completion edits through shared language capabilities",
+                      "updatedAt": "2026-10-27T03:01:26.572Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6172e647-fb10-4c02-abdd-766e711cff57.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6172e647-fb10-4c02-abdd-766e711cff57.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6172e647-fb10-4c02-abdd-766e711cff57.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.147Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Define the panel input, input actions and consumer-owned suggestion area",
+                      "updatedAt": "2026-10-27T03:12:29.889Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-27T01:40:47.483Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1188,
+                      "description": "Implement TypeScript autocomplete and token editing using [the portable behavior reference](C:/Users/vince/Documents/GitHub/Btr/QueryComposerContext/README.md). Screenshots are beside the README. Written behavior takes precedence; the mock is an explanatory aid, never a reference implementation.\n\nAccepted ownership:\n- LspContributor owns reusable language-completion contracts, capability discovery, request coordination with document versions, cancellation, stale-result rejection and server provenance.\n- TypeScriptContributor owns TypeScript/project semantics, server completions, suggested edits, token ranges and expression/evaluation structure.\n- RelationalUi owns the reusable completion panel and text-editor integration. The panel has no LSP or language dependency; its consumer supplies suggestion content, layout, styling, filtering and action triggers. The editor applies supplied edits with selection, focus and undo/redo.\n\nIn the text editor view's tool panel, use the existing IconRadioButton component with two icon choices: Text mode and Expression mode. Text mode retains ordinary character editing. Expression mode shows numbered expression rows, separate tokens and insertion gaps, wrapping within each row without rewriting source layout. Keep the mode controls at the view toolbar and use optional language capabilities; unsupported documents remain editable in Text mode.\n\nDeliver the referenced insertion/replacement, expression-row actions, contextual completion, raw input, keyboard/pointer interaction, full-input Copy, Paste, Remove and continued editing behavior. Token mode exposes useful evaluation breakdown with nested numbering when supplied by the language. Coloring stays owned by the existing coloring system. Debugger execution and functioning breakpoints require separate debugging capabilities; do not imply their presence from a gutter.\n\nFocus implementation and human acceptance on real TypeScript files and project dependencies, including incomplete text, stale asynchronous results, undo/redo and switching modes. JSON autocomplete with optional JSON Schema support remains a separate backlog task.\n\nDevelopment is authorized. Complete the serial child tasks, then prepare the assigned human review before reusable function and query execution starts.",
+                      "title": "3. Add TypeScript autocomplete and token editing to the text editor",
+                      "updatedAt": "2026-10-27T04:33:13.185Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/856c9951-890d-416e-ab7c-284e87bda8cb.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/856c9951-890d-416e-ab7c-284e87bda8cb.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/856c9951-890d-416e-ab7c-284e87bda8cb.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.161Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Render wrapped expression rows and optional token breakdown with nested numbering and breakpoint space",
+                      "updatedAt": "2026-10-27T03:59:42.435Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/856c9951-890d-416e-ab7c-284e87bda8cb.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/856c9951-890d-416e-ab7c-284e87bda8cb.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/856c9951-890d-416e-ab7c-284e87bda8cb.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96e0b20f-75a2-456e-bcad-dd677c83d4e3.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96e0b20f-75a2-456e-bcad-dd677c83d4e3.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96e0b20f-75a2-456e-bcad-dd677c83d4e3.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.149Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Implement panel opening, focus, keyboard and pointer navigation across the supplied content",
+                      "updatedAt": "2026-10-27T03:12:29.889Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96e0b20f-75a2-456e-bcad-dd677c83d4e3.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96e0b20f-75a2-456e-bcad-dd677c83d4e3.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/96e0b20f-75a2-456e-bcad-dd677c83d4e3.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4c60f7d-d4e5-4b19-a3b6-df21f2ac8f40.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4c60f7d-d4e5-4b19-a3b6-df21f2ac8f40.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4c60f7d-d4e5-4b19-a3b6-df21f2ac8f40.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.157Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Apply input, copy, paste and delete actions while preserving undo and the next editing target",
+                      "updatedAt": "2026-10-27T03:59:42.435Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4c60f7d-d4e5-4b19-a3b6-df21f2ac8f40.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4c60f7d-d4e5-4b19-a3b6-df21f2ac8f40.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4c60f7d-d4e5-4b19-a3b6-df21f2ac8f40.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cabf3100-91a5-428c-963a-7421458bae50.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cabf3100-91a5-428c-963a-7421458bae50.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cabf3100-91a5-428c-963a-7421458bae50.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.155Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Add Text/Expression toolbar choices and integrate token editing and evaluation breakdown",
+                      "updatedAt": "2026-10-27T04:33:13.185Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cabf3100-91a5-428c-963a-7421458bae50.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cabf3100-91a5-428c-963a-7421458bae50.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cabf3100-91a5-428c-963a-7421458bae50.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.158Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Apply supplied insert-before, insert-after and remove-expression triggers",
+                      "updatedAt": "2026-10-27T03:59:42.435Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df17b02e-8672-4503-98a2-2c76fcd85978.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eac6dba7-931b-4d8b-b2cc-d7893f766f63.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eac6dba7-931b-4d8b-b2cc-d7893f766f63.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eac6dba7-931b-4d8b-b2cc-d7893f766f63.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T22:17:18.315Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1084,
+                      "description": "",
+                      "title": "Coordinate asynchronous suggestion updates, scrolling and cancellation without owning filtering",
+                      "updatedAt": "2026-10-27T03:12:29.889Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eac6dba7-931b-4d8b-b2cc-d7893f766f63.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eac6dba7-931b-4d8b-b2cc-d7893f766f63.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eac6dba7-931b-4d8b-b2cc-d7893f766f63.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f910e0a9-6405-4511-ae8a-7de1047f5cd3.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f910e0a9-6405-4511-ae8a-7de1047f5cd3.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f910e0a9-6405-4511-ae8a-7de1047f5cd3.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.165Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Connect insertion gaps and tokens to language completions and versioned document edits",
+                      "updatedAt": "2026-10-27T03:59:42.435Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f910e0a9-6405-4511-ae8a-7de1047f5cd3.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f910e0a9-6405-4511-ae8a-7de1047f5cd3.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f910e0a9-6405-4511-ae8a-7de1047f5cd3.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fa34d414-c574-48d0-bee0-223ba1731174.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fa34d414-c574-48d0-bee0-223ba1731174.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fa34d414-c574-48d0-bee0-223ba1731174.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.145Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "",
+                      "title": "Build a reusable completion panel with a consumer-supplied suggestion area",
+                      "updatedAt": "2026-10-27T03:12:29.889Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fa34d414-c574-48d0-bee0-223ba1731174.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fa34d414-c574-48d0-bee0-223ba1731174.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fa34d414-c574-48d0-bee0-223ba1731174.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 1204,
+            "sessions": [],
+            "submittedAt": "2026-10-27T04:33:31.029Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2f58204-28c3-4bbb-92d9-12acb83284f8.json"
+}

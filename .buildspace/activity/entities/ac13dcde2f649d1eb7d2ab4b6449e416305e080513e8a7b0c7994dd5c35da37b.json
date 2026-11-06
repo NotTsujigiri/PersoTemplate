@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e37e6eee-5bf6-44d4-97e8-a6991e0d7b30.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e37e6eee-5bf6-44d4-97e8-a6991e0d7b30.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.385Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "After joint needs analysis, hold image-generation rounds with the user for the Checks view. Explore and refine test-level timing, test purpose/actions, results and detail at useful densities using the current app as context. Iterate on user feedback; no development before the design is reviewed.",
+        "title": "Iterate on Checks view mockups with image generation",
+        "updatedAt": "2026-10-09T13:00:20.346Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e37e6eee-5bf6-44d4-97e8-a6991e0d7b30.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e37e6eee-5bf6-44d4-97e8-a6991e0d7b30.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "design",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e37e6eee-5bf6-44d4-97e8-a6991e0d7b30.json"
+}

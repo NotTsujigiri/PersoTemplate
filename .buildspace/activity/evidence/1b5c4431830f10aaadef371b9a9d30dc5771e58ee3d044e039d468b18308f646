@@ -1,0 +1,33 @@
+# 19 annotation corrections
+
+1. Diff identity contains only repository name and relative path.
+2. Changes content has no outer padding.
+3. Shared toolbar provides even revision selector spacing.
+4. Removed the permanent live-preview warning.
+5. Preview content has no outer padding.
+6. Feedback text starts at selector height and grows with content.
+7. Shared toolbar stays one row, scrolls horizontally, and hides its scrollbar.
+8. Delete uses the shared trash icon button.
+9. Reload uses the shared icon button and its centering contract.
+10. Removed Session toolbar action and its unused form.
+11. Removed duplicate Graph toolbar action; the view selector remains.
+12. Removed Priority toolbar action and form in favor of queue drag destinations.
+13. Board cards no longer reserve empty leaf indentation or excess left padding.
+14. Breadcrumb says Task board.
+15. Task titles use a bounded single line with ellipsis and a full-title tooltip.
+16. Each board task has a panel background and border.
+17. Backlog task drag supports existing priority brackets and prepend/insert/append new brackets. Destinations appear only during dragging; mutations persist through the canonical owner. Keyboard operation, cancellation, stale refresh, prerequisite rejection, and reload persistence are covered.
+18. Removed Find task or input dropdown.
+19. Removed planning import/export UI, commands, implementation, exclusive documentation, and obsolete test. Evidence attachments and normal persisted graph/history reads remain supported.
+
+## Validation
+
+- Before/after regression: the same authored layout input and independent expectation failed on 21 fields before the changes and passed after them.
+- Production build passed.
+- 65 backend tests passed.
+- 69 browser tests passed, including layout, drag/drop, keyboard, refresh, and persistence regressions.
+- Shared UI package build and 211 tests passed.
+- Independent implementation review converged with no further substantive findings after fixing feedback submit locking, keyboard cancellation focus, and drag listener cleanup for hidden/disposed boards.
+- Updated server and browser were inspected at 928 x 639. The user's unsaved node draft and panel layout were restored after refresh.
+
+This completes the implementation work item; it does not record human approval or change the prior review outcome.

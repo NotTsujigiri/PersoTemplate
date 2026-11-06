@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/02932894-591d-4795-847c-a7c355f45825.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/02932894-591d-4795-847c-a7c355f45825.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:12:20.992Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 388,
+        "description": "# Outcome\nMake Systems, Focus and Node editor read one contributor-owned model admitted through the running relational engine.\n\n## Serial delivery\nAfter the nested execution package's final review: define the Systems contribution/admission approach → review the approach → define ownership and compiler contracts → define enforcement cases → review the boundary and cases → contribute source facts → admit them → review admission evidence → switch views and remove the old path → review cutover.\n\n## Criteria\nEach fact has one declared owner. Separate package identity, System identity, declared dependencies, observed imports and authored semantic dependencies. Demonstrate compile-time rejection of invalid boundary access and runtime rejection of invalid facts and scopes. Preserve source coverage and view behavior. Remove the predecessor path completely during cutover.\n\n## Decisions\nThe child proposal resolves System/package identity and ownership for review; this overall plan does not pre-approve those architectural choices.",
+        "title": "Complete contributor-owned models and Systems inspection",
+        "updatedAt": "2026-10-17T13:56:42.494Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/02932894-591d-4795-847c-a7c355f45825.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/02932894-591d-4795-847c-a7c355f45825.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/02932894-591d-4795-847c-a7c355f45825.json"
+}

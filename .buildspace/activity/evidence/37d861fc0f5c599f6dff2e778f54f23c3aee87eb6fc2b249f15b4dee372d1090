@@ -1,0 +1,256 @@
+{
+  "sourceRevision": 578,
+  "scope": "Planning revision for autonomous implementation with commit checkpoints; only final human acceptance. This turn does not implement the migration.",
+  "tasks": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json",
+      "title": "Agent review: component and data-type inspection",
+      "description": "- Use the running app: open an entity, inspect component values and follow its component type into the data model.\n- Verify each property exposes its actual declared data type and links to structured/related definitions; reject generic String fallbacks or duplicate handwritten schemas.\n- Check representative File/Git/UI composition and another affected domain, with deterministic navigation recordings and screenshots.\n- Resolve findings autonomously and prepare checkpoint 2; the human sees the completed result only at the final review.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ],
+        "targets": [
+          "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json"
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json",
+      "title": "Migrate all consumers and expose component inspection",
+      "description": "- Replace shared APIs and use compiler errors to update affected engine, contributors, storage, queries, planning/review, tools and UI consumers together.\n- In Node editor, show an entity’s attached components, each component’s type and property values; provide navigation from instance to definition.\n- In the data model, expose component types, their properties and links to declared data types, including structured/optional/collection types, from the same owned definitions.\n- Remove replaced APIs without adapters; verify filtering, navigation, edit/save/reopen and stale-write rejection before automatic technical and inspection reviews.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dc68a85-f443-4c75-b7ba-b663b5a12692.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "title": "Migrate to typed entity-component composition",
+      "description": "- Replace shared single-kind classification across all affected active packages with independently owned typed components; keep one authoritative model.\n- Deliver Node editor inspection of attached components and values, plus navigable component types, properties and their data types in the data model.\n- Use compiler-driven migration, runtime/data checks and independent agent correction rounds; no intermediate human review gates.\n- Keep a starting checkpoint and three verified implementation commits; one final human review checks the completed inspection experience.",
+      "placement": "queued",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/607c8db5-8c22-4238-884d-bdf1ab02ad5c.json",
+      "prerequisites": []
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json",
+      "title": "Agent review: application-wide component migration",
+      "description": "- Audit every affected active package against the owner/consumer inventory, compiler results and runtime tests.\n- Check shared definitions, explicit dependencies, preserved IDs/relations and removal of replaced single-kind APIs.\n- Verify persistence, failure recovery, queries, planning/review, tools and UI; the UI editor is one peer consumer.\n- Record and fix findings without waiting for a human; hand the checked candidate to the inspection reviewer.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ],
+        "targets": [
+          "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json"
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json",
+      "title": "Plan autonomous migration and commit checkpoints",
+      "description": "- Replace intermediate human approvals with independent agent checks and commit checkpoints; preserve previous review history.\n- Make components, component types, properties and property data types visible through the regular Node editor and data model.\n- Pin the revised task sequence for independent review; keep descriptions concise and final human inspection bounded.\n- This task updates planning only; implementation can later proceed without intermediate human decisions.",
+      "placement": "completed",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68af9814-29e9-4abf-a29d-8de1baab943c.json",
+      "title": "Agent review: autonomous migration plan",
+      "description": "- Independently review the latest plan for uninterrupted implementation, explicit commits and one final human inspection.\n- Require concrete component/type/property navigation, compiler leverage and safe data replacement before implementation.\n- Resolve findings through recorded agent correction rounds; previous human gate was withdrawn at the user’s request, not approved.\n- Approval validates planning only; future commits and implementation require their own checks.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ],
+        "targets": [
+          "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json"
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json",
+      "title": "Agent review: migration completeness",
+      "description": "- Audit final scope, removal evidence, strict compiler checks and complete checkpoint results across affected active packages.\n- Verify stored-data/runtime safety and accurate instance → component type → property → data type navigation.\n- Record findings, fixes and re-review until accepted; no intermediate human gate or weakened checks.\n- Approve only the verified candidate for checkpoint 3; provide a concise verdict and any remaining limitations.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ],
+        "targets": [
+          "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json"
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json",
+      "title": "Verify stored data, runtime paths and predecessor removal",
+      "description": "- Check old assumptions in saved queries, loaded records, registrations and tool messages that a successful compile cannot prove correct.\n- Verify identities, relations and component/type/property navigation survive restart, edits and rejected writes across representative existing data.\n- Remove predecessor-only code, schemas, tests, configuration and unused dependencies; retain no dual format or adapter.\n- Run full type/dependency and checkpoint tests plus rendered UI verification; fix migration regressions before final technical review.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dff66c19-372e-45b9-86d1-6f85fae3371b.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dc68a85-f443-4c75-b7ba-b663b5a12692.json",
+      "title": "Commit checkpoint 1: typed API and model proof",
+      "description": "- After agent acceptance, commit the coherent typed API, model-compiler proof and rejection/runtime tests in each affected repository.\n- Require clean type/build checks and focused passing verification; retain no compatibility scaffold or temporary weak typing.\n- Record exact commit IDs, scope and validation evidence in Broccoli.\n- Continue directly to application migration; no human review is required.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4797236-6544-4184-97e4-c89efca8a8c6.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json",
+      "title": "Prove typed component access and model inspection",
+      "description": "- Prove entity identity, typed attach/check/read operations and relation endpoints using independently owned File, Git and UiComponent examples.\n- Compile valid uses and exact rejection cases for wrong data, unchecked reads and invalid relations; enforce package dependencies without type escapes.\n- Derive runtime validation and inspectable component types, properties and property data types from the same definitions; prove existing compiler support for generic/recursive types.\n- Before replacing app/data, reject malformed inputs and rehearse disposable data rewriting: preserve IDs/links, atomic writes and failed-write recovery.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bbf58ca1-d754-4f1f-83a2-92c176479b0d.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json",
+      "title": "Commit checkpoint 3: verified migration ready for inspection",
+      "description": "- After final agent acceptance, commit remaining runtime/data corrections and predecessor removal; run required checkpoint validation.\n- Record the complete per-repository commit sequence and matching verification/agent verdicts; do not label failed checks as passed.\n- Prepare the running app with representative existing entities and short steps to inspect components, types, properties and property data types.\n- Attach the final candidate evidence and leave the single human acceptance review ready; do not approve it on the user’s behalf.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4797236-6544-4184-97e4-c89efca8a8c6.json",
+      "title": "Agent review: typed API and compiler proof",
+      "description": "- Review typed examples, exact rejection results, model-compiler support and dependency direction.\n- Require runtime and inspection metadata from the same owned definitions, including property data types and definition references.\n- Require malformed-input tests and successful disposable-data rehearsal before replacement; record and fix findings.\n- Pass only a coherent, checked implementation ready for checkpoint 1; no human decision is required here.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ],
+        "targets": [
+          "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json"
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bbf58ca1-d754-4f1f-83a2-92c176479b0d.json",
+      "title": "Commit starting checkpoint before migration",
+      "description": "- Record starting revisions and the working-tree inventory in each affected repository; checkpoint the already-authorized accumulated MVP work separately.\n- Preserve new or unrelated user edits; do not silently include them in migration commits or discard them.\n- Record baseline validation and any failures honestly, without granting exemptions or weakening checks.\n- Attach commit IDs per repository before the first migration edit; this is a recoverable starting point, not migration acceptance.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68af9814-29e9-4abf-a29d-8de1baab943c.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json",
+      "title": "Plan the compiler-guided migration",
+      "description": "- Bound the migration and list owners, consumers and predecessor APIs.\n- Sequence compiler checks, runtime checks, cutover and removal.\n- Give each human checkpoint at most three observable decisions.\n- Attach the concise candidate plan; no product migration before human approval.",
+      "placement": "completed",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": []
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dff66c19-372e-45b9-86d1-6f85fae3371b.json",
+      "title": "Commit checkpoint 2: migrated application and component inspection",
+      "description": "- After technical and inspection agent reviews pass, commit the application-wide migration and component/type/property inspection.\n- Require passing affected-consumer tests, type/build checks and verified navigation screenshots.\n- Record commit IDs per repository and evidence matching those revisions; preserve unrelated working-tree edits.\n- Continue directly to final runtime/data verification; no human review is required.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e19648b5-2baf-4c8a-9770-c76600c4accd.json",
+      "title": "Human review: completed component inspection",
+      "description": "- Open an entity in Node editor and see its components, component types and property values.\n- Follow a component type into the data model; inspect its properties and their declared data types.\n- Decide whether this completed inspection experience is clear and sufficient; no architecture or source-code review is expected.\n- Review after final agent acceptance and commit; technical checks and correction rounds are the agents’ responsibility.",
+      "placement": "blocked",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "human:user",
+            "required": true
+          }
+        ],
+        "targets": [
+          "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json"
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json",
+      "title": "Agent review: migration plan",
+      "description": "- Independent subagent reviews compiler leverage, ownership, sequencing and runtime/data guarantees.\n- Required reviewer: Codex; the named subagent records its own findings and outcome.\n- Request changes through review feedback; correct and re-review before human handoff.\n- Approval covers the pinned plan only; it does not authorize implementation.",
+      "placement": "completed",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json"
+      ],
+      "review": {
+        "status": "passed",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ],
+        "targets": [
+          "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json"
+        ]
+      }
+    }
+  ]
+}

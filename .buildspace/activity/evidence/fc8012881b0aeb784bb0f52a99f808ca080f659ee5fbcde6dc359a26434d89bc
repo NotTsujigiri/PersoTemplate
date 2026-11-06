@@ -1,0 +1,13 @@
+[
+  {
+    "step": "holder entered"
+  },
+  {
+    "step": "holder released before contender reads lock"
+  },
+  {
+    "step": "result publication",
+    "recorded": true,
+    "revision": 2
+  }
+]

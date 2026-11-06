@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/493d10a9-f124-451a-b289-d026bb7d1e22.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/493d10a9-f124-451a-b289-d026bb7d1e22.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T13:00:25.957Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 674,
+        "description": "",
+        "title": "- Agent boundary review approved the notification reproduction: unrelated planning updates replaced the editor and lost its selection; the focused guard now pre",
+        "updatedAt": "2026-10-18T13:00:38.395Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/493d10a9-f124-451a-b289-d026bb7d1e22.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/493d10a9-f124-451a-b289-d026bb7d1e22.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Agent boundary review approved the notification reproduction: unrelated planning updates replaced the editor and lost its selection; the focused guard now preserves it.\n- Reviewer requested refreshing the Revision picker in place; this is included without rebuilding the editor.\n- Agent inspection review approved separate scalar observations with unchanged source types, then found invalid scalar omission and possible first-value focus loss.\n- Invalid scalar omission is reproduced; focus recording is being completed. These review findings remain open until exact recordings and the final checkpoint pass."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/493d10a9-f124-451a-b289-d026bb7d1e22.json"
+}

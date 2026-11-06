@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62d1c861-5de5-4df6-bb45-2b2b16bea5f1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62d1c861-5de5-4df6-bb45-2b2b16bea5f1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T13:56:46.999Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 427,
+        "description": "Implement review iteration as a nested task graph owned by the review task. This is part of the MVP and runs after the performance pass, before acceptance of earlier MVP work.\n\nWhen a reviewer refuses a review (requests changes), the Broccoli buildspace system automatically creates a correction task and a follow-up review task as children of that review task. The correction precedes its follow-up review; the latter reviews the corrections. Apply the same nesting rule if that follow-up review is refused. Use ordinary nested tasks and dependency edges, with the same graph presentation and parent-boundary invariants; keep each iteration serial.\n\nThe system owns this operation: authors and reviewers must not manually create the iteration graph or classify every feedback comment by original implementation task. Keep feedback, submitted evidence, review outcomes and their relationships available throughout the iteration. Create the correction/review pair atomically and exactly once for the refusal, including retried or concurrent requests. Preserve the original submitted snapshot and recorded outcome; do not fabricate approval.\n\nTask completion means the work was done, not that it was correct. A refusal must not undo completion of the original implementation work merely because correctness has not been accepted. Corrections are represented by the nested correction task. Keep original task completion, review outcome and progress of the nested iteration distinct.\n\nAcceptance: demonstrate a refusal creating the two linked child tasks, completion of corrections followed by their review, a repeated refusal with further nesting, preserved prior evidence/outcomes, and no duplicate tasks from retries. Review the behavior with the user through the UI. Integrate with the later planned execution-model work rather than creating a separate iteration mechanism.",
+        "title": "Create correction and follow-up review tasks inside refused reviews",
+        "updatedAt": "2026-10-09T13:56:54.678Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62d1c861-5de5-4df6-bb45-2b2b16bea5f1.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62d1c861-5de5-4df6-bb45-2b2b16bea5f1.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62d1c861-5de5-4df6-bb45-2b2b16bea5f1.json"
+}

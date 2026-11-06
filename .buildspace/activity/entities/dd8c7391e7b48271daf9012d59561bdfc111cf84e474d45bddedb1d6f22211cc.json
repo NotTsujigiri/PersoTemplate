@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/176195bb-1956-4115-b7d7-da7135000f12.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/176195bb-1956-4115-b7d7-da7135000f12.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T07:52:40.547Z",
+        "createdBy": "agent:codex",
+        "description": "Future idea explicitly outside MVP: allow inspecting the predicate code associated with an invariant in addition to its contributor-provided comment, from the node editor's invariant links. For MVP the comment tooltip is sufficient. Source availability and representation across predicate implementations need investigation; do not introduce code inspection as a current acceptance requirement.",
+        "title": "Inspect invariant predicate code alongside its comment",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/176195bb-1956-4115-b7d7-da7135000f12.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/176195bb-1956-4115-b7d7-da7135000f12.json",
+      "properties": {
+        "meaning": "idea"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/176195bb-1956-4115-b7d7-da7135000f12.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/176195bb-1956-4115-b7d7-da7135000f12.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:45:02.582Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-29T22:37:05.018Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/176195bb-1956-4115-b7d7-da7135000f12.json"
+}

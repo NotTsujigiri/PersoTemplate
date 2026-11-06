@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12055bf2-2569-4047-b161-cb99c11cfaee.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12055bf2-2569-4047-b161-cb99c11cfaee.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:36:45.559Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 649,
+        "description": "",
+        "title": "Fresh full browser checkpoint found the task-drag scenario failing: the next drag after an intentionally stale drop stayed in Backlog instead of Waiting. Preser",
+        "updatedAt": "2026-10-18T09:39:17.808Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12055bf2-2569-4047-b161-cb99c11cfaee.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12055bf2-2569-4047-b161-cb99c11cfaee.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Fresh full browser checkpoint found the task-drag scenario failing: the next drag after an intentionally stale drop stayed in Backlog instead of Waiting. Preserved the failing output and screenshot in .harness/migration-drag-final-before; independent reviewer diagnosis requested. Build, all 41 model checks and 567 unit/integration tests passed on 3da490e; final approval remains pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12055bf2-2569-4047-b161-cb99c11cfaee.json"
+}

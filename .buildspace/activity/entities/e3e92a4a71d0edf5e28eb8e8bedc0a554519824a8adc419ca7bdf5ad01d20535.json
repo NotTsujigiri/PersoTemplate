@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0aa611cc-79a9-448f-8953-86bb809854a7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0aa611cc-79a9-448f-8953-86bb809854a7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Let Broccoli, templates and other repositories reuse check infrastructure without copying pipelines, preserving exact definition versions and applicability.\n\nScope\n\n• Identify reusable parts of the Broccoli testing system and template integration needs.\n\n• Design code/API-defined versioned checks/pipelines and choose a linking/pinning approach from evidence; Git submodules are an option, not a decision.\n\n• Check/provider-owned applicability predicates with an explicit escape hatch when conventions conflict.\n\n• Expose semantic capabilities through portable tools first; avoid dependence on Codex-specific hooks.\n\n• Coverage evidence with computed and literal threshold provenance and system/file/function scope for critical code.\n\nSuccess criteria\n\n1. A shared check can serve Broccoli and a template without duplicated test-system implementation.\n\n2. Runs identify the exact shared definition revision, target version and applicability reasoning; updates do not rewrite old results.\n\n3. A user can force a check where conventions miss it, with the override visible.\n\n4. Coverage reports distinguish measured values from thresholds, show how each threshold was obtained or overridden and expose relevant file/function coverage.\n\n5. Follow-up scope and implementation are reviewed separately; this task is not a dependency or completion criterion of the current MVP.\n\nEvidence\n\n• Reusable check API and versioning proposal\n\n• Broccoli/template example\n\n• Applicability and coverage policy examples\n\n",
+        "title": "Share versioned check tooling across repositories",
+        "updatedAt": "2026-10-06T17:16:54.436Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0aa611cc-79a9-448f-8953-86bb809854a7.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0aa611cc-79a9-448f-8953-86bb809854a7.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "planning"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0aa611cc-79a9-448f-8953-86bb809854a7.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0aa611cc-79a9-448f-8953-86bb809854a7.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T07:05:34.718Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-06T17:16:54.436Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0aa611cc-79a9-448f-8953-86bb809854a7.json"
+}

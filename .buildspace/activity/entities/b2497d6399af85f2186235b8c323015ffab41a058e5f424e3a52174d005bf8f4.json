@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/118473b8-65e0-4bac-ac9a-c8511763fef1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/118473b8-65e0-4bac-ac9a-c8511763fef1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T15:53:51.515Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 564,
+        "description": "- Deferred, low-priority MVP improvement; keep separate agent and human review tasks for the current migration.\n- Allow one review to require several reviewers, with explicit ordering such as human review only after agent approval.\n- Support collecting both reviewers’ feedback before the next correction round; keep individual outcomes and evidence visible.\n- Agree the small workflow with the user before implementation; reject contradictory or cyclic ordering.",
+        "title": "Support multiple reviewers and review ordering in one task",
+        "updatedAt": "2026-10-17T15:54:17.854Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/118473b8-65e0-4bac-ac9a-c8511763fef1.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/118473b8-65e0-4bac-ac9a-c8511763fef1.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "design",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/118473b8-65e0-4bac-ac9a-c8511763fef1.json"
+}

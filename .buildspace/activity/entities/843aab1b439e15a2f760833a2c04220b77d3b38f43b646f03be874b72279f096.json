@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2af6e80e-9c26-42bb-b095-1ce9dcf7c599.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2af6e80e-9c26-42bb-b095-1ce9dcf7c599.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Integrate the accepted Activity board, truthful node editor, persistent Pi-backed chat, shared annotation system and immutable three-repository review preview through their owning APIs. Resolve independent architecture and implementation review findings; remove replaced code within scope while preserving unrelated user changes.\n\nVerification: full configured repository checks, source boundary review, actual UI screenshots and an ordinary isolated populated buildspace. Cover durable restart, stale writes, invariant rejection, annotation context/delivery and the agent edit/check/review loop. Complete human/tool parity and polished node/text diffs remain explicitly deferred. Present the result for user review; this implementation walkthrough does not claim the user's MVP acceptance.",
+        "title": "Integrate the surfaces and complete the usage walkthrough",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2af6e80e-9c26-42bb-b095-1ce9dcf7c599.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2af6e80e-9c26-42bb-b095-1ce9dcf7c599.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "integration"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2af6e80e-9c26-42bb-b095-1ce9dcf7c599.json"
+}

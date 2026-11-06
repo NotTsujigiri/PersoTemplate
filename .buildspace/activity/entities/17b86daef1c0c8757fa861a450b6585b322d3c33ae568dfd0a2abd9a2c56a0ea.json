@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cede05e7-0630-41a2-8702-64a5672bf7e8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cede05e7-0630-41a2-8702-64a5672bf7e8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T12:47:44.266Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 673,
+        "description": "- Open a component with a required complex property in the UI editor.\n- Actual: scalar observations fail full source-instance validation; the inspector is empty.\n- Expected: validate observed values, expose unavailable/unset properties, and retain the full source declaration.",
+        "title": "Scalar preview observations reject components with complex properties",
+        "updatedAt": "2026-10-19T06:07:43.450Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cede05e7-0630-41a2-8702-64a5672bf7e8.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cede05e7-0630-41a2-8702-64a5672bf7e8.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cede05e7-0630-41a2-8702-64a5672bf7e8.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cede05e7-0630-41a2-8702-64a5672bf7e8.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:12:24.954Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T06:07:43.450Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cede05e7-0630-41a2-8702-64a5672bf7e8.json"
+}

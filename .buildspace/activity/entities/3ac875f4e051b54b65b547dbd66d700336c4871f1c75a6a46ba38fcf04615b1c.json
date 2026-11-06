@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4fb729bd-b467-49c6-8283-18356bff8069.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4fb729bd-b467-49c6-8283-18356bff8069.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-23T14:24:54.972Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1024,
+        "description": "User-authorized frontend-only experiment starting from the current shared composer's layout and composition. Supply hardcoded placeholder autocomplete, allow editing/Apply/local saved queries without executing real queries or writing data, and make it accessible inside the app. Keep contribution forms open (APIs, modules, instances, etc.); do not encode a prescribed classification or decide the eventual language. Baseline checkpoints: TheBroccoli 927cf3e, BtrTemplate 64f486d, PersoTemplate 2468c2d. Mock changes must be independently reviewable and disposable. Verify the affected view discovery, mock interactions and absence of mock service requests; inspect rendered screenshots. The discussion is retained in child task 7a39131e-9005-4f9d-8954-bdcde2f371fa.\n\nDelivered: Query composer mock is a separate work view in the app. Its factory composes the existing shared QueryComposer and ViewPanel with hardcoded author/component/archetype/engine/color choices and two sample saved queries. The popup layout, keyboard completion and current expression syntax are unchanged. Apply only updates a local status; the catalog is private to the mock instance. No real query is evaluated, no service is contacted by mock actions, and nothing is persisted outside the mock.\n\nValidation: .\\\\build.ps1 passed, including root check:types, organisation and engine-boundary checks; final checker covered 1,160 authored files with zero type-safety violations. View-discovery unit recording passed. Four browser cases passed: two mock cases (local editing/completion/Apply/catalog/dismissal and real app view switching), existing caret visibility, and existing repository/graph view retention. The mock recording reports an empty request list during its interactions. An initial test used textbox rather than combobox for the saved-query name; the selector was corrected and both mock cases passed on rerun. Disposable screenshots query-composer-mock.png and query-composer-mock-app.png were inspected. Full test suite was not run for this mock iteration.\n\nDelivery state: The service was restarted on http://localhost:43130. Open area=query-composer-mock in a buildspace, then the Mock query filter icon. Baseline commits are recorded above; only six mock-related source/test changes remain uncommitted in TheBroccoli. BtrTemplate and PersoTemplate are clean. The separate mock commit is left for the iteration, preserving an isolated worktree diff.",
+        "title": "Build a disposable Query composer UI mock",
+        "updatedAt": "2026-10-27T02:19:53.210Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4fb729bd-b467-49c6-8283-18356bff8069.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4fb729bd-b467-49c6-8283-18356bff8069.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4fb729bd-b467-49c6-8283-18356bff8069.json"
+}

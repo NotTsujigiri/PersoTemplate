@@ -1,0 +1,12 @@
+✔ schema fields round-trip typed values and preserve an unsuccessful edit for retry (37.8292ms)
+✔ string lists edit individual entries, preserve embedded newlines, add and remove (9.1319ms)
+✔ choice lists save identities, support removal, and reject duplicates (6.7635ms)
+✔ declared system fields render generically and never enter authored saves (6.1021ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 704.996

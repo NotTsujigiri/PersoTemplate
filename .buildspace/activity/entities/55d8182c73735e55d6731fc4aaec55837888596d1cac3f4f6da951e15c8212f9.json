@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07ae3dad-13df-4bf3-a08c-a5e0c0c8bfe9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07ae3dad-13df-4bf3-a08c-a5e0c0c8bfe9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T14:09:29.305Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 547,
+        "description": "",
+        "title": "Correction recorded in candidate revision 541: R1 now gates live cutover on runtime rejection checks and a disposable persistence rehearsal; R2 now requires the",
+        "updatedAt": "2026-10-17T14:09:39.437Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07ae3dad-13df-4bf3-a08c-a5e0c0c8bfe9.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07ae3dad-13df-4bf3-a08c-a5e0c0c8bfe9.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fc5a0dc-6518-44d5-bfcb-fcfbf4137f72.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Correction recorded in candidate revision 541: R1 now gates live cutover on runtime rejection checks and a disposable persistence rehearsal; R2 now requires the existing model compiler to derive validation/inspection from the same definitions."
+          },
+          {
+            "kind": "explain",
+            "text": "Independent subagent migration_plan_review accepted revision 541 in round 2 with no remaining high-level blockers. The two reports and correction task are under Agent review: migration plan. This accepts planning only; no migration code or data was changed or validated."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07ae3dad-13df-4bf3-a08c-a5e0c0c8bfe9.json"
+}

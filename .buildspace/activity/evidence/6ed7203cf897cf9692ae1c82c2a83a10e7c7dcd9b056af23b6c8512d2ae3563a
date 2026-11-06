@@ -1,0 +1,270 @@
+{
+  "task": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+  "migration": {
+    "revision": 883,
+    "total": 2626,
+    "changed": 2584,
+    "missingActivityUpdaters": 0,
+    "wrongCopiedActor": 0,
+    "changedContentTimestamps": 0,
+    "overwrittenExistingUpdaters": 0,
+    "additionalBuildspaces": {
+      "changed": 4,
+      "missingAfter": 0,
+      "creator": "human:user",
+      "owners": [
+        "BtrTemplate",
+        "TheBroccoli",
+        "TheBroccoli configured composition 917e4c4f-a958-4b1c-914f-9887b972d58e",
+        "PersoTemplate"
+      ]
+    },
+    "totalChanged": 2588
+  },
+  "focused": {
+    "engineTestsPassed": 42,
+    "planningTestsPassed": 49,
+    "browserTestsPassed": 7,
+    "twoUserAcknowledgement": "Content updatedAt and updatedBy unchanged through alternating acknowledgements; real other-user edit returns the entry to New.",
+    "screenshotsReviewed": [
+      "transition-properties.png",
+      "attention-component.png",
+      "directory-desktop.png",
+      "node-desktop.png",
+      "node-narrow.png"
+    ],
+    "nativeBoundaryTestsPassed": 16,
+    "buildspaceTestsPassed": 4,
+    "rebuiltCatalogTestsPassed": 5,
+    "isolatedPerformanceTestsPassed": 3,
+    "ownerAndSemanticTestsAfterDraftCorrection": 29,
+    "browserRerun": {
+      "passed": 7,
+      "files": [
+        "composition-ui.spec.ts",
+        "activity-refresh-ui.spec.ts",
+        "unified-buildspace-ui.spec.ts",
+        "composition-editing-ui.spec.ts"
+      ]
+    }
+  },
+  "checkpoint": {
+    "build": "Checkpoint build passed before the final native-reference and draft-attribution corrections. Final corrections passed type-safety and affected tests.",
+    "typeSafety": "1068 authored files, 0 violations",
+    "modelSuite": "42 passed before native-boundary correction; affected native/semantic suites 16 passed afterward",
+    "sharedSuites": "317 passed",
+    "applicationSuite": {
+      "total": 274,
+      "passed": 265,
+      "failed": 9,
+      "remaining": [
+        "Four existing Windows cancellation/deadline failures",
+        "One save-performance budget failure under full-suite load; isolated rerun of all three performance tests passed"
+      ],
+      "resolved": [
+        "Four stale catalog failures; rebuilt model catalog, all five affected catalog tests pass"
+      ],
+      "existingWindowsTask": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/916da876-ea04-42b3-ac05-93bba5129a8f.json"
+    },
+    "browserSuite": {
+      "total": 272,
+      "passed": 268,
+      "failed": 4,
+      "failures": [
+        {
+          "test": "an unchanged card keeps its open menu when a background refresh finishes",
+          "cause": "Windows EPERM while publishing temporary fixture revision",
+          "rerun": "Passed with all three activity-refresh tests"
+        },
+        {
+          "test": "a delayed node save cannot replace a later directory selection",
+          "cause": "Windows worker exited with code 3221226505",
+          "rerun": "Passed with both composition-editing tests"
+        },
+        {
+          "test": "independent buildspace reuses node creation and preserves local source edits",
+          "cause": "Full-suite worker loaded code before the draft-attribution correction",
+          "rerun": "Passed"
+        },
+        {
+          "test": "Buildspaces use the node editor for creation, saved configuration and repository application",
+          "cause": "Full-suite worker loaded code before the draft-attribution correction",
+          "rerun": "Passed"
+        }
+      ]
+    }
+  },
+  "commit": "da9f8dc",
+  "typeSafety": {
+    "files": 1068,
+    "violations": 0
+  },
+  "build": "Passed",
+  "liveReview": {
+    "transition": "4881d5a0-4dbf-4346-aeb3-42e50cfbb9d0",
+    "properties": [
+      "Title",
+      "Created by",
+      "Updated by"
+    ],
+    "updaterType": "User or agent reference",
+    "createdBy": "Codex",
+    "updatedBy": "Codex",
+    "timestampUnchanged": true
+  },
+  "commits": {
+    "implementation": "da9f8dc",
+    "nativeReferenceBoundary": "2113b78",
+    "buildspaceData": {
+      "TheBroccoli": "edad5c4",
+      "BtrTemplate": "603efde",
+      "PersoTemplate": "8003432"
+    },
+    "draftAttribution": "9eb2c93"
+  },
+  "appRestarted": true,
+  "recordings": [
+    {
+      "path": "Systems/Depth0/RelationEngine/test-results/entity-store/declared-properties.json",
+      "record": {
+        "bug": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+        "actual": [
+          {
+            "input": {
+              "text": "hello"
+            },
+            "accepted": true,
+            "properties": {
+              "text": "hello"
+            }
+          },
+          {
+            "input": {
+              "text": "hello",
+              "transition": "completed"
+            },
+            "accepted": false
+          }
+        ],
+        "expected": [
+          {
+            "input": {
+              "text": "hello"
+            },
+            "accepted": true,
+            "properties": {
+              "text": "hello"
+            }
+          },
+          {
+            "input": {
+              "text": "hello",
+              "transition": "completed"
+            },
+            "accepted": false
+          }
+        ]
+      }
+    },
+    {
+      "path": "Systems/Depth0/RelationEngine/test-results/native-model/projected-reference.json",
+      "record": {
+        "actual": {
+          "projected": "actor",
+          "valid": [],
+          "missing": [
+            [
+              "author"
+            ]
+          ],
+          "stored": true
+        },
+        "expected": {
+          "projected": "actor",
+          "valid": [],
+          "missing": [
+            [
+              "author"
+            ]
+          ],
+          "stored": true
+        }
+      }
+    },
+    {
+      "path": "Systems/Depth3/HarnessApp/test-results/attention-tracking/two-users.json",
+      "record": {
+        "actual": [
+          {
+            "human": "later",
+            "other": "new",
+            "sameUpdatedAt": true,
+            "sameUpdatedBy": true
+          },
+          {
+            "human": "later",
+            "other": "acknowledged",
+            "sameUpdatedAt": true,
+            "sameUpdatedBy": true
+          },
+          {
+            "human": "acknowledged",
+            "other": "acknowledged",
+            "sameUpdatedAt": true,
+            "sameUpdatedBy": true
+          },
+          {
+            "human": "acknowledged",
+            "other": "later",
+            "sameUpdatedAt": true,
+            "sameUpdatedBy": true
+          }
+        ],
+        "expected": [
+          {
+            "human": "later",
+            "other": "new",
+            "sameUpdatedAt": true,
+            "sameUpdatedBy": true
+          },
+          {
+            "human": "later",
+            "other": "acknowledged",
+            "sameUpdatedAt": true,
+            "sameUpdatedBy": true
+          },
+          {
+            "human": "acknowledged",
+            "other": "acknowledged",
+            "sameUpdatedAt": true,
+            "sameUpdatedBy": true
+          },
+          {
+            "human": "acknowledged",
+            "other": "later",
+            "sameUpdatedAt": true,
+            "sameUpdatedBy": true
+          }
+        ]
+      }
+    },
+    {
+      "path": "Systems/Depth3/HarnessApp/test-results/planning-semantics/buildspace-draft-attribution.json",
+      "record": {
+        "actual": {
+          "diagnostics": [],
+          "createdBy": "human:test",
+          "updatedBy": "human:test",
+          "unchanged": true
+        },
+        "expected": {
+          "diagnostics": [],
+          "createdBy": "human:test",
+          "updatedBy": "human:test",
+          "unchanged": true
+        }
+      }
+    }
+  ],
+  "status": "Requested changes complete; broad checkpoint execution/timing failures disclosed, all affected browser failures pass focused reruns."
+}

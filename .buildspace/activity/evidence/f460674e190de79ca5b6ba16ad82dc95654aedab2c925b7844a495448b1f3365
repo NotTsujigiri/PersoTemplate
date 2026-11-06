@@ -1,0 +1,180 @@
+{
+  "sourceRevision": 565,
+  "scope": "High-level migration plan revised from user feedback; not an implementation approval.",
+  "migration": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json",
+      "title": "Human review: application-wide component migration",
+      "description": "- Participate after the agent approves; read its short verdict and any limitations.\n- Inspect one entity with File, Git and UI information; check that fields and component filtering are understandable.\n- Edit and reopen a planning task; follow a relation and verify the same task and data remain.\n- Decide whether normal work is preserved; technical correctness and package coverage remain the agent’s responsibility.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "human:user",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json",
+      "title": "Replace the old node model across affected packages",
+      "description": "- After the API proof passes review, replace shared APIs and use compiler errors to find and update callers across the active workspaces.\n- Update affected contributors, storage, queries, planning/review, MCP/tools and browser views together; the UI editor has no special priority.\n- Remove replaced single-kind APIs as callers move. Independent File, Git and UiComponent data must work with generic hasComponent filtering and inspection.\n- Require build/type checks and recorded read, edit, save/reopen and stale-write checks across affected consumers before agent review, then human review.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4797236-6544-4184-97e4-c89efca8a8c6.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "title": "Migrate to typed entity-component composition",
+      "description": "- Replace shared single-kind classification with independently owned, typed components on the same entity.\n- Cover every affected active package: engine, contributors, storage, queries, planning/review, tools and UI; the UI editor is one consumer.\n- Use compiler failures to drive caller changes; test loaded data and behavior separately. Keep one definition and no compatibility layer.\n- Independent agent reviews precede bounded human checkpoints; implementation waits for human plan approval.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/607c8db5-8c22-4238-884d-bdf1ab02ad5c.json",
+      "prerequisites": []
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json",
+      "title": "Agent review: application-wide component migration",
+      "description": "- Audit affected packages and compiler/runtime evidence against the owner and consumer inventory.\n- Check contributors, persistence, queries, planning/review, tools and UI use the same owned definitions without adapters or duplicated schemas.\n- Verify saved identities and relations, failure recovery and removal of replaced APIs; record findings and corrections.\n- Prepare three short human exercises: combined File/Git/UI data, a planning edit/reopen, and filtering/navigation.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68af9814-29e9-4abf-a29d-8de1baab943c.json",
+      "title": "Human review: migration plan",
+      "description": "- Review the short plan and the subagent findings/correction rounds.\n- Decide: is scope bounded, are checkpoints understandable, and is the first File + UI + Git exercise useful?\n- Code correctness belongs to compiler checks and technical review.\n- Approval gates implementation; this review does not approve future results.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json"
+      ],
+      "review": {
+        "status": "submitted",
+        "reviewers": [
+          {
+            "actorId": "human:user",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json",
+      "title": "Agent review: migration completeness",
+      "description": "- Audit the final owner/consumer inventory and the removal evidence across all affected active packages.\n- Check runtime and stored-data paths the compiler cannot prove, including identity preservation and failed-write recovery.\n- Require full validation results and no old-model adapters, duplicated schemas or hidden dependency leaks.\n- Record findings and corrections; provide a short verdict and remaining risks for human acceptance.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json",
+      "title": "Check stored data and runtime paths for old-model assumptions",
+      "description": "- Find old classification assumptions in saved queries, loaded records, registrations and tool messages: these can survive a successful compile.\n- Exercise those paths with representative saved data; verify the same identities, relations and edits survive restart and rejected writes.\n- Remove any remaining predecessor-only code, schemas, tests, configuration and unused dependencies; retain no dual format or adapter.\n- Run full type/dependency and checkpoint tests plus rendered UI checks; resolve migration regressions before final agent and human acceptance.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json",
+      "title": "Prove typed component access with compiler tests",
+      "description": "- Build small API examples: entity identity, attach/check/read a component and connect entities. File(path), Git(status) and UiComponent(tag) have independent owners.\n- Compile valid uses; require errors for wrong data, unchecked component access and invalid relation endpoints. Check forbidden dependencies separately; no type escapes.\n- Use the existing model compiler to derive validation and inspected fields from the same definitions; test generic and recursive types.\n- Before app replacement, reject malformed external data and rehearse rewriting disposable saved data: keep IDs/links, write atomically and recover from failed writes.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68af9814-29e9-4abf-a29d-8de1baab943c.json"
+      ]
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4797236-6544-4184-97e4-c89efca8a8c6.json",
+      "title": "Agent review: typed API and compiler proof",
+      "description": "- Review the API examples, exact compiler rejection results and package dependency direction.\n- Check that component definitions, attached values and relation endpoints have clear types and owners.\n- Require working model-compiler derivation, runtime rejection tests and a successful disposable-data rehearsal before app replacement.\n- Record findings and correction rounds; this technical review prepares the implementation, not human acceptance.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json",
+      "title": "Plan the compiler-guided migration",
+      "description": "- Bound the migration and list owners, consumers and predecessor APIs.\n- Sequence compiler checks, runtime checks, cutover and removal.\n- Give each human checkpoint at most three observable decisions.\n- Attach the concise candidate plan; no product migration before human approval.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": []
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e19648b5-2baf-4c8a-9770-c76600c4accd.json",
+      "title": "Human review: migration acceptance",
+      "description": "- After agent approval, repeat the three short exercises: combined component data, planning edit/reopen, and filtering/navigation.\n- Inspect the concise final verdict and known limitations; no full source audit is required.\n- Decide whether ordinary work and saved data behave as expected and the migration is acceptable.\n- Acceptance finishes this migration and allows the surrounding MVP work to resume.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json"
+      ],
+      "review": {
+        "status": "draft",
+        "reviewers": [
+          {
+            "actorId": "human:user",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json",
+      "title": "Agent review: migration plan",
+      "description": "- Independent subagent reviews compiler leverage, ownership, sequencing and runtime/data guarantees.\n- Required reviewer: Codex; the named subagent records its own findings and outcome.\n- Request changes through review feedback; correct and re-review before human handoff.\n- Approval covers the pinned plan only; it does not authorize implementation.",
+      "parent": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json"
+      ],
+      "review": {
+        "status": "passed",
+        "reviewers": [
+          {
+            "actorId": "agent:codex",
+            "required": true
+          }
+        ]
+      }
+    }
+  ],
+  "feedback": [
+    "Make API work concrete, with typed examples.",
+    "Treat the UI editor as one affected consumer, with no special priority.",
+    "Keep human participation after technical agent review.",
+    "Clarify why loaded data and runtime paths need checks beyond compilation.",
+    "Defer coordinated multiple reviewers; current separate reviews remain."
+  ]
+}

@@ -1,0 +1,52 @@
+# Accepted UI references and binding reservations — 29 September 2026
+
+Accepted as implementation references, not pixel-perfect specifications, completed software or overall MVP acceptance. These notes override conflicting details in the images. Parent task: Persistent planning and review MVP.
+
+## Reference identities
+- 01-activity-board.png: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/db6fd457-fce7-45ab-8487-dd234f957dbe.json
+- 02-node-editor.png: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a09cc60b-0c1c-4a8c-862d-0d38338f5d0e.json
+- 03-autocomplete.png: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6bf3d581-631e-4f7a-8cc6-8d6bf6f4065c.json
+- 04-keyword-context.png: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c1d96555-c664-4e8a-a605-18f0c1fdeb49.json
+- 05-value-context.png: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/43c2ec89-6033-4c2b-a4f9-f7ce459ee076.json
+
+## Activity board
+![Activity board](01-activity-board.png)
+Use the exact user-reviewed image as a visual reference, subject to these reservations:
+- Global top panel and Activity board toolbar are DISTINCT panels. Restore the global panel; put the Activity board view selector and its tools/search in the board's own toolbar. Share the reusable toolbar component, not one merged instance.
+- Reduce outer padding, margins and per-level indentation. Retain hierarchy guide lines; horizontal space belongs to cards.
+- The task-with-children icon in the image is wrong. Consolidate the child/derived-state affordance with the stage dropdown as appropriate, preserving access to children. Parent state is computed at least partly from children/descendants; specify and enforce the invariants before implementation, not arbitrary direct parent edits.
+- Avatars lead metadata on Inputs, Active and Closed. Inputs have no priority; task priority and avatar persist after closure, even if the image omits a value.
+- Add adjustable vertical splitters BETWEEN Inputs/Active/Closed columns, in addition to horizontal splitters between the four independently scrolling Active sections.
+- Preserve agreed New/Later/time groups and sorting/inheritance rules; see readiness audit. No card ellipsis controls.
+
+## Node editor
+![Node editor](02-node-editor.png)
+- Headers span the entire pane width, including the invariant gutter; image width variations are noise.
+- Use shared theme tokens consistently; incidental colors/background mismatches are not design decisions.
+- Global and board toolbars remain separate here too.
+- Fields/Additional relations have a splitter. Intra-field border color pairs with inline comment. Inter-field diagnostics use edge color plus hover/focus comment. Neutral connections use one gray style; no full-height gray rails.
+- Single-column fields; help chip between label and type. Inheritance source is in the Inherited/Overridden tooltip, dropdown controls overrides.
+- Illustrative validation rules and Closed/Outcome fields do not approve an invented task schema.
+- No unsaved-change label.
+
+## Search/autocomplete
+![Autocomplete](03-autocomplete.png)
+- Popup matches search width regardless of content, with left-aligned content and minimal pointer travel. Enforce at shared component level.
+- Choose either separators between every row or none; never a hybrid. Proposed default: none.
+- No heading/instruction footer rows. Only one autocomplete context at a time.
+- Saved-query choices are flat for MVP; folders from previous rounds are superseded.
+- Preserve distinct global and Activity board toolbars. Search belongs to the latter.
+
+### Supporting keyword and value examples
+![Keywords](04-keyword-context.png)
+![Values](05-value-context.png)
+These earlier images illustrate only the keyword-to-value transition. Their heading/footer rows, inconsistent popup widths, separators and merged/superseded toolbars must not be copied. Apply all current reservations above.
+
+## Query composer: core system direction
+The composer is a foundational Relational Engine / Relational UI capability. Discover available node types, fields, operators and functions from the data/context and value types being queried. Candidate string functions include startsWith(), endsWith(), regex(); among() requires typed membership semantics. Names/syntax remain illustrative.
+
+Engine owns typed query representation, operator/function definitions, compatibility, validation, composition and execution contracts. UI consumes that metadata for completion, hints and accessible keyboard/pointer editing; it must not maintain an unrelated hardcoded operator list. Agents should access the same discovery/validation contracts. Saved queries compose through query:. Exact grammar, evaluation constraints and pipeline semantics remain to design.
+
+## Next surface: chat sessions
+The user requests a permanent left panel with Chat sessions selected through the shared view toolbar and appropriate view tools. Begin needs analysis before generating chat images. Global toolbar remains separate. Whether the session view primarily contains session navigation, the active conversation, or both is still to clarify from usage needs.
+

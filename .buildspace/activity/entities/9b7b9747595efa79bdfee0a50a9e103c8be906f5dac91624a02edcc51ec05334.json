@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/747f6edc-ff34-4b1e-b6e6-025d065789b2.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/747f6edc-ff34-4b1e-b6e6-025d065789b2.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T13:04:05.857Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 267,
+        "description": "# Outcome\nComplete repository-owned, composable buildspaces with deterministic privacy, portable durable state and explicit integration. This is required MVP work. Start after the Systems cutover review and execute the child stages serially.\n\n## Accepted requirements\nA buildspace composes other buildspaces without copying private data into shared constituents. Software package dependencies and repository composition are distinct. Broccoli, Btr and personal work retain their separate owners and visibility. Work scope, ownership and persistence destination are explicit and enforced by APIs, context delivery, tools, references and artifacts; never rely on an agent classifying its prose.\n\nPersist durable tasks, inputs, chats, annotations and review state in a versioned directory in the owning repository, one file per independently identified object/relation. Keep credentials, absolute checkout bindings and process state local. A checkout selects the matching buildspace artifacts. Git merging combines state but does not establish domain validity; validate merged references, invariants and privacy before accepting it.\n\nUse Git-native composition where it meets the accepted constraints: ordinary Git use, no extra dependency manifest, one selected dependency version per composition, transitive/shared dependencies and no sideways or downward imposition. Support branches and tags may express compatibility conventions; gitlinks pin reproducible revisions. An independent Git extension is an allowed fallback only if the reviewed Git evidence requires it. Do not treat the earlier exact-pin experiment as the complete resolver.\n\n## Remaining work\nAudit existing implementation and POC evidence against these criteria, then propose the remaining owner contracts and enforcement cases. Resolve open revision/checkout resolution, UID strategy and sharing decisions explicitly. Implement only the reviewed gaps, remove replaced paths, and demonstrate two collaborators with shared, restricted and private compositions.\n\n## Acceptance\nReject forbidden reads, writes, context reuse, references and publication through every exposed operation. Preserve authorized cross-buildspace work without persisting it into a less-private constituent. Reproduce durable state in a fresh checkout and validate branch/merge conflicts and independently added relations. Preserve messages, identities, review evidence and user changes during any authorized data transition. Passing Git or compiler checks alone never establishes confidentiality.\n\n## Review\nThe child design review precedes implementation; a separate implementation review examines real isolation, round-trip and merge evidence. Existing evidence remains linked to its original sources.",
+        "title": "Complete composable buildspaces, durable state and privacy",
+        "updatedAt": "2026-10-09T20:07:26.279Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/747f6edc-ff34-4b1e-b6e6-025d065789b2.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/747f6edc-ff34-4b1e-b6e6-025d065789b2.json",
+      "properties": {
+        "placement": "blocked",
+        "priority": 0,
+        "purpose": "development",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/747f6edc-ff34-4b1e-b6e6-025d065789b2.json"
+}

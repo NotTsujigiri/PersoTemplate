@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b1b89573-4d64-4f29-af1c-20828c34624e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b1b89573-4d64-4f29-af1c-20828c34624e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T12:12:38.772Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 528,
+        "description": "Immutable attached evidence",
+        "title": "Visual authoring regression before and after.json",
+        "updatedAt": "2026-10-17T12:12:48.673Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b1b89573-4d64-4f29-af1c-20828c34624e.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b1b89573-4d64-4f29-af1c-20828c34624e.json",
+      "properties": {
+        "artifact": {
+          "hash": "c4a9abd14740b0db24c47f7e420f068038cbfbb1aad7e6985f518475626912dc",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/c4a9abd14740b0db24c47f7e420f068038cbfbb1aad7e6985f518475626912dc",
+          "mime": "application/json",
+          "size": 710
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b1b89573-4d64-4f29-af1c-20828c34624e.json"
+}

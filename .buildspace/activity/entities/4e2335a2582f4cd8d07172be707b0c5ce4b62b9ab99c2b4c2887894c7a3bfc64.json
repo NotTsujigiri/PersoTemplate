@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48740e42-c605-417d-89c8-1b44ae497373.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48740e42-c605-417d-89c8-1b44ae497373.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T12:47:44.268Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 673,
+        "description": "- Select QueryComposer's query-editor-row and choose an icon button to insert.\n- The full checkpoint replaced the toolbar, disabled Add inside and emptied the inspector.\n- Record editor identity and selected outline state before correcting the cause.",
+        "title": "Visual authoring can lose its selected composition node",
+        "updatedAt": "2026-10-19T06:07:43.450Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48740e42-c605-417d-89c8-1b44ae497373.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48740e42-c605-417d-89c8-1b44ae497373.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48740e42-c605-417d-89c8-1b44ae497373.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48740e42-c605-417d-89c8-1b44ae497373.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:11:07.070Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T06:07:43.450Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48740e42-c605-417d-89c8-1b44ae497373.json"
+}

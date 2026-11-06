@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f809f008-1fc7-4a47-88d9-cbf914b67629.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f809f008-1fc7-4a47-88d9-cbf914b67629.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T10:14:02.539Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 256,
+        "title": "Derive Perso channels from saved buildspaces",
+        "updatedAt": "2026-09-30T10:37:23.520Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f809f008-1fc7-4a47-88d9-cbf914b67629.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f809f008-1fc7-4a47-88d9-cbf914b67629.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f809f008-1fc7-4a47-88d9-cbf914b67629.json"
+}

@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/66219e44-8f88-4f85-b980-99310b66ff36.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/66219e44-8f88-4f85-b980-99310b66ff36.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T02:18:05.033Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 218,
+        "description": "Reproduced during actual candidate handoff after server restart: a new candidate is running at its new origin, but opening it first calls page.goto on persisted browser.url from the removed previous candidate and fails with connection refused. Explicit open must validate and navigate its requested URL without prior restoration. Ordinary restoration failures must discard the uninitialized page so recovery is possible. Untouched target 215 withdrawn for correction.",
+        "title": "Explicit Preview navigation restores an expired previous candidate before opening the replacement",
+        "updatedAt": "2026-10-19T03:50:12.370Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/66219e44-8f88-4f85-b980-99310b66ff36.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/66219e44-8f88-4f85-b980-99310b66ff36.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/66219e44-8f88-4f85-b980-99310b66ff36.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/66219e44-8f88-4f85-b980-99310b66ff36.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:26:37.616Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T03:50:12.370Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/66219e44-8f88-4f85-b980-99310b66ff36.json"
+}

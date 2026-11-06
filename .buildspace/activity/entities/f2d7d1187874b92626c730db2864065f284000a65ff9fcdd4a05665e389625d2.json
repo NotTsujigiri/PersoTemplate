@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd89795c-3ee6-4b88-889f-db60216a3a88.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd89795c-3ee6-4b88-889f-db60216a3a88.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.392Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Required human review of the performance pass. The user exercises first load and representative later actions; compare measurements with the baseline and agreed acceptance goals. Confirm responsiveness, correctness, current view state, and the ability to complete eligible previously reviewed work through the UI. Approval allows the existing earlier-work acceptance stage to proceed.",
+        "title": "Review load and interaction performance in the UI",
+        "updatedAt": "2026-10-09T13:04:04.789Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd89795c-3ee6-4b88-889f-db60216a3a88.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd89795c-3ee6-4b88-889f-db60216a3a88.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd89795c-3ee6-4b88-889f-db60216a3a88.json"
+}

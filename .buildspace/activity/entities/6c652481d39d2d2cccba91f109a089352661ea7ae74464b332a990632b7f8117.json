@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cce54057-e956-4817-bc9b-2d8e018a36ee.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cce54057-e956-4817-bc9b-2d8e018a36ee.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T01:18:54.913Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 588,
+        "description": "- Node = identity plus components; each component instance has one owner and stable identity, with repeated types allowed and typed properties.\n- View = cached predicate membership; predicates belong to their owners, can be shared/composed and introduce no contributor vocabulary into the engine.\n- Use lazy dependency-aware invalidation and scoped observers; validated operations preserve consistent reads and typed edge requirements.\n- Build the engine foundation first, then replace existing node types and consumers; keep intermediate commits and agent reviews, with one final human inspection.",
+        "title": "Record component containers and event-driven view architecture",
+        "updatedAt": "2026-10-18T01:20:14.168Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cce54057-e956-4817-bc9b-2d8e018a36ee.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cce54057-e956-4817-bc9b-2d8e018a36ee.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cce54057-e956-4817-bc9b-2d8e018a36ee.json"
+}

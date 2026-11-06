@@ -1,0 +1,17 @@
+[
+  {
+    "step": "newer edit while save response pending",
+    "editor": "Newer unsaved text",
+    "persisted": "First submitted text"
+  },
+  {
+    "step": "first save finished",
+    "editor": "Newer unsaved text",
+    "persisted": "First submitted text"
+  },
+  {
+    "step": "second save finished",
+    "editor": "Newer unsaved text",
+    "persisted": "Newer unsaved text"
+  }
+]

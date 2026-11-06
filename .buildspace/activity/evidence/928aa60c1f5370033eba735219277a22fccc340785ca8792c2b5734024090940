@@ -1,0 +1,168 @@
+{
+  "expected": [
+    {
+      "step": "collapse editor",
+      "beforeHidden": false,
+      "afterHidden": true,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "restore editor",
+      "beforeHidden": false,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "collapse board",
+      "beforeHidden": true,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "collapse in progress",
+      "beforeHidden": false,
+      "afterHidden": true,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "other rows retain space",
+      "unchanged": true
+    },
+    {
+      "step": "restore active rows",
+      "beforeHidden": false,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "collapse waiting",
+      "beforeHidden": true,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    }
+  ],
+  "before": [
+    {
+      "step": "collapse editor",
+      "beforeHidden": false,
+      "afterHidden": true,
+      "fillsAvailable": false,
+      "adjoining": true
+    },
+    {
+      "step": "restore editor",
+      "beforeHidden": false,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "collapse board",
+      "beforeHidden": true,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "collapse in progress",
+      "beforeHidden": false,
+      "afterHidden": true,
+      "fillsAvailable": false,
+      "adjoining": true
+    },
+    {
+      "step": "other rows retain space",
+      "unchanged": false
+    },
+    {
+      "step": "restore active rows",
+      "beforeHidden": false,
+      "afterHidden": false,
+      "fillsAvailable": false,
+      "adjoining": true
+    },
+    {
+      "step": "collapse waiting",
+      "beforeHidden": true,
+      "afterHidden": false,
+      "fillsAvailable": false,
+      "adjoining": true
+    }
+  ],
+  "after": [
+    {
+      "step": "collapse editor",
+      "beforeHidden": false,
+      "afterHidden": true,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "restore editor",
+      "beforeHidden": false,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "collapse board",
+      "beforeHidden": true,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "collapse in progress",
+      "beforeHidden": false,
+      "afterHidden": true,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "other rows retain space",
+      "unchanged": true
+    },
+    {
+      "step": "restore active rows",
+      "beforeHidden": false,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    },
+    {
+      "step": "collapse waiting",
+      "beforeHidden": true,
+      "afterHidden": false,
+      "fillsAvailable": true,
+      "adjoining": true
+    }
+  ],
+  "live": {
+    "origin": "http://localhost:43130",
+    "viewportWidth": 980,
+    "collapsedNodeEditor": {
+      "dividerLeft": 976,
+      "dividerRight": 980,
+      "reachesViewportEdge": true
+    },
+    "collapsedInProgress": {
+      "waitingDividerBottom": 463.1000061035156,
+      "runningDividerTop": 463.1000061035156,
+      "noUnusedGap": true,
+      "queuedDividerTopBefore": 635.5625,
+      "queuedDividerTopAfter": 635.5625
+    },
+    "visualInspection": {
+      "columnsHaveNeutralRaisedBackgroundAndStrongerWeight": true,
+      "groupsRemainCompactAndVisuallySubordinate": true,
+      "activityBoardBuildspaceLabelRemoved": true
+    },
+    "cleanup": "Restored both collapsed panes and left the existing live tab open."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4051fa76-fac2-450a-a301-9473c40fa51f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4051fa76-fac2-450a-a301-9473c40fa51f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T15:23:30.257Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 685,
+        "description": "",
+        "title": "- Full e5e9ed2 checkpoint: build/organisation/strict checks pass; 41 model and 571 unit/integration cases pass; browser 248/250 with no skips.\n- Repeated-compon",
+        "updatedAt": "2026-10-18T15:23:47.980Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4051fa76-fac2-450a-a301-9473c40fa51f.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4051fa76-fac2-450a-a301-9473c40fa51f.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Full e5e9ed2 checkpoint: build/organisation/strict checks pass; 41 model and 571 unit/integration cases pass; browser 248/250 with no skips.\n- Repeated-component case ended with native Windows worker code 3221226505, without a route-handler or connection-reset error. Investigating the process failure; earlier native issue stays open.\n- Zoom fixture recorded an initial SVG height of zero and a later ratio of Infinity; preserve the before evidence and require a connected positive baseline without changing the expected 75% result.\n- Final acceptance remains open. Feed-refresh recording matches exactly; source and component inspection reviews otherwise remain approved."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4051fa76-fac2-450a-a301-9473c40fa51f.json"
+}

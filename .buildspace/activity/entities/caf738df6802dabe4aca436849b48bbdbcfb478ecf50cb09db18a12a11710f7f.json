@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cae2a0e-614f-46dc-957f-dd9fedf52f0f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cae2a0e-614f-46dc-957f-dd9fedf52f0f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T23:39:00.057Z",
+        "createdBy": "agent:codex",
+        "description": "# Second annotation iteration: 14 corrections\n\n1. Save uses the shared accessible save icon on the annotated task.\n2. The same shared Save icon is used for other editable Node views, including the MVP task.\n3. Removed the redundant iteration/title picker from review Changes.\n4. Repository collapse is retained across Changes redraws and file-filter changes.\n5. Source, inline diff and side-by-side diff use one reusable TextEditor with line numbers, scrolling, native source input, and review anchors. Existing hash validation and newer-edit protection remain owned by the file layer.\n6. Revision selector precedes Overview/Changes/Preview and follows view selection.\n7. Review author and status share one row. A status dropdown provides the permitted submit/abandon/return-to-draft transitions through the existing review owner.\n8. The Task board displays top-level tasks only, excluding review tasks.\n9. Graph view label is Timeline.\n10. Selecting Timeline directly renders the graph, using the same composition as the nested timeline, without an Open step.\n11. A shared chevron icon on the right of task cards with children opens their nested timeline.\n12. Queued tasks can return to Backlog through pointer or keyboard drag destinations; membership and queue episode changes persist.\n13. Instance of links navigate to read-only type nodes exposing their declared fields. Both type nodes and relations derive from the canonical schema and kind, without duplicate persisted type assignments.\n14. Nodes obey exhaustive type field declarations; owner writes reject undeclared fields. Node UI uses the generic schema renderer and relation list. Retired importSource/sourceKey fields were removed from current nodes; original input evidence was preserved through normal evidence relations. Historical revision 65 and all four immutable review targets remain unchanged.\n\nValidation: production build passed; 67 backend tests, 73 browser tests, and 212 shared UI tests passed. Exact failing before recordings now pass for the UI, editor, and declared node contract. Independent UI/editor and backend reviews converged. An existing out-of-order review-file response concern was recorded separately as follow-up, not introduced by these changes.\n\nThe running app was refreshed. Both the shared-check task's unsaved Abandoned draft and the MVP task's unsaved Design/Blocked draft were restored without saving them. Existing human review outcomes remain untouched.\n",
+        "title": "Refine typed nodes, task navigation and review editing from 14 annotations",
+        "updatedAt": "2026-09-30T09:21:53.006Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cae2a0e-614f-46dc-957f-dd9fedf52f0f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cae2a0e-614f-46dc-957f-dd9fedf52f0f.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cae2a0e-614f-46dc-957f-dd9fedf52f0f.json"
+}

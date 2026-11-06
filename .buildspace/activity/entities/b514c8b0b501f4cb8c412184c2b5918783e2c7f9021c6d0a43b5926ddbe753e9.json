@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b29dc186-89ea-44a5-890d-290429387bfd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b29dc186-89ea-44a5-890d-290429387bfd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T01:21:45.140Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 722,
+        "description": "- Delete a tracked file, then open Repositories without a source selector.\n- Keep its Git deletion entry selectable and inspectable through the shared filter and diff views.",
+        "title": "Deleted Git files disappear from the unified repository view",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b29dc186-89ea-44a5-890d-290429387bfd.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b29dc186-89ea-44a5-890d-290429387bfd.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b29dc186-89ea-44a5-890d-290429387bfd.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b29dc186-89ea-44a5-890d-290429387bfd.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:00:31.996Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T01:53:47.642Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b29dc186-89ea-44a5-890d-290429387bfd.json"
+}

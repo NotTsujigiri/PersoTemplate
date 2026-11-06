@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/30f1ec14-786d-49ae-8377-c4519067d06d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/30f1ec14-786d-49ae-8377-c4519067d06d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T10:00:58.239Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 657,
+        "description": "",
+        "title": "Independent component-inspection reviewer approved the sequenced preview transport: the identical delayed-acknowledgement input now preserves Original caption i",
+        "updatedAt": "2026-10-18T10:01:12.401Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/30f1ec14-786d-49ae-8377-c4519067d06d.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/30f1ec14-786d-49ae-8377-c4519067d06d.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7fc95ecf-7948-4405-9be8-06c78d32ced4.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Independent component-inspection reviewer approved the sequenced preview transport: the identical delayed-acknowledgement input now preserves Original caption in runtime and inspector. All seven focused browser consumers and the strict decoder test pass; compiler validation covers 1,039 authored files with zero violations. Committed as eb61a94; the complete checkpoint is running. The separate Windows cancellation backlog remains open."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/30f1ec14-786d-49ae-8377-c4519067d06d.json"
+}

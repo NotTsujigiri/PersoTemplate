@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa07e86-cb37-4976-a9d9-a669d3eaf8ed.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa07e86-cb37-4976-a9d9-a669d3eaf8ed.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T13:57:52.652Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 334,
+        "description": "## Your checkpoint\nReview the ownership proposal and the proposed compiler/runtime evidence together.\n\n## Decision being requested\nAre the contracts owned at the correct layer, are their dependencies explicit, and do the proposed failure cases prevent the old bypass from returning? Alternatives and unresolved meanings must be visible.\n\n## Blocks\nThe source-contribution implementation. Request changes if the abstraction or enforcement is wrong; later implementation stays blocked.",
+        "title": "Review boundary and enforcement",
+        "updatedAt": "2026-10-08T18:16:16.601Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa07e86-cb37-4976-a9d9-a669d3eaf8ed.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa07e86-cb37-4976-a9d9-a669d3eaf8ed.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa07e86-cb37-4976-a9d9-a669d3eaf8ed.json"
+}

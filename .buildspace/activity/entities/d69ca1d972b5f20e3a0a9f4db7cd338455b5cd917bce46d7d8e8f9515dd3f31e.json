@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T11:25:17.196Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 525,
+        "description": "Address the four UI authoring annotations: authored composition is nested under its source component in the repository bush; insertion supports native HTML and available custom components; Visual edits directly without an Editing target dropdown; hover and selection outline the corresponding rendered elements. Preserve guarded saves, expression bindings, undo/redo and Preview interaction. Record the unchanged discrepancies before implementation, then require the same simulated input to match the intended output.",
+        "title": "Integrate visual authoring with the repository bush",
+        "updatedAt": "2026-10-17T12:28:48.318Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json"
+}

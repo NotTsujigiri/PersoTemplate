@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6ac90a9b-c0cb-408f-b00e-af5d4cd90a08.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6ac90a9b-c0cb-408f-b00e-af5d4cd90a08.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T20:11:33.494Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 499,
+        "description": "Implemented shared-checkout check activity and result refresh. Checks now show queued/running states, elapsed time while running and frozen final duration through the shared result status component. Run reflects the authoritative checkout lock and refreshes after other sessions finish, including a retry after user interaction interrupts rendering. Preserved cancellation and checkout locking. Reproduced absent progress and stale disabled Run with authored browser input and persistent exact before/after recordings. Focused backend, portable result model and browser tests pass; real component-check results update without page reload and recorded screenshots remain accessible from the buildspace context. build.ps1 passed, including 939 authored source files with zero type-safety violations. Inspected running/completed screenshots. With explicit user authorization, stopped the active operation through Broccoli and completed guarded restart. Live check-state endpoint confirms unlocked checkout, 11 recorded runs and no active checks. Full test:all checkpoint was not run for this focused review iteration. Ready for the parent's human review.",
+        "title": "Show live check progress and restore Run after completion",
+        "updatedAt": "2026-10-12T20:38:39.431Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6ac90a9b-c0cb-408f-b00e-af5d4cd90a08.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6ac90a9b-c0cb-408f-b00e-af5d4cd90a08.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6ac90a9b-c0cb-408f-b00e-af5d4cd90a08.json"
+}

@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47ad42bf-5b81-4db9-9374-45bb2cc53471.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47ad42bf-5b81-4db9-9374-45bb2cc53471.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T10:13:27.869Z",
+        "createdBy": "agent:codex",
+        "description": "User clarification on 2026-09-28: the goal is to make the harness available to a collaborator as quickly as possible without requiring that collaborator to obtain a Codex subscription. This constraint is shifting the user's still-undecided preference toward requiring harness capabilities inside Broccoli before the Persistent planning and review MVP is considered complete. Preserve the distinction between the firm access constraint and the emerging scope preference: the minimum harness capability set has not yet been agreed. Evaluate the existing embedded runtime and the essential annotation-to-agent-to-evidence-to-review experience. Do not assume this means free model inference, no provider credentials, a runtime rewritten from scratch, or full feature parity with Codex. Codex may remain an optional integration; it must not be the required path for collaborator access.\n\nFurther needs clarification: the user and collaborator experiment independently on two distinct Broccoli codebases, avoiding interference. Before choosing which codebase to merge into the other, they expect to use each other's harness for a few real features: the collaborator would likely use the user's harness to work on the collaborator's own codebase, and the user would do the reverse. The exact features are intentionally undecided. The immediate need is a credible reciprocal trial of everyday development, not a shared-checkout or real-time collaboration feature mandate. Keep the harness installation/codebase distinct from the repository it operates on. The trial should provide enough practical experience to judge the eventual merge direction.",
+        "title": "Make the Broccoli harness usable by a collaborator without a Codex subscription",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47ad42bf-5b81-4db9-9374-45bb2cc53471.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47ad42bf-5b81-4db9-9374-45bb2cc53471.json",
+      "properties": {
+        "meaning": "feedback"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47ad42bf-5b81-4db9-9374-45bb2cc53471.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47ad42bf-5b81-4db9-9374-45bb2cc53471.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:51:44.536Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-29T22:37:05.018Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47ad42bf-5b81-4db9-9374-45bb2cc53471.json"
+}

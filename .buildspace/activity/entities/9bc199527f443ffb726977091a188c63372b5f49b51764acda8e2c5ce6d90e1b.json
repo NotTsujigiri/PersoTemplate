@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dca9692e-aa7a-48ab-87b9-fa85d6c870f9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dca9692e-aa7a-48ab-87b9-fa85d6c870f9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T19:50:44.352Z",
+        "createdBy": "agent:codex",
+        "description": "Address the user's 19 browser annotations from 27 September 2026. Acceptance: (1) diff identity repository/path only; (2,5) Changes/Preview zero outer padding; (3) even revision inset; (4) remove persistent live-preview warning; (6) feedback starts one control high; (7) toolbar one horizontally scrollable row without scrollbar; (8,9) shared centered reload/trash icon buttons; (10,11) remove Session and duplicate Graph buttons; (12,17) replace Priority form with drag-only existing/prepend/insert/append queue bracket targets and persistent owner mutation; (13,15,16) compact bounded board cards without empty leaf indentation; (14) Task board label; (18) remove Find task/input; (19) remove planning import/export UI, implementation, commands, exclusive tests and documentation while retaining evidence attachment and persisted graph reads. Preserve user edits and immutable prior review evidence. Recorded reproduction before product changes, focused regression, independent implementation review and full checkpoint before handoff.",
+        "title": "Refine the task board and review UI from 19 annotations",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dca9692e-aa7a-48ab-87b9-fa85d6c870f9.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dca9692e-aa7a-48ab-87b9-fa85d6c870f9.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dca9692e-aa7a-48ab-87b9-fa85d6c870f9.json"
+}

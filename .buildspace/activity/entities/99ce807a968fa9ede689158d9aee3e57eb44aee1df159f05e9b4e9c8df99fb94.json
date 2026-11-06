@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cb474e1-ceed-4d07-94f3-70e0940be498.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cb474e1-ceed-4d07-94f3-70e0940be498.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T01:26:51.986Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 594,
+        "description": "- Use one pure owner-predicate model whose changing inputs come from tracked engine reads; external changes enter validated transactions.\n- Revalidate affected existing edges against candidate state; reject invalid changes without altering caches, committed state or observer events.\n- Cover missing reads, enumeration, branch changes and disposal; TypeScript checks contracts while tests/review establish predicate purity.\n- Replace both runtime graph node types and semantic-model kind classification; migrate actual stored/transported components, not only editor presentation.",
+        "title": "Resolve predicate invalidation and atomic edge constraints",
+        "updatedAt": "2026-10-18T01:27:10.813Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cb474e1-ceed-4d07-94f3-70e0940be498.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cb474e1-ceed-4d07-94f3-70e0940be498.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cb474e1-ceed-4d07-94f3-70e0940be498.json"
+}

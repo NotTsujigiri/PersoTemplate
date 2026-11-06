@@ -1,0 +1,85 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ebbc199-d549-4d55-a3f1-e19c174c6313.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ebbc199-d549-4d55-a3f1-e19c174c6313.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T13:41:11.788Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 477,
+        "description": "The user runs the granular checks independently and inspects the results against their expectations. In the The Broccoli buildspace, open Checks, expand TheBroccoli, select check:components (all checks) or one check:components:* entry and use Run from its context menu. Expand a recorded run, check, component and Output to inspect the exact source and diagnostics. Review inventory coverage, one-component-per-file counts, source-declared custom-element identity, construction without arguments, and visible empty defaults. Failures identify current nonconforming components; unverified cases are not passes. Layout and pixel measurements do not establish usability or visual quality. Source coverage and reproducible JSON/TAP/screenshot evidence are described in TESTING.md. Adjust the checks and repeat this review until the detected list is accepted. Only the user records the review outcome. Component rework waits for this review.",
+        "title": "Review the deterministic component checks and detected list",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ebbc199-d549-4d55-a3f1-e19c174c6313.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ebbc199-d549-4d55-a3f1-e19c174c6313.json",
+      "properties": {
+        "placement": "queued",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "human:user": {
+              "reason": "",
+              "time": "2026-10-12T15:37:50.534Z",
+              "value": "changes-requested"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "changes-requested",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-12T13:41:11.786Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 477,
+                      "description": "Implement independently runnable deterministic checks that inventory the current UI components and identify violations of the agreed component constraints. Cover one component per source file, registered custom-element identity, safe construction without arguments, and a visible empty default without sample data, service setup or per-component editor adapters. Derive discovery from source and contributor-owned contracts; report unsupported or uncertain cases explicitly so the inventory is not silently incomplete. Report each check separately with exact component/source identities, observed results and reproducible evidence. Distinguish measurable rendering checks from visual usability, which remains a human review. Provide clear commands and results the user can run and inspect. Do not start component rework before the following check review is accepted.",
+                      "title": "Develop granular deterministic UI component checks",
+                      "updatedAt": "2026-10-12T15:15:21.062Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/acbcc070-a792-43f4-acfd-c780601a1bac.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 486,
+            "sessions": [],
+            "submittedAt": "2026-10-12T15:15:42.741Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ebbc199-d549-4d55-a3f1-e19c174c6313.json"
+}

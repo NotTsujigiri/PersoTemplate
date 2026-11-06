@@ -1,0 +1,6 @@
+{
+  "reviewer": "planning_ui_review",
+  "outcome": "approved",
+  "scope": "Actual board, graph/Node, Overview and Changes; selected file matches displayed submitted diff; no reproduced blocking visual defect.",
+  "remaining": "Mandatory suite and human R03 acceptance"
+}

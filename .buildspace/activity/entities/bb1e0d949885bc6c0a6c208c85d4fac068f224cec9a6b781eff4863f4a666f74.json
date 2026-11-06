@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97520a4d-3791-4c09-913b-078c77a0a725.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97520a4d-3791-4c09-913b-078c77a0a725.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T14:15:05.331Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 681,
+        "description": "",
+        "title": "- Full checkpoint passed build, 1,041-file strict checks, 41 model/engine tests and 571 unit/integration tests; browser run continues.\n- Boundary reviewer found",
+        "updatedAt": "2026-10-18T14:15:22.187Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97520a4d-3791-4c09-913b-078c77a0a725.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97520a4d-3791-4c09-913b-078c77a0a725.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Full checkpoint passed build, 1,041-file strict checks, 41 model/engine tests and 571 unit/integration tests; browser run continues.\n- Boundary reviewer found the feed recorder sampled an early status before refresh completion. It now waits for draft removal and records passive response/render ordering; expected contents remain unchanged.\n- Component reviewer traced a route teardown race after repeated-component values matched exactly. Fixture now stops new enrichment, drains pending fulfillment and removes its exact handler; production code is unchanged. Focused replay remains pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97520a4d-3791-4c09-913b-078c77a0a725.json"
+}

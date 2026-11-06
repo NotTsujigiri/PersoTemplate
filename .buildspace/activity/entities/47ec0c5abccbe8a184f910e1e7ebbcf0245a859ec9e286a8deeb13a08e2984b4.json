@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f2e22241-947f-4e3b-81ef-b6e1967bb565.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f2e22241-947f-4e3b-81ef-b6e1967bb565.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T20:14:00.988Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1339,
+        "description": "Add a toolbar icon button that reverses the graph ordering between ascending and descending. Apply consistently to call and type dependency graphs and explain its current action in the tooltip.",
+        "title": "Add an ascending/descending order control to dependency graphs",
+        "updatedAt": "2026-11-03T20:14:01.308Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f2e22241-947f-4e3b-81ef-b6e1967bb565.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f2e22241-947f-4e3b-81ef-b6e1967bb565.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f2e22241-947f-4e3b-81ef-b6e1967bb565.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f2e22241-947f-4e3b-81ef-b6e1967bb565.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-03T22:38:43.125Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-11-03T20:14:01.308Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f2e22241-947f-4e3b-81ef-b6e1967bb565.json"
+}

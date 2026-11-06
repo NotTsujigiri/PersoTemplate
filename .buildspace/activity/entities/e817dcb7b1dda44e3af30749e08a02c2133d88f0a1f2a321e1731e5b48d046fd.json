@@ -1,0 +1,66 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f894b4db-dd40-4549-a8fa-4ede3701514f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f894b4db-dd40-4549-a8fa-4ede3701514f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T06:57:45.459Z",
+        "createdBy": "agent:codex",
+        "description": "Second, I want to reduce the number of things models have to think about by themselves for things to go well, so :\r\n- I can use less capable / cheaper models to achieve the same things.\r\n- Mistakes / oversights are caught deterministically.\r\n- A deterministic quality threshold is enforced.",
+        "title": "Deterministic quality and reduced model burden",
+        "updatedAt": "2026-09-29T22:37:05.019Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f894b4db-dd40-4549-a8fa-4ede3701514f.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f894b4db-dd40-4549-a8fa-4ede3701514f.json",
+      "properties": {
+        "capture": {
+          "context": {
+            "kind": "source",
+            "label": "Recorded harness needs",
+            "path": ".runtime/planning/01a0c5f4-7593-7072-8985-289e55a9faf9/harness-effects.md",
+            "quote": "Second, I want to reduce the number of things models have to think about by themselves for things to go well, so :\r\n- I can use less capable / cheaper models to achieve the same things.\r\n- Mistakes / oversights are caught deterministically.\r\n- A deterministic quality threshold is enforced."
+          },
+          "createdAt": "2026-09-24T14:56:10.156Z",
+          "description": "Second, I want to reduce the number of things models have to think about by themselves for things to go well, so :\r\n- I can use less capable / cheaper models to achieve the same things.\r\n- Mistakes / oversights are caught deterministically.\r\n- A deterministic quality threshold is enforced.",
+          "history": [
+            {
+              "actor": "agent",
+              "description": "Second, I want to reduce the number of things models have to think about by themselves for things to go well, so :\r\n- I can use less capable / cheaper models to achieve the same things.\r\n- Mistakes / oversights are caught deterministically.\r\n- A deterministic quality threshold is enforced.",
+              "status": "open",
+              "time": "2026-09-24T14:56:10.156Z",
+              "title": "Deterministic quality and reduced model burden"
+            }
+          ],
+          "id": "5a91dde9-c89a-4602-be75-b033de40550e",
+          "root": "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli",
+          "status": "open",
+          "title": "Deterministic quality and reduced model burden",
+          "type": "user story"
+        },
+        "meaning": "user story"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f894b4db-dd40-4549-a8fa-4ede3701514f.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f894b4db-dd40-4549-a8fa-4ede3701514f.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:43:34.734Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-29T22:37:05.019Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f894b4db-dd40-4549-a8fa-4ede3701514f.json"
+}

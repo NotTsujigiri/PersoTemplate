@@ -1,0 +1,13 @@
+# Buildspace-owned navigation
+
+Perso's Buildspaces children now derive from the saved buildspace IDs and names supplied by the buildspace owner. The fixed Broccoli child and its standalone connection special case were removed. No playground-specific channel was added.
+
+The shared channel navigation component accepts validated catalog updates while retaining mounted content, selection and expansion state. Saving a buildspace notifies subscribers, so additions and renames update the sidebar without replacing the current draft. Pins obtain the updated catalog through the same navigation contract.
+
+Channel activation carries the actual buildspace identity. Directory Open, direct child selection and reload agree on the selected space. Initial activation is awaited; stale activation cannot override a later selection. Node and review links in the same buildspace are preserved, while cross-space navigation clears unrelated node/chat selections.
+
+The live application was restarted. An isolated browser inspection confirmed both Personal buildspace and Ergonomics playground in the sidebar; selecting the latter opened its populated board with the matching channel/space ID and no browser errors. Screenshots were inspected. No real user draft, provider call, approval, commit or merge was performed.
+
+This working-tree correction follows immutable review target 231. Its separate evidence does not alter or claim coverage from that older candidate's checks.
+
+Verification: build and final syntax check passed; all 130 server tests passed. The browser checkpoint passed 97 tests and exposed eight node/deep-link failures during the intermediate implementation. After correcting same-space deep-link preservation, all 11 tests in the affected files passed unchanged. Dynamic channel creation/rename, correct board identity, reload, draft preservation, dirty-editor guards and late-response protection passed focused checks. Both Perso acceptance tests passed with the reviewed recording updated to remove the obsolete fixed channel and pin.

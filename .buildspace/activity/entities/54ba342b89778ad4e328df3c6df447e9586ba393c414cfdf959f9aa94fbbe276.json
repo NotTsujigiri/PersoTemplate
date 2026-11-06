@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0beae35-162e-4e2f-a550-3959a779e38c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0beae35-162e-4e2f-a550-3959a779e38c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:28:57.724Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 648,
+        "description": "",
+        "title": "Committed candidate 3da490e has passed the full build, 41/41 data-model tests, and 567/567 unit/integration tests; all completed strict gates report zero violat",
+        "updatedAt": "2026-10-18T09:29:11.340Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0beae35-162e-4e2f-a550-3959a779e38c.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0beae35-162e-4e2f-a550-3959a779e38c.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Committed candidate 3da490e has passed the full build, 41/41 data-model tests, and 567/567 unit/integration tests; all completed strict gates report zero violations across 1,038 authored files. The regenerated model has no stale source fingerprints."
+          },
+          {
+            "kind": "explain",
+            "text": "Restarted the actual service and verified an existing node keeps its identity/history and exposes Planning identity and Task components. Live instance → type → property definitions → data-type structure → return navigation succeeds. The complete browser stage is still running; final approval is pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0beae35-162e-4e2f-a550-3959a779e38c.json"
+}

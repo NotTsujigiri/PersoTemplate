@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8bcde9e4-6d9a-462a-8f55-2e41f0471b09.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8bcde9e4-6d9a-462a-8f55-2e41f0471b09.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T01:04:43.715Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1217,
+        "description": "Document the query composer behavior refined in the mock that must be properly implemented in PredicateComposer. The mock and screenshots complement the explanation; they are not a reference implementation. Leave open questions explicit and stop for the user's Markdown review before inventorying usage sites.\n\nDelivered 29 October 2026: one Markdown document with 12 sections and eight screenshots captured from codex/query-composer-mock at 34dd730710bc720788ef0d3a1167176d6f3a7e5a. Includes compact/detailed editing, multiline bodies, contextual suggestions, applying drafts, ownership, later editor refinements, mock limitations and open questions.\n\nReview document: C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/planning/predicate-composer-reference/README.md\nThe same folder contains all eight referenced images. An immutable ZIP snapshot is attached as evidence.\n\nThe mock branch was opened in an isolated managed checkout so the user's local source edit and running application remained intact. All image links were verified, all screenshots visually inspected, and the capture helper passed strict TypeScript checking. No production behavior changed. Usage inventory and implementation await the following human review.",
+        "title": "4. Document PredicateComposer behavior from the query composer mock",
+        "updatedAt": "2026-10-29T02:51:37.208Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8bcde9e4-6d9a-462a-8f55-2e41f0471b09.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8bcde9e4-6d9a-462a-8f55-2e41f0471b09.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "planning",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bea68f10-15b3-48de-a727-e34571e6e8b8.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8bcde9e4-6d9a-462a-8f55-2e41f0471b09.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bea68f10-15b3-48de-a727-e34571e6e8b8.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8bcde9e4-6d9a-462a-8f55-2e41f0471b09.json"
+}

@@ -1,0 +1,78 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/607c8db5-8c22-4238-884d-bdf1ab02ad5c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/607c8db5-8c22-4238-884d-bdf1ab02ad5c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T11:48:46.771Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 526,
+        "description": "Review the four annotated corrections: composition nodes belong under the component source in the repository bush, the insertion picker supports HTML and reusable components, Visual is the editor without an Editing target selector, and hover/selection outlines identify rendered targets. Exercise the same shared composition in Repositories and Review → Changes. Use Preview to open the filter, return to Visual, insert a native or reusable button, adjust its literal fields, undo/redo, save and reopen. New filter action behavior remains a separate implementation task; cosmetic edits and acceptance belong to the user.",
+        "title": "Review composition selection and native HTML authoring",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/607c8db5-8c22-4238-884d-bdf1ab02ad5c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/607c8db5-8c22-4238-884d-bdf1ab02ad5c.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "submitted",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-17T11:25:17.196Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 525,
+                      "description": "Address the four UI authoring annotations: authored composition is nested under its source component in the repository bush; insertion supports native HTML and available custom components; Visual edits directly without an Editing target dropdown; hover and selection outline the corresponding rendered elements. Preserve guarded saves, expression bindings, undo/redo and Preview interaction. Record the unchanged discrepancies before implementation, then require the same simulated input to match the intended output.",
+                      "title": "Integrate visual authoring with the repository bush",
+                      "updatedAt": "2026-10-17T12:28:48.318Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "implementation"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f0b2cccc-a8e3-4d09-aa71-129f82ed9fe4.json"
+              }
+            },
+            "revision": 531,
+            "sessions": [],
+            "submittedAt": "2026-10-17T12:29:08.803Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/607c8db5-8c22-4238-884d-bdf1ab02ad5c.json"
+}

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0b9d9368-9a6d-469e-b837-3fd05b348759.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0b9d9368-9a6d-469e-b837-3fd05b348759.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T04:30:43.205Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 615,
+        "description": "",
+        "title": "Boundary review approved after correction. Rejected initial projections are removed; stale refreshes lose to newer refreshes or lazy resolutions; failed view su",
+        "updatedAt": "2026-10-18T04:30:51.807Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0b9d9368-9a6d-469e-b837-3fd05b348759.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0b9d9368-9a6d-469e-b837-3fd05b348759.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/95553445-5b66-485d-bbb4-4d0741f215e4.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Boundary review approved after correction. Rejected initial projections are removed; stale refreshes lose to newer refreshes or lazy resolutions; failed view subscriptions recover. Final race has identical before/after input (failed before, 8/8 tests pass after). Earlier optional-startup recording used a different bootstrap fixture; the final eager-startup regression passes. Application migration and final review remain open."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0b9d9368-9a6d-469e-b837-3fd05b348759.json"
+}

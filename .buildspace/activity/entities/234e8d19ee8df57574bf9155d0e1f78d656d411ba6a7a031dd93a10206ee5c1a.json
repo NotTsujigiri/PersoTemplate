@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T21:46:52.147Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1081,
+        "description": "",
+        "title": "Define the panel input, input actions and consumer-owned suggestion area",
+        "updatedAt": "2026-10-27T03:12:29.889Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f18067d-e3b4-4732-bf8b-7f2fb98ae9dd.json"
+}

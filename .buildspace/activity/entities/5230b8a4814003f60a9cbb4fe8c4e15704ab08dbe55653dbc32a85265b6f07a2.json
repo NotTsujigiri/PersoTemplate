@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d1392e3-6c0b-425d-b083-5f4285835e9c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d1392e3-6c0b-425d-b083-5f4285835e9c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.901Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Move Btr/Perso-specific startup knowledge and application owners into their owning template configurations. Broccoli exports defaults; Btr and Perso compose them. The generic host starts the result without template-specific branches or direct owner bypasses.\n\nSlice verification completed: Service host no longer imports Btr/Perso owners or selects templates by name. Owning TypeScript configurations provide template modules and Personal vault storage. Configuration and preview isolation tests pass. Obsolete standalone template paths are being removed in the cleanup child.",
+        "title": "Move service ownership into template contributions",
+        "updatedAt": "2026-10-22T22:16:28.039Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d1392e3-6c0b-425d-b083-5f4285835e9c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d1392e3-6c0b-425d-b083-5f4285835e9c.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d1392e3-6c0b-425d-b083-5f4285835e9c.json"
+}

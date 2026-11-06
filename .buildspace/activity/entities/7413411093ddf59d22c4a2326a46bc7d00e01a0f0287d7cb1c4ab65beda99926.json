@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/33ec5475-2f99-4a38-8a4d-2b7b3ec4998b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/33ec5475-2f99-4a38-8a4d-2b7b3ec4998b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T08:56:01.094Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Actual application board",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/33ec5475-2f99-4a38-8a4d-2b7b3ec4998b.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/33ec5475-2f99-4a38-8a4d-2b7b3ec4998b.json",
+      "properties": {
+        "artifact": {
+          "hash": "3da37a53365ded0f1b6123f804f1d9c6908eb56dc19cdf6e1b964505a6a0f0f8",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/3da37a53365ded0f1b6123f804f1d9c6908eb56dc19cdf6e1b964505a6a0f0f8",
+          "mime": "image/png",
+          "size": 33782
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/33ec5475-2f99-4a38-8a4d-2b7b3ec4998b.json"
+}

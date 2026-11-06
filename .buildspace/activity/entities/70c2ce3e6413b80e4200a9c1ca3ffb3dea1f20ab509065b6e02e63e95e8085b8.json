@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Start using persisted app planning before finishing the visual surfaces.\n\nScope\n\n• One-time dry-run/apply importer with source ID mapping and receipt.\n\n• Import tasks/dependencies/review gates and all approved global requirements and visual corrections. Preserve goals/criteria in descriptions and the complete source with image assets as immutable app-owned evidence; only genuinely completed history is imported.\n\n• Readback, restart, retry and temporary-document retirement.\n\nSuccess criteria\n\n1. Every bootstrap task, goal, criterion, dependency and review gate matches persisted readback.\n\n2. Failed import is atomic; repeated import creates no duplicates or execution.\n\n3. Receipt identifies the root and all app IDs; remaining updates use app tools.\n\n4. Bootstrap planning details are replaced by the receipt/link after verification.\n\n5. Complete approved specification, annotated images and source snapshot are retrievable from the app after bootstrap retirement/restart, with hash-verified evidence; no parallel editable plan remains.\n\n6. Import/readback/restart preserves all serialized graph link identities and immutable target references through the existing format; resolution does not depend on an old runtime port or object instance.\n\nEvidence\n\n• Import receipt and source hash\n\n• Readback/restart comparison\n\n• One real task update through MCP\n\n",
+        "title": "Import this plan and transfer authority to app data",
+        "updatedAt": "2026-09-30T09:21:53.006Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "integration"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json"
+}

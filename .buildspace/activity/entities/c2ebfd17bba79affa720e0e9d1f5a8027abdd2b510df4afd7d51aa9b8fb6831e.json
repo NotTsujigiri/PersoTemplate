@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/10e577d8-ad17-4b9b-9240-0d90c756c7cc.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/10e577d8-ad17-4b9b-9240-0d90c756c7cc.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T11:30:57.835Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 666,
+        "description": "",
+        "title": "- Final component reviewer found missing self-edge deduplication coverage: the old self-relation assertion was replaced by a reverse-relation case.\n- Keep the r",
+        "updatedAt": "2026-10-18T12:25:49.839Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/10e577d8-ad17-4b9b-9240-0d90c756c7cc.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/10e577d8-ad17-4b9b-9240-0d90c756c7cc.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "- Final component reviewer found missing self-edge deduplication coverage: the old self-relation assertion was replaced by a reverse-relation case.\n- Keep the reverse-relation case, seed a permitted related self-edge, and require exactly one displayed row in the exact browser recording.\n- No product defect was demonstrated; approval remains conditional on this regression and full verification."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/10e577d8-ad17-4b9b-9240-0d90c756c7cc.json"
+}

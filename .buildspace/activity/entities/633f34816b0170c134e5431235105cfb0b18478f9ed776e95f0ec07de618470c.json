@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59bf6e91-4b6a-490d-84a6-33e464d5119f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59bf6e91-4b6a-490d-84a6-33e464d5119f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-26T03:45:36.558Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1162,
+        "description": "Immutable attached evidence",
+        "title": "LSP coloring implementation and verification",
+        "updatedAt": "2026-10-26T03:45:36.825Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59bf6e91-4b6a-490d-84a6-33e464d5119f.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59bf6e91-4b6a-490d-84a6-33e464d5119f.json",
+      "properties": {
+        "artifact": {
+          "hash": "a6f2a60bcc97f78f336da6985ac47a43998fc9c4089ed1546b4e2cbfa45a7060",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/a6f2a60bcc97f78f336da6985ac47a43998fc9c4089ed1546b4e2cbfa45a7060",
+          "mime": "text/plain",
+          "size": 4875
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/59bf6e91-4b6a-490d-84a6-33e464d5119f.json"
+}

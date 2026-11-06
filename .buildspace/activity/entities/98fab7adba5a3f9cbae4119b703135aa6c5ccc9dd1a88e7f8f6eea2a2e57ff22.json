@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cd6725f-8ebc-47e0-93e8-c6e5b98d0dd3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cd6725f-8ebc-47e0-93e8-c6e5b98d0dd3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T23:16:27.931Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1093,
+        "description": "Reduce redundant check work and improve reliable completion on Windows while preserving test scope, exact outputs and acceptance limits. Retain failed-run evidence. Checks UI design is outside this task.\n\nThe serial checkpoint derives its commands from the root npm scripts and executes identical prerequisites once. Standalone phases retain their gates. Five complete type scans become one and three engine-boundary checks become one. Every run has a separate report directory with step logs, duration, runtime identity, exit status and first-failure stopping; browser runs have unique output directories. Tests cover command inventory/order and evidence retention.\n\nOne baseline type scan took 271.9 seconds. Removing four duplicates implies roughly 18 minutes of avoided work; this is not a measured end-to-end speedup because the redundant baseline was stopped. Complete optimized runs are retained, including run-I19aUC (40.5 minutes; sole native failure) and run-PMHhAv (676 non-browser passes, 330/331 browser passes, no native crash).\n\nReliability fixes:\n- Removed the late duplicate journal notification that re-marked refreshed graph data stale; the graph keeps its single revision subscription.\n- Drain accepted route fetch/transform/fulfillment before removing an interception.\n- Updated three stale 2 px splitter expectations to the accepted 1 px design.\n- Wait for the actual editor fields before measuring geometry or capturing screenshots.\n- Sample a measurable toolbar during viewport refresh instead of dereferencing a detached element; preserve exact position/pan comparisons.\nThe first two failures have exact before/after recordings; all eight earlier focused regressions pass. The last viewport case passes three repetitions with its original expected output. No timeout, correctness assertion or compiler setting was weakened.\n\nThe runtime task supplies the pinned Node version and shell-shim regression. The inventory audit restored an accidentally omitted model-inspection file before final verification: the model command exactly matches the baseline plus the runtime gate, and all 44 model cases pass. The incomplete run-mCyWYq was stopped and explicitly retained, not counted as successful.\n\nEvidence: .harness/queued-races-before-20261025.log, interception-drain-before-20261025.log, queued-races-after-20261025.log, viewport-measurement-after-20261025.log and queued-fixed-runtime-v2-interrupted-20261025.json; per-run reports under .harness/checkpoints/.\n\nCompleted in c5a0432 and 98fd68c. Final checkpoint .harness/checkpoints/run-RPaAAX/report.json passed in 38.34 minutes: 676 model/unit/tooling tests, 331 browser tests, zero failures and zero native crashes. Type, organisation, boundary and build checks passed. Source hashes remained unchanged throughout verification. Completion receipt: .harness/queued-work-completion-20261025.json. Changes are committed on codex/queued-work; the worktree is clean and the managed app is running on Node 24.22.1.\n\nFurther measured cost during the splitter follow-up (2026-10-25): the root build's final build:model process ran from 21:20:27 to the data-model artifact write at 21:27:20 Europe/Paris, about 6 minutes 53 seconds. It was running below normal priority; an intermediate observation recorded 389 seconds CPU time and about 3.2 GiB memory. The build passed. This identifies model generation as a concrete remaining duration to investigate; no cause or optimization has been established. Evidence: .harness/splitter-both-build-resumed.log. This follow-up used focused splitter checks and did not run the full suite.",
+        "title": "Improve checks duration and reliability",
+        "updatedAt": "2026-10-25T20:31:06.580Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cd6725f-8ebc-47e0-93e8-c6e5b98d0dd3.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cd6725f-8ebc-47e0-93e8-c6e5b98d0dd3.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 2,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6cd6725f-8ebc-47e0-93e8-c6e5b98d0dd3.json"
+}

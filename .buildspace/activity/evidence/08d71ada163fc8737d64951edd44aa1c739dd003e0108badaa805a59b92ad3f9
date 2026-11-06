@@ -1,0 +1,59 @@
+Generic web component previews — Phase 1
+Validation and handoff, 2026-10-11
+
+Implemented
+- Select a TypeScript source in Repositories. The WebComponent contributor discovers native and framework web components, their registration and public property schemas.
+- Visual renders the component with its own defaults. The regular node editor adjusts supported scalar properties; Preview retains those trial values. Code retains guarded source editing and saving.
+- Components need no uiDefinition, editor metadata, catalog entry or component-specific adapter. The superseded composition catalog/model/shell was removed.
+- Render and compilation errors replace the Visual/Preview content while the tabs remain usable. Preview starts at minimum content size and can zoom out to fit.
+- Preview documents require authentication and run in a separate sandbox. Real service requests, parent access and storage are unavailable.
+- Sample-data setup and service substitutes remain in Phase 2. Phase 2 has not been developed.
+
+Live service
+- Restarted http://localhost:43130 with this implementation.
+- The unchanged CompositionButton source was discovered as RelationalUiButton, with label and disabled properties, and returned an authenticated preview document (HTTP 200).
+- App screenshots from the real browser fixture were inspected. A screenshot is attached to the development task. In-app automation was unavailable because its Windows sandbox process could not start.
+
+Validation
+- Required build passed, including dependency-organisation validation of 12 systems.
+- Repository type-safety check: 932 authored source files, zero violations.
+- Model tests: 22 passed.
+- Focused discovery, runtime, package-boundary and workspace tests passed.
+- All 7 Phase 1 preview/editor browser tests passed in the full browser run.
+- Shared SchemaForm tests: 22 passed. Exact recordings cover incomplete numeric drafts, component-normalized values and replacement of unreadable structured drafts after blur.
+- Full npm run test:all reached the runtime suite: 216 passed, 4 failed out of 220. It stopped at those failures; subsequent chained stages did not run.
+- Browser suite was also run separately: 188 passed, 12 failed out of 200. A separate post-build rerun passed all 6 affected tests: five stale-model-provenance cases and the planning viewport recording. Across the run and rerun, 194 of 200 browser cases passed; 6 remain failing.
+
+Remaining broad-checkpoint failures
+Runtime (planning behavior outside Phase 1):
+- planning-state-history: ordinary backlog operations atomically record linked state transitions.
+- range-placement: connected ranges reuse nearby columns and unknown history retains dependency rows.
+- review-placement: active reviews block the top-level reviewed task across transitions, overlap and restart.
+- review-placement: review submission blocks every top-level target and closes queue membership atomically.
+Browser (outside the component preview/editor flows):
+- breadcrumb-geometry: ambiguous Breadcrumb child locator.
+- feedback-hidden: feedback height is 36 instead of the recorded 28.
+- planning-save-pending: test searches inside the form for feedback rendered outside it.
+- ui-seven: queued/blocked expectation mismatch.
+- ui.spec: old Ready-to-commit text expectation.
+- workflow-ui: exported selector expectation is undefined.
+No expected recordings or validations were weakened to hide these failures.
+
+Evidence files
+.harness/component-phase1-build.log
+.harness/component-phase1-checkpoint.log
+.harness/phase1-browser-checkpoint.log
+.harness/phase1-postbuild-browser-rerun.log
+.harness/phase1-schema-form-regression.log
+.harness/phase1-preview-dependency-before.log
+.harness/phase1-preview-dependency-after.log
+.harness/phase1-property-draft-before.log
+.harness/phase1-schema-unreadable-before.actual.json
+Systems/Depth3/HarnessApp/test-results-phase1-checkpoint/
+Systems/Depth3/HarnessApp/test-results-phase1-postbuild-rerun/
+
+Suggested human review
+1. Open Phase 1's review, choose Changes, and select a web-component TypeScript source such as RelationalUi/Depth2/Elements/Depth1/CompositionButton/index.ts.
+2. In Visual, change label and disabled using the node editor; switch to Preview and back.
+3. In Code, try an unsaved edit and return to Visual. Check error recovery and use Save when you want to persist the source change.
+4. Record feedback in the review before proceeding to Phase 2. Approval remains the user's action.

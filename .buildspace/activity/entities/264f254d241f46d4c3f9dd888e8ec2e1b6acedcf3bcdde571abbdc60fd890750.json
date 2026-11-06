@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/db6fd457-fce7-45ab-8487-dd234f957dbe.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/db6fd457-fce7-45ab-8487-dd234f957dbe.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T11:32:19.980Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Activity board — accepted reference with reservations (see UI reference notes)",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/db6fd457-fce7-45ab-8487-dd234f957dbe.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/db6fd457-fce7-45ab-8487-dd234f957dbe.json",
+      "properties": {
+        "artifact": {
+          "hash": "9479956dd4a6323a3f074f422582b12fcffdf099bcf2abbd7fce59e5a3d2ac43",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/9479956dd4a6323a3f074f422582b12fcffdf099bcf2abbd7fce59e5a3d2ac43",
+          "mime": "image/png",
+          "size": 1465929
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/db6fd457-fce7-45ab-8487-dd234f957dbe.json"
+}

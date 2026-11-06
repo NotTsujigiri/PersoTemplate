@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74933a63-f393-4c74-b961-450c0d9becb3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74933a63-f393-4c74-b961-450c0d9becb3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.377Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Reported by the user: changing “Update the MVP delivery plan” to Completed in the Node editor and saving did not survive reload, and the Task graph did not update. Reproduce before diagnosing or changing behavior. Distinguish a valid completion that is lost from an invariant rejection that the UI fails to explain; preserve required review approval rules.\n\nRequired architecture: the Node editor must not notify, call, or otherwise know about the Task graph to propagate a change. The technical proposal must identify the authoritative mutation and persistence owner and how independently observing views receive committed changes through a shared owned contract.\n\nRun every child in sequence. The user reviews the technical proposal after reproduction and before implementation, then tests the implemented fix through the UI. Success: the user can complete eligible, already implemented and approved work themselves; the saved state survives reload/reopen and other open views update from authoritative committed state without coupling one view to another. Invalid changes remain explicit and do not appear saved.",
+        "title": "Fix task completion persistence and graph refresh",
+        "updatedAt": "2026-10-09T20:05:05.030Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74933a63-f393-4c74-b961-450c0d9becb3.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74933a63-f393-4c74-b961-450c0d9becb3.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ef208e3-a7e3-474f-a963-bc1bf2abad3e.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74933a63-f393-4c74-b961-450c0d9becb3.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ef208e3-a7e3-474f-a963-bc1bf2abad3e.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74933a63-f393-4c74-b961-450c0d9becb3.json"
+}

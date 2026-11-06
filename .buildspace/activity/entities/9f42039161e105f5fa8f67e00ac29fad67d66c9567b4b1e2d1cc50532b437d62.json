@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bbf58ca1-d754-4f1f-83a2-92c176479b0d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bbf58ca1-d754-4f1f-83a2-92c176479b0d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T20:49:53.536Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 575,
+        "description": "- Record starting revisions and the working-tree inventory in each affected repository; checkpoint the already-authorized accumulated MVP work separately.\n- Preserve new or unrelated user edits; do not silently include them in migration commits or discard them.\n- Record baseline validation and any failures honestly, without granting exemptions or weakening checks.\n- Attach commit IDs per repository before the first migration edit; this is a recoverable starting point, not migration acceptance.",
+        "title": "Commit starting checkpoint before migration",
+        "updatedAt": "2026-10-18T01:21:05.242Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bbf58ca1-d754-4f1f-83a2-92c176479b0d.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bbf58ca1-d754-4f1f-83a2-92c176479b0d.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "integration",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4e0dc36a-4d70-4ef9-94df-e69322e8303f.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bbf58ca1-d754-4f1f-83a2-92c176479b0d.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4e0dc36a-4d70-4ef9-94df-e69322e8303f.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bbf58ca1-d754-4f1f-83a2-92c176479b0d.json"
+}

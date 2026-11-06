@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2048ff70-b7bf-4b28-a8e6-9fd32176e76a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2048ff70-b7bf-4b28-a8e6-9fd32176e76a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:15:52.282Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 389,
+        "description": "Review the whole-MVP acceptance audit and live walkthrough, including every required package and unresolved prior implementation review. Confirm which criteria pass and which need correction. This final human decision is distinct from approval of the delivery plan. The agent cannot record approval on the reviewer's behalf.",
+        "title": "Review the complete Persistent planning and review MVP",
+        "updatedAt": "2026-10-08T18:19:52.043Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2048ff70-b7bf-4b28-a8e6-9fd32176e76a.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2048ff70-b7bf-4b28-a8e6-9fd32176e76a.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2048ff70-b7bf-4b28-a8e6-9fd32176e76a.json"
+}

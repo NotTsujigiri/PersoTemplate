@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c3d31a1b-81e1-4fef-9449-38f81c12089d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c3d31a1b-81e1-4fef-9449-38f81c12089d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T01:04:43.753Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1217,
+        "description": "Support selecting multiple tasks in the Task graph. A right-click context menu action named Copy URL must copy the URLs of all selected tasks to the clipboard. Review selection and context-menu behavior with the user during development. Coordinate with Node editor batch operations because selection handling and Copy URL overlap.\r\n\r\nCompleted 2026-10-31: Implemented on master in 0fe8646. Ctrl/Cmd toggles task selection, Shift selects a rendered range, and right-click Copy URL copies all selected canonical URLs on separate lines. Right-clicking another task selects that task; keyboard selection is supported. Focused and full-sweep browser scenarios passed; screenshots reviewed. Node editor batch operations remain separate work.\r\nCheckpoint: build, type/dependency checks and all 751 model/unit tests passed. The full browser sweep recorded 381 passes and two failures: the selector issue above (fixed and rerun successfully) and the pre-existing Windows newline recovery issue tracked separately in 5bb32ab9-aa94-4b84-bde6-6d059cfec2d4. Service rebuilt and restarted.",
+        "title": "Select multiple tasks in the Task graph and copy their URLs",
+        "updatedAt": "2026-10-31T07:08:57.649Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c3d31a1b-81e1-4fef-9449-38f81c12089d.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c3d31a1b-81e1-4fef-9449-38f81c12089d.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c3d31a1b-81e1-4fef-9449-38f81c12089d.json"
+}

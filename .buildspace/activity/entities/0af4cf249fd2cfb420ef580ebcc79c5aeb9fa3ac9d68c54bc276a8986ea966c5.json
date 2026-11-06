@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/908639da-abe3-4923-8bfc-5e9eb6d1e4c7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/908639da-abe3-4923-8bfc-5e9eb6d1e4c7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T03:27:25.880Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 726,
+        "description": "- Fixed in 9ba9e38: publish complete splitter groups and preserve toolbar geometry during refresh.\n- Exact regression recordings, pending Save, hidden board and nested splitter checks pass.\n- Repository build is running as the batch checkpoint.",
+        "title": "Preserve Save across background planning refreshes",
+        "updatedAt": "2026-10-19T04:37:35.031Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/908639da-abe3-4923-8bfc-5e9eb6d1e4c7.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/908639da-abe3-4923-8bfc-5e9eb6d1e4c7.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 5,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/908639da-abe3-4923-8bfc-5e9eb6d1e4c7.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/908639da-abe3-4923-8bfc-5e9eb6d1e4c7.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:12:12.594Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T04:37:35.031Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/908639da-abe3-4923-8bfc-5e9eb6d1e4c7.json"
+}

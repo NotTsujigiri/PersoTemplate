@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b47fca-020d-4ec5-9b8a-c4f77c844a77.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b47fca-020d-4ec5-9b8a-c4f77c844a77.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T11:05:17.751Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 662,
+        "description": "",
+        "title": "- Full confirmation also recorded a detached preview frame during a runtime-property read and a reset delayed source request.\n- Preserve both failures and have ",
+        "updatedAt": "2026-10-18T11:34:30.586Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b47fca-020d-4ec5-9b8a-c4f77c844a77.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b47fca-020d-4ec5-9b8a-c4f77c844a77.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "- Full confirmation also recorded a detached preview frame during a runtime-property read and a reset delayed source request.\n- Preserve both failures and have the independent reviewer inspect fixture and product lifecycles before changing behavior.\n- Required preview/selection expectations remain unchanged; final acceptance stays pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b47fca-020d-4ec5-9b8a-c4f77c844a77.json"
+}

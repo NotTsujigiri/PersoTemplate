@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9671c929-8fe8-4bd4-8ba3-8091511b0751.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9671c929-8fe8-4bd4-8ba3-8091511b0751.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T10:57:25.765Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 661,
+        "description": "",
+        "title": "- Full browser confirmation recorded incorrect initial layout setup: Inputs and Closed remained Max; exact expected proportions stayed unchanged.\n- Independent ",
+        "updatedAt": "2026-10-18T11:23:29.804Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9671c929-8fe8-4bd4-8ba3-8091511b0751.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9671c929-8fe8-4bd4-8ba3-8091511b0751.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "- Full browser confirmation recorded incorrect initial layout setup: Inputs and Closed remained Max; exact expected proportions stayed unchanged.\n- Independent reviewer verified the allocator is correct for those recorded modes; the fixture can run before the Activity columns splitter mounts.\n- Preserve before evidence, settle initial reads and assert mounted/persisted pane modes before measurement; rerun unchanged expectations."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9671c929-8fe8-4bd4-8ba3-8091511b0751.json"
+}

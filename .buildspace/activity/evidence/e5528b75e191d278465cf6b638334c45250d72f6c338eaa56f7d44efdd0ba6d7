@@ -1,0 +1,413 @@
+{
+  "recordings": [
+    {
+      "input": {
+        "text": "export const value = \"hello\";\n",
+        "actions": [
+          "type xy inside string",
+          "Backspace",
+          "undo",
+          "insert leading newline",
+          "undo",
+          "replace string with number",
+          "release newest response",
+          "release obsolete responses"
+        ]
+      },
+      "expected": [
+        {
+          "text": "export const value = \"hello\";\n",
+          "strings": [
+            "\"hello\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"hellox\";\n",
+          "strings": [
+            "\"hellox\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "\nexport const value = \"helloxy\";\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [
+            "42"
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "text": "export const value = \"hello\";\n",
+          "strings": [
+            "\"hello\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"hellox\";\n",
+          "strings": [
+            "\"hellox\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "\nexport const value = \"helloxy\";\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [
+            "42"
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        }
+      ],
+      "language": "typescript",
+      "before": [
+        {
+          "text": "export const value = \"hello\";\n",
+          "strings": [
+            "\"hello\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"hellox\";\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "\nexport const value = \"helloxy\";\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "export const value = \"helloxy\";\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        },
+        {
+          "text": "export const value = 42;\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "text": "{\"value\":\"hello\"}\n",
+        "actions": [
+          "type xy inside string",
+          "Backspace",
+          "undo",
+          "insert leading newline",
+          "undo",
+          "replace string with number",
+          "release newest response",
+          "release obsolete responses"
+        ]
+      },
+      "expected": [
+        {
+          "text": "{\"value\":\"hello\"}\n",
+          "strings": [
+            "\"hello\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"hellox\"}\n",
+          "strings": [
+            "\"hellox\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "\n{\"value\":\"helloxy\"}\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [
+            "42"
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "text": "{\"value\":\"hello\"}\n",
+          "strings": [
+            "\"hello\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"hellox\"}\n",
+          "strings": [
+            "\"hellox\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "\n{\"value\":\"helloxy\"}\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [
+            "\"helloxy\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [
+            "42"
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        }
+      ],
+      "language": "json",
+      "before": [
+        {
+          "text": "{\"value\":\"hello\"}\n",
+          "strings": [
+            "\"hello\""
+          ],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"hellox\"}\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "\n{\"value\":\"helloxy\"}\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":\"helloxy\"}\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [],
+          "numbers": []
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        },
+        {
+          "text": "{\"value\":42}\n",
+          "strings": [],
+          "numbers": [
+            "42"
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "dependencyOrganisation": "17 systems passed",
+    "ownedBuilds": "TypeScript and RelationalUi passed",
+    "typeSafety": "1206 authored source files; zero violations",
+    "focusedBrowserCases": 8,
+    "screenshots": "Inspected TypeScript and JSON while responses were held, and restored first expression",
+    "focusedUnitCases": 14,
+    "engineBoundaries": "zero violations"
+  },
+  "commit": "90c6c4e",
+  "result": "Passed"
+}

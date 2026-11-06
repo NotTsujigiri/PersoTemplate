@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1688e457-dc5b-472c-8bfc-d0776f9af609.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1688e457-dc5b-472c-8bfc-d0776f9af609.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-04T01:08:23.340Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1349,
+        "description": "Add Delete to the Repositories right-click menu for files and folders. Define directory deletion and unsaved-open-file behavior before implementation, use the owning workspace operation, and refresh the tree and selected detail after a successful deletion.",
+        "title": "Delete repository files and folders from the context menu",
+        "updatedAt": "2026-11-04T09:41:54.339Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1688e457-dc5b-472c-8bfc-d0776f9af609.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1688e457-dc5b-472c-8bfc-d0776f9af609.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1688e457-dc5b-472c-8bfc-d0776f9af609.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8461c2d8-f369-45d0-9d19-f963508ad7d0.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8461c2d8-f369-45d0-9d19-f963508ad7d0.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T23:56:25.161Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 720,
+        "description": "- Shared Node editor actions now use view tools; documented headings, inspection icons and bounded panels are implemented.\n- File location, repository membership and Git state are separate; source dropdown removed and Text editor/Image editor available.\n- Documentation audit: 123 passed; focused UI, deleted-file and model checks passed. Commits: 5e0f506, 7ec44bc, 70f4815.\n- Full checkpoint ran; Save-refresh and three-repository check-result failures remain tracked separately.",
+        "title": "Refine component inspection and repository views",
+        "updatedAt": "2026-10-19T01:52:35.043Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8461c2d8-f369-45d0-9d19-f963508ad7d0.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8461c2d8-f369-45d0-9d19-f963508ad7d0.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8461c2d8-f369-45d0-9d19-f963508ad7d0.json"
+}

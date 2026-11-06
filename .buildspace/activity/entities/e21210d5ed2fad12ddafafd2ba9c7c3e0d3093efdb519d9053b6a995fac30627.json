@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/89e37434-afcc-41e5-8732-14bbaf825076.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/89e37434-afcc-41e5-8732-14bbaf825076.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T13:41:11.791Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 477,
+        "description": "Rework all discovered UI components against the independent component checks, preserving intended behavior and strict dependency ownership. Use concrete LitElement classes with Lit decorators, one component per source file, registered identity and safe no-argument construction. No element-interface facades, component-specific UI-editor adapters or obsolete registration APIs.\n\nProgress verified 17 October: the latest whole-repository audits pass single-file, identity, construction, Lit and decorators for all 93 components; element-interfaces passes across 463 inspected source files. RelationalUi was migrated, followed by 14 HarnessApp and seven DefaultSuperAppTemplate components. Elements was flattened into normal dependency levels and ComponentGallery removed.\n\nThis task remains incomplete. The visible-default audit has 48 passes and 45 failures: 42 in RelationalUi and three outside it (TemplateCreationDialogElement, RepositoryGraphElement, WorkPanelElement). Empty Markdown remains empty and closed overlays retain their intended behavior. The UI-editor viewport now supplies explicit dimensions, zoom and a patterned surrounding canvas; viewport pixels do not establish component paint. Resolve findings against the accepted component/viewport criteria, without artificial default content or weakened checks, and review the results with the user.\n\nFocused component/consumer verification and strict types pass. The full checkpoint still has four planning/state/range/review failures and an order-sensitive pane-browser failure remains unresolved. Those findings require diagnosis against the accepted model before altering production behavior or exact expected output. Keep them visible in checkpoint reporting.\n\nLatest evidence: .harness/component-checks/2026-10-16T22-34-01.484Z-empty-default/empty-default.json; .harness/outside-ui-types-final.log; .harness/outside-ui-verified.log; .harness/outside-ui-checkpoint-stable.log; .harness/outside-ui-model-coverage-final.log; .harness/outside-ui-consumers-final.log; .harness/outside-ui-pane-isolation.log. Mechanical passage does not replace the following human visual review.",
+        "title": "Rework detected UI components to pass the reviewed checks",
+        "updatedAt": "2026-10-17T00:08:47.644Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/89e37434-afcc-41e5-8732-14bbaf825076.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/89e37434-afcc-41e5-8732-14bbaf825076.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea6c39fd-1e77-4670-8daf-4a5749f041a9.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/89e37434-afcc-41e5-8732-14bbaf825076.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea6c39fd-1e77-4670-8daf-4a5749f041a9.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/89e37434-afcc-41e5-8732-14bbaf825076.json"
+}

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/06fab887-6d24-43ef-b1da-6a38de5d3d4f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/06fab887-6d24-43ef-b1da-6a38de5d3d4f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T01:47:33.892Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 598,
+        "description": "",
+        "title": "Independent subagent migration_plan_review — preliminary foundation findings (reproduced before correction):\n- Aborted transactions reserved predicate identitie",
+        "updatedAt": "2026-10-18T01:48:39.567Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/06fab887-6d24-43ef-b1da-6a38de5d3d4f.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/06fab887-6d24-43ef-b1da-6a38de5d3d4f.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Independent subagent migration_plan_review — preliminary foundation findings (reproduced before correction):\n- Aborted transactions reserved predicate identities; mutable predicates made cached and direct results disagree.\n- Repeating an old unsubscribe removed a replacement subscription.\n- Throwing observer-error handlers made committed transactions appear rejected.\nThese are implementation findings, not checkpoint approval."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/06fab887-6d24-43ef-b1da-6a38de5d3d4f.json"
+}

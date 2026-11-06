@@ -1,0 +1,28 @@
+{
+  "reviewStatus": "submitted",
+  "targetRevision": 221,
+  "results": [
+    {
+      "repository": "TheBroccoli",
+      "head": "85c50b78a2c96b46124e24e6dcdc87b319bb655a",
+      "expected": "7e7da20ebb5190522d8c10163cb481f640c6248aac64ad8db22602ef0fedea9c",
+      "actual": "7e7da20ebb5190522d8c10163cb481f640c6248aac64ad8db22602ef0fedea9c",
+      "omitted": [],
+      "exact": true
+    },
+    {
+      "repository": "PersoTemplate",
+      "expected": "1534bd5d0072e83b4beed4514f60fc78c00e5bb37d177d6a0a03a0288b0a72a4",
+      "actual": "1534bd5d0072e83b4beed4514f60fc78c00e5bb37d177d6a0a03a0288b0a72a4",
+      "omitted": [],
+      "exact": true
+    },
+    {
+      "repository": "BtrTemplate",
+      "expected": "bfb70665231c89c3f58c2e959cc8bb6eab010c76b9cc67243b1486805bc3ea5c",
+      "actual": "bfb70665231c89c3f58c2e959cc8bb6eab010c76b9cc67243b1486805bc3ea5c",
+      "omitted": [],
+      "exact": true
+    }
+  ]
+}

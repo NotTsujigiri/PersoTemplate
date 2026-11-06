@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/909a6e91-ef67-4c33-a571-40b1db8573b0.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/909a6e91-ef67-4c33-a571-40b1db8573b0.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T04:47:11.284Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 968,
+        "description": "Explore persisting disposable frontend materialized graph data between browser sessions, if measurements demonstrate a worthwhile performance benefit.\n\nContext\nThe first use case is a local desktop-style application with a service Relational Engine and frontend Relational Engine instances. The current design discussion allows frontend state to be shared across open tabs where configured. After the last tab using an instance closes, that running frontend engine may be discarded. A new instance can reacquire data lazily from the local service or another source.\n\nThis idea would retain a local persistent copy of previously acquired nodes, edges and the metadata needed to interpret them, so reopening could reuse unchanged data instead of fetching it all again. It concerns a recoverable materialization cache. Frontend-owned durable data, such as saved preferences or intentionally persisted drafts, has its own persistence requirements and must remain separate from disposable cache lifecycle.\n\nWhy defer beyond MVP\nShared in-memory state across concurrent tabs directly addresses repeated acquisition during active use. A persistent cache adds benefit mainly when reopening after all tabs have closed. The local service avoids remote network latency, though serialization, transfer and reconstruction can still be expensive. Those costs have not yet been measured. The user agreed to defer this optimization and retain it as an idea.\n\nTradeoffs to investigate\n- Validate freshness against the contributing authorities, deletions, type definitions and effective contributor configuration before treating persisted content as current.\n- Keep cache ownership and identity explicit when multiple configured engines, templates or users are involved.\n- At the time of this discussion, engine revisions include a new startup epoch, so service restarts prevent direct reuse of old revision stamps without further validation.\n- Account for local storage reads/writes, failure handling, cache size and eviction, and format validity. Disposable incompatible cache contents should be discarded rather than requiring backward-compatibility machinery.\n- Restoring a snapshot still incurs reading, deserialization and engine reconstruction; measure end-to-end benefit rather than assuming fewer requests means faster startup.\n\nWhen to revisit\nProfile reopening with representative graph sizes. Measure time until useful content is available, transferred bytes, service work, and frontend reconstruction. Revisit if reacquiring unchanged data is a material bottleneck. Compare lazy reacquisition with validated cache restoration and verify that changed or deleted data is not presented as current.\n\nNo storage technology or cache-validation protocol has been selected.\n\nOrigin: engine composition discussion in graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/67e7eb8b-7d65-4255-b3d0-3b183afd2265.json (discussion responses 5–8).",
+        "title": "Persist frontend materialization cache across browser sessions",
+        "updatedAt": "2026-10-22T04:47:11.535Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/909a6e91-ef67-4c33-a571-40b1db8573b0.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/909a6e91-ef67-4c33-a571-40b1db8573b0.json",
+      "properties": {
+        "meaning": "idea",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/909a6e91-ef67-4c33-a571-40b1db8573b0.json"
+}

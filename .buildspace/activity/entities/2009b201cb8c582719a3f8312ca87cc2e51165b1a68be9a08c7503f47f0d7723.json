@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13ee115d-1a37-4cb6-a517-f12713622955.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13ee115d-1a37-4cb6-a517-f12713622955.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-05T00:45:43.408Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1374,
+        "description": "The Clear selection button in the Repositories toolbar is not centered, and its current × icon does not clearly communicate clearing the selection. Use the shared icon-button presentation with a centered icon that conveys deselection; retain a clear tooltip and accessible name. Verify single and multiple selection, keyboard focus, and alignment beside the other toolbar controls. This changes presentation, not the meaning of selection.",
+        "title": "Improve the Repositories clear-selection button alignment and icon",
+        "updatedAt": "2026-11-05T06:52:37.135Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13ee115d-1a37-4cb6-a517-f12713622955.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13ee115d-1a37-4cb6-a517-f12713622955.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13ee115d-1a37-4cb6-a517-f12713622955.json"
+}

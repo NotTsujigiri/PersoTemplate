@@ -1,0 +1,326 @@
+{
+  "time": "2026-09-27T09:45:35.743Z",
+  "scope": "Compared with the pre-implementation source capture; additional new files limited to this implementation’s known owning modules. This is provenance, not a replacement for the immutable review target.",
+  "changes": [
+    {
+      "file": "app/workflow.mjs",
+      "status": "modified",
+      "before": "f13edb4358e25b973525d37f9995d6d6a2f2af7dcddd67579aed4879f71dc464",
+      "after": "f4e4267531ecaa02da5e0e7db9a6bfe23a4418e906c8babf78ff90b11beaf72a"
+    },
+    {
+      "file": "app/contributions.mjs",
+      "status": "modified",
+      "before": "2214fadb74dff12f22a63931c4713cfa47d398828d76332367b7bdfa5846b82f",
+      "after": "ab0d4fe42dd406d3d002422d53e3ef2a0fc89903608215edc8ff34695d925b1f"
+    },
+    {
+      "file": "app/checkpoints.mjs",
+      "status": "removed",
+      "before": "7b6309e065fbbba683a9c96b752016cf7f601b73a66e0a1f84eac39a3d6a6dba"
+    },
+    {
+      "file": "app/browser-components.json",
+      "status": "modified",
+      "before": "af425b87a681b33482ea0823b9985c63719537b2a25885ecc7683f4d96b23f0c",
+      "after": "1be265a8f8a07715243a9391951cd22127e21d4635972d721bb80ef272caf239"
+    },
+    {
+      "file": "app/server.mjs",
+      "status": "modified",
+      "before": "b44364a2e5b5e84118caa11d7f8f8fa3bfd2c4ffb14b19cdba6aa421b82e1ccf",
+      "after": "6bbea4b916ad7efc1cfd02c13288c26d471837220f52cecb57627b08f7c398be"
+    },
+    {
+      "file": "app/public/app.js",
+      "status": "modified",
+      "before": "57727a2df83139a8eacb19a4e69650806f5ae918cf4fe0a5bb97befeb7b07878",
+      "after": "802eda91fdf10abc8b60dd382cd23efc642dcbe0a262c36ffbb07ae94083caff"
+    },
+    {
+      "file": "app/package.json",
+      "status": "modified",
+      "before": "73c3c3b3db79413f6a9458304df368b081fe4178968f842bb40cd0fe1d1f7195",
+      "after": "8da4c90b0f01a9357f2f1deff5ebd1c1dbddee23f393643de23eaf8920462e54"
+    },
+    {
+      "file": "Systems/Depth4/SystemsEngineering/src/index.ts",
+      "status": "modified",
+      "before": "1d5cabacc6d54607a1da37189e3ed8f0e77d98b327bf10a96233dad56cf33bc2",
+      "after": "481fa677d5ed8cace356812e665d72db8f944156d5bffc73dfba0b541f7c113e"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/package.json",
+      "status": "modified",
+      "before": "786e0acd051f0dd3c8b5b6e240f6404760cdab3138333de0a344df45817d0610",
+      "after": "8cfb0545353c37020be407fc88040df39887d9cf242b7bc89e676d63488b6f82"
+    },
+    {
+      "file": "app/public/layout.js",
+      "status": "modified",
+      "before": "25b88ee6f90aaaf53c4a7bd511931b38a3322c26857e223822d545b542aeee7c",
+      "after": "b633641d0b28b13dfd2e41459317fbd223743a9c82f99fe44d1534f9075a27ba"
+    },
+    {
+      "file": "app/public/hub.js",
+      "status": "modified",
+      "before": "90e528c9c9b9a61166421e2c3b2adb152d641d98415819e2ac6c61a2228d8dac",
+      "after": "df112b5483ac70e232afca7d8f0ac2fca7a1b2890b7cb8fe257e70a61d18180f"
+    },
+    {
+      "file": "app/public/review-model.js",
+      "status": "modified",
+      "before": "3cd8c0d6ca34395c40ebd787033c7400c34f5e864374a8750be2cd5f7e3c40fe",
+      "after": "5d757ca5b50db96108b65d77471aa62dfa1881f59398305bcb68739ae658750b"
+    },
+    {
+      "file": "app/public/style.css",
+      "status": "modified",
+      "before": "ff8ebde6bf2a6cac6d3ee96f0c570ffab2d7c8434cfaaea99256ad809a1e2ea9",
+      "after": "a603b8c2fbe22802d1bc8054fb34ce90add6d55d480c296791a9997fad3f8ce6"
+    },
+    {
+      "file": "app/public/timeline.js",
+      "status": "removed",
+      "before": "92431bda4afb151a27413f7adf46b67278dbb4e3a2e93aa6e025aaf10fa67cc7"
+    },
+    {
+      "file": "app/test/workflow.test.mjs",
+      "status": "modified",
+      "before": "cddb6150847ca529f6c9dc458de9d7207824bf4f843c01884d23cdfaced9535b",
+      "after": "6b4c400a64ed4f8de843883e656ac1a8792ec681d8acc675ac555166b87f53fc"
+    },
+    {
+      "file": "app/test/timeline-ui.spec.mjs",
+      "status": "removed",
+      "before": "01385a61e290a55b93cc737a3db0d9b49ac0e2cccadeb05fbd578523405abab0"
+    },
+    {
+      "file": "app/test/timeline-sample-ui.spec.mjs",
+      "status": "removed",
+      "before": "c95eee2bdb74ce6e2552f242261e4c513b3a553147c3f43588c1e1ef380cb349"
+    },
+    {
+      "file": "app/test/review-fixture.mjs",
+      "status": "modified",
+      "before": "af1c8ee42e1c244907aa050a845b1ee8c288779e7ed1258eec18c287089b82b8",
+      "after": "df8ccff990824d367b78dc5b1a5b8339604b61447b8cf9d51351bb4ecab37895"
+    },
+    {
+      "file": "app/test/restart.test.mjs",
+      "status": "modified",
+      "before": "54d5c4e675b2e7233c8efe6788e4005db71bc94f2c7c9862655e7f29c1e617bc",
+      "after": "4de4e60ac0bc1c1ef9f1761f73447b6adda014ed314266eb4b8ce7f3e026e2c0"
+    },
+    {
+      "file": "app/test/iteration-diff.test.mjs",
+      "status": "modified",
+      "before": "010e104200a671f8a4181007ae02598b684e81f6e90c76f7b34ffcb107293ba1",
+      "after": "2fd4ebc21368a80f0441985e4f7aaff2d3d710baff9bc6fcbedaab48f6bf6729"
+    },
+    {
+      "file": "app/test/contributions.test.mjs",
+      "status": "modified",
+      "before": "ae307d5da4bf5ab9d65564bf1e4d5bf4a414ed9a8d924736d0ca526cba70cca0",
+      "after": "8280299120ee39777cc0f781ae6999a5f502828ccc03030f8df3ce16befda342"
+    },
+    {
+      "file": "app/test/checkpoints.test.mjs",
+      "status": "removed",
+      "before": "39b1785a2368a9395a3c314585acb17d358b9ec94613b13e56f58ff38da713e6"
+    },
+    {
+      "file": "app/sessions.mjs",
+      "status": "modified",
+      "before": "96d8cb8ac7a2f06ff13b0fb1656ecd19ee7e4efc7f73d0cc2d843904b34b8bed",
+      "after": "e61926b73b7534881dac67a8e36607af13322e57c9ca718e66a35a594384630d"
+    },
+    {
+      "file": "Systems/Depth0/RelationEngine/index.ts",
+      "status": "modified",
+      "before": "a779f67b520e1b24cf92d10b4ec0ba8ce7ca2480b1b3d054d9364a1b6648b24a",
+      "after": "6b2b0244dbe2d8c40e9e18496e9e6f21189d8413c08df1a0ce05932f6b4356f1"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/Depth2/ViewToolbar/index.ts",
+      "status": "modified",
+      "before": "57925a8f9ea8e64bf08eb2756aa36afe797169a52f91600f91136c6ce5f42642",
+      "after": "d05f26eeea9b63da9c8f95d92c896df96c51df9736c7874cd564038f381ef251"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/Depth1/SchemaForm/index.ts",
+      "status": "modified",
+      "before": "1ca476771abcef52d8c25009447118452c8b47933d94545f00aa9e73f03b02ff",
+      "after": "608fb0c495850cdf277008e4d9fc4f60fbf2f7732bf2158828180c299ae30321"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/Depth1/DataTable/index.ts",
+      "status": "modified",
+      "before": "5d5bd0e29bde82e12705f088640bcbbf772cc0ab93af9167c58deace07fa0393",
+      "after": "b8bdb03741c7150b7228cba9eb07d7b731981385238ecb6a182b2ce00f368e83"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/Depth1/Elements/Depth1/CompositionInput/dropdown-wheel.ts",
+      "status": "modified",
+      "before": "ebde433771cdf43890acf39aa831882e3fb0b7bf0e12c87b13b4828f8e92722c",
+      "after": "f717eeb81d706f5c0239f6f9b8634344aadd16aa697bac6ad43b11b3fa5cb9a5"
+    },
+    {
+      "file": "package.json",
+      "status": "modified",
+      "before": "e77b77548af962c521dbbc55eda1c25738cd7a16249178e38126cc97b6ae7578",
+      "after": "30da9d57ac33fc863c8425658903c3d9656b5c5639db5220dac3b494774d4341"
+    },
+    {
+      "file": "package-lock.json",
+      "status": "modified",
+      "before": "62da0bbf3beb40d0c2c16cad09bb6ce48757214ab8a2881b380d5f529e45733a",
+      "after": "b80e6890f79d3698f890f82446b9eb4dc998583092b7acb38ff9111e4414c62a"
+    },
+    {
+      "file": "Systems/Depth0/RelationEngine/Depth0/Serialization/graph-documents.ts",
+      "status": "added",
+      "after": "ddaeba62cdbde71f43240a8818d7dea998c6cb7b8084f4004279d8859fd56ef5"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/Depth1/DataTable/column-heading.ts",
+      "status": "added",
+      "after": "60f4249312752b0f52b0d85c0144d9b1a19325b882842ef4f5fd22a2d18d0829"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/Depth2/FeedbackRows/index.ts",
+      "status": "added",
+      "after": "d32d7c11a0419f1d99a8f1b1759179729c5f4d3d6f63d466603a36aaffb4e101"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/Depth2/IndependentColumns/index.ts",
+      "status": "added",
+      "after": "9ca5354f39b22ba17e46f3c1a730b74d251ef43c16c864d03624518a62f6c376"
+    },
+    {
+      "file": "Systems/Depth1/RelationalUi/Depth2/RangeGraph/index.ts",
+      "status": "added",
+      "after": "813e3a32daffcb74eb12c3c5190f8d7871fa0a56b4f59ad22ff9facfd71cf033"
+    },
+    {
+      "file": "app/build-template-services.mjs",
+      "status": "added",
+      "after": "826628e0e817c2ae73e467328f33c05d0f0039b7bff42e4d5b3f8510a300c6cd"
+    },
+    {
+      "file": "app/planning-checks.mjs",
+      "status": "added",
+      "after": "b41d3ae53b7eca948cbf243391df6c090d84069565e6ed2249da86a952d559af"
+    },
+    {
+      "file": "app/planning-contract.mjs",
+      "status": "added",
+      "after": "1829b52a118d24f5b9c9f6db5543a78baf7a68c05c836cc023a561d7c4e7f6bc"
+    },
+    {
+      "file": "app/planning-files.mjs",
+      "status": "added",
+      "after": "73ffeda97e9c855292fcff56c534542eb83789f67bdbccf2441fbf0e221d48e3"
+    },
+    {
+      "file": "app/planning-inputs.mjs",
+      "status": "added",
+      "after": "04db51fa970c5df63b9f051b7638ec1304ead2ffc37ab1f187bf05fce1a4f08c"
+    },
+    {
+      "file": "app/planning-mcp-host.mjs",
+      "status": "added",
+      "after": "fe716dfadd0d476ed4b61c3b7e1415fcd6cf907b20395b00ca955cb64622a81d"
+    },
+    {
+      "file": "app/planning-requests.mjs",
+      "status": "added",
+      "after": "b212dd9384ca2ecd9f0b26d46c04436124b822cf3e1c450b29fc26245dadc9cd"
+    },
+    {
+      "file": "app/planning-runtime.mjs",
+      "status": "added",
+      "after": "76adae21327c841e1eff78b7c84f68061c0ca30583ed5f8c4d023eba86433c5e"
+    },
+    {
+      "file": "app/planning-store.mjs",
+      "status": "added",
+      "after": "afc66af72fe089dfefef43934cb07e97d04a5046d463a021a19b3a6d931a26ee"
+    },
+    {
+      "file": "app/planning-transfer.mjs",
+      "status": "added",
+      "after": "79e07c0108cc4062234e6cc3ac4ffef455f5b6a4f8828816d7373d87ac9ff572"
+    },
+    {
+      "file": "app/planning.mjs",
+      "status": "added",
+      "after": "cc91955a2144bef4d29c8db63ff9260f3fac9775b7bec238ce71c581df8ea680"
+    },
+    {
+      "file": "app/public/planning.css",
+      "status": "added",
+      "after": "0a22ecc10261ce3bc728385730f53135192298ca5cfad82fcb94671fcea284ec"
+    },
+    {
+      "file": "app/public/planning.js",
+      "status": "added",
+      "after": "d8c4fe3ce7c03c820844585026a7975696822fdefe12852b20aa38d518ddb082"
+    },
+    {
+      "file": "app/syntax-check.mjs",
+      "status": "added",
+      "after": "2d77be4d1cc7ebf1eb3c58c01f02d7bf2cc517d78d29c356115e6491c368f199"
+    },
+    {
+      "file": "app/test/planning-graph.test.mjs",
+      "status": "added",
+      "after": "2aa78094c46e95b20ed0176d32d2a80a50b38979bd9a7f3fcccfae247964b1d9"
+    },
+    {
+      "file": "app/test/planning-integration.test.mjs",
+      "status": "added",
+      "after": "d1cfe0db7a5765120067c63a3224723603de863bb46efa5ef1c479e7a8a5ff60"
+    },
+    {
+      "file": "app/test/planning-overlap.test.mjs",
+      "status": "added",
+      "after": "62f324d680817d4270443924bd64a6aa7ec4206f3f32291228d369206db6682f"
+    },
+    {
+      "file": "app/test/planning-regressions-ui.spec.mjs",
+      "status": "added",
+      "after": "7603b03d766065d02ca2875d28093491e331c874f7a09857ca2386b979bb5b5a"
+    },
+    {
+      "file": "app/test/planning-save-pending-ui.spec.mjs",
+      "status": "added",
+      "after": "adc4a3c20ab9a14c27e0fa26d6cf77d1f1f481fdab02ee34ac16219db3a6ce03"
+    },
+    {
+      "file": "app/test/planning-save-refresh-ui.spec.mjs",
+      "status": "added",
+      "after": "e3cbeb1e636c8bd5121c6faca45d6efe57f0bfc49839f8cab54d8eb1c08892f4"
+    },
+    {
+      "file": "app/test/planning-ui.spec.mjs",
+      "status": "added",
+      "after": "905d75b91335f2977d4808cfd7879126bce2e430a64cadc38efee95f23ec282d"
+    },
+    {
+      "file": "app/test/planning-withdraw-ui.spec.mjs",
+      "status": "added",
+      "after": "b43eb098e6c45bbbbe28b14d0e9cd0f14a1a16e790fc28b32c01c5fba3b4b2d8"
+    },
+    {
+      "file": "app/test/planning-withdraw.test.mjs",
+      "status": "added",
+      "after": "fa17f3a096ef0e444b3714224242b7964662e73c76d63b202c34cc26f0ee7c14"
+    },
+    {
+      "file": "app/test/planning.test.mjs",
+      "status": "added",
+      "after": "9a72ad98696bec7f0e6ac3f208aa95199d9fd1128f3c467e4135898ea0c8d488"
+    }
+  ]
+}

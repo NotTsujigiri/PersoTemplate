@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9126138b-40fd-45ff-988b-e0cf670d82db.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9126138b-40fd-45ff-988b-e0cf670d82db.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T23:56:25.166Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 720,
+        "description": "- Define owned vocabulary and where each term applies, including component properties versus fields.\n- Detect outdated UI labels, help and documentation deterministically without banning legitimate technical terms.\n- Integrate findings with repository checks and add positive/negative regression fixtures.",
+        "title": "Design and enforce product vocabulary checks",
+        "updatedAt": "2026-10-18T23:57:06.574Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9126138b-40fd-45ff-988b-e0cf670d82db.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9126138b-40fd-45ff-988b-e0cf670d82db.json",
+      "properties": {
+        "placement": "queued",
+        "priority": -1,
+        "purpose": "development",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9126138b-40fd-45ff-988b-e0cf670d82db.json"
+}

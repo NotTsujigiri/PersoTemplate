@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fd2db659-b793-45d6-b46e-a90de4c5249b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fd2db659-b793-45d6-b46e-a90de4c5249b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Show the actual plan and recorded work without flattening relationships.\n\nScope\n\n• Reusable graph projection/renderer with containment drill-down and actual prerequisites.\n\n• Schematic planned/recorded task ranges and queue episodes, parallel paths, integration, review end dots and abandoned branches; chronology without measured durations.\n\n• Participant metadata only where actually known. No duration/cost features.\n\nSuccess criteria\n\n1. Every visible task/edge maps to real persisted IDs and their actual relationship; outside-scope prerequisites are reachable.\n\n2. Nested tasks can be opened through breadcrumb; shared nodes are not duplicated as independent tasks.\n\n3. Planned versus recorded work and incomplete versus complete attempts are distinguishable; range length is not measured time and chronology/relations remain faithful.\n\n4. No duration/cost fields, placeholders, elapsed axis or breakdown; graph connectors have no arrows and labels remain unboxed.\n\n5. The golden loop topology has distinct task IDs and only its declared edges; failed review end returns downward to next work start, each range has two caps, abandoned review is terminal, and parallel work/reviews remain possible.\n\n6. Known queue episodes render gray without numeric duration; participation differs according to actual actor data and no unknown actors are fabricated.\n\nEvidence\n\n• Graph projection tests\n\n• Branch/replan/abandon browser scenarios\n\n• Visual screenshots with data references\n\n",
+        "title": "Build the model-faithful nested task graph timeline",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fd2db659-b793-45d6-b46e-a90de4c5249b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fd2db659-b793-45d6-b46e-a90de4c5249b.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fd2db659-b793-45d6-b46e-a90de4c5249b.json"
+}

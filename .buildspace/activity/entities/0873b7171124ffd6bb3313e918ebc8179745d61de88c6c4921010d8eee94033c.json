@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c506696-b682-4e29-a0b0-11f2786c6224.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c506696-b682-4e29-a0b0-11f2786c6224.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T11:37:28.011Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 668,
+        "description": "",
+        "title": "- Independent boundary reviewer rechecked entity identity, repeated components, typed capabilities, descriptor ownership, lazy views and atomic planning publica",
+        "updatedAt": "2026-10-18T11:37:50.466Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c506696-b682-4e29-a0b0-11f2786c6224.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c506696-b682-4e29-a0b0-11f2786c6224.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Independent boundary reviewer rechecked entity identity, repeated components, typed capabilities, descriptor ownership, lazy views and atomic planning publication: no remaining material blocker.\n- Prior five-store identity/history/evidence preservation audit remains approved; predecessor engine node-type registry is absent from the active API.\n- Independent UI reviewer approved restored self-edge coverage in d9a611e; its execution remains pending.\n- Final acceptance still requires the current complete checkpoint. Native worker exit remains unresolved separately."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c506696-b682-4e29-a0b0-11f2786c6224.json"
+}

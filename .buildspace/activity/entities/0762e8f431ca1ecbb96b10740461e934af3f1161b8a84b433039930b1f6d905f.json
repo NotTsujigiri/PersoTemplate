@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3fd346f5-12ff-4fe4-a27c-dd2f13a8371b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3fd346f5-12ff-4fe4-a27c-dd2f13a8371b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-10T00:25:44.504Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 442,
+        "description": "",
+        "title": "Sample reply — this shows how a response sits inside the discussion. We can use this thread while refining the component.",
+        "updatedAt": "2026-10-10T00:25:46.700Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3fd346f5-12ff-4fe4-a27c-dd2f13a8371b.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3fd346f5-12ff-4fe4-a27c-dd2f13a8371b.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8b2e24e1-69ec-4cc0-9da1-97218a35e17a.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Sample reply — this shows how a response sits inside the discussion. We can use this thread while refining the component."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3fd346f5-12ff-4fe4-a27c-dd2f13a8371b.json"
+}

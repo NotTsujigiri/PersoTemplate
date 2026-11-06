@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa1fd45-e8f1-4ba5-912a-c88c82bdc157.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa1fd45-e8f1-4ba5-912a-c88c82bdc157.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-20T08:27:33.721Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 885,
+        "description": "Immutable attached evidence",
+        "title": "Component consistency and updater verification 2026-10-20.json",
+        "updatedAt": "2026-10-20T08:27:34.027Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa1fd45-e8f1-4ba5-912a-c88c82bdc157.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa1fd45-e8f1-4ba5-912a-c88c82bdc157.json",
+      "properties": {
+        "artifact": {
+          "hash": "6ed7203cf897cf9692ae1c82c2a83a10e7c7dcd9b056af23b6c8512d2ae3563a",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/6ed7203cf897cf9692ae1c82c2a83a10e7c7dcd9b056af23b6c8512d2ae3563a",
+          "mime": "application/json",
+          "size": 7974
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa1fd45-e8f1-4ba5-912a-c88c82bdc157.json"
+}

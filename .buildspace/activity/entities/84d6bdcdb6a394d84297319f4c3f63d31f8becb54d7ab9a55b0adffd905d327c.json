@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/890be21c-fc70-4560-8d41-8ce0790101b4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/890be21c-fc70-4560-8d41-8ce0790101b4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.925Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Provide a children Node list and selected child Node editor at template/space/channel levels as appropriate. Default opens Default -> Private. Remove the redundant outer Buildspace configuration panel identified by the user.\n\nProgress: navigation is now a configured frontend contributor in the owning local engine. Template, space and channel levels display the reusable Node list / Node editor, including common Copy URL tools. The redundant Buildspace configuration wrapper is removed. The Broccoli icon opens the template list; hover shows the complete unpinned navigation tree. Focused browser recordings pass for overview geometry, full-tree navigation, independent/shared frontend contributors, unsaved draft guards and Recovery. Remaining integration includes dynamic space membership and context-scoped header content.\n\nSlice verification completed: Canonical navigation nodes now feed the shared children list and selected-node editor at each navigation level. The extra Buildspace configuration wrapper is removed. Navigation/geometry recordings pass and their screenshots were inspected.",
+        "title": "Show children and selected-node editing at navigation levels",
+        "updatedAt": "2026-10-22T22:28:42.574Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/890be21c-fc70-4560-8d41-8ce0790101b4.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/890be21c-fc70-4560-8d41-8ce0790101b4.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/890be21c-fc70-4560-8d41-8ce0790101b4.json"
+}

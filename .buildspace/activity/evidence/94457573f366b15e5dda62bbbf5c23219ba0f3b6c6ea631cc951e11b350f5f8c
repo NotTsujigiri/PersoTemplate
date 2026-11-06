@@ -1,0 +1,279 @@
+[
+  {
+    "scenario": "query-continuation",
+    "actual": [
+      {
+        "source": "name:alpha ",
+        "choices": [
+          "AND",
+          "OR",
+          "hasComponent",
+          "name",
+          "flag",
+          "query"
+        ]
+      },
+      {
+        "source": "name:contains(alpha)",
+        "choices": [
+          "AND",
+          "OR"
+        ]
+      },
+      {
+        "source": "flag:true",
+        "choices": [
+          "true",
+          "AND",
+          "OR"
+        ]
+      },
+      {
+        "source": "(flag:true || flag:false) ",
+        "choices": [
+          "AND",
+          "OR",
+          "hasComponent",
+          "name",
+          "flag",
+          "query"
+        ]
+      },
+      {
+        "source": "(flag:true ",
+        "choices": [
+          "hasComponent",
+          "name",
+          "flag",
+          "query"
+        ]
+      },
+      {
+        "source": "hasComponent(\"test:item\") ",
+        "choices": [
+          "AND",
+          "OR",
+          "hasComponent",
+          "name",
+          "flag",
+          "query"
+        ]
+      },
+      {
+        "source": "name:alpha X",
+        "choices": []
+      }
+    ],
+    "expected": [
+      {
+        "source": "name:alpha ",
+        "choices": [
+          "AND",
+          "OR",
+          "XOR"
+        ]
+      },
+      {
+        "source": "name:contains(alpha)",
+        "choices": [
+          "AND",
+          "OR",
+          "XOR"
+        ]
+      },
+      {
+        "source": "flag:true",
+        "choices": [
+          "AND",
+          "OR",
+          "XOR"
+        ]
+      },
+      {
+        "source": "(flag:true || flag:false) ",
+        "choices": [
+          "AND",
+          "OR",
+          "XOR"
+        ]
+      },
+      {
+        "source": "(flag:true ",
+        "choices": [
+          "AND",
+          "OR",
+          "XOR"
+        ]
+      },
+      {
+        "source": "hasComponent(\"test:item\") ",
+        "choices": [
+          "AND",
+          "OR",
+          "XOR"
+        ]
+      },
+      {
+        "source": "name:alpha X",
+        "choices": [
+          "XOR"
+        ]
+      }
+    ]
+  },
+  {
+    "scenario": "query-caret",
+    "actual": {
+      "value": "name:contains(abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij) && ",
+      "caret": 139,
+      "atEnd": false
+    },
+    "expected": {
+      "value": "name:contains(abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij) && ",
+      "caret": 139,
+      "atEnd": true
+    }
+  },
+  {
+    "scenario": "outline",
+    "actual": [
+      {
+        "step": "initial outline",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Save button",
+          "Cancel button",
+          "notes.txt"
+        ]
+      },
+      {
+        "step": "opened component hierarchy",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts"
+        ]
+      },
+      {
+        "step": "composition presence",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Save button",
+          "Cancel button"
+        ]
+      },
+      {
+        "step": "one composition child",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Save button"
+        ]
+      },
+      {
+        "step": "replaced outline no longer matches",
+        "rows": []
+      },
+      {
+        "step": "current composition child",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Publish button"
+        ]
+      },
+      {
+        "step": "cleared filter",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Publish button",
+          "notes.txt"
+        ]
+      }
+    ],
+    "expected": [
+      {
+        "step": "initial outline",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Save button",
+          "Cancel button",
+          "notes.txt"
+        ]
+      },
+      {
+        "step": "opened component hierarchy",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Save button",
+          "Cancel button"
+        ]
+      },
+      {
+        "step": "composition presence",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Save button",
+          "Cancel button"
+        ]
+      },
+      {
+        "step": "one composition child",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Save button"
+        ]
+      },
+      {
+        "step": "replaced outline no longer matches",
+        "rows": []
+      },
+      {
+        "step": "current composition child",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Publish button"
+        ]
+      },
+      {
+        "step": "cleared filter",
+        "rows": [
+          "Repo",
+          "src",
+          "Example.ts",
+          "Panel",
+          "Publish button",
+          "notes.txt"
+        ]
+      }
+    ]
+  }
+]

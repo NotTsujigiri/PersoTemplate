@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/28b64ac7-ba0c-461f-ae69-ed41a4d10d04.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/28b64ac7-ba0c-461f-ae69-ed41a4d10d04.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-01T02:41:22.487Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1303,
+        "description": "Repository Text editor feedback, comparing text and expression modes. Scope collapse/expand and subexpression/token-mode expansion use the same icon-button styling, although they perform different actions. Their placement also changes between modes, making the behavior feel unintuitive. No solution has been chosen.\n\nBrowser annotation 2 (verbatim):\n\"the fact we use the same icon button styling for collapse / expand of \"scope\" and for the subexpression / token mode when in expression mode and the placement is different between the two mode feel really bad and non intuitive as a human user. Put an inputs for this feedback i don't know how i want it solved though.\"\n\nSelected control: Unfold line 240.",
+        "title": "Scope folding and token expansion are visually ambiguous",
+        "updatedAt": "2026-11-01T02:42:05.386Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/28b64ac7-ba0c-461f-ae69-ed41a4d10d04.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/28b64ac7-ba0c-461f-ae69-ed41a4d10d04.json",
+      "properties": {
+        "meaning": "feedback",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/28b64ac7-ba0c-461f-ae69-ed41a4d10d04.json"
+}

@@ -1,0 +1,107 @@
+{
+  "components": [
+    {
+      "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/9d0b3801-1f13-45ce-9d88-9441ff3c7071.json#planning%3Aidentity",
+      "nodeId": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/9d0b3801-1f13-45ce-9d88-9441ff3c7071.json",
+      "properties": {
+        "context": null,
+        "createdAt": "2026-10-01T22:20:03.528Z",
+        "createdBy": "human:user",
+        "createdRevision": 1,
+        "title": "The Broccoli",
+        "updatedAt": "2026-10-05T23:14:51.710Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/9d0b3801-1f13-45ce-9d88-9441ff3c7071.json#planning%3Abuildspace",
+      "nodeId": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/9d0b3801-1f13-45ce-9d88-9441ff3c7071.json",
+      "properties": {
+        "checkoutBindings": [
+          {
+            "root": "C:\\Users\\vince\\Documents\\GitHub\\Btr\\BtrTemplate",
+            "url": "file:///C:/Users/vince/Documents/GitHub/Btr/BtrTemplate"
+          },
+          {
+            "root": "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli",
+            "url": "file:///C:/Users/vince/Documents/GitHub/Btr/TheBroccoli"
+          },
+          {
+            "root": "C:\\Users\\vince\\Documents\\GitHub\\Perso\\PersoTemplate",
+            "url": "file:///C:/Users/vince/Documents/GitHub/Perso/PersoTemplate"
+          }
+        ],
+        "compositionFolder": "C:/Users/vince/Documents/GitHub/Perso/PersoTemplate",
+        "lockedSelection": {
+          "manifestHash": "9660fbbccc57ac8b8b6ec4e2629fa8396d6cd8245b0128e8105b8ee5a89539e0",
+          "repositories": [
+            {
+              "commit": "62e6529e62475173b048b8160deee0cc28945782",
+              "id": "file:///c:/users/vince/documents/github/btr/btrtemplate",
+              "path": "Btr/BtrTemplate",
+              "requests": [
+                {
+                  "from": "file:///c:/users/vince/documents/github/perso/persotemplate",
+                  "policy": {
+                    "kind": "branch",
+                    "value": "master"
+                  }
+                }
+              ],
+              "selected": "master",
+              "url": "file:///C:/Users/vince/Documents/GitHub/Btr/BtrTemplate"
+            },
+            {
+              "commit": "ecceb9c16f87a8b2b491a493f4a15472258864c5",
+              "id": "file:///c:/users/vince/documents/github/btr/thebroccoli",
+              "path": "Btr/TheBroccoli",
+              "requests": [
+                {
+                  "from": "file:///c:/users/vince/documents/github/btr/btrtemplate",
+                  "policy": {
+                    "kind": "branch",
+                    "value": "master"
+                  }
+                }
+              ],
+              "selected": "master",
+              "url": "file:///C:/Users/vince/Documents/GitHub/Btr/TheBroccoli"
+            },
+            {
+              "commit": "4040ae94e666320255076be3278981396d3cdbf3",
+              "id": "file:///c:/users/vince/documents/github/perso/persotemplate",
+              "path": "Perso/PersoTemplate",
+              "requests": [
+                {
+                  "from": "$root",
+                  "policy": {
+                    "kind": "branch",
+                    "value": "master"
+                  }
+                }
+              ],
+              "selected": "master",
+              "url": "file:///C:/Users/vince/Documents/GitHub/Perso/PersoTemplate"
+            }
+          ],
+          "schema": 1
+        },
+        "repositories": [
+          {
+            "path": "Perso/PersoTemplate",
+            "policy": {
+              "kind": "branch",
+              "value": "master"
+            },
+            "url": "file:///C:/Users/vince/Documents/GitHub/Perso/PersoTemplate"
+          }
+        ],
+        "runtimeRoot": "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\.harness\\compositions\\personal",
+        "spaceId": "99a62c14-535f-4d9a-9ab2-642ed280b795"
+      },
+      "typeId": "planning:buildspace"
+    }
+  ],
+  "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/9d0b3801-1f13-45ce-9d88-9441ff3c7071.json"
+}

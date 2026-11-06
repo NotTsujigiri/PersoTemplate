@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75df6dcc-e1b6-4bc2-bc97-e10270b82ad9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75df6dcc-e1b6-4bc2-bc97-e10270b82ad9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T05:26:46.724Z",
+        "createdBy": "agent:codex",
+        "description": "Fourteen annotation results\n\n1. Removed top padding from shared source, inline-diff and side-by-side text panes, keeping gutter and source lines aligned.\n2. Added the deferred Backlog bug \"Fix incorrect file diff display\" (graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cc99b20d-7a52-4d88-9200-ad9389564e84.json); no diff calculation changes were made.\n3. Saved annotation feedback as an Input (graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e059378-f70b-48bf-b53a-70b7f2594c74.json), including prompt delivery, screenshot association, unrefined interfaces, and untested sharing across Inputs, reviews and chat.\n4. Saved the future non-file Changes feedback as an Input (graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dee2a00-e62e-4358-a0d5-8610c7b3b7fd.json). Current Changes remain file based.\n5. Added the deferred node diff bug (graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2776d967-a7ee-460e-8ac7-780da3b9d456.json) with the explicit requirement to preserve node editor layout rather than use a text diff.\n6. Removed Attach from the node toolbar and added its intended replacement to the existing relation-modal backlog task.\n7. Removed the node-toolbar nested-task + shortcut and included creation/linking in that relation-modal backlog task. Board/graph creation remains available.\n8. Description is a string. Multiline is an independent renderer preference; empty and one-line strings remain valid.\n9. Semantic labels now say String instead of Text.\n10. Created/Updated timestamps validate real UTC instants. Relational Engine owns contributed types, field validation, duplicate detection and discovery. Relational UI owns renderer contributions, compatibility, preference and deterministic selection. Shared discovery between node views and field renderers remains an idea Input (graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/76d29b0a-e17d-4aae-a10c-2b774c617061.json).\n11. Renamed Task board to Activity board.\n12. Aligned the JSON disclosure triangle with its heading and added a themed boundary around the structured field.\n13. Renamed the Node view to Node editor.\n14. Added reusable Relational UI ScrollArea composition, removed competing horizontal scroll containers, and constrained board/detail panes to available width.\n\nValidation: {\"productionBuild\":\"passed\",\"backendTests\":71,\"browserTests\":78,\"engineSuite\":\"passed\",\"sharedUiBuild\":\"passed\",\"sharedUiTests\":216,\"exactRecording\":\"passed\",\"liveUi\":\"verified\",\"draftsRestoredWithoutSaving\":2,\"inactiveSystemsEngineeringBuild\":\"blocked by existing missing dependencies and older relation definitions\"}\n\nThe authored reproduction failed on the unchanged implementation and the same accepted expected recording passes after the fixes. The full active-app checkpoint passes (71 backend and 78 browser checks). Shared Engine tests pass, and shared UI build plus 216 tests pass. Personal-template schema consumer and its explicit package dependency were updated; draft/save and timeline resize regressions pass. The inactive SystemsEngineering package's broader build remains blocked by existing missing dependencies and predecessor edge-label declarations; its direct shared-form consumers have been updated to the new field contract.\n\nThe live app was restarted and visually inspected. Two pre-existing unsaved task-field edits were restored without saving. No human review outcome was changed.\n",
+        "title": "Refine the Activity board and extensible node editor from fourteen annotations",
+        "updatedAt": "2026-09-30T09:21:53.006Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75df6dcc-e1b6-4bc2-bc97-e10270b82ad9.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75df6dcc-e1b6-4bc2-bc97-e10270b82ad9.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75df6dcc-e1b6-4bc2-bc97-e10270b82ad9.json"
+}

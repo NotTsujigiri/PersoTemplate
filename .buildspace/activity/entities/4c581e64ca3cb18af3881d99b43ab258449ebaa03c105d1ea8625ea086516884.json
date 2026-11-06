@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35240300-ee66-40f0-9082-b9788f9bbba8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35240300-ee66-40f0-9082-b9788f9bbba8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T14:05:16.548Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 542,
+        "description": "Immutable attached evidence",
+        "title": "Migration plan v2 - graph revision 541.json",
+        "updatedAt": "2026-10-17T14:05:29.410Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35240300-ee66-40f0-9082-b9788f9bbba8.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35240300-ee66-40f0-9082-b9788f9bbba8.json",
+      "properties": {
+        "artifact": {
+          "hash": "84a7dd9aeaab7191b7e0787a4d267ae5d999f836f4257f52b0103b65fdf2c2af",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/84a7dd9aeaab7191b7e0787a4d267ae5d999f836f4257f52b0103b65fdf2c2af",
+          "mime": "application/json",
+          "size": 11832
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35240300-ee66-40f0-9082-b9788f9bbba8.json"
+}

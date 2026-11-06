@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e059378-f70b-48bf-b53a-70b7f2594c74.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e059378-f70b-48bf-b53a-70b7f2594c74.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T05:26:46.725Z",
+        "createdBy": "agent:codex",
+        "description": "The user still uses Codex annotations: feedback becomes the next Codex prompt, and captured screenshots remain associated with each annotation, giving the model better issue context. Our top-right annotation modal is unrefined and the in-review annotation experience is underwhelming. Sharing the annotation system across Inputs, review tasks and chat remains untested and unproven, not established broken. Preserve this feedback for planning future development.",
+        "title": "Improve annotations and their use in agent review",
+        "updatedAt": "2026-10-19T05:28:07.949Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e059378-f70b-48bf-b53a-70b7f2594c74.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e059378-f70b-48bf-b53a-70b7f2594c74.json",
+      "properties": {
+        "meaning": "feedback"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e059378-f70b-48bf-b53a-70b7f2594c74.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e059378-f70b-48bf-b53a-70b7f2594c74.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:14:07.214Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T05:28:07.949Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e059378-f70b-48bf-b53a-70b7f2594c74.json"
+}

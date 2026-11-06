@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Web component editor — corrected scope</title>
+<style>:root{color-scheme:dark;font:17px/1.5 system-ui;background:#222321;color:#eee}body{max-width:850px;margin:40px auto;padding:0 24px}h1{font-size:1.5rem}li{margin:12px 0}small{color:#b7b9b4}</style>
+<small>Proposal review · 11 October 2026 · Contributor boundaries still to investigate</small>
+<h1>A generic WYSIWYG editor for web components</h1>
+<ol>
+<li>Select a TypeScript file; contributors identify whether it defines a component and expose the relevant nodes.</li>
+<li>Language and framework knowledge belongs to contributors, potentially TypeScript, HTML, CSS and Lit; the precise split still needs investigation.</li>
+<li>The editor displays those nodes and connects UI actions to contributed operations.</li>
+<li>No dependency on specific components, supported-name list, per-component adapter or mandatory editor metadata.</li>
+<li>Phase 1 is selecting and seeing components through that shared path.</li>
+<li>Sample-data setup and service substitution are deferred to phase 2; real-data access remains deferred.</li>
+<li>Rendering errors replace the content inside Visual and Preview, keeping the tabs and controls available.</li>
+<li>Use minimum size and zoom to fit through shared sizing and viewport capabilities.</li>
+<li>Named components are examples for verification, never cases that receive custom support.</li>
+<li>Revisit the investigation under these boundaries before deciding on implementation.</li>
+</ol>
+<p><small>The verbatim needs-analysis record is at .harness/design/existing-components-visual-needs-analysis.md. This corrected scope replaces the earlier factory/sample-data proposal; the earlier probes do not establish the contributor architecture required here.</small></p>
+</html>

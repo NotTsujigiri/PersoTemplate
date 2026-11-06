@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6bf3d581-631e-4f7a-8cc6-8d6bf6f4065c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6bf3d581-631e-4f7a-8cc6-8d6bf6f4065c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T11:33:20.368Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Search autocomplete — accepted geometry and flat-list reference",
+        "updatedAt": "2026-09-29T22:37:05.019Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6bf3d581-631e-4f7a-8cc6-8d6bf6f4065c.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6bf3d581-631e-4f7a-8cc6-8d6bf6f4065c.json",
+      "properties": {
+        "artifact": {
+          "hash": "e2c89ddb6055b9b46db7c435e126d8263b6b26fd01ea88032541a2e081d66a05",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/e2c89ddb6055b9b46db7c435e126d8263b6b26fd01ea88032541a2e081d66a05",
+          "mime": "image/png",
+          "size": 1586218
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6bf3d581-631e-4f7a-8cc6-8d6bf6f4065c.json"
+}

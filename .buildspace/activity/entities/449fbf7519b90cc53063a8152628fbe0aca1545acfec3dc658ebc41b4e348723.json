@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/abdce8ef-d7d0-4dc7-9dd7-8f613d7ecc0b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/abdce8ef-d7d0-4dc7-9dd7-8f613d7ecc0b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T03:35:16.385Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 611,
+        "description": "",
+        "title": "Independent agent review: discard query responses invalidated while in flight; clear exact-selection caches on authority-wide invalidation; replace an authority",
+        "updatedAt": "2026-10-18T07:38:04.139Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/abdce8ef-d7d0-4dc7-9dd7-8f613d7ecc0b.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/abdce8ef-d7d0-4dc7-9dd7-8f613d7ecc0b.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Independent agent review: discard query responses invalidated while in flight; clear exact-selection caches on authority-wide invalidation; replace an authority's retired metadata atomically; snapshot remote graphs and selections instead of retaining mutable payloads; reject duplicate data-type declarations. Add deterministic tests before accepting the transport cutover."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/abdce8ef-d7d0-4dc7-9dd7-8f613d7ecc0b.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13c0f51b-e976-4d47-85cf-93d436e0e9d1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13c0f51b-e976-4d47-85cf-93d436e0e9d1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T22:21:28.906Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 294,
+        "description": "Implemented all seven UI review corrections; awaiting human review.\n\n- Creation uses the normal Node editor, including Fields, Additional relations, the shared toolbar, Save/Cancel, and owner-backed validation/reference choices. Unsaved drafts are preserved across background board notifications.\n- SchemaForm reserves cross-field edge space only for rows that need it; unrelated fields use the complete width.\n- Fields and Additional relations have compact, clearly delimited headers. Section children own spacing, leaving scrollbars flush with their pane.\n- Chat/workspace uses the shared flex splitter allocation contract. Removed competing grid/fixed-width behavior, contained collapsed-edge guides, and added a shared pane-reveal operation. Repeated nested horizontal/vertical collapse, restore and pointer drags no longer leave gaps or overlap.\n\nVerification: npm run test:all passed (build, 136 backend tests, 114 browser tests). Shared owner tests passed: 7 Splitter and 4 SchemaForm. Original exact reproduction expectations remained unchanged and now pass. Refreshed live application inspected.\n\nAttached evidence includes the exact before/after records, screenshots, live geometry verification, and passing checkpoint/owner-test logs. The first full run exposed a timing error in the new test; it now waits for the notification it is testing before Save. Stale-write protection was preserved.\n\nMVP acceptance remains pending the user. No commit or merge performed.",
+        "title": "Unify node creation and repair composed splitter layouts",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13c0f51b-e976-4d47-85cf-93d436e0e9d1.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13c0f51b-e976-4d47-85cf-93d436e0e9d1.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13c0f51b-e976-4d47-85cf-93d436e0e9d1.json"
+}

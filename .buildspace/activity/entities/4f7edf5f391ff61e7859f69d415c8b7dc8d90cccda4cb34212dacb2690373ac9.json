@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46f2b39f-cfef-4c71-9e32-3d9656d50972.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46f2b39f-cfef-4c71-9e32-3d9656d50972.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T21:48:38.020Z",
+        "createdBy": "agent:codex",
+        "description": "Inputs / Active / Closed. Active has independently scrollable Waiting / In progress / Queued / Backlog with splitters. New/Later/time grouping where agreed, explicit acknowledgement resets on update, recency-only time groups, inherited optional priority elsewhere. Compact two-row cards with creator avatar, input disposition/type, task stage and priority controls. Reusable typed query/autocomplete with saved flat queries, same-width popup and collapsed toolbar search.",
+        "title": "Deliver the accepted Activity board and query experience",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46f2b39f-cfef-4c71-9e32-3d9656d50972.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46f2b39f-cfef-4c71-9e32-3d9656d50972.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/46f2b39f-cfef-4c71-9e32-3d9656d50972.json"
+}

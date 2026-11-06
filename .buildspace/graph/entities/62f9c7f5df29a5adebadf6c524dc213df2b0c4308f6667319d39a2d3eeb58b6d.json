@@ -1,0 +1,23 @@
+{
+  "components": [
+    {
+      "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json#planning%3Aidentity",
+      "nodeId": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json",
+      "properties": {
+        "context": null,
+        "title": "You"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json#planning%3Aactor",
+      "nodeId": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json",
+      "properties": {
+        "actorId": "human:user",
+        "actorKind": "human"
+      },
+      "typeId": "planning:actor"
+    }
+  ],
+  "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json"
+}

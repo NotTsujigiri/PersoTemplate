@@ -1,0 +1,128 @@
+{
+  "before": [
+    {
+      "step": "tool-results",
+      "createLink": true,
+      "updateLink": true,
+      "updatedTitle": "Updated task from tool",
+      "replayMatches": true,
+      "readMatches": true
+    },
+    {
+      "step": "launcher-sign-in",
+      "composerReady": true,
+      "credentialRemovedFromAddress": true
+    },
+    {
+      "step": "close-last-tab",
+      "openTabs": 0
+    },
+    {
+      "step": "reopen-create-link",
+      "title": null,
+      "unauthorized": true
+    },
+    {
+      "step": "reopen-update-link",
+      "title": null,
+      "unauthorized": true
+    },
+    {
+      "step": "different-port",
+      "hasAppCredential": false
+    },
+    {
+      "step": "fresh-browser",
+      "unauthorized": true
+    },
+    {
+      "step": "server-authority",
+      "invalidToken": 401,
+      "crossOrigin": 403
+    }
+  ],
+  "expected": [
+    {
+      "step": "tool-results",
+      "createLink": true,
+      "updateLink": true,
+      "updatedTitle": "Updated task from tool",
+      "replayMatches": true,
+      "readMatches": true
+    },
+    {
+      "step": "launcher-sign-in",
+      "composerReady": true,
+      "credentialRemovedFromAddress": true
+    },
+    {
+      "step": "close-last-tab",
+      "openTabs": 0
+    },
+    {
+      "step": "reopen-create-link",
+      "title": "Updated task from tool",
+      "unauthorized": false
+    },
+    {
+      "step": "reopen-update-link",
+      "title": "Updated task from tool",
+      "unauthorized": false
+    },
+    {
+      "step": "different-port",
+      "hasAppCredential": false
+    },
+    {
+      "step": "fresh-browser",
+      "unauthorized": true
+    },
+    {
+      "step": "server-authority",
+      "invalidToken": 401,
+      "crossOrigin": 403
+    }
+  ],
+  "after": [
+    {
+      "step": "tool-results",
+      "createLink": true,
+      "updateLink": true,
+      "updatedTitle": "Updated task from tool",
+      "replayMatches": true,
+      "readMatches": true
+    },
+    {
+      "step": "launcher-sign-in",
+      "composerReady": true,
+      "credentialRemovedFromAddress": true
+    },
+    {
+      "step": "close-last-tab",
+      "openTabs": 0
+    },
+    {
+      "step": "reopen-create-link",
+      "title": "Updated task from tool",
+      "unauthorized": false
+    },
+    {
+      "step": "reopen-update-link",
+      "title": "Updated task from tool",
+      "unauthorized": false
+    },
+    {
+      "step": "different-port",
+      "hasAppCredential": false
+    },
+    {
+      "step": "fresh-browser",
+      "unauthorized": true
+    },
+    {
+      "step": "server-authority",
+      "invalidToken": 401,
+      "crossOrigin": 403
+    }
+  ]
+}

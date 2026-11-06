@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0214370b-d425-4a04-aa95-65f0a140b1d0.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0214370b-d425-4a04-aa95-65f0a140b1d0.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-05T06:43:42.103Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1376,
+        "description": "Keep the Repositories view synchronized with external filesystem changes without reloading the page. Subscribe through the owning service, update additions/deletions/renames and modified files, retain selection/expansion/scroll and unsaved editor drafts, and dispose subscriptions when their scope is no longer used. Coalesce bursts so large unfiltered repositories remain responsive; do not introduce hidden-folder filters. Verify changes made outside the app and stale selected paths.",
+        "title": "Subscribe Repositories to filesystem changes",
+        "updatedAt": "2026-11-05T21:04:02.481Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0214370b-d425-4a04-aa95-65f0a140b1d0.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0214370b-d425-4a04-aa95-65f0a140b1d0.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0214370b-d425-4a04-aa95-65f0a140b1d0.json"
+}

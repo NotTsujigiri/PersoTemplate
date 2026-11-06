@@ -1,0 +1,319 @@
+{
+  "commit": "3f2124f169b19c20e089bfe961368b3ca57bb542",
+  "requestedChecks": [
+    {
+      "name": "check-catalog-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "node-editor-controls-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "query-caret-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "repository-actions-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "repository-composition-filter-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "ui-editor-ui.spec.ts",
+      "status": "Passed"
+    }
+  ],
+  "recordings": [
+    {
+      "scenario": "node-editor-controls-ui-ev-fddbe-hout-losing-property-drafts",
+      "actual": [
+        {
+          "step": "initial",
+          "firstForms": 3,
+          "secondForms": 3,
+          "name": 1,
+          "tools": 1
+        },
+        {
+          "step": "collapse one",
+          "firstForms": 2,
+          "secondForms": 3,
+          "name": 0,
+          "tools": 1
+        },
+        {
+          "step": "collapse all",
+          "firstForms": 0,
+          "secondForms": 3,
+          "name": 0,
+          "tools": 1
+        },
+        {
+          "step": "expand all",
+          "firstForms": 3,
+          "secondForms": 3,
+          "name": 1,
+          "tools": 1
+        },
+        {
+          "step": "filter component",
+          "firstForms": 1,
+          "secondForms": 3,
+          "name": 0,
+          "tools": 1
+        },
+        {
+          "step": "filter draft",
+          "firstForms": 1,
+          "secondForms": 3,
+          "name": 1,
+          "tools": 1
+        },
+        {
+          "step": "clear",
+          "firstForms": 3,
+          "secondForms": 3,
+          "name": 1,
+          "tools": 1
+        }
+      ],
+      "expected": [
+        {
+          "step": "initial",
+          "firstForms": 3,
+          "secondForms": 3,
+          "name": 1,
+          "tools": 1
+        },
+        {
+          "step": "collapse one",
+          "firstForms": 2,
+          "secondForms": 3,
+          "name": 0,
+          "tools": 1
+        },
+        {
+          "step": "collapse all",
+          "firstForms": 0,
+          "secondForms": 3,
+          "name": 0,
+          "tools": 1
+        },
+        {
+          "step": "expand all",
+          "firstForms": 3,
+          "secondForms": 3,
+          "name": 1,
+          "tools": 1
+        },
+        {
+          "step": "filter component",
+          "firstForms": 1,
+          "secondForms": 3,
+          "name": 0,
+          "tools": 1
+        },
+        {
+          "step": "filter draft",
+          "firstForms": 1,
+          "secondForms": 3,
+          "name": 1,
+          "tools": 1
+        },
+        {
+          "step": "clear",
+          "firstForms": 3,
+          "secondForms": 3,
+          "name": 1,
+          "tools": 1
+        }
+      ]
+    },
+    {
+      "scenario": "query-caret-ui-choosing-qu-dd123-ps-the-active-caret-visible",
+      "actual": {
+        "value": "name:contains(abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij) && ",
+        "caret": 139,
+        "atEnd": true
+      },
+      "expected": {
+        "value": "name:contains(abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij) && ",
+        "caret": 139,
+        "atEnd": true
+      }
+    },
+    {
+      "scenario": "repository-actions-ui-repo-2eaf1-er-a-predicate-in-workspace",
+      "actual": [
+        {
+          "step": "complete predicate",
+          "operators": [
+            "AND",
+            "OR",
+            "XOR"
+          ]
+        },
+        {
+          "step": "choose OR",
+          "query": "hasComponent(\"repository:check\") || "
+        },
+        {
+          "step": "OR applied",
+          "check": true,
+          "component": true,
+          "notes": 0
+        },
+        {
+          "step": "choose AND",
+          "query": "hasComponent(\"repository:check\") && "
+        },
+        {
+          "step": "AND applied",
+          "check": true,
+          "component": 0
+        },
+        {
+          "step": "choose XOR",
+          "query": "hasComponent(\"repository:check\") ^^ "
+        },
+        {
+          "step": "XOR applied",
+          "checks": 0,
+          "component": 0
+        }
+      ],
+      "expected": [
+        {
+          "step": "complete predicate",
+          "operators": [
+            "AND",
+            "OR",
+            "XOR"
+          ]
+        },
+        {
+          "step": "choose OR",
+          "query": "hasComponent(\"repository:check\") || "
+        },
+        {
+          "step": "OR applied",
+          "check": true,
+          "component": true,
+          "notes": 0
+        },
+        {
+          "step": "choose AND",
+          "query": "hasComponent(\"repository:check\") && "
+        },
+        {
+          "step": "AND applied",
+          "check": true,
+          "component": 0
+        },
+        {
+          "step": "choose XOR",
+          "query": "hasComponent(\"repository:check\") ^^ "
+        },
+        {
+          "step": "XOR applied",
+          "checks": 0,
+          "component": 0
+        }
+      ]
+    },
+    {
+      "scenario": "repository-actions-ui-repo-cfa3b-after-a-predicate-in-review",
+      "actual": [
+        {
+          "step": "complete predicate",
+          "operators": [
+            "AND",
+            "OR",
+            "XOR"
+          ]
+        },
+        {
+          "step": "choose OR",
+          "query": "hasComponent(\"repository:check\") || "
+        },
+        {
+          "step": "OR applied",
+          "check": true,
+          "component": true,
+          "notes": 0
+        },
+        {
+          "step": "choose AND",
+          "query": "hasComponent(\"repository:check\") && "
+        },
+        {
+          "step": "AND applied",
+          "check": true,
+          "component": 0
+        },
+        {
+          "step": "choose XOR",
+          "query": "hasComponent(\"repository:check\") ^^ "
+        },
+        {
+          "step": "XOR applied",
+          "checks": 0,
+          "component": 0
+        }
+      ],
+      "expected": [
+        {
+          "step": "complete predicate",
+          "operators": [
+            "AND",
+            "OR",
+            "XOR"
+          ]
+        },
+        {
+          "step": "choose OR",
+          "query": "hasComponent(\"repository:check\") || "
+        },
+        {
+          "step": "OR applied",
+          "check": true,
+          "component": true,
+          "notes": 0
+        },
+        {
+          "step": "choose AND",
+          "query": "hasComponent(\"repository:check\") && "
+        },
+        {
+          "step": "AND applied",
+          "check": true,
+          "component": 0
+        },
+        {
+          "step": "choose XOR",
+          "query": "hasComponent(\"repository:check\") ^^ "
+        },
+        {
+          "step": "XOR applied",
+          "checks": 0,
+          "component": 0
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "build": "Passed",
+    "nonBrowserTests": 615,
+    "browserPassed": 252,
+    "browserFailed": 4,
+    "isolatedReruns": {
+      "planning-ui.spec.ts": "Passed",
+      "ui.spec.ts": "Passed",
+      "planning-save-refresh-ui.spec.ts": "Failed; tracked in 641e5573-33b3-4f7e-be06-a4e5ccb65e0c",
+      "task-review-ergonomics-ui.spec.ts": "Passed"
+    }
+  }
+}

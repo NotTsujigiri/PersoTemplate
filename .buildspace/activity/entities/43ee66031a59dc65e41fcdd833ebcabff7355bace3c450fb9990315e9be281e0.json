@@ -1,0 +1,85 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75197205-6f6c-4902-b8c0-c791e520acb3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75197205-6f6c-4902-b8c0-c791e520acb3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T16:09:54.413Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 489,
+        "description": "Review the implemented Checks view against the accepted image and chat adjustments. Verify fixed toolbars and independent content scrolling; repository-root discovery tree; expand/collapse/filter controls; matching latest-result status icons after left labels and in the right pane; latest results following selection; comparisons, source links, diagnostics and screenshot evidence through shared rendering; and the Code tab using the existing text editor for declared check implementation sources. Run the component checks and inspect their results. Run-history browsing is deferred to its later MVP task.\n\nThe result model is owned by @super-app/testing and has no dependency on the checks or UI. Component checks produce the same contract rendered by the shared results component. New result display components are default-constructible custom elements with visible empty states.\n\nAuthor validation: build/type/organisation/model checks and focused Checks/consumer tests passed. The full checkpoint retains four previously recorded planning unit failures; the broader browser run also has failures outside this scope. See the development task for exact logs and screenshots. Only the user records visual acceptance and the review outcome.",
+        "title": "Review the Checks view improvements",
+        "updatedAt": "2026-10-17T00:36:28.132Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75197205-6f6c-4902-b8c0-c791e520acb3.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75197205-6f6c-4902-b8c0-c791e520acb3.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "human:user": {
+              "reason": "",
+              "time": "2026-10-17T00:36:25.916Z",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f197e210-8a1f-4db5-8078-ad01156d45d1.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f197e210-8a1f-4db5-8078-ad01156d45d1.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f197e210-8a1f-4db5-8078-ad01156d45d1.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-12T16:09:54.411Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 489,
+                      "description": "Implemented the accepted Checks view: repository-root discovery tree with shared filtering, expand/collapse, latest-status icons after labels, content-only scrolling, splitter and right Results | Code tabs. The selected check shows its latest result. Code opens repository-declared implementation sources, distinct from source findings; undeclared implementation locations are reported explicitly. Run history remains recorded but browsing is deferred.\n\nThe independent @super-app/testing package owns the language-independent result contract: nested outcomes, diagnostics, expected/actual comparisons, source references and attachments. Checks emit data; shared custom elements render it. The model imports no check, language, runner or UI implementation. Existing runner output ingestion and component audits use the shared result model. Recorded screenshots are served through an authenticated repository-scoped attachment endpoint.\n\nValidation: build, mandatory type-safety and organisation checks passed; 22 model tests passed. Focused unit/contract tests passed (12), and the result model/custom-element suite passed (4, with overlapping model tests). Four core Checks browser tests and three queue/buildspace consumer tests passed; additional affected navigation and retained-file tests passed on focused reruns. Live single-file audit was run through the app and its current result and implementation Code were inspected. It reports existing component violations, which are expected before the separately planned component rework.\n\nFull checkpoint: 222/226 Harness tests passed; the same four planning/state/range-placement failures were recorded before this change in .harness/checks-view-planning-checkpoint.log. Final output: .harness/checks-final-checkpoint.log. The wider browser run was also not green (182/208 passed); affected Checks/navigation issues were fixed and verified by focused reruns, while failures outside this scope remain in .harness/checks-browser-validation.log. Focused evidence: .harness/checks-components-browser.log and .harness/checks-consumers-final.log. Live screenshots: Systems/Depth3/HarnessApp/test-results/checks-live/results.png and code.png. Human visual acceptance remains with the review task.",
+                      "title": "Improve the Checks view",
+                      "updatedAt": "2026-10-12T18:10:50.190Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f197e210-8a1f-4db5-8078-ad01156d45d1.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f197e210-8a1f-4db5-8078-ad01156d45d1.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f197e210-8a1f-4db5-8078-ad01156d45d1.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 495,
+            "sessions": [],
+            "submittedAt": "2026-10-12T18:11:05.517Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75197205-6f6c-4902-b8c0-c791e520acb3.json"
+}

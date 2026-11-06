@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2cbd6837-7d82-40db-b9f0-6a1acc53ae78.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2cbd6837-7d82-40db-b9f0-6a1acc53ae78.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-27T05:13:55.425Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1206,
+        "title": "Improve expression mode for TypeScript comments",
+        "updatedAt": "2026-10-27T05:13:55.738Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2cbd6837-7d82-40db-b9f0-6a1acc53ae78.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2cbd6837-7d82-40db-b9f0-6a1acc53ae78.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2cbd6837-7d82-40db-b9f0-6a1acc53ae78.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2cbd6837-7d82-40db-b9f0-6a1acc53ae78.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-03T05:58:16.540Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-27T05:13:55.738Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2cbd6837-7d82-40db-b9f0-6a1acc53ae78.json"
+}

@@ -1,0 +1,18 @@
+[WebServer] (node:27304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:11936) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+C:\Users\vince\Documents\GitHub\Perso\PersoTemplate\tests\assembly.spec.ts-snapshots\reviewed-navigation-supports-nested-channels-and-persistent-cross-template-pins-win32.json does not match, writing actual.
+  ok 1 assembly.spec.ts:2:1 › reviewed navigation supports nested channels and persistent cross-template pins (3.4s)
+  ok 2 assembly.spec.ts:69:1 › buildspaces belong to private channels; User and Feed are application-owned (298ms)
+
+UI REVIEW REQUIRED
+  Screenshots: 52
+  Generated artifacts are stored directly beside each owning test:
+    C:\Users\vince\Documents\GitHub\Perso\PersoTemplate\tests\assembly.spec.ts-artifacts
+  Manifest:    C:\Users\vince\Documents\GitHub\Perso\PersoTemplate\test-results\ui-review\manifest.json
+
+  2 passed (5.4s)

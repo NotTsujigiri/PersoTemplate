@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41469db4-4904-407e-842d-0543b70aff39.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41469db4-4904-407e-842d-0543b70aff39.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T20:16:23.524Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 286,
+        "description": "Implemented and verified; awaiting human review.\n\n1. Shared Relational UI splitter owns proportional flex allocation. Collapsing Node editor or an Active section moves the divider to its boundary and transfers space to the adjacent pane. Restoring, pointer/keyboard resizing, viewport changes and persisted sizing remain functional. Allocation is applied atomically to preserve sibling scroll positions, with initialization deferred while the splitter is hidden.\n2. Inputs / Active / Closed use stronger neutral raised headings, distinct from placement and attention groups without extra height.\n3. Removed the Activity board's redundant buildspace-name label.\n\nExact pre-fix and post-fix outputs, screenshots, implementation notes and logs are attached. Final owner builds and syntax checks pass; 135 backend tests and 7 component tests pass. Full browser run passed 106/110; all four failures were resolved, with all 9 affected browser cases passing on the final targeted rerun. Live app refreshed with the final component bundle. Parent MVP acceptance remains with the user; no changes committed.",
+        "title": "Fix shared splitter collapse and Activity board headings",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41469db4-4904-407e-842d-0543b70aff39.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41469db4-4904-407e-842d-0543b70aff39.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41469db4-4904-407e-842d-0543b70aff39.json"
+}

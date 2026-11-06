@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c81caca-e78d-46b6-af22-0e49853225c9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c81caca-e78d-46b6-af22-0e49853225c9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T16:32:23.045Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 491,
+        "description": "Later MVP work, after the current component-check review experience is usable: expose earlier runs in the shared Repositories result details, scoped to the selected check or test. Keep run history out of the repository discovery bush. Build on the latest-result model and presentation, retaining run/source identity and freshness. Agree the history interaction with the user before implementing it. This is part of Repositories, not a return to a separate Checks navigation view.",
+        "title": "Add check result history to repository details",
+        "updatedAt": "2026-10-17T15:54:17.854Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c81caca-e78d-46b6-af22-0e49853225c9.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c81caca-e78d-46b6-af22-0e49853225c9.json",
+      "properties": {
+        "placement": "blocked",
+        "priority": 2,
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c81caca-e78d-46b6-af22-0e49853225c9.json"
+}

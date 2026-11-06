@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40416df1-986a-42bc-9f1a-50f3edcf8ddc.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40416df1-986a-42bc-9f1a-50f3edcf8ddc.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T16:22:06.797Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 379,
+        "description": "Required human review before check-run integration. Inspect multiple incoming AND outgoing external branches, mixed internal attachment points, one-hop context, deduplication without lost edges, back navigation, and restored expansion/zoom/scroll. Inspect actual rendered UI and relevant verification evidence.",
+        "title": "Review focused navigation and external connections",
+        "updatedAt": "2026-10-08T16:26:44.754Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40416df1-986a-42bc-9f1a-50f3edcf8ddc.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40416df1-986a-42bc-9f1a-50f3edcf8ddc.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/40416df1-986a-42bc-9f1a-50f3edcf8ddc.json"
+}

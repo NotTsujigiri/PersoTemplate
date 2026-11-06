@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5e13805-c049-4f4a-88ae-c117aa8b1c78.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5e13805-c049-4f4a-88ae-c117aa8b1c78.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T08:23:05.980Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 640,
+        "description": "- Commit e0dcb2d fixes the reproduced Windows startup race that left command children alive after cancellation.\n- Cleanup retains creation identities, reaps late descendants and finishes before returning; final typed commit is 1b1c9d9.\n- Exact recordings pass for 24 startup deadlines, an exiting parent, manual cancellation and timeout; all 623 non-browser tests pass.\n- Final evidence is attached to investigation 86a5e2c6; its separate native browser-worker failure remains unresolved in Backlog.",
+        "title": "Prevent orphaned Windows check processes during cancellation",
+        "updatedAt": "2026-10-19T18:59:17.282Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5e13805-c049-4f4a-88ae-c117aa8b1c78.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5e13805-c049-4f4a-88ae-c117aa8b1c78.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 5,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5e13805-c049-4f4a-88ae-c117aa8b1c78.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5e13805-c049-4f4a-88ae-c117aa8b1c78.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:10:24.404Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T18:59:17.282Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5e13805-c049-4f4a-88ae-c117aa8b1c78.json"
+}

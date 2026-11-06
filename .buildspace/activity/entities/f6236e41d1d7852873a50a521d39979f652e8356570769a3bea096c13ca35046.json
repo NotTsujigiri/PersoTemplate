@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5fd282b0-e831-4b6c-8d0b-3e9b254d291c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5fd282b0-e831-4b6c-8d0b-3e9b254d291c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T07:12:27.653Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 987,
+        "description": "Exploration, language support and coloring, and the reviewed TypeScript text editor iteration are complete enough to proceed. The next PredicateComposer work follows the child tasks: an illustrated behavior reference from the query composer mock, human review, usage and predicate-signature inventory, human review including Graph editor additions, implementation discussion and replacement, review across usage sites, then UI refinement.\n\nPredicateComposer belongs to RelationalUi. Consumer-specific signatures and context must be explicit. The mock complements the written behavior reference and is not a reference implementation.\n\nAgent exposure is deferred to the related Input idea for later agent/AI tool work. The longer-term direction includes navigating to compiled code of the running application; the immediate PredicateComposer round does not settle the full compilation experience. Existing backlog items cover full-code editing and reusable saved functions.",
+        "title": "Rework the expression and query system and its composer UI",
+        "updatedAt": "2026-11-02T23:23:55.247Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5fd282b0-e831-4b6c-8d0b-3e9b254d291c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5fd282b0-e831-4b6c-8d0b-3e9b254d291c.json",
+      "properties": {
+        "placement": "queued",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5fd282b0-e831-4b6c-8d0b-3e9b254d291c.json"
+}

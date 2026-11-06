@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/65fbf76e-dffc-45a4-a17d-7d2397a5bff7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/65fbf76e-dffc-45a4-a17d-7d2397a5bff7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T05:50:15.041Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1313,
+        "description": "Browser feedback 7: provide a graph view showing systems and their dependencies, laid out by dependency depth. Allow inspection starting from a selected system such as RelationalEngine in Repositories. Derive the graph from the owning system/dependency information rather than maintaining a second manually authored dependency model.",
+        "title": "Add a system dependency graph with a depth-based layout",
+        "updatedAt": "2026-11-03T07:23:19.443Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/65fbf76e-dffc-45a4-a17d-7d2397a5bff7.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/65fbf76e-dffc-45a4-a17d-7d2397a5bff7.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/65fbf76e-dffc-45a4-a17d-7d2397a5bff7.json"
+}

@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8715d62f-7cf8-41ac-8810-740595e4d07c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8715d62f-7cf8-41ac-8810-740595e4d07c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T08:22:23.739Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Independent foundation implementation review",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8715d62f-7cf8-41ac-8810-740595e4d07c.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8715d62f-7cf8-41ac-8810-740595e4d07c.json",
+      "properties": {
+        "artifact": {
+          "hash": "e0494afefba843968bd66bd0ba05ae7582e2b6067bc9582fe985eb59ef30a516",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/e0494afefba843968bd66bd0ba05ae7582e2b6067bc9582fe985eb59ef30a516",
+          "mime": "application/json",
+          "size": 509
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8715d62f-7cf8-41ac-8810-740595e4d07c.json"
+}

@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-20T07:09:14.653Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 882,
+        "description": "Completed correction after user review, 2026-10-20\n\nEvery instance exposes its component type's complete property declarations. Property declarations no longer have required or hidden flags. Optionality belongs to the value's data type; an absent optional value is explicitly displayed as Not set. Nullable values and empty strings remain distinct from absence.\n\nImplemented and verified\n- Removed required/hidden declarations, reflection metadata and suppression behavior throughout the engine and consumers. Non-optional value types reject missing values, and undeclared component keys remain rejected.\n- Native model compilation emits optional value types for optional values. Validation, query traversal, planning and preview editing use those types.\n- Node editor always presents the complete declared property list, including read-only properties whose values are absent. Property name, help, type and read-only status remain above the value.\n- The reported transition graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f8bea499-6091-4dfc-b3cf-0c7b699e9d3b.json now shows all ten Activity board entry properties, including Description: Not set. Transition belongs to the separate Task transition component.\n- Verified optional enum choices in Activity cards and clearing optional preview values in the running preview. Exact regressions cover both.\n- Rebuilt and restarted the application; inspected the reported node through the live service and GUI.\n\nEarlier accepted annotations retained\n5. Activity board entry structure is defined by its component type, with no Transition property.\n6. Updated by is a non-optional user/agent reference. The previously authorized creator-to-updater conversion covered 2,588 records, preserving existing updater attribution and content timestamps.\n7. Two-user acknowledgement regression recordings preserve content update timestamps/attribution and avoid an acknowledgement loop.\n8. Attention is displayed as AttentionTracking.\nPrior implementation and data-conversion evidence remains attached as Component consistency and updater verification 2026-10-20.json.\n\nValidation\nFinal build passed; type checks report zero violations across 1,069 authored files. Model checkpoint: 45/45; rebuilt catalog: 5/5; affected engine, schema, planning, preview and browser checks pass. Full browser run initially passed 263/272; all nine failing cases subsequently passed focused reruns. The full application run still has four previously tracked Windows cancellation/deadline timing failures. This is not a claim that the whole suite is green.\n\nCommit: ccc4f51a9907d59e44196312451c7a21c652fefc\nNew evidence: Complete property structure verification 2026-10-20.json, including before/after recordings, validation results and live-node verification.\n\nSeparate Idea input: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/05aff937-7fd0-4b3f-b426-764df8ce7914.json — Merge property and component. This preserves the discussion about named typed property positions versus independently identifiable component instances. The merger is not implemented.",
+        "title": "Enforce consistent activity component properties and required updater attribution",
+        "updatedAt": "2026-10-20T11:22:49.488Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 5,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-23T05:59:09.671Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T11:22:49.488Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json"
+}

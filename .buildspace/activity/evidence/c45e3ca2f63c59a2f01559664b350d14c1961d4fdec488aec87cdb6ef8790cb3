@@ -1,0 +1,52 @@
+{
+  "boardRenamed": false,
+  "editorRenamed": false,
+  "toolbarClean": true,
+  "semanticTypes": [
+    {
+      "key": "createdAt",
+      "type": null
+    },
+    {
+      "key": "updatedAt",
+      "type": null
+    },
+    {
+      "key": "title",
+      "type": null
+    },
+    {
+      "key": "description",
+      "type": null
+    }
+  ],
+  "typeLabels": {
+    "createdAt": "Type: Text",
+    "updatedAt": "Type: Text",
+    "title": "Type: Text",
+    "description": "Type: Multiline text"
+  },
+  "boardScroll": {
+    "fits": false,
+    "oneHorizontalOwner": false,
+    "withinViewport": true
+  },
+  "structuredPanel": {
+    "headingOnFirstLine": false,
+    "boundary": false
+  },
+  "editorPadding": [
+    {
+      "mode": "source",
+      "zero": false
+    },
+    {
+      "mode": "inline",
+      "zero": false
+    },
+    {
+      "mode": "split",
+      "zero": false
+    }
+  ]
+}

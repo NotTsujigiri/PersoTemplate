@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2776d967-a7ee-460e-8ac7-780da3b9d456.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2776d967-a7ee-460e-8ac7-780da3b9d456.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T05:26:46.725Z",
+        "createdBy": "agent:codex",
+        "description": "Node inline/side-by-side diff controls are not functional as expected. Display changes while keeping the node editor layout, including fields and relations. The user explicitly does not want a text diff. Deferred during the fourteen-annotation review.",
+        "title": "Make node diffs functional within the node editor layout",
+        "updatedAt": "2026-10-06T17:16:54.436Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2776d967-a7ee-460e-8ac7-780da3b9d456.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2776d967-a7ee-460e-8ac7-780da3b9d456.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2776d967-a7ee-460e-8ac7-780da3b9d456.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2776d967-a7ee-460e-8ac7-780da3b9d456.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T07:05:02.952Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-06T17:16:54.436Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2776d967-a7ee-460e-8ac7-780da3b9d456.json"
+}

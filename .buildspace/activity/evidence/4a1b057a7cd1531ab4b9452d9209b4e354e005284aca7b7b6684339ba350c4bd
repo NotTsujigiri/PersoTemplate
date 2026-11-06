@@ -1,0 +1,95 @@
+{
+  "reproduction": {
+    "expected": [
+      {
+        "step": "refresh pending",
+        "originalAttached": true,
+        "menuOpen": true
+      },
+      {
+        "step": "refresh received",
+        "originalAttached": true,
+        "menuOpen": true
+      }
+    ],
+    "after": [
+      {
+        "step": "refresh pending",
+        "originalAttached": true,
+        "menuOpen": true
+      },
+      {
+        "step": "refresh received",
+        "originalAttached": true,
+        "menuOpen": true
+      }
+    ],
+    "before": [
+      {
+        "step": "refresh pending",
+        "originalAttached": true,
+        "menuOpen": true
+      },
+      {
+        "step": "refresh received",
+        "originalAttached": false,
+        "menuOpen": false
+      }
+    ]
+  },
+  "commit": "90f469f4e2816478ac12ef0530e8444523ec61d9",
+  "focusedChecks": [
+    {
+      "name": "initial planning hydration keeps the first focused property editor",
+      "status": "Passed"
+    },
+    {
+      "name": "a background planning update during Save preserves the editor and completes the click",
+      "status": "Passed"
+    },
+    {
+      "name": "component and data-type inspection survive background updates and return to the latest node",
+      "status": "Passed"
+    },
+    {
+      "name": "opening component inspection supersedes a pending detail reload",
+      "status": "Passed"
+    },
+    {
+      "name": "component types and property data types navigate through the same Node view; queued tasks drag back",
+      "status": "Passed"
+    },
+    {
+      "name": "second annotation recording: typed node, board, direct timeline and review controls",
+      "status": "Passed"
+    },
+    {
+      "name": "accepted board owns three columns, independent active panes and explicit attention",
+      "status": "Passed"
+    },
+    {
+      "name": "an unchanged card keeps its open menu when a background refresh finishes",
+      "status": "Passed"
+    },
+    {
+      "name": "paged groups retain their range, reject late responses and retry without duplicating cards",
+      "status": "Passed"
+    },
+    {
+      "name": "background board refresh retains loaded cards until replacement pages arrive",
+      "status": "Passed"
+    },
+    {
+      "name": "recency groups fetch only on expansion and continue without duplicate cards",
+      "status": "Passed"
+    },
+    {
+      "name": "task movement retains priority, rejects stale drops and places blocked work in Waiting",
+      "status": "Passed"
+    },
+    {
+      "name": "a board initialized while hidden fits its columns when revealed",
+      "status": "Passed"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a9079663-9078-48f7-b590-1af6a915670a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a9079663-9078-48f7-b590-1af6a915670a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.936Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Run focused owner/consumer tests throughout, mandatory type and organisation checks, affected builds and browser recordings; inspect screenshots. Verify startup/recovery, dynamic data, local/remote/shared-tab paths and existing workflows. Report outcomes in a flat list of at most 20 high-level bullets, 1–2 lines each.\n\nCompleted checkpoint and focused repair verification: initial browser checkpoint 222/288, with every one of its 66 failures subsequently passing focused reruns. New regression recordings cover context publication, optional owner output fields, cross-template task links and retained graph provenance. Latest focused batch passes all ten files; 12 engine and 9 owner/workflow tests pass. Root type check, dependency organisation, engine boundaries and final build pass. Earlier full owner checkpoint had one contended timing failure; its unchanged focused recording passes and both results are retained. Model, RelationalUi, WebComponent and ProjectTools suites pass. Saved UI screenshots reviewed. Live engine smoke verifies 31 sessions, four buildspaces, five acquired cards, and zero repeated-page requests. Live visual inspection was unavailable because the browser policy blocked the existing error-page tab. Query composer redesign remains deferred.",
+        "title": "Verify the complete composition and application rework",
+        "updatedAt": "2026-10-23T04:58:09.030Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a9079663-9078-48f7-b590-1af6a915670a.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a9079663-9078-48f7-b590-1af6a915670a.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a9079663-9078-48f7-b590-1af6a915670a.json"
+}

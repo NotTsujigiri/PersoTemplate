@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d1e32eba-f733-40c5-a471-2fe41daf0ed7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d1e32eba-f733-40c5-a471-2fe41daf0ed7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T14:00:22.354Z",
+        "createdBy": "agent:codex",
+        "description": "MVP SCOPE CLARIFICATION: one human plus one replying agent, using the existing Pi agent loop. Multi-human/multi-agent participation and configurable activation policies are future direction, not current MVP completion criteria. Preserve compatible participant ownership/UX without implementing future orchestration now. Pi 0.84.2 installed locally supports steer() and followUp(); steering waits until the current assistant turn/tool calls finish, follow-up waits until pending work ends. Broccoli already exposes /api/steer. Source inspection, not a live steering test.\n\nChat needs human, multi-human, multi-agent and mixed sessions, plus long-lived General/Feedback/Bug reports channels within the build space. View toolbar stays one row: view selector, compact +, adjacent session selector with New count, icon-only Context, expandable search, participant avatars and add participant. Each agent owns model/effort, optional role/system instructions and every-message or ping-only activation; effort is a dropdown. Stop targets an agent, not shared composer. Composer is shared messaging with inline attachments/references, no global model/Stop. Message avatar fits author/timestamp header; content spans full width without background panels. Shared ScrollArea needs double-up/down at scrollbar ends; remove large Jump to latest. Search rests as icon, expands input, has generic placeholder, and uses same component across views. Preserve accepted board two-row cards, avatar on second row, no excess padding. Turn/tool/timing presentation remains for a dedicated revision. Exact text/exchange selections, annotations, long-history ergonomics/performance and measured timing remain requirements. Busy-agent response to a new participant correction/request is still under analysis. Full 26-comment mapping is in local mvp-ui-concepts/chat-round-1/review.md.",
+        "title": "Shared channels and participant-owned agent controls",
+        "updatedAt": "2026-09-29T22:37:05.019Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d1e32eba-f733-40c5-a471-2fe41daf0ed7.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d1e32eba-f733-40c5-a471-2fe41daf0ed7.json",
+      "properties": {
+        "meaning": "feedback"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d1e32eba-f733-40c5-a471-2fe41daf0ed7.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d1e32eba-f733-40c5-a471-2fe41daf0ed7.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:42:16.417Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-29T22:37:05.019Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d1e32eba-f733-40c5-a471-2fe41daf0ed7.json"
+}

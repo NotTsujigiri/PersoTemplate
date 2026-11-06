@@ -1,0 +1,53 @@
+Captured the-broccoli (246 changed files)
+Captured btr-template (9 changed files)
+Captured perso-template (24 changed files)
+Materializing three captured repositories and package dependency scopes…
+Materialized; building only declared captured package owners.
+
+> the-broccoli@0.1.0 build
+> npm run build --workspace @super-app/mcp-contributor && node app/build-template-services.mjs && npm --workspace @broccoli/harness run check
+
+
+> @super-app/mcp-contributor@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @super-app/browser-test-support@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @super-app/hosting-contract@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @super-app/relational-engine@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @super-app/relational-ui-contributor@0.1.0 build
+> node Depth0/Theme/generate-token-help.mjs && node ../../../scripts/check-relational-ui-components.mjs && tsc -b tsconfig.json && node ../../../scripts/check-relational-ui-components.mjs --declarations && node --input-type=module -e "import {writeFileSync} from 'node:fs'; import {RELATIONAL_UI_TOKENS_CSS} from './dist/Depth0/Theme/tokens.js'; import {RELATIONAL_UI_BROWSER_CSS} from './dist/Depth5/Browser/styles.js'; writeFileSync('dist/Depth0/Theme/tokens.css',RELATIONAL_UI_TOKENS_CSS);writeFileSync('dist/Depth5/Browser/styles.css',RELATIONAL_UI_BROWSER_CSS)"
+
+Validated RelationalUi's pinned Lit boundary and composition levels for 11 registered components.
+Validated RelationalUi's pinned Lit boundary and composition levels for 11 registered components, including public declarations.
+
+> @super-app/default-super-app-template@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @perso/template@0.1.0 build
+> tsc -p tsconfig.json && esbuild src/index.ts --bundle --format=esm --platform=browser --outfile=dist/index.js
+
+
+  dist\index.js  36.5kb
+
+Done in 857ms
+
+> @btr/template@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @broccoli/harness@0.1.0 check
+> node syntax-check.mjs
+
+
+{"passed":true,"repositories":[{"name":"the-broccoli","fingerprint":"63fb9e2b39a603ae98f96494a1676ea100edecb25339efe18602fb6030060afe"},{"name":"btr-template","fingerprint":"bfb70665231c89c3f58c2e959cc8bb6eab010c76b9cc67243b1486805bc3ea5c"},{"name":"perso-template","fingerprint":"1534bd5d0072e83b4beed4514f60fc78c00e5bb37d177d6a0a03a0288b0a72a4"}],"elapsedMs":184085,"sourceUnchanged":true}

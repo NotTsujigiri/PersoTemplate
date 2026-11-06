@@ -1,0 +1,22 @@
+{
+  "conversations": [
+    {
+      "error": null,
+      "reply": true,
+      "read": "before\n",
+      "writeBlocked": true,
+      "commandBlocked": true,
+      "verifyBlocked": true
+    },
+    {
+      "error": null,
+      "reply": true,
+      "read": "before\n",
+      "writeBlocked": true,
+      "commandBlocked": true,
+      "verifyBlocked": true
+    }
+  ],
+  "file": "before\n",
+  "candidateUnchanged": true
+}

@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-08",
+  "scope": "MVP plan review surface and full-MVP planning cleanup",
+  "focused": {
+    "model": {
+      "command": "node --test Systems/Depth3/HarnessApp/plan-review-model.test.ts",
+      "passed": 3,
+      "failed": 0
+    },
+    "browser": {
+      "command": "npx playwright test planning-plan-review-ui.spec.ts --workers=1",
+      "coverage": [
+        "Full containing plan and nested tasks",
+        "Cross-group dependency ordering",
+        "Long titles and readable detail width",
+        "Submitted definitions remain unchanged after live sibling edits",
+        "Required reviewers in task details",
+        "Reload preserves selected task",
+        "Wide and narrow layouts",
+        "Changes, annotation composer and graph navigation"
+      ],
+      "result": "passed"
+    },
+    "typecheck": {
+      "command": "npx tsc --noEmit -p Systems/Depth3/HarnessApp/tsconfig.browser.json",
+      "result": "passed"
+    }
+  },
+  "checkpoint": {
+    "command": "npm run test:all",
+    "build": "passed",
+    "strictTypeScriptRepositories": [
+      "TheBroccoli",
+      "BtrTemplate",
+      "PersoTemplate"
+    ],
+    "core": {
+      "passed": 188,
+      "failed": 9
+    },
+    "notReached": [
+      "full browser suite",
+      "later composition stages"
+    ],
+    "failures": [
+      {
+        "file": "active-model-coverage.test.ts",
+        "test": "compiled catalog includes public data contracts from active workspace owners",
+        "observed": "Five expected owner catalogs have empty type lists."
+      },
+      {
+        "file": "data-model.test.ts",
+        "test": "model catalog includes exported query and operation contracts",
+        "observed": "Expected relational contract types are absent."
+      },
+      {
+        "file": "data-model.test.ts",
+        "test": "loaded model inspection exposes source-derived engine dependencies in the ordinary read-only node contract",
+        "observed": "The expected engine definition is absent."
+      },
+      {
+        "file": "data-model.test.ts",
+        "test": "model inspection retains explicitly bound native validation without asserting exhaustive invariants",
+        "observed": "The expected Timestamp model definition is absent."
+      },
+      {
+        "file": "planning-graph.test.ts",
+        "test": "parallel branches and review correction loops retain distinct ranges and real endpoints",
+        "observed": "Correction-column assertion fails."
+      },
+      {
+        "file": "planning-state-history.test.ts",
+        "test": "ordinary backlog operations atomically record linked state transitions",
+        "observed": "Expected blocked transition is absent from actual state history."
+      },
+      {
+        "file": "range-placement.test.ts",
+        "test": "connected ranges reuse nearby columns and unknown history retains dependency rows",
+        "observed": "Existing range placement assertion fails."
+      },
+      {
+        "file": "review-placement.test.ts",
+        "test": "active reviews block the top-level reviewed task across transitions, overlap and restart",
+        "observed": "Parent completion is rejected while children are unfinished."
+      },
+      {
+        "file": "review-task-completion.test.ts",
+        "test": "reviewers complete covered tasks independently of review outcome with linked transition evidence",
+        "observed": "Required review approval guard rejects before expected reviewer-authority assertion."
+      }
+    ]
+  },
+  "visualReview": "Inspected focused wide/narrow browser screenshots and the actual 75-task MVP Plan in the running app. Long titles wrap and both hierarchy and task detail retain readable widths.",
+  "acceptance": "No human approval recorded. Future MVP implementation remains pending plan and stage reviews."
+}

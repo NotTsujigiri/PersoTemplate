@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "repositories": [
+    {
+      "name": "the-broccoli",
+      "fingerprint": "63fb9e2b39a603ae98f96494a1676ea100edecb25339efe18602fb6030060afe"
+    },
+    {
+      "name": "btr-template",
+      "fingerprint": "bfb70665231c89c3f58c2e959cc8bb6eab010c76b9cc67243b1486805bc3ea5c"
+    },
+    {
+      "name": "perso-template",
+      "fingerprint": "1534bd5d0072e83b4beed4514f60fc78c00e5bb37d177d6a0a03a0288b0a72a4"
+    }
+  ],
+  "elapsedMs": 184085,
+  "sourceUnchanged": true
+}

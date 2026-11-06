@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d119e2-bcab-4dc8-adf5-02b5c3d1a79f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d119e2-bcab-4dc8-adf5-02b5c3d1a79f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T19:00:19.888Z",
+        "createdBy": "human:user",
+        "createdRevision": 1239,
+        "description": "The Node editor's Collapse / Expand / Smart IconRadioButton setting still resets when switching files in Repositories. The earlier fix covered Task graph selection but did not cover all Node editor hosts.\n\nReproduce by opening a repository file in Node editor, selecting each expansion mode, then selecting another file. The selected mode must persist within that editor view and apply to the next node. Smart must reuse expansion state for matching component types.\n\nFix persistence at a shared, stable Node editor ownership boundary so repository, task graph and other node-selection paths use the same behavior. Preserve independent settings for separate editor views. Add recorded regressions covering repeated repository file changes and existing task selections before accepting the fix.\n\nReported on 29 October 2026 in Repositories while inspecting Systems/Depth0/RelationEngine/Depth0/DataTypes/data-types.ts. Previous completed task: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35e60e58-2416-4a24-9754-92d7d9394a3f.json\n\nCompleted on master in dcbdd3b.\n\nRepositories now retain one Node editor tools host across file and declaration selections, reusing the shared editor's expansion-state owner. Collapse, Expand and Smart persist in Workspace and Review, while separate views keep independent settings.\n\nVerification: the recorded repository-selection regression failed before the fix and exactly matches its expected output after it. Existing node-editor/graph navigation cases and shared NodeEditor unit tests pass. The build and final check:types pass; both new repository cases also pass in the full browser run.",
+        "title": "Bug: Preserve Node editor expansion mode across repository file changes",
+        "updatedAt": "2026-11-01T02:03:35.433Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d119e2-bcab-4dc8-adf5-02b5c3d1a79f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d119e2-bcab-4dc8-adf5-02b5c3d1a79f.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d119e2-bcab-4dc8-adf5-02b5c3d1a79f.json"
+}

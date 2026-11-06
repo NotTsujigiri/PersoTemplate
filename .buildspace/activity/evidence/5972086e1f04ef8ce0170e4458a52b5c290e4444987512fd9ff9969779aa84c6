@@ -1,0 +1,10 @@
+{
+  "parallelOrigin": true,
+  "initialNewestVisible": false,
+  "selectedVisibleAfterShrink": false,
+  "panAfterRefresh": 100,
+  "toolbarStable": true,
+  "panAfterReentry": 100,
+  "inlineNewestVisible": false,
+  "inlinePanAfterReturn": 0
+}

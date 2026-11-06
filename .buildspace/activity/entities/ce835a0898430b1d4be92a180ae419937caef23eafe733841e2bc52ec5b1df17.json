@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6357f33-af4b-476d-95db-04b686f4520c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6357f33-af4b-476d-95db-04b686f4520c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-04T01:08:23.338Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1349,
+        "description": "On the Activity board, select a different item in the splitter edge list, then drag: the previously selected edge still appears to move. The reported example is the New / Later divider. Nesting may be involved, but that is unconfirmed. Reproduce the sequence and make dragging affect the selected edge, including nested splitters.",
+        "title": "Bug: selecting another splitter edge still drags the previous edge",
+        "updatedAt": "2026-11-04T07:52:57.751Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6357f33-af4b-476d-95db-04b686f4520c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6357f33-af4b-476d-95db-04b686f4520c.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6357f33-af4b-476d-95db-04b686f4520c.json"
+}

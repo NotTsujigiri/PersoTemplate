@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7f09c9c-a91f-42b2-9984-bcc2c8223a16.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7f09c9c-a91f-42b2-9984-bcc2c8223a16.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T03:49:46.641Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 728,
+        "description": "- Verified the existing captured-package correction; no new production change needed.\n- The exact nested-package-scope regression passes, binding captured file dependencies instead of stale ancestor packages.\n- Six Preview checks also pass; candidate/runtime paths remain isolated.",
+        "title": "Verify isolated Preview builds use the captured local packages",
+        "updatedAt": "2026-10-19T18:21:09.944Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7f09c9c-a91f-42b2-9984-bcc2c8223a16.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7f09c9c-a91f-42b2-9984-bcc2c8223a16.json",
+      "properties": {
+        "placement": "abandoned",
+        "priority": 2,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7f09c9c-a91f-42b2-9984-bcc2c8223a16.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7f09c9c-a91f-42b2-9984-bcc2c8223a16.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:20:44.229Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T18:21:09.944Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7f09c9c-a91f-42b2-9984-bcc2c8223a16.json"
+}

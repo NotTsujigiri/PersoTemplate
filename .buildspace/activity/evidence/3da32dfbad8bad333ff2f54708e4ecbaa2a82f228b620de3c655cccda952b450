@@ -1,0 +1,26 @@
+[
+  {
+    "step": "loaded",
+    "editor": "",
+    "persisted": "",
+    "priorityUnchanged": true
+  },
+  {
+    "step": "edited",
+    "editor": "Changed without moving priority",
+    "persisted": "",
+    "priorityUnchanged": true
+  },
+  {
+    "step": "background update while pressed",
+    "editor": "Changed without moving priority",
+    "persisted": "",
+    "priorityUnchanged": true
+  },
+  {
+    "step": "released Save",
+    "editor": "Changed without moving priority",
+    "persisted": "",
+    "priorityUnchanged": true
+  }
+]

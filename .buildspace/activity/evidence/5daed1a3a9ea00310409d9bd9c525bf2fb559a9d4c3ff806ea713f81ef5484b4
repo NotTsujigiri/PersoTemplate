@@ -1,0 +1,458 @@
+{
+  "issue": "Save can lose its click during a background planning refresh",
+  "actual": [
+    {
+      "step": "loaded",
+      "editor": "",
+      "persisted": "",
+      "priorityUnchanged": true
+    },
+    {
+      "step": "edited",
+      "editor": "Changed without moving priority",
+      "persisted": "",
+      "priorityUnchanged": true
+    },
+    {
+      "step": "background update while pressed",
+      "editor": "Changed without moving priority",
+      "persisted": "",
+      "priorityUnchanged": true
+    },
+    {
+      "step": "released Save",
+      "editor": "Changed without moving priority",
+      "persisted": "",
+      "priorityUnchanged": true
+    }
+  ],
+  "expected": [
+    {
+      "step": "loaded",
+      "editor": "",
+      "persisted": "",
+      "priorityUnchanged": true
+    },
+    {
+      "step": "edited",
+      "editor": "Changed without moving priority",
+      "persisted": "",
+      "priorityUnchanged": true
+    },
+    {
+      "step": "background update while pressed",
+      "editor": "Changed without moving priority",
+      "persisted": "",
+      "priorityUnchanged": true
+    },
+    {
+      "step": "released Save",
+      "editor": "Changed without moving priority",
+      "persisted": "Changed without moving priority",
+      "priorityUnchanged": true
+    }
+  ],
+  "diagnostic": [
+    {
+      "step": "before press",
+      "state": {
+        "connected": true,
+        "disabled": false,
+        "events": [],
+        "ancestors": [
+          {
+            "tag": "BUTTON.",
+            "x": 1339.796875,
+            "width": 28,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-ICON-BUTTON.",
+            "x": 1339.796875,
+            "width": 28,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.view-tools",
+            "x": 1120.796875,
+            "width": 315,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-VIEW-TOOLBAR.view-toolbar",
+            "x": 1136.796875,
+            "width": 303.484375,
+            "scrollLeft": 142
+          },
+          {
+            "tag": "DIV.planning-detail",
+            "x": 1136.796875,
+            "width": 303.484375,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-MULTI-PANE-SPLITTER.",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.planning-body",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BROCCOLI-PLANNING.planning-surface",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BROCCOLI-WORK-PANEL.work-tab-panel",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "SECTION.work",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-MULTI-PANE-SPLITTER.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.layout",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "SECTION.contribution-surface",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "MAIN.channel-content",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.channel-navigation-body",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BODY.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "HTML.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          }
+        ]
+      }
+    },
+    {
+      "step": "before release",
+      "state": {
+        "connected": true,
+        "disabled": false,
+        "events": [
+          {
+            "name": "pointerdown",
+            "disabled": false
+          }
+        ],
+        "ancestors": [
+          {
+            "tag": "BUTTON.",
+            "x": 1481.796875,
+            "width": 28,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-ICON-BUTTON.",
+            "x": 1481.796875,
+            "width": 28,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.view-tools",
+            "x": 1262.796875,
+            "width": 315,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-VIEW-TOOLBAR.view-toolbar",
+            "x": 1136.796875,
+            "width": 303.484375,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.planning-detail",
+            "x": 1136.796875,
+            "width": 303.484375,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-MULTI-PANE-SPLITTER.",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.planning-body",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BROCCOLI-PLANNING.planning-surface",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BROCCOLI-WORK-PANEL.work-tab-panel",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "SECTION.work",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-MULTI-PANE-SPLITTER.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.layout",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "SECTION.contribution-surface",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "MAIN.channel-content",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.channel-navigation-body",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BODY.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "HTML.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          }
+        ]
+      }
+    },
+    {
+      "step": "after settle",
+      "state": {
+        "connected": true,
+        "disabled": false,
+        "events": [
+          {
+            "name": "pointerdown",
+            "disabled": false
+          }
+        ],
+        "ancestors": [
+          {
+            "tag": "BUTTON.",
+            "x": 1481.796875,
+            "width": 28,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-ICON-BUTTON.",
+            "x": 1481.796875,
+            "width": 28,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.view-tools",
+            "x": 1262.796875,
+            "width": 315,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-VIEW-TOOLBAR.view-toolbar",
+            "x": 1136.796875,
+            "width": 303.484375,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.planning-detail",
+            "x": 1136.796875,
+            "width": 303.484375,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-MULTI-PANE-SPLITTER.",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.planning-body",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BROCCOLI-PLANNING.planning-surface",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BROCCOLI-WORK-PANEL.work-tab-panel",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "SECTION.work",
+            "x": 284.296875,
+            "width": 1155.6875,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "RELATIONAL-UI-MULTI-PANE-SPLITTER.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.layout",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "SECTION.contribution-surface",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "MAIN.channel-content",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.channel-navigation-body",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "DIV.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "BODY.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          },
+          {
+            "tag": "HTML.",
+            "x": 0,
+            "width": 1440,
+            "scrollLeft": 0
+          }
+        ]
+      }
+    }
+  ],
+  "finding": "The original Save button stays connected and enabled, but its toolbar scrollLeft resets from 142 to 0 before mouse release. No Save mutation is sent. This remains unresolved."
+}

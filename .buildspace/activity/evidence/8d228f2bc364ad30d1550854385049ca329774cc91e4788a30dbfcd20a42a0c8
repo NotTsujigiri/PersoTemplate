@@ -1,0 +1,148 @@
+{
+  "authored": {
+    "width": 849,
+    "height": 639,
+    "title": "Five annotation fixture",
+    "description": "Editable description",
+    "actions": [
+      "inspect task fields and revisions",
+      "inspect input Capture",
+      "open Capture"
+    ]
+  },
+  "before": {
+    "enums": [
+      {
+        "key": "purpose",
+        "enumeration": false,
+        "hasValues": false,
+        "noPresentationChoices": false
+      },
+      {
+        "key": "placement",
+        "enumeration": false,
+        "hasValues": false,
+        "noPresentationChoices": false
+      },
+      {
+        "key": "meaning",
+        "enumeration": false,
+        "hasValues": false,
+        "noPresentationChoices": false
+      }
+    ],
+    "timestamps": [
+      {
+        "key": "createdAt",
+        "readOnlyBadge": null,
+        "distinctStyle": false
+      },
+      {
+        "key": "updatedAt",
+        "readOnlyBadge": null,
+        "distinctStyle": false
+      }
+    ],
+    "readOnlyMetadata": true,
+    "revision": {
+      "compact": false,
+      "tooltip": true
+    },
+    "capture": {
+      "headingOutsideDisclosure": false,
+      "bodyBelowHeading": false,
+      "bodyBoundary": true,
+      "expands": true
+    }
+  },
+  "actual": {
+    "enums": [
+      {
+        "key": "purpose",
+        "enumeration": true,
+        "hasValues": true,
+        "noPresentationChoices": true
+      },
+      {
+        "key": "placement",
+        "enumeration": true,
+        "hasValues": true,
+        "noPresentationChoices": true
+      },
+      {
+        "key": "meaning",
+        "enumeration": true,
+        "hasValues": true,
+        "noPresentationChoices": true
+      }
+    ],
+    "timestamps": [
+      {
+        "key": "createdAt",
+        "readOnlyBadge": "Read only",
+        "distinctStyle": true
+      },
+      {
+        "key": "updatedAt",
+        "readOnlyBadge": "Read only",
+        "distinctStyle": true
+      }
+    ],
+    "readOnlyMetadata": true,
+    "revision": {
+      "compact": true,
+      "tooltip": true
+    },
+    "capture": {
+      "headingOutsideDisclosure": true,
+      "bodyBelowHeading": true,
+      "bodyBoundary": true,
+      "expands": true
+    }
+  },
+  "expected": {
+    "enums": [
+      {
+        "key": "purpose",
+        "enumeration": true,
+        "hasValues": true,
+        "noPresentationChoices": true
+      },
+      {
+        "key": "placement",
+        "enumeration": true,
+        "hasValues": true,
+        "noPresentationChoices": true
+      },
+      {
+        "key": "meaning",
+        "enumeration": true,
+        "hasValues": true,
+        "noPresentationChoices": true
+      }
+    ],
+    "timestamps": [
+      {
+        "key": "createdAt",
+        "readOnlyBadge": "Read only",
+        "distinctStyle": true
+      },
+      {
+        "key": "updatedAt",
+        "readOnlyBadge": "Read only",
+        "distinctStyle": true
+      }
+    ],
+    "readOnlyMetadata": true,
+    "revision": {
+      "compact": true,
+      "tooltip": true
+    },
+    "capture": {
+      "headingOutsideDisclosure": true,
+      "bodyBelowHeading": true,
+      "bodyBoundary": true,
+      "expands": true
+    }
+  }
+}

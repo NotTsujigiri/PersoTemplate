@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-26T05:12:59.372Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1171,
+        "description": "Improve JsonContributor's token classification so ordinary local edits reuse unchanged analysis instead of parsing and scanning the entire document for each new version.\n\n- Keep this work inside JsonContributor's existing JSON server; preserve the single-server approach and reuse Microsoft's JSON language-service functions as other capabilities are exposed.\n- Retain tokenization state across edits and recompute the affected region until it rejoins unchanged state. Handle changes to quotes, escapes, comments and nesting correctly; some edits can legitimately invalidate the remaining document.\n- Preserve JSON/JSONC key, value, punctuation and comment coloring during unfinished edits, undo/redo and rapid consecutive changes. Keep version checks, cancellation and stale-result rejection.\n- Keep the editor and shared LspContributor language-independent. Do not add per-edit graph traffic or a second JSON server for coloring.\n- Verify token results against a fresh full classification after representative edit sequences. Measure processed text and update time on large documents to show that small local edits avoid whole-document work; initial loading may still require a complete pass.\n\nThe current whole-document implementation is accepted for the initial coloring delivery; this queued improvement is separate follow-up work.\n\nImplemented on codex/queued-json-and-review in commit 70db5e2. JSON classification now retains syntax context and token chunks, restarts before the affected token boundary, and reuses the unchanged suffix when the state matches. It remains in the existing JSON server. Microsoft's JSON language-service parser is retained as a test oracle; production coloring uses the already-declared jsonc-parser scanner.\n\nThe attached before/after recording uses the same 187,782-character document and edit: previously all 187,783 resulting characters were parsed and scanned; now classification scans 1,027 characters and reuses 186,756. A repository-derived 2.1 MB fixture scanned 1,034 characters after a local edit; the measured server update including complete token-result encoding was about 31 ms. These are measurements, not latency guarantees. Initial loading and context-changing edits can still require broad classification. Document synchronization and complete semantic-token response encoding retain separate size-dependent costs.\n\nVerification completed: the full 17-step checkpoint passed, including all 359 browser tests (no failures or skips). JSON-specific tests, ordered/rejected edit-batch tests and the independent classification review passed. The edited source, performance evidence and screenshots are included in the accompanying human review.",
+        "title": "Update JSON coloring incrementally instead of reparsing the whole document on every edit",
+        "updatedAt": "2026-10-26T07:46:46.527Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json"
+}

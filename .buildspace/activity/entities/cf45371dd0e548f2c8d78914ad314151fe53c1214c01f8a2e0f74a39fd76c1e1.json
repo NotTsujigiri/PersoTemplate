@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dc68a85-f443-4c75-b7ba-b663b5a12692.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dc68a85-f443-4c75-b7ba-b663b5a12692.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T20:49:53.539Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 575,
+        "description": "- Commit 448dc40cd48da90ef5f73a2e49f555a083bd2748: Implement typed component entities and lazy predicate views.\n- Independent agent review passed at revision 607; both recorded correction rounds are resolved.\n- Full types/build passed; obsolete recursive-inspection expectation corrected and its targeted test passes. Full final application verification remains in the final checkpoint.",
+        "title": "Commit checkpoint 1: component engine and lazy views",
+        "updatedAt": "2026-10-18T02:35:00.988Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dc68a85-f443-4c75-b7ba-b663b5a12692.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dc68a85-f443-4c75-b7ba-b663b5a12692.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "integration",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74d29337-6ae7-4cdf-a468-71a274c39949.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dc68a85-f443-4c75-b7ba-b663b5a12692.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74d29337-6ae7-4cdf-a468-71a274c39949.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7dc68a85-f443-4c75-b7ba-b663b5a12692.json"
+}

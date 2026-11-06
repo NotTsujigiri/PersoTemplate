@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/920e8b6f-3563-461e-b2b6-df1a01e213ca.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/920e8b6f-3563-461e-b2b6-df1a01e213ca.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:07:41.904Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 646,
+        "description": "",
+        "title": "The strict visibility wait is committed in 1f2c385. Exact expected recording now passes, including Move to Backlog and persisted destination; all original field",
+        "updatedAt": "2026-10-18T09:07:56.667Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/920e8b6f-3563-461e-b2b6-df1a01e213ca.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/920e8b6f-3563-461e-b2b6-df1a01e213ca.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6df1bd1-d4ad-44b8-8580-14b1b229e9bd.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "The strict visibility wait is committed in 1f2c385. Exact expected recording now passes, including Move to Backlog and persisted destination; all original fields remain asserted. Independent inspection review accepted this fixture correction. The complete browser checkpoint remains required."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/920e8b6f-3563-461e-b2b6-df1a01e213ca.json"
+}

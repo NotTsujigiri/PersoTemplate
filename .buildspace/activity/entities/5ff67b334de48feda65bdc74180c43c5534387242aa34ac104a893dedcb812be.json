@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fac46d6-2dce-4393-8a96-0ab0ad14a672.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fac46d6-2dce-4393-8a96-0ab0ad14a672.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T07:51:59.698Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 627,
+        "description": "",
+        "title": "Independent agent review confirmed both inspection/update orderings: background refresh and an already pending detail response retain the selected component def",
+        "updatedAt": "2026-10-18T07:52:16.665Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fac46d6-2dce-4393-8a96-0ab0ad14a672.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fac46d6-2dce-4393-8a96-0ab0ad14a672.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea132e8b-3c8e-495c-b1bc-98809260479e.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Independent agent review confirmed both inspection/update orderings: background refresh and an already pending detail response retain the selected component definition; Return loads current instance values. Exact browser regressions pass 2/2."
+          },
+          {
+            "kind": "explain",
+            "text": "Live migrated task retains its identity and history, exposes Planning identity and Task components, and opens component/property/data-type definitions. Repeated independent components retain separate values; the fixture now drains intercepted reads before teardown, passing 3/3."
+          },
+          {
+            "kind": "explain",
+            "text": "Full checkpoint remains in progress; this closes the inspection findings, not the final validation gate."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fac46d6-2dce-4393-8a96-0ab0ad14a672.json"
+}

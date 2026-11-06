@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a6075d88-e59a-4ea8-8065-d62efd9c20ec.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a6075d88-e59a-4ea8-8065-d62efd9c20ec.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T11:15:26.560Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 663,
+        "description": "",
+        "title": "- Independent review accepted explicit old-frame detachment before preview reentry and delivery of a real pre-fetched source response with handler cleanup; orig",
+        "updatedAt": "2026-10-18T11:15:49.847Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a6075d88-e59a-4ea8-8065-d62efd9c20ec.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a6075d88-e59a-4ea8-8065-d62efd9c20ec.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b47fca-020d-4ec5-9b8a-c4f77c844a77.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Independent review accepted explicit old-frame detachment before preview reentry and delivery of a real pre-fetched source response with handler cleanup; original assertions remain.\n- Full confirmation was 237/244, including the native worker exit and timing failures; it is retained as failed evidence.\n- Unchanged node-editor file passed all 5 cases with crash diagnostics enabled; no native report appeared, so the intermittent exit remains tracked.\n- Six focused cases now replay with pane-state and request/cleanup timing records; no timeout increases or production retries."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a6075d88-e59a-4ea8-8065-d62efd9c20ec.json"
+}

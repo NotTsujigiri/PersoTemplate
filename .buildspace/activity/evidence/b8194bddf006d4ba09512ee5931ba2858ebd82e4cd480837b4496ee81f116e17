@@ -1,0 +1,1204 @@
+commit 70db5e2d70dfb32407b29636e9ad861df8683988
+Author:     vinss1234 <vincent.danjon@gmail.com>
+AuthorDate: Mon Oct 26 08:26:34 2026 +0100
+Commit:     vinss1234 <vincent.danjon@gmail.com>
+CommitDate: Mon Oct 26 08:26:34 2026 +0100
+
+    Reuse JSON token classifications and remove review start/pause controls
+
+diff --git a/Systems/Depth1/Lsp/documents.test.ts b/Systems/Depth1/Lsp/documents.test.ts
+index b703d89..fef488d 100644
+--- a/Systems/Depth1/Lsp/documents.test.ts
++++ b/Systems/Depth1/Lsp/documents.test.ts
+@@ -66,3 +66,29 @@ test("single text changes do not split surrogate pairs or CRLF boundaries", () =
+     );
+   }
+ });
++
++test("document edit batches return sequential offsets and reject the entire invalid batch", () => {
++  const documents = new LspDocuments(), uri = "file:///workspace/sample.json";
++  documents.open({textDocument: {uri, languageId: "json", version: 1, text: "a\r\nb"}});
++  assert.deepEqual(documents.change({
++    textDocument: {uri, version: 2},
++    contentChanges: [
++      {range: {start: {line: 0, character: 1}, end: {line: 0, character: 1}}, text: "\n🌱"},
++      {range: {start: {line: 2, character: 0}, end: {line: 2, character: 1}}, text: "tail"},
++    ],
++  }), [{start: 1, end: 1, text: "\n🌱"}, {start: 6, end: 7, text: "tail"}]);
++  const accepted = documents.get(uri);
++  assert.equal(accepted?.text, "a\n🌱\r\ntail");
++  assert.throws(() => documents.change({
++    textDocument: {uri, version: 3},
++    contentChanges: [
++      {text: "discarded"},
++      {range: {start: {line: 2, character: 0}, end: {line: 2, character: 1}}, text: "invalid"},
++    ],
++  }), /outside/);
++  assert.strictEqual(documents.get(uri), accepted);
++  assert.deepEqual(documents.change({
++    textDocument: {uri, version: 3}, contentChanges: [{text: "{}"}],
++  }), [{start: 0, end: 10, text: "{}"}]);
++  assert.equal(documents.get(uri)?.text, "{}");
++});
+diff --git a/Systems/Depth1/Lsp/documents.ts b/Systems/Depth1/Lsp/documents.ts
+index 47a4ef7..c8eac41 100644
+--- a/Systems/Depth1/Lsp/documents.ts
++++ b/Systems/Depth1/Lsp/documents.ts
+@@ -9,6 +9,12 @@ export interface LspDocument {
+   readonly version: number;
+   readonly text: string;
+ }
++/** Validated UTF-16 edits, each relative to the result of the preceding edit. */
++export interface LspTextEdit {
++  readonly start: number;
++  readonly end: number;
++  readonly text: string;
++}
+ export function lineOffsets(text: string): number[] {
+   const result = [0];
+   for (let index = 0; index < text.length; index++) {
+@@ -73,7 +79,7 @@ export class LspDocuments {
+       text: string(item["text"]),
+     });
+   }
+-  change(params: unknown): void {
++  change(params: unknown): readonly LspTextEdit[] {
+     const item = record(params),
+       identifier = record(item["textDocument"]),
+       uri = string(identifier["uri"]),
+@@ -83,10 +89,12 @@ export class LspDocuments {
+     if (!Number.isInteger(version) || version <= document.version)
+       throw Error("Document version must increase.");
+     let text = document.text;
++    const edits: LspTextEdit[] = [];
+     for (const value of array(item["contentChanges"])) {
+       const change = record(value),
+         replacement = string(change["text"]);
+       if (change["range"] === undefined) {
++        edits.push({start: 0, end: text.length, text: replacement});
+         text = replacement;
+         continue;
+       }
+@@ -94,9 +102,11 @@ export class LspDocuments {
+         start = offsetAt(text, position(range["start"])),
+         end = offsetAt(text, position(range["end"]));
+       if (end < start) throw Error("Document range is reversed.");
++      edits.push({start, end, text: replacement});
+       text = text.slice(0, start) + replacement + text.slice(end);
+     }
+     this.documents.set(uri, { ...document, text, version });
++    return edits;
+   }
+   close(params: unknown): void {
+     const uri = string(record(record(params)["textDocument"])["uri"]);
+diff --git a/Systems/Depth2/Json/classification.ts b/Systems/Depth2/Json/classification.ts
+new file mode 100644
+index 0000000..d3f65c4
+--- /dev/null
++++ b/Systems/Depth2/Json/classification.ts
+@@ -0,0 +1,78 @@
++import { SyntaxKind } from "jsonc-parser";
++
++export type JsonTokenType = "property" | "string" | "number" | "boolean" | "null" | "operator" | "comment";
++type Mode = "root" | "done" | "array" | "array-recovery" | "key" | "colon" | "colon-newline" | "value" | "object-recovery";
++/** Persistent syntax context, independent of offsets, values, schemas and tree allocation. */
++export interface JsonContext {
++  readonly mode: Mode;
++  readonly parent?: JsonContext;
++}
++export const initialContext: JsonContext = {mode:"root"};
++const done: JsonContext = {mode:"done"};
++function mode(context: JsonContext, next: Mode): JsonContext {
++  return context.mode === next ? context : {mode: next, ...(context.parent ? {parent:context.parent} : {})};
++}
++export function sameContext(left: JsonContext, right: JsonContext): boolean {
++  let a: JsonContext | undefined = left, b: JsonContext | undefined = right;
++  while (a !== b) {
++    if (!a || !b || a.mode !== b.mode) return false;
++    a = a.parent;
++    b = b.parent;
++  }
++  return true;
++}
++function value(context: JsonContext, kind: SyntaxKind): JsonContext {
++  const parent = context.mode === "root" ? done : context.mode === "array" ? context : mode(context,"key");
++  switch (kind) {
++    case SyntaxKind.OpenBraceToken: return {mode:"key",parent};
++    case SyntaxKind.OpenBracketToken: return {mode:"array",parent};
++    case SyntaxKind.StringLiteral:
++    case SyntaxKind.NumericLiteral:
++    case SyntaxKind.NullKeyword:
++    case SyntaxKind.TrueKeyword:
++    case SyntaxKind.FalseKeyword: return parent;
++    default: return context.mode === "root" ? done : mode(context, context.mode === "array" ? "array-recovery" : "object-recovery");
++  }
++}
++/** Track only the context needed to distinguish keys, including incomplete JSON recovery. */
++export function classify(context: JsonContext, kind: SyntaxKind): {type: JsonTokenType | undefined; next: JsonContext} {
++  let next = context;
++  const isString = kind === SyntaxKind.StringLiteral;
++  const isKey = isString && (context.mode === "key" || context.mode === "colon-newline");
++  const type = tokenType(kind, isKey);
++  if (kind === SyntaxKind.Trivia || kind === SyntaxKind.LineCommentTrivia || kind === SyntaxKind.BlockCommentTrivia || kind === SyntaxKind.LineBreakTrivia) return {type,next};
++  if (context.mode === "done") return {type,next};
++  if (context.mode === "root") return {type,next:value(context,kind)};
++  const array = context.mode === "array" || context.mode === "array-recovery";
++  if (kind === (array ? SyntaxKind.CloseBracketToken : SyntaxKind.CloseBraceToken)) return {type,next:context.parent ?? done};
++  if (kind === SyntaxKind.CommaToken) return {type,next:mode(context,array ? "array" : "key")};
++  if (context.mode === "object-recovery" || context.mode === "array-recovery") return {type,next};
++  if (context.mode === "key") next = isString || kind === SyntaxKind.Unknown ? mode(context,"colon") : mode(context,"object-recovery");
++  else if (context.mode === "colon" || context.mode === "colon-newline") {
++    if (kind === SyntaxKind.ColonToken) next = mode(context,"value");
++    else if (isKey) next = mode(context,"colon");
++    else next = value(context,kind);
++  } else next = value(context,kind);
++  return {type,next};
++}
++export function afterNewline(context: JsonContext): JsonContext {
++  return context.mode === "colon" ? mode(context,"colon-newline") : context;
++}
++function tokenType(kind: SyntaxKind, key: boolean): JsonTokenType | undefined {
++  switch (kind) {
++    case SyntaxKind.StringLiteral: return key ? "property" : "string";
++    case SyntaxKind.NumericLiteral: return "number";
++    case SyntaxKind.TrueKeyword:
++    case SyntaxKind.FalseKeyword: return "boolean";
++    case SyntaxKind.NullKeyword: return "null";
++    case SyntaxKind.OpenBraceToken:
++    case SyntaxKind.CloseBraceToken:
++    case SyntaxKind.OpenBracketToken:
++    case SyntaxKind.CloseBracketToken:
++    case SyntaxKind.ColonToken:
++    case SyntaxKind.CommaToken: return "operator";
++    case SyntaxKind.LineCommentTrivia:
++    case SyntaxKind.BlockCommentTrivia: return "comment";
++    default: return undefined;
++  }
++}
+diff --git a/Systems/Depth2/Json/incremental.test.ts b/Systems/Depth2/Json/incremental.test.ts
+new file mode 100644
+index 0000000..08033c7
+--- /dev/null
++++ b/Systems/Depth2/Json/incremental.test.ts
+@@ -0,0 +1,48 @@
++import test from "node:test";
++import assert from "node:assert/strict";
++import { mkdtemp, mkdir, writeFile, realpath, rm } from "node:fs/promises";
++import os from "node:os";
++import path from "node:path";
++import { pathToFileURL } from "node:url";
++import { createJsonServer } from "./server.ts";
++import { jsonTokens, encodeJsonTokens, type JsonClassificationWork } from "./tokens.ts";
++import { record } from "@super-app/lsp-contributor/contract/source";
++
++test("local JSON edits reuse classification of the unchanged document", async () => {
++  const directory = await mkdtemp(path.join(os.tmpdir(), "json-incremental-"));
++  const file = path.join(directory, "large.json"), uri = pathToFileURL(file).href;
++  const input = "{\n" + Array.from({length: 10000}, (_, index) => `  "key${index}": ${index}`).join(",\n") + "\n}";
++  const work: JsonClassificationWork[] = [];
++  const server = createJsonServer(pathToFileURL(await realpath(directory)).href, item => work.push(item));
++  const expected = { initialWholeScan: true, editScansLessThan4096Characters: true, editReusesOver90Percent: true, sameAsFreshClassification: true, cachedRequestDoesNoClassification: true };
++  try {
++    await writeFile(file, input);
++    await server.request("initialize", {});
++    await server.notify("textDocument/didOpen", {textDocument: {uri, languageId: "json", version: 1, text: input}});
++    await server.request("textDocument/semanticTokens/full", {textDocument:{uri}});
++    const first = work.at(-1);
++    const replacement = "40000", start = {line: 5001, character: 13}, end = {line: 5001, character: 17};
++    assert.equal(input.split("\n")[5001], '  "key5000": 5000,');
++    // The numeral starts at UTF-16 character 13 and is four characters wide.
++    await server.notify("textDocument/didChange", {textDocument: {uri, version: 2}, contentChanges: [{range: {start, end}, text: replacement}]});
++    const changed = record(await server.request("textDocument/semanticTokens/full", {textDocument: {uri}}));
++    const edited = input.replace('"key5000": 5000', '"key5000": 40000'), after = work.at(-1);
++    const expectedTokens = encodeJsonTokens(jsonTokens({uri, languageId:"json", version:2, text:edited}));
++    const calls = work.length;
++    await server.request("textDocument/semanticTokens/full", {textDocument: {uri}});
++    const actual = {
++      initialWholeScan: first?.scannedCharacters === input.length,
++      editScansLessThan4096Characters: !!after && after.scannedCharacters < 4096,
++      editReusesOver90Percent: !!after && after.reusedCharacters > input.length * 0.9,
++      sameAsFreshClassification: JSON.stringify(changed["data"]) === JSON.stringify(expectedTokens),
++      cachedRequestDoesNoClassification: work.length === calls,
++    };
++    const output = new URL(`./test-results/incremental/run-${Date.now()}/`, import.meta.url);
++    await mkdir(output, {recursive:true});
++    await writeFile(new URL("recording.json", output), JSON.stringify({input:{text:input, edit:{start,end,text:replacement}}, expected, actual, work}, null, 2));
++    assert.deepEqual(actual, expected);
++  } finally {
++    await server.close();
++    await rm(directory, {recursive:true, force:true});
++  }
++});
+diff --git a/Systems/Depth2/Json/package.json b/Systems/Depth2/Json/package.json
+index e5832b6..505b562 100644
+--- a/Systems/Depth2/Json/package.json
++++ b/Systems/Depth2/Json/package.json
+@@ -11,8 +11,7 @@
+   "scripts": {"build":"tsc -b tsconfig.json", "test": "node --test *.test.ts"},
+   "dependencies": {
+     "@super-app/lsp-contributor": "0.1.0",
+-    "vscode-json-languageservice": "5.7.2",
+     "jsonc-parser": "3.3.1"
+   },
+-  "devDependencies": {"@types/node": "24.19.1", "typescript":"5.9.3"}
++  "devDependencies": {"@types/node": "24.19.1", "typescript":"5.9.3", "vscode-json-languageservice": "5.7.2"}
+ }
+diff --git a/Systems/Depth2/Json/performance.test.ts b/Systems/Depth2/Json/performance.test.ts
+index c352189..e86f803 100644
+--- a/Systems/Depth2/Json/performance.test.ts
++++ b/Systems/Depth2/Json/performance.test.ts
+@@ -12,6 +12,7 @@ import path from "node:path";
+ import os from "node:os";
+ import { pathToFileURL } from "node:url";
+ import { createJsonServer } from "./server.ts";
++import { type JsonClassificationWork } from "./tokens.ts";
+ import {
+   positionAt,
+   lineOffsets,
+@@ -41,9 +42,8 @@ test(
+         "\n]";
+     const file = path.join(directory, "dependencies.json"),
+       uri = pathToFileURL(file).href;
+-    const server = createJsonServer(
+-      pathToFileURL(await realpath(directory)).href,
+-    );
++    const work: JsonClassificationWork[] = [];
++    const server = createJsonServer(pathToFileURL(await realpath(directory)).href, item => work.push(item));
+     try {
+       await writeFile(file, text);
+       await server.request("initialize", {});
+@@ -96,8 +96,8 @@ test(
+         cachedMs,
+         partialEditMs,
+         edit: { start, end, replacement: "40000" },
+-        parsing:
+-          "Full parse and token scan once per changed document version; subsequent reads reuse classifications.",
++        classification: work,
++        parsing: "Token chunks are reused across edits; classification resumes at a token boundary until the unchanged suffix has the same syntax context. Timings include full token-result encoding.",
+       };
+       const output = new URL(
+         "./test-results/json-performance/",
+@@ -108,6 +108,9 @@ test(
+         new URL("latest.json", output),
+         JSON.stringify(evidence, null, 2),
+       );
++      const editWork = work.at(-1);
++      assert.ok(editWork && editWork.scannedCharacters < 4096);
++      assert.ok(editWork && editWork.reusedCharacters > text.length * 0.9);
+     } finally {
+       await server.close();
+       await rm(directory, { recursive: true, force: true });
+diff --git a/Systems/Depth2/Json/server.test.ts b/Systems/Depth2/Json/server.test.ts
+index 5acb462..66c2739 100644
+--- a/Systems/Depth2/Json/server.test.ts
++++ b/Systems/Depth2/Json/server.test.ts
+@@ -76,6 +76,30 @@ test(
+         }),
+         /version must increase/,
+       );
++      const accepted = await server.request("textDocument/semanticTokens/full", {textDocument: {uri}});
++      await assert.rejects(server.notify("textDocument/didChange", {
++        textDocument: {uri, version: 3},
++        contentChanges: [
++          {text: "null"},
++          {range: {start: {line: 9, character: 0}, end: {line: 9, character: 1}}, text: "invalid"},
++        ],
++      }), /outside/);
++      assert.deepEqual(await server.request("textDocument/semanticTokens/full", {textDocument: {uri}}), accepted);
++      // Changes use the preceding edit's coordinates, even before another token request.
++      await server.notify("textDocument/didChange", {
++        textDocument: {uri, version: 3},
++        contentChanges: [
++          {text: '{"a":1}'},
++          {range: {start: {line: 0, character: 5}, end: {line: 0, character: 6}}, text: "true"},
++        ],
++      });
++      await server.notify("textDocument/didChange", {
++        textDocument: {uri, version: 4},
++        contentChanges: [{range: {start: {line: 0, character: 5}, end: {line: 0, character: 9}}, text: "null"}],
++      });
++      assert.deepEqual(record(await server.request("textDocument/semanticTokens/full", {textDocument: {uri}}))["data"], [
++        0, 0, 1, 5, 0, 0, 1, 3, 0, 0, 0, 3, 1, 5, 0, 0, 1, 4, 4, 0, 0, 4, 1, 5, 0,
++      ]);
+       await server.notify("textDocument/didClose", { textDocument: { uri } });
+       await assert.rejects(
+         server.request("textDocument/semanticTokens/full", {
+diff --git a/Systems/Depth2/Json/server.ts b/Systems/Depth2/Json/server.ts
+index 5068859..df72df4 100644
+--- a/Systems/Depth2/Json/server.ts
++++ b/Systems/Depth2/Json/server.ts
+@@ -11,25 +11,22 @@ import {
+   type Position,
+ } from "@super-app/lsp-contributor/documents/source";
+ import {
+-  jsonTokens,
++  JsonTokenCache,
+   jsonTokenTypes,
+   encodeJsonTokens,
+-  type JsonToken,
++  type JsonClassificationWork,
+ } from "./tokens.ts";
+ import { containedPath, filePath } from "./scope.ts";
+ 
+ /** A workspace-owned JSON LSP peer; parsed results are retained only for currently open versions. */
+-export function createJsonServer(scopeUri: string): LspPeer {
++export function createJsonServer(scopeUri: string, observe?: (work: JsonClassificationWork) => void): LspPeer {
+   const workspace = filePath(scopeUri),
+     listeners = new Set<() => void>();
+   let documents = new LspDocuments(),
+     closed = false,
+     initialized = false,
+     shutdown = false;
+-  const cache = new Map<
+-    string,
+-    { version: number; tokens: readonly JsonToken[] }
+-  >();
++  const cache = new Map<string, JsonTokenCache>();
+   const ensureOpen = () => {
+     if (closed || shutdown) throw Error("The JSON language server is closed.");
+   };
+@@ -84,11 +81,11 @@ export function createJsonServer(scopeUri: string): LspPeer {
+         document = documents.get(uri);
+       if (!document) throw Error("The JSON document is not open.");
+       let current = cache.get(uri);
+-      if (current?.version !== document.version) {
+-        current = { version: document.version, tokens: jsonTokens(document) };
++      if (!current) {
++        current = new JsonTokenCache(document.text, observe);
+         cache.set(uri, current);
+       }
+-      let tokens = current.tokens;
++      let tokens = current.tokens();
+       if (method === "textDocument/semanticTokens/range") {
+         const range = record(request["range"]),
+           start = position(range["start"]),
+@@ -126,11 +123,15 @@ export function createJsonServer(scopeUri: string): LspPeer {
+         if (language !== "json" && language !== "jsonc")
+           throw Error("Expected a JSON document.");
+         documents.open(params);
+-      } else if (method === "textDocument/didChange") documents.change(params);
+-      else if (method === "textDocument/didClose") documents.close(params);
++      } else if (method === "textDocument/didChange") {
++        const edits = documents.change(params);
++        cache.get(uri)?.update(edits, observe);
++      } else if (method === "textDocument/didClose") {
++        documents.close(params);
++        cache.delete(uri);
++      }
+       else
+         throw Error("Unsupported JSON language-server notification: " + method);
+-      cache.delete(uri);
+     },
+     onNotification: () => () => {},
+     onClose: (listener) => {
+diff --git a/Systems/Depth2/Json/tokens.test.ts b/Systems/Depth2/Json/tokens.test.ts
+index 60f3163..9cd4b3f 100644
+--- a/Systems/Depth2/Json/tokens.test.ts
++++ b/Systems/Depth2/Json/tokens.test.ts
+@@ -1,6 +1,7 @@
+ import test from "node:test";
+ import assert from "node:assert/strict";
+-import { jsonTokens, encodeJsonTokens } from "./tokens.ts";
++import { jsonTokens, encodeJsonTokens, JsonTokenCache } from "./tokens.ts";
++import jsonLanguageService, { type ASTNode } from "vscode-json-languageservice";
+ import { lineOffsets } from "@super-app/lsp-contributor/documents/source";
+ 
+ function classified(text: string, languageId = "json") {
+@@ -100,3 +101,61 @@ test("unfinished values retain lexical categories and empty documents produce no
+   );
+   assert.deepEqual(classified(""), []);
+ });
++
++test("key classification agrees with Microsoft's JSON parser during syntax recovery", () => {
++  const service = jsonLanguageService.getLanguageService({});
++  const inputs = [
++    '{"a":"v","b":1}', '{"a"\n"b":1}', '{"a" /*\ncomment */ "b":2}',
++    '{"a" "v" "b":1}', '{"a":true "b":false}', '{foo: 1, "b":2}',
++    '{"a":@ {"ignored":1}, "b":3}', '[{"a":true}, "value", {"b":null}]',
++    '{"a": [}, "value", {"b":2}]}', '{"a":, "b":"unfinished',
++    '{"a":1, "unfinished', '{"a\\\"b": "x\\n"}', '{"a":1} {"ignored":2}',
++    '/*comment*/ {"😀": "é"}', '{"a"\r\n "b": 2}', '{}', '',
++  ];
++  for (const text of inputs) {
++    const parsed = service.parseJSONDocument(jsonLanguageService.TextDocument.create("file:///test.jsonc","jsonc",1,text));
++    const expected: number[] = [], pending: ASTNode[] = parsed.root ? [parsed.root] : [];
++    while (pending.length) {
++      const node = pending.pop();
++      if (!node) break;
++      // Unquoted invalid keys have no string token; the scanner does not color unknown content.
++      if (node.type === "property" && text[node.keyNode.offset] === '"') expected.push(node.keyNode.offset);
++      if (node.children) pending.push(...node.children);
++    }
++    const lines = lineOffsets(text);
++    const actual = jsonTokens({uri:"file:///test.jsonc",languageId:"jsonc",version:1,text})
++      .filter(token => token.type === "property")
++      .map(token => (lines[token.line] ?? 0) + token.character);
++    assert.deepEqual(actual,expected.sort((a,b)=>a-b),text);
++  }
++});
++
++test("incremental chunks match fresh classification through structural edits, UTF-16 and undo", () => {
++  const unit = '  {"😀":"value\\\"text", "array": [true, null, 12.5e+2]},\r\n';
++  let text = '[\r\n/* first\r\nsecond */\r\n' + unit.repeat(160) + '{}\r\n]';
++  const cache = new JsonTokenCache(text);
++  let seed = 173;
++  const random = (limit: number) => { seed = (Math.imul(seed,1664525) + 1013904223) >>> 0; return seed % limit; };
++  const replacements = ['"', '\\', '/*', '*/', '\r\n', '\n', '{', '}', '[', ']', ':', ',', 'false', '😀', '', ' \\n '];
++  for (let step=0;step<400;step++) {
++    const before = text, start = random(text.length + 1), end = Math.min(text.length,start + random(6));
++    const replacement = replacements[random(replacements.length)] ?? '';
++    text = before.slice(0,start) + replacement + before.slice(end);
++    cache.update([{start,end,text:replacement}]);
++    const fresh = () => jsonTokens({uri:"file:///test.jsonc",languageId:"jsonc",version:step+1,text});
++    assert.deepEqual(cache.tokens(),fresh(),`edit ${step}`);
++    if (step % 3 === 0) {
++      cache.update([{start,end:start + replacement.length,text:before.slice(start,end)}]);
++      text = before;
++      assert.deepEqual(cache.tokens(),fresh(),`undo ${step}`);
++    }
++  }
++});
++
++test("empty documents, full replacements and multiple ordered edits preserve token coordinates", () => {
++  const cache = new JsonTokenCache("");
++  cache.update([{start:0,end:0,text:'{"a":1}\r\n'}, {start:5,end:6,text:'[true, "😀"]'}]);
++  assert.deepEqual(cache.tokens(),jsonTokens({uri:"file:///x",languageId:"json",version:1,text:'{"a":[true, "😀"]}\r\n'}));
++  cache.update([{start:0,end:19,text:''}]);
++  assert.deepEqual(cache.tokens(),[]);
++});
+diff --git a/Systems/Depth2/Json/tokens.ts b/Systems/Depth2/Json/tokens.ts
+index 38be673..09a8501 100644
+--- a/Systems/Depth2/Json/tokens.ts
++++ b/Systems/Depth2/Json/tokens.ts
+@@ -1,130 +1,143 @@
+ import { createScanner, SyntaxKind } from "jsonc-parser";
+-import jsonLanguageService, { type ASTNode } from "vscode-json-languageservice";
+-import {
+-  lineOffsets,
+-  type LspDocument,
+-} from "@super-app/lsp-contributor/documents/source";
++import { lineOffsets, type LspDocument, type LspTextEdit } from "@super-app/lsp-contributor/documents/source";
++import { classify, afterNewline, initialContext, sameContext, type JsonContext, type JsonTokenType } from "./classification.ts";
+ 
+-type JsonTokenType =
+-  | "property"
+-  | "string"
+-  | "number"
+-  | "boolean"
+-  | "null"
+-  | "operator"
+-  | "comment";
+-export const jsonTokenTypes: readonly JsonTokenType[] = [
+-  "property",
+-  "string",
+-  "number",
+-  "boolean",
+-  "null",
+-  "operator",
+-  "comment",
+-];
++export const jsonTokenTypes: readonly JsonTokenType[] = ["property", "string", "number", "boolean", "null", "operator", "comment"];
+ export interface JsonToken {
+   readonly line: number;
+   readonly character: number;
+   readonly length: number;
+   readonly type: JsonTokenType;
+ }
+-const service = jsonLanguageService.getLanguageService({});
++/** Classification work only; document synchronization and full-result encoding have separate costs. */
++export interface JsonClassificationWork {
++  readonly scannedCharacters: number;
++  readonly reusedCharacters: number;
++}
++interface RawToken { readonly offset: number; readonly length: number; readonly type: JsonTokenType; }
++interface Chunk {
++  readonly length: number;
++  readonly lineBreaks: number;
++  readonly tailLength: number;
++  readonly before: JsonContext;
++  readonly tokens: readonly JsonToken[];
++}
++interface Suffix {
++  readonly chunks: readonly Chunk[];
++  readonly offsets: readonly number[];
++  readonly first: number;
++  readonly delta: number;
++}
++const chunkSize = 1024;
+ 
+-/** Parse keys through the JSON language service and retain scanner tokens during unfinished edits. */
+-export function jsonTokens(document: LspDocument): readonly JsonToken[] {
+-  const parsed = service.parseJSONDocument(
+-    jsonLanguageService.TextDocument.create(
+-      document.uri,
+-      document.languageId,
+-      document.version,
+-      document.text,
+-    ),
+-  );
+-  const keys = new Set<number>();
+-  const pending: ASTNode[] = parsed.root ? [parsed.root] : [];
+-  for (let node = pending.pop(); node; node = pending.pop()) {
+-    if (node.type === "property") keys.add(node.keyNode.offset);
+-    if (node.children) for (const child of node.children) pending.push(child);
++/** Reuse syntax-context checkpoints at complete lexical token boundaries across document edits. */
++export class JsonTokenCache {
++  private text: string;
++  private chunks: readonly Chunk[];
++  private result: readonly JsonToken[] | undefined;
++  constructor(text: string, observe?: (work: JsonClassificationWork) => void) {
++    this.text = text;
++    this.chunks = scan(text, 0, initialContext).chunks;
++    observe?.({scannedCharacters:text.length, reusedCharacters:0});
+   }
+-  const text = document.text,
+-    lines = lineOffsets(text),
+-    scanner = createScanner(text),
+-    tokens: JsonToken[] = [];
+-  let line = 0;
+-  for (
+-    let kind = scanner.scan();
+-    kind !== SyntaxKind.EOF;
+-    kind = scanner.scan()
+-  ) {
+-    const offset = scanner.getTokenOffset(),
+-      length = scanner.getTokenLength();
+-    const type = tokenType(kind, keys.has(offset));
+-    if (!type || !length) continue;
+-    const end = offset + length;
+-    let cursor = offset;
+-    while (cursor < end) {
+-      while ((lines[line + 1] ?? text.length + 1) <= cursor) line++;
+-      const start = lines[line] ?? 0,
+-        next = lines[line + 1] ?? text.length;
+-      let stop = Math.min(end, next);
+-      while (
+-        stop > cursor &&
+-        (text[stop - 1] === "\r" || text[stop - 1] === "\n")
+-      )
+-        stop--;
+-      if (stop > cursor)
+-        tokens.push({
+-          line,
+-          character: cursor - start,
+-          length: stop - cursor,
+-          type,
+-        });
+-      cursor = Math.min(end, next);
++  update(edits: readonly LspTextEdit[], observe?: (work: JsonClassificationWork) => void): void {
++    let scannedCharacters = 0, reusedCharacters = 0;
++    for (const edit of edits) {
++      if (edit.start < 0 || edit.end < edit.start || edit.end > this.text.length) throw Error("Invalid JSON token edit.");
++      const offsets: number[] = [];
++      let offset = 0;
++      for (const chunk of this.chunks) { offsets.push(offset); offset += chunk.length; }
++      let restart = 0;
++      // Include the preceding token boundary: insertion/deletion can join tokens or a comment opener.
++      while (restart + 1 < this.chunks.length && (offsets[restart + 1] ?? Infinity) < edit.start) restart++;
++      const start = offsets[restart] ?? 0;
++      let first = restart + 1;
++      while (first < offsets.length && (offsets[first] ?? 0) < edit.end) first++;
++      const text = this.text.slice(0,edit.start) + edit.text + this.text.slice(edit.end);
++      const result = scan(text,start,this.chunks[restart]?.before ?? initialContext, {
++        chunks:this.chunks, offsets, first, delta:edit.text.length - (edit.end - edit.start),
++      });
++      this.chunks = [...this.chunks.slice(0,restart), ...result.chunks];
++      this.text = text;
++      this.result = undefined;
++      scannedCharacters += result.scanned;
++      reusedCharacters += text.length - result.scanned;
+     }
++    if (edits.length) observe?.({scannedCharacters, reusedCharacters});
++  }
++  tokens(): readonly JsonToken[] {
++    if (this.result) return this.result;
++    const result: JsonToken[] = [];
++    let line = 0, character = 0;
++    for (const chunk of this.chunks) {
++      for (const token of chunk.tokens) result.push({...token, line:line + token.line, character:token.character + (token.line === 0 ? character : 0)});
++      line += chunk.lineBreaks;
++      character = chunk.lineBreaks ? chunk.tailLength : character + chunk.length;
++    }
++    this.result = result;
++    return result;
+   }
+-  return tokens;
+ }
+ 
+-function tokenType(kind: SyntaxKind, key: boolean): JsonTokenType | undefined {
+-  switch (kind) {
+-    case SyntaxKind.StringLiteral:
+-      return key ? "property" : "string";
+-    case SyntaxKind.NumericLiteral:
+-      return "number";
+-    case SyntaxKind.TrueKeyword:
+-    case SyntaxKind.FalseKeyword:
+-      return "boolean";
+-    case SyntaxKind.NullKeyword:
+-      return "null";
+-    case SyntaxKind.OpenBraceToken:
+-    case SyntaxKind.CloseBraceToken:
+-    case SyntaxKind.OpenBracketToken:
+-    case SyntaxKind.CloseBracketToken:
+-    case SyntaxKind.ColonToken:
+-    case SyntaxKind.CommaToken:
+-      return "operator";
+-    case SyntaxKind.LineCommentTrivia:
+-    case SyntaxKind.BlockCommentTrivia:
+-      return "comment";
+-    default:
+-      return undefined;
++/** Fresh classification uses exactly the same lexical rules as an incremental document. */
++export function jsonTokens(document: LspDocument, observe?: (work: JsonClassificationWork) => void): readonly JsonToken[] {
++  return new JsonTokenCache(document.text,observe).tokens();
++}
++
++function scan(text: string, start: number, context: JsonContext, suffix?: Suffix): {chunks: readonly Chunk[]; scanned:number} {
++  const scanner = createScanner(text), chunks: Chunk[] = [];
++  scanner.setPosition(start);
++  let chunkStart = start, before = context, state = context, raw: RawToken[] = [], candidate = suffix?.first ?? 0;
++  const flush = (end: number) => {
++    if (end <= chunkStart) return;
++    chunks.push(makeChunk(text.slice(chunkStart,end),raw,before));
++    chunkStart = end;
++    before = state;
++    raw = [];
++  };
++  for (let kind = scanner.scan(); kind !== SyntaxKind.EOF; kind = scanner.scan()) {
++    const offset = scanner.getTokenOffset(), end = Math.min(text.length, offset + scanner.getTokenLength());
++    const classified = classify(state,kind);
++    state = classified.next;
++    if (classified.type && end > offset) raw.push({offset:offset - chunkStart,length:end - offset,type:classified.type});
++    if (kind === SyntaxKind.LineBreakTrivia || ((kind === SyntaxKind.LineCommentTrivia || kind === SyntaxKind.BlockCommentTrivia || kind === SyntaxKind.Trivia) && /[\r\n]/.test(text.slice(offset,end)))) state = afterNewline(state);
++    if (suffix) {
++      while (candidate < suffix.chunks.length && (suffix.offsets[candidate] ?? Infinity) + suffix.delta < end) candidate++;
++      const old = suffix.chunks[candidate];
++      if (old && (suffix.offsets[candidate] ?? -1) + suffix.delta === end && sameContext(state,old.before)) {
++        flush(end);
++        return {chunks:[...chunks,...suffix.chunks.slice(candidate)],scanned:end - start};
++      }
++    }
++    if (end - chunkStart >= chunkSize) flush(end);
++  }
++  flush(text.length);
++  return {chunks,scanned:text.length - start};
++}
++
++function makeChunk(text: string, raw: readonly RawToken[], before: JsonContext): Chunk {
++  const lines = lineOffsets(text), tokens: JsonToken[] = [];
++  let line = 0;
++  for (const token of raw) {
++    const end = token.offset + token.length;
++    let cursor = token.offset;
++    while (cursor < end) {
++      while ((lines[line + 1] ?? text.length + 1) <= cursor) line++;
++      const start = lines[line] ?? 0, next = lines[line + 1] ?? text.length;
++      let stop = Math.min(end,next);
++      while (stop > cursor && (text[stop - 1] === "\r" || text[stop - 1] === "\n")) stop--;
++      if (stop > cursor) tokens.push({line,character:cursor - start,length:stop - cursor,type:token.type});
++      cursor = Math.min(end,next);
++    }
+   }
++  return {length:text.length, lineBreaks:lines.length - 1, tailLength:text.length - (lines.at(-1) ?? 0), before, tokens};
+ }
+ 
+ export function encodeJsonTokens(tokens: readonly JsonToken[]): number[] {
+   const data: number[] = [];
+-  let previousLine = 0,
+-    previousCharacter = 0;
++  let previousLine = 0, previousCharacter = 0;
+   for (const token of tokens) {
+-    data.push(
+-      token.line - previousLine,
+-      token.line === previousLine
+-        ? token.character - previousCharacter
+-        : token.character,
+-      token.length,
+-      jsonTokenTypes.indexOf(token.type),
+-      0,
+-    );
++    data.push(token.line - previousLine, token.line === previousLine ? token.character - previousCharacter : token.character, token.length, jsonTokenTypes.indexOf(token.type), 0);
+     previousLine = token.line;
+     previousCharacter = token.character;
+   }
+diff --git a/Systems/Depth4/HarnessApp/Depth0/Contracts/planning-model.ts b/Systems/Depth4/HarnessApp/Depth0/Contracts/planning-model.ts
+index 2196583..2a691d3 100644
+--- a/Systems/Depth4/HarnessApp/Depth0/Contracts/planning-model.ts
++++ b/Systems/Depth4/HarnessApp/Depth0/Contracts/planning-model.ts
+@@ -127,7 +127,7 @@ export type PlanningMutationAction =
+ export type PlanningMutateRequest = MutationRequest & ({command:'convert-model'}|{command?:'mutate';actions:PlanningMutationAction[]});
+ export type PlanningReviewRequest = MutationRequest & {id:string} & (
+   | {command:'configure';reviewers:ReviewParticipant[];targets:string[];sessionIds?:string[];runnables?:RunnableRequirement[]}
+-  | {command:'submit'|'start'|'pause'|'abandon'}
++  | {command:'submit'|'abandon'}
+   | {command:'complete-task';workId:string}
+   | {command:'outcome';outcome:ReviewOutcomeValue;reason?:string}
+   | {command:'withdraw';reason:string}
+diff --git a/Systems/Depth4/HarnessApp/Depth0/Contracts/planning-request-values.ts b/Systems/Depth4/HarnessApp/Depth0/Contracts/planning-request-values.ts
+index a903588..b353df0 100644
+--- a/Systems/Depth4/HarnessApp/Depth0/Contracts/planning-request-values.ts
++++ b/Systems/Depth4/HarnessApp/Depth0/Contracts/planning-request-values.ts
+@@ -46,10 +46,10 @@ export function readPlanningMutation(value:unknown):PlanningMutateRequest {
+   return {...base,command:'mutate',actions:list(v['actions']).map(action)};
+ }
+ export function readPlanningReview(value:unknown):PlanningReviewRequest {
+-  const v=record(value),base={...mutation(v),id:text(v['id'])},command=choice(v['command'],['configure','submit','start','pause','abandon','complete-task','outcome','withdraw','continue','successor','accept-evidence']);
++  const v=record(value),base={...mutation(v),id:text(v['id'])},command=choice(v['command'],['configure','submit','abandon','complete-task','outcome','withdraw','continue','successor','accept-evidence']);
+   switch(command){
+     case 'configure':return {...base,command,targets:strings(v['targets']),reviewers:list(v['reviewers']).map(value=>{const r=record(value);return {actorId:text(r['actorId']),required:bool(r['required'])};}),...optional(v,'sessionIds',strings),...optional(v,'runnables',value=>list(value).map(value=>{const r=record(value);return {id:text(r['id']),name:text(r['name']),required:bool(r['required']),...optional(r,'definitionHash',text)};}))};
+-    case 'submit':case 'start':case 'pause':case 'abandon':return {...base,command};
++    case 'submit':case 'abandon':return {...base,command};
+     case 'complete-task':return {...base,command,workId:text(v['workId'])};
+     case 'outcome':return {...base,command,outcome:choice(v['outcome'],['approved','changes-requested','blocked','pending']),...optional(v,'reason',text)};
+     case 'withdraw':return {...base,command,reason:text(v['reason'])};
+diff --git a/Systems/Depth4/HarnessApp/Depth1/Browser/planning.ts b/Systems/Depth4/HarnessApp/Depth1/Browser/planning.ts
+index 65a24b1..9372796 100644
+--- a/Systems/Depth4/HarnessApp/Depth1/Browser/planning.ts
++++ b/Systems/Depth4/HarnessApp/Depth1/Browser/planning.ts
+@@ -2107,22 +2107,6 @@ export class PlanningSurfaceElement extends LitElement {
+       columns = el("div", "review-columns");
+     summary.setAttribute("aria-label", "Review task");
+     summary.append(el("h3", "", n.title), el("p", "", n.description || ""));
+-    if (
+-      !revision &&
+-      ["submitted", "blocked"].includes(review.status) &&
+-      review.reviewers.some((r) => r.actorId === "human:user")
+-    ) {
+-      const running = n.placement === "running";
+-      summary.append(
+-        action(
+-          running ? "Pause review" : "Start review",
+-          () => invoke("review", running ? "pause" : "start", { id: n.id }),
+-          running
+-            ? "Move this review to Waiting"
+-            : "Move this review to In progress",
+-        ),
+-      );
+-    }
+     const narrative = el("div", "review-narrative");
+     narrative.append(summary, main);
+     columns.append(narrative, side);
+diff --git a/Systems/Depth4/HarnessApp/agent-review-ui.spec.ts b/Systems/Depth4/HarnessApp/agent-review-ui.spec.ts
+index 4fa30a6..3794cc3 100644
+--- a/Systems/Depth4/HarnessApp/agent-review-ui.spec.ts
++++ b/Systems/Depth4/HarnessApp/agent-review-ui.spec.ts
+@@ -2,7 +2,7 @@ import { expect,test } from '@playwright/test';
+ import { mkdir,writeFile } from 'node:fs/promises';
+ import { startBrowserFixture } from './browser-server.test-support.ts';
+ import { requiredFixture } from './fixture-values.test-support.ts';
+-import { planningCaller } from './planning.test-support.ts';
++import { planningCaller, reviewNode, taskNode } from './planning.test-support.ts';
+ import { waitForApplicationReady } from './review-fixture.test-support.ts';
+ 
+ test('review policy offers an agent and its outcome remains owned by that agent',async({page},info)=>{
+@@ -36,9 +36,57 @@ test('review policy offers an agent and its outcome remains owned by that agent'
+   await page.goto(url);await waitForApplicationReady(page);
+   await expect(page.getByLabel(actor.title+' outcome',{exact:true})).toHaveValue('pending');
+   await expect(page.getByLabel(actor.title+' outcome',{exact:true})).toBeDisabled();
+-  await write('review',{command:'start',id:reviewId});
+   await write('review',{command:'outcome',id:reviewId,outcome:'approved',reason:'Independent agent evidence accepted.'});
+   await expect(page.getByLabel(actor.title+' outcome',{exact:true})).toHaveValue('approved');
+   await page.screenshot({path:info.outputPath('agent-review-approved.png')});
+   } finally {await fixture.close();}
+ });
++
++test('review overview keeps individual decisions without start or pause controls', async ({page}, info) => {
++  const fixture = await startBrowserFixture();
++  try {
++    const planning = fixture.app.harness.planning;
++    const space = await requiredFixture(fixture.app.harness.contributions).configureSpace({name:'Shared review workspace',root:fixture.app.harness.root,templateId:'personal'});
++    const author = planningCaller(planning, {id:'human:user',kind:'human',name:'You'});
++    const agent = planningCaller(planning, {id:'agent:reviewer',kind:'agent',name:'Independent agent'});
++    const created = await author('mutate', {actions:[
++      {op:'create',key:'work',kind:'task',context:space.id,fields:{title:'Reviewed implementation',placement:'completed'}},
++      {op:'create',key:'review',kind:'task',context:space.id,fields:{title:'Shared review decisions',description:'Inspect the implementation and record your decision.',purpose:'review'}},
++    ]});
++    const id = requiredFixture(created.aliases['review']);
++    await author('review', {command:'configure',id,targets:[requiredFixture(created.aliases['work'])],reviewers:[{actorId:'human:user',required:true},{actorId:'agent:reviewer',required:true}]});
++    await author('review', {command:'submit',id});
++    await page.goto(fixture.app.url);
++    await waitForApplicationReady(page);
++    await page.goto(new URL(fixture.app.url).origin + '/?' + new URLSearchParams({area:'timeline',space:space.id,node:id}));
++    await waitForApplicationReady(page);
++    await expect(page.getByLabel('You outcome',{exact:true})).toHaveValue('pending');
++    const observations: unknown[] = [];
++    const record = async (step: string) => observations.push({
++      step,
++      startControls: await page.getByRole('button',{name:'Start review',exact:true}).count(),
++      pauseControls: await page.getByRole('button',{name:'Pause review',exact:true}).count(),
++      placement: taskNode(planning.state,id).placement,
++      status: reviewNode(planning.state,id).status,
++      humanOutcome: await page.getByLabel('You outcome',{exact:true}).inputValue(),
++    });
++    await record('submitted');
++    await page.screenshot({path:info.outputPath('review-waiting-for-decisions.png')});
++    await agent('review',{command:'outcome',id,outcome:'approved'});
++    await expect(page.getByLabel('Independent agent outcome',{exact:true})).toHaveValue('approved');
++    await expect(page.getByLabel('Author review status',{exact:true})).toHaveValue('submitted');
++    await record('agent approved');
++    await page.getByLabel('You outcome',{exact:true}).selectOption('approved');
++    await expect(page.getByLabel('Author review status',{exact:true})).toHaveValue('passed');
++    await record('both approved');
++    await page.screenshot({path:info.outputPath('review-all-decisions-recorded.png')});
++    const expected = [
++      {step:'submitted',startControls:0,pauseControls:0,placement:'blocked',status:'submitted',humanOutcome:'pending'},
++      {step:'agent approved',startControls:0,pauseControls:0,placement:'blocked',status:'submitted',humanOutcome:'pending'},
++      {step:'both approved',startControls:0,pauseControls:0,placement:'completed',status:'passed',humanOutcome:'approved'},
++    ];
++    await writeFile(info.outputPath('actual.json'),JSON.stringify(observations,null,2));
++    await writeFile(info.outputPath('expected.json'),JSON.stringify(expected,null,2));
++    expect(observations).toEqual(expected);
++  } finally {await fixture.close();}
++});
+diff --git a/Systems/Depth4/HarnessApp/agent-review.test.ts b/Systems/Depth4/HarnessApp/agent-review.test.ts
+index c11be26..1862270 100644
+--- a/Systems/Depth4/HarnessApp/agent-review.test.ts
++++ b/Systems/Depth4/HarnessApp/agent-review.test.ts
+@@ -33,11 +33,10 @@ test('an authenticated agent reviews and corrects a plan before the human review
+     await author('review',{command:'submit',id:agentId});
+     await assert.rejects(author('review',{command:'outcome',id:agentId,outcome:'approved'}), /not a reviewer/);
+     await author('review',{command:'submit',id:humanId});
+-    await assert.rejects(human('review',{command:'start',id:humanId}), /prerequisites/);
++    await assert.rejects(human('review',{command:'outcome',id:humanId,outcome:'approved'}), /prerequisites/);
+     // Human review is returned to draft so its target can receive the agent's correction round.
+     await author('review',{command:'withdraw',id:humanId,reason:'Wait for independent agent acceptance.'});
+     await author('mutate',{actions:[{op:'update',id:humanId,fields:{placement:'blocked'}}]});
+-    await reviewer('review',{command:'start',id:agentId});
+     const feedback=await reviewer('discuss',{command:'post',reviewId:agentId,rows:[{kind:'fix',text:'Require compiler rejection fixtures before cutover.'}]});
+     await assert.rejects(reviewer('review',{command:'outcome',id:agentId,outcome:'approved'}), /discussion/);
+     await reviewer('review',{command:'outcome',id:agentId,outcome:'changes-requested',reason:'Missing compiler proof.'});
+@@ -50,13 +49,11 @@ test('an authenticated agent reviews and corrects a plan before the human review
+     await reviewer('discuss',{command:'post',reviewId:successor.id,parentId:feedback.id,rows:[{kind:'explain',text:'Compiler proof is now required before cutover.'}]});
+     await reviewer('discuss',{command:'close',reviewId:successor.id,id:feedback.id});
+     await author('review',{command:'submit',id:successor.id});
+-    await reviewer('review',{command:'start',id:successor.id});
+     await reviewer('review',{command:'outcome',id:successor.id,outcome:'approved',reason:'Correction verified.'});
+     observations.push({step:'round-two',status:reviewNode(p.state,successor.id).status,reviewers:reviewNode(p.state,successor.id).reviewers,gateTransferred:p.state.edges[gate.id]?.target===successor.id});
+     await author('review',{command:'submit',id:humanId});
+     await assert.rejects(reviewer('review',{command:'outcome',id:humanId,outcome:'approved'}), /not a reviewer/);
+     observations.push({step:'human-handoff',status:reviewNode(p.state,humanId).status,placement:taskNode(p.state,humanId).placement,outcomes:reviewNode(p.state,humanId).outcomes});
+-    await human('review',{command:'start',id:humanId});
+     await human('review',{command:'outcome',id:humanId,outcome:'approved'});
+     observations.push({step:'human-approval',status:reviewNode(p.state,humanId).status});
+   }
+@@ -86,7 +83,7 @@ test('review policies reject unsupported and empty actor identities',async t=>{
+   for(const actorId of ['agent:','human:','system:recovery','reviewer'])await assert.rejects(call('review',{command:'configure',id:requiredFixture(aliases['review']),targets:[requiredFixture(aliases['plan'])],reviewers:[{actorId,required:true}]}));
+ });
+ 
+-test('agent-only and mixed reviews wait when paused, blocked or awaiting a decision',async t=>{
++test('agent-only and mixed reviews wait while blocked or awaiting a mandatory decision',async t=>{
+   const store=await mkdtemp(path.join(os.tmpdir(),'review-readiness-'));
+   t.after(()=>rm(store,{recursive:true,force:true}));
+   const p=await new Planning(planningHost({store})).init();
+@@ -103,8 +100,6 @@ test('agent-only and mixed reviews wait when paused, blocked or awaiting a decis
+     await author('review',{command:'configure',id,targets:[requiredFixture(aliases['work'])],reviewers:[{actorId:'agent:reviewer',required:true},...(mixed?[{actorId:'human:user',required:true}]:[])]});
+     const record=(step:string)=>observations.push({mixed,step,placement:taskNode(p.state,id).placement,status:reviewNode(p.state,id).status});
+     await author('review',{command:'submit',id});record('submit');
+-    await agent('review',{command:'start',id});record('start');
+-    await agent('review',{command:'pause',id});record('pause');
+     await agent('review',{command:'outcome',id,outcome:'blocked',reason:'Needs evidence.'});record('blocked');
+     await agent('review',{command:'outcome',id,outcome:'pending'});record('pending');
+     if(mixed){await human('review',{command:'outcome',id,outcome:'approved'});record('human-approved');}
+@@ -112,8 +107,6 @@ test('agent-only and mixed reviews wait when paused, blocked or awaiting a decis
+   }
+   const expected=[false,true].flatMap(mixed=>[
+     {mixed,step:'submit',placement:'blocked',status:'submitted'},
+-    {mixed,step:'start',placement:'running',status:'submitted'},
+-    {mixed,step:'pause',placement:'blocked',status:'submitted'},
+     {mixed,step:'blocked',placement:'blocked',status:'blocked'},
+     {mixed,step:'pending',placement:'blocked',status:'submitted'},
+     ...(mixed?[{mixed,step:'human-approved',placement:'blocked',status:'submitted'}]:[]),
+diff --git a/Systems/Depth4/HarnessApp/planning-contract.ts b/Systems/Depth4/HarnessApp/planning-contract.ts
+index fa8f6cd..055b73c 100644
+--- a/Systems/Depth4/HarnessApp/planning-contract.ts
++++ b/Systems/Depth4/HarnessApp/planning-contract.ts
+@@ -604,8 +604,9 @@ export function normalizeTaskGraph(before: PlanningGraph,g: PlanningGraph) {
+       const admitted=n.placement!=='backlog'||liveTask(parent);
+       if(!admitted)continue;
+       const previous=n.placement,blocked=unmetPrerequisites(g,n.id,dependencyLookup).length>0||underReview.has(n.id)||(blockingReviews.get(n.id)?.length??0)>0;
+-      if(n.placement==='backlog'||n.placement==='queued')n.placement=blocked||awaitsReviewer(n)?'blocked':'queued';
+-      else if(n.placement==='blocked'&&!blocked&&!awaitsReviewer(n))n.placement='queued';
++      if(awaitsReviewer(n))n.placement='blocked';
++      else if(n.placement==='backlog'||n.placement==='queued')n.placement=blocked?'blocked':'queued';
++      else if(n.placement==='blocked'&&!blocked)n.placement='queued';
+       if(n.placement!==previous)changed=true;
+     }
+     if(!changed)break;
+@@ -641,9 +642,9 @@ export const invariantRules: Record<string,readonly InvariantRule[]> = {
+       evaluate:(n,g)=>n.placement==='backlog'&&relations(g,'contains').some(e=>e.target===n.id&&liveTask(g.nodes[e.source]))?'Children of an active task must be Queued or Waiting according to their prerequisites.':undefined,
+     },
+     {
+-      id:'planning:reviewer-readiness',comment:'A review requiring a pending reviewer waits until a reviewer explicitly starts it.',
++      id:'planning:reviewer-readiness',comment:'A review with pending mandatory reviewer decisions remains in Waiting.',
+       severity:'error',fields:['placement','review'],
+-      evaluate:n=>n.placement==='queued'&&awaitsReviewer(n)?'A mandatory review belongs in Waiting until Start review.':undefined,
++      evaluate:n=>['queued','running'].includes(n.placement)&&awaitsReviewer(n)?'A mandatory review belongs in Waiting while reviewer decisions are pending.':undefined,
+     },
+     {
+       id:'planning:waiting-reason',comment:'Waiting requires an unfinished prerequisite, a pending review, or a mandatory reviewer.',
+diff --git a/Systems/Depth4/HarnessApp/planning-readiness.test.ts b/Systems/Depth4/HarnessApp/planning-readiness.test.ts
+index 909001e..2ce2162 100644
+--- a/Systems/Depth4/HarnessApp/planning-readiness.test.ts
++++ b/Systems/Depth4/HarnessApp/planning-readiness.test.ts
+@@ -25,13 +25,12 @@ test('model mutators reduce prerequisites and cascade readiness without bypassin
+  const invalid=structuredClone(p.state);for(const e of Object.values(invalid.edges))if(e.type==='prerequisite'&&e.source===required(a['C'],'Missing C alias.')&&e.target===required(a['A'],'Missing A alias.'))delete invalid.edges[e.id];invalid.edges['extra']={id:'extra',type:'prerequisite',source:required(a['C'],'Missing C alias.'),target:required(a['A'],'Missing A alias.')};
+  let redundantRejected=false;try{model.assertValid(semanticGraph(invalid));}catch{redundantRejected=true;}
+  await call('review',{command:'submit',id:required(a['A'],'Missing A alias.')});
+- await call('review',{command:'start',id:required(a['A'],'Missing A alias.')},{id:'human:user',kind:'human'});
+- const started=p.task(p.state,required(a['A'],'Missing A alias.')).placement;
++ const submitted=p.task(p.state,required(a['A'],'Missing A alias.')).placement;
+  await call('review',{command:'outcome',id:required(a['A'],'Missing A alias.'),outcome:'approved'},{id:'human:user',kind:'human'});
+  const passed=state();
+  await call('mutate',{actions:[{op:'update',id:required(a['B'],'Missing B alias.'),fields:{placement:'completed'}}]});
+- const actual={queued,reduced,redundantRejected,started,passed,successor:p.task(p.state,required(a['C'],'Missing C alias.')).placement,
++ const actual={queued,reduced,redundantRejected,submitted,passed,successor:p.task(p.state,required(a['C'],'Missing C alias.')).placement,
+   tracked:Object.values(p.state.nodes).some(n=>n.kind==='task-transition'&&n.taskId===required(a['C'],'Missing C alias.')&&n.from==='blocked'&&n.to==='queued')};
+- const expected={queued:{A:'blocked',B:'blocked',C:'blocked',free:'queued',nested:'queued'},reduced:['B'],redundantRejected:true,started:'running',passed:{A:'completed',B:'queued',C:'blocked',free:'queued',nested:'queued'},successor:'queued',tracked:true};
++ const expected={queued:{A:'blocked',B:'blocked',C:'blocked',free:'queued',nested:'queued'},reduced:['B'],redundantRejected:true,submitted:'blocked',passed:{A:'completed',B:'queued',C:'blocked',free:'queued',nested:'queued'},successor:'queued',tracked:true};
+  const dir='.harness/recordings/planning-readiness';await mkdir(dir,{recursive:true});await writeFile(dir+'/'+(process.env['RECORDING_PHASE']||'actual')+'.json',JSON.stringify(actual,null,2));await writeFile(dir+'/expected.json',JSON.stringify(expected,null,2));assert.deepEqual(actual,expected);
+ });
+diff --git a/Systems/Depth4/HarnessApp/planning-requests.ts b/Systems/Depth4/HarnessApp/planning-requests.ts
+index 5231c28..a0fa55b 100644
+--- a/Systems/Depth4/HarnessApp/planning-requests.ts
++++ b/Systems/Depth4/HarnessApp/planning-requests.ts
+@@ -101,8 +101,6 @@ export const requestSchemas = {
+       ...common,
+       command: choices([
+         "configure",
+-        "start",
+-        "pause",
+         "complete-task",
+         "submit",
+         "withdraw",
+diff --git a/Systems/Depth4/HarnessApp/planning-runtime.ts b/Systems/Depth4/HarnessApp/planning-runtime.ts
+index edae704..9ec0d4c 100644
+--- a/Systems/Depth4/HarnessApp/planning-runtime.ts
++++ b/Systems/Depth4/HarnessApp/planning-runtime.ts
+@@ -40,7 +40,7 @@ const operations:Record<OperationName,{effect:'read'|'write';description:string}
+   review: {
+     effect: "write",
+     description:
+-      "Configure/submit a review, start/pause your review work, complete-task with workId to complete a covered task as an assigned reviewer independently of the review outcome, author-withdraw an untouched submitted round, record your own outcome, continue rejected work, create successor review and transfer explicitly selected gates, or accept earlier passed evidence as a human. Submission enters Waiting; start enters In progress. Task category transitions record the authenticated actor and originating review automatically. The submitted target remains immutable.",
++      "Configure/submit a review, complete-task with workId to complete a covered task as an assigned reviewer independently of the review outcome, author-withdraw an untouched submitted round, record your own outcome, continue rejected work, create successor review and transfer explicitly selected gates, or accept earlier passed evidence as a human. Reviews remain in Waiting while mandatory reviewer decisions are pending. Task category transitions record the authenticated actor and originating review automatically. The submitted target remains immutable.",
+   },
+   discuss: {
+     effect: "write",
+diff --git a/Systems/Depth4/HarnessApp/planning-state-history.test.ts b/Systems/Depth4/HarnessApp/planning-state-history.test.ts
+index 5cb6538..891aa4c 100644
+--- a/Systems/Depth4/HarnessApp/planning-state-history.test.ts
++++ b/Systems/Depth4/HarnessApp/planning-state-history.test.ts
+@@ -1,4 +1,4 @@
+-import { taskNode } from "./planning.test-support.ts";
++import { taskNode, reviewNode } from "./planning.test-support.ts";
+ import { planningHost, planningCaller } from "./planning.test-support.ts";
+ import { required } from "./Depth0/Contracts/runtime-values.ts";
+ import type { PlanningActor } from "./Depth0/Contracts/planning-actor.ts";
+@@ -11,6 +11,7 @@ import path from "node:path";
+ import { randomUUID } from "node:crypto";
+ import { Planning } from "./planning.ts";
+ import { planningActor } from "./planning-actor.ts";
++import { readPlanningReview } from "./Depth0/Contracts/planning-request-values.ts";
+ import { layoutRanges } from "@super-app/relational-ui-contributor/range-graph/layout/source";
+ import type {
+   PlanningMutationAction,
+@@ -287,14 +288,15 @@ test("nested timelines show current state without duplicated ranges", () => {
+   );
+ });
+ 
+-test("review submission waits; reviewer start and pause record the ordinary lifecycle", async (t) => {
++test("review submission waits for all mandatory outcomes without reviewer activity transitions", async (t) => {
+   const store = await mkdtemp(path.join(os.tmpdir(), "review-history-"));
+   t.after(() => rm(store, { recursive: true, force: true }));
+-  const p = await new Planning(
++  let p = await new Planning(
+     planningHost({ store, contributions: { space: () => ({ id: "space" }) } }),
+   ).init();
+   const author: PlanningActor = { id: "agent:author", kind: "agent" },
+-    reviewer: PlanningActor = { id: "human:user", kind: "human" };
++    reviewer: PlanningActor = { id: "human:user", kind: "human" },
++    secondReviewer: PlanningActor = { id: "agent:reviewer", kind: "agent" };
+ 
+   const { aliases: a } = await planningCaller(p, author)("mutate", {
+     actions: [
+@@ -318,7 +320,7 @@ test("review submission waits; reviewer start and pause record the ordinary life
+     command: "configure",
+     id: required(a["review"], "Missing review alias."),
+     targets: [required(a["work"], "Missing work alias.")],
+-    reviewers: [{ actorId: reviewer.id, required: true }],
++    reviewers: [reviewer, secondReviewer].map(actor => ({ actorId: actor.id, required: true })),
+   });
+   await planningCaller(p, author)("review", {
+     command: "submit",
+@@ -332,16 +334,25 @@ test("review submission waits; reviewer start and pause record the ordinary life
+     taskNode(p.state, required(a["review"], "Missing review alias.")).placement,
+     "blocked",
+   );
+-  await assert.rejects(
+-    planningCaller(p, author)("review", {
+-      command: "start",
+-      id: required(a["review"], "Missing review alias."),
+-    }),
+-    /reviewer/,
+-  );
++  const id = required(a["review"], "Missing review alias.");
++  const observations: {step: string; placement: Placement; status: string; outcomes: string[]}[] = [];
++  const record = (step: string) => observations.push({
++    step,
++    placement: taskNode(p.state, id).placement,
++    status: reviewNode(p.state, id).status,
++    outcomes: Object.values(reviewNode(p.state, id).outcomes).map(outcome => outcome.value),
++  });
++  record("submitted");
++  for (const command of ["start", "pause"]) {
++    assert.throws(() => readPlanningReview({ command, id, expectedRevision: p.state.revision, requestId: randomUUID() }), /Invalid request choice/);
++  }
++  await assert.rejects(planningCaller(p, author)("review", {command: "outcome", id, outcome: "approved"}), /reviewer/);
++  await assert.rejects(planningCaller(p, reviewer)("mutate", {actions: [{op: "update", id, fields: {placement: "running"}}]}), /read-only/);
++  record("placement remains waiting");
+   const request = {
+-    command: "start" as const,
+-    id: required(a["review"], "Missing review alias."),
++    command: "outcome" as const,
++    outcome: "approved" as const,
++    id,
+     expectedRevision: p.state.revision,
+     requestId: randomUUID(),
+   };
+@@ -349,18 +360,31 @@ test("review submission waits; reviewer start and pause record the ordinary life
+   const revision = p.state.revision;
+   await planningActor.run(reviewer, () => p.review(request));
+   assert.equal(p.state.revision, revision);
+-  await planningCaller(p, reviewer)("review", {
+-    command: "pause",
+-    id: required(a["review"], "Missing review alias."),
+-  });
+-  assert.deepEqual(
+-    Object.values(p.state.nodes)
++  record("first approved");
++  p = await new Planning(p.h).init();
++  record("restarted");
++  await planningCaller(p, secondReviewer)("review", {command: "outcome", id, outcome: "approved"});
++  record("all approved");
++  const transitions = Object.values(p.state.nodes)
+       .filter(
+         (n): n is TaskTransitionNode =>
+           n.kind === "task-transition" &&
+-          n.taskId === required(a["review"], "Missing review alias."),
++          n.taskId === id,
+       )
+-      .map((n) => n.to),
+-    ["backlog", "blocked", "running", "blocked"],
+-  );
++      .map((n) => n.to);
++  const actual = {observations, transitions};
++  const expected = {
++    observations: [
++      {step: "submitted", placement: "blocked", status: "submitted", outcomes: []},
++      {step: "placement remains waiting", placement: "blocked", status: "submitted", outcomes: []},
++      {step: "first approved", placement: "blocked", status: "submitted", outcomes: ["approved"]},
++      {step: "restarted", placement: "blocked", status: "submitted", outcomes: ["approved"]},
++      {step: "all approved", placement: "completed", status: "passed", outcomes: ["approved", "approved"]},
++    ],
++    transitions: ["backlog", "blocked", "completed"],
++  };
++  await mkdir("test-results", {recursive: true});
++  const directory = await mkdtemp(path.resolve("test-results/review-outcome-history-"));
++  for (const [name, value] of Object.entries({actual, expected})) await writeFile(path.join(directory, name + ".json"), JSON.stringify(value, null, 2));
++  assert.deepEqual(actual, expected);
+ });
+diff --git a/Systems/Depth4/HarnessApp/planning.ts b/Systems/Depth4/HarnessApp/planning.ts
+index 4dde79f..3ad9070 100644
+--- a/Systems/Depth4/HarnessApp/planning.ts
++++ b/Systems/Depth4/HarnessApp/planning.ts
+@@ -1069,11 +1069,6 @@ export class Planning implements PlanningCapabilities,PlanningService {
+           assert(task.placement!=='abandoned', 'An abandoned task cannot be completed.');
+           assert(schema.fields.task.filter(f=>!f.readOnly&&f.key!=='placement').every(f=>digest(fieldValue(task,f.key)??null)===digest(fieldValue(captured,f.key)??null)), 'Task changed since this review was submitted. Review its current version before completing it.');
+           this.applyFields(d, task, {placement:'completed'});
+-        } else if (command === "start" || command === "pause") {
+-          assert(active(r), "This review is not active.");
+-          assert(r.reviewers.some(v => v.actorId === actor.id), "You are not a reviewer.");
+-          if (command === "start") assert(!this.blocking(d,n.id).length, "Unmet prerequisites block review work.");
+-          n.placement = command === "start" ? "running" : "blocked";
+         } else if (command === "outcome") {
+           assert(active(r), "This review is not active.");
+           assert(
+diff --git a/TESTING.md b/TESTING.md
+index fc4f4a8..7ecb32a 100644
+--- a/TESTING.md
++++ b/TESTING.md
+@@ -41,6 +41,8 @@ Inspect the disposable screenshots under `Systems/Depth4/HarnessApp/test-results
+ 
+ `lsp-text-editor-ui.spec.ts` opens real TypeScript and JSON documents through the shared editor and repository view, records token colors, native editing and undo, and verifies that edits do not invoke graph operations. Its long-document recording checks visible-row rendering and alignment on both scroll axes. Run it with `files-source-scope-ui.spec.ts`, `files-retained-input-ui.spec.ts` and `file-selection-save-ui.spec.ts` for source selection and stale-save consumers. `workspace-document.test.ts` covers canonical file identities and guarded writes; `TextEditor/color-lines.test.ts` covers UTF-16 offsets, multiline tokens and viewport slicing.
+ 
++JsonContributor's `incremental.test.ts` retains the authored large-document edit, exact expected/actual acceptance and classification work under `test-results/incremental/run-*`. `tokens.test.ts` compares incremental edit/undo sequences with fresh classification, including unfinished syntax, comments, nesting and UTF-16/CRLF boundaries; Microsoft's JSON parser independently checks property classification. `server.test.ts` and LspContributor's `documents.test.ts` cover rejected versions/batches and consecutive edits before a token request. `performance.test.ts` records initial, cached and changed-version timings plus scanned/reused classification characters for a large repository-derived document. These counters measure classification only: document synchronization and complete semantic-token response encoding retain separate document/result-size costs.
++
+ `splitter-merged-ui.spec.ts` records the vertical text-radio boundary picker at the cursor, including sibling/nested merges, both axes and viewport-edge flipping. Keep `multi-pane-splitter-ui.spec.ts` and `splitter-drag-isolation-ui.spec.ts` alongside it for exact cursor displacement, fixed unrelated boundaries, wheel selection, release and Escape. `TextRadioButton/index.test.ts` covers keyboard selection, disabled choices and the single tab stop.
+ 
+ The merged-divider recording also continues dragging after wheel selection inside an offset parent with a small fixed first pane. Hidden logical dividers must use the shared painted rail's position; their zero DOM rectangles otherwise impose the parent's unrelated resize limit. The recording compares every pane size and divider position through selection, continued movement and release, and the sibling/nested cases switch back before Escape.
+@@ -53,7 +55,7 @@ That recording also reverses direction during the same held drag. The selected c
+ 
+ `splitter-merged-ui.spec.ts` records collapsed middle boundaries and coincident parent/child boundaries in both orientations, including the drag-time text-radio choices, wheel selection and Escape restoration. `nested-header-ui.spec.ts` records zero outer padding on nested board groups and the same deep color endpoint for leaves on branches of different lengths.
+ 
+-`agent-review.test.ts` records authenticated agent review, requested corrections, successor gate transfer and a separately authorized human handoff. Agent-only and mixed policies retain Waiting when paused, blocked or awaiting a required decision. `agent-review-ui.spec.ts` verifies agent selection and displayed outcomes; the browser cannot submit an agent's decision. Review assignment does not launch an agent automatically.
++`agent-review.test.ts` records authenticated agent review, requested corrections, successor gate transfer and a separately authorized human handoff. Agent-only and mixed policies retain Waiting while blocked or awaiting a required decision. `agent-review-ui.spec.ts` verifies agent selection, displayed outcomes and the absence of review start/pause controls; the browser cannot submit an agent's decision. Review assignment does not launch an agent automatically. `planning-state-history.test.ts` verifies the outcome-owned lifecycle, pending decisions across restart and rejection of removed review commands.
+ 
+ For renderer crash investigation, the active store's `diagnostics/browser.jsonl` and `browser.previous.jsonl` retain navigation identities, API response sizes, element counts and available Chromium heap samples. Reload after activating recorder changes. Each file is bounded to about 1 MiB; entries carry a page identity and the served browser build hash. No typed text or response bodies are recorded. Validate persistence and payload boundaries with `browser-diagnostics.test.ts` and `browser-diagnostics-ui.spec.ts`; `repository-memory-ui.spec.ts` records pane replacement and repeated navigation at small and large catalog sizes. Passing these simulations does not establish the cause of a crash outside their inputs.
+ 
+diff --git a/package-lock.json b/package-lock.json
+index 602ec9a..965501c 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -4142,6 +4142,7 @@
+       "version": "0.0.18",
+       "resolved": "https://registry.npmjs.org/@vscode/l10n/-/l10n-0.0.18.tgz",
+       "integrity": "sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==",
++      "dev": true,
+       "license": "MIT"
+     },
+     "node_modules/@webgpu/types": {
+@@ -7027,6 +7028,7 @@
+       "version": "5.7.2",
+       "resolved": "https://registry.npmjs.org/vscode-json-languageservice/-/vscode-json-languageservice-5.7.2.tgz",
+       "integrity": "sha512-WtKRDtJfFEmLrgtu+ODexOHm/6/krRF0k6t+uvkKIKW1Jh9ZIyxZQwJJwB3qhrEgvAxa37zbUg+vn+UyUK/U2w==",
++      "dev": true,
+       "license": "MIT",
+       "dependencies": {
+         "@vscode/l10n": "^0.0.18",
+@@ -7065,18 +7067,21 @@
+       "version": "1.0.16",
+       "resolved": "https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.16.tgz",
+       "integrity": "sha512-qeNEuOi9a3qkqRf7Gfez2WL2VwlBTLCNekHBGO9kxPVUp9XuY15yfTJ9jwvOwKI0I2MhUUfZq95NSp+LK1CLQg==",
++      "dev": true,
+       "license": "MIT"
+     },
+     "node_modules/vscode-languageserver-types": {
+       "version": "3.18.5",
+       "resolved": "https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.18.5.tgz",
+       "integrity": "sha512-kPd6+JQNz3HMJvjKlqUxERSlZHAntl/aGpsk7ImwIh0ewDKDcjgAEyVSYciPiOJD3ftbK9IrfiqUeTZLSbCizw==",
++      "dev": true,
+       "license": "MIT"
+     },
+     "node_modules/vscode-uri": {
+       "version": "3.2.0",
+       "resolved": "https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.2.0.tgz",
+       "integrity": "sha512-m2gXo3bn0G1kT9InzMf07fTbqMbGtyckj3bH5ktLO+1Ssv+yiATZ4dhwaQv9UZWxJh6E9IFGnQyjgWVDWVBDrg==",
++      "dev": true,
+       "license": "MIT"
+     },
+     "node_modules/web-streams-polyfill": {
+@@ -7847,12 +7852,12 @@
+       "version": "0.1.0",
+       "dependencies": {
+         "@super-app/lsp-contributor": "0.1.0",
+-        "jsonc-parser": "3.3.1",
+-        "vscode-json-languageservice": "5.7.2"
++        "jsonc-parser": "3.3.1"
+       },
+       "devDependencies": {
+         "@types/node": "24.19.1",
+-        "typescript": "5.9.3"
++        "typescript": "5.9.3",
++        "vscode-json-languageservice": "5.7.2"
+       }
+     },
+     "Systems/Depth2/Mcp": {

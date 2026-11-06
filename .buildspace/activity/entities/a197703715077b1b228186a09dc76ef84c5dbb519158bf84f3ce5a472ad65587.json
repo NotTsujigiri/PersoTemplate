@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/27f506cf-2157-40a9-a026-24bfb0c818b1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/27f506cf-2157-40a9-a026-24bfb0c818b1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T23:05:13.706Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 301,
+        "description": "Immutable attached evidence",
+        "title": "Seven UI comments: implementation and verification.json",
+        "updatedAt": "2026-09-30T23:05:13.812Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/27f506cf-2157-40a9-a026-24bfb0c818b1.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/27f506cf-2157-40a9-a026-24bfb0c818b1.json",
+      "properties": {
+        "artifact": {
+          "hash": "599e0e329dfa48863d54b2e2fd70dfa802037721296d1c1bfe00a9cd212b60aa",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/599e0e329dfa48863d54b2e2fd70dfa802037721296d1c1bfe00a9cd212b60aa",
+          "mime": "application/json",
+          "size": 2305
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/27f506cf-2157-40a9-a026-24bfb0c818b1.json"
+}

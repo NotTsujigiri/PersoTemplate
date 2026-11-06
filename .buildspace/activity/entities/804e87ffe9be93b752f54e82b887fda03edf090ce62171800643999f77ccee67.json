@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a11276d0-9f50-4611-a3fb-0c57d108327d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a11276d0-9f50-4611-a3fb-0c57d108327d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T01:47:02.122Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 202,
+        "description": "Reproduced after full working-tree checkpoint passed (120 server, 101 browser tests): immutable three-repository Preview fails PersoTemplate profile-fields.ts because comment is absent from an old Relational UI declaration. Materialization copied only repository-root node_modules, losing the template package's current local dependencies; root build also omitted explicit Relational UI/default-template prerequisites. Resolve package-scoped declared local dependencies within captured repositories and build owned contracts before consumers. Submission target 199 withdrawn untouched; exact candidate verification must pass before acceptance handoff.",
+        "title": "Isolated candidate resolves stale root packages instead of declared nested local dependencies",
+        "updatedAt": "2026-10-19T03:50:12.370Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a11276d0-9f50-4611-a3fb-0c57d108327d.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a11276d0-9f50-4611-a3fb-0c57d108327d.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a11276d0-9f50-4611-a3fb-0c57d108327d.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a11276d0-9f50-4611-a3fb-0c57d108327d.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:29:39.745Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T03:50:12.370Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a11276d0-9f50-4611-a3fb-0c57d108327d.json"
+}

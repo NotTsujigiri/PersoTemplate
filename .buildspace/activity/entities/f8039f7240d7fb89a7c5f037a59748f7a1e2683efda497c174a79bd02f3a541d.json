@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e45eecfc-5d06-4681-92c0-5495b3a986c6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e45eecfc-5d06-4681-92c0-5495b3a986c6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-20T07:09:14.653Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 882,
+        "description": "User annotation 4, 2026-10-20. Use four processing groups in Inputs: Unprocessed, Processing, Processed and Rejected. The explicit list of four groups governs the request despite the introductory phrase 'two group'. Separate them with the shared splitter system. Each processing group contains its own New, Later and Acknowledged splitter panes, with independent scrolling and usable empty drop areas.\nKeep processing state separate from per-user attention. Inspect and refine mapping from existing processing/linked-task semantics before implementation; do not discard existing input state or invent a second authority.\n\n2026-10-24 implementation: c957885 groups Inputs as Unprocessed, Processing, Processed and Rejected, each with New/Later/Acknowledged panes. Processing is derived from canonical linked task outcomes: any unfinished linked task means Processing; completed work with none unfinished means Processed; no work or only abandoned work means Unprocessed; explicit rejection wins. Attention remains independent. Empty drop areas, scrolling, dragging to Later, and moving completed work to Processed/Later pass exact domain/browser checks. Completed: focused owner/consumer checks and exact browser recordings pass, including the affected scenarios in both full browser runs. Disposable UI screenshots were inspected. The overall checkpoint follow-up is tracked separately on the native Windows worker task.\n\nFinal checkpoint, 2026-10-24, commit 6a04fdf: build and type checks passed (1,164 authored files, zero violations); all 668 non-browser tests passed. This task's affected browser scenarios passed and UI screenshots were inspected where applicable. The full browser run passed 292/294, with separate native-worker and review-acceptance failures retained as queued investigations. Both failed cases passed unchanged in isolation. Live application restarted successfully. Detailed report: .harness/overnight-verification-20261024.json.",
+        "title": "Group Inputs by processing state with nested attention splitters",
+        "updatedAt": "2026-10-24T08:08:34.366Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e45eecfc-5d06-4681-92c0-5495b3a986c6.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e45eecfc-5d06-4681-92c0-5495b3a986c6.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 2,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e45eecfc-5d06-4681-92c0-5495b3a986c6.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e45eecfc-5d06-4681-92c0-5495b3a986c6.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-24T19:19:19.464Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-24T08:08:34.366Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e45eecfc-5d06-4681-92c0-5495b3a986c6.json"
+}

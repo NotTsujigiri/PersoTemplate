@@ -1,0 +1,139 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T13:56:31.266Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 534,
+        "description": "- Use the running app: open an entity, inspect component values and follow its component type into the data model.\n- Verify each property exposes its actual declared data type and links to structured/related definitions; reject generic String fallbacks or duplicate handwritten schemas.\n- Check representative File/Git/UI composition and another affected domain, with deterministic navigation recordings and screenshots.\n- Resolve findings autonomously and prepare checkpoint 2; the human sees the completed result only at the final review.",
+        "title": "Agent review: component and data-type inspection",
+        "updatedAt": "2026-10-18T08:05:49.230Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "agent:codex": {
+              "reason": "Independent component_inspection_review approved source-derived definitions, owner restrictions, exact repeated-component values, both update/inspection race orders, and property/data-type navigation. Corrections and exact recordings are in this review discussion. Live existing nodes and data types were inspected after restart. Full test:all remains the separate final gate.",
+              "time": "2026-10-18T08:05:23.258Z",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "agent:codex",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-17T13:56:31.263Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 534,
+                      "description": "- Audit every affected active package against the owner/consumer inventory, compiler results and runtime tests.\n- Check shared definitions, explicit dependencies, preserved IDs/relations and removal of replaced single-kind APIs.\n- Verify persistence, failure recovery, queries, planning/review, tools and UI; the UI editor is one peer consumer.\n- Record and fix findings without waiting for a human; hand the checked candidate to the inspection reviewer.",
+                      "title": "Agent review: application-wide component migration",
+                      "updatedAt": "2026-10-18T08:00:49.031Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "review",
+                      "review": {
+                        "outcomes": {
+                          "agent:codex": {
+                            "reason": "Independent migration_boundary_review and component_inspection_review findings are resolved in the recorded discussions. Compiler validation, owner validation, existing-node/component navigation, exact repeated-component recordings, and all focused browser corrections pass. Full checkpoint remains a separate prerequisite of the final migration-completeness review.",
+                            "time": "2026-10-18T08:00:36.009Z",
+                            "value": "approved"
+                          }
+                        },
+                        "reviewers": [
+                          {
+                            "actorId": "agent:codex",
+                            "required": true
+                          }
+                        ],
+                        "runnables": [],
+                        "status": "passed",
+                        "target": {
+                          "nodes": {
+                            "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json": {
+                              "components": [
+                                {
+                                  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json#planning%3Aidentity",
+                                  "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json",
+                                  "properties": {
+                                    "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                                    "createdAt": "2026-10-17T13:56:31.260Z",
+                                    "createdBy": "agent:codex",
+                                    "createdRevision": 534,
+                                    "description": "- Persist planning entities as stable component instances; preserve unrelated instances and captured reviews.\n- Replace node-type inspection with component/property/data-type inspection in every editor entry point.\n- Replace the remaining contributor transport, ownership and query contracts; compiler errors identify consumers.\n- Verify live data conversion, repeated components, workflows and rendered inspection before final agent review.",
+                                    "title": "Replace node types with owned components across the app",
+                                    "updatedAt": "2026-10-18T07:56:57.012Z"
+                                  },
+                                  "typeId": "planning:identity"
+                                },
+                                {
+                                  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json#planning%3Atask",
+                                  "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json",
+                                  "properties": {
+                                    "placement": "completed",
+                                    "purpose": "development",
+                                    "stage": "implementation"
+                                  },
+                                  "typeId": "planning:task"
+                                }
+                              ],
+                              "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json"
+                            }
+                          },
+                          "revision": 630,
+                          "sessions": [],
+                          "submittedAt": "2026-10-18T07:58:24.497Z"
+                        }
+                      },
+                      "sessionIds": [],
+                      "stage": "review"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 633,
+            "sessions": [],
+            "submittedAt": "2026-10-18T08:03:07.916Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json"
+}

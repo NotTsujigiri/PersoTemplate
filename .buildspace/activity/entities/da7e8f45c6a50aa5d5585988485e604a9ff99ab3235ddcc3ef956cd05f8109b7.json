@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/72fa04d2-134c-40d0-bc2d-2df8855a4bb5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/72fa04d2-134c-40d0-bc2d-2df8855a4bb5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T08:52:41.604Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Independent UI implementation review",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/72fa04d2-134c-40d0-bc2d-2df8855a4bb5.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/72fa04d2-134c-40d0-bc2d-2df8855a4bb5.json",
+      "properties": {
+        "artifact": {
+          "hash": "22a4965084cc9e269ec3c82160fdb2c056a1f127f40d8d9290e953f9c04d6655",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/22a4965084cc9e269ec3c82160fdb2c056a1f127f40d8d9290e953f9c04d6655",
+          "mime": "application/json",
+          "size": 363
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/72fa04d2-134c-40d0-bc2d-2df8855a4bb5.json"
+}

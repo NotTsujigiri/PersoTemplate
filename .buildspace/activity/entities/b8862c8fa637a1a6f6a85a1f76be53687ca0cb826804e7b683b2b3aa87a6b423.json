@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c09f269a-3b4b-448b-9ecd-6b5e07672ff2.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c09f269a-3b4b-448b-9ecd-6b5e07672ff2.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T22:00:39.434Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 711,
+        "description": "Immutable attached evidence",
+        "title": "Recorded regressions before the fixes",
+        "updatedAt": "2026-10-18T22:01:03.278Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c09f269a-3b4b-448b-9ecd-6b5e07672ff2.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c09f269a-3b4b-448b-9ecd-6b5e07672ff2.json",
+      "properties": {
+        "artifact": {
+          "hash": "94457573f366b15e5dda62bbbf5c23219ba0f3b6c6ea631cc951e11b350f5f8c",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/94457573f366b15e5dda62bbbf5c23219ba0f3b6c6ea631cc951e11b350f5f8c",
+          "mime": "application/json",
+          "size": 5574
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c09f269a-3b4b-448b-9ecd-6b5e07672ff2.json"
+}

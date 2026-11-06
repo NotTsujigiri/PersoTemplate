@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-26T00:25:50.555Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1151,
+        "description": "",
+        "title": "5. Application composition: enable the four contributors through configuration only",
+        "updatedAt": "2026-10-26T03:46:21.295Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "integration",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json"
+}

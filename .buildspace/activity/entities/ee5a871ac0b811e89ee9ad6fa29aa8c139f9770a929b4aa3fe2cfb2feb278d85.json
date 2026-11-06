@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/325ee24e-34af-44fa-8e20-dbb6695a5254.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/325ee24e-34af-44fa-8e20-dbb6695a5254.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-20T07:09:14.650Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 882,
+        "description": "Outside the MVP. User request, 2026-10-20, annotation 1.\nFully collapsed adjacent panes must share one splitter border instead of stacking edges/borders. When dragging a border shared by multiple collapsed splitters, show a contextual panel containing a dropdown of those collapsed splitters in their normal expanded order. While the mouse remains held and the drag continues, scrolling changes the selected splitter and therefore which splitter is being resized. The user can keep scrolling to choose another splitter without releasing the drag. The contextual panel follows the cursor. This interaction was clarified by the user on 2026-10-24.\nReserve a dedicated theme color for splitters, unused by other borders or panels and clearly contrasting with them. Use the shared splitter system and theme ownership. Keep this as a top-level queued task, not an MVP child.\n\n2026-10-24 implementation: 8c291a8 merges coincident collapsed borders, shows the original-order pane dropdown during a held drag, changes the resized pane on wheel input, and restores the original sizes on Escape. Shared splitter theme color added. Exact unit/browser recordings cover both axes, leading/middle/trailing collapsed panes, switching during drag, and cancellation. Screenshots inspected; Completed: focused owner/consumer checks and exact browser recordings pass, including the affected scenarios in both full browser runs. Disposable UI screenshots were inspected. The overall checkpoint follow-up is tracked separately on the native Windows worker task.\n\nFinal checkpoint, 2026-10-24, commit 6a04fdf: build and type checks passed (1,164 authored files, zero violations); all 668 non-browser tests passed. This task's affected browser scenarios passed and UI screenshots were inspected where applicable. The full browser run passed 292/294, with separate native-worker and review-acceptance failures retained as queued investigations. Both failed cases passed unchanged in isolation. Live application restarted successfully. Detailed report: .harness/overnight-verification-20261024.json.\n\nReopened 2026-10-24: user reports that dragging one splitter moves other splitters and can move contrary to the pointer. Required behavior: only the dragged divider changes position, moves in the pointer direction, and follows the cursor exactly while retaining the initial grab offset. The unchanged code failed exact geometry recordings: a 40 px nested drag moved its divider about 44.42 px and moved outer dividers about 22 px; collapsed-pane selection added a 2 px cursor offset; fully collapsing a pane redistributed rail space to unrelated panes. Fixed by preserving related divider positions, keeping rail-space adjustments local, and limiting drags at neighboring nested dividers. All 46 focused browser cases pass, including both axes, inner/outer drags, collapsed selection, collapse/reversal, and Escape restoration. Screenshots inspected. Local app restarted and refreshed. Completed at e002802. Build and type checks pass (1,165 authored files, zero violations). All 46 focused browser cases also pass in the full run; all 12 drag geometry recordings match exactly and fresh screenshots were inspected. Full browser result: 313/316. Separate failures: native Windows worker exits in component-gallery-ui.spec.ts and context-chat-ui.spec.ts, and the existing ui.spec.ts review acceptance timeout. Non-browser result: 667/668; planning-performance.test.ts exceeded its 1,000 ms save bound and passes unchanged in isolation at 695.64 ms. These failures remain recorded; the overall checkpoint is not green. The local app is running this fix. Evidence: .harness/splitter-drag-verification.json and .harness/splitter-full-browser-results.json.",
+        "title": "Merge collapsed splitter borders and select stacked panes while dragging",
+        "updatedAt": "2026-10-24T15:57:59.262Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/325ee24e-34af-44fa-8e20-dbb6695a5254.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/325ee24e-34af-44fa-8e20-dbb6695a5254.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 3,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/325ee24e-34af-44fa-8e20-dbb6695a5254.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/325ee24e-34af-44fa-8e20-dbb6695a5254.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-24T19:18:12.425Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-24T15:57:59.262Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/325ee24e-34af-44fa-8e20-dbb6695a5254.json"
+}

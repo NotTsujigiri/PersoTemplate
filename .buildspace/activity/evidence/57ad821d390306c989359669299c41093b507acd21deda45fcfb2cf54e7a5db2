@@ -1,0 +1,82 @@
+{
+  "before": {
+    "attention": "later",
+    "descriptionSpellcheck": "false",
+    "parentFields": 0,
+    "attributionProperties": [
+      {
+        "name": null,
+        "help": null,
+        "type": null,
+        "readOnly": null,
+        "singleHeaderRow": false,
+        "valueBelowHeader": false,
+        "referenceLinks": 0
+      },
+      {
+        "name": null,
+        "help": null,
+        "type": null,
+        "readOnly": null,
+        "singleHeaderRow": false,
+        "valueBelowHeader": false,
+        "referenceLinks": 0
+      }
+    ],
+    "hasAcknowledgement": 1
+  },
+  "after": {
+    "attention": "later",
+    "descriptionSpellcheck": "false",
+    "parentFields": 0,
+    "attributionProperties": [
+      {
+        "name": "Created by",
+        "help": "?",
+        "type": "Type: Optional user or agent reference",
+        "readOnly": "Read only",
+        "singleHeaderRow": true,
+        "valueBelowHeader": true,
+        "referenceLinks": 1
+      },
+      {
+        "name": "Updated by",
+        "help": "?",
+        "type": "Type: Optional user or agent reference",
+        "readOnly": "Read only",
+        "singleHeaderRow": true,
+        "valueBelowHeader": true,
+        "referenceLinks": 1
+      }
+    ],
+    "hasAcknowledgement": 1
+  },
+  "requirement": "Reference properties retain the standard name/help/type/read-only header on one row and the shared reference value below it.",
+  "expected": {
+    "attention": "later",
+    "descriptionSpellcheck": "false",
+    "parentFields": 0,
+    "attributionProperties": [
+      {
+        "name": "Created by",
+        "help": "?",
+        "type": "Type: Optional user or agent reference",
+        "readOnly": "Read only",
+        "singleHeaderRow": true,
+        "valueBelowHeader": true,
+        "referenceLinks": 1
+      },
+      {
+        "name": "Updated by",
+        "help": "?",
+        "type": "Type: Optional user or agent reference",
+        "readOnly": "Read only",
+        "singleHeaderRow": true,
+        "valueBelowHeader": true,
+        "referenceLinks": 1
+      }
+    ],
+    "hasAcknowledgement": 1
+  },
+  "verification": "Five focused browser scenarios passed; all 251 shared UI tests passed."
+}

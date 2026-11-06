@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/36126dab-1416-4344-bee1-1447836b5dd0.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/36126dab-1416-4344-bee1-1447836b5dd0.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T08:02:50.924Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1056,
+        "description": "Review acceptance timed out at 60 seconds in earlier complete browser runs with 62 changed files. The UI sent one approval operation per file before acceptance. Preserve current-check, fingerprint, approved-content and all-file requirements.\n\nThe authored 62-file before-run accepted successfully but required 63 operations and about 35 seconds; its exact operation-count recording differed from the intended two. This reproduced the scaling problem, not the historical timeout itself. Historical full-run failures remain in .harness/review-acceptance-full-failure-20261024/ and splitter-full-browser-results.json.\n\nReplaced the singular owner operation with session:review-files. It holds the session lock, validates the fingerprint and every requested path before changing any approval, hashes current contents and emits one batch event. All consumers use the batch contract; the predecessor operation was removed. Acceptance independently enforces current checks and complete approvals.\n\nThe identical 62-file browser input now uses exactly two operations and passes through commit: about one second focused and about 1.3 seconds for batch approval plus acceptance in run-PMHhAv. All 27 focused owner tests pass, including atomic validation, stale fingerprints, withdrawn approvals and multiple repositories. The rendered review/history screenshot was inspected.\n\nEvidence: HarnessApp/test-results/review-62-before-v2-20261025/, review-62-after-20261025/ and .harness/review-owner-after-20261025.log.\n\nCompleted in 5838e11. Final checkpoint .harness/checkpoints/run-RPaAAX/report.json passed in 38.34 minutes: 676 model/unit/tooling tests, 331 browser tests, zero failures and zero native crashes. Type, organisation, boundary and build checks passed. Source hashes remained unchanged throughout verification. Completion receipt: .harness/queued-work-completion-20261025.json. Changes are committed on codex/queued-work; the worktree is clean and the managed app is running on Node 24.22.1. The final 62-file case recorded exactly two requests and 1,294.91 ms combined approval/acceptance time.",
+        "title": "Bug: Review acceptance times out with accumulated changed files",
+        "updatedAt": "2026-10-30T19:47:50.611Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/36126dab-1416-4344-bee1-1447836b5dd0.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/36126dab-1416-4344-bee1-1447836b5dd0.json",
+      "properties": {
+        "placement": "abandoned",
+        "priority": 2,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/36126dab-1416-4344-bee1-1447836b5dd0.json"
+}

@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62b9efc7-fca0-4d5e-9b96-3ccf6a10018e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62b9efc7-fca0-4d5e-9b96-3ccf6a10018e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T09:16:13.074Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Implementation source provenance",
+        "updatedAt": "2026-09-29T22:37:05.019Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62b9efc7-fca0-4d5e-9b96-3ccf6a10018e.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62b9efc7-fca0-4d5e-9b96-3ccf6a10018e.json",
+      "properties": {
+        "artifact": {
+          "hash": "4690c7bd71acbb29e12f9200397ee4afdeb15eb73af79975d44323543c320439",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/4690c7bd71acbb29e12f9200397ee4afdeb15eb73af79975d44323543c320439",
+          "mime": "application/json",
+          "size": 11867
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/62b9efc7-fca0-4d5e-9b96-3ccf6a10018e.json"
+}

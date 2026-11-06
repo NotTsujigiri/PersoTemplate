@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bb42371-38d8-4690-8063-5e349d4a9a75.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bb42371-38d8-4690-8063-5e349d4a9a75.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.918Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Create ~/.TheBroccoli as a local Git repository on genuine first setup, with a TypeScript private-space script and a Broccoli buildspace containing exactly the Broccoli and private-space repositories. Reuse customisations thereafter; keep user data outside the source repository.\n\nImplementation progress: Default owns the typed private-space script contract, first-use Git initialization and a receipt distinguishing first use from a missing established repository. The actual application entry now uses ~/.TheBroccoli/data and the configured initial buildspaces; Perso profile storage and query storage follow the user runtime directory. Existing repositories/scripts are preserved. Unit tests pass for creation, edits, stale-write rejection, broken scripts and missing repositories. The real composition-root startup test passes: exactly Broccoli + Private repositories, renamed runtime data survives restart, and broken script enters independent recovery. Remaining integration: dynamic space labels/membership and the final startup/composition checkpoint.\n\nSlice verification completed: The composition-root startup recording verifies two initial repositories, user storage outside the checkout, preservation of live changes across restart, and independent recovery on script failure. Private-space unit tests verify exclusive creation and stale-write rejection.",
+        "title": "Bootstrap the Default private-space repository",
+        "updatedAt": "2026-10-22T22:28:42.574Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bb42371-38d8-4690-8063-5e349d4a9a75.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bb42371-38d8-4690-8063-5e349d4a9a75.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bb42371-38d8-4690-8063-5e349d4a9a75.json"
+}

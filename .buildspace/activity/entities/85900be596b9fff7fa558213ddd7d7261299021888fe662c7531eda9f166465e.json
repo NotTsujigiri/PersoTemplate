@@ -1,0 +1,38 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T20:49:53.531Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 575,
+        "description": "- Replace intermediate human approvals with independent agent checks and commit checkpoints; preserve previous review history.\n- Make components, component types, properties and property data types visible through the regular Node editor and data model.\n- Pin the revised task sequence for independent review; keep descriptions concise and final human inspection bounded.\n- This task updates planning only; implementation can later proceed without intermediate human decisions.",
+        "title": "Plan autonomous migration and commit checkpoints",
+        "updatedAt": "2026-10-17T20:55:10.578Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "planning"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d3bfa8f6-6717-4491-8e19-1e2bf3041d20.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d3bfa8f6-6717-4491-8e19-1e2bf3041d20.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b0f486-1ff8-40f3-8688-62fb29783c0c.json"
+}

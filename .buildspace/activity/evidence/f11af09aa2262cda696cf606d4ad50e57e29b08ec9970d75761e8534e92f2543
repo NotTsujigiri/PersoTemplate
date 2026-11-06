@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-17",
+  "scope": "Existing Lit component definition authoring",
+  "componentTests": {
+    "failed": 0,
+    "passed": 27
+  },
+  "browserEditorTests": {
+    "failed": 0,
+    "passed": 11
+  },
+  "finalAuthoringScenario": {
+    "covers": [
+      "Insert shared IconButton",
+      "Edit title, nullable label and icon",
+      "Move and remove",
+      "Undo and redo",
+      "Save and reopen actual source",
+      "Preserve existing event handler",
+      "Reject concurrent stale save"
+    ],
+    "failed": 0,
+    "passed": 1
+  },
+  "finalSourceEditTests": {
+    "failed": 0,
+    "passed": 5
+  },
+  "freshModelTests": {
+    "failed": 0,
+    "passed": 5
+  },
+  "typeSafety": {
+    "violations": 0,
+    "files": 1021
+  },
+  "build": "passed; final model rebuilt and verified",
+  "organisation": "passed",
+  "checkpoint": {
+    "remainingFailures": [
+      "planning-state-history.test.ts: ordinary backlog transitions",
+      "range-placement.test.ts: unknown history dependency rows",
+      "review-placement.test.ts: active review placement",
+      "review-placement.test.ts: submission blocks targets"
+    ],
+    "command": "npm run test:all",
+    "note": "Four stale-model failures resolved after rebuilding generated artifacts. Four planning failures reproduce independently; their owning source was not changed in this iteration. The checkpoint stopped in Harness unit tests before later suites.",
+    "status": "failed"
+  },
+  "liveService": {
+    "templates": 3,
+    "availableComponents": 71,
+    "iconButtonAvailable": true,
+    "discoveryDiagnostics": 0,
+    "nodes": 15,
+    "restarted": true
+  },
+  "limits": [
+    "Static Lit composition and literal scalar properties",
+    "Existing event and expression bindings are read-only in the visual editor",
+    "Moves stay within their template scope",
+    "Dynamic tag markup requires Code",
+    "Authoring uses the composition tree; preview reloads after definition edits"
+  ],
+  "expected": {
+    "savedAndReopened": true,
+    "existingHandler": true,
+    "singleDefinition": true
+  },
+  "actual": {
+    "savedAndReopened": true,
+    "existingHandler": true,
+    "singleDefinition": true
+  },
+  "screenshotSha256": "3D9C03C131FA3FE96699D90819A493B1262F45D865A6FD925247EB8854F907D5"
+}

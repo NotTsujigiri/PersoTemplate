@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/427fe228-e668-4e57-83f3-943330987918.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/427fe228-e668-4e57-83f3-943330987918.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.896Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Added deterministic architecture inspection before replacing production request paths. ProjectTools walks executable UI and host dependencies, rejects direct network capabilities in UI and dedicated application routes in UI/host helpers, reports source locations, and fails unresolved executable dependencies. Public engine packages are the explicit capability boundary; ordinary declarative image resources remain valid. No file exemptions.\n\nValidation: three focused fixtures pass, including indirect UI transport, indirect host dispatch, valid public engine access, declarative image resources and missing dependencies. Initial scan: 85 findings; recursively inspecting host helpers expands this to 93. Results are recorded under .harness/engine-boundaries/. Root build, test, browser-test and check entrypoints now run the failing gate. These are known migration findings, not a passing application. Final request-path integration and zero bypass findings remain completion criteria of the cleanup and verification children.",
+        "title": "Enforce application access through the local engine",
+        "updatedAt": "2026-10-22T09:38:45.916Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/427fe228-e668-4e57-83f3-943330987918.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/427fe228-e668-4e57-83f3-943330987918.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/427fe228-e668-4e57-83f3-943330987918.json"
+}

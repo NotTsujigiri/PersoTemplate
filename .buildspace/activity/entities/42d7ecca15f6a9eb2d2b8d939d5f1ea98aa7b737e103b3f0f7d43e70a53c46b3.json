@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5307f4a3-f8c1-411a-a2d5-b4493a994fa0.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5307f4a3-f8c1-411a-a2d5-b4493a994fa0.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.293Z",
+        "createdBy": "system:authorized-bootstrap",
+        "description": "Immutable planning source and design evidence",
+        "title": "images/V1-revision-2.png",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "system:authorized-bootstrap"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5307f4a3-f8c1-411a-a2d5-b4493a994fa0.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5307f4a3-f8c1-411a-a2d5-b4493a994fa0.json",
+      "properties": {
+        "artifact": {
+          "hash": "b4e2f4342c311fc76789735994731052a00df0ecb4b483965d85e487c767e634",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/b4e2f4342c311fc76789735994731052a00df0ecb4b483965d85e487c767e634",
+          "mime": "image/png",
+          "name": "images/V1-revision-2.png",
+          "size": 1361357
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5307f4a3-f8c1-411a-a2d5-b4493a994fa0.json"
+}

@@ -1,0 +1,1 @@
+{"command":"npm run build","definitionHash":"394c22cad976624aa8ca24870bc191411791f0d04e5c71e92325844d99ec8704","code":0,"output":"\n> @btr/template@0.1.0 build\n> tsc -p tsconfig.json\n\n","target":"graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/120a53bdd5f028b534a80e6714484aecfc8d0f02464caa41b30721af79b35463"}

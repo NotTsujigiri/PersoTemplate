@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad7319dc-89f6-4ca2-973e-34112cd7f352.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad7319dc-89f6-4ca2-973e-34112cd7f352.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T01:18:50.352Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 954,
+        "description": "The graph's Node editor omits Copy node URL, while the planning path builds that command separately. Consolidate common Node editor command ownership, retaining capability-specific mutation/history controls in their owning host. Verify Graph, planning and type inspection all expose the correct current node URL through one shared implementation.\n\nCompleted: before changing behavior, the common NodeEditor fixture recorded {copy:0} against the reviewed expectation {copy:1}. NodeEditor now owns that command and uses the inspected node/type identity. Planning's separate implementation was removed; its comparison view reuses the same command, and unsaved creation drafts omit it. Graph, component type navigation, independent editors and planning current/historical canonical copying are covered. Capability-specific save/delete/history behavior remains in the owning host. The identical unit fixture now records {copy:1}. Original failure log and accepted output: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2dddb630-5e2e-4d4c-83ed-38a84d43b0db.json. Full build, eight unit checks and 41 focused browser cases passed; live copying returned the selected Graph development task URL.",
+        "title": "Bug: Graph editor omits shared Node editor commands",
+        "updatedAt": "2026-10-22T02:19:10.393Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad7319dc-89f6-4ca2-973e-34112cd7f352.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad7319dc-89f6-4ca2-973e-34112cd7f352.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad7319dc-89f6-4ca2-973e-34112cd7f352.json"
+}

@@ -1,0 +1,7 @@
+# Shared Preview host correction
+
+Actual candidate visual verification caught a zero-height preview surface inside a 962-pixel review pane. Its browser viewport was clamped to 160px. Target revision 208 was withdrawn without human review.
+
+The reusable browser host now owns its flex layout and empty-status behavior across Review, hub and workspace. The six focused layout/Preview tests passed; the three final host tests additionally passed shrink-and-grow resizing, asserting that browser open/resize dimensions equal the available surface. Production and regression code are frozen. The new submitted candidate mandatory checks will provide the final full checkpoint.
+
+The next actual candidate walkthrough must pass a full-height geometry assertion and visual inspection, in addition to candidate-bound annotation routing. No review comment or agent message is sent by that walkthrough.

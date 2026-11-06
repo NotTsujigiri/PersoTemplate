@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5849d2af-bdac-4704-a0d8-588e57ffca31.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5849d2af-bdac-4704-a0d8-588e57ffca31.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T09:15:43.744Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Cold-start measurement",
+        "updatedAt": "2026-09-29T22:37:05.019Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5849d2af-bdac-4704-a0d8-588e57ffca31.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5849d2af-bdac-4704-a0d8-588e57ffca31.json",
+      "properties": {
+        "artifact": {
+          "hash": "8db7b8c0c226211432f4a8ef51023519c84081d78f2abda7974fd352daa1b353",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/8db7b8c0c226211432f4a8ef51023519c84081d78f2abda7974fd352daa1b353",
+          "mime": "text/plain",
+          "size": 8268
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5849d2af-bdac-4704-a0d8-588e57ffca31.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T13:56:31.244Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 534,
+        "description": "- Bound the migration and list owners, consumers and predecessor APIs.\n- Sequence compiler checks, runtime checks, cutover and removal.\n- Give each human checkpoint at most three observable decisions.\n- Attach the concise candidate plan; no product migration before human approval.",
+        "title": "Plan the compiler-guided migration",
+        "updatedAt": "2026-10-17T14:43:00.585Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "planning",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json"
+}

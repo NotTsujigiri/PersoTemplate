@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07d327a3-4941-488e-a2e8-5b68a64d824b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07d327a3-4941-488e-a2e8-5b68a64d824b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-20T07:09:14.651Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 882,
+        "description": "Idea only; controls and switching modes during use remain TBD. User annotation 2, 2026-10-20.\nPixel mode: progressive scrolling with mouse-wheel control over slower/faster scrolling.\nItem mode: the component consumer supplies pixel ranges; scroll between ranges with an animation whose speed is adjustable. Consumers may supply multiple overlapping ranges/range sets. The user can switch between overlapping alternatives but only one is active at a time; refine the exact range-selection contract.\nContinuous mode: automatic scrolling with adjustable patterns, potentially composable with pixel and item modes. Support cycling or alternating up/down.\nDo not treat this as accepted implementation design or start implementation.",
+        "title": "Composable pixel, item-range and continuous scrolling modes",
+        "updatedAt": "2026-10-20T07:09:14.814Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07d327a3-4941-488e-a2e8-5b68a64d824b.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07d327a3-4941-488e-a2e8-5b68a64d824b.json",
+      "properties": {
+        "meaning": "idea",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07d327a3-4941-488e-a2e8-5b68a64d824b.json"
+}

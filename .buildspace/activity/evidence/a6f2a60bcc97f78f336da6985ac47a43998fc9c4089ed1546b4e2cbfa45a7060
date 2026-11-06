@@ -1,0 +1,50 @@
+LSP text editor coloring — review evidence
+2026-10-26
+
+Implementation
+- Shared LspContributor owns discovery, graph factories/instances, reuse, document versions, cancellation, provenance, consumer cleanup and the authenticated direct relay.
+- TypeScriptContributor owns its language server, project scope, classification and colors; JsonContributor owns the JSON language service, classification and colors.
+- RelationalUi retains native editing and paints visible colored rows. Unsupported files remain editable. Templates only enable/configure contributors.
+- Editing uses the established LSP connection rather than per-edit graph materialization or persistence.
+
+Committed branches
+All three repositories: codex/lsp-text-editor-coloring.
+- TheBroccoli: e1fd7d8 (implementation), 05f9fbf (deleted unrelated workspace isolation).
+- BtrTemplate: bf2bf7f.
+- PersoTemplate: b9770ef.
+No merge or push was performed.
+
+Verification
+- Repository checkpoint passed runtime, dependency builds, check:types (1189 sources; zero violations), organisation (17 active systems), engine boundaries, model build and 44 model tests.
+- Contributor tests: LSP 14/14, TypeScript 6/6 and JSON 6/6. Final workspace-scope regression and containment cases: 6/6, with both provider builds, test compiler projects and focused strict checks passing.
+- RelationalUi: 267/267; WebComponent: 34/34; relocated decorated-component integration: 1/1; ProjectTools: 32/32; Testing: 5/5; verification/runtime scripts: 6/6.
+- Harness unit checkpoint: 291/292. The unchanged planning-save latency check exceeded its acceptance threshold; its isolated rerun passed 3/3 without changing the threshold.
+- Full browser checkpoint: 346/358. Eight failures used an obsolete file-content fixture, three exposed the deleted-unrelated-workspace discovery bug, and one was a planning-navigation initialization failure in unchanged code.
+- Corrected the fixture to the current document-identity contract and corrected both language providers. Final focused browser verification: 37/37 across all failed cases and affected shared-fixture consumers, including the prior conversation-settings scenario that removes a workspace before LSP tests.
+- The planning-navigation case passed in that final rerun without a product change. A startup refresh race is suspected, not proven fixed.
+- The entire checkpoint was not repeated after these focused repairs; the original failed reports remain preserved.
+- Inspected the dark/light coloring screenshots, repository file screenshots and scrolling recordings. Also opened real application.ts and quality-policy.json in the running app and observed their colors.
+
+Recorded regressions
+- Deleted unrelated workspace: before 0/2, after exact expected/actual comparison passes for both languages. Missing requested files/workspaces, unauthorized workspaces, junction escapes and other filesystem errors remain rejected.
+- Native editing: unchanged authored inputs verify selection, undo and scrolling with coloring; stale responses cannot repaint newer text.
+- No weakened acceptance recordings or timing thresholds.
+
+Known performance boundary
+JSON parses and classifies once per changed document version; it does not maintain an incremental JSON AST. Cached reads reuse results; edits use minimal transport changes, typing stays local, and only visible rows are painted. A 2,117,747-byte / 56,940-line benchmark constructed from repository dependency metadata measured 128 ms initially, 12 ms cached and 108 ms after a partial edit. These are service-side measurements, not an end-to-end UI latency guarantee.
+
+Dependencies
+TypeScript 5.9.3; typescript-language-server 5.0.0; vscode-jsonrpc 9.0.3; vscode-languageserver-protocol 3.18.4; vscode-json-languageservice 5.7.2; jsonc-parser 3.3.1. The protocol/RPC versions compile with the repository's Node 24 / TypeScript setup. No VS Code extension client or theme configuration file was added.
+
+Local evidence
+.harness/checkpoints/run-EMB0nC/report.json and its per-step logs.
+.harness/lsp-browser-checkpoint-summary.json; .harness/lsp-checkpoint-browser.log.
+.harness/lsp-browser-final-summary.json; .harness/lsp-browser-final.log.
+.harness/lsp-planning-timing-rerun.log.
+.harness/lsp-scope-regression-before.log; .harness/lsp-scope-regression-focused.log; .harness/lsp-scope-*.log.
+Systems/Depth2/Json/test-results/scope-isolation/run-0bFj6Q/recording.json (before), run-KuutsZ/recording.json (after).
+Systems/Depth2/TypeScript/test-results/scope-isolation/run-2ki6A1/recording.json (before), run-jeXBOS/recording.json (after).
+Systems/Depth4/HarnessApp/test-results/lsp-final-verification-20261026/ contains final recordings and screenshots.
+
+Review boundary
+This task exposes coloring only. Completion, diagnostics, folding and the later expression/query work remain separate. The successor task stays gated on the user's review.

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c994e176-5cf2-4a79-940b-aec980decfb7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c994e176-5cf2-4a79-940b-aec980decfb7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T08:34:52.704Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 642,
+        "description": "",
+        "title": "Both independent agents reviewed 11f5607, 73821ee and a51e11f: no dependency or typing blocker, no removed tests; discovery before/after passes 6/6 and readines",
+        "updatedAt": "2026-10-18T08:35:03.597Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c994e176-5cf2-4a79-940b-aec980decfb7.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c994e176-5cf2-4a79-940b-aec980decfb7.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Both independent agents reviewed 11f5607, 73821ee and a51e11f: no dependency or typing blocker, no removed tests; discovery before/after passes 6/6 and readiness coverage passes 3/3.\nThe fresh full checkpoint has passed the build and 41/41 model tests. Source fingerprints match the regenerated artifact. Unit and browser stages are still pending, so final acceptance remains open."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c994e176-5cf2-4a79-940b-aec980decfb7.json"
+}

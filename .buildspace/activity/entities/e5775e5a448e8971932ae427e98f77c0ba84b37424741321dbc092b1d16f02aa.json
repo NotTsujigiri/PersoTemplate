@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0c2f4f0c-2d21-4dd9-a9b0-2bf8f9a0c65a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0c2f4f0c-2d21-4dd9-a9b0-2bf8f9a0c65a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T03:52:07.540Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 612,
+        "description": "",
+        "title": "Reviewer confirmed the initial corrections, then found scoped invalidation could discard a cached root and partial graphs could accept unknown edge types. Both ",
+        "updatedAt": "2026-10-18T03:52:16.289Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0c2f4f0c-2d21-4dd9-a9b0-2bf8f9a0c65a.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0c2f4f0c-2d21-4dd9-a9b0-2bf8f9a0c65a.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/abdce8ef-d7d0-4dc7-9dd7-8f613d7ecc0b.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Reviewer confirmed the initial corrections, then found scoped invalidation could discard a cached root and partial graphs could accept unknown edge types. Both corrected; the scoped regression fails before and passes after. Pi's 10 tests also pass with a real component-engine integration. Remaining work: consumer fixtures, persistence cutover and full browser validation."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0c2f4f0c-2d21-4dd9-a9b0-2bf8f9a0c65a.json"
+}

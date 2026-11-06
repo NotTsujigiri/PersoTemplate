@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7fc95ecf-7948-4405-9be8-06c78d32ced4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7fc95ecf-7948-4405-9be8-06c78d32ced4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:54:12.846Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 655,
+        "description": "",
+        "title": "Complete browser run finished 239/243. Three reviewed fixture corrections are committed; the fourth is a real-behavior candidate: the UI editor showed the newer",
+        "updatedAt": "2026-10-18T10:01:12.401Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7fc95ecf-7948-4405-9be8-06c78d32ced4.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7fc95ecf-7948-4405-9be8-06c78d32ced4.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Complete browser run finished 239/243. Three reviewed fixture corrections are committed; the fourth is a real-behavior candidate: the UI editor showed the newer label, then both preview and inspector reverted after navigation. Independent reviewer identified unsequenced preview acknowledgements as a possible cause. Preserved full-run evidence and am authoring controlled message delivery before changing production. Full acceptance remains blocked."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7fc95ecf-7948-4405-9be8-06c78d32ced4.json"
+}

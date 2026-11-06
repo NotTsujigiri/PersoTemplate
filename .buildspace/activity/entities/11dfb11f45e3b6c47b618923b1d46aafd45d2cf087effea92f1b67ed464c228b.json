@@ -1,0 +1,109 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f0f80f7-e88e-48aa-9c05-15245a46e7d8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f0f80f7-e88e-48aa-9c05-15245a46e7d8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-26T07:25:08.903Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1177,
+        "description": "Review the two completed queued tasks.\n\n1. Edit a JSON or JSONC file, including unfinished input and undo: keys, values, punctuation and comments should keep their colors. Classification now reuses unchanged token chunks. The attached before/after recording shows the same edit shrinking from a full 187,783-character parse and scan to 1,027 classified characters.\n2. Open a submitted review: Start review and Pause review are gone. Each reviewer can still record a decision, and the review remains Waiting until the required decisions are complete.\n\nVerification: the complete build/model/unit/browser checkpoint passed, including all 359 browser tests with zero failures or skips. The JSON and review UI screenshots were inspected. The checkpoint report and source patch are attached here; detailed recordings are attached to the covered tasks.\n\nCommit: 70db5e2d70dfb32407b29636e9ad861df8683988 on codex/queued-json-and-review. The working trees are clean; BtrTemplate and PersoTemplate were unchanged.\n\nPerformance boundary: the 2.1 MB JSON fixture reclassified 1,034 characters after a local edit, with an approximately 31 ms measured server update including full token-result encoding. Initial loading, large tokens and edits that change the remaining syntax context can still require broad classification. Text synchronization and returning all token colors retain separate size-dependent costs.",
+        "title": "Human review: incremental JSON coloring and removal of review Start/Pause controls",
+        "updatedAt": "2026-10-26T07:47:19.664Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f0f80f7-e88e-48aa-9c05-15245a46e7d8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f0f80f7-e88e-48aa-9c05-15245a46e7d8.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "submitted",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-26T05:12:59.372Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1171,
+                      "description": "Improve JsonContributor's token classification so ordinary local edits reuse unchanged analysis instead of parsing and scanning the entire document for each new version.\n\n- Keep this work inside JsonContributor's existing JSON server; preserve the single-server approach and reuse Microsoft's JSON language-service functions as other capabilities are exposed.\n- Retain tokenization state across edits and recompute the affected region until it rejoins unchanged state. Handle changes to quotes, escapes, comments and nesting correctly; some edits can legitimately invalidate the remaining document.\n- Preserve JSON/JSONC key, value, punctuation and comment coloring during unfinished edits, undo/redo and rapid consecutive changes. Keep version checks, cancellation and stale-result rejection.\n- Keep the editor and shared LspContributor language-independent. Do not add per-edit graph traffic or a second JSON server for coloring.\n- Verify token results against a fresh full classification after representative edit sequences. Measure processed text and update time on large documents to show that small local edits avoid whole-document work; initial loading may still require a complete pass.\n\nThe current whole-document implementation is accepted for the initial coloring delivery; this queued improvement is separate follow-up work.\n\nImplemented on codex/queued-json-and-review in commit 70db5e2. JSON classification now retains syntax context and token chunks, restarts before the affected token boundary, and reuses the unchanged suffix when the state matches. It remains in the existing JSON server. Microsoft's JSON language-service parser is retained as a test oracle; production coloring uses the already-declared jsonc-parser scanner.\n\nThe attached before/after recording uses the same 187,782-character document and edit: previously all 187,783 resulting characters were parsed and scanned; now classification scans 1,027 characters and reuses 186,756. A repository-derived 2.1 MB fixture scanned 1,034 characters after a local edit; the measured server update including complete token-result encoding was about 31 ms. These are measurements, not latency guarantees. Initial loading and context-changing edits can still require broad classification. Document synchronization and complete semantic-token response encoding retain separate size-dependent costs.\n\nVerification completed: the full 17-step checkpoint passed, including all 359 browser tests (no failures or skips). JSON-specific tests, ordered/rejected edit-batch tests and the independent classification review passed. The edited source, performance evidence and screenshots are included in the accompanying human review.",
+                      "title": "Update JSON coloring incrementally instead of reparsing the whole document on every edit",
+                      "updatedAt": "2026-10-26T07:46:46.527Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/42909486-daad-40d0-9544-f74360b5b5d6.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-25T23:07:09.970Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1150,
+                      "description": "Remove the Start review / Pause review button from the review summary, including both states of the control. One reviewer starting or pausing must no longer switch the shared review task between Waiting and In progress; that signal is misleading when several reviewers participate.\n\nRemove the start/pause mechanism and artifacts that exist only to support this behavior, rather than hiding the button while leaving the same side effect accessible elsewhere. Preserve review submission, reviewer assignment and approval/outcome handling.\n\nDo not introduce a replacement indicator in this task. A better way for individual reviewers to inform the author that they are reviewing can be designed later.\n\nRequested from the Pause review control in the toolchain review on 2026-10-26.\n\nImplemented on codex/queued-json-and-review in commit 70db5e2. Removed both UI states, the public start/pause request choices and handlers, and their placement side effects. A submitted review stays Waiting while mandatory decisions remain pending. Submission, participant assignments, outcomes, covered-task completion and review succession remain supported.\n\nThe attached exact browser recording covers two required reviewers: submission stays Waiting, the first approval stays Waiting, and the final approval completes the review. It verifies zero Start/Pause controls throughout. Unsupported start/pause requests are rejected; no compatibility handler remains.\n\nVerification completed: focused review unit and browser tests passed, followed by the full 17-step checkpoint including all 359 browser tests (no failures or skips). The live app was restarted and the existing submitted review was checked: required Pending outcomes remain available and Start/Pause controls are absent.",
+                      "title": "Remove review Start/Pause controls and reviewer-driven task placement",
+                      "updatedAt": "2026-10-26T07:46:46.527Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json"
+              }
+            },
+            "revision": 1182,
+            "sessions": [],
+            "submittedAt": "2026-10-26T07:47:19.464Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f0f80f7-e88e-48aa-9c05-15245a46e7d8.json"
+}

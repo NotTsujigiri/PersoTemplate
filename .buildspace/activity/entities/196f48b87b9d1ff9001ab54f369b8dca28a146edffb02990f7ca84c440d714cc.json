@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24e94cc3-f677-4ae9-b79e-3490b4501789.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24e94cc3-f677-4ae9-b79e-3490b4501789.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T13:57:52.656Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 334,
+        "description": "## Output\nSystems, Focus and Node editor use the same admitted identities, registered schema and relations.\n\n## Work\nReplace the entire Systems path and delete its exclusive endpoint, schema, type identities, projections, tests, configuration and documentation. No fallback or compatibility path. Derive visible Instance of centrally from authoritative typeNodeId.\n\n## Why one batch\nKeeping both paths would preserve the route back into the same debt.\n\n## Evidence\nFocused behavior checks and rendered UI for orientation, filtering, selection, zoom and direct dependencies/dependents; complete checkpoint suite and a deletion audit. Show the before/after consumer dependencies.",
+        "title": "Switch views and remove the old path",
+        "updatedAt": "2026-10-08T18:16:16.601Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24e94cc3-f677-4ae9-b79e-3490b4501789.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24e94cc3-f677-4ae9-b79e-3490b4501789.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4110f670-952a-4714-8bdc-25353c8e87f7.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24e94cc3-f677-4ae9-b79e-3490b4501789.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4110f670-952a-4714-8bdc-25353c8e87f7.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24e94cc3-f677-4ae9-b79e-3490b4501789.json"
+}

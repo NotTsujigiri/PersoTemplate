@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4ea4a581-4384-4f24-a711-81b1eb13a140.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4ea4a581-4384-4f24-a711-81b1eb13a140.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-04T22:33:51.321Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1373,
+        "description": "Once the shared view-tool predicate system is available, replace the repository view's fixed Git-state coloring with a predicate configured through the view's tools. Consume the supplied Git state rather than duplicating Git detection in the UI. Preserve the initial mapping: deleted = red, added = blue, modified = yellow, renamed = orange, unversioned = normal background, ignored = darker grey. Unchanged tracked files retain the normal background. Keep this as configurable presentation, with no implicit file filtering.",
+        "title": "Move repository Git-state coloring into a view-tool predicate",
+        "updatedAt": "2026-11-04T22:33:51.625Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4ea4a581-4384-4f24-a711-81b1eb13a140.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4ea4a581-4384-4f24-a711-81b1eb13a140.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4ea4a581-4384-4f24-a711-81b1eb13a140.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4ea4a581-4384-4f24-a711-81b1eb13a140.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-05T05:49:54.436Z",
+            "disposition": "later",
+            "observedUpdatedAt": "2026-11-04T22:33:51.625Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4ea4a581-4384-4f24-a711-81b1eb13a140.json"
+}

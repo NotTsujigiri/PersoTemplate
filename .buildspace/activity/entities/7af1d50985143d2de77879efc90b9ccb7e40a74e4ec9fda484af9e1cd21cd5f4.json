@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ed4776b6-60a9-4b62-9757-5e3e94208670.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ed4776b6-60a9-4b62-9757-5e3e94208670.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T14:03:46.249Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 347,
+        "description": "",
+        "title": "Captured from your planning-review discussion: Allow reviews at specific points and continue only work not blocked by the checkpoint.",
+        "updatedAt": "2026-10-06T14:10:27.808Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ed4776b6-60a9-4b62-9757-5e3e94208670.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ed4776b6-60a9-4b62-9757-5e3e94208670.json",
+      "properties": {
+        "anchor": {
+          "taskId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6fa07e86-cb37-4976-a9d9-a669d3eaf8ed.json",
+          "taskTitle": "Review boundary and enforcement"
+        },
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Captured from your planning-review discussion: Allow reviews at specific points and continue only work not blocked by the checkpoint."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ed4776b6-60a9-4b62-9757-5e3e94208670.json"
+}

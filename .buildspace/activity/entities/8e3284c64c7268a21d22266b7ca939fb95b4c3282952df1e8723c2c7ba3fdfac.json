@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f570e77-db1f-48dc-bac4-3b5ac9e652c4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f570e77-db1f-48dc-bac4-3b5ac9e652c4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.381Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Implement only the reviewed proposal. Verify the recorded reproduction and relevant consumers, persistence across reload, correct rejection feedback, and independent view updates. Preserve completion/acceptance invariants and user data. Prepare the UI for the user to exercise valid completion themselves; do not mark their real tasks completed for them.",
+        "title": "Implement the approved completion and refresh fix",
+        "updatedAt": "2026-10-09T12:58:26.264Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f570e77-db1f-48dc-bac4-3b5ac9e652c4.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f570e77-db1f-48dc-bac4-3b5ac9e652c4.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6c782e03-6005-4cda-b2f2-a2a1db7a0a42.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f570e77-db1f-48dc-bac4-3b5ac9e652c4.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6c782e03-6005-4cda-b2f2-a2a1db7a0a42.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f570e77-db1f-48dc-bac4-3b5ac9e652c4.json"
+}

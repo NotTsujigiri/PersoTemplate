@@ -1,0 +1,161 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2958350a-14cb-451f-8ff2-c531bd3121dc.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2958350a-14cb-451f-8ff2-c531bd3121dc.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Verify that data is trustworthy enough to plan the remaining work in it.\n\nScope\n\n• Inspect imported records through MCP and the minimal shared human review path from T02 before completion of the new board/graph/Node/Review surfaces.\n\n• Exercise CRUD/conflict/restart/delete, owner validation and actor boundaries.\n\nSuccess criteria\n\n1. User can recognize and inspect the real remaining plan.\n\n2. The installed plugin exposes working planning operations, safely persists their effects and never starts execution on CRUD.\n\n3. Full checkpoint checks pass and an independent agent verifies foundation, MCP and persistence evidence. This delivery gate follows the latest explicit user authorization; no human approval is fabricated. Human-only product actions remain protected.\n\nEvidence\n\n• Imported root/review IDs\n\n• Test results and readback demonstration\n\n• Independent foundation review outcome\n\n",
+        "title": "Review the persisted foundation and tool handoff",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2958350a-14cb-451f-8ff2-c531bd3121dc.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2958350a-14cb-451f-8ff2-c531bd3121dc.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "agent:independent-foundation-review": {
+              "reason": "Independent backend foundation review passed after iterative source review and focused regression verification. Verified actor separation, durable atomic graph operations, review gates and sealed discussion controls, exact-target check isolation, portable evidence/history, and successor obligations. Scope is T01–T03 foundation; the final clean full-suite result and human R03 acceptance remain separate gates.",
+              "time": "2026-09-27T08:51:34.252Z",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "agent:independent-foundation-review",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-09-27T07:49:03.292Z",
+                      "createdBy": "agent:codex",
+                      "description": "Make the existing contributor/tool architecture the shared operation foundation for agents and UI.\n\nScope\n\n• Contributor-owned operation descriptors, Agent usage discovery and existing MCP exposure.\n\n• Verify the Broccoli Local plugin can discover/call planning tools in the active composition.\n\n• Shared revisions, request IDs, validation, actor identity and deletion/reference semantics.\n\n• Expose review requirement configuration and check/result operations through the same owner; verify operation discovery contains the metadata needed by the generic Node view.\n\n• Adapt the existing human-operated checkpoint UI using shared controls as the minimum R02 review path: inspect submitted definition/results, create/reply/author-close comments and select own outcome. Bind to the same contributor owner and verified human browser principal; MCP cannot exercise human-only decisions. This small path precedes the full board/Node/Review surfaces and is replaced/composed into them, not duplicated permanently.\n\nSuccess criteria\n\n1. Actual Codex MCP tools can create/read/update/delete a disposable task and input; API-only simulation is insufficient.\n\n2. UI transport and MCP invoke the same contributor operations and persistence.\n\n3. Tool metadata is derived from owner-qualified contracts; no duplicate standalone CLI implementation.\n\n4. Stale writes, invalid references and actor impersonation are rejected.\n\n5. Before R02, a real human can inspect the submitted planning record and operate closure/outcome controls through the browser. Agent credentials cannot impersonate that user through either MCP or browser transport. A planning-only review does not require code snapshots.\n\nEvidence\n\n• Plugin discovery and live read/write/readback demonstration\n\n• MCP/relational operation integration tests\n\n• UI/tool contract parity checklist\n\n",
+                      "title": "Expose planning CRUD through relational operations and Broccoli MCP",
+                      "updatedAt": "2026-09-27T08:22:24.041Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development"
+                    },
+                    "typeId": "planning:task"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json#planning:origin",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json",
+                    "properties": {
+                      "key": "T02",
+                      "source": "planning-review-mvp"
+                    },
+                    "typeId": "planning:origin"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-09-27T07:49:03.292Z",
+                      "createdBy": "agent:codex",
+                      "description": "Create/edit real title-only plans with durable relations, revisions and history.\n\nScope\n\n• Evolve canonical task owner; decouple planning records from execution startup.\n\n• Persist inputs, nested tasks, prerequisites, priority groups, attempt/evidence references and actor-attributed events.\n\n• Implement transactional validation, stale-write protection and restart recovery.\n\n• Resolve active-app/relational-host composition and contributor ownership before storage edits; activate only needed existing dependencies.\n\n• Declare field types, relation descriptors (including immutable creator), readable revisions and actor-permitted operation metadata using existing contracts; no ECS migration. Persist review requirements as references to existing check/thread/decision owners.\n\n• Implement basic submitted-revision/required-check enforcement, author-owned thread closure and authenticated outcome transitions before R02. Read-model/evidence refinements remain T07; do not defer fundamental gate enforcement until then.\n\n• Implement review draft/readiness transition and distinct continuation task relations, immutable multi-repository submitted evidence and grouped-feedback persistence; retain the existing canonical owners.\n\n• Reuse existing decentralized graph serialization/identity contracts and verify persisted references resolve correctly after full deserialization and restart. Do not create a second link encoding or URL UI feature.\n\nSuccess criteria\n\n1. Title-only tasks and multi-level nesting survive restart without starting/scanning an execution workspace.\n\n2. Cycles, missing references, invalid cross-context links and stale writes are rejected without partial mutation.\n\n3. Reversible placements and dynamic priority groups preserve history and never start an agent.\n\n4. No second planning-task authority is introduced.\n\n5. UI and MCP reach one owner/store through explicit relational contracts, not cross-project source imports or parallel task copies.\n\n6. Review requirements and revisions have one owner; Node/Review and UI/MCP cannot disagree through duplicate derived state.\n\n7. Draft/submitted/blocked/changes-requested/passed/abandoned transitions enforce the documented freeze and gate rules. A rejected review cannot strand its dependants: explicit validated successor gate replacement enables them only after the new review passes, preserving old evidence and comments.\n\n8. Work continuation creation and later draft review creation are separately idempotent; retry duplicates neither node nor relation and future review evidence is not fabricated.\n\n9. Serialize a graph with nested/shared references, review targets, discussion anchors, evidence revisions and successor links; discard in-memory state and deserialize/restart under a changed runtime binding. Every resolvable link reaches the same logical target, shared identity is preserved, and missing targets remain explicit unresolved references rather than retargeted or dropped.\n\nEvidence\n\n• Focused domain/storage tests\n\n• Failure/restart readback\n\n• Storage ownership note\n\n",
+                      "title": "Persist the canonical nested task model",
+                      "updatedAt": "2026-09-27T08:22:24.041Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development"
+                    },
+                    "typeId": "planning:task"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json#planning:origin",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json",
+                    "properties": {
+                      "key": "T01",
+                      "source": "planning-review-mvp"
+                    },
+                    "typeId": "planning:origin"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-09-27T07:49:03.292Z",
+                      "createdBy": "agent:codex",
+                      "description": "Start using persisted app planning before finishing the visual surfaces.\n\nScope\n\n• One-time dry-run/apply importer with source ID mapping and receipt.\n\n• Import tasks/dependencies/review gates and all approved global requirements and visual corrections. Preserve goals/criteria in descriptions and the complete source with image assets as immutable app-owned evidence; only genuinely completed history is imported.\n\n• Readback, restart, retry and temporary-document retirement.\n\nSuccess criteria\n\n1. Every bootstrap task, goal, criterion, dependency and review gate matches persisted readback.\n\n2. Failed import is atomic; repeated import creates no duplicates or execution.\n\n3. Receipt identifies the root and all app IDs; remaining updates use app tools.\n\n4. Bootstrap planning details are replaced by the receipt/link after verification.\n\n5. Complete approved specification, annotated images and source snapshot are retrievable from the app after bootstrap retirement/restart, with hash-verified evidence; no parallel editable plan remains.\n\n6. Import/readback/restart preserves all serialized graph link identities and immutable target references through the existing format; resolution does not depend on an old runtime port or object instance.\n\nEvidence\n\n• Import receipt and source hash\n\n• Readback/restart comparison\n\n• One real task update through MCP\n\n",
+                      "title": "Import this plan and transfer authority to app data",
+                      "updatedAt": "2026-09-27T08:22:24.041Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "integration"
+                    },
+                    "typeId": "planning:task"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json#planning:origin",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json",
+                    "properties": {
+                      "key": "T03",
+                      "source": "planning-review-mvp"
+                    },
+                    "typeId": "planning:origin"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8f1bb153-b9b8-42f6-b333-107c077fe2b4.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 11,
+            "sessions": [],
+            "submittedAt": "2026-09-27T08:50:06.223Z"
+          }
+        }
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2958350a-14cb-451f-8ff2-c531bd3121dc.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c975040-3f72-4d2e-97fa-664c2dd848f5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c975040-3f72-4d2e-97fa-664c2dd848f5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-06T04:45:09.872Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1410,
+        "description": "Sequencing agreed with the user: defer this task until the other, non-agent responsibilities have moved out of HarnessApp. It is not a prerequisite for the persistence rework. The user wants to inspect the remaining files before deciding what to retain. Do not perform the agent inventory or consolidation first.\n\nConsolidate the retained agent functionality of HarnessApp, Harness and Pi into one system named HarnessContributor. First inventory the existing behavior and its actual consumers, then review the inventory with the user to decide what stays, moves or is removed. Only execute the agreed consolidation after that collaborative decision.\n\nPresent a concise table of capabilities, how they are currently reached (including registration/configuration and dynamic use), proposed keep/remove/move decisions and their user-visible consequences. Distinguish unused code from reachable functionality that is no longer wanted; earlier experiments and overlap are suspects, not proof of dead code.\n\nPi is a private dependency of HarnessContributor. Public signatures, returned objects, events and configuration use owned contracts; do not re-export or leak Pi-specific types or runtime objects. Reuse internal implementation freely without making consumers depend on the Pi SDK.\n\nSystem engineering and buildspaces must remain independent of agent execution. HarnessContributor may consume their capabilities. Non-agent responsibilities of HarnessApp, including persistence, file/Git access, checks, previews and hosting, must receive explicit owners rather than being moved wholesale into HarnessContributor.\n\nAfter agreement, implement the selected scope, update consumers and remove the obsolete code, tests, dependencies and configuration belonging exclusively to its predecessors. Verify the retained behavior and API boundary. New agent scheduling/worktree workflows remain outside this task.\n\nReview proposal: design-references/decentralized-persistence/system-split-proposal.html. Discussion context remains in the sibling responsibilities-and-requirements refinement task.",
+        "title": "Decide what stays in HarnessContributor and consolidate retained agent functionality",
+        "updatedAt": "2026-11-06T05:44:13.300Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c975040-3f72-4d2e-97fa-664c2dd848f5.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c975040-3f72-4d2e-97fa-664c2dd848f5.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3c975040-3f72-4d2e-97fa-664c2dd848f5.json"
+}

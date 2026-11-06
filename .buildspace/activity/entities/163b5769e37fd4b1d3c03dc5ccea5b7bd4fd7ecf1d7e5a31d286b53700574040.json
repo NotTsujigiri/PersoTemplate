@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eb1ca360-a661-4501-9468-e722cbea41ca.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eb1ca360-a661-4501-9468-e722cbea41ca.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-05T00:45:43.410Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1374,
+        "description": "Replace the Repositories tree's + / − expand and collapse glyphs with the standard right-pointing / downward chevrons used elsewhere in RelationalUi. Reuse the shared icon and interaction conventions, keep accessible Expand / Collapse labels and keyboard behavior, and align controls consistently for repository and folder rows.",
+        "title": "Use chevrons for Repositories tree expand and collapse controls",
+        "updatedAt": "2026-11-05T06:59:03.905Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eb1ca360-a661-4501-9468-e722cbea41ca.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eb1ca360-a661-4501-9468-e722cbea41ca.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/eb1ca360-a661-4501-9468-e722cbea41ca.json"
+}

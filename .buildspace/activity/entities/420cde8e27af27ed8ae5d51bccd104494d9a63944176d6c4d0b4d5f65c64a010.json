@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f16417-0748-4e29-bad6-c223b17cc80c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f16417-0748-4e29-bad6-c223b17cc80c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T20:51:48.822Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 288,
+        "description": "Immutable attached evidence",
+        "title": "Splitter collapse — exact before and after.json",
+        "updatedAt": "2026-09-30T20:51:48.930Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f16417-0748-4e29-bad6-c223b17cc80c.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f16417-0748-4e29-bad6-c223b17cc80c.json",
+      "properties": {
+        "artifact": {
+          "hash": "928aa60c1f5370033eba735219277a22fccc340785ca8792c2b5734024090940",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/928aa60c1f5370033eba735219277a22fccc340785ca8792c2b5734024090940",
+          "mime": "application/json",
+          "size": 4040
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f16417-0748-4e29-bad6-c223b17cc80c.json"
+}

@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a7d7221-e518-4090-be81-700ce0e26e1a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a7d7221-e518-4090-be81-700ce0e26e1a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T07:15:50.470Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Five-annotation implementation and validation",
+        "updatedAt": "2026-09-29T22:37:05.019Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a7d7221-e518-4090-be81-700ce0e26e1a.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a7d7221-e518-4090-be81-700ce0e26e1a.json",
+      "properties": {
+        "artifact": {
+          "hash": "fcf49293d53c413fa361e6a7cc86b0f6fa7e2eaf8184e70970163d8dd541a1d1",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/fcf49293d53c413fa361e6a7cc86b0f6fa7e2eaf8184e70970163d8dd541a1d1",
+          "mime": "text/markdown",
+          "size": 1187
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a7d7221-e518-4090-be81-700ce0e26e1a.json"
+}

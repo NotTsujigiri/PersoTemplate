@@ -1,0 +1,53 @@
+{
+  "task": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/13c0f51b-e976-4d47-85cf-93d436e0e9d1.json",
+  "result": "Implemented and verified; awaiting human review in Broccoli.",
+  "changes": [
+    {
+      "comments": [
+        1
+      ],
+      "result": "Create Inputs and tasks now opens the same Node editor, with its view toolbar, Save/Cancel, Fields and Additional relations. Draft validation and reference candidates come from the same owner contracts; no node is persisted before Save."
+    },
+    {
+      "comments": [
+        2
+      ],
+      "result": "The reusable schema form reserves invariant-edge space only for field rows crossed by an edge. Unrelated fields fill the available form width. Overlapping edge intervals receive separate tracks."
+    },
+    {
+      "comments": [
+        3,
+        4
+      ],
+      "result": "Both editor section headers use the same compact category styling. The outer editor content has zero padding; section children own spacing and scrollbars meet the pane edge."
+    },
+    {
+      "comments": [
+        5,
+        6,
+        7
+      ],
+      "result": "Chat and workspace now use the shared flex splitter allocation contract. Competing grid/fixed-width behavior was removed. Collapse guides stay inside their edge and editor reveal uses the splitter API."
+    }
+  ],
+  "validation": {
+    "command": "npm run test:all",
+    "build": "passed",
+    "backend": {
+      "passed": 136,
+      "failed": 0
+    },
+    "browser": {
+      "passed": 114,
+      "failed": 0
+    },
+    "sharedOwners": {
+      "splitter": 7,
+      "schemaForm": 4
+    },
+    "reproduction": "The original exact expectations are unchanged. Both recorded failing scenarios now pass.",
+    "live": "Verified the refreshed live app, including chat-only width, editor geometry, normal creation chrome and cancellation.",
+    "checkpointHistory": "The first complete run passed 136 backend and 113 browser tests. A newly added draft-notification test saved before the notification arrived and correctly hit stale-revision protection. The test now waits for the new card before Save; focused and final complete runs passed. No stale-write protection was weakened."
+  },
+  "acceptance": "MVP and review acceptance remain pending the user. No commit or merge was performed."
+}

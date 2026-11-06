@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3207df6-6363-4140-aed9-7573d865b852.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3207df6-6363-4140-aed9-7573d865b852.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-11T20:14:17.192Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 470,
+        "description": "Implement generic discovery and rendering of existing web components selected from TypeScript source. Language and web-component contributors own identity, public property schemas, source relationships and operations; the UI editor consumes them without component-specific dependencies, adapters, registration lists or uiDefinition requirements. Reuse the regular node editor, existing tabs, zoom and panel controls. Show the component with its own defaults; update exposed scalar properties live where possible. Keep Code editing and stale-write protection. Errors replace Visual/Preview content while tabs remain usable. Start at minimum size and zoom out to fit. Sample-data setup, injected services and live buildspace data are outside this phase. Verify arbitrary components through the same path and inspect the running review surface.",
+        "title": "Implement generic web component previews — phase 1",
+        "updatedAt": "2026-10-12T14:16:32.434Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3207df6-6363-4140-aed9-7573d865b852.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3207df6-6363-4140-aed9-7573d865b852.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3207df6-6363-4140-aed9-7573d865b852.json"
+}

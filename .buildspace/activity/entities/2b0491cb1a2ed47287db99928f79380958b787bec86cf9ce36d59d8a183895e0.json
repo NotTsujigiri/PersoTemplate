@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/722e1434-d74a-42a8-bde4-48e49add87e4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/722e1434-d74a-42a8-bde4-48e49add87e4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T05:53:47.992Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 744,
+        "description": "- Live startup diagnostics: /api/state transferred 73,691,992 bytes; one /api/task transferred 65,223,519 bytes before repository inspection.\n- Reproduce with authored large histories; split session discovery metadata from messages, logs and check evidence, fetching details only on demand.\n- Preserve chat, review and result correctness; measure payload size and initial usability before accepting the change.\n\nVerification progress — 2026-10-20\nImplemented in a3e1da7. Startup, session selection, action responses and live notifications use compact overviews; chat pages, contexts, checks and captured evidence load explicitly. Authored large-history recording and consumer checks pass. Live /api/state fell from 73,691,988 bytes to 41,521 bytes; direct local read measured 97 ms.\n\nCompleted verification — 2026-10-20\nCommits: a3e1da7, a912ade, bfaeb66. Their messages contain the canonical task URLs. Build passed; final type gate checked 1,066 authored files with zero violations. Focused exact recordings, storage/stale-save checks and rendered screenshots pass. The full browser run recorded 267 passes and four failures; all four cases pass after focused recorder updates/rechecks. The full checkpoint still has four previously tracked Windows cancellation timing failures under load (task 916da876-ea04-42b3-ac05-93bba5129a8f remains Queued); no timing thresholds were weakened. The app has been restarted with the committed changes. See attached Performance pass verification 2026-10-20.json for measurements, coverage and limitations.",
+        "title": "Bug: Startup downloads bulky session logs and check evidence",
+        "updatedAt": "2026-10-20T04:42:26.048Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/722e1434-d74a-42a8-bde4-48e49add87e4.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/722e1434-d74a-42a8-bde4-48e49add87e4.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 98,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/722e1434-d74a-42a8-bde4-48e49add87e4.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/722e1434-d74a-42a8-bde4-48e49add87e4.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:08:05.802Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T04:42:26.048Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/722e1434-d74a-42a8-bde4-48e49add87e4.json"
+}

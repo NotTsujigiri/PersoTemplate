@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c385ae55-94d4-44e4-b048-5b8268329967.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c385ae55-94d4-44e4-b048-5b8268329967.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:44:08.607Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 400,
+        "description": "Immutable attached evidence",
+        "title": "MVP plan review upgrade — verification and checkpoint gaps.json",
+        "updatedAt": "2026-10-08T18:44:16.927Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c385ae55-94d4-44e4-b048-5b8268329967.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c385ae55-94d4-44e4-b048-5b8268329967.json",
+      "properties": {
+        "artifact": {
+          "hash": "b30008cfe935996c719ff55d28044451bea37436f7d0fa9ac94dce66586ba0e5",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/b30008cfe935996c719ff55d28044451bea37436f7d0fa9ac94dce66586ba0e5",
+          "mime": "application/json",
+          "size": 3796
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c385ae55-94d4-44e4-b048-5b8268329967.json"
+}

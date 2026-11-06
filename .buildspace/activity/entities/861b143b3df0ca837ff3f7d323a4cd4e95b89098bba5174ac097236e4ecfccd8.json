@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T13:13:39.843Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 533,
+        "description": "- Nodes have identity and 0..n independently identified components, including repeated types; replace node types with component types and typed properties.\n- Implement the encapsulated engine first: owner-defined predicates, reusable cached views, scoped events and lazy consistent reads; retain typed node-to-node edges.\n- Then rework all active owners and consumers; expose instances, component types, properties, data types and view definitions in the app.\n- Use compiler-driven checks, independent agent reviews and commit checkpoints; only the completed experience requires human review.",
+        "title": "Migrate to component containers and lazy predicate views",
+        "updatedAt": "2026-10-20T01:53:47.641Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+      "properties": {
+        "placement": "queued",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json"
+}

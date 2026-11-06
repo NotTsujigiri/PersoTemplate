@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4764cc13-d70f-4e04-885b-96f34471cebf.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4764cc13-d70f-4e04-885b-96f34471cebf.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T22:21:28.904Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 294,
+        "description": "Seven review annotations: create Inputs/tasks through the normal Node editor; let fields use unused invariant-edge width; make Fields and Additional relations clear compact groups; place padding inside sections so scrollbars reach the pane edge; fix chat collapse-to-full-width; reproduce complex splitter combinations that overlap content; remove unused space on the right.",
+        "title": "Node editor creation, section layout and nested splitter failures",
+        "updatedAt": "2026-09-30T22:21:29.056Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4764cc13-d70f-4e04-885b-96f34471cebf.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4764cc13-d70f-4e04-885b-96f34471cebf.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4764cc13-d70f-4e04-885b-96f34471cebf.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4764cc13-d70f-4e04-885b-96f34471cebf.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:30:24.658Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-30T22:21:29.056Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4764cc13-d70f-4e04-885b-96f34471cebf.json"
+}

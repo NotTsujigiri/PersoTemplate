@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a2f23d9-7d3e-4261-bc72-bbe306555937.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a2f23d9-7d3e-4261-bc72-bbe306555937.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T23:39:25.667Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 774,
+        "description": "User report, 2026-10-20, annotation 1\nThe Node editor Save button is broken. The user explicitly requested a bug in Queued. They also reported being unable to abandon the mistaken missing-item bug because Save was broken.\n\nObserved context\nSelected design task: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0eeb2840-caaa-46e4-a813-d5926c5fcb36.json\nThe annotated screenshot shows Save highlighted and Parent edited to null. The exact failing request, error feedback and full set of attempted edits have not been independently reproduced. Do not infer that only Parent is affected.\nTarget: Save, shadow:div#pane-4 > relational-ui-view-toolbar.view-toolbar > div.view-tools > relational-ui-icon-button:nth-of-type(2)>>>button.\nReported point (931,57), viewport 1159x764. Annotated screenshots are in the user's five-report message.\n\nExpected behavior and verification\nSave persists valid property and relation edits, including clearing Parent and changing task placement. It provides actionable validation/conflict feedback for rejected edits and preserves the user's draft.\nReproduce through authored simulated input with persistent recorded output before changing production behavior. Cover ordinary edits, clearing Parent, abandonment and background refresh; verify persisted state by reopening the node. Do not overwrite the user's current unsaved draft during investigation.\n\nRelated completed work\ngraph://planning-26535745-4644-4770-af7c-1980c773377b/entries/908639da-abe3-4923-8bfc-5e9eb6d1e4c7.json (Preserve Save across background planning refreshes, recorded fix 9ba9e38). Inspect for regression without assuming the cause is identical.\n\nPrioritized for immediate investigation and implementation by the user on 2026-10-20. Include this task URL in implementation commit messages.\n\nUser clarification — 2026-10-20\nSaving did succeed. The defect is severe latency in detecting property changes and completing Save, making it appear broken. The user could not reliably edit this task's description through the UI because it was so slow; their clarification was absent from the saved description when checked. Measure editing feedback, draft validation, persistence and post-save refresh separately. Preserve drafts and stale-write rejection. This performance pass is now the immediate priority because the app is too slow for the user to test ongoing development.\n\nImplementation verification — 2026-10-20\nReproduced duplicate per-keystroke validation, repeated graph copies, and repeated review/ancestor relation scans. Shared debounced validation now issues one request per edit burst; owner operations reuse relationship indexes. Live read-only validation of this task now takes 345 ms excluding local DNS fallback, versus about 21.5 seconds of owner processing before indexing. Startup state shrank from 73.7 MB to 41.5 KB. Exact recordings and focused workflow checks pass.\nLive UI verification: edited and saved this description successfully with the current app.\nOwner persistence timing checked after the indexing fixes.\nAtomic generation files now use bounded write batches; CURRENT advances only after all writes succeed.\n\nCompleted verification — 2026-10-20\nCommits: a3e1da7, a912ade, bfaeb66. Their messages contain the canonical task URLs. Build passed; final type gate checked 1,066 authored files with zero violations. Focused exact recordings, storage/stale-save checks and rendered screenshots pass. The full browser run recorded 267 passes and four failures; all four cases pass after focused recorder updates/rechecks. The full checkpoint still has four previously tracked Windows cancellation timing failures under load (task 916da876-ea04-42b3-ac05-93bba5129a8f remains Queued); no timing thresholds were weakened. The app has been restarted with the committed changes. See attached Performance pass verification 2026-10-20.json for measurements, coverage and limitations.\nLive real-graph persistence remains about 2 seconds of owner work; change validation now measures 345 ms. This is a measured improvement, not a claim that all saving is instantaneous.",
+        "title": "Bug: Node editor change detection and Save are unacceptably slow",
+        "updatedAt": "2026-10-20T04:42:26.047Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a2f23d9-7d3e-4261-bc72-bbe306555937.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a2f23d9-7d3e-4261-bc72-bbe306555937.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 100,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a2f23d9-7d3e-4261-bc72-bbe306555937.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a2f23d9-7d3e-4261-bc72-bbe306555937.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T04:46:51.159Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T04:42:26.047Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a2f23d9-7d3e-4261-bc72-bbe306555937.json"
+}

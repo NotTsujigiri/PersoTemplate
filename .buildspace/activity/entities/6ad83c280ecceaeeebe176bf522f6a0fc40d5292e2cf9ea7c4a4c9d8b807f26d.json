@@ -1,0 +1,236 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24ad9c89-7d81-4b77-a041-17d147af5dcd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24ad9c89-7d81-4b77-a041-17d147af5dcd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-26T00:25:50.557Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1151,
+        "description": "Reviewer: You (required).\n\nOpen Repositories and inspect application.ts and quality-policy.json (or any TypeScript and JSON files). Keywords, declarations, strings, comments and JSON keys/values now receive language-owned colors without a configuration file. Edit, select, undo and scroll; ordinary editing also remains available for unsupported files.\n\nThe implementation follows the agreed ownership:\n- LspContributor owns discovery, shared instances, consumer/document lifetime, cancellation, stale results and the authenticated direct relay.\n- TypeScriptContributor owns TypeScript applicability, project scope, the language server and its token/color rules.\n- JsonContributor owns JSON applicability, scope, the Microsoft JSON service, token classification and color rules.\n- RelationalUi consumes optional language support and paints the visible text while retaining native editing.\n- Application/template composition enables these contributors and supplies configuration; it contains no copied LSP orchestration.\n\nReview the attached screenshots and verification evidence. They cover real files, unsaved dependency changes, shared-instance cleanup, stale results, undo, scrolling and no graph operation for each edit.\n\nVerification: repository type-safety and build checks passed. The full browser run had 346/358 passes before the final fixture and workspace-isolation corrections; all 37 targeted browser reruns passed afterward. The planning-save timing check and planning-navigation case also passed targeted reruns without changing their acceptance criteria. The original failed checkpoint is retained and was not rerun in full; see the attached verification note.\n\nKnown limit: JSON parsing/classification currently runs once per changed document version, not incrementally. The attached 2.12 MB / 56,940-line measurement records about 128 ms initial classification, 12 ms cached access and 108 ms after an edit on this machine; these are service-side measurements, not a UI latency guarantee.\n\nOnly coloring is exposed in the editor in this task. The next typed-function-signature task remains gated on your approval.",
+        "title": "Human review: open TypeScript and JSON files and verify token coloring",
+        "updatedAt": "2026-10-27T02:19:53.210Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24ad9c89-7d81-4b77-a041-17d147af5dcd.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24ad9c89-7d81-4b77-a041-17d147af5dcd.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "human:user": {
+              "reason": "",
+              "time": "2026-10-26T16:20:08.600Z",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a0051c0-95a3-4713-ba54-b521bb9924ba.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a0051c0-95a3-4713-ba54-b521bb9924ba.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a0051c0-95a3-4713-ba54-b521bb9924ba.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-26T00:25:50.548Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1151,
+                      "description": "",
+                      "title": "2. TypeScriptContributor: supply project-aware LSP support and an applicable token-to-color provider",
+                      "updatedAt": "2026-10-26T02:27:44.268Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a0051c0-95a3-4713-ba54-b521bb9924ba.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a0051c0-95a3-4713-ba54-b521bb9924ba.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a0051c0-95a3-4713-ba54-b521bb9924ba.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1630f722-c2c3-4657-814c-0bd684a1eb86.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1630f722-c2c3-4657-814c-0bd684a1eb86.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1630f722-c2c3-4657-814c-0bd684a1eb86.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-26T00:25:50.550Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1151,
+                      "description": "",
+                      "title": "3. JsonContributor: supply JSON LSP support and an applicable token-to-color provider",
+                      "updatedAt": "2026-10-26T02:27:44.268Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1630f722-c2c3-4657-814c-0bd684a1eb86.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1630f722-c2c3-4657-814c-0bd684a1eb86.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1630f722-c2c3-4657-814c-0bd684a1eb86.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-26T00:25:50.555Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1151,
+                      "description": "",
+                      "title": "5. Application composition: enable the four contributors through configuration only",
+                      "updatedAt": "2026-10-26T03:46:21.295Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "integration",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/283b8bcc-575b-4000-9ecb-750ddb468ccc.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ff9bc0f-d30d-4dfc-a00f-c5e2fae3b1c4.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ff9bc0f-d30d-4dfc-a00f-c5e2fae3b1c4.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ff9bc0f-d30d-4dfc-a00f-c5e2fae3b1c4.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-26T00:25:50.552Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1151,
+                      "description": "",
+                      "title": "4. RelationalUi: consume discovered language support and token colors in the text editor",
+                      "updatedAt": "2026-10-26T02:47:41.958Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ff9bc0f-d30d-4dfc-a00f-c5e2fae3b1c4.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ff9bc0f-d30d-4dfc-a00f-c5e2fae3b1c4.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3ff9bc0f-d30d-4dfc-a00f-c5e2fae3b1c4.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-26T00:25:50.538Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1151,
+                      "description": "Implement this serial plan, with one item per contributor and application composition separate:\n\n1. **LspContributor:** Own the reusable language-independent graph contracts, discovery and selection, server-instance management, LSP client/session machinery, and token-to-color provider mechanism. Factories and server instances are graph nodes. The instance manager coordinates creation, project-scoped reuse, consumer tracking and cleanup; the client synchronizes document versions, cancels obsolete requests, rejects stale results and preserves server provenance. After discovery and instance acquisition, editing traffic uses an established LSP connection. Where a server needs a relay, LspContributor supplies the minimal forwarding bridge through the existing host capabilities: no graph query, graph materialization or persistence for each edit. Color-provider selection and conversion can execute in the frontend. Contributor ownership does not force service-side execution.\n2. **TypeScriptContributor:** Own TypeScript applicability rules, project-scope resolution, concrete server creation and token classification, including dependencies in other repository files. Register its server factories and token-to-color provider, with their applicability rules, through LspContributor when activated. All TypeScript-specific integration stays in this contributor.\n3. **JsonContributor:** Own JSON applicability rules, project-scope resolution, concrete server creation and token classification. Register its server factories and token-to-color provider, with their applicability rules, through the same LspContributor contracts when activated. This separate language implementation proves the shared system is reusable.\n4. **RelationalUi:** Own the reusable text-editor integration that requests language support and token colors through LspContributor and renders available results. Typing stays local; coloring updates asynchronously. Keep ordinary editing available without a server or color provider and preserve selection, scrolling and responsive incremental updates. The editor binding is part of RelationalUi and works for every template that uses it.\n5. **Application composition:** Enable the four contributors and provide deployment-specific settings and existing hosting capabilities through their declared contracts. Contributors themselves install their factories, providers, relay handlers and editor integration. Templates contain no LSP-specific orchestration, forwarding, lifecycle, document-synchronization or coloring logic. Another template obtains the same feature by enabling these contributors and supplying supported settings, without recreating their behavior.\n\nToken-to-color mappings are contributed implementations for this step. No color/theme configuration files or theme-file format are required. Completion, diagnostics and other editor features can use the shared system in later tasks.\n\nImplementation decisions: reuse Microsoft's LSP protocol and JSON-RPC packages and typescript-language-server with the existing TypeScript tooling. Do not use the VS Code extension client. JsonContributor uses Microsoft's JSON language-service parsing information to distinguish property keys, string values, numbers, booleans and null, and supplies the token-classification output missing from the upstream JSON server. Include structural punctuation in coloring. Keep language-specific classification and color mappings in their owning contributors, and reuse existing hosting/transport capabilities. Declare only directly used dependencies in their owning packages. The other candidates from the earlier dependency inventory remain deferred.\n\nProceed directly with implementation and normal focused verification; do not add another POC or preliminary evaluation task. Keep the serial contributor tasks and the required human coloring review. Folding/unfolding is a separate backlog task.",
+                      "title": "Introduce reusable LSP services and color TypeScript and JSON in the text editor",
+                      "updatedAt": "2026-10-26T03:46:48.107Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8ed0085f-2377-4ba0-824f-9e5c8a0bfc31.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8ed0085f-2377-4ba0-824f-9e5c8a0bfc31.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8ed0085f-2377-4ba0-824f-9e5c8a0bfc31.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-26T00:25:50.540Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1151,
+                      "description": "",
+                      "title": "1. LspContributor: manage language servers and discover and apply token-to-color providers",
+                      "updatedAt": "2026-10-26T02:27:44.268Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8ed0085f-2377-4ba0-824f-9e5c8a0bfc31.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8ed0085f-2377-4ba0-824f-9e5c8a0bfc31.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8ed0085f-2377-4ba0-824f-9e5c8a0bfc31.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 1169,
+            "sessions": [],
+            "submittedAt": "2026-10-26T03:50:37.812Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/24ad9c89-7d81-4b77-a041-17d147af5dcd.json"
+}

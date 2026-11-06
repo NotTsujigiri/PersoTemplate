@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a8b4ef66-4335-4c53-bec9-28d2f88716b4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a8b4ef66-4335-4c53-bec9-28d2f88716b4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T20:52:55.364Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 291,
+        "description": "Immutable attached evidence",
+        "title": "Splitter build and regression logs.txt",
+        "updatedAt": "2026-09-30T20:52:55.458Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a8b4ef66-4335-4c53-bec9-28d2f88716b4.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a8b4ef66-4335-4c53-bec9-28d2f88716b4.json",
+      "properties": {
+        "artifact": {
+          "hash": "d6a4f5d4706e6c7d43f9fe52529adaf4edc4617521382ab142758a4b7dd6b24a",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/d6a4f5d4706e6c7d43f9fe52529adaf4edc4617521382ab142758a4b7dd6b24a",
+          "mime": "text/plain",
+          "size": 44887
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a8b4ef66-4335-4c53-bec9-28d2f88716b4.json"
+}

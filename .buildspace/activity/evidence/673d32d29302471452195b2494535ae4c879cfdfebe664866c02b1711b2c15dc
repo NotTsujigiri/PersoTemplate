@@ -1,0 +1,59 @@
+{
+  "baseline": "9c06556bf13ad32a6abcc467a118a775abe7a49f",
+  "result": "Repository filtering uses the inspected entity projection and component declarations. Kind query schema removed. Presence and qualified properties support autocomplete and saved queries.",
+  "review": [
+    "Independent query, consumer and source-Git reviews completed; before/expected/after evidence is attached separately.",
+    "Kept original review and authoring assertions; fixed missing source Git components instead of clearing filters in tests.",
+    "Source-backed Check and Composition entities carry explicit Git state without becoming File entities."
+  ],
+  "validation": {
+    "build": "Passed: npm run build, including root check:types (1044 authored files, zero violations), component checks, model generation and template builds.",
+    "genericQueryFocused": {
+      "passed": 14
+    },
+    "queryHttpLibrary": {
+      "passed": 3
+    },
+    "finalRepositoryModel": {
+      "passed": 2
+    },
+    "harnessTestProjectTypeScript": "passed",
+    "modelSuite": {
+      "passed": 41
+    },
+    "harnessSuite": {
+      "total": 258,
+      "passed": 257,
+      "failed": 1,
+      "resolution": "Windows SQLite teardown failure reproduced, bounded cleanup retry implemented; original restart scenario and exact recordings then passed."
+    },
+    "unitPackages": {
+      "relationalUi": 251,
+      "webComponent": 31,
+      "projectTools": 28,
+      "testing": 5
+    },
+    "fullBrowser": {
+      "total": 254,
+      "passed": 247,
+      "failed": 7,
+      "resolution": "Six failures exposed missing source Git on Check/Composition and passed after correction with unchanged consumer assertions. Queue commit exceeded a five-second assertion deadline; original test passed isolated unchanged."
+    },
+    "finalBrowserFocused": {
+      "passed": 31,
+      "failed": 0,
+      "skipped": 0
+    },
+    "initialAffectedConsumerBrowser": {
+      "passed": 19
+    },
+    "finalQueueOriginal": "passed unchanged",
+    "visualReview": "Fresh screenshots inspected for component catalog, review filtering, node editor and UI authoring."
+  },
+  "limitation": "This is not a claim that one uninterrupted full-suite run was clean. All failures from the checkpoint were investigated and their affected scenarios passed targeted reruns.",
+  "commit": {
+    "hash": "eb334a4f795f9eb5bae1c60712cf31eddeae0936",
+    "title": "fix: filter repositories by entity components"
+  },
+  "workingTree": "Clean after commit."
+}

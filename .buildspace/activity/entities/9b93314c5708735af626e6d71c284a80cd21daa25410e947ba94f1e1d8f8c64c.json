@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad7a237-ad6e-41a8-b1cd-70dffe42b27b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad7a237-ad6e-41a8-b1cd-70dffe42b27b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T05:35:12.870Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 741,
+        "description": "Immutable attached evidence",
+        "title": "Overnight input processing — 44 outcomes.json",
+        "updatedAt": "2026-10-19T05:35:42.633Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad7a237-ad6e-41a8-b1cd-70dffe42b27b.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad7a237-ad6e-41a8-b1cd-70dffe42b27b.json",
+      "properties": {
+        "artifact": {
+          "hash": "61ef6b412794e7ae8b7814509fbc155394eeab0b1936a3bbffc31f34c9776068",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/61ef6b412794e7ae8b7814509fbc155394eeab0b1936a3bbffc31f34c9776068",
+          "mime": "application/json",
+          "size": 26509
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad7a237-ad6e-41a8-b1cd-70dffe42b27b.json"
+}

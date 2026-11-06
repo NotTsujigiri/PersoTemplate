@@ -1,0 +1,40 @@
+{
+  "typeSafety": {
+    "violations": 0,
+    "authoredFiles": 1060
+  },
+  "generatedModel": {
+    "failed": 0,
+    "passed": 4
+  },
+  "checkpoint": {
+    "status": "Failed",
+    "command": ".\\test.ps1",
+    "limitations": [
+      "Four Windows cancellation timing checks failed under full-suite load; separately queued as task 916da876-ea04-42b3-ac05-93bba5129a8f.",
+      "Three stale generated-model failures were resolved by regenerating the artifact; all four model tests pass.",
+      "The broad browser run was interrupted after finding the refresh-menu failure. That failure now passes in the exact reproduction and original annotation test; the complete browser suite was not rerun."
+    ]
+  },
+  "commit": "90f469f4e2816478ac12ef0530e8444523ec61d9",
+  "build": {
+    "status": "Passed",
+    "command": ".\\build.ps1"
+  },
+  "focusedBrowser": {
+    "status": "Passed",
+    "passed": 13,
+    "logs": [
+      ".harness/activity-menu-after.log",
+      ".harness/activity-reconcile.log"
+    ]
+  },
+  "sharedUiUnit": {
+    "failed": 0,
+    "passed": 251
+  },
+  "liveService": {
+    "url": "http://localhost:43130",
+    "status": "Restarted with the final source and generated model"
+  }
+}

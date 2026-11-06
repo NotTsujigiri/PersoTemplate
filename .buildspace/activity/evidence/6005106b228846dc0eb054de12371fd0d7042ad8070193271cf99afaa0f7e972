@@ -1,0 +1,29 @@
+Shared splitter collapse and Activity board headings
+
+Requested behavior
+1. Collapsing Node editor releases its horizontal allocation and moves the divider to the right edge. Vertical Active sections follow the same rule; collapse and restore must preserve the other sections' allocations.
+2. Inputs / Active / Closed column headers must be distinct from placement and attention groups without taking more height.
+3. Remove the buildspace name from the Activity board toolbar.
+
+Cause and implementation
+The splitter's default toggle only hid a pane. The app's fixed flex allocations retained unused space, while its resize adapter changed the first pane without reallocating its neighbor. Earlier component fixtures used special CSS to compensate for collapse, which did not cover the live layout.
+
+Relational UI's shared splitter now offers explicit flex-layout ownership. It normalizes measured allocations into proportional flex weights, transfers a collapsed pane's space to its neighbor, and restores the pane proportionally. Pair resizing preserves unrelated siblings. CSS-hidden panes keep their defaults, and initialization waits until the divider is visible. Box measurements are collected before writing flex weights, preventing intermediate layouts from clamping scroll positions. The existing editor-opening and timeline tests exposed these edge cases and pass unchanged. Custom layouts retain their cancellable event contract. The app adapter supplies initial sizing and persistence and delegates flex allocation to the shared component.
+
+Column headings use a neutral raised surface and stronger text weight; placement headings remain visually subordinate. Header heights are unchanged. The redundant buildspace label is removed. Navigation tests now verify selected buildspace identity through the channel selector.
+
+Evidence
+The authored user scenario was run before the product change. Its recorded output demonstrated the blank editor allocation, missing vertical allocation and movement of unrelated rows. The same scenario and expected output are retained in app/test/splitter-collapse-ui.spec.mjs. Additional regression coverage checks viewport resizing while collapsed, pointer restoration and keyboard resizing. Existing layout tests cover persisted sizes after reload and compact panes.
+
+The live app was restarted and reloaded. At viewport width 980, collapsing Node editor placed the divider at x=976..980. After collapsing In progress, the adjacent vertical dividers meet at y=463.1000061035156; the Queued divider remains at y=635.5625. Both panes were restored and the user's board-focused layout was retained. Column styling and toolbar-label removal were visually inspected.
+
+Scope
+This task is ready for human review after the recorded verification checkpoint. It does not accept the parent MVP or commit repository changes.
+
+Final verification
+- Full owner build and app syntax check passed.
+- Backend: 135 passed. The first checkpoint hit a Windows EPERM opening a temporary writer.lock; a full backend rerun passed without changes to planning persistence.
+- Shared splitter compatibility: 7 passed.
+- Full browser run: 106 passed, 4 failed. Two failures asserted the removed toolbar label; their assertions now use the existing selected channel. Two exposed hidden initialization and intermediate scroll-clamping issues, fixed in the shared splitter.
+- Final targeted rerun: all 9 affected browser cases passed, including all four failures plus the shared splitter, compact/persisted layout and hidden-board cases. No browser test remains unresolved. The original timeline visibility and pan expectations were retained; temporary diagnostic instrumentation was removed.
+- Final browser screenshots were visually inspected. The live application was restarted with the final component bundle.

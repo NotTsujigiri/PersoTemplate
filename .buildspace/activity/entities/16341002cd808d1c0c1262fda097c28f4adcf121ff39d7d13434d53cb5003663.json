@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7c2e5756-a133-4f29-a6e0-1767b4d407fd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7c2e5756-a133-4f29-a6e0-1767b4d407fd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T01:33:07.777Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 595,
+        "description": "",
+        "title": "- Independent subagent migration_plan_review verified correction revision 594 against submitted target 590; the constraint/invalidation finding is resolved in t",
+        "updatedAt": "2026-10-18T01:33:21.838Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7c2e5756-a133-4f29-a6e0-1767b4d407fd.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7c2e5756-a133-4f29-a6e0-1767b4d407fd.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/49d330e6-5081-42ab-b2bb-87ec077826d3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Independent subagent migration_plan_review verified correction revision 594 against submitted target 590; the constraint/invalidation finding is resolved in the plan.\n- One pure predicate model reads tracked engine data; external changes enter validated transactions. Existing and new edges are checked against candidate state, with no state/cache/event changes after rejection.\n- Required proof now covers missing/enumerated reads, branch cleanup and disposal; predicate purity is correctly a test/review obligation, not a TypeScript guarantee. Actual runtime, stored and transported components replace both graph node types and semantic kind classification.\n- Accept the amended high-level plan. Compiler, runtime, performance and data-preservation results remain to be established by the implementation reviews; no human outcome is recorded."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7c2e5756-a133-4f29-a6e0-1767b4d407fd.json"
+}

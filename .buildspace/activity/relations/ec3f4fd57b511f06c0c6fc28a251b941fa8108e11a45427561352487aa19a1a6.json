@@ -1,0 +1,6 @@
+{
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5dc0dd1f-fb32-4c18-8fec-fe33af6bdf1b.json",
+  "source": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dad59b22-c823-4fb7-acb8-f4e28bebc9fd.json",
+  "target": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a87a3982-84b1-4bc4-84d4-746b5b5ca0d2.json",
+  "typeId": "prerequisite"
+}

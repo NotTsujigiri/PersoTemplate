@@ -1,0 +1,33 @@
+{
+  "title": "Repository component filtering: independent review iterations",
+  "task": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9ace7c89-3f88-4826-8e0b-d3be75eee55c.json",
+  "reviewers": [
+    "component_filter_consumers",
+    "explain_repository_kind"
+  ],
+  "iterations": [
+    {
+      "finding": "Runnable source files omitted their Check component.",
+      "correction": "Project Check independently when the source has a runnable definition.",
+      "evidence": "repository-component-model.test.ts: identical recorded inputs fail before and pass after."
+    },
+    {
+      "finding": "Current composition outline nodes were excluded from filter evaluation.",
+      "correction": "Project outline nodes before querying, then retain matches and their source ancestors.",
+      "evidence": "repository-composition-filter-ui.spec.ts: six unchanged expected steps pass, including outline replacement; screenshots reviewed."
+    },
+    {
+      "finding": "New readValues callbacks leaked into two descriptor boundaries and failed compilation.",
+      "correction": "Strip both readers and give planningQueryFields an explicit descriptor return type.",
+      "evidence": "Harness TypeScript compilation and query-library tests pass."
+    }
+  ],
+  "finalReview": "No additional actionable findings in query semantics, unknown-type validation, saved-query metadata or autocomplete.",
+  "focusedValidation": {
+    "primaryBrowserRegression": "2 exact passes: workspace and Review; final screenshots inspected.",
+    "consumerBrowserTests": 19,
+    "engineQueryTests": 14,
+    "queryLibraryTests": 3
+  },
+  "checkpoint": "Full repository checkpoint running; result recorded separately after completion."
+}

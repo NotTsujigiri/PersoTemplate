@@ -1,0 +1,10 @@
+{
+  "factoryRejectsMissingReverse": false,
+  "factoryRejectsBlankReverse": false,
+  "factoryRejectsMissingForward": false,
+  "factoryRejectsOldSingleLabel": false,
+  "contributorRegistrationRejectsMissingReverse": false,
+  "forwardAndReverseRetained": false,
+  "explicitlySymmetricLabelsSupported": false,
+  "labelsSurviveSerialization": false
+}

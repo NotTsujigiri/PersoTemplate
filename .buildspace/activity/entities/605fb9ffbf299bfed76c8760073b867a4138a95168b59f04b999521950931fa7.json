@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8838818-b389-4cdf-a9b9-dd2c2fce7e72.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8838818-b389-4cdf-a9b9-dd2c2fce7e72.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.930Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Keep feed, annotations, user, help and settings in the default template's shared composition. Resolve their content from the selected template and space, including the user's contextual identity and available help/settings.\n\nCompleted: the Default template owns shared Feed, Annotations, User, Help and Settings tools. Their content follows the selected template and space. Context publication occurs before first view rendering, user drafts survive context changes, and review annotations remain visible in their owning context. Context, feed, annotations, navigation and settings browser recordings pass.",
+        "title": "Scope shared header tools to template and space",
+        "updatedAt": "2026-10-23T04:43:46.147Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8838818-b389-4cdf-a9b9-dd2c2fce7e72.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8838818-b389-4cdf-a9b9-dd2c2fce7e72.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8838818-b389-4cdf-a9b9-dd2c2fce7e72.json"
+}

@@ -1,0 +1,37 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Create/edit real title-only plans with durable relations, revisions and history.\n\nScope\n\n• Evolve canonical task owner; decouple planning records from execution startup.\n\n• Persist inputs, nested tasks, prerequisites, priority groups, attempt/evidence references and actor-attributed events.\n\n• Implement transactional validation, stale-write protection and restart recovery.\n\n• Resolve active-app/relational-host composition and contributor ownership before storage edits; activate only needed existing dependencies.\n\n• Declare field types, relation descriptors (including immutable creator), readable revisions and actor-permitted operation metadata using existing contracts; no ECS migration. Persist review requirements as references to existing check/thread/decision owners.\n\n• Implement basic submitted-revision/required-check enforcement, author-owned thread closure and authenticated outcome transitions before R02. Read-model/evidence refinements remain T07; do not defer fundamental gate enforcement until then.\n\n• Implement review draft/readiness transition and distinct continuation task relations, immutable multi-repository submitted evidence and grouped-feedback persistence; retain the existing canonical owners.\n\n• Reuse existing decentralized graph serialization/identity contracts and verify persisted references resolve correctly after full deserialization and restart. Do not create a second link encoding or URL UI feature.\n\nSuccess criteria\n\n1. Title-only tasks and multi-level nesting survive restart without starting/scanning an execution workspace.\n\n2. Cycles, missing references, invalid cross-context links and stale writes are rejected without partial mutation.\n\n3. Reversible placements and dynamic priority groups preserve history and never start an agent.\n\n4. No second planning-task authority is introduced.\n\n5. UI and MCP reach one owner/store through explicit relational contracts, not cross-project source imports or parallel task copies.\n\n6. Review requirements and revisions have one owner; Node/Review and UI/MCP cannot disagree through duplicate derived state.\n\n7. Draft/submitted/blocked/changes-requested/passed/abandoned transitions enforce the documented freeze and gate rules. A rejected review cannot strand its dependants: explicit validated successor gate replacement enables them only after the new review passes, preserving old evidence and comments.\n\n8. Work continuation creation and later draft review creation are separately idempotent; retry duplicates neither node nor relation and future review evidence is not fabricated.\n\n9. Serialize a graph with nested/shared references, review targets, discussion anchors, evidence revisions and successor links; discard in-memory state and deserialize/restart under a changed runtime binding. Every resolvable link reaches the same logical target, shared identity is preserved, and missing targets remain explicit unresolved references rather than retargeted or dropped.\n\nEvidence\n\n• Focused domain/storage tests\n\n• Failure/restart readback\n\n• Storage ownership note\n\n",
+        "title": "Persist the canonical nested task model",
+        "updatedAt": "2026-10-07T11:15:03.363Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/887ce372-c93f-47c5-a60c-7d12aedb9a37.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/887ce372-c93f-47c5-a60c-7d12aedb9a37.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/381ab975-f064-48d7-ad5e-ab77eac342c8.json"
+}

@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3768fc3-492b-4a16-98af-58608ee17221.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3768fc3-492b-4a16-98af-58608ee17221.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-02T07:52:40.452Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 323,
+        "description": "Immutable attached evidence",
+        "title": "First Data model implementation — narrow layout",
+        "updatedAt": "2026-10-02T07:52:40.585Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3768fc3-492b-4a16-98af-58608ee17221.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3768fc3-492b-4a16-98af-58608ee17221.json",
+      "properties": {
+        "artifact": {
+          "hash": "54dc896b9176b37218e4c2be75046375fb93ecb8a1154679547031df3851d13c",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/54dc896b9176b37218e4c2be75046375fb93ecb8a1154679547031df3851d13c",
+          "mime": "image/png",
+          "size": 41464
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3768fc3-492b-4a16-98af-58608ee17221.json"
+}

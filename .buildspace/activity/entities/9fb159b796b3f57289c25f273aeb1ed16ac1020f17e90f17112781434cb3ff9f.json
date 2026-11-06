@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab57f4d3-8842-4610-9d48-0e1ff01ea381.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab57f4d3-8842-4610-9d48-0e1ff01ea381.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T20:52:42.881Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 290,
+        "description": "Immutable attached evidence",
+        "title": "Collapsed Active section releases its space.png",
+        "updatedAt": "2026-09-30T20:52:43.001Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab57f4d3-8842-4610-9d48-0e1ff01ea381.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab57f4d3-8842-4610-9d48-0e1ff01ea381.json",
+      "properties": {
+        "artifact": {
+          "hash": "4c827ce1670c573b61f220c47d43dd16ab3a0cbb95c220e409d19983b11107ea",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/4c827ce1670c573b61f220c47d43dd16ab3a0cbb95c220e409d19983b11107ea",
+          "mime": "image/png",
+          "size": 66960
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab57f4d3-8842-4610-9d48-0e1ff01ea381.json"
+}

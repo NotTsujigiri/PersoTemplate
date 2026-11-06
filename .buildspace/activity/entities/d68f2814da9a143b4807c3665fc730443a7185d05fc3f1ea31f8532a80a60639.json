@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3d94d38a-83fb-417a-b2bf-e9f1e27f062a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3d94d38a-83fb-417a-b2bf-e9f1e27f062a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-02T03:55:20.428Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 313,
+        "description": "Critical MVP completion requirement: invariant enforcement and encapsulation of the composed data model must be established before the native TypeScript model POC can be considered MVP-ready.\n\nRequired outcomes\n1. Model state is private. UI, agents, contributor operations and all other callers cannot obtain mutable references or write paths that bypass the model's invariant boundary.\n2. An invariant is a Boolean predicate over typed inputs, required to hold for inputs selected from the candidate data model. Inputs may be one field, multiple fields, individual instances or collections of instances of any participating types/contributors. Cross-type is a property of the inputs, not a separate invariant mechanism or required taxonomy. The binding must make input selection and quantification explicit, including empty collections, missing references and additions/deletions.\n3. A mutation must check every invariant affected by its changes, including rules depending on other objects, references, collections and additions/deletions. An object becoming valid in isolation is insufficient if the composed model becomes invalid.\n4. Invariant checkers cannot mutate model state, including indirectly through helpers or retained references.\n5. Reject invalid transitions without changing accepted state. Multi-object transitions must be consistent and atomic; stale concurrent writes, loading, imports and restored state must not bypass enforcement.\n6. Contributor models compose through explicit contracts. Rules owned by participating models remain enforced after composition. TypeScript definitions and executable rules are the authored authority; derived relational metadata must not become a second independently maintained schema.\n7. Generated descriptions must faithfully explain supported executable predicates; semantic comments add context rather than define enforcement.\n8. Verify these guarantees on all model boundaries exposed by MVP contributors. Plan independent reviews of the design, implementation plan and implementation, with recorded tests for attempted bypasses, cross-type relationships, rejection, concurrent changes and persistence/reload.\n\nImplementation proposal, not an accepted implementation: https://chatgpt.com/space/page_32d7e631f44c81918b8b209a8cd40398\nSource discussion: codex://threads/01a0f501-1ed3-79c1-b149-c5ca4f09243d\nThe current POC demonstrates generated reflection/validation but does not yet establish these encapsulation and invariant guarantees.\n\nEngine self-model design exercise\nDefine the relational engine's own proposed model in one temporary TypeScript file: native types, executable predicates, typed input bindings, contributors/composition and the metadata extraction contract. Review the design and type-check it without treating compiler checks as proof of runtime enforcement. Source metadata must be mechanically derived; the file is a proposal, not a second live schema. Temporary draft: .harness/design/relational-engine-model/relational-engine.model.ts.",
+        "title": "Enforce data model encapsulation and invariants across contributors",
+        "updatedAt": "2026-10-08T21:30:58.251Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3d94d38a-83fb-417a-b2bf-e9f1e27f062a.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3d94d38a-83fb-417a-b2bf-e9f1e27f062a.json",
+      "properties": {
+        "placement": "blocked",
+        "priority": 1,
+        "purpose": "development",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3d94d38a-83fb-417a-b2bf-e9f1e27f062a.json"
+}

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7743277d-85ad-4c94-8485-97b8ae4bd77c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7743277d-85ad-4c94-8485-97b8ae4bd77c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T11:23:15.211Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 664,
+        "description": "",
+        "title": "- Independent review approved explicit setup readiness and persisted pane-state checks; corrected the Min-phase expectation before acceptance.\n- Focused replay ",
+        "updatedAt": "2026-10-18T11:23:29.804Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7743277d-85ad-4c94-8485-97b8ae4bd77c.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7743277d-85ad-4c94-8485-97b8ae4bd77c.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9671c929-8fe8-4bd4-8ba3-8091511b0751.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Independent review approved explicit setup readiness and persisted pane-state checks; corrected the Min-phase expectation before acceptance.\n- Focused replay matches the original exact geometry in both modes, with saved states matching current states throughout.\n- No production allocation change or expected-output weakening; before/after recordings retained."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7743277d-85ad-4c94-8485-97b8ae4bd77c.json"
+}

@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/964131c5-ec45-4311-add1-3ca0151a6efe.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/964131c5-ec45-4311-add1-3ca0151a6efe.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T11:19:53.745Z",
+        "createdBy": "agent:codex",
+        "description": "User need from the MVP readiness discussion: humans and agents must be able to contribute confidently through public operations and the node editor without breaking invariants. Contributors need mechanisms to expose rules beyond their own internals, with authoritative enforcement. The user explicitly calls out validation at data-type, individual-field, inter-field and inter-node levels, and proposes fields that express expected references to node instances with predicates, building on existing edge endpoint predicates. The node editor is effectively a form but does not yet provide a satisfactory contributor-facing validation experience. A generic relation list can be faithful yet noisy; semantically meaningful references and rules need to remain understandable. Preserve the established split: Relational Engine owns semantic validation and invariant enforcement; Relational UI consumes those contracts to guide input and explain invalid actions. Placement/queue bracket membership is one motivating example, not a complete rule inventory. Some app-owned guards already exist; this is a request for first-class contracts and encapsulation, not a claim that all validation is absent. Exact APIs and reference representation remain to be designed by the assistant after needs analysis. Do not create duplicate sources of truth or rely on UI-only enforcement.\n\nUser correction: persisting priority-bracket membership separately does not resolve the underlying issue. The node editor is intended to provide a truthful view of nodes and relations; declared fields and contracts currently fail to expose part of the actual model and its invariants. Hidden app-owned rules and state indicate encapsulation/system-usage debt, beyond a missing visual field. Treat model completeness, public invariant contracts and faithful inspection as one requirement. A cosmetic priority field over hidden duplicated logic is insufficient.",
+        "title": "Make contributor-declared invariants and encapsulation first-class across Engine and UI",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/964131c5-ec45-4311-add1-3ca0151a6efe.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/964131c5-ec45-4311-add1-3ca0151a6efe.json",
+      "properties": {
+        "meaning": "feedback"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/964131c5-ec45-4311-add1-3ca0151a6efe.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/964131c5-ec45-4311-add1-3ca0151a6efe.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:54:34.697Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-29T22:37:05.018Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/964131c5-ec45-4311-add1-3ca0151a6efe.json"
+}

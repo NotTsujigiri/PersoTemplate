@@ -1,0 +1,64 @@
+{
+  "commit": "e002802",
+  "branch": "codex/overnight-board",
+  "requirement": "Only the dragged divider moves, in the pointer direction, exactly matching pointer displacement while retaining its original grab offset. Other dividers remain fixed. Neighboring pane boundaries limit movement.",
+  "liveApplication": "Restarted successfully and refreshed at http://localhost:43130",
+  "taskStatus": "completed",
+  "remainingInvestigations": {
+    "nativeWorker": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75e14305-b312-468e-85b9-210b9873ca28.json",
+    "reviewTimeout": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/36126dab-1416-4344-bee1-1447836b5dd0.json",
+    "planningSaveTiming": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b36b8289-82ac-4afa-b677-d6b4b3848393.json"
+  },
+  "focusedBrowser": {
+    "passed": 46,
+    "failed": 0,
+    "log": ".harness/splitter-drag-verified.log",
+    "results": ".harness/splitter-drag-final/focused-results.json",
+    "recordings": ".harness/splitter-drag-final/test-results",
+    "coverage": ["Both axes", "Inner and outer dividers", "Non-dragged divider invariance", "Neighbor bounds", "Collapsed-pane selection during held drag", "Full collapse and reverse", "Escape restoration"],
+    "screenshotsInspected": true
+  },
+  "baselineEvidence": {
+    "nestedDrag": ".harness/splitter-drag-before",
+    "collapsedCursor": ".harness/splitter-cursor-before",
+    "fullCollapse": ".harness/splitter-collapse-before",
+    "attachedEvidenceId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8d1d835-9181-4000-882f-85d97a70dc38.json"
+  },
+  "checkpoint": {
+    "combinedCommand": "npm run test:all",
+    "combinedExitCode": 1,
+    "log": ".harness/splitter-full-checkpoint.log",
+    "build": "passed",
+    "typeSafety": {"authoredFiles": 1165, "violations": 0},
+    "modelTests": {"passed": 44, "failed": 0},
+    "harnessTests": {
+      "passed": 287,
+      "failed": 1,
+      "failure": "planning-performance.test.ts: a single draft and save stay interactive in a populated planning graph; saveWithin1000ms was false",
+      "unchangedIsolatedRerun": {"passed": 3, "failed": 0, "validationMs": 89.0306, "saveMs": 695.6364, "log": ".harness/splitter-planning-rerun.log"},
+      "interpretation": "The original checkpoint failure remains a failure. This server-side planning test does not exercise the changed splitter code. Its isolated pass does not establish reliability under concurrent load."
+    },
+    "remainingPackageTests": {
+      "relationalUi": {"passed": 264, "failed": 0},
+      "webComponent": {"passed": 35, "failed": 0},
+      "projectTools": {"passed": 32, "failed": 0},
+      "testing": {"passed": 5, "failed": 0}
+    },
+    "remainingLog": ".harness/splitter-remaining-checkpoint.log",
+    "fullBrowser": {
+      "passed": 313,
+      "failed": 3,
+      "results": ".harness/splitter-full-browser-results.json",
+      "splitterFocusedConsumersPassed": 46,
+      "dragGeometryRecordingsExactlyMatched": 12,
+      "freshScreenshotsInspected": true,
+      "failures": [
+        {"file": "component-gallery-ui.spec.ts", "name": "components use the shared repository tree and generic Visual preview", "durationMs": 0, "error": "worker process exited unexpectedly (code=3221226505, signal=null)"},
+        {"file": "context-chat-ui.spec.ts", "name": "sending from default buildspace chat creates a real conversation with a feed result", "durationMs": 0, "error": "worker process exited unexpectedly (code=3221226505, signal=null)"},
+        {"file": "ui.spec.ts", "name": "agent and human edits remain reviewable through named checks and full-file views", "durationMs": 60048, "error": "60-second timeout waiting for session:review at line 69"}
+      ],
+      "interpretation": "Native Windows worker exit 0xC0000409 and review acceptance timeout remain separate queued investigations. A zero reported worker duration does not identify the execution phase. The context-chat attribution is new evidence of the same native exit code; causation remains unknown."
+    },
+    "conclusion": "Splitter regression verified and live. The complete checkpoint was attempted and remaining suites completed separately; the overall repository checkpoint is not green. No timing limits or expected outputs were weakened."
+  }
+}

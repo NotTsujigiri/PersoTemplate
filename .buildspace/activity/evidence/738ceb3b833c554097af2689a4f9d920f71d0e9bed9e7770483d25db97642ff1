@@ -1,0 +1,15 @@
+✔ resizes its target by pointer and keyboard without an arbitrary maximum (16.1865ms)
+✔ supports a controlled ratio boundary without applying pixel styles (3.2808ms)
+✔ handles horizontal after-side direction consistently (4.5461ms)
+✔ collapses the constrained target after the pointer crosses its minimum reaction margin (6.0812ms)
+✔ collapses either adjacent pane when the pointer crosses its reaction margin (4.2491ms)
+✔ collapse is reversible and button mode is keyboard-accessible (26.9723ms)
+✔ fixed positions track externally controlled after-side panes (14.9403ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1305.8479

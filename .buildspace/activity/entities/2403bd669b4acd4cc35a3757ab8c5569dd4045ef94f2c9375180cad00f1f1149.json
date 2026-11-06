@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fda1d9bb-4a73-413c-810e-4aeb097624e2.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fda1d9bb-4a73-413c-810e-4aeb097624e2.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T04:18:52.374Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 963,
+        "description": "Post-MVP idea: explore whether a template composing another configuration should be able to explicitly remove or replace inherited contributors.\n\nConcrete example: Perso composes Btr and Broccoli defaults, but wants to exclude a contributor Btr includes or substitute another implementation. Consider explicit composition operations and their consequences for dependency validity and contributor identity when this need becomes relevant. No override mechanism or replacement semantics have been agreed.\n\nThis is deliberately outside the current MVP engine-composition work. The user currently controls all three configuration levels and can make adjustments at the owning level, so this flexibility is not a current priority.\n\nOrigin: the ongoing discussion in graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/67e7eb8b-7d65-4255-b3d0-3b183afd2265.json.\n\nUser answer (verbatim):\nGood question again, i would say for now probably not. Maybe after the mvp we can refine but right now its not something i am that focused on because i have the control at the three levels to make the adjustment. I suggest you write that down and you create an idea on the subjects in the inputs.",
+        "title": "Allow templates to remove or replace inherited contributors",
+        "updatedAt": "2026-10-22T04:18:52.666Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fda1d9bb-4a73-413c-810e-4aeb097624e2.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fda1d9bb-4a73-413c-810e-4aeb097624e2.json",
+      "properties": {
+        "meaning": "idea",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fda1d9bb-4a73-413c-810e-4aeb097624e2.json"
+}

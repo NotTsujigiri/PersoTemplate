@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e981411f-900a-422a-8ebc-6d77e337de1f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e981411f-900a-422a-8ebc-6d77e337de1f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T23:57:05.549Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 775,
+        "description": "Requested in browser annotation 1 on 2026-10-20; keep Queued.\n\nProblem\nThe Activity board Task stage dropdown mixes activity types (Need-analysis, Mocking, Planning, Design, Implementation, Verification, Review) with placement outcomes (Completed and Abandoned). The user wants this dropdown to contain activity types only and allows a second dropdown for placement.\n\nRequested result\n- Separate the two concepts in the owning model and their UI controls: activity type describes the work; placement describes Backlog, Queued, In progress, Waiting, Completed or Abandoned.\n- Remove placement/outcome options from the activity-type control. Provide a distinct placement dropdown.\n- Preserve the user's intended activity type when placement changes. Respect task invariants, parent-derived activity state and read-only constraints instead of bypassing them.\n- Clarify existing Stage/Purpose terminology through the owning contracts; do not silently replace activity type with the different Purpose enumeration.\n- Cover active and closed cards and the related Node editor controls so the separation is consistent.\n- Reproduce the reported mixed options in recorded output and verify independent control behavior before delivering the change.\n\nEvidence\nTarget: Task stage, div.activity-card-branch:nth-of-type(14) > article.activity-card > div.activity-card-metadata:nth-of-type(2) > select.task-stage:nth-of-type(1); point (560,453), viewport 1480x764.\nThe user's screenshot shows an Abandoned value in that activity control on a closed card.\nSource page selected the Save bug: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a2f23d9-7d3e-4261-bc72-bbe306555937.json.\nInclude this task URL in implementation commit messages.\n\nProgress, 2026-10-24\nThe unchanged owner and browser regressions reproduce the mixed choices and activity overwritten by closing/reopening. The user explicitly authorized migrating current records and saved snapshots, with no backward compatibility. Restore recorded prior activity where available; otherwise leave it unset. Preserve placement and review evidence. Implement and validate the seven activity choices and independent placement controls.\n\n2026-10-24 implementation: c957885 separates the seven activity types from six placements in the board and Node editor, preserves activity when closing/reopening tasks, and derives parent activity from children. Focused domain/review and browser recordings pass. User-authorized data migration completed at revision 1045: all 406 current terminal activity values, captured review tasks, and saved historical revisions converted; all generation hashes and converted task contracts verified. No compatibility reader or migration code remains active. Completed: focused owner/consumer checks and exact browser recordings pass, including the affected scenarios in both full browser runs. Disposable UI screenshots were inspected. The overall checkpoint follow-up is tracked separately on the native Windows worker task.\n\nFinal checkpoint, 2026-10-24, commit 6a04fdf: build and type checks passed (1,164 authored files, zero violations); all 668 non-browser tests passed. This task's affected browser scenarios passed and UI screenshots were inspected where applicable. The full browser run passed 292/294, with separate native-worker and review-acceptance failures retained as queued investigations. Both failed cases passed unchanged in isolation. Live application restarted successfully. Detailed report: .harness/overnight-verification-20261024.json.",
+        "title": "Separate task activity type and placement controls",
+        "updatedAt": "2026-10-24T08:08:34.366Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e981411f-900a-422a-8ebc-6d77e337de1f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e981411f-900a-422a-8ebc-6d77e337de1f.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 4,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e981411f-900a-422a-8ebc-6d77e337de1f.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e981411f-900a-422a-8ebc-6d77e337de1f.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-24T19:17:50.655Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-24T08:08:34.366Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e981411f-900a-422a-8ebc-6d77e337de1f.json"
+}

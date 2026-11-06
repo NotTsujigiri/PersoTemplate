@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/028ceae5-77f0-4149-a1f1-ed1dcf37390c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/028ceae5-77f0-4149-a1f1-ed1dcf37390c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T05:39:09.564Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 974,
+        "description": "Investigate whether a desktop deployment can run the frontend and the Node.js relational engine service in the same process to reduce inter-process communication, while preserving the ability to run the same functionality in a normal web browser.\n\nMotivation\nThe user expects desktop use to be mostly one window. Multiple windows might also benefit from sharing a process. Avoiding inter-process communication could improve performance, but this is a hypothesis to assess, not an established gain or feasibility claim.\n\nQuestions for a future investigation\n- Determine what frontend work can actually share the service process: engine state and application logic, GUI rendering, or a subset. Do not assume that a Node.js environment provides a browser GUI.\n- Preserve browser operation as an explicit requirement and verify both desktop and browser execution paths.\n- Examine whether the same communication contracts can support local calls and browser-to-service communication without introducing desktop-only behavior into the common engine.\n- Consider both one-window and multiple-window lifecycles.\n- Measure communication, serialization, memory and responsiveness costs against the existing architecture before deciding whether the change is worthwhile.\n- Assess the implications for failure isolation separately from the performance benefit.\n\nThis was requested as a separate idea, outside the current engine-composition discussion and implementation scope. No desktop runtime or implementation approach has been selected.\n\nUser request (verbatim):\ncheck if we are able to do frontend in the same process than the relational engine service process with nodejs to avoid inter process communication while still not risking loosing guarantee we can make the same things work in a web browser (could potentially be a big improvement in perf for desktop app considering most of the time the ui is though out to be used as a monowindow one and even multi window could potentially run in the same process).",
+        "title": "Explore running frontend and relational engine service in the same process",
+        "updatedAt": "2026-10-22T05:39:09.868Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/028ceae5-77f0-4149-a1f1-ed1dcf37390c.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/028ceae5-77f0-4149-a1f1-ed1dcf37390c.json",
+      "properties": {
+        "meaning": "idea",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/028ceae5-77f0-4149-a1f1-ed1dcf37390c.json"
+}

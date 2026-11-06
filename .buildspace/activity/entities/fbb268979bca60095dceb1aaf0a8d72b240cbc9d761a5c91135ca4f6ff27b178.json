@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T07:12:17.730Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 621,
+        "description": "",
+        "title": "Independent storage review required exact recomputation of staged documents, original/staged metadata hashes, and persisted evidence verification. Converter now",
+        "updatedAt": "2026-10-18T18:30:52.552Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Independent storage review required exact recomputation of staged documents, original/staged metadata hashes, and persisted evidence verification. Converter now checks all three and validates every generation with production owner rules."
+          },
+          {
+            "kind": "explain",
+            "text": "Boundary reviewer approved the verified five-store cutover: 617/3/4/4/1 committed generations, identical revision sets and CURRENT pointers, 222 immutable evidence artifacts, no unresolved queue exits. Swapped stores and restarted the actual service; live read at revision 618 succeeds. Final tests and live inspection still in progress."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+}

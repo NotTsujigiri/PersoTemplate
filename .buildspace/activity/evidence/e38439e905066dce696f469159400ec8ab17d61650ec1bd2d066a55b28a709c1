@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-20",
+  "commits": [
+    "a3e1da7",
+    "a912ade",
+    "bfaeb66"
+  ],
+  "scope": "Immediate app performance pass and three attention splitter panes",
+  "measurements": {
+    "startupStateBytes": {
+      "before": 73691988,
+      "after": 41521
+    },
+    "liveDirectLocalMs": {
+      "state": 97,
+      "compactTimeline": 383,
+      "validation": 345
+    },
+    "liveValidationOwnerMsBefore": 21500,
+    "liveSaveOwnerMsAfterApprox": 2000,
+    "editBurstValidationRequests": {
+      "before": 8,
+      "after": 1
+    }
+  },
+  "changes": [
+    "Session startup, selection, action responses and notifications use metadata; histories/evidence load explicitly.",
+    "Component forms share debounced validation; exact Save validation and stale-write rejection remain.",
+    "Validated graph generations and relationship indexes are reused; atomic generation writes use bounded batches.",
+    "Task graph destination appears immediately with compact data and shared graph tools.",
+    "New, Later and Acknowledged use shared splitter panes, independent scrolling, collapse/restore and empty drop space. Later/Acknowledged accept drops; New remains derived."
+  ],
+  "verification": {
+    "build": "npm run build passed as part of .\\test.ps1; same command as build.ps1.",
+    "types": "1066 authored files, zero violations, final run passed.",
+    "models": "41 passed.",
+    "harnessCheckpoint": "271 tests: 262 passed, 9 failed. Four model-catalog failures and one composition interruption passed after rebuilding stale source-fingerprinted catalog and isolated rerun (7 tests passed). Four existing Windows cancellation timing failures remain.",
+    "sharedPackages": "317 passed (RelationalUi 251, WebComponent 33, ProjectTools 28, Testing 5).",
+    "browserCheckpoint": "271 tests: 267 passed, 4 failed. Updated three obsolete layout/property recorders and verified focused reruns; the review-help timeout passed independently. All four failure cases pass on focused reruns. Full browser suite was not rerun a second time.",
+    "focused": "Exact validation-burst, session-disclosure, graph navigation/tools, attention grouping/drop, lazy paging, hidden layout, viewport restoration, storage atomicity and stale-save tests passed.",
+    "live": "Corrected description saved through the UI; restarted app; inspected three attention panes and shared property presentation."
+  },
+  "limitations": [
+    "Real graph Save owner work is still about 2 seconds, while change validation is now subsecond.",
+    "Full checkpoint is not green because of known Windows cancellation timing failures under load. No thresholds weakened."
+  ],
+  "remainingIssue": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/916da876-ea04-42b3-ac05-93bba5129a8f.json",
+  "logs": [
+    ".harness/performance-checkpoint-final.log",
+    ".harness/performance-checkpoint-recheck.log",
+    ".harness/performance-browser-checkpoint.log",
+    ".harness/performance-types-final.log",
+    ".harness/performance-splitter-final.log",
+    ".harness/performance-review-navigation-final.log",
+    ".harness/performance-review-help-final.log",
+    ".harness/performance-empty-groups.log"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9afc63fe-e5a0-4b61-a14f-539274b7cb97.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9afc63fe-e5a0-4b61-a14f-539274b7cb97.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-30T19:12:33.200Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1280,
+        "description": "Agree an explicit public API versus private implementation boundary for RelationEngine, and the required adjustment to the existing recursive DepthN/System folder convention. Inspect the current organization rule, package exports and TypeScript project boundaries. Define where public contracts and entry points live, how private implementation remains organized, and which dependency directions are allowed. Keep the public contract independent of internal storage and representation. Discuss the concrete layout with the user before applying it; do not redesign the relational data model as part of this task. The agreed boundary is the input to the enforcement task.\nOpen questions to discuss before choosing a layout:\n- Should API and Implementation each contain Depth levels, or should each Depth level contain API and Implementation?\n- Existing recursive Depth/System nesting is already cumbersome. How can we enforce the boundary without making browsing and paths even deeper or splitting related code unnecessarily?\n- Is another organization preferable to either of those two layouts?\n- Does the same convention apply to other projects? In particular, what constitutes the public API of a RelationalUi component: its consumer-facing properties, events, types, creation methods and entry points?\n- Where should tests live? How do we distinguish tests of public behavior from tests needing implementation access while keeping consumer access restricted?\n- What can TypeScript project references and package exports enforce, and what requires the organization/dependency checker?\n\nNo folder layout has been accepted. Resume the discussion with the user before implementation. The API-boundary enforcement and consumer migration tasks remain dependent on this decision and are outside the overnight queue work.",
+        "title": "6a. Define the relational engine API and implementation folder organization",
+        "updatedAt": "2026-11-02T21:08:30.284Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9afc63fe-e5a0-4b61-a14f-539274b7cb97.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9afc63fe-e5a0-4b61-a14f-539274b7cb97.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "design",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9afc63fe-e5a0-4b61-a14f-539274b7cb97.json"
+}

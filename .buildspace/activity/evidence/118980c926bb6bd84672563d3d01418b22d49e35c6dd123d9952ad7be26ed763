@@ -1,0 +1,12 @@
+[
+  {
+    "step": "holder entered"
+  },
+  {
+    "step": "holder released before contender reads lock"
+  },
+  {
+    "step": "result publication",
+    "error": "Planning writer lock needs inspection."
+  }
+]

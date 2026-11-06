@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35b12315-ca0f-4105-8d3b-474289a8320c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35b12315-ca0f-4105-8d3b-474289a8320c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-23T19:32:05.885Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1032,
+        "description": "Current user direction: Iterate directly on the runnable filter mock; generated images were rejected as the iteration medium.\n\nImplemented: a disposable Activity board snapshot containing the actual source, filter-expression syntax ancestry and 31 query field descriptors produced by the existing planning owner. Only actor identities are synthetic. Manual capture command: node Systems/Depth3/HarnessApp/capture-query-composer-mock.ts.\n\nFirst direct UI increment: Reveal context inside the existing composer opens the actual createQueryComposer call with the original value expression selected. A shared view-toolbar selector exposes the captured enclosing syntax nodes; Back to filter preserves the current draft. Reuses the shared query composer, icon buttons, view toolbar/panel and text editor. Source remains read-only in this pass, and no captured code executes.\n\nFocused validation: all 3 query-composer-mock-ui.spec.ts checks passed, including source/metadata fidelity, navigation to the full source and back without draft loss, autocomplete/catalog actions without network requests, and view-switch retention. Screenshot reviewed at Systems/Depth3/HarnessApp/test-results/query-composer-mock-ui-moc-b2342-nd-keeps-every-action-local/query-composer-mock-context.png. Validation complete for this increment: build.ps1 passed its dependency, model-generation, organisation and engine-boundary stages, then failed its final type gate on three new mock integration errors (nullable panel references and a protected editor update method). Those errors were corrected; npm run check:types then passed across 1162 authored source files with zero violations. All 3 focused browser tests were rerun and passed on the corrected state, and the resulting screenshot was inspected. git diff --check passed. The full build command was not rerun after the narrow type corrections; the full test suite was not run.\n\nMock-only changes remain uncommitted alongside the previous mock implementation. Exact language and navigation boundaries remain open.",
+        "title": "Ground the Query composer mock in Activity board source and prototype context navigation",
+        "updatedAt": "2026-10-27T02:19:53.210Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35b12315-ca0f-4105-8d3b-474289a8320c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35b12315-ca0f-4105-8d3b-474289a8320c.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "task",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35b12315-ca0f-4105-8d3b-474289a8320c.json"
+}

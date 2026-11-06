@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/186a336c-c4e4-4810-97f5-c97ef493e22e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/186a336c-c4e4-4810-97f5-c97ef493e22e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-11T17:25:38.724Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 464,
+        "description": "Investigate a generic WYSIWYG view for web components, with the editor acting as UI over contributor-owned nodes and operations. Selecting a TypeScript source should let the system identify and display a component when the source defines one. The editor must have no dependency on particular components, no supported-component name list, and no component-specific adapters, registrations or uiDefinition requirements.\n\nDetermine how the existing TypeScript, HTML and CSS contributor capabilities can supply component identity, structure, properties, styling and source relations, and whether framework-specific knowledge such as Lit needs a contributor. Validate which capabilities are active and what is missing. Keep language/framework knowledge in its owning contributors; keep presentation and the connection between UI events and contributed node operations in the editor. Do not assume the exact contributor split is already decided. One UI component per file, related components grouped by folders.\n\nPhase 1 prioritizes selecting and seeing components through the same generic path. Sample-data authoring and injection belong to phase 2, along with service substitutes and their call inspection; real buildspace data remains deferred. Components requiring these capabilities must expose a clear limitation, not receive a one-off implementation. Named components may be validation examples only, never support targets.\n\nPreserve the Visual and Preview tabs and their controls. Rendering errors replace only the content within those tabs. Preserve the agreed minimum-size display and zoom-to-fit behavior, using shared capabilities. Property changes update the display as the user edits where possible, through contributor contracts.\n\nUse .harness/design/existing-components-visual-needs-analysis.md, including the subsequent proposal-review correction, as verbatim session evidence. Produce a short, understandable outcome and a focused proposal separate from this task brief. Review the outcome with the user before starting implementation. The initial factory/sample-data proposal does not satisfy the corrected first-phase scope.",
+        "title": "Investigate previewing existing components in Visual",
+        "updatedAt": "2026-10-11T20:14:21.336Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/186a336c-c4e4-4810-97f5-c97ef493e22e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/186a336c-c4e4-4810-97f5-c97ef493e22e.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "investigation",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/186a336c-c4e4-4810-97f5-c97ef493e22e.json"
+}

@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Make the existing contributor/tool architecture the shared operation foundation for agents and UI.\n\nScope\n\n• Contributor-owned operation descriptors, Agent usage discovery and existing MCP exposure.\n\n• Verify the Broccoli Local plugin can discover/call planning tools in the active composition.\n\n• Shared revisions, request IDs, validation, actor identity and deletion/reference semantics.\n\n• Expose review requirement configuration and check/result operations through the same owner; verify operation discovery contains the metadata needed by the generic Node view.\n\n• Adapt the existing human-operated checkpoint UI using shared controls as the minimum R02 review path: inspect submitted definition/results, create/reply/author-close comments and select own outcome. Bind to the same contributor owner and verified human browser principal; MCP cannot exercise human-only decisions. This small path precedes the full board/Node/Review surfaces and is replaced/composed into them, not duplicated permanently.\n\nSuccess criteria\n\n1. Actual Codex MCP tools can create/read/update/delete a disposable task and input; API-only simulation is insufficient.\n\n2. UI transport and MCP invoke the same contributor operations and persistence.\n\n3. Tool metadata is derived from owner-qualified contracts; no duplicate standalone CLI implementation.\n\n4. Stale writes, invalid references and actor impersonation are rejected.\n\n5. Before R02, a real human can inspect the submitted planning record and operate closure/outcome controls through the browser. Agent credentials cannot impersonate that user through either MCP or browser transport. A planning-only review does not require code snapshots.\n\nEvidence\n\n• Plugin discovery and live read/write/readback demonstration\n\n• MCP/relational operation integration tests\n\n• UI/tool contract parity checklist\n\n",
+        "title": "Expose planning CRUD through relational operations and Broccoli MCP",
+        "updatedAt": "2026-10-07T11:15:03.363Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2aa48dc8-a11b-4a2b-8a49-cc449d56bfcd.json"
+}

@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Existing components in Visual — investigation</title>
+<style>
+:root{color-scheme:dark;font:16px/1.5 system-ui;background:#222321;color:#eee}body{max-width:1000px;margin:32px auto;padding:0 24px}h1{font-size:1.8rem;line-height:1.2}h2{font-size:1.25rem;margin-top:2rem}h3{font-size:1rem}a{color:#b8d4ae}nav{display:flex;flex-wrap:wrap;gap:8px 22px;border-block:1px solid #555;padding:12px 0}p{max-width:85ch}.lede{font-size:1.12rem}.note{border-left:3px solid #9aac83;padding:8px 16px;background:#2b2e29}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{padding:9px;text-align:left;vertical-align:top;border-bottom:1px solid #555}th{color:#c5d6b4}details{border-block-end:1px solid #555;padding:12px 0}summary{cursor:pointer;font-weight:600}pre{overflow:auto;background:#191b19;padding:14px;font-size:12px}code{font-size:.9em}img{max-width:100%;height:auto}small,.muted{color:#b5b8b2}li{margin:7px 0}
+</style>
+<header><small>Technical investigation · 11 October 2026 · Proposal awaiting user decision</small><h1>Render existing components in Visual</h1><p class="lede">The components already render. The editor needs to discover their real entrypoints and call them with authored sample values.</p><p class="note">Recommendation: build a preview-first iteration for ordinary component factories. Do not require component authors to add <code>uiDefinition</code>, editor registration, or a custom visual adapter.</p></header>
+<nav aria-label="Contents"><a href="#evidence">What was verified</a><a href="#gaps">What is missing</a><a href="#proposal">Proposed implementation</a><a href="#scope">Scope and decisions</a><a href="#validation">Validation</a></nav>
+<section id="evidence"><h2>What was verified</h2><p>The TypeScript checker recovered the public parameter fields and return shapes of six named exports. A DOM probe mounted Button, ScrollArea and TextEditor directly. A separate browser probe mounted ScrollArea and TextEditor from their existing served exports with authored sample content. Component source was unchanged.</p>
+<table><thead><tr><th>Component</th><th>Current shape</th><th>First-iteration implications</th></tr></thead><tbody>
+<tr><td>Button</td><td>Optional scalar properties; optional activation callback. Returns a DOM element.</td><td>Strong first case: edit label/text/disabled values; omit optional callback.</td></tr>
+<tr><td>TextEditor</td><td>Required mode; text and optional diff lines; optional callbacks. Returns an object containing an element and input.</td><td>Strong first case: text, read-only state and modes. Derive enum and structured sample types from source.</td></tr>
+<tr><td>ScrollArea</td><td>Required label; axis; optional DOM content. Returns an element.</td><td>Scalar properties are straightforward. Meaningful content needs an authored sample setup that constructs DOM content; it is not a JSON value.</td></tr>
+<tr><td>TabPanel / ViewPanel</td><td>Require selection callbacks as well as data. ViewPanel and ViewToolbar share a source file today.</td><td>No intrinsic service dependency, but they need callable sample inputs. Defer initially; separate the two components before treating that file as one component.</td></tr>
+<tr><td>Tree</td><td>Generic data, sets, selectors, rendering and expansion callbacks.</td><td>Sample data alone is insufficient. Defer until callable inputs and generic sample types are supported.</td></tr>
+</tbody></table>
+<p><strong>Limits:</strong> these probes used selected, known exports. They do not establish automatic component discovery, generic invocation, isolation, or arbitrary component compatibility. No complete repository inventory is claimed.</p>
+<details><summary>See the actual browser render</summary><p>This is a test mount of the existing controls, not a UI mockup or the proposed editor layout. The host supplied a 640 × 420 area; minimum-size behavior was not implemented.</p><img alt="Existing ScrollArea and TextEditor rendered directly with authored sample content" src="data:image/png;base64,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J3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHiuecTGAAAI1UlEQVQCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACEJ3AAAAAA4QkcAAAAQHgCBwAAABCewAEAAACE9/8BAAD//0L1kooAAAAGSURBVAMACIgjrP05kRsAAAAASUVORK5CYII="></details>
+<details><summary>Inspect the recorded factory signatures and DOM results</summary><pre>{
+  &quot;scope&quot;: &quot;Six factory signatures; three direct mounts in happy-dom. No browser geometry, generic invoker or isolation tested.&quot;,
+  &quot;signatures&quot;: [
+    {
+      &quot;component&quot;: &quot;Button&quot;,
+      &quot;module&quot;: &quot;Depth2/Elements/Depth0/Button/button.ts&quot;,
+      &quot;export&quot;: &quot;createButton&quot;,
+      &quot;returnType&quot;: &quot;HTMLButtonElement&quot;,
+      &quot;fields&quot;: [
+        {
+          &quot;name&quot;: &quot;text&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;label&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;title&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;className&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;disabled&quot;,
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;activate&quot;,
+          &quot;type&quot;: &quot;(event: MouseEvent) =&gt; void&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        }
+      ]
+    },
+    {
+      &quot;component&quot;: &quot;ScrollArea&quot;,
+      &quot;module&quot;: &quot;Depth2/ScrollArea/index.ts&quot;,
+      &quot;export&quot;: &quot;createScrollArea&quot;,
+      &quot;returnType&quot;: &quot;HTMLDivElement&quot;,
+      &quot;fields&quot;: [
+        {
+          &quot;name&quot;: &quot;label&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;axis&quot;,
+          &quot;type&quot;: &quot;\&quot;horizontal\&quot; | \&quot;vertical\&quot; | \&quot;both\&quot;&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;content&quot;,
+          &quot;type&quot;: &quot;HTMLElement&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        }
+      ]
+    },
+    {
+      &quot;component&quot;: &quot;TextEditor&quot;,
+      &quot;module&quot;: &quot;Depth2/TextEditor/index.ts&quot;,
+      &quot;export&quot;: &quot;createTextEditor&quot;,
+      &quot;returnType&quot;: &quot;{ element: HTMLDivElement; input: HTMLTextAreaElement | undefined; }&quot;,
+      &quot;fields&quot;: [
+        {
+          &quot;name&quot;: &quot;mode&quot;,
+          &quot;type&quot;: &quot;\&quot;source\&quot; | \&quot;inline\&quot; | \&quot;split\&quot;&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;text&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;lines&quot;,
+          &quot;type&quot;: &quot;readonly TextEditorLine[]&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;label&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;readOnly&quot;,
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;change&quot;,
+          &quot;type&quot;: &quot;(text: string) =&gt; void&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;line&quot;,
+          &quot;type&quot;: &quot;(line: TextEditorLine, side: TextEditorSide) =&gt; void&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        }
+      ]
+    },
+    {
+      &quot;component&quot;: &quot;TabPanel&quot;,
+      &quot;module&quot;: &quot;Depth3/TabPanel/index.ts&quot;,
+      &quot;export&quot;: &quot;createTabPanel&quot;,
+      &quot;returnType&quot;: &quot;{ element: HTMLElement; select: (id: string) =&gt; void; }&quot;,
+      &quot;fields&quot;: [
+        {
+          &quot;name&quot;: &quot;label&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;tabs&quot;,
+          &quot;type&quot;: &quot;readonly TabChoice[]&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;selected&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;change&quot;,
+          &quot;type&quot;: &quot;(id: string) =&gt; boolean | void&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        }
+      ]
+    },
+    {
+      &quot;component&quot;: &quot;ViewPanel&quot;,
+      &quot;module&quot;: &quot;Depth3/ViewToolbar/index.ts&quot;,
+      &quot;export&quot;: &quot;createViewPanel&quot;,
+      &quot;returnType&quot;: &quot;{ element: HTMLElement; content: HTMLDivElement; toolbar: { element: HTMLDivElement; select: HTMLSelectElement; tools: HTMLDivElement; update: (views: readonly ToolbarView[], selected?: string | undefined) =&gt; void; }; }&quot;,
+      &quot;fields&quot;: [
+        {
+          &quot;name&quot;: &quot;label&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;views&quot;,
+          &quot;type&quot;: &quot;readonly ToolbarView[]&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;selected&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;change&quot;,
+          &quot;type&quot;: &quot;(id: string) =&gt; void&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;emptyLabel&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;toolbar&quot;,
+          &quot;type&quot;: &quot;{ element: HTMLDivElement; select: HTMLSelectElement; tools: HTMLDivElement; update: (views: readonly ToolbarView[], selected?: string | undefined) =&gt; void; }&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        }
+      ]
+    },
+    {
+      &quot;component&quot;: &quot;Tree&quot;,
+      &quot;module&quot;: &quot;Depth3/Tree/tree.ts&quot;,
+      &quot;export&quot;: &quot;renderTree&quot;,
+      &quot;returnType&quot;: &quot;HTMLUListElement&quot;,
+      &quot;fields&quot;: [
+        {
+          &quot;name&quot;: &quot;label&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;roots&quot;,
+          &quot;type&quot;: &quot;readonly T[]&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;id&quot;,
+          &quot;type&quot;: &quot;(node: T) =&gt; string&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;name&quot;,
+          &quot;type&quot;: &quot;(node: T) =&gt; string&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;children&quot;,
+          &quot;type&quot;: &quot;(node: T) =&gt; readonly T[]&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;expanded&quot;,
+          &quot;type&quot;: &quot;ReadonlySet&lt;string&gt;&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;onExpand&quot;,
+          &quot;type&quot;: &quot;(ids: ReadonlySet&lt;string&gt;) =&gt; void | HTMLElement&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;Return the replacement container when expansion also replaces the parent.&quot;
+        },
+        {
+          &quot;name&quot;: &quot;renderContent&quot;,
+          &quot;type&quot;: &quot;(node: T) =&gt; HTMLElement&quot;,
+          &quot;optional&quot;: false,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;selected&quot;,
+          &quot;type&quot;: &quot;ReadonlySet&lt;string&gt;&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;multiple&quot;,
+          &quot;type&quot;: &quot;boolean&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;selectionState&quot;,
+          &quot;type&quot;: &quot;{ anchorId?: string; }&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;beforeSelectionChange&quot;,
+          &quot;type&quot;: &quot;(ids: ReadonlySet&lt;string&gt;) =&gt; boolean&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;onSelectionChange&quot;,
+          &quot;type&quot;: &quot;(ids: ReadonlySet&lt;string&gt;) =&gt; void&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        },
+        {
+          &quot;name&quot;: &quot;onContextMenu&quot;,
+          &quot;type&quot;: &quot;(context: { node: T; selected: readonly T[]; anchor: HTMLElement; event: MouseEvent | KeyboardEvent; }) =&gt; void&quot;,
+          &quot;optional&quot;: true,
+          &quot;documentation&quot;: &quot;&quot;
+        }
+      ]
+    }
+  ],
+  &quot;rendering&quot;: {
+    &quot;button&quot;: {
+      &quot;tag&quot;: &quot;BUTTON&quot;,
+      &quot;text&quot;: &quot;Review sample&quot;,
+      &quot;disabled&quot;: true,
+      &quot;minimum&quot;: null
+    },
+    &quot;scrollArea&quot;: {
+      &quot;tag&quot;: &quot;DIV&quot;,
+      &quot;text&quot;: &quot;Authored sample content&quot;,
+      &quot;minimum&quot;: null
+    },
+    &quot;textEditor&quot;: {
+      &quot;tag&quot;: &quot;DIV&quot;,
+      &quot;text&quot;: &quot;Authored sample text&quot;,
+      &quot;readOnly&quot;: true,
+      &quot;minimum&quot;: null
+    }
+  }
+}
+</pre></details>
+<details><summary>Inspect the browser result</summary><pre>{
+  &quot;scrollArea&quot;: {
+    &quot;text&quot;: &quot;Sample content created by the caller. This is the existing ScrollArea implementation, mounted directly.&quot;,
+    &quot;minimum&quot;: null
+  },
+  &quot;textEditor&quot;: {
+    &quot;text&quot;: &quot;Sample text supplied by the caller.\nNo uiDefinition or visual factory registry.&quot;,
+    &quot;readOnly&quot;: true,
+    &quot;minimum&quot;: null
+  }
+}</pre></details></section>
+<section id="gaps"><h2>What is missing</h2>
+<table><thead><tr><th>Boundary</th><th>Observation</th><th>Consequence</th></tr></thead><tbody>
+<tr><td>Discovery</td><td><code>ui-editor-workspace.ts</code> identifies components from seven manually listed paths and the <code>.ui.ts</code> suffix.</td><td>Ordinary component sources need discovery from their exported callable types. A helper that happens to return an element is not automatically a semantic component: ambiguous files must be reported, not guessed.</td></tr>
+<tr><td>Source / rendering</td><td><code>UiCompositionModel</code> parses a literal <code>uiDefinition</code>; <code>UiComposition</code> translates registry IDs into factories.</td><td>The selected source never becomes the running component. This path must be replaced, not expanded with more registrations.</td></tr>
+<tr><td>Reflection</td><td>Engine inspection selects interfaces and type aliases. It reports field types as text; it does not expose callable entrypoints. The native data compiler rejects function members and several non-data types.</td><td>Extend the generic engine reflection contract for callable signatures and supported value schemas. Do not parse type strings or treat every property as serializable data.</td></tr>
+<tr><td>Properties</td><td>The shared node-editor form already supports structured types and live change notifications. It requires field comments. These candidate APIs mostly have no property documentation.</td><td>Keep the real property names and types. Show absent documentation honestly, with mechanically derived type/source information; do not invent help text or make documentation an editor compatibility requirement. Optional absence must remain distinct from empty or false.</td></tr>
+<tr><td>Minimum size</td><td>The shared <code>minimumSize()</code> returned no value for all three DOM candidates, and for both browser candidates. It composes explicit size requests; it does not infer every element's intrinsic size.</td><td>Reuse declared requests where present and add shared intrinsic measurement for unannotated content. An empty container has no meaningful content-driven minimum; sample content matters. Do not require an editor sizing hook on every component.</td></tr>
+<tr><td>Zoom</td><td>The editor currently fits only canvas width and gives compositions hard-coded minimum dimensions.</td><td>Measure the unscaled component in both dimensions and fit with <code>min(1, availableWidth / width, availableHeight / height)</code>. Handle empty measurements explicitly and reuse ZoomControl.</td></tr>
+</tbody></table></section>
+<section id="proposal"><h2>Proposed implementation</h2><p>Preserve the current Repositories → Visual / Code / Preview → node-editor layout. Replace the special composition path underneath it.</p>
+<ol><li><strong>Resolve the selected source in its owning project.</strong> Use the repository, package and TSConfig boundaries already discovered by the host. Inspect the current source version, including an unsaved Code draft. Associate results with source fingerprints and request generations so older results cannot replace a newer selection.</li>
+<li><strong>Derive a preview candidate.</strong> Begin with one exported, synchronous, non-generic factory taking an options object and returning an HTMLElement or an object containing one. Infer the eligible factory structurally, not through a list of component names. Expose unsupported or ambiguous cases with reasons. One UI component per file remains the authored organization rule.</li>
+<li><strong>Edit an invocation's sample values.</strong> Feed supported scalar, enum and structured value types into the existing node editor. Keep optional callback properties absent; do not silently synthesize callback implementations. DOM-valued sample content can be authored in Code by the user or agent. Preview values are separate from component implementation; editing them does not rewrite defaults in the source.</li>
+<li><strong>Build a typed invocation.</strong> Have the editor generate a disposable invocation in the component owner's compilation context and validate its arguments using the actual factory signature. This is generated caller code, not a component-specific adapter someone must maintain. Preserve package imports and direct dependencies. A host import of an unexported file would bypass package boundaries; Button currently has no dedicated package export, so the owning compilation context is important.</li>
+<li><strong>Run the preview apart from the application.</strong> Bundle in a browser-only environment; do not import component code into the server. Use an isolated preview document with only sample inputs, controlled assets and no real-data service bridge. Return validated ready/error/measurement messages. Keep the compiled source stable while changing serializable properties so edits do not trigger a repository rebuild.</li>
+<li><strong>Replace the mounted instance on valid property edits.</strong> For the first iteration, remount instead of inferring undocumented update methods. Destroy the old preview document to release its listeners and timers; a generation token prevents stale callbacks from winning. Display compilation or rendering errors in place of the preview. This intentionally resets transient interaction state when properties change.</li>
+<li><strong>Measure, then fit.</strong> Use the shared sizing contract and intrinsic browser measurement inside the preview. Apply zoom outside the unscaled measurement surface to avoid a measurement/zoom loop. Recalculate after content, font or pane-size changes. Use the existing zoom controls for manual adjustment.</li></ol>
+<details><summary>Ownership and dependency direction</summary><table><tr><th>Owner</th><th>Responsibility</th></tr><tr><td>RelationEngine's native inspection / value-schema facilities</td><td>Generic callable/type descriptions, source provenance, supported data validation. No UI-specific component names, paths or rendering policies.</td></tr><tr><td>RelationalUi</td><td>Component eligibility and browser return-shape interpretation; existing node-editor presentation, shared measurement and zoom behavior.</td></tr><tr><td>Harness / repository composition</td><td>Resolve authorized repository sources, owning compilation boundaries, browser bundles and preview lifecycle. Pass no real-data service capability.</td></tr><tr><td>Component owner</td><td>The existing implementation and public API. No editor registration or mandatory custom preview metadata.</td></tr></table><p>Rework existing contracts before adding new packages or libraries. TypeScript and esbuild are already direct dependencies at the relevant inspection and host boundaries.</p></details>
+<details><summary>Isolation still needs its own executable check</summary><p>Proposal: a script-enabled sandboxed frame without same-origin privileges, constrained asset delivery and a Content Security Policy blocking service connections. A frame alone does not establish a network boundary. Do not claim sample-only operation until requests, storage, parent access, forms and navigation have been tested. Reject unsupported browser capabilities rather than adding a real-service substitute in this iteration.</p><p>Platform basis: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox">iframe sandbox behavior</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src">CSP connection controls</a>. These describe mechanisms; the proposed application configuration has not been implemented or verified.</p></details>
+<details><summary>Remove the replaced path</summary><p>The replacement must remove editor-only UiCompositionCatalog entries, factory adapters, literal-definition parsing/writing, creation restrictions and tests that exist solely for that format. UiEditorShell currently consumes that renderer, so rebuild it from the existing ordinary panel/splitter controls before deleting the dependency. Inventory other callers before removal. Do not leave the old visual path active as a compatibility fallback.</p><p>Code viewing/saving, source hashes, Repositories filtering and its expand/collapse controls remain independently useful. Keep those behaviors and their tests.</p></details></section>
+<section id="scope"><h2>Scope and decisions</h2><p><strong>First outcome:</strong> select an eligible ordinary source in Repositories, see the actual component, adjust its exposed sample properties, and see the result. Initial validation cases: Button and TextEditor; ScrollArea exercises authored content and sizing.</p><p><strong>Deferred:</strong> service substitutes and call inspection, real buildspace data, reusable presets, required callable inputs, generic factories, custom-element/class instantiation, structural drag-and-drop source rewriting, and the shortcut from an instance to its shared definition. These are deferred capabilities, not requirements that component authors change their code.</p><p><strong>Decisions to review:</strong> the proposed first pass remounts on property edits and therefore resets local state; sample values remain a preview draft rather than changing component defaults; intrinsic minimum measurement must have an explicit empty-content behavior. Sample persistence was not settled by the needs analysis—do not turn it into a preset system by assumption.</p><p>The earlier needs-analysis transcript remains the verbatim record: <code>.harness/design/existing-components-visual-needs-analysis.md</code>. This document proposes a realization of that scope; it is not accepted architecture.</p></section>
+<section id="validation"><h2>Validation and next checkpoint</h2><p id="validation-status">Two focused investigation probes passed. The repository type-safety check passed: 930 authored source files, zero violations.</p><ul><li>DOM / checker evidence: <code>Systems/Depth1/RelationalUi/component-preview-investigation.test.ts</code>.</li><li>Browser evidence: <code>Systems/Depth3/HarnessApp/component-preview-investigation-ui.spec.ts</code>. Screenshot inspected.</li><li>No product rendering, discovery or component source was changed. No complete application regression result is claimed for this research-only iteration.</li></ul>
+<details><summary>Checks for a later implementation</summary><ol><li>Select ordinary Button and TextEditor source without registry metadata; verify properties against actual TypeScript declarations, including optional absence.</li><li>Change scalar and structured sample values; verify live rendering and error replacement. Switch components rapidly and edit Code while a build is running; stale results must not win.</li><li>Reject a missing required callback, ambiguous component file, unsupported type or undeclared import with a specific reason. Do not silently omit unsupported required inputs.</li><li>Verify sample-only execution, instance cleanup and source/version identity. No real tasks are read or modified by preview code.</li><li>Check natural and declared minima, long content, empty containers, narrow panes, both-axis fit and repeated resize without oscillation.</li><li>Verify Code save conflict protection and the retained Repositories controls; run the repository checkpoint and inspect browser screenshots before handing off development.</li></ol></details>
+<details><summary>Primary repository sources</summary><ul><li><code>Systems/Depth3/HarnessApp/ui-editor-workspace.ts</code> — current discovery.</li><li><code>Systems/Depth3/HarnessApp/Depth1/Browser/ui-editor.ts</code> — properties, rendering, saving and zoom.</li><li><code>Systems/Depth1/RelationalUi/Depth0/UiCompositionModel/index.ts</code>, <code>Depth0/UiCompositionCatalog/index.ts</code>, <code>Depth5/UiComposition/index.ts</code> — current special format and adapters.</li><li><code>Systems/Depth0/RelationEngine/model-inspection.ts</code>, <code>model-compiler.ts</code> — inspection and executable value-schema limits.</li><li><code>Systems/Depth1/RelationalUi/Depth2/SchemaForm/index.ts</code>, <code>Depth1/ContentSize/index.ts</code>, <code>Depth4/ZoomControl/index.ts</code> — reusable UI capabilities.</li><li><code>Systems/Depth3/HarnessApp/browser-components.ts</code> — browser bundling with package ownership checks.</li></ul></details></section>
+</html>
+
+

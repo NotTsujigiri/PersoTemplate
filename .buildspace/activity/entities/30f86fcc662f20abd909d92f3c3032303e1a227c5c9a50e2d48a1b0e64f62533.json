@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48b1a5dd-8bf8-4468-8286-ef92c40f27d2.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48b1a5dd-8bf8-4468-8286-ef92c40f27d2.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.932Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Remove predecessor implementations, routes, configuration formats and dependencies in the replaced scope. Verify explicit direct dependencies and correct direction across Broccoli, Btr and Perso; retain no compatibility scaffolding.\n\nCompleted: replaced application routes, configuration wrappers, template-specific host knowledge, dependencies and test fixtures were removed or moved to their owners. The 14-workspace composition passes dependency organisation and engine-boundary checks. Existing data was moved to the private repository without replacing repository-owned definitions: 31 sessions and four buildspaces remain available. Temporary cutover tooling is removed after verification.",
+        "title": "Remove superseded paths and enforce dependency ownership",
+        "updatedAt": "2026-10-23T04:43:53.464Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48b1a5dd-8bf8-4468-8286-ef92c40f27d2.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48b1a5dd-8bf8-4468-8286-ef92c40f27d2.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/48b1a5dd-8bf8-4468-8286-ef92c40f27d2.json"
+}

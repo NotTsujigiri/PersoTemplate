@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cd88df31-215b-4b13-92d0-87cc624b33f7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cd88df31-215b-4b13-92d0-87cc624b33f7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T04:08:16.533Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 732,
+        "description": "- Added compact, paginated planning summaries with context, parent, title and kind filters; descriptions and full inspection are explicit.\n- Summary operation returns canonical task URLs; historical reads and scope boundaries are covered.\n- Fixture payload: 755 vs 34,824 bytes. Focused owner/runtime tests and type safety pass.\n- Commit: 481020772f9fc6f0a974d0ab6a3f80217f2d4567.",
+        "title": "Add progressive disclosure to Broccoli tools",
+        "updatedAt": "2026-10-20T05:09:54.940Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cd88df31-215b-4b13-92d0-87cc624b33f7.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cd88df31-215b-4b13-92d0-87cc624b33f7.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 4,
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cd88df31-215b-4b13-92d0-87cc624b33f7.json"
+}

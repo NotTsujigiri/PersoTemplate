@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/93eac7b4-ed99-4a7e-b774-7bd114ed2b74.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/93eac7b4-ed99-4a7e-b774-7bd114ed2b74.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T08:59:09.561Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 644,
+        "description": "",
+        "title": "Complete browser verification also caught lost description input and disappearing nested layout controls. Before evidence is preserved in .harness/migration-sav",
+        "updatedAt": "2026-10-18T09:05:36.929Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/93eac7b4-ed99-4a7e-b774-7bd114ed2b74.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/93eac7b4-ed99-4a7e-b774-7bd114ed2b74.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Complete browser verification also caught lost description input and disappearing nested layout controls. Before evidence is preserved in .harness/migration-save-refresh-before and .harness/migration-splitter-nested-before."
+          },
+          {
+            "kind": "explain",
+            "text": "Independent inspection review found a redundant initial detail read/render after refresh had already mounted the editor. It can replace a focused control before its input event. A controlled held-response regression is being recorded before removing that duplicate render; no expected behavior is being weakened."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/93eac7b4-ed99-4a7e-b774-7bd114ed2b74.json"
+}

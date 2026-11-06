@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e3aaa70-0ece-42b4-9dd5-337795e9f656.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e3aaa70-0ece-42b4-9dd5-337795e9f656.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T13:41:11.795Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 477,
+        "description": "Review public component properties through the regular engine-backed Node editor and contributor-owned component composition through the Repositories bush. Verify multiline editing, live preview changes, normalized values, component/type/source navigation and preserved selection. Distinguish repository containment from component composition. Check workspace and Review revision behavior; preview property values do not claim source persistence. The property editor is implemented, while end-to-end composition verification remains work for the preceding task. Corrections stay children of this review; only the user records acceptance.",
+        "title": "Review component properties and composition navigation",
+        "updatedAt": "2026-10-17T00:08:47.644Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e3aaa70-0ece-42b4-9dd5-337795e9f656.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e3aaa70-0ece-42b4-9dd5-337795e9f656.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e3aaa70-0ece-42b4-9dd5-337795e9f656.json"
+}

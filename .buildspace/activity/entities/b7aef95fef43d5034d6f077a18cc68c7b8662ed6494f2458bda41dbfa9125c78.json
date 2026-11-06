@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97272186-4f5a-4987-8208-30bdf4869ef1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97272186-4f5a-4987-8208-30bdf4869ef1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-05T00:45:43.411Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1374,
+        "description": "When a repository root is selected in Repositories, offer a Git view among its available detail views. Show the current branch (including detached HEAD), HEAD, and commit history. Use TortoiseGit's Show log window as the reference: revision graph and branch/tag labels, commit author/date/hash/subject, selected commit's full message, changed files and access to their diffs. Provide useful history filtering and progressive loading so large histories remain responsive. Compose existing RelationalUi components and keep Git access in the owning service. The first iteration is for inspecting repository state and history; destructive history operations are not required.\n\nReference: https://tortoisegit.org/docs/tortoisegit/tgit-dug-showlog.html\n\nThe user delegates the detailed UI design to this reference rather than requiring a separate complete specification.",
+        "title": "Add a repository Git view inspired by TortoiseGit Show log",
+        "updatedAt": "2026-11-05T18:48:04.535Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97272186-4f5a-4987-8208-30bdf4869ef1.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97272186-4f5a-4987-8208-30bdf4869ef1.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97272186-4f5a-4987-8208-30bdf4869ef1.json"
+}

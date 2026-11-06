@@ -1,0 +1,12 @@
+
+Running 5 tests using 1 worker
+
+(node:9956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 test\pages-ui.spec.mjs:4:1 › agent model selector fills its configuration panel and composer stays compact (3.4s)
+  ok 2 test\pages-ui.spec.mjs:11:1 › Help and Settings are tabs and returning preserves the composer (6.1s)
+  ok 3 test\pages-ui.spec.mjs:88:1 › Settings saves only the selected topic and provider refresh preserves the composer model (5.8s)
+  ok 4 test\pages-ui.spec.mjs:196:46 › delayed settings discovery preserves save feedback and newer key draft (1.8s)
+  ok 5 test\pages-ui.spec.mjs:196:46 › delayed settings discovery preserves save feedback and newer provider draft (1.7s)
+
+  5 passed (22.2s)

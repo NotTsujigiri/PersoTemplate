@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c7bc4d51-99f8-4b61-9400-afcedbbc91cd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c7bc4d51-99f8-4b61-9400-afcedbbc91cd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T12:41:35.866Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 672,
+        "description": "",
+        "title": "- Full checkpoint: build/organisation/type safety pass (1,039 files, zero violations); 41 model and 568 unit/integration tests pass; browser 237/244.\n- Three fa",
+        "updatedAt": "2026-10-18T12:41:52.665Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c7bc4d51-99f8-4b61-9400-afcedbbc91cd.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c7bc4d51-99f8-4b61-9400-afcedbbc91cd.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Full checkpoint: build/organisation/type safety pass (1,039 files, zero violations); 41 model and 568 unit/integration tests pass; browser 237/244.\n- Three failures have corrections: invalid self-edge fixture 3694c9b; recorded stale Feed and oversized-range reveal defects 2229504 (7/7 focused tests; exact before/after evidence).\n- Three browser workers exited natively with code 3221226505 before recording a test; fatal-report flags produced no report. Existing native-worker issue remains open.\n- One visual-authoring selection failure remains under investigation. No final acceptance claimed."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c7bc4d51-99f8-4b61-9400-afcedbbc91cd.json"
+}

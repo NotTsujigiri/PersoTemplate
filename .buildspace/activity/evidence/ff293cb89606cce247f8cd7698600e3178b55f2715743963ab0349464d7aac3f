@@ -1,0 +1,62 @@
+# UI reference corrections
+
+Generated from plan.json. The user accepted the design direction with final corrections. Written corrections supersede screenshot pixels and minor image artifacts.
+
+## V1: Task node and relations
+
+[Reference image](<C:/Users/vince/.codex/visualizations/2026/09/21/01a0c5f4-7593-7072-8985-289e55a9faf9/mvp-plan/images/V1-revision-2.png>)
+
+- Toolbar should say Node, not Definition or a task-specific generic label.
+- Creator must move from its separate property row into flat relations.
+- URL/locator UI pictured here is superseded by explicit deferral. Reuse existing reference navigation and verify serialized graph links; do not implement a new address component from these pixels.
+- Add explicit comparison base and the shared no-diff / inline-diff / side-by-side controls.
+- Headers illustrate appearance only; reusable table-header/independent-column composition is not proven.
+- Placement/delete/import paths are not all pictured; operation parity remains mandatory.
+
+## V2: Input capture and task linking
+
+[Reference image](<C:/Users/vince/.codex/visualizations/2026/09/21/01a0c5f4-7593-7072-8985-289e55a9faf9/mvp-plan/images/V2-revision-2.png>)
+
+- Toolbar should say Node, not Definition or a task-specific generic label.
+- Creator must move from its separate property row into flat relations.
+- URL/locator UI pictured here is superseded by explicit deferral. Reuse existing reference navigation and verify serialized graph links; do not implement a new address component from these pixels.
+- Add explicit comparison base and the shared no-diff / inline-diff / side-by-side controls.
+- Reported classification is a claim, not confirmed truth. Metadata type rendering/permissions must come from the node contract.
+
+## V3: Plan and record nested work
+
+[Reference image](<C:/Users/vince/.codex/visualizations/2026/09/21/01a0c5f4-7593-7072-8985-289e55a9faf9/mvp-plan/images/V3-revision-2.png>)
+
+- Toolbar should say Node, not Definition or a task-specific generic label.
+- Creator must move from its separate property row into flat relations.
+- URL/locator UI pictured here is superseded by explicit deferral. Reuse existing reference navigation and verify serialized graph links; do not implement a new address component from these pixels.
+- Add explicit comparison base and the shared no-diff / inline-diff / side-by-side controls.
+- Remove Duration and Cost entirely, including dash placeholders.
+- Use Node for generic inspection; retain Work only if it later has a distinct supported purpose, not as a redundant MVP view.
+- Graph is a schematic example; exact planned/recorded state and chronology must come from data. No scaled time claims.
+- Divider is about37/63, implementation starts1/3 versus2/3. Save styling differs from other mockups: normalize shared toolbar.
+- Old graph layout is superseded by final Overview/Changes references: distinct-task folded review loops, endpoint caps, gray queue ranges and terminal abandonment are mandatory.
+
+## V4: Review Overview, accepted final hierarchy
+
+[Reference image](<C:/Users/vince/.codex/visualizations/2026/09/21/01a0c5f4-7593-7072-8985-289e55a9faf9/mvp-plan/images/V4-overview-accepted.png>)
+
+- Text/glyph artifacts in file link and some icons are generation noise; use real readable labels and existing icon components.
+- Runnables is a child of Checks, alongside Reviewers, even where bitmap indentation is subtle; parent/child boundary is defined in the written tree contract.
+- Example authors, check results, times and graph actors are illustrative, not runtime evidence. Agent-review execution remains deferred; present already recorded participation only.
+- Minor top-border/spacing artifacts do not authorize a new layout; maintain consistent native panel borders and top margin with no bottom gap for tabs.
+- Controls must satisfy the acceptance scenarios; images do not prove author permissions, scope freeze, review passage or cancellation.
+- Final annotation 1 (85.4%,53%): Runnables is an ordinary nested bush row under Checks, with its four action buttons right-aligned on that row; do not reproduce the separate panel/header treatment.
+- Final annotation 2 (80.1%,8.5%): the inner Overview splitter must begin below the view-tools toolbar, not extend through it.
+- Final annotation 3 (99%,9.2%): the far-right tool belongs to the shared view-tools panel spanning both content subpanes. Do not create a separate sidebar toolbar/border. URL component behavior itself is deferred.
+
+## V5: Review Changes and Preview entry
+
+[Reference image](<C:/Users/vince/.codex/visualizations/2026/09/21/01a0c5f4-7593-7072-8985-289e55a9faf9/mvp-plan/images/V5-changes-accepted.png>)
+
+- Sample code/data are illustrative. Actual review uses immutable target manifest and persisted inputs.
+- Top-level feedback has minor residual left spacing in the bitmap; implementation aligns it with the full-width context body, with indent only for replies.
+- Preview tab presence is not proof of historical preview support; reuse existing renderer and explicitly report unsupported targets.
+- Iteration multiselection is required in the file-tree tools but not fully pictured; see Review target and changes.
+
+User explicitly accepted the design with final corrections. Static images remain imperfect references: written requirements override glyph/border artifacts; no runtime, accessibility, topology, reuse or CRUD correctness is proven by a bitmap.

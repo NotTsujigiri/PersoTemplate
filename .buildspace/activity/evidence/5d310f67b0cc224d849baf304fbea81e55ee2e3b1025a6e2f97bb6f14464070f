@@ -1,0 +1,228 @@
+{
+  "summary": {
+    "checkpoint": "passed",
+    "steps": 17,
+    "failedSteps": 0,
+    "browserTests": 359,
+    "browserPassed": 359,
+    "browserFailed": 0,
+    "browserSkipped": 0,
+    "startedAt": "2026-10-26T07:04:25.365Z",
+    "finishedAt": "2026-10-26T07:45:14.072Z"
+  },
+  "commit": "70db5e2d70dfb32407b29636e9ad861df8683988",
+  "branch": "codex/queued-json-and-review",
+  "checkpoint": {
+    "runtime": {
+      "version": "24.22.1",
+      "executable": "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\node_modules\\node\\bin\\node.exe"
+    },
+    "startedAt": "2026-10-26T07:04:25.365Z",
+    "phases": [
+      "build",
+      "test:models",
+      "test",
+      "test:browser"
+    ],
+    "repeatSharedSteps": false,
+    "status": "passed",
+    "steps": [
+      {
+        "phase": "build",
+        "command": "npm run check:runtime",
+        "status": "passed",
+        "log": "01.log",
+        "startedAt": "2026-10-26T07:04:25.369Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:04:25.863Z",
+        "durationMs": 483.84220000000005
+      },
+      {
+        "phase": "build",
+        "command": "npm run build:dependencies",
+        "status": "passed",
+        "log": "02.log",
+        "startedAt": "2026-10-26T07:04:25.863Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:05:01.647Z",
+        "durationMs": 35782.8948
+      },
+      {
+        "phase": "build",
+        "command": "npm run check:types",
+        "status": "passed",
+        "log": "03.log",
+        "startedAt": "2026-10-26T07:05:01.648Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:09:51.637Z",
+        "durationMs": 289988.8874
+      },
+      {
+        "phase": "build",
+        "command": "npm run check:organisation",
+        "status": "passed",
+        "log": "04.log",
+        "startedAt": "2026-10-26T07:09:51.639Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:09:55.294Z",
+        "durationMs": 3653.7480000000214
+      },
+      {
+        "phase": "build",
+        "command": "npm run check:engine-boundaries",
+        "status": "passed",
+        "log": "05.log",
+        "startedAt": "2026-10-26T07:09:55.294Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:09:56.658Z",
+        "durationMs": 1363.0218999999925
+      },
+      {
+        "phase": "build",
+        "command": "npm --workspace @broccoli/harness run build:model",
+        "status": "passed",
+        "log": "06.log",
+        "startedAt": "2026-10-26T07:09:56.659Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:13:29.967Z",
+        "durationMs": 213306.60210000002
+      },
+      {
+        "phase": "test:models",
+        "command": "node --test Systems/Depth0/RelationEngine/entity-store.test.ts Systems/Depth0/RelationEngine/entity-compiler.test.ts Systems/Depth0/RelationEngine/native-model.test.ts Systems/Depth0/RelationEngine/model-inspection.test.ts Systems/Depth1/RepoCompose/native-model.test.ts",
+        "status": "passed",
+        "log": "07.log",
+        "startedAt": "2026-10-26T07:13:29.968Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:13:59.811Z",
+        "durationMs": 29841.686600000015
+      },
+      {
+        "phase": "test",
+        "command": "npm --workspace @super-app/lsp-contributor test",
+        "status": "passed",
+        "log": "08.log",
+        "startedAt": "2026-10-26T07:13:59.812Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:14:00.893Z",
+        "durationMs": 1080.550600000075
+      },
+      {
+        "phase": "test",
+        "command": "npm --workspace @super-app/typescript-contributor test",
+        "status": "passed",
+        "log": "09.log",
+        "startedAt": "2026-10-26T07:14:00.894Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:14:02.642Z",
+        "durationMs": 1747.6528000000399
+      },
+      {
+        "phase": "test",
+        "command": "npm --workspace @super-app/json-contributor test",
+        "status": "passed",
+        "log": "10.log",
+        "startedAt": "2026-10-26T07:14:02.643Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:14:03.73Z",
+        "durationMs": 1086.0977999999886
+      },
+      {
+        "phase": "test",
+        "command": "npm --workspace @broccoli/harness test",
+        "status": "passed",
+        "log": "11.log",
+        "startedAt": "2026-10-26T07:14:03.731Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:17:30.089Z",
+        "durationMs": 206358.13650000002
+      },
+      {
+        "phase": "test",
+        "command": "npm --workspace @super-app/relational-ui-contributor test",
+        "status": "passed",
+        "log": "12.log",
+        "startedAt": "2026-10-26T07:17:30.09Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:18:25.439Z",
+        "durationMs": 55348.9584
+      },
+      {
+        "phase": "test",
+        "command": "npm --workspace @super-app/web-component-contributor test",
+        "status": "passed",
+        "log": "13.log",
+        "startedAt": "2026-10-26T07:18:25.44Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:18:35.071Z",
+        "durationMs": 9628.944000000018
+      },
+      {
+        "phase": "test",
+        "command": "npm --workspace @super-app/project-tools test",
+        "status": "passed",
+        "log": "14.log",
+        "startedAt": "2026-10-26T07:18:35.071Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:18:44.662Z",
+        "durationMs": 9589.595399999991
+      },
+      {
+        "phase": "test",
+        "command": "npm --workspace @super-app/testing test",
+        "status": "passed",
+        "log": "15.log",
+        "startedAt": "2026-10-26T07:18:44.662Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:18:45.171Z",
+        "durationMs": 508.5034000000451
+      },
+      {
+        "phase": "test",
+        "command": "node --test scripts/run-verification.test.ts scripts/check-runtime.test.ts",
+        "status": "passed",
+        "log": "16.log",
+        "startedAt": "2026-10-26T07:18:45.172Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:18:45.773Z",
+        "durationMs": 599.8932999999961
+      },
+      {
+        "phase": "test:browser",
+        "command": "npm --workspace @broccoli/harness run test:browser",
+        "status": "passed",
+        "log": "17.log",
+        "startedAt": "2026-10-26T07:18:45.774Z",
+        "code": 0,
+        "signal": null,
+        "finishedAt": "2026-10-26T07:45:14.07Z",
+        "durationMs": 1588297.1073000003
+      }
+    ],
+    "finishedAt": "2026-10-26T07:45:14.072Z",
+    "durationMs": 2448705.5013
+  },
+  "additionalVerification": [
+    "Focused LSP document and JSON server tests: 6 passed",
+    "LSP and JSON test projects compile with tsc -p",
+    "Independent classification code review found no correctness defects",
+    "Reviewed JSON editor and review-control screenshots"
+  ],
+  "visualEvidence": "Systems/Depth4/HarnessApp/test-results/run-1792999162823-5d6ce258"
+}

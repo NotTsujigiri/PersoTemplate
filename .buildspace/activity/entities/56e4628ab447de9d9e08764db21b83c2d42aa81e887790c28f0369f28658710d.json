@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4cf7bee-00c3-4227-93c0-8d09cd19044a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4cf7bee-00c3-4227-93c0-8d09cd19044a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T22:26:29.520Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "chat-round-5 - 01-full-chat-picker.png",
+        "updatedAt": "2026-09-29T22:37:05.019Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4cf7bee-00c3-4227-93c0-8d09cd19044a.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4cf7bee-00c3-4227-93c0-8d09cd19044a.json",
+      "properties": {
+        "artifact": {
+          "hash": "57fb6d7a78665664fc1c7e3f169514373de9b64033190acd021d252739c0d675",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/57fb6d7a78665664fc1c7e3f169514373de9b64033190acd021d252739c0d675",
+          "mime": "image/png",
+          "size": 1521735
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4cf7bee-00c3-4227-93c0-8d09cd19044a.json"
+}

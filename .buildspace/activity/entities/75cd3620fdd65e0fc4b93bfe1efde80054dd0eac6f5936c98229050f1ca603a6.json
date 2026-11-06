@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d32d88-066a-452a-a80a-7a44d808ae28.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d32d88-066a-452a-a80a-7a44d808ae28.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T15:28:20.547Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 436,
+        "description": "The user exercises the implemented review and annotation behavior through Review → Changes, using the progressively built UI-editor mockups as the review material. Compare the implementation with the agreed examples and annotate the actual UI and relevant artifacts.\n\nVerify context, feedback, revision comparison, persistence and format-independent proposal handling against the accepted needs. Iterate until the user is satisfied. Passing this review gates the subsequent Task graph CRUD needs-analysis session.",
+        "title": "Review the implemented review surface against its UI-editor mockups",
+        "updatedAt": "2026-10-10T09:48:42.791Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d32d88-066a-452a-a80a-7a44d808ae28.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d32d88-066a-452a-a80a-7a44d808ae28.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6d32d88-066a-452a-a80a-7a44d808ae28.json"
+}

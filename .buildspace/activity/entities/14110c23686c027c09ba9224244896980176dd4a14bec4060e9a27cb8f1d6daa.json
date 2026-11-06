@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9c170e4a-e299-44b5-b833-eeccb74962ad.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9c170e4a-e299-44b5-b833-eeccb74962ad.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T21:48:38.024Z",
+        "createdBy": "agent:codex",
+        "description": "Existing root task remains waiting on review; review tasks are excluded from board. Coherent candidate identity, evidence and multi-repository review at top of timeline. Review preview and annotate inside Broccoli, iterate without losing feedback. Scheduled debt audits/reactive bug investigation are configurable and traceable; findings-only default pending later policy changes. No automatic merge or user acceptance. Reproduce asynchronous selection/context bug before fix.",
+        "title": "Deliver reliable task execution and review iteration across the buildspace",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9c170e4a-e299-44b5-b833-eeccb74962ad.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9c170e4a-e299-44b5-b833-eeccb74962ad.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9c170e4a-e299-44b5-b833-eeccb74962ad.json"
+}

@@ -1,0 +1,11 @@
+{
+  "width": 589,
+  "height": 639,
+  "title": "Fourteen annotation task",
+  "description": "One line is a valid string",
+  "modes": [
+    "source",
+    "inline",
+    "split"
+  ]
+}

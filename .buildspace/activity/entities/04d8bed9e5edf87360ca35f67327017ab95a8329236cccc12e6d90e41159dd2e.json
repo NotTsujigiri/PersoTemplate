@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d7ef63b-c4b4-408e-876d-e62035a299f7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d7ef63b-c4b4-408e-876d-e62035a299f7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T14:02:09.665Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 341,
+        "description": "",
+        "title": "Captured from your planning-review discussion: Keep the whole sequence visible while focusing on one task; bigger text fields alone are not enough.",
+        "updatedAt": "2026-10-06T14:10:13.445Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d7ef63b-c4b4-408e-876d-e62035a299f7.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d7ef63b-c4b4-408e-876d-e62035a299f7.json",
+      "properties": {
+        "anchor": {
+          "taskId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64d9a2ce-2007-4dc2-b23b-ea8fd1112976.json",
+          "taskTitle": "Route Systems inspection through a validated relational contribution"
+        },
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Captured from your planning-review discussion: Keep the whole sequence visible while focusing on one task; bigger text fields alone are not enough."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d7ef63b-c4b4-408e-876d-e62035a299f7.json"
+}

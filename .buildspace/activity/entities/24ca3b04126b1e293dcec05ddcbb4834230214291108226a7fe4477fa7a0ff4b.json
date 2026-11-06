@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6784a7d0-d769-4d5a-8e86-0d7f69183f30.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6784a7d0-d769-4d5a-8e86-0d7f69183f30.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T16:09:54.409Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 489,
+        "description": "The first generated image is accepted as sufficient visual direction; finish the remaining design discussion in chat. Keep fixed toolbars with content-only scrolling, repository roots without a redundant Checks root, shared expand/collapse/filter icon buttons and a splitter. Put the same passed/failed icons used in results after the left tree item labels. The right pane shows the latest result only, with Results and Code tabs; Code uses the existing text editor for the selected check implementation. History browsing is deferred to a later MVP task. Agree how a shared result presentation shows useful diagnostics without each test building a custom UI, before development.",
+        "title": "Iterate on the Checks view update with image generation",
+        "updatedAt": "2026-10-12T16:52:45.584Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6784a7d0-d769-4d5a-8e86-0d7f69183f30.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6784a7d0-d769-4d5a-8e86-0d7f69183f30.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "design",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6784a7d0-d769-4d5a-8e86-0d7f69183f30.json"
+}

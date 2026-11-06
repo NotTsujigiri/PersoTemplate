@@ -1,0 +1,333 @@
+{
+  "records": {
+    "check-orphan-cancellation": {
+      "expected": {
+        "cancelled": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      "actual": {
+        "cancelled": true,
+        "completedPromptly": false,
+        "descendantAlive": false
+      }
+    },
+    "check-startup-cancellation": {
+      "expected": [
+        {
+          "attempt": 0,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 1,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 2,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 3,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 4,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 5,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 6,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 7,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 8,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 9,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 10,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 11,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 12,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 13,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 14,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 15,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 16,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 17,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 18,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 19,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 20,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 21,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 22,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 23,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        }
+      ],
+      "actual": [
+        {
+          "attempt": 0,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 1,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 2,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 3,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 4,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 5,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 6,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 7,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 8,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 9,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 10,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 11,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 12,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 13,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 14,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 15,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 16,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 17,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 18,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 19,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 20,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 21,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 22,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 23,
+          "stopped": true,
+          "completedPromptly": false,
+          "descendantAlive": false
+        }
+      ]
+    },
+    "explicit-deadline": {
+      "expected": {
+        "stopped": true,
+        "returnedPromptly": true
+      },
+      "actual": {
+        "stopped": true,
+        "returnedPromptly": false
+      }
+    },
+    "manual-cancellation": {
+      "expected": {
+        "stopped": true,
+        "returnedPromptly": true
+      },
+      "actual": {
+        "stopped": true,
+        "returnedPromptly": false
+      }
+    }
+  },
+  "date": "2026-10-20",
+  "command": "npm run test:all",
+  "commit": "97f2c1d"
+}

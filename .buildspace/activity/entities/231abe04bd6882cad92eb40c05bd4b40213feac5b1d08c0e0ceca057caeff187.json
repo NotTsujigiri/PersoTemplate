@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74f581ff-0849-453e-a4ec-72ace11a5c3b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74f581ff-0849-453e-a4ec-72ace11a5c3b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.909Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Move existing UI data requests and mutations behind their local engine and contributor contracts, including personal data, planning, buildspaces and other inventory findings. Remove dedicated bypass routes and helper paths instead of wrapping them in a cosmetic engine facade.\n\nCompleted: production UI data reads and mutations use the local engine and contributor operations. Dedicated domain HTTP/SSE paths are removed; HTTP authentication and module loading belong to their transport/runtime owners. The deterministic engine boundary check reports zero violations. Owner, browser, authentication and module-loading regressions pass.",
+        "title": "Remove remaining application API bypasses",
+        "updatedAt": "2026-10-23T04:43:39.136Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74f581ff-0849-453e-a4ec-72ace11a5c3b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74f581ff-0849-453e-a4ec-72ace11a5c3b.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/74f581ff-0849-453e-a4ec-72ace11a5c3b.json"
+}

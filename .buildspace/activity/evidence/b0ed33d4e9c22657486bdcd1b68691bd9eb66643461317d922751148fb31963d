@@ -1,0 +1,11 @@
+# Chat during review
+
+The reported error was reproduced: sending a message in a session whose repositories were included in a submitted review raised `This checkout is frozen for review.` before reaching the agent. The same failure affected a new conversation sharing those repositories.
+
+The prompt entry point no longer requires a mutable checkout. Source mutations remain guarded at their owning operations: file writes/replacements, shell commands, live verification, repository changes and commits. Automatic live verification is skipped during review, and the execution queue continues to defer implementation work while its repositories await review. Explicit chat and source inspection remain available.
+
+Two deterministic regressions retain exact expected/actual recordings: review conversations with source guards, and deferred automatic queued execution. The immutable submitted target remains unchanged. No external model call, approval, commit or merge was performed. The local app was restarted to load this correction.
+
+This is a working-tree correction after review target revision 231. That existing immutable candidate and its passing checks describe the earlier source; they must not be represented as verification of this correction. The correction and its evidence are attached separately to the MVP task for the next candidate capture.
+
+Verification: build passed. Final server suite: 130/130 passed. Browser checkpoint: 102 passed; two settings tests timed out at the application readiness assertion before exercising settings. The complete five-test settings file then passed independently without changing product code or assertions. The two new boundary regressions matched their exact expected recordings.

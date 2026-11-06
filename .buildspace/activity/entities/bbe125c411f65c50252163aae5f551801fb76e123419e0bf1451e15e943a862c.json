@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9e7317f4-6abe-43cf-81fb-460e6ce62676.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9e7317f4-6abe-43cf-81fb-460e6ce62676.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T18:33:03.338Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 692,
+        "description": "",
+        "title": "- The current compiled catalog and all 251 browser scenarios are verified across the full and focused runs; independent reviewers accept this migration checkpoi",
+        "updatedAt": "2026-10-18T18:33:15.995Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9e7317f4-6abe-43cf-81fb-460e6ce62676.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9e7317f4-6abe-43cf-81fb-460e6ce62676.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ab7cf5c1-217e-43cf-82bc-317fde244970.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- The current compiled catalog and all 251 browser scenarios are verified across the full and focused runs; independent reviewers accept this migration checkpoint.\n- This closes the migration review finding only. Native Windows worker failures and the earlier orphaned cancellation remain open in their dedicated issue tasks; no root-cause fix is claimed.\n- Final evidence retains the failed full runs, runtime comparison, exact recordings and final commit 9c06556bf13ad32a6abcc467a118a775abe7a49f."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9e7317f4-6abe-43cf-81fb-460e6ce62676.json"
+}

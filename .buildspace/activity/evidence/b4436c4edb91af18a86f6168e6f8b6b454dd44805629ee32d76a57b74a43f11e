@@ -1,0 +1,20 @@
+# Second annotation iteration: 14 corrections
+
+1. Save uses the shared accessible save icon on the annotated task.
+2. The same shared Save icon is used for other editable Node views, including the MVP task.
+3. Removed the redundant iteration/title picker from review Changes.
+4. Repository collapse is retained across Changes redraws and file-filter changes.
+5. Source, inline diff and side-by-side diff use one reusable TextEditor with line numbers, scrolling, native source input, and review anchors. Existing hash validation and newer-edit protection remain owned by the file layer.
+6. Revision selector precedes Overview/Changes/Preview and follows view selection.
+7. Review author and status share one row. A status dropdown provides the permitted submit/abandon/return-to-draft transitions through the existing review owner.
+8. The Task board displays top-level tasks only, excluding review tasks.
+9. Graph view label is Timeline.
+10. Selecting Timeline directly renders the graph, using the same composition as the nested timeline, without an Open step.
+11. A shared chevron icon on the right of task cards with children opens their nested timeline.
+12. Queued tasks can return to Backlog through pointer or keyboard drag destinations; membership and queue episode changes persist.
+13. Instance of links navigate to read-only type nodes exposing their declared fields. Both type nodes and relations derive from the canonical schema and kind, without duplicate persisted type assignments.
+14. Nodes obey exhaustive type field declarations; owner writes reject undeclared fields. Node UI uses the generic schema renderer and relation list. Retired importSource/sourceKey fields were removed from current nodes; original input evidence was preserved through normal evidence relations. Historical revision 65 and all four immutable review targets remain unchanged.
+
+Validation: production build passed; 67 backend tests, 73 browser tests, and 212 shared UI tests passed. Exact failing before recordings now pass for the UI, editor, and declared node contract. Independent UI/editor and backend reviews converged. An existing out-of-order review-file response concern was recorded separately as follow-up, not introduced by these changes.
+
+The running app was refreshed. Both the shared-check task's unsaved Abandoned draft and the MVP task's unsaved Design/Blocked draft were restored without saving them. Existing human review outcomes remain untouched.

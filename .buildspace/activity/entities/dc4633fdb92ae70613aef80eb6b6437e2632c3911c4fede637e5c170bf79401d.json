@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cc407f4-18f8-409d-813c-407b7b7b5f4f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cc407f4-18f8-409d-813c-407b7b7b5f4f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T19:14:40.818Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 497,
+        "description": "Fixed the implicit two-minute deadline on check execution. Checks now continue until completion, caller cancellation, or an explicitly supplied deadline; ordinary command deadlines remain unchanged. Explicit timeout diagnostics are retained. Located the reported batch in buildspace session 06067384-9ad6-4257-a26d-3bf26fe198d6, run 2026-10-12T18:12:06.198Z: all eight stopped checks ended after 120314–120466 ms during type validation. Authored check-timeout.test.ts reproduces the unchanged failure and preserves exact before/after recordings in test-results/check-timeout-before and test-results/check-timeout. Focused pipeline/selection/core tests and three deadline/cancellation regression tests pass. npm run check:types passes: 938 source files, zero violations. Activated through the guarded restart API and confirmed the restarted service responds. Existing stopped records are preserved; rerun those checks to obtain complete results.",
+        "title": "Fix checks stopping before producing their final results",
+        "updatedAt": "2026-10-12T19:22:52.872Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cc407f4-18f8-409d-813c-407b7b7b5f4f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cc407f4-18f8-409d-813c-407b7b7b5f4f.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cc407f4-18f8-409d-813c-407b7b7b5f4f.json"
+}

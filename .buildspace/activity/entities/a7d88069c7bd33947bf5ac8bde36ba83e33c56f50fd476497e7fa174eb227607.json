@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26b8a419-8130-4924-8642-861a050bc4f2.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26b8a419-8130-4924-8642-861a050bc4f2.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T14:02:26.290Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 344,
+        "description": "",
+        "title": "Addressed in the plan: ownership and compiler contracts are a dedicated first task; enforcement cases are designed alongside it. The boundary checkpoint asks yo",
+        "updatedAt": "2026-10-06T14:02:26.404Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26b8a419-8130-4924-8642-861a050bc4f2.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26b8a419-8130-4924-8642-861a050bc4f2.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd93d28b-d3c6-4c9f-99dd-59ad6bb7dcb0.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Addressed in the plan: ownership and compiler contracts are a dedicated first task; enforcement cases are designed alongside it. The boundary checkpoint asks you to review invalid-code examples and distinguish compiler guarantees from runtime validation. Actual ownership decisions remain open until that scheduled review."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26b8a419-8130-4924-8642-861a050bc4f2.json"
+}

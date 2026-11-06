@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ba3c3194-ac69-4cd4-95f5-98a827e4f991.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ba3c3194-ac69-4cd4-95f5-98a827e4f991.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-01T02:41:22.488Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1303,
+        "description": "The user likes symbol navigation as a starting point but wants it expanded. They report being unable to return to the location they came from after navigating to a symbol. Record the return-navigation problem without selecting a navigation-history or UI design yet.\n\nFeedback (verbatim):\n\"I like as a starting point to be able to navigate toward symbol navigation but we clearly to expend the feature, among things that feel bad is that you can't o back from where you came. Don't know yet how i want to solve that though so create an input with the feedback.\"",
+        "title": "Return navigation after going to a symbol",
+        "updatedAt": "2026-11-01T02:42:05.386Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ba3c3194-ac69-4cd4-95f5-98a827e4f991.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ba3c3194-ac69-4cd4-95f5-98a827e4f991.json",
+      "properties": {
+        "meaning": "feedback",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ba3c3194-ac69-4cd4-95f5-98a827e4f991.json"
+}

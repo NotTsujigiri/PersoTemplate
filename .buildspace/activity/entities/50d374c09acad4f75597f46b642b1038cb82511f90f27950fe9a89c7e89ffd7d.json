@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a347ac6-de59-462b-8727-df72f1999844.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a347ac6-de59-462b-8727-df72f1999844.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:09:25.878Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 414,
+        "description": "Consolidate the already implemented but not yet accepted MVP work into one serial stage. Preserve every original task, attached evidence, required reviewer and mandatory check. Execute in order: verify earlier implementation → its existing planning/chat/annotation review → verify sign-in/editor fixes → their existing review. Each verification group contains one dependency chain. A review request is not approval; no task becomes complete merely through this replan. This stage follows approval of the updated MVP delivery plan and must finish before new execution-model work begins.",
+        "title": "Complete acceptance of the earlier MVP work",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a347ac6-de59-462b-8727-df72f1999844.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a347ac6-de59-462b-8727-df72f1999844.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "integration",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a347ac6-de59-462b-8727-df72f1999844.json"
+}

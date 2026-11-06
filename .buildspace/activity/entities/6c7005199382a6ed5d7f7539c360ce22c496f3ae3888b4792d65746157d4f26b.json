@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/441729bf-d976-4a2e-9c5b-8a9ddd843cc7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/441729bf-d976-4a2e-9c5b-8a9ddd843cc7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T21:41:25.243Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 709,
+        "description": "- Composing a long filter does not keep the input scrolled to the active caret.\n- Record completion at the end and in the middle without changing surrounding text.",
+        "title": "Filter completion leaves the editing caret out of view",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/441729bf-d976-4a2e-9c5b-8a9ddd843cc7.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/441729bf-d976-4a2e-9c5b-8a9ddd843cc7.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/441729bf-d976-4a2e-9c5b-8a9ddd843cc7.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/441729bf-d976-4a2e-9c5b-8a9ddd843cc7.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:56:26.154Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T01:53:47.642Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/441729bf-d976-4a2e-9c5b-8a9ddd843cc7.json"
+}

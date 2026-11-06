@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239f0b0c-43d3-4d76-8248-4152da359ee1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239f0b0c-43d3-4d76-8248-4152da359ee1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.903Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Implement local contributor resolution and URL-based remote requests through both engines, with runtime peer discovery and no implicit whole-graph traversal. Keep authentication and disclosure at the receiving boundary. Verify one-to-many and many-to-one engines.\n\nImplemented generic engine HTTP exchange and configurable browser transport contributors. Browser tests now connect one frontend to two explicit service URLs in shared and isolated modes; they verify no pre-request crawl, no forwarded local credentials, and retained acquisitions from both engines. Exact-origin CORS policy is opt-in at the receiving bridge. Engine and bridge focused tests pass; shutdown rejection and remaining consumer regression fixtures are being verified.\n\nSlice verification completed: Generic engine transport, exact-origin admission, authentication and explicit runtime connections verified. Shared/isolated browser recordings cover two remote engines and prevent local credential forwarding; authenticated shutdown requests cannot invoke retired handlers.",
+        "title": "Route explicit requests through configured engine transports",
+        "updatedAt": "2026-10-22T22:16:28.039Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239f0b0c-43d3-4d76-8248-4152da359ee1.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239f0b0c-43d3-4d76-8248-4152da359ee1.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239f0b0c-43d3-4d76-8248-4152da359ee1.json"
+}

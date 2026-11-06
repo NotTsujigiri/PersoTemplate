@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/630568cb-ced9-4135-a26b-1369bb3fea31.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/630568cb-ced9-4135-a26b-1369bb3fea31.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:42:26.661Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 651,
+        "description": "",
+        "title": "Full-browser repeated-component recording exactly matched both instances and saved its screenshot, but route teardown raised 'Route is already handled'. Indepen",
+        "updatedAt": "2026-10-18T09:47:16.900Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/630568cb-ced9-4135-a26b-1369bb3fea31.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/630568cb-ced9-4135-a26b-1369bb3fea31.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Full-browser repeated-component recording exactly matched both instances and saved its screenshot, but route teardown raised 'Route is already handled'. Independent reviewer found no value-isolation defect; five unchanged traced runs passed. Fixture now drains post-save network traffic before removing response enrichment, retaining handler-error reporting. Before evidence: .harness/migration-repeated-components-before. Focused verification pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/630568cb-ced9-4135-a26b-1369bb3fea31.json"
+}

@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1d5cb2-d845-4502-a4b7-4176fa6ceb75.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1d5cb2-d845-4502-a4b7-4176fa6ceb75.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T21:48:38.021Z",
+        "createdBy": "agent:codex",
+        "description": "Permanent left Chat pane; Windows and Pi-supported provider setup, likely DeepSeek. Five full-height picker sections New/Later/Active/Channels/History, explicit attention and buildspace scope. Compact composer, Markdown, multi-range source references, reply/quote/copy/edit, per-message scrolling, measured one-row timing and execution details. Per-instance jump/stop; Pi steering/follow-up. MVP one human/one agent, extensible participant model. Agent can inspect/edit/test and manipulate Broccoli planning through the same owner operations.",
+        "title": "Deliver the persistent chat workspace and Pi bootstrap",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1d5cb2-d845-4502-a4b7-4176fa6ceb75.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1d5cb2-d845-4502-a4b7-4176fa6ceb75.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1d5cb2-d845-4502-a4b7-4176fa6ceb75.json"
+}

@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/534bc3d4-1d79-4bfa-92a7-558483cca83b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/534bc3d4-1d79-4bfa-92a7-558483cca83b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T23:05:21.528Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 304,
+        "description": "Immutable attached evidence",
+        "title": "SchemaForm: four passing owner tests.txt",
+        "updatedAt": "2026-09-30T23:05:21.613Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/534bc3d4-1d79-4bfa-92a7-558483cca83b.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/534bc3d4-1d79-4bfa-92a7-558483cca83b.json",
+      "properties": {
+        "artifact": {
+          "hash": "6d8d123bedc02f99e36afa97aa6e6bf05ee0847ad2c779a0275eb7c7f30c58ec",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/6d8d123bedc02f99e36afa97aa6e6bf05ee0847ad2c779a0275eb7c7f30c58ec",
+          "mime": "text/plain",
+          "size": 490
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/534bc3d4-1d79-4bfa-92a7-558483cca83b.json"
+}

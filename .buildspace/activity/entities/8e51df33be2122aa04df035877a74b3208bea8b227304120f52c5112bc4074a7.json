@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2d2a1f0-374a-41b0-a72d-f43c655582de.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2d2a1f0-374a-41b0-a72d-f43c655582de.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T05:50:15.037Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1313,
+        "description": "Reopened after user review of ad44c7a5. Partial improvements in aab6826d: folding uses the existing TypeScript syntax service independently of semantic project loading; engine catalog activation uses indexed edge lookup, preserving validation/atomic refresh. Recorded 20,000-edge contributor refresh improved from 8.2 seconds to 112 ms. Live file switching during pending semantics displays the second source in about 146 ms; its language lease delay fell from 6–10 seconds to about 1.2 seconds. Folding replies in 4–9 ms after opening. Remaining: first semantic analysis of the real RelationalEngine project still takes several seconds. Keep queued until cold semantic feedback is satisfactory; do not claim initial analysis is instantaneous. Regression tests cover held semantic responses, canceled obsolete acquisition and cold folding.",
+        "title": "Fix slow language support and unblock text-editor file switching",
+        "updatedAt": "2026-11-04T07:45:38.099Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2d2a1f0-374a-41b0-a72d-f43c655582de.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2d2a1f0-374a-41b0-a72d-f43c655582de.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2d2a1f0-374a-41b0-a72d-f43c655582de.json"
+}

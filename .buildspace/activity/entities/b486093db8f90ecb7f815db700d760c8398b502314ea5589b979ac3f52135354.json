@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/da15b315-855c-4fb0-a3f2-c98a6689ab13.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/da15b315-855c-4fb0-a3f2-c98a6689ab13.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T02:06:12.344Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 604,
+        "description": "",
+        "title": "Re-review: both original probes now pass (nested mutation rejects with 2540/2339; adding the missing component emits recovery event 2).\n- Introduced typing regr",
+        "updatedAt": "2026-10-18T02:06:31.380Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/da15b315-855c-4fb0-a3f2-c98a6689ab13.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/da15b315-855c-4fb0-a3f2-c98a6689ab13.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/437ed83f-0421-4077-b62e-bc5a88be165e.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Re-review: both original probes now pass (nested mutation rejects with 2540/2339; adding the missing component emits recovery event 2).\n- Introduced typing regression: type.read(input) returns readonly arrays, but attach/update require mutable P; a validated {values:number[]} payload fails TS2345 on attachment.\n- Accept immutable payload inputs without weakening capability inference, and add a valid compiled array/recursive roundtrip.\n- Tighten the recovery regression to add a missing component on an existing node; creating a node invalidates all views and masks the original defect."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/da15b315-855c-4fb0-a3f2-c98a6689ab13.json"
+}

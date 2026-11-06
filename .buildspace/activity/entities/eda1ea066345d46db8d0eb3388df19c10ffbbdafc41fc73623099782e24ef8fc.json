@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad4b7411-318a-413d-97e3-2d5e2a7351b1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad4b7411-318a-413d-97e3-2d5e2a7351b1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T13:30:56.083Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 677,
+        "description": "",
+        "title": "- Component reviewer approved d28fffa: live observations, source types, property/data-type navigation, read-only rules, typing focus and unset transitions are c",
+        "updatedAt": "2026-10-18T13:31:12.465Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad4b7411-318a-413d-97e3-2d5e2a7351b1.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad4b7411-318a-413d-97e3-2d5e2a7351b1.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Component reviewer approved d28fffa: live observations, source types, property/data-type navigation, read-only rules, typing focus and unset transitions are covered by exact passing recordings.\n- Boundary reviewer found one unused old node-type URL helper; removed it and corrected owner terminology in 8f780ea. No further engine/storage/ownership gap found.\n- Restarted live Broccoli and inspected an existing task through Planning identity → property definitions → String data type. Full checkpoint remains in progress; native worker/connection-reset results remain unverified."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ad4b7411-318a-413d-97e3-2d5e2a7351b1.json"
+}

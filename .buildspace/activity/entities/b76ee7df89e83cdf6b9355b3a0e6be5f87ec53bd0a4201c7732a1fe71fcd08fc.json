@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cf220d2-354e-4d20-a0c2-8b10bde7cd77.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cf220d2-354e-4d20-a0c2-8b10bde7cd77.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T21:41:25.233Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 709,
+        "description": "- After a complete predicate, completion still suggests field/value operators.\n- Offer only valid Boolean continuations; add XOR alongside AND and OR.",
+        "title": "Completed filter predicates offer invalid continuations",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cf220d2-354e-4d20-a0c2-8b10bde7cd77.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cf220d2-354e-4d20-a0c2-8b10bde7cd77.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cf220d2-354e-4d20-a0c2-8b10bde7cd77.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cf220d2-354e-4d20-a0c2-8b10bde7cd77.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:53:33.822Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T01:53:47.642Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3cf220d2-354e-4d20-a0c2-8b10bde7cd77.json"
+}

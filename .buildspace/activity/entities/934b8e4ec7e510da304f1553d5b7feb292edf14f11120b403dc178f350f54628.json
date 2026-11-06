@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-25T23:07:09.970Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1150,
+        "description": "Remove the Start review / Pause review button from the review summary, including both states of the control. One reviewer starting or pausing must no longer switch the shared review task between Waiting and In progress; that signal is misleading when several reviewers participate.\n\nRemove the start/pause mechanism and artifacts that exist only to support this behavior, rather than hiding the button while leaving the same side effect accessible elsewhere. Preserve review submission, reviewer assignment and approval/outcome handling.\n\nDo not introduce a replacement indicator in this task. A better way for individual reviewers to inform the author that they are reviewing can be designed later.\n\nRequested from the Pause review control in the toolchain review on 2026-10-26.\n\nImplemented on codex/queued-json-and-review in commit 70db5e2. Removed both UI states, the public start/pause request choices and handlers, and their placement side effects. A submitted review stays Waiting while mandatory decisions remain pending. Submission, participant assignments, outcomes, covered-task completion and review succession remain supported.\n\nThe attached exact browser recording covers two required reviewers: submission stays Waiting, the first approval stays Waiting, and the final approval completes the review. It verifies zero Start/Pause controls throughout. Unsupported start/pause requests are rejected; no compatibility handler remains.\n\nVerification completed: focused review unit and browser tests passed, followed by the full 17-step checkpoint including all 359 browser tests (no failures or skips). The live app was restarted and the existing submitted review was checked: required Pending outcomes remain available and Start/Pause controls are absent.",
+        "title": "Remove review Start/Pause controls and reviewer-driven task placement",
+        "updatedAt": "2026-10-26T07:46:46.527Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d1c4861-9d1d-40da-a0ad-d5ed8cafecf7.json"
+}

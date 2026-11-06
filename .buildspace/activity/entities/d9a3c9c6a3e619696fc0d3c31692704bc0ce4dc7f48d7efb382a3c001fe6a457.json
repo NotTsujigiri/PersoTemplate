@@ -1,0 +1,106 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9fb17913-32ad-4beb-8737-484893ccedb5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9fb17913-32ad-4beb-8737-484893ccedb5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T15:33:08.631Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 372,
+        "description": "Review the complete remaining plan of Persistent planning and review MVP in the Task graph. Expand the MVP work groups to inspect the sequence, nested work and required human review checkpoints. Select a task to inspect its description, deliverables and criteria. Review Changes compares the captured candidate's task definitions and relations with an earlier revision. Give feedback in chat or attach it to a task. Decide whether the scope is complete and the serial sequence and checkpoints are correct. This approves the delivery plan; it does not accept the already implemented MVP or future model/design proposals.",
+        "title": "Review the updated MVP delivery plan",
+        "updatedAt": "2026-10-17T00:08:47.644Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9fb17913-32ad-4beb-8737-484893ccedb5.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9fb17913-32ad-4beb-8737-484893ccedb5.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "submitted",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22ac259e-d153-4455-8df1-bbafcdd54562.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22ac259e-d153-4455-8df1-bbafcdd54562.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22ac259e-d153-4455-8df1-bbafcdd54562.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-08T15:33:08.629Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 372,
+                      "description": "# MVP delivery plan\n\n## Review outcome\nAgree on all remaining work needed to complete Persistent planning and review MVP. Inspect this plan in the MVP Task graph; give feedback in chat or attach it to an individual task. This proposal does not claim earlier implementation is accepted or authorize future implementation stages.\n\n## Plan review surface\nThe Task graph UI is sufficient for this planning round. Keep the current nesting, orthogonal rounded routing, dependency-chain columns, cursor zoom and completed-branch filter. This task contains the graph-preparation task so the plan review captures both the plan and its supporting surface. Review uses Changes; no Plan tab.\n\n## Delivery policy\nNo branching or parallel execution in the remaining MVP plan, at any nesting level. Each sibling scope has one entry, one exit and one consecutive dependency chain. Required human reviews remain explicit gates. Queuing does not start execution; no review approval is implied by this replan.\n\n## Remaining sequence\n1. Review the updated MVP delivery plan.\n2. Complete acceptance of the earlier MVP work: verify the existing implementation and seeded demonstration → its existing planning/chat/annotation review → verify sign-in and editor layout fixes → their existing review. Preserve original tasks, evidence, reviewer assignments and mandatory checks. Each verification group is internally serial.\n3. Evolve the task graph for nested execution and review: composed model inspection → review → model proposal → review → atomic readiness/iteration → review → connect the approved model to Task graph → review → focused navigation → review → check attempts and evidence → review → cross-surface integration → review.\n4. Complete contributor-owned models and Systems inspection through its existing serial design, boundary, admission and cutover checkpoints.\n5. Complete composable buildspaces, durable state and privacy through its existing serial audit, design review, implementation and evidence review.\n6. Audit and demonstrate the complete MVP acceptance criteria, then perform the final required MVP review.\n\nThe graph relations are the executable sequence. Previously completed history remains intact. The generic Task graph still supports branches for other plans; this MVP delivery plan does not schedule them.\n\n## Current verification gaps\nThe 2026-10-08 checkpoint build and the strict TypeScript checks for TheBroccoli, BtrTemplate and PersoTemplate passed with zero violations. All 22 model tests passed. The core stage finished with 196 passed and 3 failed; the later full browser stage was not reached. The remaining failures are planning-state-history.test.ts (Waiting without a valid blocker is normalized to Queued), review-placement.test.ts (parent completion is rejected while children are unfinished), and review-task-completion.test.ts (required approval guard runs before the expected reviewer-authority error). These prior state/review expectation conflicts remain explicit work for the planned model/state stage; the checkpoint is not green. Eight focused graph/review-model tests and all 14 affected browser scenarios passed.\n\n## Completion criteria\nThe MVP remains incomplete while any required work or required acceptance remains unresolved. Preserve the prior implemented work and its evidence without falsely marking it accepted. Do not discard older requirements merely because they predate the graph redesign. The existing implementation review remains an independent review of its captured candidate.\n\n## Model design boundary\nTask is not the entire model. Review Task, Input/feedback, Actor, Evidence, state transitions, review submissions/outcomes, check attempts and their relations together. Native types, model-owned invariants and typed mutators are authoritative; the UI and agents consume them.\n\n## Deferred\nTime/duration visualization, task scheduling, UID redesign (existing separate backlog task), and multi-agent execution. No new acceptance-cycle name is selected. Parent state aggregation, iteration representation and cancellation/abandonment rules remain design decisions to review.\n\n## How to review\nTask graph shows the containing MVP hierarchy with expandable groups and direct dependency edges. Select a task for its fields; expand in place or double-click to focus. Review Changes compares the captured candidate with an earlier revision. Each task has its own deliverable and criteria. Changes compares authored fields and dependencies with an earlier revision. Review decisions remain yours; no approval is recorded by preparing this plan.\n\n## Accepted task-boundary rule\nDependency and review links stay between tasks with the same immediate parent. Containment supplies parent start/end paths recursively. The six approved cross-boundary prerequisites were repaired at revision 407. The implementation and verification belong to the existing Task graph preparation task; this rule is accepted for the current plan and is not deferred to the later model proposal.\n\nRequested additions, 9 October 2026: immediately after the plan review, complete the serial task-completion persistence/independent-view-refresh fix, then the serial application performance pass. The fix includes recorded reproduction, a technical proposal reviewed by the user before development, and a post-development UI review. Performance starts with a nested Checks view upgrade: joint needs analysis, image-generation rounds, design review, development and human UI review; then baseline profiling, measured improvements and human acceptance. Existing pending acceptance follows both additions. No parallel branches. The user will complete eligible already implemented and approved work themselves from the UI.",
+                      "title": "Update the MVP delivery plan",
+                      "updatedAt": "2026-10-09T14:53:42.039Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22ac259e-d153-4455-8df1-bbafcdd54562.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22ac259e-d153-4455-8df1-bbafcdd54562.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "planning"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22ac259e-d153-4455-8df1-bbafcdd54562.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-08T18:02:37.927Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 386,
+                      "description": "# Task graph preparation\n\n## Delivered\nRecursive Task graph with retained parent title/type/state, actor identity, child count, expansion and collapse. Expanded parents now have a start circle below their children and an end circle above them. Containment supplies entry paths to children without a sibling predecessor and exit paths from children without a sibling successor. Every child lies on a forward path through its parent, recursively. Curves connect circle ports; sibling dependencies enter a composite task through its start and leave through its end. Focus keeps the real parent boundary and shows its immediate external sibling connections.\n\nThe model rejects dependency and review relations between tasks with different immediate parents, including invalid reparenting. Existing cycle validation plus containment entry/exit paths prevent floating child branches. The graph uses the same boundary diagnostics and the theme error color. Draft cross-boundary review gates can be lifted only after their sibling replacement exists in the same atomic mutation; ordinary gate removal and edits to submitted reviews remain forbidden.\n\nReview has Overview, Changes and Preview only. Changes compares captured task definitions and relations; there is no Plan tab. Local Now dividers, real review outcomes and recorded check runs remain. The implementation does not invent tasks, approvals, check results or assignments.\n\n## Approved plan repair\nAt revision 407, six cross-boundary prerequisites were replaced atomically with four sibling links. The outer sequence is sign-in/editor review → nested task execution package → contributor-owned models package → buildspace/privacy package → MVP acceptance audit. The duplicate child prerequisite on contributor encapsulation was removed because it is already required by its parent readiness task. The user explicitly approved these changes. The live MVP read then reported zero boundary violations and no model errors.\n\n## Verification\nThree new boundary tests cover atomic rejection, valid group reparenting, recursive reachability, upward route control points and guarded gate lifting. Related layout, dependency, readiness and editing tests pass. Six affected browser scenarios pass; expanded, collapsed and focused screenshots were inspected. The live graph shows both parent circles, 84 visible paths and zero backward paths. The authorized application restart loaded this work, including the earlier compact parent-header adjustment. The full checkpoint result is recorded in the attached boundary verification evidence when complete.\n\n## Model scope\nParent placement still comes from the current owner model. Parent-state aggregation, optional titles and the replacement review-iteration model remain for their planned design review. Author/reviewer icons show their recorded roles. Duration and scheduling remain deferred.\n\n## Acceptance\nInspect the MVP Task graph and compare the updated candidate through Changes. This task remains awaiting your acceptance; no human approval has been recorded.",
+                      "title": "Make the MVP plan reviewable in the nested Task graph",
+                      "updatedAt": "2026-10-09T14:53:00.944Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "need-analysis"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json"
+              }
+            },
+            "revision": 434,
+            "sessions": [],
+            "submittedAt": "2026-10-09T15:10:58.379Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9fb17913-32ad-4beb-8737-484893ccedb5.json"
+}

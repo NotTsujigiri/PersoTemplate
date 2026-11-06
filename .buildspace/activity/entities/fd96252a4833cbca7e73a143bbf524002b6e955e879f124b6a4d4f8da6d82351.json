@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f65922f6-c287-4d6f-99c5-dd2e9e865a99.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f65922f6-c287-4d6f-99c5-dd2e9e865a99.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-02T11:17:01.826Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 331,
+        "description": "Immutable attached evidence",
+        "title": "Splitter, file tools and dependency graph - reproduction and validation.json",
+        "updatedAt": "2026-10-02T11:17:01.911Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f65922f6-c287-4d6f-99c5-dd2e9e865a99.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f65922f6-c287-4d6f-99c5-dd2e9e865a99.json",
+      "properties": {
+        "artifact": {
+          "hash": "703bad4966cdaa4a219fe60f13c9e53019189e47a461c0d888af0dc25423b139",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/703bad4966cdaa4a219fe60f13c9e53019189e47a461c0d888af0dc25423b139",
+          "mime": "application/json",
+          "size": 67044
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f65922f6-c287-4d6f-99c5-dd2e9e865a99.json"
+}

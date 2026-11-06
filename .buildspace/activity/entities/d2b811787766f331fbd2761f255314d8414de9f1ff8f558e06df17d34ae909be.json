@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a390751-896e-42ae-8f0f-b8310c137ec9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a390751-896e-42ae-8f0f-b8310c137ec9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.293Z",
+        "createdBy": "system:authorized-bootstrap",
+        "description": "Immutable planning source and design evidence",
+        "title": "Independent backend foundation review",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "system:authorized-bootstrap"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a390751-896e-42ae-8f0f-b8310c137ec9.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a390751-896e-42ae-8f0f-b8310c137ec9.json",
+      "properties": {
+        "artifact": {
+          "hash": "fa1d2387d3b00f708f6e9ce8b0a06a77d53000a3c00a00dffc7e6fb7a6612e4f",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/fa1d2387d3b00f708f6e9ce8b0a06a77d53000a3c00a00dffc7e6fb7a6612e4f",
+          "mime": "text/plain",
+          "name": "Independent backend foundation review",
+          "size": 323
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a390751-896e-42ae-8f0f-b8310c137ec9.json"
+}

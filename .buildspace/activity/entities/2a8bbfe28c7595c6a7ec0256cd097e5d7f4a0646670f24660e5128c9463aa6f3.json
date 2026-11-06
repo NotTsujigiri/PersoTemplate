@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/de46621e-6093-4972-9719-76b0c8eafdc9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/de46621e-6093-4972-9719-76b0c8eafdc9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T03:54:12.595Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 730,
+        "description": "Immutable attached evidence",
+        "title": "Splitter overview includes nested panes after reported delay.png",
+        "updatedAt": "2026-10-19T03:54:32.994Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/de46621e-6093-4972-9719-76b0c8eafdc9.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/de46621e-6093-4972-9719-76b0c8eafdc9.json",
+      "properties": {
+        "artifact": {
+          "hash": "b5b455122dea438bd18145a556d4e1405470a30c8d3708e778f8755d82760952",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/b5b455122dea438bd18145a556d4e1405470a30c8d3708e778f8755d82760952",
+          "mime": "image/png",
+          "size": 372714
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/de46621e-6093-4972-9719-76b0c8eafdc9.json"
+}

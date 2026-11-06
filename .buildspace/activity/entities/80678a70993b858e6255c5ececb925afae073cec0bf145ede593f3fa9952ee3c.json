@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f465093-938e-4d1d-a75a-b987577dd89e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f465093-938e-4d1d-a75a-b987577dd89e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T15:31:24.955Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 686,
+        "description": "",
+        "title": "- Committed 3185bf2: require and record a connected positive graph baseline; unchanged 75% zoom assertion passes. Capture samples even if readiness fails.\n- Ind",
+        "updatedAt": "2026-10-18T15:31:39.279Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f465093-938e-4d1d-a75a-b987577dd89e.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f465093-938e-4d1d-a75a-b987577dd89e.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Committed 3185bf2: require and record a connected positive graph baseline; unchanged 75% zoom assertion passes. Capture samples even if readiness fails.\n- Independent inspection reviewer approved both test-only files; strict test-project compilation and all six focused browser cases pass, including exact repeated-component values.\n- Native failure remains unexplained: narrow Windows event query found no record. Added only phase/PID/memory diagnostics around the affected worker lifecycle; no credentials or requests are logged.\n- Run the complete checkpoint on this commit with the main app idle, then restart the app for final component/type/property inspection. No native-fix claim or weakened check."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f465093-938e-4d1d-a75a-b987577dd89e.json"
+}

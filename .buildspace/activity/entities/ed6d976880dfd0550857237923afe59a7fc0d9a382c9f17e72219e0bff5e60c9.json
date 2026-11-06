@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0bd7ea5f-cf4a-43c9-a9b3-e5a130a8f8a6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0bd7ea5f-cf4a-43c9-a9b3-e5a130a8f8a6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-14T10:54:49.975Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 505,
+        "description": "Extended Checks discovery to the repository manifest and declared active workspace packages. The Node provider reads explicit test file patterns and source declarations without executing modules; files and individually selectable cases use the shared catalog and repository folder tree. Inactive packages remain excluded. Dynamic registrations, ambiguous names, unsupported runner options and additional custom command steps expose discovery limitations while their containing file/package remains runnable.\n\nValidation: persistent unchanged reproduction returned no workspace tests; corrected output exactly matches the expected Engine file and cases (.harness/workspace-discovery-before and .harness/workspace-discovery). 13 focused backend checks and 6 browser checks passed; screenshots under Systems/Depth3/HarnessApp/test-results-workspace-discovery were inspected. build.ps1 passed, including both mandatory type checks with zero violations. After a guarded restart, the live catalog exposes 197 Node test files and 656 case/suite entries, including RelationEngine's 22 files and 104 cases, with no discovery errors (.harness/workspace-discovery-live.json).\n\nScope: root checkpoint execution wiring and existing test failures were not changed. Human review of discovery remains with the parent review task.",
+        "title": "Discover deterministic checks across active workspaces",
+        "updatedAt": "2026-10-14T11:29:48.337Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0bd7ea5f-cf4a-43c9-a9b3-e5a130a8f8a6.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0bd7ea5f-cf4a-43c9-a9b3-e5a130a8f8a6.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0bd7ea5f-cf4a-43c9-a9b3-e5a130a8f8a6.json"
+}

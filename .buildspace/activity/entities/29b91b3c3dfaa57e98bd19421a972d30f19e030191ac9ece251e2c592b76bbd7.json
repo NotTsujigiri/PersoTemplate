@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1a0c4b-d29f-4d5a-a5ac-091c92ac39d6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1a0c4b-d29f-4d5a-a5ac-091c92ac39d6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T08:49:26.964Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "Foundation full checkpoint verification",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1a0c4b-d29f-4d5a-a5ac-091c92ac39d6.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1a0c4b-d29f-4d5a-a5ac-091c92ac39d6.json",
+      "properties": {
+        "artifact": {
+          "hash": "3033d4009732dd29306b6b3bb1de1f59e7f0d9f4a0c5188f5afc447a1cbc69d2",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/3033d4009732dd29306b6b3bb1de1f59e7f0d9f4a0c5188f5afc447a1cbc69d2",
+          "mime": "text/plain",
+          "size": 15431
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ce1a0c4b-d29f-4d5a-a5ac-091c92ac39d6.json"
+}

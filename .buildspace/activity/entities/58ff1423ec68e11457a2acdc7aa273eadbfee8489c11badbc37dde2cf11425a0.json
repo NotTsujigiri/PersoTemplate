@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47485669-8585-46e5-8a14-4fa91191eca8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47485669-8585-46e5-8a14-4fa91191eca8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T22:56:30.701Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 298,
+        "description": "Immutable attached evidence",
+        "title": "Nested splitter layout after repeated operations.png",
+        "updatedAt": "2026-09-30T22:56:30.809Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47485669-8585-46e5-8a14-4fa91191eca8.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47485669-8585-46e5-8a14-4fa91191eca8.json",
+      "properties": {
+        "artifact": {
+          "hash": "e0a3dbe7b2692c73a4f7f86d8ec02f15bb233ef4945894a97c7a2ca83ac41fdf",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/e0a3dbe7b2692c73a4f7f86d8ec02f15bb233ef4945894a97c7a2ca83ac41fdf",
+          "mime": "image/png",
+          "size": 59121
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/47485669-8585-46e5-8a14-4fa91191eca8.json"
+}

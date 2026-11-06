@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5227592-7f3f-413d-8c68-9401e30f39c4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5227592-7f3f-413d-8c68-9401e30f39c4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T03:49:46.643Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 728,
+        "description": "- Verified already fixed: explicit Preview open bypasses restoration of the expired address.\n- browser.test.ts passes replacement, invalid URL rejection and recovery after failed restoration.\n- No additional production change was needed.",
+        "title": "Open replacement Preview even when the previous address has expired",
+        "updatedAt": "2026-10-19T18:08:20.781Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5227592-7f3f-413d-8c68-9401e30f39c4.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5227592-7f3f-413d-8c68-9401e30f39c4.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 1,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5227592-7f3f-413d-8c68-9401e30f39c4.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5227592-7f3f-413d-8c68-9401e30f39c4.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:20:57.878Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T18:08:20.781Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5227592-7f3f-413d-8c68-9401e30f39c4.json"
+}

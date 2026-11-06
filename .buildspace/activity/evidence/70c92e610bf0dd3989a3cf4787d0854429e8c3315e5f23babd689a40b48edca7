@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-08",
+  "scope": "Parent task start/end boundaries, sibling-only execution relations, and six approved MVP prerequisite repairs.",
+  "implemented": [
+    "Expanded parents expose a start circle below children and an end circle above.",
+    "Containment connects each source child to parent start and each terminal child to parent end, recursively, without storing invented prerequisites.",
+    "Model invariant rejects prerequisite, review-target and correction relations across immediate-parent boundaries.",
+    "Guarded atomic mutation preserves a protected gate unless the approved sibling-level replacement already exists."
+  ],
+  "live": {
+    "restart": "completed with explicit user authorization",
+    "repairRevision": 407,
+    "repairedCrossBoundaryPrerequisites": 6,
+    "remainingCrossBoundaryRelations": 0,
+    "modelDiagnostics": 0,
+    "visibleTaskNodes": 46,
+    "visiblePaths": 84,
+    "backwardExecutionPaths": 0,
+    "allExpandedPaths": 130,
+    "allExpandedBackwardPaths": 0
+  },
+  "verification": {
+    "build": "passed",
+    "typeSafety": "passed: 896 authored files, zero violations",
+    "modelTests": {
+      "passed": 22,
+      "failed": 0
+    },
+    "focusedReadinessSemanticsBoundaries": {
+      "passed": 26,
+      "failed": 0
+    },
+    "focusedBrowser": {
+      "passed": 6,
+      "failed": 0,
+      "scenarios": [
+        "nested graph",
+        "indirect edge color",
+        "plan review",
+        "viewport",
+        "range placement",
+        "undated ranges"
+      ]
+    },
+    "checkpointCore": {
+      "passed": 199,
+      "failed": 3,
+      "failures": [
+        "planning-state-history.test.ts: expected blocked state conflicts with blocker-free normalization to queued",
+        "review-placement.test.ts: fixture completes a parent with unfinished children",
+        "review-task-completion.test.ts: expects reviewer-authority error but required approval guard rejects first"
+      ]
+    },
+    "checkpoint": "Not green; stopped at core stage before full browser suite",
+    "log": "C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.harness/task-boundaries-checkpoint.log"
+  },
+  "screenshots": "Systems/Depth3/HarnessApp/test-results/nested-task-graph-ui-neste-d3af5-al-endpoints-when-expanding/",
+  "review": "Awaiting human plan review; no human approval or task acceptance recorded."
+}

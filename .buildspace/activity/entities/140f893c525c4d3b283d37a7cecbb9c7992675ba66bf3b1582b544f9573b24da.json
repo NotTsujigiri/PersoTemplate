@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c8e31be9-1f12-4243-bccb-a82a36cc8600.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c8e31be9-1f12-4243-bccb-a82a36cc8600.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-27T02:19:29.540Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1190,
+        "description": "",
+        "title": "1. Exploration and feasibility",
+        "updatedAt": "2026-10-27T02:19:53.210Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c8e31be9-1f12-4243-bccb-a82a36cc8600.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c8e31be9-1f12-4243-bccb-a82a36cc8600.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c8e31be9-1f12-4243-bccb-a82a36cc8600.json"
+}

@@ -1,0 +1,21 @@
+# Ready for human review
+
+[Open the existing MVP review](http://127.0.0.1:43130/?template=personal&community=private&channel=broccoli-buildspace&space=99a62c14-535f-4d9a-9ab2-642ed280b795&area=timeline&task=graph%3A%2F%2Fplanning-26535745-4644-4770-af7c-1980c773377b%2Fentries%2F4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json&node=graph%3A%2F%2Fplanning-26535745-4644-4770-af7c-1980c773377b%2Fentries%2F04a48ac6-3f02-4dee-8148-7af28470b357.json). This is implementation delivery, not human acceptance.
+
+## Final captured verification
+
+- Target revision: 231. Check run: c9d8c5df-5922-4a34-be36-ae9ec19addbe.
+- TheBroccoli: build, 128 server tests and 104 browser tests passed.
+- PersoTemplate: both acceptance tests passed. BtrTemplate: build passed.
+- All checks ran against isolated captured source; none changed its fingerprints. Installed dependency copies were used, not a fresh dependency installation.
+- Actual candidate Preview fills the available height and its annotations default to this review with immutable candidate provenance. The walkthrough sent zero agent messages and created zero review comments.
+
+## What to review
+
+Use Overview, Changes and Preview at the top of Persistent planning and review MVP. Attached reference images retain their reservations. Architecture and boundary reports document independent review rounds, reproductions and fixes. The latest passed run supersedes earlier failed or withdrawn rounds, which remain visible as history.
+
+The ordinary Ergonomics playground is separate from the real board: 1,500 planning nodes, 18 chats, including a 5,000-message conversation, backed by three disposable repositories. The isolated candidate Preview also has its own ordinary populated playground. No demo-only product subsystem was added.
+
+## Remaining human boundary
+
+The top-level MVP stays Waiting, with your review pending. No real-repository commit, merge or human approval was recorded. Configure your Pi-compatible provider key in the app for a real model smoke test; no paid provider request was made during implementation. Scheduled execution remains disabled.

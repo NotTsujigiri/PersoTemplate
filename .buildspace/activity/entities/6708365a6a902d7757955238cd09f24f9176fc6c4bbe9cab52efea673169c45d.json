@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a70a14-a5dc-4de3-88d2-da62ba4aef0d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a70a14-a5dc-4de3-88d2-da62ba4aef0d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T06:49:38.393Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 982,
+        "description": "User-reported issue from the default-template discussion. Keep this separate from that design discussion.\n\nUser Comment 6 — verbatim:\nunrelated  but it does not make sense in my opinion that the \"buildspace\" node has an activity board entry component. We need to address that so write it down as an issue in input or something like that.\n\nObserved page evidence:\n- In Btr Organisation → Btr → Buildspaces, the selected \"The Broccoli\" node (2 repositories) shows both \"Activity board entry\" and \"Buildspace\" components in the Node editor.\n- Page URL: http://localhost:43130/?template=btr-organisation&community=btr&channel=buildspaces&space=7c51ae2d-0a0a-4763-9318-4e503ae6b85f&area=spaces\n- Selected element: \"Activity board entry\", relational-ui-node-editor > div:nth-of-type(1) > section:nth-of-type(1) > header.\n- Evidence is the user's Comment 6 screenshot in this conversation; the page's space parameter is navigation context, not an asserted canonical identity for the inspected node.\n\nRequested outcome: investigate and correct why a Buildspace node carries Activity board entry semantics. Preserve needed buildspace information through its appropriate owning model; do not merely hide the component in the UI. No cause or implementation has been established yet.",
+        "title": "Buildspace nodes unexpectedly carry an Activity board entry component",
+        "updatedAt": "2026-10-22T06:49:38.864Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a70a14-a5dc-4de3-88d2-da62ba4aef0d.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a70a14-a5dc-4de3-88d2-da62ba4aef0d.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a70a14-a5dc-4de3-88d2-da62ba4aef0d.json"
+}

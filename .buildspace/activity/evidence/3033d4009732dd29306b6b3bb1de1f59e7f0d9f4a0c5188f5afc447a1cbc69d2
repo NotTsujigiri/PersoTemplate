@@ -1,0 +1,168 @@
+
+> the-broccoli@0.1.0 test:all
+> npm run build && npm test && npm run test:browser
+
+
+> the-broccoli@0.1.0 build
+> npm run build --workspace @super-app/mcp-contributor && npm --workspace @broccoli/harness run check
+
+
+> @super-app/mcp-contributor@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @broccoli/harness@0.1.0 check
+> node syntax-check.mjs
+
+
+> the-broccoli@0.1.0 test
+> npm --workspace @broccoli/harness test
+
+
+> @broccoli/harness@0.1.0 test
+> node --test test/*.test.mjs
+
+✔ answer reserves the checkout while answer evidence is persisted (3147.1161ms)
+✔ initial prompt persistence failure leaves the checkout available and task unstarted (1339.8086ms)
+✔ failed resume keeps its question in the feed and records the failed resume (1193.4006ms)
+✔ a real failed write does not poison later prompt persistence (1930.485ms)
+✔ preview input, refresh, stop and restart preserve the app server and restore the page (2003.7957ms)
+✔ preview drag releases the pointer and validates coordinates (962.6511ms)
+✔ own application preview waits for authenticated shell hydration and its theme (733.2338ms)
+✔ file filters distinguish root commit, range, worktree, deleted and untracked files (3784.0137ms)
+✔ one task edits two repositories; locks, checks and review cover both (15219.582ms)
+✔ test output becomes result rows without treating diagnostics as tests (0.4868ms)
+✔ inline changes retain the whole file and both line numbers (453.0002ms)
+✔ historical source preserves exact revision bytes and reports deleted or unsupported files (2436.488ms)
+✔ safe npm pipeline records real exits and serializes nested stage evidence (7367.3965ms)
+✔ a failed npm stage stops its pipeline and reports remaining stages as not executed (1987.4969ms)
+✔ npm scripts with parent hooks retain opaque execution and execute the hooks (2826.5992ms)
+✔ arbitrary shell syntax, npm options and non-pipeline scripts are never split (5.6731ms)
+✔ recorded pipeline stages contain their tests and local diagnostics (4.141ms)
+✔ nested TAP suites preserve reported parent child relationships (0.5422ms)
+✔ unstructured output does not invent test results or pipeline stages (0.204ms)
+✔ items, optional conversations, questions and feed survive restart without starting saved work (6868.368ms)
+✔ busy or concurrent immediate starts do not create orphan conversations (2203.8563ms)
+✔ accepted changes remain feed attention until commit and queue state exposes canonical blockers (6872.1926ms)
+✔ feed quotes the latest written assistant result with bounded preview and preserves error details (1.0239ms)
+✔ file operations reject traversal and stale overwrites; batch outcomes identify errors (1152.2171ms)
+✔ sessions capture edits, survive restart and move to another checkout (3388.1873ms)
+✔ commit gate rejects failed and stale checks then accepts current checked changes (9985.4913ms)
+✔ command denial prevents execution and cancellation ends a running command (1255.3287ms)
+✔ HTTP requires token, rejects foreign origins and supports human edits (1057.1722ms)
+✔ dismissed notification snapshots survive resolution and restart, restore and collect feedback without running work (1735.965ms)
+✔ text diff preserves unchanged context and addition/removal line numbers (2.1134ms)
+✔ official Pi SDK executes a workspace call with a deterministic local provider (1924.8535ms)
+✔ official Pi completes an edit, reusable verification and review with a deterministic model (8952.1943ms)
+✔ parallel branches and review correction loops retain distinct ranges and real endpoints (56.5828ms)
+✔ submitted source blocks every legacy execution path and exact files survive live edits (3029.5005ms)
+✔ source-mutating checks cannot affect live files or make later evidence pass (4763.6891ms)
+✔ export restores portable identity, evidence and historical reads without restoring live approval (2405.9693ms)
+✔ successor exposes earlier passed checks as stale until explicit human acceptance (3948.5546ms)
+✔ parallel reviews share a target; edits remain locked until both reviews release it (457.0059ms)
+✔ title-only graph CRUD is atomic, restart-stable and context checked without execution (123.3883ms)
+✔ idempotency survives restart, changed request and stale/concurrent writes cannot overwrite (128.3165ms)
+✔ queue brackets move/reindex atomically and containment is independent from prerequisites (130.2925ms)
+✔ review freezes targets, blocks author impersonation, requires discussion closure and seals passed history (397.0302ms)
+✔ failed review successor preserves obligation and only transfers explicit pending gates (346.1744ms)
+✔ real MCP discovery/calls and UI invocation share one owner and actor boundary (43.4883ms)
+✔ internal result publication survives another owner holding the writer lock (138.0736ms)
+✔ evidence attachment preserves content and session range; frozen targets reject attachment (162.0704ms)
+✔ preview configuration repairs only obsolete built-ins and follows the actual app origin (2.7927ms)
+✔ default combined preview has isolated origin, authentication and runtime state (2154.7095ms)
+✔ supervised backend restart preserves task data and authentication (9948.6848ms)
+✔ selected check batches deduplicate aliases, hold locks and only full configured selection satisfies verification (5852.2215ms)
+✔ capture and consolidate inputs, enforce acyclic prerequisites, queue only after human acceptance (11921.8752ms)
+✔ review becomes stale on changes; commit evidence travels in Git notes and artifacts import without trusting old acceptance (7983.0751ms)
+✔ fork isolates files and permits distinct checkouts while shared checkout is locked (2195.7079ms)
+✔ clearing a file review revokes acceptance before commit (3327.8682ms)
+✔ dismissing an accepted stale result releases its obsolete commit requirement (3408.6752ms)
+✔ an unanswered question pauses overlapping queued work until the decision is resolved (1909.6767ms)
+✔ verification gates reject changed default and project commands without requiring file changes (8083.6845ms)
+✔ a newer failing rerun supersedes an earlier passing check on unchanged files (3968.5606ms)
+ℹ tests 58
+ℹ suites 0
+ℹ pass 58
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46091.2771
+
+> the-broccoli@0.1.0 test:browser
+> npm --workspace @broccoli/harness run test:browser
+
+
+> @broccoli/harness@0.1.0 test:browser
+> playwright test -c test/playwright.config.mjs
+
+
+Running 63 tests using 1 worker
+
+(node:28124) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 test\annotation-ui.spec.mjs:2:1 › host annotation styles render while inline scripts and style attributes remain blocked (145ms)
+  ok  2 test\annotations-11-ui.spec.mjs:3:1 › annotation cleanup keeps panels, shared dropdown gestures and application tabs coherent (439ms)
+  ok  3 test\annotations-11-ui.spec.mjs:93:1 › dropdown wheel changes enabled choices without opening menus (2.4s)
+  ok  4 test\annotations-11-ui.spec.mjs:125:1 › User owns personal information and preserves edits across tabs and reload (2.6s)
+  ok  5 test\annotations-11-ui.spec.mjs:173:1 › wheel selection skips disabled options, clamps ends, and uses change events (1.6s)
+  ok  6 test\annotations-4-ui.spec.mjs:4:1 › empty viewer and compact text editor tools match the four annotations (593ms)
+  ok  7 test\annotations-8-ui.spec.mjs:3:1 › file selection, local view tools and retained buildspace tabs match the requested contract (1.5s)
+  ok  8 test\annotations-8-ui.spec.mjs:152:1 › retained tabs preserve unsaved editor, scroll, and preview URL without refetching files (889ms)
+  ok  9 test\annotations-8-ui.spec.mjs:224:1 › selection modifiers preserve anchor, toggle rows and respect canceled dirty-file selection (509ms)
+  ok 10 test\annotations-8-ui.spec.mjs:270:1 › shared view toolbar changes only its owned tools and supports empty selections (955ms)
+  ok 11 test\annotations-ui.spec.mjs:3:1 › send saves only composer annotations; Save annotations saves the remaining list (3.1s)
+  ok 12 test\annotations-ui.spec.mjs:51:1 › ordinary-channel annotations choose a model, preserve failed work and prevent duplicate submission (949ms)
+  ok 13 test\annotations-ui.spec.mjs:164:1 › invalid annotation selection never creates a conversation or mixes buildspaces (580ms)
+  ok 14 test\async-navigation-ui.spec.mjs:52:1 › late view refresh cannot hide the current conversation or change its controls (1.7s)
+  ok 15 test\async-navigation-ui.spec.mjs:100:1 › delayed submission keeps its target and preserves newer text across channel navigation (2.6s)
+  ok 16 test\async-navigation-ui.spec.mjs:188:1 › a pending item queue action cannot create duplicate conversations (1.1s)
+  ok 17 test\async-navigation-ui.spec.mjs:226:1 › pending intake preserves later text and captures the selected model (1.1s)
+  ok 18 test\async-navigation-ui.spec.mjs:285:1 › check tree marks changed repository commands out of date (1.7s)
+  ok 19 test\async-navigation-ui.spec.mjs:341:3 › late changes file response cannot replace a newer file selection (1.1s)
+  ok 20 test\async-navigation-ui.spec.mjs:341:3 › late source file response cannot replace a newer file selection (876ms)
+  ok 21 test\background-state-ui.spec.mjs:42:1 › visible model choices and unsent drafts survive task events, refresh and channel changes (7.4s)
+  ok 22 test\background-state-ui.spec.mjs:160:1 › feed preserves an answer draft during incoming events and delayed resume never pulls another channel back (4.5s)
+  ok 23 test\check-selection-ui.spec.mjs:4:1 › Checks has a selectable new-run tree and newest-first history with context-menu-only Run (1.1s)
+  ok 24 test\check-tree-ui.spec.mjs:6:1 › checks, run history, pipeline steps and local diagnostics share one tree (937ms)
+  ok 25 test\check-tree-ui.spec.mjs:125:1 › npm test aliases share a check node without dropping old command history (1.2s)
+  ok 26 test\checkpoint-surface-ui.spec.mjs:2:1 › checkpoint review keeps chat beside Files Checks Preview and uses a repository tree (1.5s)
+  ok 27 test\context-chat-ui.spec.mjs:14:1 › sending from default buildspace chat creates a real conversation with a feed result (2.0s)
+  ok 28 test\context-chat-ui.spec.mjs:45:1 › pending context chat keeps original target and newer draft without pulling the user back (1.8s)
+  ok 29 test\contributions-ui.spec.mjs:3:1 › saved items do not start work; conversations are optional and feed never forces navigation (3.0s)
+  ok 30 test\contributions-ui.spec.mjs:58:1 › agent questions can be answered in the feed without opening a conversation (2.4s)
+  ok 31 test\conversation-settings-ui.spec.mjs:8:1 › conversation definition stays editable without running work and queue keeps its identity (2.9s)
+  ok 32 test\feed-ui.spec.mjs:3:1 › Feed restores the mock categories, configurable feeds, feedback and dismissed entries (1.4s)
+  ok 33 test\feed-ui.spec.mjs:136:1 › Feed pending actions preserve newer feedback and prevent conflicting approvals (1.2s)
+  ok 34 test\historical-source-ui.spec.mjs:8:1 › historical source stays at the selected revision and review-only chrome is absent (18.4s)
+  ok 35 test\layout-ui.spec.mjs:2:1 › panel splitters resize with keyboard and pointer and persist after reload (2.1s)
+  ok 36 test\layout-ui.spec.mjs:58:1 › file panes fit compact viewports and clamp restored widths without losing resize persistence (724ms)
+  ok 37 test\native-shell-ui.spec.mjs:3:1 › actual application uses template dropdown, channels and cross-template pins (1.4s)
+  ok 38 test\native-shell-ui.spec.mjs:92:1 › deep-link pages and same-channel return preserve the actual shell (661ms)
+  ok 39 test\native-shell-ui.spec.mjs:121:1 › feed attention remains visible after channel, expansion and template navigation (1.1s)
+  ok 40 test\navigation-state-ui.spec.mjs:79:1 › dirty editor guards channel, template and pinned destinations without losing the edit (3.2s)
+  ok 41 test\navigation-state-ui.spec.mjs:177:1 › conversation text and model survive channels, reload and a deep Help round trip (3.8s)
+  ok 42 test\navigation-state-ui.spec.mjs:252:1 › saving a file preserves newer edits and prevents duplicate saves (3.0s)
+  ok 43 test\pages-ui.spec.mjs:4:1 › model selector fills its available width (2.0s)
+  ok 44 test\pages-ui.spec.mjs:30:1 › Help and Settings are tabs and returning preserves the composer (4.5s)
+  ok 45 test\pages-ui.spec.mjs:107:1 › Settings saves only the selected topic and provider refresh preserves the composer model (3.0s)
+  ok 46 test\planning-regressions-ui.spec.mjs:4:1 › queued saves preserve priority, historical fields exclude live drafts, and relations refresh (2.2s)
+  ok 47 test\planning-regressions-ui.spec.mjs:98:1 › open review-policy drafts survive notifications and reject a concurrent policy overwrite (1.2s)
+  ok 48 test\planning-ui.spec.mjs:5:1 › planning board CRUD, graph review, grouped feedback, exact changes and history (3.8s)
+  ok 49 test\preview-default-ui.spec.mjs:3:1 › default preview shows the hydrated combined template application without recursive preview or URL credentials (1.6s)
+  ok 50 test\preview-drag-ui.spec.mjs:4:1 › preview forwards scaled pointer drags without an extra click and retains ordinary clicks (2.5s)
+  ok 51 test\preview-settings-ui.spec.mjs:7:1 › preview applications are configured in Settings without launching browsers or losing invalid edits (3.1s)
+  ok 52 test\profile-controls-ui.spec.mjs:4:1 › personal list panels use compact accessible icons and the pinned icon is centered (584ms)
+  ok 53 test\profile-ui.spec.mjs:3:1 › native personal information saves through its owner and rejects a stale open form without losing edits (2.5s)
+  ok 54 test\review-queue-ui.spec.mjs:10:1 › queued work is reviewed, accepted and committed through the feed before the next item starts (13.3s)
+  ok 55 test\revision-navigation-ui.spec.mjs:9:1 › a late revision response cannot leave the chosen channel or replace its draft (3.3s)
+  ok 56 test\top-tabs-ui.spec.mjs:3:1 › Feed, private space, Help and Settings switch separate panels and retain the private draft (2.8s)
+  ok 57 test\top-tabs-ui.spec.mjs:58:1 › file tree has a real scroll container after expanding folders (554ms)
+  ok 58 test\top-tabs-ui.spec.mjs:94:1 › reselecting the current application tab keeps edits and the selected settings topic (471ms)
+  ok 59 test\ui.spec.mjs:4:1 › agent and human edits remain reviewable through named checks and full-file views (11.4s)
+  ok 60 test\verification-settings-ui.spec.mjs:7:1 › Verification settings distinguish inherited primary policy and required attached-repository overrides (2.1s)
+  ok 61 test\workflow-ui.spec.mjs:3:1 › live browser interaction and contextual screenshot feedback survive export (3.6s)
+  ok 62 test\zbuildspace-ui.spec.mjs:8:1 › checkpoint file bush has three roots and edits/checks target the selected system (7.4s)
+  ok 63 test\zbuildspace-ui.spec.mjs:114:1 › compact checkpoint keeps model allowance and four review tabs (1.3s)
+
+  63 passed (2.8m)

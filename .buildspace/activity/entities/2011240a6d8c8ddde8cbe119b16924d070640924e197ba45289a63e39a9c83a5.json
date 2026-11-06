@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6e8312bf-7c97-4562-96cb-b1a7796edf20.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6e8312bf-7c97-4562-96cb-b1a7796edf20.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:57:49.459Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 656,
+        "description": "",
+        "title": "Controlled delivery reproduced exact data loss on unchanged production: hold both acknowledgements, deliver the older Changed value after a newer Original edit,",
+        "updatedAt": "2026-10-18T09:58:03.737Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6e8312bf-7c97-4562-96cb-b1a7796edf20.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6e8312bf-7c97-4562-96cb-b1a7796edf20.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7fc95ecf-7948-4405-9be8-06c78d32ced4.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Controlled delivery reproduced exact data loss on unchanged production: hold both acknowledgements, deliver the older Changed value after a newer Original edit, then reopen; runtime and inspector reverted to Changed. Before2 actual differs from authored expected. WebComponent transport now sequences updates and accepts only the latest matching value revision. Identical recording and all seven focused preview consumers pass; protocol validation test passes. Independent code review and full checkpoint are still required."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6e8312bf-7c97-4562-96cb-b1a7796edf20.json"
+}

@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e52bdf58-395b-41d3-a698-7372689e8a81.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e52bdf58-395b-41d3-a698-7372689e8a81.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Persist the agreed design direction and a bounded implementation plan before app storage exists.\n\nScope\n\n• This plan pack only; no runtime changes.\n\nSuccess criteria\n\n1. Tasks, goals, criteria, dependencies and review checkpoints are explicit.\n\n2. The pack has one canonical representation, mechanically validated references and a specified handoff procedure; the actual import/restart procedure is tested at T03.\n\nEvidence\n\n• plan.json\n\n• PLAN.md\n\n• VALIDATION.json\n\nPlanning artifact only. No implementation task is complete.",
+        "title": "Capture the bootstrap MVP plan",
+        "updatedAt": "2026-10-07T11:15:03.363Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e52bdf58-395b-41d3-a698-7372689e8a81.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e52bdf58-395b-41d3-a698-7372689e8a81.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e52bdf58-395b-41d3-a698-7372689e8a81.json"
+}

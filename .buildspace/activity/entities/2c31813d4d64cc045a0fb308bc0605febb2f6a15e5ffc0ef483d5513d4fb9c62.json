@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6df1bd1-d4ad-44b8-8580-14b1b229e9bd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6df1bd1-d4ad-44b8-8580-14b1b229e9bd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T08:53:08.329Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 643,
+        "description": "",
+        "title": "The complete browser run recorded a menu timing failure: the test sampled Move to Backlog before the anchored surface became visible and skipped the action. Exa",
+        "updatedAt": "2026-10-18T09:07:56.667Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6df1bd1-d4ad-44b8-8580-14b1b229e9bd.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6df1bd1-d4ad-44b8-8580-14b1b229e9bd.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "The complete browser run recorded a menu timing failure: the test sampled Move to Backlog before the anchored surface became visible and skipped the action. Exact before evidence is preserved in .harness/migration-round2-menu-before; only returnDestination and returnPersisted differ."
+          },
+          {
+            "kind": "explain",
+            "text": "The independent inspection reviewer confirmed the menu is deliberately positioned asynchronously. Added a strict visible-menu assertion before reading it; no production code or expected result changed. Focused and complete browser verification are pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6df1bd1-d4ad-44b8-8580-14b1b229e9bd.json"
+}

@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/11b910e9-5c04-4097-9335-6f7cbae34998.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/11b910e9-5c04-4097-9335-6f7cbae34998.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T13:57:52.657Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 334,
+        "description": "## Your checkpoint\nReview the completed cutover, removed predecessor and test/rendered-UI evidence.\n\n## Decision being requested\nIs the behavior preserved, has duplicated knowledge been removed, and do the compiler/runtime checks enforce the intended boundaries?\n\n## Completion\nDo not complete the parent plan until this review passes and every task is complete. A changes request creates another reviewable iteration with explicit feedback responses.",
+        "title": "Review cutover and retained behavior",
+        "updatedAt": "2026-10-08T21:30:58.251Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/11b910e9-5c04-4097-9335-6f7cbae34998.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/11b910e9-5c04-4097-9335-6f7cbae34998.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/11b910e9-5c04-4097-9335-6f7cbae34998.json"
+}

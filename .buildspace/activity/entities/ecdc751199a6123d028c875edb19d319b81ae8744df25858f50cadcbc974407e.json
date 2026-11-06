@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ee15763-169a-4dfe-a047-13d00ad25efe.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ee15763-169a-4dfe-a047-13d00ad25efe.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-02T09:56:11.987Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 328,
+        "description": "Immutable attached evidence",
+        "title": "Scoped data model inspection — validation and independent review.json",
+        "updatedAt": "2026-10-02T09:56:12.078Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ee15763-169a-4dfe-a047-13d00ad25efe.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ee15763-169a-4dfe-a047-13d00ad25efe.json",
+      "properties": {
+        "artifact": {
+          "hash": "1250b98098c80fc721b88d346dbb4552ba0efe7861b7bf46c3fafd84107f17a4",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/1250b98098c80fc721b88d346dbb4552ba0efe7861b7bf46c3fafd84107f17a4",
+          "mime": "application/json",
+          "size": 1719
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ee15763-169a-4dfe-a047-13d00ad25efe.json"
+}

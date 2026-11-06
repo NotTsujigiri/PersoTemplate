@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/08ae63d0-3c6f-4a61-9d1b-6acabd431ce8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/08ae63d0-3c6f-4a61-9d1b-6acabd431ce8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-02T07:57:52.851Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 325,
+        "description": "Immutable attached evidence",
+        "title": "Data model first implementation — verification and review.json",
+        "updatedAt": "2026-10-02T07:57:52.961Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/08ae63d0-3c6f-4a61-9d1b-6acabd431ce8.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/08ae63d0-3c6f-4a61-9d1b-6acabd431ce8.json",
+      "properties": {
+        "artifact": {
+          "hash": "d9cacdd67c7deb3293df179a2b72b9c101ba317859c8be74ddad13cc01338560",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/d9cacdd67c7deb3293df179a2b72b9c101ba317859c8be74ddad13cc01338560",
+          "mime": "application/json",
+          "size": 1822
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/08ae63d0-3c6f-4a61-9d1b-6acabd431ce8.json"
+}

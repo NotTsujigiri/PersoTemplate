@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bc99553d-83c7-4945-b2c5-2ed757f1628e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bc99553d-83c7-4945-b2c5-2ed757f1628e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T23:57:05.546Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 775,
+        "description": "Follow-up to the current implementation task:\nhttp://localhost:43130/?template=personal&community=private&channel=99a62c14-535f-4d9a-9ab2-642ed280b795&space=99a62c14-535f-4d9a-9ab2-642ed280b795&area=timeline&node=graph%3A%2F%2Fplanning-26535745-4644-4770-af7c-1980c773377b%2Fentries%2F0eeb2840-caaa-46e4-a813-d5926c5fcb36.json\n\nDeferred scope: annotation/comment model and derived title\nThe user explicitly moved implementation item 5 here on 2026-10-20 because it needs refinement. Discuss annotations containing 1..n comments, and deriving their displayed title from component content instead of separately authored duplicate title/description state. These changes are not part of the current implementation.\n\nRemaining design questions\n1. What owns Input processing, annotation comments, targets/context, review discussion, entry metadata and non-annotation authored text? Agree the exact component boundaries; the earlier five-component proposal is not an accepted final schema.\n2. How does the title getter choose meaningful content from multiple comments or component combinations, without duplicate authored title state?\n3. What extensions beyond the confirmed first-version per-user acknowledgement timestamp/disposition and Updated at / Updated by rule are needed, including more selective handling of changes and unseen earlier edits?\n4. What further user/agent eligibility or automated-attribution policies are needed beyond the existing authenticated actor contract?\n\nThe current implementation task owns the confirmed attention behavior, node-level Updated by and the agreed UI changes. Do not treat those settled requirements as open questions here. Discuss this deferred scope with the user before implementation.",
+        "title": "Refine remaining Activity board component contracts",
+        "updatedAt": "2026-10-20T00:14:49.557Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bc99553d-83c7-4945-b2c5-2ed757f1628e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bc99553d-83c7-4945-b2c5-2ed757f1628e.json",
+      "properties": {
+        "placement": "queued",
+        "purpose": "design",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bc99553d-83c7-4945-b2c5-2ed757f1628e.json"
+}

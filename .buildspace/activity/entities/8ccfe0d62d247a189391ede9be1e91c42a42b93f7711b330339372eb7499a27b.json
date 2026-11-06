@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/955038bb-a02c-4116-935c-54900ba07de1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/955038bb-a02c-4116-935c-54900ba07de1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T01:35:01.278Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1221,
+        "description": "Deleting a task from the Node editor should remove the task, every contained descendant recursively, and every incident relation of every deleted node in one atomic operation. Users should not have to unlink relations manually, which can remove the task from the displayed graph before it is deleted. Preserve nodes outside the deleted subtree and reconcile their remaining relations and readiness. Keep graph selection on a surviving node after deletion. Handle links to completed reviews without rewriting their captured evidence; the user explicitly requested deletion of the linked work, not alteration of the review. Verify stale revisions and failed operations leave the full tree intact. Reproduce the reported Delete node failure and review the resulting Task graph interaction.\n\nDeleting a node more generally should delete the relations / edge its involved in aswell if they are persisted and not computed. \r\n\r\nCompleted 2026-10-31: Implemented on master in 83f7dc9. Task deletion atomically removes the containment subtree, persisted incident relations and attention records, while preserving completed review evidence and surviving selection. Generic entity-store deletion also removes persisted incident edges. Stale revisions, active review protection and rollback are covered. Thirty focused owner/entity tests and the task deletion browser scenario passed; screenshots reviewed.\r\nCheckpoint: build, type/dependency checks and all 751 model/unit tests passed. The full browser sweep recorded 381 passes and two failures: the selector issue above (fixed and rerun successfully) and the pre-existing Windows newline recovery issue tracked separately in 5bb32ab9-aa94-4b84-bde6-6d059cfec2d4. Service rebuilt and restarted.",
+        "title": "Delete a task together with its descendants and relations",
+        "updatedAt": "2026-10-31T07:08:57.649Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/955038bb-a02c-4116-935c-54900ba07de1.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/955038bb-a02c-4116-935c-54900ba07de1.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/955038bb-a02c-4116-935c-54900ba07de1.json"
+}

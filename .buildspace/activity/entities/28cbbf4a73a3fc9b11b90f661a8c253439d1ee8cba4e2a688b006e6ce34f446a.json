@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9340c981-2661-484a-a04e-367785b6b2e8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9340c981-2661-484a-a04e-367785b6b2e8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T21:48:38.022Z",
+        "createdBy": "agent:codex",
+        "description": "Accepted annotation round 3 plus reservations: same compact editor in overlays, embedded review and full-height batch. Generic ranked context extractors, DOM local navigation, screenshot offsets/pointer bubble, exact selections, multiple typed feedback rows, per-item destinations. Universal context-menu Annotate and selection shortcut. Persist context/evidence and links; creating composer annotations never sends. Replies support discussion. No context-specific duplicate editors.",
+        "title": "Deliver reusable contextual annotations across all surfaces",
+        "updatedAt": "2026-10-17T15:54:17.854Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9340c981-2661-484a-a04e-367785b6b2e8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9340c981-2661-484a-a04e-367785b6b2e8.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9340c981-2661-484a-a04e-367785b6b2e8.json"
+}

@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a0dc0b6-48d7-4b9d-9c49-27431fdb56d5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a0dc0b6-48d7-4b9d-9c49-27431fdb56d5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-02T03:55:42.198Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 314,
+        "description": "Immutable attached evidence",
+        "title": "Runtime data model view with cross-type instance invariants — design proposal",
+        "updatedAt": "2026-10-02T03:55:42.303Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a0dc0b6-48d7-4b9d-9c49-27431fdb56d5.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a0dc0b6-48d7-4b9d-9c49-27431fdb56d5.json",
+      "properties": {
+        "artifact": {
+          "hash": "8bae77cbb7348d4060cbc15f1fc0aac6d0fb641c1438535622ce1126f66f5d6b",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/8bae77cbb7348d4060cbc15f1fc0aac6d0fb641c1438535622ce1126f66f5d6b",
+          "mime": "image/png",
+          "size": 1334964
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a0dc0b6-48d7-4b9d-9c49-27431fdb56d5.json"
+}

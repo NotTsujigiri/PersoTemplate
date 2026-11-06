@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/99d7cfcb-12dd-4805-ad50-c2242d48a84b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/99d7cfcb-12dd-4805-ad50-c2242d48a84b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T17:10:37.222Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 277,
+        "description": "Implemented and verified, awaiting human review.\n\nBetter Auth 1.7.6 now owns local browser sign-in and sessions, backed by Node 24's built-in SQLite driver. The machine-local auth store is excluded from versioned buildspace artifacts. Launcher links are single-use and valid for two minutes; the browser receives a host-only HttpOnly cookie with a 30-day absolute lifetime. Task URLs remain credential-free. Separate tool sessions, central Host/Origin checks and distinct managed-preview hosts protect the local HTTP boundary. Expired/revoked/invalid sessions are rejected. Old 127.0.0.1 bookmarks redirect to localhost without losing the selected task.\n\nVerified the original failure before editing, then passed the same exact create/update-link scenario after all authenticated tabs close. Automated coverage also passes browser/server restart, preview isolation, session expiry/revocation and launcher reuse. In the actual Codex browser, closed every app tab, confirmed zero remaining tabs, reopened the tool-returned design-task link and verified the exact task loaded. The live session also survived the app restart and old-URL redirect.\n\nFinal npm run test:all: 135 backend tests and 108 browser tests passed. Lifecycle regressions cover asynchronous authentication during shutdown and unused browser preconnections. The checkpoint also exposed a queue-navigation race; a controlled reproduction and fix ensure delayed queue/trigger responses cannot override a newer navigation.\n\nEvidence attached: implementation/verification report, exact before/expected/after results, reopened task screenshot, queue-navigation reproduction/fix logs and final full checkpoint log.\n\nScope: local browser/API transport, not per-person/buildspace authorization, workspace encryption or an OS sandbox. Separate MCP transport authentication remains unchanged. Changes remain uncommitted; the parent MVP review is still awaiting the user's review and has not been accepted.",
+        "title": "Preserve browser sign-in when reopening planning tool links",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/99d7cfcb-12dd-4805-ad50-c2242d48a84b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/99d7cfcb-12dd-4805-ad50-c2242d48a84b.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/99d7cfcb-12dd-4805-ad50-c2242d48a84b.json"
+}

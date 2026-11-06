@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9248aa3d-356e-4e9d-8af6-71ee06a09162.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9248aa3d-356e-4e9d-8af6-71ee06a09162.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T04:43:32.559Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 616,
+        "description": "",
+        "title": "Agent review, contributor migration (round 7):\n- Supply provenance when filtering browser-local federation nodes and edges.\n- Reference repository-owned edges w",
+        "updatedAt": "2026-10-18T04:53:42.826Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9248aa3d-356e-4e9d-8af6-71ee06a09162.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9248aa3d-356e-4e9d-8af6-71ee06a09162.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Agent review, contributor migration (round 7):\n- Supply provenance when filtering browser-local federation nodes and edges.\n- Reference repository-owned edges without claiming their ownership.\n- Publish lifecycle value constraints in component/property data models.\n- Acquire partial graphs and their provenance root from one consistent service snapshot.\nCorrections and regression coverage are in progress; this checkpoint is not approved yet."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9248aa3d-356e-4e9d-8af6-71ee06a09162.json"
+}

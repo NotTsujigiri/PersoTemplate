@@ -1,0 +1,538 @@
+
+> the-broccoli@0.1.0 test:all
+> npm run build && npm test && npm run test:browser
+
+
+> the-broccoli@0.1.0 build
+> npm run build --workspace @super-app/mcp-contributor && node app/build-template-services.mjs && npm --workspace @broccoli/harness run check
+
+
+> @super-app/mcp-contributor@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @super-app/browser-test-support@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @super-app/hosting-contract@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @super-app/relational-engine@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @super-app/relational-ui-contributor@0.1.0 build
+> node Depth0/Theme/generate-token-help.mjs && node ../../../scripts/check-relational-ui-components.mjs && tsc -b tsconfig.json && node ../../../scripts/check-relational-ui-components.mjs --declarations && node --input-type=module -e "import {writeFileSync} from 'node:fs'; import {RELATIONAL_UI_TOKENS_CSS} from './dist/Depth0/Theme/tokens.js'; import {RELATIONAL_UI_BROWSER_CSS} from './dist/Depth5/Browser/styles.js'; writeFileSync('dist/Depth0/Theme/tokens.css',RELATIONAL_UI_TOKENS_CSS);writeFileSync('dist/Depth5/Browser/styles.css',RELATIONAL_UI_BROWSER_CSS)"
+
+Validated RelationalUi's pinned Lit boundary and composition levels for 11 registered components.
+Validated RelationalUi's pinned Lit boundary and composition levels for 11 registered components, including public declarations.
+
+> @super-app/default-super-app-template@0.1.0 build
+> tsc -b tsconfig.json
+
+
+> @perso/template@0.1.0 build
+> tsc -p tsconfig.json && esbuild src/index.ts --bundle --format=esm --platform=browser --outfile=dist/index.js
+
+
+  dist\index.js  34.9kb
+
+Done in 15ms
+
+> @btr/template@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @broccoli/harness@0.1.0 check
+> node syntax-check.mjs
+
+
+> the-broccoli@0.1.0 test
+> npm --workspace @broccoli/harness test
+
+
+> @broccoli/harness@0.1.0 test
+> node --test test/*.test.mjs
+
+✔ snapshot capture rejects invalid dimensions before browser launch (2.0113ms)
+✔ snapshot renders current styles and reports offset-adjusted pointer coordinates (3833.2844ms)
+✔ submitted annotation delivers selected ranges, comment and sources without a retrieval tool while preserving the user message (9515.3464ms)
+✔ native image evidence is explicit, bounded and never encoded as prompt text (2.1917ms)
+✔ native Pi user events retain original Markdown and explicit attachments, excluding injected annotation images (0.6358ms)
+✔ unrelated web links do not invoke the owner resolver (0.3425ms)
+✔ queued repeated follow-ups preserve their originals until each Pi user message is consumed (3.0093ms)
+✔ answer reserves the checkout while answer evidence is persisted (8569.6446ms)
+✔ initial prompt persistence failure leaves the checkout available and task unstarted (3175.004ms)
+✔ failed resume keeps its question in the feed and records the failed resume (3640.1519ms)
+✔ a real failed write does not poison later prompt persistence (4960.5661ms)
+✔ preview input, refresh, stop and restart preserve the app server and restore the page (6205.3792ms)
+✔ preview drag releases the pointer and validates coordinates (1598.1521ms)
+✔ own application preview waits for authenticated shell hydration and its theme (1593.3951ms)
+✔ explicit preview open replaces a dead saved candidate without restoring it (4465.4548ms)
+✔ file filters distinguish root commit, range, worktree, deleted and untracked files (9767.5327ms)
+✔ one task edits two repositories; locks, checks and review cover both (37792.1998ms)
+✔ test output becomes result rows without treating diagnostics as tests (0.6894ms)
+✔ inline changes retain the whole file and both line numbers (608.8043ms)
+✔ historical source preserves exact revision bytes and reports deleted or unsupported files (3635.1093ms)
+✔ candidate preview executes captured three-repository contents after live checkout changes (15261.053ms)
+✔ candidate build cannot rewrite captured source in a sibling repository (9849.7144ms)
+✔ same timestamp responses stay distinct and acknowledgement is explicit and revision checked (6.6442ms)
+✔ channel notifications follow participation and configuration; groups share identity (0.6132ms)
+✔ tool overlap does not inflate wall time and model time excludes setup (0.7232ms)
+✔ paged transcript supports exact message cursors and persisted reference lookup (8.5001ms)
+✔ chat reference capability is owner-discovered, read-only and build-space scoped (20.6993ms)
+✔ safe npm pipeline records real exits and serializes nested stage evidence (13354.9814ms)
+✔ a failed npm stage stops its pipeline and reports remaining stages as not executed (3324.5954ms)
+✔ npm scripts with parent hooks retain opaque execution and execute the hooks (4325.0035ms)
+✔ arbitrary shell syntax, npm options and non-pipeline scripts are never split (5.7308ms)
+✔ recorded pipeline stages contain their tests and local diagnostics (3.0818ms)
+✔ nested TAP suites preserve reported parent child relationships (0.4506ms)
+✔ unstructured output does not invent test results or pipeline stages (0.2178ms)
+✔ cold component consumers follow declared owner dependencies and never build external packages (4.5632ms)
+✔ missing local source and dependency cycles fail before any build starts (2.5458ms)
+✔ a consumer with no generated declarations builds only after its captured owner source (4044.1188ms)
+✔ optional owned dependencies precede consumers and override duplicate dependency declarations (1.185ms)
+✔ manifest-only discovery works without installed compiler or source inventory (67.7971ms)
+✔ items, optional conversations, questions and feed survive restart without starting saved work (17423.3486ms)
+✔ busy or concurrent immediate starts do not create orphan conversations (4904.4838ms)
+✔ accepted changes remain feed attention until commit and queue state exposes canonical blockers (15205.4236ms)
+✔ feed quotes the latest written assistant result with bounded preview and preserves error details (1.9944ms)
+✔ file operations reject traversal and stale overwrites; batch outcomes identify errors (3155.595ms)
+✔ sessions capture edits, survive restart and move to another checkout (9625.0161ms)
+✔ commit gate rejects failed and stale checks then accepts current checked changes (20696.4608ms)
+✔ command denial prevents execution and cancellation ends a running command (2003.0659ms)
+✔ HTTP requires token, rejects foreign origins and supports human edits (2394.1361ms)
+✔ dismissed notification snapshots survive resolution and restart, restore and collect feedback without running work (4033.8558ms)
+✔ text diff preserves unchanged context and addition/removal line numbers (3.8149ms)
+✔ one stalled provider cannot hide available models or keep discovery pending (31.9383ms)
+✔ synchronous provider work is isolated from HTTP-host timers and bounded by worker lifetime (137.5798ms)
+✔ official Pi SDK executes a workspace call with a deterministic local provider (4532.6479ms)
+✔ official Pi completes an edit, reusable verification and review with a deterministic model (20169.5438ms)
+✔ node persistence validates semantic timestamps and strings regardless of renderer (9.989ms)
+✔ parallel branches and review correction loops retain distinct ranges and real endpoints (105.9249ms)
+✔ submitted source blocks every legacy execution path and exact files survive live edits (8197.7066ms)
+✔ source-mutating checks cannot affect live files or make later evidence pass (11381.5751ms)
+✔ successor exposes earlier passed checks as stale until explicit human acceptance (9227.4986ms)
+✔ isolated multi-repository checks retain repository-relative dependency paths (4536.6534ms)
+✔ workspace imports resolve rebuilt submitted sources instead of copied live outputs (3537.7634ms)
+✔ checks cannot pass after changing a sibling repository and unborn repositories are captured (7663.0619ms)
+✔ nested package scopes bind captured file dependencies instead of stale ancestor packages (2355.3971ms)
+✔ captured local dependency validation rejects traversal, name mismatch and broken installed trees (3078.4591ms)
+✔ review freeze permits conversations but preserves source mutation guards (3307.7629ms)
+✔ review freeze still defers automatically queued work (1790.3336ms)
+✔ internal publication retries when a holder releases between contention and lock read (931.4604ms)
+✔ malformed, unreadable and dead-owner locks still fail closed and remain intact (146.9007ms)
+✔ parallel reviews share a target; edits remain locked until both reviews release it (1458.7722ms)
+✔ priority and stage are derived through canonical parent references and survive restart (491.7116ms)
+✔ candidate invariants reject bypass writes atomically and preview reports structured locations (125.617ms)
+✔ attention is explicit per user and a stale acknowledgment cannot hide newer relations or fields (415.0583ms)
+✔ bounded reads omit expensive schema/history and saved queries are owned and validated (250.3296ms)
+✔ runtime publishes true domain types and rejected candidates never publish (169.5553ms)
+✔ new prerequisites cannot bypass queued placement and inherited changes restore attention (254.6438ms)
+✔ reference field editing cannot remove protected review gates (128.401ms)
+✔ explicit bracket conversion preserves queue order and archived evidence (264.079ms)
+✔ creator references are derived from attribution and duplicate stored edges are explicitly removed (255.3192ms)
+✔ cursor order is consistent across every page and cannot repeat or omit nodes (207.8236ms)
+✔ reference self and cycle violations identify the parent field (53.7139ms)
+✔ explicit input trigger processing is durable, opt-in and queues distinct occurrences without dispatch (724.3371ms)
+✔ node-type and ordinary reads share view discovery (18.8844ms)
+✔ explicit model conversion preserves an unfinished review and waits for its unmet prerequisite (374.3389ms)
+✔ activity metadata is bounded, leaf pages pin revision and containment expands separately (576.0903ms)
+✔ reference choice pages and direct neighbor labels obey the declared field contract (186.7105ms)
+✔ acknowledged time groups ignore query sort and priority in favor of recency (180.5583ms)
+✔ review discussion expansion preserves authors and rows while paging only the selected review (254.6471ms)
+✔ explicit invalid revision zero never silently reads the current graph (49.2933ms)
+✔ internal dispatcher reconciliation binds receipts, avoids idle writes and never grants review completion (197.4568ms)
+✔ pinning the current revision reuses its in-memory immutable snapshot (19.5544ms)
+✔ descendant stage progress updates acknowledged roots while attention-only changes do not (432.8253ms)
+✔ preview annotation posts bind the current target, owning space and captured session atomically (462.4561ms)
+✔ weekly planner coalesces downtime explicitly, skips missed minutes when requested and deduplicates receipts (5.3831ms)
+✔ declared node schemas, type relations and queue return remain owner controlled (439.6778ms)
+✔ user story is a declared input meaning and persists through normal CRUD (189.6125ms)
+✔ initial range viewport reveals the topmost lane without changing layout or parallel origin (109.3302ms)
+✔ author withdrawal preserves submitted target and failed checks in history, supports retry and resubmission (421.8291ms)
+✔ withdrawal rejects other actors and reviewer activity even after an author comment clears current outcomes (475.6499ms)
+✔ foreign root feedback and foreign replies both prevent withdrawal (820.9004ms)
+✔ withdrawal waits for persisted and in-memory active checks (570.9884ms)
+✔ withdrawing one review leaves another overlapping review freeze intact (487.261ms)
+✔ title-only graph CRUD is atomic, restart-stable and context checked without execution (151.6488ms)
+✔ idempotency survives restart, changed request and stale/concurrent writes cannot overwrite (210.9031ms)
+✔ queued task placement updates atomically and containment is independent from prerequisites (273.8522ms)
+✔ review freezes targets, blocks author impersonation, requires discussion closure and seals passed history (720.0944ms)
+✔ failed review successor preserves obligation and only transfers explicit pending gates (727.0193ms)
+✔ real MCP discovery/calls and UI invocation share one owner and actor boundary (109.5902ms)
+✔ internal result publication survives another owner holding the writer lock (247.5393ms)
+✔ evidence attachment preserves content and session range; frozen targets reject attachment (223.1803ms)
+✔ preview configuration repairs only obsolete built-ins and follows the actual app origin (3.069ms)
+✔ default combined preview has isolated origin, authentication and runtime state (5734.4517ms)
+✔ supervised backend restart preserves task data and authentication (15781.1171ms)
+✔ active reviews block the top-level reviewed task across transitions, overlap and restart (674.9711ms)
+✔ review submission blocks every top-level target and closes queue membership atomically (275.6244ms)
+✔ selected check batches deduplicate aliases, hold locks and only full configured selection satisfies verification (13795.2226ms)
+✔ default-off capability remains inert; opt-in still respects queue pause and can be disabled (7.3898ms)
+✔ lost owner receipt and dispatcher restart reconcile the same durable execution without rerunning (1.3473ms)
+✔ serial ticks deduplicate concurrent wakeups and one-active policy defers another occurrence (0.891ms)
+✔ failed opt-in persistence does not leave runtime enabled (1.9627ms)
+✔ real owner and harness persist one event occurrence, constrain findings-only tools, and wait for review (12134.2885ms)
+✔ disable or shutdown during credential preflight prevents a late agent launch (4.473ms)
+✔ concurrent wakeup cannot execute an opt-in whose persistence is still pending or fails (0.8054ms)
+✔ capture and consolidate inputs, enforce acyclic prerequisites, queue only after human acceptance (23951.1343ms)
+✔ review becomes stale on changes; commit evidence travels in Git notes and artifacts import without trusting old acceptance (15898.6754ms)
+✔ fork isolates files and permits distinct checkouts while shared checkout is locked (3360.542ms)
+✔ clearing a file review revokes acceptance before commit (5767.1938ms)
+✔ dismissing an accepted stale result releases its obsolete commit requirement (5163.8282ms)
+✔ an unanswered question pauses overlapping queued work until the decision is resolved (3037.4808ms)
+✔ verification gates reject changed default and project commands without requiring file changes (11251.1407ms)
+✔ a newer failing rerun supersedes an earlier passing check on unchanged files (4898.5465ms)
+ℹ tests 130
+ℹ suites 0
+ℹ pass 130
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 87912.6746
+
+> the-broccoli@0.1.0 test:browser
+> npm --workspace @broccoli/harness run test:browser
+
+
+> @broccoli/harness@0.1.0 test:browser
+> playwright test -c test/playwright.config.mjs
+
+
+Running 105 tests using 1 worker
+
+(node:38604) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   1 test\activity-hidden-layout-ui.spec.mjs:4:1 › a board initialized while hidden fits its columns when revealed (2.5s)
+  ok   2 test\activity-paging-ui.spec.mjs:7:1 › recency groups fetch only on expansion and continue without duplicate cards (3.2s)
+  ok   3 test\annotation-capture-scale-ui.spec.mjs:4:1 › annotation captures a large mounted surface with bounded payload and latency (3.7s)
+  ok   4 test\annotation-ui.spec.mjs:2:1 › host annotation styles render while inline scripts and style attributes remain blocked (180ms)
+  ok   5 test\annotations-11-ui.spec.mjs:3:1 › annotation cleanup keeps panels, shared dropdown gestures and application tabs coherent (658ms)
+  ok   6 test\annotations-11-ui.spec.mjs:93:1 › dropdown wheel changes enabled choices without opening menus (2.5s)
+  ok   7 test\annotations-11-ui.spec.mjs:133:1 › User owns personal information and preserves edits across tabs and reload (5.2s)
+  ok   8 test\annotations-11-ui.spec.mjs:181:1 › wheel selection skips disabled options, clamps ends, and uses change events (1.8s)
+  ok   9 test\annotations-4-ui.spec.mjs:4:1 › empty viewer and compact text editor tools match the four annotations (911ms)
+  ok  10 test\annotations-8-ui.spec.mjs:3:1 › file selection, local view tools and retained buildspace tabs match the requested contract (1.8s)
+  ok  11 test\annotations-8-ui.spec.mjs:152:1 › retained tabs preserve unsaved editor, scroll, and preview URL without refetching files (1.6s)
+  ok  12 test\annotations-8-ui.spec.mjs:224:1 › selection modifiers preserve anchor, toggle rows and respect canceled dirty-file selection (748ms)
+  x   13 test\annotations-8-ui.spec.mjs:270:1 › shared view toolbar changes only its owned tools and supports empty selections (1.5s)
+(node:14560) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  14 test\annotations-drag-ui.spec.mjs:4:1 › task movement retains explicit priority and rejects stale or blocked drops (4.2s)
+  x   15 test\annotations-layout-ui.spec.mjs:9:1 › annotation layout recording: compact board, toolbar, feedback, changes and preview (6.2s)
+(node:4596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   16 test\annotations-round2-ui.spec.mjs:9:1 › second annotation recording: typed node, board, direct timeline and review controls (6.3s)
+(node:35868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   17 test\annotations-round2-ui.spec.mjs:212:1 › declared fields and Instance of navigate through the same Node view; queued tasks drag back (30.1s)
+(node:3716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   18 test\annotations-round3-ui.spec.mjs:6:1 › third annotation recording: stable graph and review panes, directional relations (6.2s)
+(node:2312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   19 test\annotations-round4-ui.spec.mjs:9:1 › fourth annotation recording: recursive file groups, compact ranges and typed review context (6.3s)
+(node:33860) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   20 test\annotations-round5-ui.spec.mjs:8:1 › fourteen-annotation node editor and bounded scrolling recording (6.3s)
+(node:36520) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   21 test\annotations-round6-ui.spec.mjs:8:1 › five-annotation semantic choices and uniform field recording (6.5s)
+(node:32120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  22 test\annotations-ui.spec.mjs:4:1 › context annotation stacks the same editor and creates an input without agent execution (3.2s)
+  ok  23 test\annotations-ui.spec.mjs:64:1 › created chat annotation inserts a persisted Markdown link without sending (4.4s)
+  ok  24 test\annotations-ui.spec.mjs:93:1 › stacked annotation retains a different chat destination after selection changes (5.6s)
+  ok  25 test\annotations-ui.spec.mjs:130:1 › direct selection accumulates disjoint text with independent origin URLs (1.2s)
+  ok  26 test\annotations-ui.spec.mjs:197:1 › annotating an annotation preserves the original draft and captures its surface (11.0s)
+  ok  27 test\annotations-ui.spec.mjs:233:1 › annotation defaults follow the current buildspace and selected conversation (6.8s)
+  ok  28 test\async-navigation-ui.spec.mjs:52:1 › late view refresh cannot hide the current conversation or change its controls (2.9s)
+  ok  29 test\async-navigation-ui.spec.mjs:100:1 › delayed submission keeps its target and preserves newer text across channel navigation (4.6s)
+  ok  30 test\async-navigation-ui.spec.mjs:200:1 › a pending item queue action cannot create duplicate conversations (2.8s)
+  ok  31 test\async-navigation-ui.spec.mjs:239:1 › pending intake preserves later text and captures the selected model (3.2s)
+  ok  32 test\async-navigation-ui.spec.mjs:301:1 › intake retry after redraw reuses the already saved item (3.9s)
+  ok  33 test\async-navigation-ui.spec.mjs:330:1 › check tree marks changed repository commands out of date (3.0s)
+  ok  34 test\async-navigation-ui.spec.mjs:386:3 › late changes file response cannot replace a newer file selection (1.6s)
+  ok  35 test\async-navigation-ui.spec.mjs:386:3 › late source file response cannot replace a newer file selection (1.5s)
+  ok  36 test\background-state-ui.spec.mjs:42:1 › visible model choices and unsent drafts survive task events, refresh and channel changes (13.2s)
+  ok  37 test\background-state-ui.spec.mjs:164:1 › feed preserves an answer draft during incoming events and delayed resume never pulls another channel back (9.4s)
+  ok  38 test\buildspace-channels-ui.spec.mjs:4:1 › saved buildspaces own their channels, live updates and navigation (6.0s)
+  ok  39 test\buildspace-context-ui.spec.mjs:3:1 › directory Open preserves an owner-validated space URL and shows its actual name after reload (5.4s)
+  ok  40 test\candidate-annotation-ui.spec.mjs:3:1 › managed candidate annotation defaults to its owner review and retains exact source evidence (312ms)
+  ok  41 test\chat-current-ui.spec.mjs:4:1 › long chat stays paged, uses Markdown and exposes the five-pane picker without acknowledging (3.5s)
+  ok  42 test\check-selection-ui.spec.mjs:4:1 › Checks has a selectable new-run tree and newest-first history with context-menu-only Run (1.6s)
+  ok  43 test\check-tree-ui.spec.mjs:6:1 › checks, run history, pipeline steps and local diagnostics share one tree (1.9s)
+  ok  44 test\check-tree-ui.spec.mjs:125:1 › npm test aliases share a check node without dropping old command history (1.3s)
+  ok  45 test\checkpoint-surface-ui.spec.mjs:2:1 › checkpoint review keeps chat beside Files Checks Preview and uses a repository tree (1.6s)
+  ok  46 test\context-chat-ui.spec.mjs:14:1 › sending from default buildspace chat creates a real conversation with a feed result (3.3s)
+  ok  47 test\context-chat-ui.spec.mjs:45:1 › pending context chat keeps original target and newer draft without pulling the user back (2.7s)
+  ok  48 test\contributions-ui.spec.mjs:3:1 › saved items do not start work; conversations are optional and feed never forces navigation (6.6s)
+  ok  49 test\contributions-ui.spec.mjs:58:1 › agent questions can be answered in the feed without opening a conversation (5.2s)
+  ok  50 test\conversation-settings-ui.spec.mjs:8:1 › conversation definition stays editable without running work and queue keeps its identity (4.2s)
+  ok  51 test\feed-ui.spec.mjs:9:1 › Feed restores the mock categories, configurable feeds, feedback and dismissed entries (2.6s)
+  ok  52 test\feed-ui.spec.mjs:142:1 › Feed pending actions preserve newer feedback and prevent conflicting approvals (1.7s)
+  ok  53 test\field-comments-ui.spec.mjs:7:1 › node field help is projected from the authoritative declaration (1.4s)
+  ok  54 test\historical-source-ui.spec.mjs:8:1 › historical source stays at the selected revision and review-only chrome is absent (29.0s)
+  ok  55 test\layout-ui.spec.mjs:2:1 › panel splitters resize with keyboard and pointer and persist after reload (3.7s)
+  ok  56 test\layout-ui.spec.mjs:58:1 › file panes fit compact viewports and clamp restored widths without losing resize persistence (1.3s)
+  ok  57 test\model-bootstrap-ui.spec.mjs:3:1 › slow model discovery does not block the application shell, board, or composer (2.1s)
+  ok  58 test\mvp-board-ui.spec.mjs:4:1 › accepted board owns three columns, independent active panes and explicit attention (3.1s)
+  ok  59 test\mvp-node-editor-ui.spec.mjs:7:1 › node editor shows declared reference fields and blocks invalid drafts through owner validation (2.7s)
+  ok  60 test\mvp-node-editor-ui.spec.mjs:87:1 › historical node references use labels and relations from their own revision (2.5s)
+  ok  61 test\mvp-node-editor-ui.spec.mjs:97:1 › a node from another buildspace cannot become the current space editor (1.7s)
+  ok  62 test\native-shell-ui.spec.mjs:3:1 › actual application uses template dropdown, channels and cross-template pins (3.1s)
+  ok  63 test\native-shell-ui.spec.mjs:92:1 › deep-link pages and same-channel return preserve the actual shell (1.3s)
+  ok  64 test\native-shell-ui.spec.mjs:121:1 › feed attention remains visible after channel, expansion and template navigation (1.8s)
+  ok  65 test\navigation-state-ui.spec.mjs:79:1 › dirty editor guards channel, template and pinned destinations without losing the edit (4.5s)
+  ok  66 test\navigation-state-ui.spec.mjs:177:1 › conversation text and model survive channels, reload and a deep Help round trip (6.2s)
+  ok  67 test\navigation-state-ui.spec.mjs:256:1 › saving a file preserves newer edits and prevents duplicate saves (4.2s)
+  ok  68 test\pages-ui.spec.mjs:4:1 › agent model selector fills its configuration panel and composer stays compact (3.3s)
+  ok  69 test\pages-ui.spec.mjs:11:1 › Help and Settings are tabs and returning preserves the composer (6.0s)
+  ok  70 test\pages-ui.spec.mjs:88:1 › Settings saves only the selected topic and provider refresh preserves the composer model (6.0s)
+  ok  71 test\pages-ui.spec.mjs:196:46 › delayed settings discovery preserves save feedback and newer key draft (2.3s)
+  ok  72 test\pages-ui.spec.mjs:196:46 › delayed settings discovery preserves save feedback and newer provider draft (1.8s)
+  ok  73 test\planning-regressions-ui.spec.mjs:7:1 › queued saves preserve priority, historical fields exclude live drafts, and relations refresh (7.1s)
+  ok  74 test\planning-regressions-ui.spec.mjs:96:1 › open review-policy drafts survive notifications and reject a concurrent policy overwrite (3.0s)
+  ok  75 test\planning-review-bootstrap-ui.spec.mjs:5:1 › review deep links choose Review after a superseding bootstrap refresh and preserve an explicit user view (4.3s)
+  ok  76 test\planning-save-pending-ui.spec.mjs:10:3 › saving a Node keeps newer edits dirty and allows their next save (4.2s)
+  ok  77 test\planning-save-pending-ui.spec.mjs:10:3 › saving a Node retains newer edits but rejects a foreign change after its first commit (3.4s)
+  ok  78 test\planning-save-refresh-ui.spec.mjs:9:1 › a background planning update during Save preserves the editor and completes the click (3.0s)
+  ok  79 test\planning-ui.spec.mjs:8:1 › planning board CRUD, graph review, grouped feedback, exact changes and history (11.1s)
+  ok  80 test\planning-viewport-ui.spec.mjs:6:1 › timeline reveals its newest range initially and preserves subsequent user pan (7.5s)
+  ok  81 test\planning-withdraw-ui.spec.mjs:8:1 › the author returns an unreviewed submission to draft with a reason and keeps submitted history (4.2s)
+  ok  82 test\preview-default-ui.spec.mjs:3:1 › default preview shows the hydrated combined template application without recursive preview or URL credentials (3.2s)
+  ok  83 test\preview-drag-ui.spec.mjs:4:1 › preview forwards scaled pointer drags without an extra click and retains ordinary clicks (2.5s)
+  ok  84 test\preview-host-layout-ui.spec.mjs:3:43 › shared preview fills and resizes its review host (1.4s)
+  ok  85 test\preview-host-layout-ui.spec.mjs:3:43 › shared preview fills and resizes its hub host (1.5s)
+  ok  86 test\preview-host-layout-ui.spec.mjs:3:43 › shared preview fills and resizes its work host (1.4s)
+  ok  87 test\preview-settings-ui.spec.mjs:7:1 › preview applications are configured in Settings without launching browsers or losing invalid edits (5.0s)
+  ok  88 test\profile-controls-ui.spec.mjs:4:1 › personal list panels use compact accessible icons and the pinned icon is centered (1.2s)
+  ok  89 test\profile-ui.spec.mjs:3:1 › native personal information saves through its owner and rejects a stale open form without losing edits (4.3s)
+  ok  90 test\review-placement-ui.spec.mjs:7:1 › the board blocks the reviewed top-level task and never lists its review (2.7s)
+  ok  91 test\review-queue-ui.spec.mjs:10:1 › queued work is reviewed, accepted and committed through the feed before the next item starts (23.3s)
+  ok  92 test\review-selection-race-ui.spec.mjs:8:1 › late review file read cannot replace the latest selection or annotation context (5.9s)
+  ok  93 test\revision-navigation-ui.spec.mjs:9:1 › a late revision response cannot leave the chosen channel or replace its draft (4.3s)
+  ok  94 test\text-editor-ui.spec.mjs:5:1 › one numbered text editor renders source, inline and aligned split documents (806ms)
+  ok  95 test\text-editor-ui.spec.mjs:54:1 › shared text panes preserve native editing, scroll alignment and exact review anchors (1.3s)
+  ok  96 test\text-editor-ui.spec.mjs:111:1 › text editor gutters fit displayed digits and resize across source line boundaries (1.9s)
+  ok  97 test\top-tabs-ui.spec.mjs:3:1 › Feed, private space, Help and Settings switch separate panels and retain the private draft (3.8s)
+  ok  98 test\top-tabs-ui.spec.mjs:58:1 › file tree has a real scroll container after expanding folders (667ms)
+  ok  99 test\top-tabs-ui.spec.mjs:94:1 › reselecting the current application tab keeps edits and the selected settings topic (708ms)
+  ok 100 test\trigger-control-ui.spec.mjs:3:1 › scheduled execution control is explicitly default-off and respects the paused queue (2.2s)
+  ok 101 test\ui.spec.mjs:4:1 › agent and human edits remain reviewable through named checks and full-file views (18.0s)
+  ok 102 test\verification-settings-ui.spec.mjs:7:1 › Verification settings distinguish inherited primary policy and required attached-repository overrides (3.9s)
+  ok 103 test\workflow-ui.spec.mjs:3:1 › live browser interaction and contextual screenshot feedback survive export (6.0s)
+  ok 104 test\zbuildspace-ui.spec.mjs:8:1 › checkpoint file bush has three roots and edits/checks target the selected system (12.3s)
+  ok 105 test\zbuildspace-ui.spec.mjs:114:1 › compact checkpoint keeps model allowance and four review tabs (1.8s)
+
+
+  1) test\annotations-8-ui.spec.mjs:270:1 › shared view toolbar changes only its owned tools and supports empty selections 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      309 |       () => window.unchangedList === document.querySelector(".file-list"),
+      310 |     ),
+    > 311 |   ).toBe(true);
+          |     ^
+      312 |   await page.evaluate(() => window.toolbarFixture.update([]));
+      313 |   await expect(
+      314 |     page.getByRole("combobox", { name: "Example view", exact: true }),
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-8-ui.spec.mjs:311:5
+
+    Error Context: test-results\annotations-8-ui-shared-vi-9014d-d-supports-empty-selections\error-context.md
+
+  2) test\annotations-layout-ui.spec.mjs:9:1 › annotation layout recording: compact board, toolbar, feedback, changes and preview 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('textbox', { name: 'Description', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('textbox', { name: 'Description', exact: true })
+
+
+      58 |   await visit(seed.aliases.work);
+      59 |   await expect(page.locator(".activity-card[data-node-id="+JSON.stringify(seed.aliases.work)+"] .activity-card-title button")).toBeVisible();
+    > 60 |   await expect(page.getByRole("textbox", {name:"Description",exact:true})).toBeVisible();
+         |                                                                            ^
+      61 |   const recording = {};
+      62 |   let boardObservation;
+      63 |   await expect.poll(async()=>{
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-layout-ui.spec.mjs:60:76
+
+    Error Context: test-results\annotations-layout-ui-anno-410a1-eedback-changes-and-preview\error-context.md
+
+  3) test\annotations-round2-ui.spec.mjs:9:1 › second annotation recording: typed node, board, direct timeline and review controls 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByLabel('Title', { exact: true })
+    Expected: "Second annotation parent"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for getByLabel('Title', { exact: true })
+
+
+      73 |   const result = {};
+      74 |   await visit(seed.aliases.root);
+    > 75 |   await expect(page.getByLabel("Title", { exact: true })).toHaveValue(
+         |                                                           ^
+      76 |     "Second annotation parent",
+      77 |   );
+      78 |   result.saveIcon = await page
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-round2-ui.spec.mjs:75:59
+
+    Error Context: test-results\annotations-round2-ui-seco-8cf78-imeline-and-review-controls\error-context.md
+
+  4) test\annotations-round2-ui.spec.mjs:212:1 › declared fields and Instance of navigate through the same Node view; queued tasks drag back 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('.relation-row').filter({ hasText: 'Instance of' }).getByRole('button', { name: 'Task', exact: true })
+
+
+      256 |     .locator(".relation-row")
+      257 |     .filter({ hasText: "Instance of" });
+    > 258 |   await relation.getByRole("button", { name: "Task", exact: true }).click();
+          |                                                                     ^
+      259 |   await expect(page.getByLabel("Name", { exact: true })).toHaveValue("Task");
+      260 |   await expect(page.getByLabel("Name", { exact: true })).toHaveAttribute(
+      261 |     "readonly",
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-round2-ui.spec.mjs:258:69
+
+    Error Context: test-results\annotations-round2-ui-decl-a8411-view-queued-tasks-drag-back\error-context.md
+
+  5) test\annotations-round3-ui.spec.mjs:6:1 › third annotation recording: stable graph and review panes, directional relations 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByLabel('Title', { exact: true })
+    Expected: "Third annotation parent"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for getByLabel('Title', { exact: true })
+
+
+      26 |   const result = {};
+      27 |   await visit({ node: seed.aliases.root });
+    > 28 |   await expect(page.getByLabel("Title", { exact: true })).toHaveValue("Third annotation parent");
+         |                                                           ^
+      29 |   await page.locator(".planning-left").evaluate(e => e.scrollLeft = 200);
+      30 |   await page.getByRole("button", { name: "Third annotation parent", exact: true }).dblclick();
+      31 |   await expect(page.locator(".planning-graph-actions")).toBeVisible();
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-round3-ui.spec.mjs:28:59
+
+    Error Context: test-results\annotations-round3-ui-thir-3b627-panes-directional-relations\error-context.md
+
+  6) test\annotations-round4-ui.spec.mjs:9:1 › fourth annotation recording: recursive file groups, compact ranges and typed review context 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.range-graph')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.range-graph')
+
+
+      114 |   });
+      115 |   await visit({ task: seed.aliases.root });
+    > 116 |   await expect(page.locator(".range-graph")).toBeVisible();
+          |                                              ^
+      117 |   const leaf = page
+      118 |     .locator(".range-graph g")
+      119 |     .filter({
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-round4-ui.spec.mjs:116:46
+
+    Error Context: test-results\annotations-round4-ui-four-237ab-es-and-typed-review-context\error-context.md
+
+  7) test\annotations-round5-ui.spec.mjs:8:1 › fourteen-annotation node editor and bounded scrolling recording 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByLabel('Title', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByLabel('Title', { exact: true })
+
+
+      53 |   };
+      54 |   await visit(seed.aliases.task);
+    > 55 |   await expect(page.getByLabel("Title", { exact: true })).toBeVisible();
+         |                                                           ^
+      56 |   const actual = {};
+      57 |   actual.boardRenamed =
+      58 |     (await page
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-round5-ui.spec.mjs:55:59
+
+    Error Context: test-results\annotations-round5-ui-four-40d8c-bounded-scrolling-recording\error-context.md
+
+  8) test\annotations-round6-ui.spec.mjs:8:1 › five-annotation semantic choices and uniform field recording 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByLabel('Title', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByLabel('Title', { exact: true })
+
+
+      66 |     );
+      67 |     await waitForApplicationReady(page);
+    > 68 |     await expect(page.getByLabel("Title", { exact: true })).toBeVisible();
+         |                                                             ^
+      69 |   };
+      70 |   await visit(seed.aliases.task);
+      71 |   const actual = {};
+        at visit (C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-round6-ui.spec.mjs:68:61)
+        at C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app\test\annotations-round6-ui.spec.mjs:70:3
+
+    Error Context: test-results\annotations-round6-ui-five-b6a58-and-uniform-field-recording\error-context.md
+
+  8 failed
+    test\annotations-8-ui.spec.mjs:270:1 › shared view toolbar changes only its owned tools and supports empty selections 
+    test\annotations-layout-ui.spec.mjs:9:1 › annotation layout recording: compact board, toolbar, feedback, changes and preview 
+    test\annotations-round2-ui.spec.mjs:9:1 › second annotation recording: typed node, board, direct timeline and review controls 
+    test\annotations-round2-ui.spec.mjs:212:1 › declared fields and Instance of navigate through the same Node view; queued tasks drag back 
+    test\annotations-round3-ui.spec.mjs:6:1 › third annotation recording: stable graph and review panes, directional relations 
+    test\annotations-round4-ui.spec.mjs:9:1 › fourth annotation recording: recursive file groups, compact ranges and typed review context 
+    test\annotations-round5-ui.spec.mjs:8:1 › fourteen-annotation node editor and bounded scrolling recording 
+    test\annotations-round6-ui.spec.mjs:8:1 › five-annotation semantic choices and uniform field recording 
+  97 passed (8.2m)
+npm error Lifecycle script `test:browser` failed with error:
+npm error code 1
+npm error path C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app
+npm error workspace @broccoli/harness@0.1.0
+npm error location C:\Users\vince\Documents\GitHub\Btr\TheBroccoli\app
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c playwright test -c test/playwright.config.mjs

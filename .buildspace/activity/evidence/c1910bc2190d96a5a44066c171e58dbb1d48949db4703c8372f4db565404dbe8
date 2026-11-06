@@ -1,0 +1,11 @@
+
+Running 4 tests using 1 worker
+
+(node:20284) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 test\buildspace-channels-ui.spec.mjs:4:1 › saved buildspaces own their channels, live updates and navigation (5.1s)
+  ok 2 test\navigation-state-ui.spec.mjs:79:1 › dirty editor guards channel, template and pinned destinations without losing the edit (3.7s)
+  ok 3 test\navigation-state-ui.spec.mjs:177:1 › conversation text and model survive channels, reload and a deep Help round trip (4.9s)
+  ok 4 test\navigation-state-ui.spec.mjs:256:1 › saving a file preserves newer edits and prevents duplicate saves (3.9s)
+
+  4 passed (22.1s)

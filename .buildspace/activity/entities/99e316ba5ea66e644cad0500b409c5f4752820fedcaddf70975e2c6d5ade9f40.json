@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/23627148-a90e-45dc-9e60-011a9d369e2e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/23627148-a90e-45dc-9e60-011a9d369e2e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T05:50:15.041Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1313,
+        "description": "Browser feedback 8: repository names currently sort lexicographically, placing Depth10 before Depth2. Use natural alphanumeric ordering so digit sequences sort by numeric value: Depth0, Depth1, Depth2, ... Depth10, ... Depth18, without renaming folders to add leading zeroes. Apply the behavior generally to repository item names, not as a Depth-specific special case, while preserving intended folder/file grouping and deterministic ordering.",
+        "title": "Use natural numeric sorting in Repositories",
+        "updatedAt": "2026-11-03T05:50:15.309Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/23627148-a90e-45dc-9e60-011a9d369e2e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/23627148-a90e-45dc-9e60-011a9d369e2e.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/23627148-a90e-45dc-9e60-011a9d369e2e.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/23627148-a90e-45dc-9e60-011a9d369e2e.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-03T05:57:38.855Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-11-03T05:50:15.309Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/23627148-a90e-45dc-9e60-011a9d369e2e.json"
+}

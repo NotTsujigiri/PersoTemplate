@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22c4f0f5-8cc0-4c18-bd5f-4d486d73b238.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22c4f0f5-8cc0-4c18-bd5f-4d486d73b238.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T23:05:15.878Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 302,
+        "description": "Immutable attached evidence",
+        "title": "Seven UI comments: full passing checkpoint.txt",
+        "updatedAt": "2026-09-30T23:05:15.994Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22c4f0f5-8cc0-4c18-bd5f-4d486d73b238.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22c4f0f5-8cc0-4c18-bd5f-4d486d73b238.json",
+      "properties": {
+        "artifact": {
+          "hash": "f91c462100c9639b171151b377c748d506736878a4e1e0ea6d5cad9251d59ac9",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/f91c462100c9639b171151b377c748d506736878a4e1e0ea6d5cad9251d59ac9",
+          "mime": "text/plain",
+          "size": 31831
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22c4f0f5-8cc0-4c18-bd5f-4d486d73b238.json"
+}

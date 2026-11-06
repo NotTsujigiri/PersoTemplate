@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3f061f01-3038-491f-9dbf-c8082c0b2c20.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3f061f01-3038-491f-9dbf-c8082c0b2c20.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T19:32:11.242Z",
+        "createdBy": "human:user",
+        "createdRevision": 1240,
+        "description": "Add Go to declaration for symbols whose declaration can be resolved by the active language provider. Initially expose it as an icon button in the icon row of the completion context panel for the selected symbol; the editor applies navigation supplied by the language provider.\n\nNavigate to the declared file and source position, including declarations in dependencies when resolvable. Handle multiple targets and unavailable declarations without guessing. Preserve unsaved drafts during navigation. Verify the TypeScript Extract utility type highlighted in planning-activity.ts, a local symbol and an imported symbol.\n\nUser annotation (verbatim):\nwe need to introduce \"go to declaration\" for symbol where its possible. Add a task in queue. For now i would put it as one of the icon button in the icon button panel of the completion context panel.\n\nCompleted on master in df25f73.\n\nThe completion-panel icon row now offers Go to declaration when the language provider supports it. TypeScript supplies local, imported and standard-library declarations (including Extract); multiple targets offer a choice and unavailable targets show a message. External sources open read-only with a return control, preserving the original unsaved draft. Late responses cannot redirect a newer selection.\n\nVerification: real TypeScript/LSP tests and exact browser recordings pass, including text/expression modes, multiple targets, unavailable symbols and stale responses. The declaration test cleans up its temporary files; declaration navigation followed by layout coverage passes all 10 selected cases. Build and final check:types pass (1,229 authored files, zero violations).\n\nCheckpoint limits: two unchanged planning tests failed during the broad unit run but both passed in isolation. The full browser run passed 384/386 cases; its layout failure was resolved by the test cleanup above. The remaining pre-existing recovery newline failure is tracked in graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5bb32ab9-aa94-4b84-bde6-6d059cfec2d4.json. Logs: .runtime/queue-completion-checkpoint.log, .runtime/queue-remaining-checkpoint.log, .runtime/queue-cleanup-verification.log and .runtime/queue-final-types.log.",
+        "title": "Add Go to declaration to the completion context panel",
+        "updatedAt": "2026-11-01T02:42:05.386Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3f061f01-3038-491f-9dbf-c8082c0b2c20.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3f061f01-3038-491f-9dbf-c8082c0b2c20.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3f061f01-3038-491f-9dbf-c8082c0b2c20.json"
+}

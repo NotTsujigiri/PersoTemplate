@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c6a13358-3099-47e1-977b-1a99ec80639b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c6a13358-3099-47e1-977b-1a99ec80639b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T05:39:09.564Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 974,
+        "description": "Add one icon to the Windows notification area (the taskbar system tray, including its hidden-icons area) for each running Node.js relational engine service instance.\n\nThe intent is to make background service instances visible and individually identifiable during local desktop use. Details such as displayed identity, tooltip, available actions and icon lifecycle remain to be designed.\n\nThis was requested as a separate idea, outside the current engine-composition discussion and implementation scope.\n\nUser request (verbatim):\nadd an icon at the bottom right in the hidden icon of the windows task bar for each instance of nodejs relation engine service running.",
+        "title": "Show a Windows tray icon for each running Node.js relational engine service",
+        "updatedAt": "2026-10-22T05:39:09.868Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c6a13358-3099-47e1-977b-1a99ec80639b.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c6a13358-3099-47e1-977b-1a99ec80639b.json",
+      "properties": {
+        "meaning": "idea",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c6a13358-3099-47e1-977b-1a99ec80639b.json"
+}

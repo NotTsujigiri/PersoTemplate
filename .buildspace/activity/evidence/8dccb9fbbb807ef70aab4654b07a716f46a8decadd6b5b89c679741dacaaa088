@@ -1,0 +1,27 @@
+# Browser sign-in persistence: implementation and verification
+
+The original failure was reproduced before changing the product: planning create/update tools returned credential-free task URLs, but reopening either after the last signed-in tab closed produced Unauthorized. Authentication lived in tab storage. The regression now exercises that same sequence and compares its complete output with the original expected output.
+
+## Delivered behavior
+
+- Better Auth 1.7.6 owns sign-in token issuance, verification and sessions. SQLite uses Node 24's built-in driver. The database, signing secret and separate launcher/tool credential stay in the machine-local runtime store's `auth/` directory, outside versioned buildspace artifacts.
+- The launcher supplies a single-use sign-in link valid for two minutes. The browser consumes it, removes it from the address and receives a host-only HttpOnly cookie, with a 30-day absolute session lifetime. No session credential is exposed through page JavaScript, Web Storage, task links or screenshot URLs.
+- Read, create and update tool links reopen without another signed-in tab. The cookie and database also survive browser and server restarts. Expired sessions require opening the launcher again; clearing browser data also requires sign-in again.
+- The central API gate verifies sessions and exact Host/Origin policy. It rejects cross-origin actions, invalid/expired/revoked credentials, and anonymous credential issuance. Local tools have a separate library-issued session. Open event streams terminate on expiry or revocation.
+- The main application uses `localhost`; managed previews use separate loopback IP hosts and separate auth stores. Cookies are not isolated by port, so distinct hosts are required. Existing `127.0.0.1` bookmarks redirect to the canonical host while preserving the task selection.
+- The launcher can open an already running app with a fresh link. Server shutdown handles requests still authenticating and unused browser preconnection sockets without hanging.
+- The full checkpoint exposed a navigation race: a delayed queue-control response could switch back to Task items after the user opened Feed. Queue and trigger controls now respect the existing render-validity contract. A controlled delayed-response regression fails before the fix and passes afterwards; the queue-review and scheduled-execution workflows also pass.
+
+## Verification
+
+The security and persistence regression tests cover cookie attributes, one-use links, invalid credentials, Host/Origin rejection, expiry, revocation, separate preview hosts, browser restart and server restart. Additional lifecycle regressions cover late-authenticated requests during shutdown, unused preconnection sockets and repeated launcher use.
+
+In the actual Codex browser, all Broccoli tabs were closed and the tab inventory was empty. Opening the tool-returned design-task URL then showed the exact task, without another sign-in. Opening its old `127.0.0.1` URL redirected to `localhost` with the correct task selected. The authenticated page also survived the subsequent app restart.
+
+Full repository checkpoint: `npm run test:all` exited successfully. All 135 backend tests and all 108 browser tests passed. The browser suite includes both create/update-link regressions and the controlled queue-navigation regression. Syntax and whitespace checks passed for the affected source. A subsequent tool-help wording correction documents that a valid browser session survives closed tabs; it does not change behavior.
+
+## Review boundary
+
+This secures the local browser/API transport. It is not per-person/buildspace authorization, encryption of workspace files, or isolation from programs running as the same operating-system user. Managed previews are host-isolated; arbitrary software hosted on `localhost` is not an OS security sandbox. Separate MCP transport authentication remains unchanged.
+
+The changes are available in the running app and remain uncommitted. The existing MVP review has not been accepted or marked complete.

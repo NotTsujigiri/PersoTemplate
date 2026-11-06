@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e49038f1-aeea-45a3-9885-2e8760dccc89.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e49038f1-aeea-45a3-9885-2e8760dccc89.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T19:48:45.335Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1080,
+        "description": "Use vertical text-radio choices for collapsed splitter boundaries. A panel corner follows the cursor and flips at viewport edges. Scrolling while holding a drag changes the selected pane; releasing keeps the layout, and Escape restores the complete original layout.\n\nA selected collapsed pane can now open in either direction, taking space from the nearest visible neighbor on that side. This includes neighbors across a containing splitter boundary: Activity board can take space from either Chat or Node editor. Reversing direction keeps the same selected pane; other collapsed siblings remain closed. The first ordinary divider in a collapsed group retains ordinary resizing. Movement stops when the adjacent donor has no remaining space.\n\nAutomatically collapsed containers reopen only the content branch beside the moving edge. Switching choices or cancelling restores the original child modes and their persisted state. Unrelated dividers remain fixed; normal automatic empty-group collapse is preserved.\n\nImplemented in commit 1eb9ab5, following the existing picker and empty-container fixes. Before-change recordings reproduced both the cross-container one-direction limit and adjacent collapsed siblings changing identity when reversing. The unchanged authored inputs pass exact output comparison after the fix.\n\nValidation: 84 focused browser cases pass across the shared splitter specifications, including reversal during a held drag, both axes and edges, stacked collapsed siblings, donor exhaustion, selection switching, release, Escape, child-mode persistence, and the actual Activity board / Node editor composition saved and reloaded after expanding either way. Disposable screenshots reviewed. No full suite was run.\n\nEvidence: Systems/Depth3/HarnessApp/test-results/splitter-both-before/, splitter-siblings-before/, splitter-both-regression/ and splitter-both-final/. Validation logs: .harness/splitter-both-final.log and .harness/splitter-both-build-resumed.log.\n\nThe final repository build completed successfully, including type checking of 1171 authored files with zero violations, dependency-depth and engine-boundary checks, and model generation. Broccoli was restarted with this commit and its application and planning service are available.",
+        "title": "Use text radio buttons and cursor anchoring for collapsed splitter selection",
+        "updatedAt": "2026-10-25T20:31:06.580Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e49038f1-aeea-45a3-9885-2e8760dccc89.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e49038f1-aeea-45a3-9885-2e8760dccc89.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 0,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e49038f1-aeea-45a3-9885-2e8760dccc89.json"
+}

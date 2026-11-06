@@ -1,0 +1,11 @@
+Verdict: changes requested — high-level plan at revision 534.
+Independent subagent: /root/migration_plan_review.
+
+- R1 · P1 — Prove data cutover before using it. Task 269b0bd7… introduces the new workflow and save/reopen, while explicit preservation of existing data appears only in final task 7cd2b765…. Require successful runtime rejection checks and a disposable rehearsal of any affected persistence conversion, identity/reference preservation and failed-write recovery before the first live cutover. Final verification should repeat that evidence.
+- R2 · P2 — Prove compatibility with the existing model compiler. Contract task 973d9b81… requires typed access and compiler rejection checks but does not explicitly require the resulting definitions to supply the existing runtime/inspection model. The current model compiler rejects generic declarations and recursive embedded types; engine GraphNode requires one typeNodeId. Add an agent-reviewed contract-stage proof covering these boundaries, with one authoritative definition and derived inspection/validation. Detailed API design can remain in that task.
+
+What is coherent: the sequence separates technical review from human acceptance; the human checkpoints ask at most three understandable decisions. Positive/negative compiler cases, presence narrowing, declared dependencies, removal and dynamic-path auditing provide substantive compiler leverage.
+
+Agent-review representation: investigation tasks at review stage, pinned evidence and correction/re-review children are an honest supported representation. Their dependency gates must remain in place, and completion must include the independent verdict; they do not constitute native authenticated reviewer approval.
+
+Coverage and limits: reviewed all 11 descriptions, repository-node classification, engine node/type contracts, model-compiler restrictions and existing TypeScript validation tooling. No implementation or migration was performed, no tests were run, and this is not approval of a detailed API.

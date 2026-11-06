@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d163484-5ff7-40f6-9970-53aa5e38efaf.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d163484-5ff7-40f6-9970-53aa5e38efaf.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T02:12:56.679Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 605,
+        "description": "",
+        "title": "migration_plan_review approves the reviewed foundation source; all round-2 findings are resolved.\n- Independent compiler probe accepts validated recursive read→",
+        "updatedAt": "2026-10-18T02:13:20.506Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d163484-5ff7-40f6-9970-53aa5e38efaf.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d163484-5ff7-40f6-9970-53aa5e38efaf.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/437ed83f-0421-4077-b62e-bc5a88be165e.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "migration_plan_review approves the reviewed foundation source; all round-2 findings are resolved.\n- Independent compiler probe accepts validated recursive read→attach→update, rejects invalid nested payloads (2322) and nested writes (2339); missing-component recovery is now covered on an existing node.\n- Reviewed 14/14 store tests, all 11 compiler cases, generated declaration→guard/metadata→store proof, and focused strict validation.\n- Full root checkpoint validation is still pending. This does not approve application migration, live persistence cutover or final UI acceptance; native checkpoint outcome remains pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d163484-5ff7-40f6-9970-53aa5e38efaf.json"
+}

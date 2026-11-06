@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f45dec7-17c3-4915-a916-4f0d846e106d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f45dec7-17c3-4915-a916-4f0d846e106d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T23:39:25.669Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 774,
+        "description": "User reports, 2026-10-20, annotations 3 and 5\nTwo entry paths to Task graph have unacceptable latency:\n3. Switching the Node view dropdown from Node editor to Task graph in the Activity board reacts very slowly.\n5. Double-clicking the Persistent planning and review MVP task first shows an intermediate Activity board / Node editor layout with empty card lists, then takes several seconds to show the Task graph. The user supplied a full-window screenshot of that intermediate state.\n\nTarget task: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json\nSelected design task during the navigation: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0eeb2840-caaa-46e4-a813-d5926c5fcb36.json\nDropdown target: div#pane-4 > relational-ui-view-toolbar.view-toolbar > select, Node view; reported point (534,54), viewport 954x764.\nThe intermediate-state screenshot is attached to this chat as C:/Users/vince/AppData/Local/Temp/codex-clipboard-ca5b64b2-aa24-4af3-acf7-8f674b53f970.png. It shows Activity board headings/counts without their cards and the MVP in Node editor before the requested graph appears.\n\nExpected behavior and investigation\nRecord each path separately, including nominal warm navigation and initial loading. Measure user action, visible response, required fetching and ready-to-interact graph.\nNavigation should acknowledge the requested destination immediately and avoid replacing the existing content with an unrelated intermediate board/editor or blank card lists while waiting. Minimize structural fetching/render work so normal local navigation does not take several seconds.\nUse persistent exact reproduction recordings before production fixes, then verify both routes, URL/selection consistency, repeat navigation and the existing task context.\nInvestigate shared view/data ownership alongside the separate graph-tools reuse report; do not assume a root cause from screenshots alone.\n\nPrioritized and implemented in the current performance pass. Include this task URL in implementation commit messages.\n\nVerification progress — 2026-10-20\nReproduced the intermediate board while the graph request was held. The requested graph destination now appears immediately, and its compact projection omits descriptions and captured review evidence. Exact navigation, viewport restoration and graph semantics checks pass. Live compact graph read: 487,936 bytes / 383 ms.\n\nCompleted verification — 2026-10-20\nCommits: a3e1da7, a912ade, bfaeb66. Their messages contain the canonical task URLs. Build passed; final type gate checked 1,066 authored files with zero violations. Focused exact recordings, storage/stale-save checks and rendered screenshots pass. The full browser run recorded 267 passes and four failures; all four cases pass after focused recorder updates/rechecks. The full checkpoint still has four previously tracked Windows cancellation timing failures under load (task 916da876-ea04-42b3-ac05-93bba5129a8f remains Queued); no timing thresholds were weakened. The app has been restarted with the committed changes. See attached Performance pass verification 2026-10-20.json for measurements, coverage and limitations.",
+        "title": "Bug: Opening Task graph is slow and shows an intermediate Activity board",
+        "updatedAt": "2026-10-20T04:42:26.047Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f45dec7-17c3-4915-a916-4f0d846e106d.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f45dec7-17c3-4915-a916-4f0d846e106d.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 99,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f45dec7-17c3-4915-a916-4f0d846e106d.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f45dec7-17c3-4915-a916-4f0d846e106d.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:07:15.678Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T04:42:26.047Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f45dec7-17c3-4915-a916-4f0d846e106d.json"
+}

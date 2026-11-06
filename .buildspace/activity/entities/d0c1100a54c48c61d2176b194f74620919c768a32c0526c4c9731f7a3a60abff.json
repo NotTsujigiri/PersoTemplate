@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea0eba9d-2509-446c-bb15-c4387eb80e8d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea0eba9d-2509-446c-bb15-c4387eb80e8d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T22:08:20.572Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 501,
+        "description": "Implemented review feedback. Pass/fail colors remain green/red independently of freshness; the exact color regression failed before the fix and passes afterward. Repository-owned display names replace raw script labels while build remains unchanged and commands remain available. Browser technology now supplies a portable discovery catalog: runnable files and individual tests grouped in the shared Checks tree, with filtering retaining ancestors, source navigation and parent/child selection deduplication. Generic result identities connect file/suite runs to individual rows without runner-specific logic in the UI or data model. Existing script recordings remain available; individual rows receive identity-bearing results from new runs. Explained whole-buildspace fingerprint/command freshness and the test:all aggregation; its display name is Full verification. Focused model/backend/browser tests pass, including actual discovery and selecting one test from a three-test file. Inspected the Checks screenshot. build.ps1 passed with 948 authored files and zero type-safety violations; full test:all was not run for this review iteration. Restarted through the guarded API and verified live discovery of 211 individual browser tests across 118 files with no discovery errors. The parent review remains for the user.",
+        "title": "Improve check names, outcome colors and browser-test discovery",
+        "updatedAt": "2026-10-12T22:47:44.542Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea0eba9d-2509-446c-bb15-c4387eb80e8d.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea0eba9d-2509-446c-bb15-c4387eb80e8d.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea0eba9d-2509-446c-bb15-c4387eb80e8d.json"
+}

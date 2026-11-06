@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/add909b1-e5b0-4632-a622-c7f8de05ed40.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/add909b1-e5b0-4632-a622-c7f8de05ed40.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T15:10:16.363Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 432,
+        "description": "Enable task and dependency CRUD directly in Task graph, including drag and drop for reorganizing nested work. The motivating case is moving selected tasks out of the earlier-MVP acceptance group. Preserve prerequisite validation, task identity, evidence and review history.\n\nFirst establish the UI-editor workflow for progressively mocking up UI together and reviewing it through Review → Changes. After the existing proposal-review needs work, the nested UI-editor block runs serially: joint needs analysis → several image-generation rounds for the overall editor structure → agent development → the user reviews the UI editor using the UI editor itself. Develop only after the structural rounds have converged with the user.\n\nUse that editor to continue the review-surface mockups and their human review, then plan and implement the accepted review/annotation improvements and review them in Changes. Continue with the existing graph-editing needs, proposal, development and review sequence afterward. Every level remains serial. This whole task precedes Review the updated MVP delivery plan.\n\nTask descriptions remain briefs. Mockups and other proposal deliverables are separate durable artifacts linked to the work and its review; the UI editor is a supported presentation, not a mandatory format for all future proposals. Analyze effects on invariants, relations and readiness before implementing graph mutations. Do not silently remove dependencies or weaken invariants to make editing succeed.",
+        "title": "Enable task and dependency editing directly in Task graph",
+        "updatedAt": "2026-10-26T07:21:36.763Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/add909b1-e5b0-4632-a622-c7f8de05ed40.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/add909b1-e5b0-4632-a622-c7f8de05ed40.json",
+      "properties": {
+        "placement": "queued",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/add909b1-e5b0-4632-a622-c7f8de05ed40.json"
+}

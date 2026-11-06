@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/822573dd-17af-4657-8da7-5016b5535476.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/822573dd-17af-4657-8da7-5016b5535476.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T07:53:37.859Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 628,
+        "description": "",
+        "title": "Independent review of the final browser corrections: unchanged expectations; fixture IDs remove duplicate-label ambiguity, mounted geometry is measured after ow",
+        "updatedAt": "2026-10-18T07:55:25.228Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/822573dd-17af-4657-8da7-5016b5535476.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/822573dd-17af-4657-8da7-5016b5535476.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Independent review of the final browser corrections: unchanged expectations; fixture IDs remove duplicate-label ambiguity, mounted geometry is measured after owner reads, and Ctrl stays pressed until zoom is observed. Drag, annotation layout and hidden viewport pass 3/3 each; zoom and buildspace channels pass 2/2 each."
+          },
+          {
+            "kind": "explain",
+            "text": "Repeated-component recording matched both distinct values, but a pending intercepted read failed during test teardown. Waiting for route handlers fixes that fixture lifecycle; repeated-component test now passes 3/3. No errors are suppressed and no assertions are removed."
+          },
+          {
+            "kind": "explain",
+            "text": "The previous whole-browser run had 235/241 passes. Every failing case now passes focused revalidation; the required full test:all checkpoint is running again. Migration-completeness review stays pending that result."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/822573dd-17af-4657-8da7-5016b5535476.json"
+}

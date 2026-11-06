@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2898e025-34cf-47ec-a976-f727bf8bc583.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2898e025-34cf-47ec-a976-f727bf8bc583.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T09:42:21.611Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 244,
+        "description": "Correct the frozen-checkout guard blocking explicit chat prompts. Keep source writes, commands and live verification guarded; leave automatic execution queued. Regressions record exact before/after behavior for original and shared-repository chats.",
+        "title": "Allow review conversations while protecting the submitted checkout",
+        "updatedAt": "2026-09-30T09:46:16.895Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2898e025-34cf-47ec-a976-f727bf8bc583.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2898e025-34cf-47ec-a976-f727bf8bc583.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2898e025-34cf-47ec-a976-f727bf8bc583.json"
+}

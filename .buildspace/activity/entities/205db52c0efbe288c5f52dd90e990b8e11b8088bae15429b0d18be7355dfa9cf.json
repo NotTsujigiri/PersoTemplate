@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86ff2158-e9c1-476d-bd58-f553012dd0a2.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86ff2158-e9c1-476d-bd58-f553012dd0a2.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T07:47:37.295Z",
+        "createdBy": "agent:codex",
+        "description": "Derive top-level reviewed tasks from review targets and containment. Submission atomically places those tasks in Blocked and removes queue membership. Every owner transaction prevents leaving Blocked while any submitted or blocked review remains active. Keep review tasks off the Activity board. Preserve the unfinished MVP review, its target, outcomes and discussions. Review resolution does not automatically complete or resume the top-level task.",
+        "title": "Block the reviewed top-level task while its review is active",
+        "updatedAt": "2026-09-30T09:21:53.006Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86ff2158-e9c1-476d-bd58-f553012dd0a2.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86ff2158-e9c1-476d-bd58-f553012dd0a2.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86ff2158-e9c1-476d-bd58-f553012dd0a2.json"
+}

@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a52d5119-1461-431f-92a7-c0ac715a15ec.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a52d5119-1461-431f-92a7-c0ac715a15ec.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T21:46:52.175Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1081,
+        "description": "",
+        "title": "After MVP: extend advanced query composition into a full editor for code outside the predicate",
+        "updatedAt": "2026-10-24T21:46:52.447Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a52d5119-1461-431f-92a7-c0ac715a15ec.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a52d5119-1461-431f-92a7-c0ac715a15ec.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a52d5119-1461-431f-92a7-c0ac715a15ec.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a52d5119-1461-431f-92a7-c0ac715a15ec.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-24T22:51:31.808Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-24T21:46:52.447Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a52d5119-1461-431f-92a7-c0ac715a15ec.json"
+}

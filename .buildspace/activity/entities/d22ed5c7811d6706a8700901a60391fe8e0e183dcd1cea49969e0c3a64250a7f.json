@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12744db7-eb20-4f8e-85b5-2788421c7910.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12744db7-eb20-4f8e-85b5-2788421c7910.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T23:02:18.751Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 718,
+        "description": "Immutable attached evidence",
+        "title": "Editor feedback verification and remaining checkpoint failure",
+        "updatedAt": "2026-10-18T23:02:51.006Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12744db7-eb20-4f8e-85b5-2788421c7910.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12744db7-eb20-4f8e-85b5-2788421c7910.json",
+      "properties": {
+        "artifact": {
+          "hash": "6cb681c4e1ce630a2f15d87f815f47ca1b4735d07400821b5281c36c98cda137",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/6cb681c4e1ce630a2f15d87f815f47ca1b4735d07400821b5281c36c98cda137",
+          "mime": "application/json",
+          "size": 7713
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12744db7-eb20-4f8e-85b5-2788421c7910.json"
+}

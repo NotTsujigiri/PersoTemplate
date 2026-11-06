@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0d0ad4d4-533e-4524-87a6-ab7eb6547726.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0d0ad4d4-533e-4524-87a6-ab7eb6547726.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:24:16.470Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 393,
+        "description": "Review the three implemented fixes whose original records explicitly say they await human review: persistent sign-in, shared splitter/Activity headings, and node creation/composed splitter layouts. Inspect their existing evidence and use the running app. This is acceptance of existing work, not another implementation stage.",
+        "title": "Review the implemented sign-in and editor layout fixes",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0d0ad4d4-533e-4524-87a6-ab7eb6547726.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0d0ad4d4-533e-4524-87a6-ab7eb6547726.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0d0ad4d4-533e-4524-87a6-ab7eb6547726.json"
+}

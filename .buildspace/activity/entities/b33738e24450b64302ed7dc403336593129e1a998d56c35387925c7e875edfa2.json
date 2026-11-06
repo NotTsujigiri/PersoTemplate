@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e8ed68-b80d-4808-bba2-1d39b9c02ee3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e8ed68-b80d-4808-bba2-1d39b9c02ee3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T20:53:28.539Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 773,
+        "description": "Abandoned at the user's request on 2026-10-20.\n\nThe user confirmed there was no defect in receiving newly created items in this report. The task was created as a child of Persistent planning and review MVP, so it appeared through that parent instead of as a top-level In progress card. The earlier refresh hypothesis was mistaken.\n\nAffected design task: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0eeb2840-caaa-46e4-a813-d5926c5fcb36.json\nParent: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json\n\nThe user could not abandon this report through the Node editor because Save was broken, and explicitly asked the agent to abandon it through the planning service. Save is tracked separately as a new queued bug. The design task itself remains In progress; this abandonment applies only to this mistaken refresh bug.",
+        "title": "Bug: Newly created task is missing from the Activity board before refresh",
+        "updatedAt": "2026-10-19T23:39:41.380Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e8ed68-b80d-4808-bba2-1d39b9c02ee3.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e8ed68-b80d-4808-bba2-1d39b9c02ee3.json",
+      "properties": {
+        "placement": "abandoned",
+        "purpose": "investigation",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e8ed68-b80d-4808-bba2-1d39b9c02ee3.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e8ed68-b80d-4808-bba2-1d39b9c02ee3.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:21:49.026Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T23:39:41.380Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e8ed68-b80d-4808-bba2-1d39b9c02ee3.json"
+}

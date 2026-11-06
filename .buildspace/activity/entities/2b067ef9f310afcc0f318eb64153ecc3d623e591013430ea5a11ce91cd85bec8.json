@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a176d139-8a65-4dfe-820c-5057b3f6225c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a176d139-8a65-4dfe-820c-5057b3f6225c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T06:57:11.057Z",
+        "createdBy": "agent:codex",
+        "description": "Handle five browser annotations: semantic enums and sets for former choice fields; distinct read-only presentation; read-only node-type metadata and indicator; compact revision labels; shared heading/body field contract including structured JSON and contributed renderers. Reproduce before editing and verify the same recording afterwards.",
+        "title": "Correct enum types, read-only fields and uniform node editor layout",
+        "updatedAt": "2026-09-30T09:21:53.006Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a176d139-8a65-4dfe-820c-5057b3f6225c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a176d139-8a65-4dfe-820c-5057b3f6225c.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a176d139-8a65-4dfe-820c-5057b3f6225c.json"
+}

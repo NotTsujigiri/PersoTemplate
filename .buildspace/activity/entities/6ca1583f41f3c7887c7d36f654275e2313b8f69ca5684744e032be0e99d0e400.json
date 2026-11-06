@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c187c53b-9e60-4d9f-aef5-4e9daefc1b17.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c187c53b-9e60-4d9f-aef5-4e9daefc1b17.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T14:03:03.960Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 540,
+        "description": "Immutable attached evidence",
+        "title": "Independent plan review - round 1.txt",
+        "updatedAt": "2026-10-17T14:03:15.471Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c187c53b-9e60-4d9f-aef5-4e9daefc1b17.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c187c53b-9e60-4d9f-aef5-4e9daefc1b17.json",
+      "properties": {
+        "artifact": {
+          "hash": "b5228f668e66628e51d7a62d53c5eb3291dd32722353711f8f5cc32cda4c97ed",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/b5228f668e66628e51d7a62d53c5eb3291dd32722353711f8f5cc32cda4c97ed",
+          "mime": "text/plain",
+          "size": 2036
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c187c53b-9e60-4d9f-aef5-4e9daefc1b17.json"
+}

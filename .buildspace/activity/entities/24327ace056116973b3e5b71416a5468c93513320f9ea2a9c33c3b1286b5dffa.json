@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c04c63f5-8c7a-4108-acc7-60707ea0f8f8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c04c63f5-8c7a-4108-acc7-60707ea0f8f8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T21:48:38.020Z",
+        "createdBy": "agent:codex",
+        "description": "Compact single-column Fields / Additional relations split. Help between name and type; reusable value frame. Intra-field border plus comment, inter-field colored edges with tooltip, neutral gray links; connected ordering preserves declaration order and overlapping groups. Relation fields, read-only provenance and inherited/overridden priority are visible. No predicate source viewer for MVP.",
+        "title": "Deliver truthful node editing with visible invariant feedback",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c04c63f5-8c7a-4108-acc7-60707ea0f8f8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c04c63f5-8c7a-4108-acc7-60707ea0f8f8.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c04c63f5-8c7a-4108-acc7-60707ea0f8f8.json"
+}

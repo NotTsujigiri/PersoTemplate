@@ -1,0 +1,16 @@
+{
+  "paths": [
+    "hello.txt",
+    "app/public/a.js",
+    "app/public/b.js",
+    "app/test/one.test.js",
+    ".system-engineering/entries/SYS-A-VERY-LONG-SYSTEM-NAME.json",
+    ".system-engineering/graph.json",
+    "docs/only/readme.md"
+  ],
+  "width": 1280,
+  "height": 720,
+  "inputOnlyTask": "Input-only parent",
+  "reviewTitle": "Fourth annotation review",
+  "reviewDescription": "Review the complete changes.\nKeep this context visible above both columns."
+}

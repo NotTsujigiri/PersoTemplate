@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9f7d7890-d669-48dc-befa-26d967ea65bc.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9f7d7890-d669-48dc-befa-26d967ea65bc.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.923Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Use agreed behavior, not old recovery code as authority. Missing established repositories and broken scripts must expose errors and inspect/edit/retry tools independent of the failed script; preserve existing data and verify successful retry.\n\nImplementation progress: the built-in Recovery template has inspect/edit/save/restore-missing/retry operations provided through the engine, independently of the failed script. It runs from separate recovery storage, does not create buildspaces, and preserves existing files. Atomic script saves reject stale revisions; Restore missing setup never overwrites existing files. The browser test passes for broken-script inspection, save and retry callback; its screenshot was reviewed. The actual composition-root test passes for transition into recovery. Real launcher restart after repair and missing-setup UI paths remain to be verified.\n\nSlice verification completed: Browser verification passes for broken-script inspection, repair, retry and restoring a missing script. Recovery remains independent of the broken configuration. The repaired-script startup test additionally verifies return to the original data store; general supervised restart is covered by the launcher regression.",
+        "title": "Provide independent private-space recovery",
+        "updatedAt": "2026-10-22T22:28:42.574Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9f7d7890-d669-48dc-befa-26d967ea65bc.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9f7d7890-d669-48dc-befa-26d967ea65bc.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9f7d7890-d669-48dc-befa-26d967ea65bc.json"
+}

@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5d02d27-7a50-4bc3-bac5-b34e1dd42d1d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5d02d27-7a50-4bc3-bac5-b34e1dd42d1d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T03:51:58.072Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 729,
+        "description": "Immutable attached evidence",
+        "title": "Initial splitter overview omits Activity board nested panes.png",
+        "updatedAt": "2026-10-19T03:52:25.875Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5d02d27-7a50-4bc3-bac5-b34e1dd42d1d.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5d02d27-7a50-4bc3-bac5-b34e1dd42d1d.json",
+      "properties": {
+        "artifact": {
+          "hash": "14ae7e92cee1c147167785a0a083720d1fb446f787ec23ea04a5f3db775b51c3",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/14ae7e92cee1c147167785a0a083720d1fb446f787ec23ea04a5f3db775b51c3",
+          "mime": "image/png",
+          "size": 388800
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5d02d27-7a50-4bc3-bac5-b34e1dd42d1d.json"
+}

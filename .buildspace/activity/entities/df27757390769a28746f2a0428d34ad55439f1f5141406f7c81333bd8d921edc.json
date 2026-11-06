@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dff66c19-372e-45b9-86d1-6f85fae3371b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dff66c19-372e-45b9-86d1-6f85fae3371b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T20:49:53.543Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 575,
+        "description": "- Application and inspection checkpoints: 26bfec3 and ccca084; both independent reviews passed with corrections recorded.\n- Existing live nodes expose components, property definitions and data types; original identities and evidence are preserved.\n- Final checkpoint covers the complete suite and the final read-path efficiency corrections.",
+        "title": "Commit checkpoint 2: migrated application and component inspection",
+        "updatedAt": "2026-10-18T08:11:34.025Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dff66c19-372e-45b9-86d1-6f85fae3371b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dff66c19-372e-45b9-86d1-6f85fae3371b.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "integration",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f4818f74-33b3-4dee-98d7-106d1e8f47de.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dff66c19-372e-45b9-86d1-6f85fae3371b.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f4818f74-33b3-4dee-98d7-106d1e8f47de.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dff66c19-372e-45b9-86d1-6f85fae3371b.json"
+}

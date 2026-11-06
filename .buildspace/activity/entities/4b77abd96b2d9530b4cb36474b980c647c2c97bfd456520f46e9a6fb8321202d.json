@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1148fd62-9ee7-4987-b200-75de19264806.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1148fd62-9ee7-4987-b200-75de19264806.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T14:04:02.930Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 350,
+        "description": "",
+        "title": "Addressed: these captured needs and replies are persisted as review discussions. New comments from Changes carry the exact submitted task and revision. Deferred",
+        "updatedAt": "2026-10-06T14:04:03.024Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1148fd62-9ee7-4987-b200-75de19264806.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1148fd62-9ee7-4987-b200-75de19264806.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14d10dc9-9e59-4772-aad4-620e8a5d9532.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Addressed: these captured needs and replies are persisted as review discussions. New comments from Changes carry the exact submitted task and revision. Deferred: direct human execution of steps, as requested. Open architecture meanings are listed in the parent and boundary task; they are not treated as accepted design decisions."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1148fd62-9ee7-4987-b200-75de19264806.json"
+}

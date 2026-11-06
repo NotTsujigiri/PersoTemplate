@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b30b4f72-6f93-465c-940a-bd40f67052e1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b30b4f72-6f93-465c-940a-bd40f67052e1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T02:06:08.773Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 211,
+        "description": "Actual submitted-candidate screenshot shows Preview compressed to approximately 160px despite about 900px available. Annotation destination and candidate identity pass, but visual usability fails. Shared browser host layout must allocate the available height in every host, including review, rather than depend on a work-content element ID. Found during acceptance verification; untouched candidate target 208 withdrawn for correction.",
+        "title": "Review Preview does not fill available height",
+        "updatedAt": "2026-09-30T02:06:08.841Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b30b4f72-6f93-465c-940a-bd40f67052e1.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b30b4f72-6f93-465c-940a-bd40f67052e1.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b30b4f72-6f93-465c-940a-bd40f67052e1.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b30b4f72-6f93-465c-940a-bd40f67052e1.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:37:40.542Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-30T02:06:08.841Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b30b4f72-6f93-465c-940a-bd40f67052e1.json"
+}

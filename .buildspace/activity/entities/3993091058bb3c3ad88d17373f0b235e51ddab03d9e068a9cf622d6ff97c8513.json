@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1aadfce0-343b-4cce-8e87-a04634fdc934.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1aadfce0-343b-4cce-8e87-a04634fdc934.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Make real inputs and task placements readable and minimally editable.\n\nScope\n\n• Inputs / Backlog / Queued / Running / Blocked columns with independent layout.\n\n• Root-only backlog, priority groups, selection, breadcrumb and simple persisted create/move actions.\n\n• No speculative toolbar or drag-only overlay.\n\n• Audit existing table and header components. Reuse/extract header pieces and compose independent column content/scroll; document the chosen shared boundary.\n\nSuccess criteria\n\n1. Board is populated from persisted real data, not mockup fixtures.\n\n2. Backlog contains only parentless tasks; priorities are ordered 0..n and editable without drag.\n\n3. Columns have no common row grid; selection and scroll survive unrelated updates.\n\n4. Right side stays blank without a selection, and selected task can open its graph.\n\nEvidence\n\n• Focused board browser tests\n\n• Desktop/narrow screenshots\n\n• Real create/move/readback demo\n\n",
+        "title": "Build the independent-column Tasks board",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1aadfce0-343b-4cce-8e87-a04634fdc934.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1aadfce0-343b-4cce-8e87-a04634fdc934.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1aadfce0-343b-4cce-8e87-a04634fdc934.json"
+}

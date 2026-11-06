@@ -1,0 +1,18 @@
+
+Running 11 tests using 1 worker
+
+(node:33776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 test\annotations-8-ui.spec.mjs:3:1 › file selection, local view tools and retained buildspace tabs match the requested contract (1.8s)
+  ok  2 test\annotations-8-ui.spec.mjs:152:1 › retained tabs preserve unsaved editor, scroll, and preview URL without refetching files (1.4s)
+  ok  3 test\annotations-8-ui.spec.mjs:224:1 › selection modifiers preserve anchor, toggle rows and respect canceled dirty-file selection (768ms)
+  ok  4 test\annotations-8-ui.spec.mjs:270:1 › shared view toolbar changes only its owned tools and supports empty selections (1.1s)
+  ok  5 test\annotations-layout-ui.spec.mjs:9:1 › annotation layout recording: compact board, toolbar, feedback, changes and preview (3.5s)
+  ok  6 test\annotations-round2-ui.spec.mjs:9:1 › second annotation recording: typed node, board, direct timeline and review controls (3.4s)
+  ok  7 test\annotations-round2-ui.spec.mjs:212:1 › declared fields and Instance of navigate through the same Node view; queued tasks drag back (2.6s)
+  ok  8 test\annotations-round3-ui.spec.mjs:6:1 › third annotation recording: stable graph and review panes, directional relations (6.3s)
+  ok  9 test\annotations-round4-ui.spec.mjs:9:1 › fourth annotation recording: recursive file groups, compact ranges and typed review context (5.7s)
+  ok 10 test\annotations-round5-ui.spec.mjs:8:1 › fourteen-annotation node editor and bounded scrolling recording (2.1s)
+  ok 11 test\annotations-round6-ui.spec.mjs:8:1 › five-annotation semantic choices and uniform field recording (2.3s)
+
+  11 passed (35.0s)

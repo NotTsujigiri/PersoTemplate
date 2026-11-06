@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/808e4158-d68e-47af-9528-cd8810fc1fb6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/808e4158-d68e-47af-9528-cd8810fc1fb6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T03:52:38.762Z",
+        "createdBy": "agent:codex",
+        "description": "Build a reusable modal for adding a relation. Let the user choose the relation type and target node, constrained by declared relation contracts. Include attaching evidence and creating/linking nested tasks, replacing the removed Attach and + node toolbar shortcuts. Wire the disabled Relations add button to this modal when ready.",
+        "title": "add relation modal component",
+        "updatedAt": "2026-10-06T17:16:54.436Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/808e4158-d68e-47af-9528-cd8810fc1fb6.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/808e4158-d68e-47af-9528-cd8810fc1fb6.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/808e4158-d68e-47af-9528-cd8810fc1fb6.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/808e4158-d68e-47af-9528-cd8810fc1fb6.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T07:04:42.255Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-06T17:16:54.436Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/808e4158-d68e-47af-9528-cd8810fc1fb6.json"
+}

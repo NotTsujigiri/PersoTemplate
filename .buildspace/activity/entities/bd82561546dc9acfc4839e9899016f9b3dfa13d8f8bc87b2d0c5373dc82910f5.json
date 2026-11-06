@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/31c1855e-b423-4713-a82d-dbdffd956c1d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/31c1855e-b423-4713-a82d-dbdffd956c1d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-06T05:44:13.011Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1414,
+        "description": "Extract buildspace/activity-board ownership from HarnessApp and consume generic persistence/Git capabilities. Preserve all current identities, entities, relations, evidence and user data during a verified one-time cutover. Enforce configured repository dependency direction and owning-repository writes. Remove replaced generation storage and obsolete consumers. No agent keep/remove review until the other responsibilities have moved.",
+        "title": "Move system-engineering ownership and migrate activity-board persistence",
+        "updatedAt": "2026-11-06T07:08:51.818Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/31c1855e-b423-4713-a82d-dbdffd956c1d.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/31c1855e-b423-4713-a82d-dbdffd956c1d.json",
+      "properties": {
+        "placement": "running",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/31c1855e-b423-4713-a82d-dbdffd956c1d.json"
+}

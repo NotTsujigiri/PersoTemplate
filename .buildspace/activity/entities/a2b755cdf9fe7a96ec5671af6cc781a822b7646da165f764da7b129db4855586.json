@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b360161c-8cc5-403e-b056-416120c2940e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b360161c-8cc5-403e-b056-416120c2940e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T05:50:15.039Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1313,
+        "description": "Combined browser feedback 3 and 4. Add a See in dependency graph action to the TypeScript text editor right-click context menu for supported type declarations, including interfaces. Open the existing dependency graph focused on the selected type; resolve the actual declaration rather than guessing from its name. Support the editor text and expression presentations.\n\nMove Go to declaration from its autocomplete-panel icon into the same context menu. In this same task, remove the nested type/model declaration entries currently shown under TypeScript files in Repositories: editor context-menu navigation replaces that entry point. Preserve the underlying model data and graph capability, and do not remove unrelated repository children such as checks or UI component entries.",
+        "title": "Open type dependency graphs from the editor context menu and simplify Repositories",
+        "updatedAt": "2026-11-03T07:20:04.917Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b360161c-8cc5-403e-b056-416120c2940e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b360161c-8cc5-403e-b056-416120c2940e.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b360161c-8cc5-403e-b056-416120c2940e.json"
+}

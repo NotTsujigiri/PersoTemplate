@@ -1,0 +1,26 @@
+# Review this MVP iteration in Broccoli
+
+This is the implementation review guide, not a record of human acceptance. The top-level MVP stays Waiting while its review remains open.
+
+## Review surfaces
+
+Use the review at the top of **Persistent planning and review MVP**. Overview contains the scope, discussion and checks. Changes refers to the immutable submitted candidate across TheBroccoli, BtrTemplate and PersoTemplate. Preview runs that captured candidate with isolated state. The attached accepted mockups include reservation comments; those comments take precedence over generation noise.
+
+## Suggested walkthrough
+
+1. Click **Buildspaces** in the left navigation, then **Open** beside **Ergonomics playground** and choose **Activity board**. This is an ordinary local buildspace backed by three disposable repositories. Its placeholder nodes and long conversations are separate from the real Broccoli activity board. Git provides reset points; there is no special demo subsystem.
+2. Resize the board columns and four Active sections. Expand task children and recency groups, acknowledge changes, move an item to Later, then edit it and confirm it returns to New. Check inherited priority and computed parent stage in both card and Node editor.
+3. Open a node. Inspect Fields and Additional relations, field help, read-only values, reference labels and invariant feedback. Try an invalid value on disposable data and confirm it cannot publish. Return to an earlier revision and compare its values without losing a current draft.
+4. Open the long demonstration chat. Use the five-pane picker, history, search, per-message scrolling, reply/quote/copy references and timing detail. Select disjoint text ranges. No generated demo chat starts a model.
+5. Right-click or select content and annotate. Check the selected context, source and destination; Stack several comments, then Create. A chat destination inserts a persisted annotation URL into its composer without sending it. In Preview, capture remains associated with the submitted candidate.
+6. Configure a Pi-compatible provider through the app when ready. A real API key remains local and is never part of graph evidence. Deterministic tests cover the loop; the delivery does not claim a successful paid DeepSeek request.
+7. Scheduled/event-triggered execution is a product capability with explicit opt-in and queue pause. Delivery leaves it disabled and creates no real recurring jobs. Occurrences retain their trigger, input, task and conversation identities; completed agent execution waits for review.
+8. Add review comments in Broccoli and iterate there. Approval and any subsequent commit/merge are the human review boundary, not an implementing-agent shortcut.
+
+## Limits to assess during review
+
+- DOM-derived captures cannot reproduce every browser-rendered surface. Managed preview captures use actual rendered screenshots; source fidelity is described with the annotation.
+- Very narrow viewports require pane resizing. Compact cards and lazy data loading reduce width and item-count pressure, but cannot make every simultaneous pane legible at any width.
+- Candidate source is immutable. Verification uses installed dependencies; this is not a claim that a fresh dependency installation is reproducible offline.
+- Full multi-human/multi-agent orchestration, predicate-source inspection, saved-query folders and polished node/text comparisons remain the explicitly deferred scope.
+

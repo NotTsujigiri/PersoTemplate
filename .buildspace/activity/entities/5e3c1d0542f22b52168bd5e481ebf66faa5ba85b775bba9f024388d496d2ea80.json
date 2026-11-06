@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T13:56:31.271Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 534,
+        "description": "- Verify typed entities, repeated components, lazy views and observer consistency; remove predecessor APIs and owned data.\n- Passed: strict types, 41 model tests, 571 unit/integration tests and 251 browser scenarios across full plus focused runs; failed full runs remain recorded.\n- Existing nodes, component definitions, properties and data types inspected live; both independent agents approve.\n- Final checkpoint: 9c06556bf13ad32a6abcc467a118a775abe7a49f; evidence and review iterations attached to Agent review: migration completeness.",
+        "title": "Verify migration, lazy updates and predecessor removal",
+        "updatedAt": "2026-10-18T18:35:42.059Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json"
+}

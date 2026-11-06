@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/041ee662-c814-42ab-ad15-dd39792854de.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/041ee662-c814-42ab-ad15-dd39792854de.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T15:33:08.638Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 372,
+        "description": "Existing recorded check runs are visible in the graph preparation. This remaining stage integrates the approved attempt model and authoritative acceptance relationships. \n\nProject actual check attempts/results from their owning model into the task execution graph with Broccoli as executor. Preserve exact source revision, prerequisite/gate relationships, result and attempt history. Distinguish failed, stale, cancelled and interrupted runs; never satisfy acceptance with invalid evidence. Reuse declared check discovery, including check:types in each repository. No duplicate check truth or pretend task completion. Critical criteria 1, 5, 12–13.",
+        "title": "Integrate check attempts and evidence into task execution",
+        "updatedAt": "2026-10-08T19:32:41.907Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/041ee662-c814-42ab-ad15-dd39792854de.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/041ee662-c814-42ab-ad15-dd39792854de.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c3eefa22-c0fd-4463-9f5e-fb9b228fd4b5.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/041ee662-c814-42ab-ad15-dd39792854de.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c3eefa22-c0fd-4463-9f5e-fb9b228fd4b5.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/041ee662-c814-42ab-ad15-dd39792854de.json"
+}

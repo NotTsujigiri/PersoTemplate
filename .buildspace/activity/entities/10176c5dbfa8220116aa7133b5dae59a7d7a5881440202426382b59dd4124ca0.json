@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22bc8cff-8517-4079-8dc5-39ecbf0d4bb5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22bc8cff-8517-4079-8dc5-39ecbf0d4bb5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-26T16:52:47.294Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1186,
+        "description": "Add a Markdown contributor with Markdown language-server support, using LspContributor for discovery, instance reuse and lifecycle management and the shared text editor for consuming its capabilities.\n\nThe motivating need is readable task documentation with usable links. Inspect and reuse the existing Markdown rendering support; ensure task descriptions render clickable Markdown links. Rendering and following links belong to the UI, while editing assistance belongs to the language support.\n\nKeep Markdown-specific behavior owned by its contributor and compose it explicitly into the application. Select the concrete server and capabilities during this task; this entry does not select a new external dependency.",
+        "title": "Add a Markdown contributor",
+        "updatedAt": "2026-10-31T05:24:29.996Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22bc8cff-8517-4079-8dc5-39ecbf0d4bb5.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22bc8cff-8517-4079-8dc5-39ecbf0d4bb5.json",
+      "properties": {
+        "placement": "backlog",
+        "priority": 5,
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/22bc8cff-8517-4079-8dc5-39ecbf0d4bb5.json"
+}

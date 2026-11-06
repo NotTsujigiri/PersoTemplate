@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8d1d835-9181-4000-882f-85d97a70dc38.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8d1d835-9181-4000-882f-85d97a70dc38.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T14:56:02.756Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1063,
+        "description": "Immutable attached evidence",
+        "title": "Splitter drag regression — exact recordings and focused results",
+        "updatedAt": "2026-10-24T14:56:03.123Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8d1d835-9181-4000-882f-85d97a70dc38.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8d1d835-9181-4000-882f-85d97a70dc38.json",
+      "properties": {
+        "artifact": {
+          "hash": "ee5e3e3404ac845cd55507014e98ac2f4991227d5c2403d0e00f16349a0eb8b8",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/ee5e3e3404ac845cd55507014e98ac2f4991227d5c2403d0e00f16349a0eb8b8",
+          "mime": "application/json",
+          "size": 60440
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e8d1d835-9181-4000-882f-85d97a70dc38.json"
+}

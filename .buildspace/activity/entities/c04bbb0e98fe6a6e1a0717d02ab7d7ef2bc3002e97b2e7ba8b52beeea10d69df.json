@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6dd25ee-5d72-42cb-8c4b-15e8c6a29753.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6dd25ee-5d72-42cb-8c4b-15e8c6a29753.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T10:14:02.538Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 256,
+        "description": "Saved Ergonomics playground appears in the directory but not in the left navigation. Channel children must derive from saved buildspace IDs and names and remain synchronized with creation and rename.",
+        "title": "Perso buildspace channels are hardcoded instead of owner-derived",
+        "updatedAt": "2026-09-30T10:14:02.645Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6dd25ee-5d72-42cb-8c4b-15e8c6a29753.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6dd25ee-5d72-42cb-8c4b-15e8c6a29753.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6dd25ee-5d72-42cb-8c4b-15e8c6a29753.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6dd25ee-5d72-42cb-8c4b-15e8c6a29753.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:35:05.710Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-30T10:14:02.645Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f6dd25ee-5d72-42cb-8c4b-15e8c6a29753.json"
+}

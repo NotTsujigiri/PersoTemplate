@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T13:56:31.254Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 534,
+        "description": "- Restore strict compilation; implement identity-only nodes, repeated owned component instances, typed properties and atomic validated operations.\n- Owner predicates use tracked engine reads; publish changing external inputs as transaction data. Share lazy caches and notify scoped subscribers only.\n- Validate existing and new edge requirements against candidate state; test removal/property changes, rollback isolation, missing reads, enumeration and branch cleanup.\n- Derive validation/inspection from owned definitions; prove compiler rejection, lazy work counts and safe data rewriting. Review predicate purity: TypeScript alone cannot prove it.",
+        "title": "Implement the component engine and lazy views",
+        "updatedAt": "2026-10-18T01:57:58.170Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ce92e46-9512-483a-b25b-355fbc974bed.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ce92e46-9512-483a-b25b-355fbc974bed.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json"
+}

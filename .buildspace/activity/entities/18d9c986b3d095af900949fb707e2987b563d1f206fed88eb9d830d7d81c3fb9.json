@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9364980b-3123-42f1-88d5-d335b4d21fb8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9364980b-3123-42f1-88d5-d335b4d21fb8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.380Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "The user reviews the proposed fix against the recorded reproduction, the ownership boundary, lack of view-to-view coupling, and verification plan. Required approval before implementation.",
+        "title": "Review the completion and refresh technical proposal",
+        "updatedAt": "2026-10-09T12:56:38.488Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9364980b-3123-42f1-88d5-d335b4d21fb8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9364980b-3123-42f1-88d5-d335b4d21fb8.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9364980b-3123-42f1-88d5-d335b4d21fb8.json"
+}

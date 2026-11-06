@@ -1,0 +1,33 @@
+{
+  "test": "ui-editor-ui.spec.ts: visual authoring shares the repository bush, offers HTML and marks hovered and selected renderings",
+  "before": {
+    "structure": {
+      "editingTargets": 1,
+      "trees": 2,
+      "nestedInSource": false,
+      "nativeButton": 0
+    },
+    "hovered": 0,
+    "selected": 0
+  },
+  "expected": {
+    "structure": {
+      "editingTargets": 0,
+      "trees": 1,
+      "nestedInSource": true,
+      "nativeButton": 1
+    },
+    "hovered": 1,
+    "selected": 1
+  },
+  "after": {
+    "structure": {
+      "editingTargets": 0,
+      "trees": 1,
+      "nestedInSource": true,
+      "nativeButton": 1
+    },
+    "hovered": 1,
+    "selected": 1
+  }
+}

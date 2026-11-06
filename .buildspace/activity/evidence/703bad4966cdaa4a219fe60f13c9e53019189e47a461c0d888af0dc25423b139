@@ -1,0 +1,2097 @@
+{
+  "title": "Splitter, file view tools, and dependency graph usability corrections",
+  "checkpoint": "67f65db",
+  "changes": [
+    "Shared splitter no longer restores obsolete pixel dimensions over its sizing owner's current state.",
+    "Files and Catalog use the shared flex allocation; hidden descendants retain that declared layout.",
+    "File tree uses the standard view toolbar with a compact current-files/working-tree source dropdown; archived iterations reuse the shared anchored surface.",
+    "Dependency graph has fixed horizontal depth numbers, row separators, centered labels, pointer-anchored Ctrl+wheel zoom, and Fit without a minimum scale floor.",
+    "Fitted file panes keep explicit user pixel widths bounded as their parent changes, while preserving proportional presets and collapsed states."
+  ],
+  "reproduction": [
+    {
+      "path": ".harness/recordings/splitter-nested",
+      "finding": "Collapsing the file tree left a reserved column. Restoring it and shrinking by keyboard produced a 28px overlap. The same Chat, nested pane, viewport, keyboard and pointer sequence now exactly matches expected allocation."
+    },
+    {
+      "path": ".harness/recordings/splitter-custom",
+      "finding": "Custom restore injected stale width despite canceled resize ownership. Restored geometry now respects the current owner without injected width/height."
+    },
+    {
+      "path": ".harness/recordings/splitter-catalog",
+      "finding": "Both collapsed sides left fixed grid tracks. Flex allocation now reuses the entire parent."
+    },
+    {
+      "path": ".harness/recordings/splitter-hidden-parent",
+      "finding": "A hidden parent changed descendant splitter layout to custom. Explicit flex ownership preserves the mode."
+    },
+    {
+      "path": ".harness/recordings/dependency-graph-controls",
+      "finding": "Scale .01 became .7; Fit overflowed both axes, no depth guides, Ctrl+wheel did not zoom. Exact expected recording now passes all fields."
+    },
+    {
+      "path": ".harness/recordings/test-results-file-toolbar-before",
+      "finding": "Source dropdown arrow clipped in the initial pane. Compact source control now exactly passes full visibility and source-switching expectations."
+    },
+    {
+      "path": ".harness/recordings/splitter-parent-resize",
+      "finding": "A restored oversized pane was valid in a wide workspace but shrank the detail pane to 85px when an ancestor narrowed. Bounds are now reevaluated at actual parent-size changes."
+    },
+    {
+      "path": ".harness/recordings/splitter-persisted-width",
+      "finding": "Saved user width must survive ancestor settling without becoming a proportionally changed value; user preference remains separate from automatic fitting."
+    },
+    {
+      "path": ".harness/recordings/round3-atomic-measurement",
+      "finding": "The full checkpoint exposed a detached-toolbar test measurement race; the unchanged isolated run passed. The test now reads the current toolbar through its stable parent with the same bounds expectations."
+    },
+    {
+      "path": ".harness/recordings/splitter-pixel-preference",
+      "finding": "A user pixel preference now survives parent resizing and restoration exactly; presets keep proportional sizing and collapsed panes remain hidden."
+    }
+  ],
+  "independentReview": "Design and independent expected-output review preceded behavior fixes. Separate agents reviewed shared splitter, graph, file toolbar, and final parent-resize/persistence correction; no blocking findings remained.",
+  "liveVerification": "Existing localhost:43130 service restarted and final browser modules reloaded. Verified Chat and file-tree collapse consumes all available width, the formerly overlapping restore-and-resize sequence, and full-graph Fit in both axes with depth numbers 0–4 and centered labels in Personal buildspace.",
+  "scopeLimit": "The reported blank allocation was reproduced in the nested file pane. Chat itself passed the tested collapse/restore sequences.",
+  "validation": {
+    "checkpoint": "Initial npm run test:all passed build, 17 model tests, 175 core tests, and 5 shared graph tests; browser run found two issues (133/135 passed).",
+    "corrections": "Corrected the responsive fitted width and a detached-toolbar test measurement race without changing its expectations.",
+    "finalBuild": "passed",
+    "focusedFinalBrowser": "9/9 passed",
+    "sharedSplitter": "8/8 passed",
+    "finalBrowser": "135/136 passed in the full rerun. All annotation-related tests passed. Preview drag fixture startup failed once (expected Drag fixture, received The Broccoli) and passed unchanged in isolation; the full rerun is not represented as a clean pass.",
+    "logs": [
+      ".harness/annotations-splitter-graph-checkpoint.log",
+      ".harness/annotations-final-build.log",
+      ".harness/annotations-final-browser.log"
+    ],
+    "previewCaveat": ".harness/recordings/preview-drag-checkpoint contains the failure and unchanged isolated pass. No Preview product or test change was made."
+  },
+  "recordings": {
+    "splitter-nested": {
+      "before": [
+        {
+          "step": "initial",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "workspace without Chat",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "workspace without Chat or file tree",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": false,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore tree to one quarter",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "shrink restored tree by keyboard",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": false
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "equal tree and detail",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse Model clusters and dependency workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Model clusters and dependency workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse Model graph and node editor",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Model graph and node editor",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "narrow workspace without Chat",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Chat vertically",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "wide nested workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "wide workspace without Chat again",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse tree before pointer restoration",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": false,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore tree by pointer",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": false,
+              "nonoverlapping": false
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "step": "initial",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "workspace without Chat",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "workspace without Chat or file tree",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore tree to one quarter",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "shrink restored tree by keyboard",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "equal tree and detail",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse Model clusters and dependency workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Model clusters and dependency workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse Model graph and node editor",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Model graph and node editor",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "narrow workspace without Chat",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Chat vertically",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "wide nested workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "wide workspace without Chat again",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse tree before pointer restoration",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore tree by pointer",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "step": "initial",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "workspace without Chat",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "workspace without Chat or file tree",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore tree to one quarter",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "shrink restored tree by keyboard",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "equal tree and detail",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse Model clusters and dependency workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Model clusters and dependency workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse Model graph and node editor",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Model graph and node editor",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "narrow workspace without Chat",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore Chat vertically",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "wide nested workspace",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "wide workspace without Chat again",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "collapse tree before pointer restoration",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        },
+        {
+          "step": "restore tree by pointer",
+          "panes": [
+            {
+              "name": "Conversation and workspace",
+              "beforeHidden": true,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "File list width",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model clusters and dependency workspace",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            },
+            {
+              "name": "Model graph and node editor",
+              "beforeHidden": false,
+              "afterHidden": false,
+              "fillsAvailable": true,
+              "adjoining": true,
+              "nonoverlapping": true
+            }
+          ]
+        }
+      ]
+    },
+    "splitter-parent-resize": {
+      "before": [
+        {
+          "step": "restore excessive width in wide workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "ancestor narrows the file workspace",
+          "detailMinimum": false,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "explicit quarter survives a narrower parent",
+          "quarterPreserved": true
+        },
+        {
+          "step": "explicit collapse survives resize",
+          "beforeHidden": true,
+          "detailFills": true
+        }
+      ],
+      "actual": [
+        {
+          "step": "restore excessive width in wide workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "ancestor narrows the file workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "user pixel preference survives parent settling",
+          "preferencePreserved": true
+        },
+        {
+          "step": "explicit quarter survives a narrower parent",
+          "quarterPreserved": true
+        },
+        {
+          "step": "explicit collapse survives resize",
+          "beforeHidden": true,
+          "detailFills": true
+        }
+      ],
+      "expected": [
+        {
+          "step": "restore excessive width in wide workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "ancestor narrows the file workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "user pixel preference survives parent settling",
+          "preferencePreserved": true
+        },
+        {
+          "step": "explicit quarter survives a narrower parent",
+          "quarterPreserved": true
+        },
+        {
+          "step": "explicit collapse survives resize",
+          "beforeHidden": true,
+          "detailFills": true
+        }
+      ]
+    },
+    "splitter-pixel-preference": {
+      "before": [
+        {
+          "step": "restore excessive width in wide workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "ancestor narrows the file workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "user pixel preference survives parent settling",
+          "preferencePreserved": false
+        },
+        {
+          "step": "explicit quarter survives a narrower parent",
+          "quarterPreserved": true
+        },
+        {
+          "step": "explicit collapse survives resize",
+          "beforeHidden": true,
+          "detailFills": true
+        }
+      ],
+      "expected": [
+        {
+          "step": "restore excessive width in wide workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "ancestor narrows the file workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "user pixel preference survives parent settling",
+          "preferencePreserved": true
+        },
+        {
+          "step": "explicit quarter survives a narrower parent",
+          "quarterPreserved": true
+        },
+        {
+          "step": "explicit collapse survives resize",
+          "beforeHidden": true,
+          "detailFills": true
+        }
+      ],
+      "after": [
+        {
+          "step": "restore excessive width in wide workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "ancestor narrows the file workspace",
+          "detailMinimum": true,
+          "panesDoNotOverlap": true,
+          "detailWithinParent": true
+        },
+        {
+          "step": "user pixel preference survives parent settling",
+          "preferencePreserved": true
+        },
+        {
+          "step": "explicit quarter survives a narrower parent",
+          "quarterPreserved": true
+        },
+        {
+          "step": "explicit collapse survives resize",
+          "beforeHidden": true,
+          "detailFills": true
+        }
+      ]
+    },
+    "dependency-graph-controls": {
+      "before": {
+        "guides": {
+          "depths": [],
+          "separators": 0,
+          "centered": false,
+          "railPinned": false,
+          "smallScale": 0.7
+        },
+        "fit": {
+          "fitsWidth": false,
+          "fitsHeight": false,
+          "reset": true
+        },
+        "wheel": {
+          "canceled": false,
+          "zoomedOut": false,
+          "anchored": true
+        },
+        "ordinaryWheel": {
+          "canceled": false,
+          "scaleUnchanged": true
+        }
+      },
+      "actual": {
+        "guides": {
+          "depths": [
+            "0",
+            "1",
+            "2"
+          ],
+          "separators": 2,
+          "centered": true,
+          "railPinned": true,
+          "smallScale": 0.01
+        },
+        "fit": {
+          "fitsWidth": true,
+          "fitsHeight": true,
+          "reset": true
+        },
+        "wheel": {
+          "canceled": true,
+          "zoomedOut": true,
+          "anchored": true
+        },
+        "ordinaryWheel": {
+          "canceled": false,
+          "scaleUnchanged": true
+        }
+      },
+      "expected": {
+        "guides": {
+          "depths": [
+            "0",
+            "1",
+            "2"
+          ],
+          "separators": 2,
+          "centered": true,
+          "railPinned": true,
+          "smallScale": 0.01
+        },
+        "fit": {
+          "fitsWidth": true,
+          "fitsHeight": true,
+          "reset": true
+        },
+        "wheel": {
+          "canceled": true,
+          "zoomedOut": true,
+          "anchored": true
+        },
+        "ordinaryWheel": {
+          "canceled": false,
+          "scaleUnchanged": true
+        }
+      }
+    }
+  }
+}

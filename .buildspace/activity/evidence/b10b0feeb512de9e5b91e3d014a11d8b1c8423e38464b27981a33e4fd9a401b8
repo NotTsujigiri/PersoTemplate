@@ -1,0 +1,48 @@
+{
+  "title": "Planning tool browser-link correction",
+  "bug": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/577ee3c0-8f71-4ca3-a9c1-40442ce2b883.json",
+  "reproduction": "MCP create omitted an app URL; hand-built channel=buildspaces routes opened the directory and fresh tabs lacked authentication.",
+  "implementation": [
+    "Hosted planning operation results now include links: canonical id, title, credential-free browser URL. Read-by-id recovers links for existing tasks; idempotent mutation replay regenerates host URLs without storing them in graph receipts.",
+    "The app owns routing to the correct buildspace channel and selected node. Graph identifiers remain unchanged.",
+    "An authenticated open tab can supply its session to a new same-origin tab through BroadcastChannel. Scope includes the port; no cross-origin handoff, server authentication relaxation, persistent credential cookie or credential in a returned URL. With no authenticated tab the launcher sign-in is still required."
+  ],
+  "before": {
+    "hasBrowserLink": false,
+    "identityPreserved": true,
+    "readLinkMatches": false,
+    "replayLinkMatches": false,
+    "correctDestination": false,
+    "credentialFree": true,
+    "newTabAuthenticated": false,
+    "exactTaskVisible": false
+  },
+  "after": {
+    "hasBrowserLink": true,
+    "identityPreserved": true,
+    "readLinkMatches": true,
+    "replayLinkMatches": true,
+    "correctDestination": true,
+    "credentialFree": true,
+    "newTabAuthenticated": true,
+    "exactTaskVisible": true
+  },
+  "expected": {
+    "hasBrowserLink": true,
+    "identityPreserved": true,
+    "readLinkMatches": true,
+    "replayLinkMatches": true,
+    "correctDestination": true,
+    "credentialFree": true,
+    "newTabAuthenticated": true,
+    "exactTaskVisible": true
+  },
+  "checks": {
+    "build": "passed",
+    "server": "130 passed",
+    "browser": "106 passed",
+    "security": "Incorrect token, cross-origin mutation and unauthenticated fresh browser remain denied"
+  },
+  "live": "Restarted application, obtained the existing buildspace subtask URL from the actual planning_read MCP tool, reloaded the authenticated original tab, opened the returned URL in the previously unauthorized tab and verified its exact title and persisted description in the node editor.",
+  "review": "Working-tree correction after immutable review target revision 231. The old candidate is unchanged and does not cover this correction. No acceptance, commit or merge performed."
+}

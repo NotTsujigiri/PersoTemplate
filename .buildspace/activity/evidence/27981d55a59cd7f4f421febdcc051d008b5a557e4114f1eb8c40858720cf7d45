@@ -1,0 +1,15 @@
+{
+  "candidateKey": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/04a48ac6-3f02-4dee-8148-7af28470b357.json:a985b355018850291393081d2f58ad68f35cf2daa94ecd600ca0b33db5d620a1",
+  "reviewId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/04a48ac6-3f02-4dee-8148-7af28470b357.json",
+  "destination": "review:graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/04a48ac6-3f02-4dee-8148-7af28470b357.json",
+  "previewURL": "http://127.0.0.1:50907/?area=timeline&chat=df798597-11ff-444f-85b3-3ade0fe1e692&node=graph%3A%2F%2Fplanning-2d652b10-00a8-4057-bfc8-c385c6573f56%2Fentries%2Fbbc9545b-3547-4165-b6ca-b22ab6caf8e5.json&template=personal&community=private&channel=broccoli-buildspace&space=7e419284-6924-44e6-b552-d8f11133616d",
+  "screenshotLoaded": true,
+  "previewGeometry": {
+    "surfaceHeight": 921,
+    "hostHeight": 962,
+    "imageHeight": 921
+  },
+  "commentCreationRequests": 0,
+  "agentRequestsSent": 0,
+  "errors": []
+}

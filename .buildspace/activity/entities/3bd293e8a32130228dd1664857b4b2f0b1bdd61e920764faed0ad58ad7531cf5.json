@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e943e3-218f-4094-a352-8f4436eb2e35.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e943e3-218f-4094-a352-8f4436eb2e35.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.386Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "The user confirms that the image-generation proposal answers the agreed needs, makes per-test duration and behavior understandable, and presents aggregate versus per-test measurements without ambiguity. Required review before development.",
+        "title": "Review the Checks view design before development",
+        "updatedAt": "2026-10-09T13:00:20.346Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e943e3-218f-4094-a352-8f4436eb2e35.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e943e3-218f-4094-a352-8f4436eb2e35.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/70e943e3-218f-4094-a352-8f4436eb2e35.json"
+}

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7b49b72f-9234-4ded-becc-9ab8ebe34564.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7b49b72f-9234-4ded-becc-9ab8ebe34564.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T11:26:58.759Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 665,
+        "description": "",
+        "title": "- Independent component reviewer approved the five browser fixture changes; expectations and time budgets are unchanged.\n- Focused pane, preview reentry, delaye",
+        "updatedAt": "2026-10-18T11:27:32.784Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7b49b72f-9234-4ded-becc-9ab8ebe34564.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7b49b72f-9234-4ded-becc-9ab8ebe34564.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b47fca-020d-4ec5-9b8a-c4f77c844a77.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Independent component reviewer approved the five browser fixture changes; expectations and time budgets are unchanged.\n- Focused pane, preview reentry, delayed-source, annotation, commit completion and three-repository cases pass. Strict checking: 1,039 files, zero violations.\n- Committed e4c718b (Make browser recordings observe completed lifecycle boundaries). Full test:all is running on that commit with native fatal diagnostics.\n- Earlier failed runs remain recorded; the unexplained native worker exit remains a separate open finding."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7b49b72f-9234-4ded-becc-9ab8ebe34564.json"
+}

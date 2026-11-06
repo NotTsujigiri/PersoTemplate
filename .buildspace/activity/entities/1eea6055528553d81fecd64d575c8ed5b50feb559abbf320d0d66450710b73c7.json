@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25c4adb-d15b-413c-a99e-46a5df8778b3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25c4adb-d15b-413c-a99e-46a5df8778b3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T03:27:25.888Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 726,
+        "description": "- Reproduced: changing three repository check commands left only one command in the open view's catalog.\n- Refresh definitions from owned change events; preserve selected repositories and unsaved text while rebuilding rows.\n- Exact browser recording now submits and passes all three checks; draft retention and nine focused unit tests pass.\n- Commit: 11a29ab. Final checkpoint is running.",
+        "title": "Restore complete results for multi-repository check runs",
+        "updatedAt": "2026-10-19T05:28:07.948Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25c4adb-d15b-413c-a99e-46a5df8778b3.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25c4adb-d15b-413c-a99e-46a5df8778b3.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 3,
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25c4adb-d15b-413c-a99e-46a5df8778b3.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25c4adb-d15b-413c-a99e-46a5df8778b3.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:19:10.625Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T05:28:07.948Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25c4adb-d15b-413c-a99e-46a5df8778b3.json"
+}

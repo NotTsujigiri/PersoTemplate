@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/49d330e6-5081-42ab-b2bb-87ec077826d3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/49d330e6-5081-42ab-b2bb-87ec077826d3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T01:25:47.895Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 593,
+        "description": "",
+        "title": "P1: define the transaction boundary for predicate-based edge requirements. Externally driven predicate invalidation can make an existing edge invalid outside an",
+        "updatedAt": "2026-10-18T01:33:21.838Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/49d330e6-5081-42ab-b2bb-87ec077826d3.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/49d330e6-5081-42ab-b2bb-87ec077826d3.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "P1: define the transaction boundary for predicate-based edge requirements. Externally driven predicate invalidation can make an existing edge invalid outside any operation the engine can reject. Restrict edge-constraint dependencies to transactionally tracked engine state, or require external values to enter the validated transaction before influencing constraints. Component removal/property edits must revalidate affected existing edges, not only new edges."
+          },
+          {
+            "kind": "explain",
+            "text": "Independent subagent migration_plan_review: the engine-first sequence, repeated component instances, owner-defined predicates, scoped lazy views and compiler/runtime checkpoints are coherent. Add focused proof cases for negative/enumerated dependencies, changed predicate branches, isolated candidate caches on rejected transactions and subscription disposal. This is a plan review; no implementation or test results are validated."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/49d330e6-5081-42ab-b2bb-87ec077826d3.json"
+}

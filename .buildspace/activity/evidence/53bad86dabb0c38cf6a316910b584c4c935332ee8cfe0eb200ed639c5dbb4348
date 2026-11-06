@@ -1,0 +1,20 @@
+# Independent architecture and implementation review
+
+This records review findings and verification, not human acceptance. Three reviewers covered engine/domain, reusable UI/annotations, and harness/templates. Cross-reviews then examined each other's integration boundaries. The task's accepted scope is the authoritative Broccoli record.
+
+| Boundary reviewed | Finding, change and rationale |
+| --- | --- |
+| Engine declarations and invariants | Reference endpoint, matching-field and cardinality declarations now reject invalid definitions. Invariants receive immutable prepared graph views, preventing a contributor rule from changing data during validation. Structured diagnostics retain affected fields/nodes and severity. |
+| Engine/UI separation | Data types, query semantics and recency grouping live in the engine; renderers, field frames, query completion, scroll areas and annotation composition live in Relational UI. Browser imports and theme roles are declared through their owning contracts. |
+| Lazy board versus inspection | Board metadata and expanded card pages have explicit owner operations. Revision and grouping time remain pinned across pages. Node/review detail reads fetch their own referenced nodes and discussion pages, including historical identity, rather than relying on whichever cards happen to be loaded. |
+| Scale and immutable publication | On the same 1,666-node snapshot, relationship indexing reduced validation from 7,158ms to 99ms and projection from 2,732ms to 12ms. Repeated current-revision requests reuse the published graph. The complete validation boundary remains intact. |
+| Drafts and concurrent writes | Populated fixtures exposed own-save baseline races across pending saves and historical/current editor navigation. Acknowledged own revisions now rebase the draft without masking later foreign edits. Existing stale-write rejection remains required. |
+| Contextual annotations | One component supports overlays, embedded review and batch entries. Nested annotation preserves the originating unsaved editor. Per-item destinations persist links without sending chat messages; multi-range references retain independent origins. |
+| File and revision selection | Late file reads cannot replace a newer selection or its annotation context. Historical detail excludes current related records. Review controls retain their live container when asynchronous content is mounted. |
+| Model discovery | A delayed response no longer prevents shell rendering. Provider discovery is bounded and isolated in a metadata-only worker so synchronous credential resolution cannot freeze the HTTP host. No provider secrets are included in review artifacts. |
+| Trigger execution | Dispatcher is default-off, opt-in is durable before use, disable is immediate, and state is rechecked after asynchronous preflight. Durable occurrences and session identity prevent duplicate dispatch. Execution completion means waiting for review, not task acceptance. No real schedule or provider run was enabled by delivery. |
+| Candidate and repository boundaries | Review captures immutable source across three repositories. Preview builds the captured candidate in isolated state; actual preview captures retain candidate identity. Commit/merge and human outcomes remain untouched. Portable template manifests consume declared dependencies. |
+| Verification scope | Deterministic Pi/provider tests establish adapter and tool contracts, not a successful paid DeepSeek call. Screenshot review supplements tests. An ordinary multi-repository demo contains 1,500 nodes and 18 conversations, including 5,000 messages, without demo-only product code. |
+
+Final full-checkpoint results and exact submitted candidate identities are attached separately once captured. Earlier failing checkpoints are diagnostic evidence and are not presented as passing acceptance.
+

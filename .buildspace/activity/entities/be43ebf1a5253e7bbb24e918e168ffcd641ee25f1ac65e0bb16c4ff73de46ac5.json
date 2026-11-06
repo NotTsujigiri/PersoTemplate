@@ -1,0 +1,171 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T13:56:31.246Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 534,
+        "description": "- Independent subagent reviews compiler leverage, ownership, sequencing and runtime/data guarantees.\n- Required reviewer: Codex; the named subagent records its own findings and outcome.\n- Request changes through review feedback; correct and re-review before human handoff.\n- Approval covers the pinned plan only; it does not authorize implementation.",
+        "title": "Agent review: migration plan",
+        "updatedAt": "2026-10-17T20:50:21.192Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "agent:codex": {
+              "reason": "Independent subagent migration_plan_review accepts the pinned high-level plan (target revision 556; candidate source revision 555). R1/R2 are resolved as pre-cutover gates, compiler leverage and ownership checks are substantive, and human checkpoints are bounded. Detailed API, implementation, tests and migration results are not validated or approved by this plan review; human plan approval still gates implementation.",
+              "time": "2026-10-17T14:49:01.089Z",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "agent:codex",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/870ac6f6-5f12-4391-b1fd-3a5ca3361a92.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/870ac6f6-5f12-4391-b1fd-3a5ca3361a92.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/870ac6f6-5f12-4391-b1fd-3a5ca3361a92.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-17T14:02:20.453Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 539,
+                      "description": "- Independently re-review the corrected, pinned candidate.\n- Check R1/R2 closure and whether changes introduced new planning gaps.\n- Attach the verdict and limits; require acceptance before the human plan review.",
+                      "title": "Prior plan assessment — corrected candidate",
+                      "updatedAt": "2026-10-17T14:39:45.826Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/870ac6f6-5f12-4391-b1fd-3a5ca3361a92.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/870ac6f6-5f12-4391-b1fd-3a5ca3361a92.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "investigation",
+                      "stage": "review"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/870ac6f6-5f12-4391-b1fd-3a5ca3361a92.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d58e39f8-76ef-40c0-ad86-2048444da1ed.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d58e39f8-76ef-40c0-ad86-2048444da1ed.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d58e39f8-76ef-40c0-ad86-2048444da1ed.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-17T14:02:20.447Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 539,
+                      "description": "- Independent reviewer: migration_plan_review; candidate graph revision 534.\n- Verdict: changes requested; data-cutover proof is too late and model-compiler compatibility is unproven.\n- Full R1/R2 findings are attached; no code or migration tests were run.",
+                      "title": "Prior plan assessment — findings",
+                      "updatedAt": "2026-10-17T14:39:45.826Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d58e39f8-76ef-40c0-ad86-2048444da1ed.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d58e39f8-76ef-40c0-ad86-2048444da1ed.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "investigation"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d58e39f8-76ef-40c0-ad86-2048444da1ed.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-17T13:56:31.244Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 534,
+                      "description": "- Bound the migration and list owners, consumers and predecessor APIs.\n- Sequence compiler checks, runtime checks, cutover and removal.\n- Give each human checkpoint at most three observable decisions.\n- Attach the concise candidate plan; no product migration before human approval.",
+                      "title": "Plan the compiler-guided migration",
+                      "updatedAt": "2026-10-17T14:43:00.585Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "planning",
+                      "stage": "planning"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json"
+              },
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f883ce67-dc61-4e3a-adc6-37a37f9b8158.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f883ce67-dc61-4e3a-adc6-37a37f9b8158.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f883ce67-dc61-4e3a-adc6-37a37f9b8158.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-17T14:02:20.449Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 539,
+                      "description": "- R1: require runtime/data cutover rehearsal before the first live workflow cutover.\n- R2: prove typed definitions produce the existing model compiler's runtime/inspection model.\n- Update the short task descriptions and attach the revised candidate.",
+                      "title": "Correct persistence and compiler-proof gates",
+                      "updatedAt": "2026-10-17T14:39:45.826Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f883ce67-dc61-4e3a-adc6-37a37f9b8158.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f883ce67-dc61-4e3a-adc6-37a37f9b8158.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "planning",
+                      "stage": "planning"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f883ce67-dc61-4e3a-adc6-37a37f9b8158.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 556,
+            "sessions": [],
+            "submittedAt": "2026-10-17T14:43:41.372Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json"
+}

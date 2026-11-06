@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f01d4eb3-2b05-4cbd-afda-db0b83eea88e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f01d4eb3-2b05-4cbd-afda-db0b83eea88e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.387Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Implement the reviewed Checks view and its correctly owned data contracts. Expose individual test identity, duration, behavior/steps and results/evidence to the agreed level. Preserve provenance, distinguish actual measurements from unavailable data, and keep suite/build/setup overhead separate where needed. Verify affected check producers and UI consumers and prepare a usable demonstration for the user.",
+        "title": "Implement the reviewed per-test Checks view",
+        "updatedAt": "2026-10-09T13:02:10.963Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f01d4eb3-2b05-4cbd-afda-db0b83eea88e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f01d4eb3-2b05-4cbd-afda-db0b83eea88e.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a2e17410-5fa0-4e4b-9d2b-73c2148a323b.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f01d4eb3-2b05-4cbd-afda-db0b83eea88e.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a2e17410-5fa0-4e4b-9d2b-73c2148a323b.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f01d4eb3-2b05-4cbd-afda-db0b83eea88e.json"
+}

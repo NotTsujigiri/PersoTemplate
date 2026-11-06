@@ -1,0 +1,173 @@
+{
+  "after": [
+    {
+      "step": "loaded",
+      "titles": [
+        "Retained board card"
+      ],
+      "emptyGroupLoading": false
+    },
+    {
+      "step": "replacement pages pending",
+      "titles": [
+        "Retained board card"
+      ],
+      "emptyGroupLoading": false
+    },
+    {
+      "step": "newer replacement pending",
+      "titles": [
+        "Retained board card"
+      ],
+      "emptyGroupLoading": false
+    },
+    {
+      "step": "latest pages received",
+      "titles": [
+        "Latest board card"
+      ],
+      "emptyGroupLoading": false
+    }
+  ],
+  "status": "Focused verification passed: five browser checks; full-checkpoint outcome is recorded on the task.",
+  "task": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e064f7a0-138e-48a6-a9ff-b3d92986a131.json",
+  "paging": {
+    "recording": [
+      {
+        "step": "loaded two pages",
+        "items": [
+          "initial0",
+          "initial1"
+        ],
+        "retry": false
+      },
+      {
+        "step": "old response pending",
+        "items": [
+          "initial0",
+          "initial1"
+        ],
+        "retry": false
+      },
+      {
+        "step": "latest response received",
+        "items": [
+          "latest0",
+          "latest1"
+        ],
+        "retry": false
+      },
+      {
+        "step": "old response received last",
+        "items": [
+          "latest0",
+          "latest1"
+        ],
+        "retry": false
+      },
+      {
+        "step": "refresh failed",
+        "items": [
+          "latest0",
+          "latest1"
+        ],
+        "retry": true
+      },
+      {
+        "step": "retry received both pages",
+        "items": [
+          "retry0",
+          "retry1"
+        ],
+        "retry": false
+      },
+      {
+        "step": "reopened refreshed group",
+        "items": [
+          "reopened0",
+          "reopened1"
+        ],
+        "retry": false
+      },
+      {
+        "step": "group removed",
+        "items": [],
+        "retry": false
+      }
+    ],
+    "closedDidNotLoad": true,
+    "disposed": [
+      "initial0",
+      "initial1",
+      "latest0",
+      "latest1",
+      "retry0",
+      "retry1",
+      "reopened0",
+      "reopened1"
+    ]
+  },
+  "before": [
+    {
+      "step": "loaded",
+      "titles": [
+        "Retained board card"
+      ],
+      "emptyGroupLoading": false
+    },
+    {
+      "step": "replacement pages pending",
+      "titles": [],
+      "emptyGroupLoading": true
+    },
+    {
+      "step": "newer replacement pending",
+      "titles": [],
+      "emptyGroupLoading": true
+    },
+    {
+      "step": "latest pages received",
+      "titles": [
+        "Latest board card"
+      ],
+      "emptyGroupLoading": false
+    }
+  ],
+  "expected": [
+    {
+      "step": "loaded",
+      "titles": [
+        "Retained board card"
+      ],
+      "emptyGroupLoading": false
+    },
+    {
+      "step": "replacement pages pending",
+      "titles": [
+        "Retained board card"
+      ],
+      "emptyGroupLoading": false
+    },
+    {
+      "step": "newer replacement pending",
+      "titles": [
+        "Retained board card"
+      ],
+      "emptyGroupLoading": false
+    },
+    {
+      "step": "latest pages received",
+      "titles": [
+        "Latest board card"
+      ],
+      "emptyGroupLoading": false
+    }
+  ],
+  "sequence": [
+    "Load an existing queued card",
+    "Hold group responses during a background update",
+    "Send a newer update before releasing responses",
+    "Release responses and verify the latest title"
+  ],
+  "commit": "01080528b83c90802a06950f46383a3ff321ded5"
+}

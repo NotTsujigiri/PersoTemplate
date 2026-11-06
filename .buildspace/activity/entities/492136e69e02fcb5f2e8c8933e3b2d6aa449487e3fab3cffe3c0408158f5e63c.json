@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4607de96-c1a5-4bc6-8b02-9df628c3eeb7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4607de96-c1a5-4bc6-8b02-9df628c3eeb7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-20T03:35:04.812Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 789,
+        "description": "User request, 2026-10-20. Provide New, Later and Acknowledged as three simultaneously available drag/drop destinations for per-user attention. Acknowledged is for items the user has seen and does not want to revisit later. Use the same shared splitter/pane composition as Waiting, In progress, Queued and Backlog in the Active column. Collapse and resize through the splitter system rather than nested details disclosures. Retain independent scrolling and a usable empty drop slot in each group. Apply to the board sections using attention grouping and preserve the agreed per-user timestamp and own-edit semantics; do not invent another persisted attention state. Capture exact grouping, drag/drop and splitter behavior and inspect the rendered result. Coordinate after the immediate app-performance repair.\n\nVerification progress — 2026-10-20\nImplemented New, Later and Acknowledged as independently scrolling shared splitter panes. Later and Acknowledged accept drag/drop; empty panes retain a card-sized area, and collapsed/empty groups avoid unnecessary fetching. New remains derived from per-user acknowledgement and latest update semantics. Exact grouping, Later-to-Acknowledged drag/drop, hidden layout and paging checks pass; screenshots inspected.\n\nCompleted verification — 2026-10-20\nCommits: a3e1da7, a912ade, bfaeb66. Their messages contain the canonical task URLs. Build passed; final type gate checked 1,066 authored files with zero violations. Focused exact recordings, storage/stale-save checks and rendered screenshots pass. The full browser run recorded 267 passes and four failures; all four cases pass after focused recorder updates/rechecks. The full checkpoint still has four previously tracked Windows cancellation timing failures under load (task 916da876-ea04-42b3-ac05-93bba5129a8f remains Queued); no timing thresholds were weakened. The app has been restarted with the committed changes. See attached Performance pass verification 2026-10-20.json for measurements, coverage and limitations.",
+        "title": "Use splitter panes for New, Later and Acknowledged attention groups",
+        "updatedAt": "2026-10-20T04:42:26.048Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4607de96-c1a5-4bc6-8b02-9df628c3eeb7.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4607de96-c1a5-4bc6-8b02-9df628c3eeb7.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 96,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4607de96-c1a5-4bc6-8b02-9df628c3eeb7.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4607de96-c1a5-4bc6-8b02-9df628c3eeb7.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:08:59.153Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-20T04:42:26.048Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4607de96-c1a5-4bc6-8b02-9df628c3eeb7.json"
+}

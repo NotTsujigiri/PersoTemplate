@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/783b6959-d724-4879-8396-84ae699cf419.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/783b6959-d724-4879-8396-84ae699cf419.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.384Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Hold a needs-analysis session with the user before design or development. Establish the questions they need the Checks view to answer for each test, the desired detail about test actions and assertions, durations, live progress/results and evidence, and how to distinguish suite/build/setup overhead. Discuss representative first-load and subsequent-action performance scenarios and measurable expectations for the later performance pass. Record unresolved questions; do not choose a UI before the session.",
+        "title": "Define Checks view needs together",
+        "updatedAt": "2026-10-09T12:54:50.289Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/783b6959-d724-4879-8396-84ae699cf419.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/783b6959-d724-4879-8396-84ae699cf419.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "discussion",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/783b6959-d724-4879-8396-84ae699cf419.json"
+}

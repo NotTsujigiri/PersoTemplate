@@ -1,0 +1,14 @@
+# Final implementation verification
+
+This records engineering verification, not human acceptance.
+
+- TheBroccoli full checkpoint: build succeeded; 120 server tests and 101 browser tests passed.
+- BtrTemplate build passed. PersoTemplate root acceptance tests: 2 passed. Submitted-candidate mandatory checks will independently record all three repository results in this review.
+- Independent reviews covered engine/domain, shared UI and annotations, and harness/templates, followed by cross-reviews of their integration boundaries. The attached architecture and final boundary reports contain findings and resolutions.
+- Populated ordinary demo: 1,500 planning nodes and 18 chats; the 5,000-message conversation mounts 60 messages. It uses three ordinary disposable repositories and no demo subsystem.
+- Annotation scale regression: 450 cards; final payload 299,757 bytes, editor visible in 154 ms, capture plus fidelity check 1,323 ms in the recorded fixture. Managed preview uses actual pixels; generic DOM capture remains an explicitly identified reconstruction.
+- Five focused annotation-to-model delivery tests and two deterministic official Pi adapter tests passed. Persisted Markdown references supply selected quotations and provenance through owner-scoped expansion; no automatic chat send.
+- No paid DeepSeek/provider request was made. Configure a local key to perform that last external integration check. Scheduling/trigger execution remains disabled, with the execution queue paused.
+- The top-level MVP remains Waiting. No human outcome, actual-repository commit or merge was performed.
+
+Screenshots below are actual live application captures, not generated references. Accepted mockups and binding reservations are attached separately.

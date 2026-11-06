@@ -1,0 +1,14 @@
+Eight browser annotation corrections
+
+1. Both All files and Modified files use the same recursive path projection. Folders containing multiple displayed files start collapsed; paths leading to a single displayed file stay compact. Ordinary repository files share the projection.
+2. File and folder labels remain on one line, truncate with an ellipsis, and expose the complete path in a tooltip.
+3. Range labels begin at the top endpoint instead of eight pixels below it and use the range's full height.
+4. Expansion indicates actual child tasks. Contained inputs no longer create an empty child timeline; real child tasks remain navigable.
+5. Recent graph rows establish reusable columns for earlier ranges. Lateral correction relations and non-overlapping ranges are preserved; the recorded fixture shrinks from four columns to three.
+6. The Add relation button is disabled and its obsolete inline form removed. The top-level backlog task "add relation modal component" is recorded at graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/808e4158-d68e-47af-9528-cd8810fc1fb6.json.
+7. The shared schema form displays the declared type alongside every field heading, including read-only and structured fields, while keeping accessible control names stable.
+8. Review Overview has a title/description panel above both activity and review controls. Long descriptions scroll within a bounded panel.
+
+Validation: {"productionBuild":"passed","backendTests":70,"browserTests":77,"sharedUiBuild":"passed","sharedUiTests":213,"annotationExactRecording":"passed","liveUiAndScreenshots":"verified","unsavedTaskFields":"preserved without saving","whitespaceCheck":"passed"}
+
+The exact authored before recording failed on the original behavior and the unchanged expected recording passes after the fix. Folder interaction fixtures now supply multiple files, preserving their existing selection, expansion and dirty-edit assertions. The real app was inspected after restart. Existing unsaved task fields were restored without saving them; no human review outcome was changed.

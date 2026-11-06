@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63e63e20-af13-41bc-88f5-124dbdd05ff8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63e63e20-af13-41bc-88f5-124dbdd05ff8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T04:08:37.104Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 613,
+        "description": "",
+        "title": "Independent agent review, round 4: retire unopened graph descriptors so coverage can complete; reconcile updated lazy endpoint records with their canonical owne",
+        "updatedAt": "2026-10-18T07:38:31.052Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63e63e20-af13-41bc-88f5-124dbdd05ff8.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63e63e20-af13-41bc-88f5-124dbdd05ff8.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Independent agent review, round 4: retire unopened graph descriptors so coverage can complete; reconcile updated lazy endpoint records with their canonical owner; expose entity/view capabilities through the native contributor contract; reject predicate absence decisions while required entity coverage is unknown. Native validators and the read-only data-type API were accepted."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63e63e20-af13-41bc-88f5-124dbdd05ff8.json"
+}

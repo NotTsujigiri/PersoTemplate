@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3428e39b-71ae-404e-a923-dbec10fa5b15.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3428e39b-71ae-404e-a923-dbec10fa5b15.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T15:10:16.374Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 432,
+        "description": "The user tests the implemented graph CRUD workflow against the approved proposal, including reorganizing selected tasks from the earlier-MVP acceptance group, editing dependencies, and the agreed creation/deletion interactions. Check understandable valid/invalid drop feedback, preserved evidence and review history, correct prerequisite enforcement, durable state after reload and refreshed independent views.\n\nCapture feedback and iterate until the user approves. The surrounding graph-editing task is not ready for completion while required review or correction work remains unresolved. This review is followed by the existing updated-MVP-plan review.",
+        "title": "Review graph editing through the UI",
+        "updatedAt": "2026-10-09T15:10:45.961Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3428e39b-71ae-404e-a923-dbec10fa5b15.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3428e39b-71ae-404e-a923-dbec10fa5b15.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3428e39b-71ae-404e-a923-dbec10fa5b15.json"
+}

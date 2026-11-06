@@ -1,0 +1,68 @@
+[
+  {
+    "mode": "Inline diff",
+    "component": "inline",
+    "panes": [
+      {
+        "side": "inline",
+        "numbers": [
+          "1",
+          "2",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    ]
+  },
+  {
+    "mode": "Side by side diff",
+    "component": "split",
+    "panes": [
+      {
+        "side": "old",
+        "numbers": [
+          "1",
+          "2",
+          "",
+          "3"
+        ]
+      },
+      {
+        "side": "new",
+        "numbers": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    ]
+  },
+  {
+    "mode": "No diff",
+    "component": "source",
+    "panes": [
+      {
+        "side": "new",
+        "numbers": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  {
+    "mode": "Edited source",
+    "numbers": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  }
+]

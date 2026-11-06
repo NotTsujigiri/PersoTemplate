@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8811fbb4-08ff-4245-91dc-cfbdb5626058.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8811fbb4-08ff-4245-91dc-cfbdb5626058.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:44:35.171Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 652,
+        "description": "",
+        "title": "Independent final reviews: migration_boundary_review approved engine/storage/ownership/transport and five-store preservation; component_inspection_review approv",
+        "updatedAt": "2026-10-18T09:44:47.596Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8811fbb4-08ff-4245-91dc-cfbdb5626058.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8811fbb4-08ff-4245-91dc-cfbdb5626058.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Independent final reviews: migration_boundary_review approved engine/storage/ownership/transport and five-store preservation; component_inspection_review approved component/editor behavior and reviewed saved-description, repeated-value and layout evidence. Both explicitly retain the full-checkpoint gate and the separate Windows-cancellation backlog item. Focused request-cleanup and unchanged viewport cases passed; complete browser run continues."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8811fbb4-08ff-4245-91dc-cfbdb5626058.json"
+}

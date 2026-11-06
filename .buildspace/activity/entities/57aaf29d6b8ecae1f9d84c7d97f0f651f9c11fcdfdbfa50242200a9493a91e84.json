@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4e9fba4-d911-4f8d-9f14-6d9b0a882cb8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4e9fba4-d911-4f8d-9f14-6d9b0a882cb8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T19:54:47.363Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 283,
+        "description": "Immutable attached evidence",
+        "title": "Better Auth and SQLite: implementation and verification.md",
+        "updatedAt": "2026-09-30T19:54:47.448Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4e9fba4-d911-4f8d-9f14-6d9b0a882cb8.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4e9fba4-d911-4f8d-9f14-6d9b0a882cb8.json",
+      "properties": {
+        "artifact": {
+          "hash": "8dccb9fbbb807ef70aab4654b07a716f46a8decadd6b5b89c679741dacaaa088",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/8dccb9fbbb807ef70aab4654b07a716f46a8decadd6b5b89c679741dacaaa088",
+          "mime": "text/markdown",
+          "size": 4053
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e4e9fba4-d911-4f8d-9f14-6d9b0a882cb8.json"
+}

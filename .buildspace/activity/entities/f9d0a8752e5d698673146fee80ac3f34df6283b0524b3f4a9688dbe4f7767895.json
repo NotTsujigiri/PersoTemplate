@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cafd1b19-ac68-4865-859d-707ccef5a3f7.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cafd1b19-ac68-4865-859d-707ccef5a3f7.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T16:22:06.788Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 379,
+        "description": "Use Data models to inspect the proposed types, fields, relations, invariants, mutation contracts and current/proposed changes. Review the parent placement table, review/correction iteration, check attempts, cancellation and abandonment examples. The reviewer decides whether the model is coherent before runtime implementation. Mechanical compilation is evidence of typing only, not semantic approval.",
+        "title": "Review the planning, execution and review model",
+        "updatedAt": "2026-10-08T21:30:58.251Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cafd1b19-ac68-4865-859d-707ccef5a3f7.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cafd1b19-ac68-4865-859d-707ccef5a3f7.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cafd1b19-ac68-4865-859d-707ccef5a3f7.json"
+}

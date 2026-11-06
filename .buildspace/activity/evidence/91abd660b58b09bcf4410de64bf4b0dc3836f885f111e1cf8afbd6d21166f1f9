@@ -1,0 +1,17 @@
+{
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/04a48ac6-3f02-4dee-8148-7af28470b357.json",
+  "status": "draft",
+  "withdrawnTargetRevision": 25,
+  "reason": "Cold exact-target startup was measured ready after 11.348 seconds, beyond the fixture polling budget. Return this untouched review to preparation to set a justified bounded 30-second readiness deadline, then resubmit and rerun verification. No reviewer outcome or human acceptance is being supplied.",
+  "blockers": [
+    "Review has not been submitted."
+  ],
+  "revision": 31,
+  "actor": "agent:codex",
+  "historicalRevision": 30,
+  "historicalStatus": "submitted",
+  "targetHash": "f861aa50c672936e3bbc49496c01f5aa5b3d03060b8806191aa6d11a6ecce287",
+  "failedRunsPreserved": true,
+  "originalReviewHash": "08fdd7a3d8720055f31cc868be78bec117387975ada3f8c01c33fde110d40a34",
+  "currentStatus": "draft"
+}

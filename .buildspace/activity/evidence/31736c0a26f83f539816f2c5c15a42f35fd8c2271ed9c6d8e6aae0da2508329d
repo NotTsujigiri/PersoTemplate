@@ -1,0 +1,14 @@
+{
+  "before": {
+    "inert": true,
+    "value": ""
+  },
+  "after": {
+    "inert": true,
+    "value": ""
+  },
+  "ready": {
+    "inert": false,
+    "value": ""
+  }
+}

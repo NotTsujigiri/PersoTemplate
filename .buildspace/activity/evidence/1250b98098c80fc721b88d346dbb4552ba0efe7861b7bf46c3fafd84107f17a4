@@ -1,0 +1,44 @@
+{
+  "scope": "View input boundaries and repository-scoped model inspection",
+  "rollbackCheckpoint": "2382382",
+  "branch": "codex/typescript-native-model-poc",
+  "app": "http://localhost:43130/?template=personal&community=private&channel=99a62c14-535f-4d9a-9ab2-642ed280b795&space=99a62c14-535f-4d9a-9ab2-642ed280b795&area=files",
+  "discussion": "codex://threads/01a0f501-1ed3-79c1-b149-c5ca4f09243d",
+  "checks": {
+    "build": "passed",
+    "models": 17,
+    "core": 174,
+    "dependencyGraph": 4,
+    "browser": {
+      "passed": 129,
+      "failed": 1,
+      "remainingFailure": "composition-directory timeout; unchanged isolated rerun passed"
+    },
+    "sourcePickerAndLifecycle": 4
+  },
+  "evidenceLogs": [
+    ".harness/test-all-view-scope.log",
+    ".harness/view-scope-final-build.log",
+    ".harness/view-scope-focused.log",
+    ".harness/composition-directory-rerun.log",
+    ".harness/source-picker-after.log"
+  ],
+  "recordings": [
+    ".harness/recordings/view-input-scope",
+    ".harness/recordings/view-lifecycle-before",
+    ".harness/recordings/files-source-picker-before",
+    "app/test-results/view-scope-checkpoint",
+    "app/test-results/source-picker-after"
+  ],
+  "reviews": [
+    "Shared view discovery and correct input boundaries",
+    "Compiler-inferred source provenance and direct package dependencies",
+    "Optional repository/system scope and actual dependency-connected clusters",
+    "Retained drafts, stale read/save isolation, source/diff availability"
+  ],
+  "limitations": [
+    "Only registered compiled model coverage; unavailable/stale scope is reported.",
+    "Cross-type invariant inspection is deferred.",
+    "Nested panes may need existing focus/resize controls."
+  ]
+}

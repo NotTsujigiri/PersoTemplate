@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f15fa62-3699-4cb4-b2e8-3f1beb24e6f4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f15fa62-3699-4cb4-b2e8-3f1beb24e6f4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T18:42:27.650Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 764,
+        "description": "Immutable attached evidence",
+        "title": "Activity board refresh - exact before and after.json",
+        "updatedAt": "2026-10-19T18:42:43.508Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f15fa62-3699-4cb4-b2e8-3f1beb24e6f4.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f15fa62-3699-4cb4-b2e8-3f1beb24e6f4.json",
+      "properties": {
+        "artifact": {
+          "hash": "62391e66f62c4d7a4a7fca01c861bb29f25b0192d1d9f53ab21d8dc6a49c8cd3",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/62391e66f62c4d7a4a7fca01c861bb29f25b0192d1d9f53ab21d8dc6a49c8cd3",
+          "mime": "application/json",
+          "size": 3739
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6f15fa62-3699-4cb4-b2e8-3f1beb24e6f4.json"
+}

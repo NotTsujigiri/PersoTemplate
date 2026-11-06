@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f5cf065-7ec5-49ec-a91b-1f86710f5557.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f5cf065-7ec5-49ec-a91b-1f86710f5557.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.916Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Allow Btr/Perso and Default to reuse individual versioned views and RelationalUi components independently of whole layouts. Move template identity and layout knowledge out of the shared host and shell.\n\nSlice verification completed: Generic application contracts now carry individual channel factories independently of complete layouts. The browser recording mounts Personal information in an independent consumer without activating Personal navigation. Navigation overview and actual reusable view screenshots were inspected.",
+        "title": "Compose reusable views through generic template contracts",
+        "updatedAt": "2026-10-22T22:28:42.574Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f5cf065-7ec5-49ec-a91b-1f86710f5557.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f5cf065-7ec5-49ec-a91b-1f86710f5557.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7f5cf065-7ec5-49ec-a91b-1f86710f5557.json"
+}

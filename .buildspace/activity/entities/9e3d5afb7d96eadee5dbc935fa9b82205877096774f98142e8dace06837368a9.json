@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd7fabc0-d5c4-4e23-9140-1278557b24b5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd7fabc0-d5c4-4e23-9140-1278557b24b5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T13:57:52.651Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 334,
+        "description": "## Output\nTask-specific acceptance cases covering compiler boundaries, engine admission, repository scope and the retained view behavior.\n\n## Work\nInventory current graph coverage and identify the cases the replacement must preserve. Define compile-time rejection examples for undeclared or unexported access; define runtime rejection examples for missing or unregistered types, invalid endpoints and out-of-scope identities.\n\n## Serial dependency\nStart after the ownership and compiler proposal is ready. Turn the proposed boundaries into concrete acceptance cases; the next checkpoint reviews these cases before implementation.\n\n## Evidence\nConcrete test inputs, expected failures and coverage gaps. A passing compiler is evidence about declared boundaries, not proof of every semantic rule.",
+        "title": "Design enforcement and coverage checks",
+        "updatedAt": "2026-10-08T18:16:16.601Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd7fabc0-d5c4-4e23-9140-1278557b24b5.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd7fabc0-d5c4-4e23-9140-1278557b24b5.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "design",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bd7fabc0-d5c4-4e23-9140-1278557b24b5.json"
+}

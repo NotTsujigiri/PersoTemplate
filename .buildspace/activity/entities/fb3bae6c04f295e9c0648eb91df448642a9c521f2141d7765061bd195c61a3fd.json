@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f8f9836e-8270-473b-b232-1a6990bb13e3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f8f9836e-8270-473b-b232-1a6990bb13e3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T20:05:02.637Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 439,
+        "description": "Own the MVP navigation behavior as a separate task. Define with the user what opening a resource means for left click, double left click, middle click, and explicit context-menu actions. Support the desired use of tabs, modals and separate windows while retaining predefined layouts as useful starting points and reset targets. Exact gesture mappings and presentation remain to be proposed and reviewed, not assumed.\n\nAddress the space cost of nested tab panels. Inspect and rework the existing RelationalUi TabWorkspace capabilities before introducing another system. Existing code supports nested groups, splits, stacks and overlays; it does not establish the desired final navigation design.\n\nConcrete need: when opening an annotation URL from a chat session, the user should generally still see the originating chat or be able to return to it in one click. Apply consistent navigation to resources beyond annotation links as well. Preserve the user's working context when navigating; define the detailed behavior during needs analysis.\n\nStart with a dedicated needs-analysis session, retain the question/answer transcript verbatim, then produce and review a proposal before implementing and reviewing the UI with the user. Keep all work serial. This task is separate from the current proposal-review needs analysis; do not treat unresolved navigation decisions as accepted requirements.\n\nSource: proposal-review needs-analysis transcript, Questions 19–21, at .harness/design/proposal-review-needs-analysis.md.",
+        "title": "Define and improve navigation across tabs, panels, modals and windows",
+        "updatedAt": "2026-10-09T20:05:05.030Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f8f9836e-8270-473b-b232-1a6990bb13e3.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f8f9836e-8270-473b-b232-1a6990bb13e3.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f8f9836e-8270-473b-b232-1a6990bb13e3.json"
+}

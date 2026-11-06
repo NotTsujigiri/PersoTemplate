@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/845234ca-da9b-4c8d-946e-ee7d49babc26.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/845234ca-da9b-4c8d-946e-ee7d49babc26.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-10T09:48:39.965Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 444,
+        "description": "After the needs session, do several image-generation rounds together with the user to settle the overall structure of the UI editor view within Review → Changes. Seed the mockups from existing views and reusable components. Start with the major working areas, their compact arrangement and how the user moves between editing and reviewing changes.\n\nPresent each round for feedback before generating the next; keep the selected images and feedback durably linked to this task. Refine the structure rather than trying to specify every detail upfront. Conclude with an agreed initial layout and scope that the agent can implement and the user can subsequently review through the editor itself.",
+        "title": "Iterate on the UI editor's overall structure with image generation",
+        "updatedAt": "2026-10-10T12:53:28.320Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/845234ca-da9b-4c8d-946e-ee7d49babc26.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/845234ca-da9b-4c8d-946e-ee7d49babc26.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "design",
+        "stage": "mocking"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/845234ca-da9b-4c8d-946e-ee7d49babc26.json"
+}

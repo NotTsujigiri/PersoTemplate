@@ -1,0 +1,23 @@
+{
+  "source": "Repository package-lock.json repeated as array elements",
+  "copies": 7,
+  "bytes": 2117747,
+  "utf16Length": 2117747,
+  "lines": 56940,
+  "tokens": 176555,
+  "initialMs": 128.2112,
+  "cachedMs": 11.737199999999973,
+  "partialEditMs": 107.58960000000002,
+  "edit": {
+    "start": {
+      "line": 4,
+      "character": 21
+    },
+    "end": {
+      "line": 4,
+      "character": 22
+    },
+    "replacement": "40000"
+  },
+  "parsing": "Full parse and token scan once per changed document version; subsequent reads reuse classifications."
+}

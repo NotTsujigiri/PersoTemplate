@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/83a0ebb3-6222-4ab1-8f41-d9b9100fee7c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/83a0ebb3-6222-4ab1-8f41-d9b9100fee7c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T13:41:11.792Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 477,
+        "description": "The user reviews the reworked RelationalUi, HarnessApp and DefaultSuperAppTemplate components in the shared UI editor. Inspect actual default behavior, configured behavior, sizing, styling and identity. Review viewport dimensions, zoom and the patterned surrounding background separately from component content. Empty Markdown remains empty and closed overlays retain their intended behavior. Compare the observed result with the independent check findings, including the unresolved visible-default cases; mechanical success is not visual acceptance. Record corrections as children of this review. The author prepares the evidence; only the user records acceptance.",
+        "title": "Visually review the reworked components",
+        "updatedAt": "2026-10-17T00:08:47.644Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/83a0ebb3-6222-4ab1-8f41-d9b9100fee7c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/83a0ebb3-6222-4ab1-8f41-d9b9100fee7c.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/83a0ebb3-6222-4ab1-8f41-d9b9100fee7c.json"
+}

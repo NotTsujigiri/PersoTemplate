@@ -1,0 +1,40 @@
+# Chat round 5 — full-area picker and message scrolling
+
+Generated with built-in image_gen. The user accepted the direction with “great” before moving to annotation needs analysis. Both images are planning references subject to the reservations below, not pixel-perfect specifications or MVP acceptance. Original review indices were generated image 0 and generated image 1, excluding the previously inspected reference.
+
+## Image 0 — expanded chat picker
+
+![Expanded chat picker](01-full-chat-picker.png)
+
+The picker covers the complete chat content area below its toolbar, including transcript, run strip and composer. The selected-conversation dropdown remains available and toggles the panel closed. Five top-level sections have their own scroll areas and four horizontal splitters: New, Later, Active, Channels, History.
+
+| Section | Membership |
+| --- | --- |
+| New | Channel notifications qualify on explicit mention, when the user is the only human, or on configured notification for changes. Example chips illustrate the qualifying reason; the chips themselves remain a design proposal. |
+| Later | Explicit user movement from New; reading does not fill or clear it automatically. |
+| Active | Any chat with at least one running agent instance, including channels. Queued-only chats do not qualify. |
+| Channels | All channels, including those simultaneously in New, Later or Active. |
+| History | Recency bush of every non-channel chat, including any also shown in Active or attention groups. |
+
+Repeated entries share the same conversation identity. General appears in New, Active and Channels; Investigate preview failure appears in Active and History. Changes and selection operate on that shared identity, not separate copied records. New qualification for non-channel chats was not newly specified by this clarification; do not silently infer a different rule from the channel examples.
+
+## Image 1 — internal message scrollbars and one timing row
+
+![Message scrolling and timing](02-message-scroll-and-timing.png)
+
+Human and final-agent message bodies scroll independently after a configurable maximum height. Author headers, timing and execution-history controls remain outside those message-body scroll areas. The outer transcript has its own scrollbar. No message-collapse or Show less controls remain.
+
+One compact row places 1m 30s outside the rectangle on the left. Its segments combine model time with tool totals grouped by tool identity: Model 30s, Read 12s, Search 18s, Test 30s. This example is serial; actual concurrent durations must not be misleadingly summed as elapsed wall time. Tool-detail overlay remains for implementation review.
+
+The accepted earlier-turn/tool-call history entry, direct running-instance navigation/Stop and shared empty composer are preserved. A completed response does not remove another running instance of the same agent.
+
+## Reservations
+
+- Splitter adjustment, scroll independence, dropdown toggling, membership and restored reading position are implementation requirements; static images demonstrate layout only.
+- Initial section heights are illustrative and adjustable. No user preference for exact equal dimensions was established.
+- Single chevrons remain at some scrollbar ends despite the shared double-chevron requirement. Avatars and view controls still need tighter sizing. BA avatar in the run strip must match its message identity; generation retained an inconsistent identicon.
+- Timing segment proportions are approximate in the image. Implement measured proportions, tool aggregation independent of arguments, and truthful handling of concurrency/unknown time.
+- Board is unchanged context and does not supersede the accepted board design or existing reservations.
+- All messages, timings, counts and results are illustrative. No runtime implementation, test execution or agent activity was performed by generating these mockups.
+
+[Exact prompts](prompts.md).

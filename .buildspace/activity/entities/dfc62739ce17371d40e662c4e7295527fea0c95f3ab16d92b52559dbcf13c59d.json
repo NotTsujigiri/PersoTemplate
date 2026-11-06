@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e9b3232-ce59-4955-856e-ae49d18f5319.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e9b3232-ce59-4955-856e-ae49d18f5319.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T20:14:00.987Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1339,
+        "description": "Replace the unclear Show depth as rows/columns icon with a more understandable visual. Review it in the call and type dependency graph toolbars.",
+        "title": "Improve the dependency graph depth-orientation icon",
+        "updatedAt": "2026-11-04T07:47:03.781Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e9b3232-ce59-4955-856e-ae49d18f5319.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e9b3232-ce59-4955-856e-ae49d18f5319.json",
+      "properties": {
+        "placement": "backlog",
+        "priority": 5,
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e9b3232-ce59-4955-856e-ae49d18f5319.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e9b3232-ce59-4955-856e-ae49d18f5319.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-03T22:39:51.294Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-11-03T20:14:01.307Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e9b3232-ce59-4955-856e-ae49d18f5319.json"
+}

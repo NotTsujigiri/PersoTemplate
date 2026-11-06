@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41bf66f2-23fe-4c5a-8307-a8d638484f25.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41bf66f2-23fe-4c5a-8307-a8d638484f25.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-06T05:44:13.008Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1414,
+        "description": "Own repository/worktree status, commits, history, LFS and repository composition in the Git contributor without Harness sessions. Merge RepoCompose capabilities, update package consumers, and preserve caller-owned buildspace policy. Provide selected-file commits that preserve unrelated staged and unstaged changes.\n\nImplemented in c53b05fd. Git operations and repository composition are owned by @super-app/git-contributor; configured-root operations no longer need an agent session. Selected-file commits preserve unrelated staged and unstaged code and use native Git filters (including configured LFS). Buildspace membership policy stays with its consumer. Verification: 29 composition scenarios, package/consumer regressions, generated model rebuild, organization check and full type-safety check (0 violations).",
+        "title": "Consolidate Git operations and RepoCompose",
+        "updatedAt": "2026-11-06T06:30:24.950Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41bf66f2-23fe-4c5a-8307-a8d638484f25.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41bf66f2-23fe-4c5a-8307-a8d638484f25.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/41bf66f2-23fe-4c5a-8307-a8d638484f25.json"
+}

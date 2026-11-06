@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d3f70ece-4a21-4a1a-a832-421299d4cdc8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d3f70ece-4a21-4a1a-a832-421299d4cdc8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T18:25:35.395Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 689,
+        "description": "Immutable attached evidence",
+        "title": "Final migration acceptance and commit sequence.json",
+        "updatedAt": "2026-10-18T18:25:52.214Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d3f70ece-4a21-4a1a-a832-421299d4cdc8.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d3f70ece-4a21-4a1a-a832-421299d4cdc8.json",
+      "properties": {
+        "artifact": {
+          "hash": "aacd4d143571854a1f675bfa6c714cf55cef896d3c51cb1579173f967ba7b91f",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/aacd4d143571854a1f675bfa6c714cf55cef896d3c51cb1579173f967ba7b91f",
+          "mime": "application/json",
+          "size": 18192
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d3f70ece-4a21-4a1a-a832-421299d4cdc8.json"
+}

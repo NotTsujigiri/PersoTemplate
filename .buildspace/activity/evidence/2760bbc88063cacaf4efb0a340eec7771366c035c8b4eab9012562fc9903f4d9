@@ -1,0 +1,29 @@
+{
+  "inputOnlyHasNoExpander": false,
+  "inputOnlyDoesNotOpenEmptyTimeline": false,
+  "realChildrenRemainNavigable": true,
+  "rangeLabelAligned": false,
+  "compactGraph": {
+    "columns": 4,
+    "noOverlap": true,
+    "loopMovesRight": true,
+    "dependencyUp": true
+  },
+  "addRelationDisabled": false,
+  "everyFieldShowsType": false,
+  "reviewContext": false,
+  "Modified files": {
+    "grouped": false,
+    "collapsed": false,
+    "recursive": false,
+    "singleFilePath": false,
+    "noWrap": false
+  },
+  "All files": {
+    "grouped": false,
+    "collapsed": false,
+    "recursive": false,
+    "singleFilePath": false,
+    "noWrap": false
+  }
+}

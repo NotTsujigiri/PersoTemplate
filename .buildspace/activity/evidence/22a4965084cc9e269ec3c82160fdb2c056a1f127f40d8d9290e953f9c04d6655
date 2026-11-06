@@ -1,0 +1,7 @@
+{
+  "reviewer": "planning_ui_review",
+  "outcome": "approved for usable MVP UI",
+  "scope": "Shared board, graph, Node and Review surfaces; historical edits, stale writes, policy drafts, priority preservation, evidence and session controls; desktop and narrow screenshots.",
+  "remaining": "Final whole suite and R03 human acceptance.",
+  "humanApproval": false
+}

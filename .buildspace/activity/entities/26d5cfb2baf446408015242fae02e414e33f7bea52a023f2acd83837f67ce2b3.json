@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f687dc30-d04a-46d5-9e75-7db6e5004240.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f687dc30-d04a-46d5-9e75-7db6e5004240.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.906Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Route board requests through the frontend engine, acquire the entities backing fetched cards without selection, and expose them to Graph editor. Reuse unchanged loaded ranges when returning; handle revisions, deletion and partial coverage explicitly. Record the reported sequence before replacing behavior.\n\nImplementation progress: planning reads now return owner-selected canonical acquisitions through the engine operation protocol; browser planning, annotations and hub use the local engine connection. Removed dedicated planning and graph HTTP routes. Recorded before/after unit scenarios cover unselected cards, bounded coverage, unchanged revisit, refresh/deletion, actor isolation and current versus historical revisions. Focused Activity board → Graph → Activity board browser test passes with both fetched entries retained and zero additional planning reads. Personal template profile browser regression also passes. Remaining: complete revision/coverage invalidation semantics and integration with shared-tab engine work; final impacted tests and checkpoint pending.\n\nSlice verification completed: Canonical acquisition now includes unselected fetched cards. Recorded Activity board → Graph → Activity board preserves acquired entities and performs no additional unchanged planning reads. Owner tests cover bounded pages, deletion/replacement, actor context and historical reads.",
+        "title": "Make Activity board acquisition shared and reusable",
+        "updatedAt": "2026-10-22T22:16:28.039Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f687dc30-d04a-46d5-9e75-7db6e5004240.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f687dc30-d04a-46d5-9e75-7db6e5004240.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f687dc30-d04a-46d5-9e75-7db6e5004240.json"
+}

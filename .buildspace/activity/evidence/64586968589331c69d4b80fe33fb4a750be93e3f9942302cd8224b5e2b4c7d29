@@ -1,0 +1,31 @@
+{
+  "board": {
+    "name": "Tasks",
+    "findRemoved": false,
+    "transferRemoved": false,
+    "compactLeaf": false,
+    "boundedTitle": false,
+    "ellipsis": false,
+    "panel": false
+  },
+  "toolbar": {
+    "singleRow": false,
+    "evenRevisionInset": false,
+    "scrollable": false,
+    "hiddenScrollbar": false,
+    "reloadCentered": false,
+    "deleteCenteredTrash": false,
+    "sessionRemoved": false,
+    "graphRemoved": false,
+    "priorityRemoved": false
+  },
+  "feedback": false,
+  "changes": {
+    "padding": false,
+    "identity": false
+  },
+  "preview": {
+    "padding": false,
+    "warningRemoved": false
+  }
+}

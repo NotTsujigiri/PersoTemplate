@@ -1,0 +1,16 @@
+Eight browser annotation corrections
+
+1. The timeline uses the full available pane before selecting a node. Its toolbar stays outside the scrolling canvas, fresh timelines reveal their top range, and opening a detail pane keeps the selected range visible. Hidden-tab resizing and background refreshes retain the visible selection and user pan; returning from Help preserves the existing layout without detaching it.
+2. File-tree expansion updates only the affected branch. The existing tree, sibling rows, editor selection and scroll remain intact, with no file reads triggered by expansion.
+3. Each shared text-editor gutter fits its largest displayed line number and resizes across digit boundaries, including edited source and both diff panes.
+4. Review Changes now uses the shared file-list splitter. Widths persist, and unique pane IDs keep retained file panels independent.
+5. Removed the redundant truncated iteration/revision identity from the editor toolbar. The file path remains visible.
+6. Added the bottom boundary beneath the All files / Modified files controls.
+7. The relational engine requires explicit forward and reverse labels in both factory and raw type-registration APIs. Node type shows Has instance for incoming instances, and the self-type relation appears once.
+8. Removed Incoming badges; relation labels communicate the direction.
+
+Validation: {"checkpoint":{"productionBuild":"passed","backendTests":70,"browserTests":76},"sharedUiTests":213,"engineTests":65,"finalFocusedTests":{"annotationAndViewportBrowserTests":3,"navigationBrowserTests":9},"finalSyntaxAndWhitespace":"passed","liveUi":"verified","independentReview":"passed"}
+
+The complete backend checkpoint exposed an existing lock-release race. A deterministic before recording confirmed that a holder could remove writer.lock between a contender's EEXIST and read, causing a false inspection error. Only this ENOENT case is now retryable; malformed, unreadable and dead-owner locks still fail closed. The retained regression passes.
+
+The running app was checked through the user interface. Existing unsaved task fields were preserved without saving them. Human review outcomes were not changed.

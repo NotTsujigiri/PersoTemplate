@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8370954e-b701-4400-a7e4-6c8b339a67e6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8370954e-b701-4400-a7e4-6c8b339a67e6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-12T13:41:11.794Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 477,
+        "description": "Expose public component properties through the regular Node editor and component composition through the Repositories bush. Contributors own source interpretation, schemas, relations and mutations; the editor must not depend on individual component implementations.\n\nImplemented: UI components are exposed as node types to the relational engine. The shared Node editor renders Fields and Additional relations, including Instance of navigation; properties update preview state, support multiline Markdown, and preserve incomplete/normalized values. Code editing rejects stale writes. Preview property edits configure the current preview and do not imply saved source changes. Repository selections also have a regular Node editor in workspace and Review.\n\nRemaining: verify and complete contributor-owned component-composition relationships and navigation for the selected component. Repository folder/file containment is a separate relation and does not establish that this requirement is complete. Demonstrate component/source selection and preview continuity across the bush, Node editor and Review revision scope. Verify source mutation and persistence only for supported operations; unsupported cases must remain explicit.\n\nEvidence for implemented properties and shared editors: .harness/outside-ui-verified.log (12 passing browser scenarios with inspected screenshots). Complete the remaining integration after the preceding visual review; the user's acceptance remains with the following integration review.",
+        "title": "Expose component properties and composition in the UI editor",
+        "updatedAt": "2026-10-17T00:08:47.644Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8370954e-b701-4400-a7e4-6c8b339a67e6.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8370954e-b701-4400-a7e4-6c8b339a67e6.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9dde6458-92cb-4b6f-b97a-45c4ecde5192.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8370954e-b701-4400-a7e4-6c8b339a67e6.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9dde6458-92cb-4b6f-b97a-45c4ecde5192.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8370954e-b701-4400-a7e4-6c8b339a67e6.json"
+}

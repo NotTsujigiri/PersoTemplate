@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/320142ac-7997-43d6-ad1f-c2681cd67ace.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/320142ac-7997-43d6-ad1f-c2681cd67ace.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T18:21:46.548Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 688,
+        "description": "",
+        "title": "- The 2b07dd6 full run passed build, 41 model and 571 unit/integration tests; browser result was 250/251. The remaining failure was a 15-second #prompt setup ti",
+        "updatedAt": "2026-10-18T18:22:01.989Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/320142ac-7997-43d6-ad1f-c2681cd67ace.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/320142ac-7997-43d6-ad1f-c2681cd67ace.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- The 2b07dd6 full run passed build, 41 model and 571 unit/integration tests; browser result was 250/251. The remaining failure was a 15-second #prompt setup timeout, before the notification scenario.\n- Inspection review corrected its initial Add inside diagnosis. Commit de2b5fa waits for the real compiled preview before the unchanged shell-readiness check; product code, timeouts and assertions are unchanged.\n- The complete browser replay finished 249/251: a detached viewport resample and review approval checked before operation completion were investigated separately. The original approval timing cause was not established.\n- Reviewed fixture corrections retain the successful measured viewport sample and require successful/persisted approval before the unchanged UI assertion. Both focused cases pass; strict final validation and formal acceptance remain pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/320142ac-7997-43d6-ad1f-c2681cd67ace.json"
+}

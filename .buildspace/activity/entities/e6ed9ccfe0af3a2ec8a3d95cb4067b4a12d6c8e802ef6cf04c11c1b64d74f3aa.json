@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c12fe02b-96e0-492f-8c00-4fa18b0ae022.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c12fe02b-96e0-492f-8c00-4fa18b0ae022.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T08:14:42.051Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 638,
+        "description": "",
+        "title": "Independent boundary review found migration-added repeated snapshot validation/copying, a duplicate historical generation load, and decoration before pagination",
+        "updatedAt": "2026-10-18T08:29:12.508Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c12fe02b-96e0-492f-8c00-4fa18b0ae022.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c12fe02b-96e0-492f-8c00-4fa18b0ae022.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Independent boundary review found migration-added repeated snapshot validation/copying, a duplicate historical generation load, and decoration before pagination. Source-proven overhead was corrected in 5cc2572 without removing native validation or mutable-copy isolation."
+          },
+          {
+            "kind": "explain",
+            "text": "Recorded before/after: historical inspection changes from two generation loads plus one current snapshot copy to one load and zero current copies. Snapshot isolation, mixed entity pagination, restart and invalid-contract regressions pass 15/15; TypeScript compilation passes. Reviewer approved the bounded correction."
+          },
+          {
+            "kind": "explain",
+            "text": "The complete checkpoint remains running; its Harness unit runner is currently stalled on check-timeout.test.ts, which independently passes 3/3. No completion claim until this is resolved and browser validation finishes."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c12fe02b-96e0-492f-8c00-4fa18b0ae022.json"
+}

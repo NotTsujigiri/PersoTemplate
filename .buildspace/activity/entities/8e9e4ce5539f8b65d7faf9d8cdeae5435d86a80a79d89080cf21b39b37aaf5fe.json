@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bb8b882a-c21d-4f71-b947-731f1aa7e415.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bb8b882a-c21d-4f71-b947-731f1aa7e415.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T14:27:32.168Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 682,
+        "description": "",
+        "title": "- Commit e5e9ed2 contains fixture-only corrections; focused browser replay passed 2/2 and both saved actual recordings exactly match expectations.\n- Independent",
+        "updatedAt": "2026-10-18T14:27:52.667Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bb8b882a-c21d-4f71-b947-731f1aa7e415.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bb8b882a-c21d-4f71-b947-731f1aa7e415.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Commit e5e9ed2 contains fixture-only corrections; focused browser replay passed 2/2 and both saved actual recordings exactly match expectations.\n- Independent boundary review confirms the feed renders its question during intake completion before notification; component review confirms pending route work drains without suppressed errors.\n- Previous full result remains 248/250. A fresh complete checkpoint is running on this committed candidate; no intermediate human review is required."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/bb8b882a-c21d-4f71-b947-731f1aa7e415.json"
+}

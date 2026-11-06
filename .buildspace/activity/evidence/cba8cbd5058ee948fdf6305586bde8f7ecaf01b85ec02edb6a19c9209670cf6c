@@ -1,0 +1,52 @@
+# Harness acceptance follow-up
+
+## Candidate preview and provider bootstrap
+
+- `seed-candidate-preview.mjs` builds three ordinary disposable repositories and a regular build space through owner APIs. It imports explicitly synthetic conversations and creates planning data through the same interfaces as normal work. It never copies the live store. The verification script passed a repeated seed: 36 planning items, 6 conversations, 40 continuous messages, 3 repositories, no duplicates.
+- `verify-deepseek-registry.mjs` confirmed the installed Pi provider registry exposes DeepSeek and its model catalog, and that a synthetic in-memory credential makes the models selectable. It made no paid inference request and read no user credentials. Real provider execution still requires the user's key.
+
+## Default-off scheduled and reactive execution
+
+The product now supplies an opt-in dispatcher, separate from rule creation. No live rule or dispatcher was enabled during implementation. An explicit enable control is available beside queue controls; execution also requires the ordinary queue to be unpaused. Restart retains the queue's paused behavior.
+
+The planning owner persists each due occurrence before dispatch. A stable execution identity binds it to one harness session. Reconciliation runs before new dispatch, one instance is started at a time, and missing credentials or a paused queue leave work queued with a reason. A model result waits for human review. Findings-only investigations cannot write source, run commands, or invoke mutating planning operations.
+
+Seven deterministic tests passed: default-off and pause behavior, interrupted receipt recovery, concurrent wakeup deduplication, failed configuration persistence, actual owner/harness integration with a fake agent, disable/shutdown during delayed credential preflight, and concurrent wakeup while an opt-in save is pending and fails. Runtime enablement changes only after persisted opt-in succeeds; revocation is immediate. The browser opt-in/disable test passed. Tests used disposable repositories and synthetic providers only.
+
+## Startup correction
+
+A deterministic browser regression first reproduced the live startup failure: holding `/api/models` left the entire shell inert and the composer disabled. The shell now initializes independently of model discovery. The same regression passed while model discovery remained pending and verified that choices populated when the response arrived.
+
+Model discovery is also isolated per provider with a cancellation signal and hard timeout. The whole metadata operation runs in a worker with a five-second lifetime, so synchronous provider or credential work cannot block the HTTP host. Only provider IDs and model metadata cross the worker boundary; runtime keys remain in the host. Two deterministic tests cover stalled providers and synchronous worker blockage; provider warnings appear in Settings. Pi agent execution still uses the host runtime, so this isolation specifically covers discovery.
+
+Live diagnostics also showed pending routes that synchronously return already-loaded data. Pi discovery was a plausible cause, not a proven sole cause: independent engine review found multi-second synchronous projection/validation costs and corrected them. The final live behavior must be assessed after both changes.
+
+## Independent review corrections
+
+- The activity card renderer no longer shadows its own function when expanding descendants. Disposing or collapsing a branch now closes descendant paging observers.
+- Activity pages pin their grouping time and immutable revision; root integrated these changes.
+- Historical node hydration must not merge current related nodes or edges into an old revision; this finding was sent to root for its owned integration.
+- Dispatcher cancellation is rechecked after asynchronous preflight immediately before launching an agent. Independent UI review found this race, and a focused regression covers both disabling and shutdown.
+- A second independent review identified opt-in visibility before its save completed. Runtime permission is now separate from tentative configuration and a concurrent failed-save test verifies no execution starts.
+
+The final combined model/dispatcher/Pi checkpoint passed 11 tests. The full-suite empty-log failure was subsequently reproduced by running the review-file-selection regression immediately before the agent workflow test. The selection test left a submitted review behind, correctly freezing the shared repository and preventing the next agent prompt. Its submitted review is now abandoned in a `finally` cleanup, and the agent workflow test explicitly asserts that the prompt request succeeds. The paired regressions and the buildspace recovery test passed together (3/3); the product review freeze remains enforced and no timeout or behavior assertion was weakened.
+
+## Buildspace navigation and template acceptance
+
+Opening a buildspace from its ordinary directory now persists its owner-validated ID in the URL and shows the actual owner's name compactly in the existing toolbar. URL identity overrides stale local storage; an unknown URL offers an explicit directory recovery link. Browser coverage verifies selection, refresh, stale local storage and recovery. The ordinary Ergonomics playground was opened through the directory and captured with 488 loaded cards and a 5,000-message continuous session mounting 60 messages.
+
+The Perso root acceptance gate initially differed only in its recorded navigation baseline: Personal information and Contribution feed have moved to the application owner. The nine recorded steps were compared semantically and their screenshots inspected; only that intended baseline was updated. Both root Perso acceptance tests then passed. Unrelated legacy standalone services and package declarations were preserved.
+
+## Candidate lifecycle (proposal, not executed)
+
+Withdraw the untouched Codex-authored pending review using a fresh revision, preserve its existing target nodes, ensure its execution session has all three repositories attached, discover and configure mandatory runnable definitions, then submit a new immutable candidate. Check the resulting three repository fingerprints, run checks against that submitted candidate, and create its isolated preview. Do not record human approval, merge, or commit. Any subsequent source edit invalidates that candidate and requires a new submission.
+
+## Annotation delivery and final independent review
+
+Submitted persisted annotation links now resolve through the same owner-scoped reader used by `chat_read`. Their comments, selected text ranges and source identities reach the initial model prompt or steering/follow-up as explicitly quoted untrusted evidence, without a model retrieval call. The composer and canonical user transcript retain the original Markdown message. Foreign-buildspace references fail before model execution; unrelated website links are ignored.
+
+Screenshot base64 never enters prompt text. A supported model receives bounded native image parts; unsupported or oversized images are explicitly identified as not supplied. Canonical native Pi message events preserve explicit original attachments and exclude automatically injected annotation images. Pending repeated follow-ups retain FIFO provenance until consumed and have an explicit overflow error, instead of silently evicting their original text.
+
+The final five prompt-delivery tests passed, alongside the scoped reader and four existing chat contract tests. The official deterministic Pi SDK tests also passed. Independent UI review accepted the owner boundary, selected-range delivery, image handling, steering and transcript fidelity. Limits are explicit: eight referenced nodes per submission, 48,000 quoted text characters, two megabytes per image and four supplied images; truncated quotations retain source references.
+
+Independent annotation capture review confirmed that stylesheet-based reconstruction preserves local current values and scroll state while the server continues to disable page JavaScript, block service workers and deny network access. It remains a reconstruction of the DOM rather than a claim to original-tab screenshot pixels. The separate UI owner fixed the scaled capture stall and pending-action context race; the populated live demo then captured without errors or writes.

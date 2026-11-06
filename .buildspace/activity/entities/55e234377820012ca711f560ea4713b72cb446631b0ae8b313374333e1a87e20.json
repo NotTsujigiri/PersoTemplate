@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3a2e1d80-1f04-46ba-b015-03249a6145a4.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3a2e1d80-1f04-46ba-b015-03249a6145a4.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T18:30:37.490Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 691,
+        "description": "",
+        "title": "- Boundary reviewer and component-inspection reviewer approve; their final strict-check and commit conditions are satisfied by 9c06556bf13ad32a6abcc467a118a775a",
+        "updatedAt": "2026-10-18T18:30:52.552Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3a2e1d80-1f04-46ba-b015-03249a6145a4.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3a2e1d80-1f04-46ba-b015-03249a6145a4.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- Boundary reviewer and component-inspection reviewer approve; their final strict-check and commit conditions are satisfied by 9c06556bf13ad32a6abcc467a118a775abe7a49f.\n- Verified 41 model tests, 571 unit/integration tests and all 251 browser scenarios across full plus focused runs; strict checking passes for 1,041 authored files. No single final test:all invocation passed; failed runs remain in the attached evidence.\n- Existing live nodes expose separate components, property values, component definitions and linked data types; repeated components remain independently editable. Screenshots and exact viewport/approval recordings were reviewed.\n- Final evidence records the commit sequence, storage audit and review iterations. Earlier native Windows worker/cancellation issues remain separately tracked; Node 24.20.0 is the verified runtime."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/3a2e1d80-1f04-46ba-b015-03249a6145a4.json"
+}

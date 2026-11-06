@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7645130c-1880-49a7-bab2-a9731bdde1a2.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7645130c-1880-49a7-bab2-a9731bdde1a2.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.383Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "First stage of the performance pass. Provide granular visibility for each test: identity, what behavior it exercises, what it does/checks, duration and result, with supporting detail/evidence as agreed in the joint sessions. Clarify test-level timing versus suite, build, setup and other overhead so the display is truthful. Follow joint needs analysis → joint image-generation rounds → design review → development → post-development human UI review. The exact design and measurement contract remain proposals until reviewed.",
+        "title": "Make the Checks view explain individual tests and timing",
+        "updatedAt": "2026-10-09T13:02:10.963Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7645130c-1880-49a7-bab2-a9731bdde1a2.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7645130c-1880-49a7-bab2-a9731bdde1a2.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7645130c-1880-49a7-bab2-a9731bdde1a2.json"
+}

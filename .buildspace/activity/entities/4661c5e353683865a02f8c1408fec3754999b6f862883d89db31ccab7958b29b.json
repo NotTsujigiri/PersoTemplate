@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5ab600b-ae46-46c7-92dd-5a6f7a26831b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5ab600b-ae46-46c7-92dd-5a6f7a26831b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-21T23:22:10.648Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 950,
+        "description": "Increase edges with 200 nodes and size 56 px; nodes overlap. Reproduce spacing under deterministic sparse/dense inputs, then correct radius and collision behavior in the real Graph editor iteration.\n\nConfirmed a mix: the prior renderer could draw radius 28/32 while collision layout used radius 14, and a bounded 120-tick force simulation still left 90 overlapping pairs at 5,000 edges even with corrected radius 28. The shared layout now takes the displayed radius and performs deterministic final spatial separation. The same recorded 200-node inputs at 200/500/5,000 edges now produce exactly zero overlapping pairs. Before/actual/expected recordings: Systems/Depth1/RelationalUi/test-results/dense-layout/. Regression: Depth0/CircleForceLayout/density.test.ts. All three focused layout tests passed; real-graph browser sizing and background layout also passed. Dense edges can still obscure each other; eliminating geometric node overlap does not solve dense-edge readability.",
+        "title": "Bug: dense force layout overlaps visible node circles",
+        "updatedAt": "2026-10-21T23:57:47.714Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5ab600b-ae46-46c7-92dd-5a6f7a26831b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5ab600b-ae46-46c7-92dd-5a6f7a26831b.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5ab600b-ae46-46c7-92dd-5a6f7a26831b.json"
+}

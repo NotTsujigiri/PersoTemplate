@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/17dbefc0-1c38-46c2-bb74-85071ca296f0.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/17dbefc0-1c38-46c2-bb74-85071ca296f0.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T22:26:29.997Z",
+        "createdBy": "agent:codex",
+        "description": "Immutable attached evidence",
+        "title": "chat-round-5 - 02-message-scroll-and-timing.png",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/17dbefc0-1c38-46c2-bb74-85071ca296f0.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/17dbefc0-1c38-46c2-bb74-85071ca296f0.json",
+      "properties": {
+        "artifact": {
+          "hash": "225d300baa9fab12df831aa2b95f9c487d46605a190acb513d510334d92b91f0",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/225d300baa9fab12df831aa2b95f9c487d46605a190acb513d510334d92b91f0",
+          "mime": "image/png",
+          "size": 1728439
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/17dbefc0-1c38-46c2-bb74-85071ca296f0.json"
+}

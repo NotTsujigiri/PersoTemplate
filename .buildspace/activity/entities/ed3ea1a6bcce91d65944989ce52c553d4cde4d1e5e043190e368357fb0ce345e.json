@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ef965663-9ced-429c-8c90-0dfe8984d271.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ef965663-9ced-429c-8c90-0dfe8984d271.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T10:10:50.223Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 658,
+        "description": "",
+        "title": "Final boundary reviewer approved eb61a948d7ca9d623c82d589843e86a33e3126db: no remaining engine/storage/ownership/transport/predecessor-removal blocker. Canonica",
+        "updatedAt": "2026-10-18T10:11:07.014Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ef965663-9ced-429c-8c90-0dfe8984d271.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ef965663-9ced-429c-8c90-0dfe8984d271.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c5e2108a-ead4-4e55-8afc-7e335649aab3.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Final boundary reviewer approved eb61a948d7ca9d623c82d589843e86a33e3126db: no remaining engine/storage/ownership/transport/predecessor-removal blocker. Canonical graph definitions use component-containing EntityNode records; no predecessor GraphNode/NodeTypeNode/nodeTypes API remains active. Five-store preservation and 617 planning generations/222 evidence hashes remain verified. The full checkpoint is still required. Windows cancellation b5e13805 remains separate and unresolved."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ef965663-9ced-429c-8c90-0dfe8984d271.json"
+}

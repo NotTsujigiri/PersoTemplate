@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b3e1b5ef-d4ce-4f21-8bef-006a55f512e8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b3e1b5ef-d4ce-4f21-8bef-006a55f512e8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T20:07:22.695Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 440,
+        "description": "Establish an explicit Git and deployment workflow for the composed MVP buildspace. The current ambiguity around branches, worktrees, commits, merges and deployed versions makes it difficult to determine where annotations belong and what work is being reviewed.\n\nAnalyze needs with the user, propose and review the workflow, then implement and verify it. Cover ownership and lifecycle of branches/worktrees; commit and review snapshot identity across participating repositories; reviewed versus actively developed versions; merge sequencing, failures and partially applied changes; deployment identity and traceability back to the reviewed or in-development sources. Do not assume a particular branching strategy or atomic multi-repository merge mechanism before review.\n\nKeep annotating the version the user is currently working with possible. Expose enough version and review context to make annotation destinations understandable. For the MVP, expose available destinations rather than requiring automatic contextual ranking. Annotations made in a review's Changes or Preview tab belong to that review; broader destination eligibility must follow the agreed annotation design.\n\nRevisit the provisional discussion rule at merge start: the user's current direction is to allow replies but disallow reopening once merging starts. This is not an absolute decision; assess it against the actual multi-repository workflow and decide with the user. Preserve the distinction between review approval and discussion closure, and the requirement that changes to a proposal reset its review approval.\n\nKeep the task and its eventual nested plan serial. Place it before the final MVP audit and final user review so the complete workflow is included in acceptance. Source context: .harness/design/proposal-review-needs-analysis.md, destination discussion and Git/merge research.",
+        "title": "Define and improve the multi-repository Git and deployment workflow",
+        "updatedAt": "2026-10-10T17:56:35.493Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b3e1b5ef-d4ce-4f21-8bef-006a55f512e8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b3e1b5ef-d4ce-4f21-8bef-006a55f512e8.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b3e1b5ef-d4ce-4f21-8bef-006a55f512e8.json"
+}

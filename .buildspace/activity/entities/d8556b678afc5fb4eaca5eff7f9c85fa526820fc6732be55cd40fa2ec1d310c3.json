@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a31bb496-f43d-4f38-b2fb-70336292fd6a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a31bb496-f43d-4f38-b2fb-70336292fd6a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T15:28:20.539Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 436,
+        "description": "After the UI editor has passed its self-review, progressively mock up the review and annotation surfaces together with the user, starting from the existing app and the needs already recorded. Use the UI editor in Review → Changes to inspect and revise the UI.\n\nKeep the mockup as a durable versioned artifact linked to this task, separate from its brief. Capture each agreed increment and the remaining questions. Use additional diagrams or documents when needed to explain architecture, invariants and operation impacts; do not impose a universal proposal format. Carry the resulting mockups into the following human review.",
+        "title": "Mock up review and annotation improvements together in the UI editor",
+        "updatedAt": "2026-10-10T09:48:42.791Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a31bb496-f43d-4f38-b2fb-70336292fd6a.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a31bb496-f43d-4f38-b2fb-70336292fd6a.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "design",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a31bb496-f43d-4f38-b2fb-70336292fd6a.json"
+}

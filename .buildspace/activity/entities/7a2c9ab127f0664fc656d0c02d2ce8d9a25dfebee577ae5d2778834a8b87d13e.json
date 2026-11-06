@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/15e40ed5-6a82-43ee-84cc-ad360dc72bbf.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/15e40ed5-6a82-43ee-84cc-ad360dc72bbf.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T01:04:43.724Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1217,
+        "description": "Implement the reviewed PredicateComposer behavior and usage inventory. Resolve implementation details autonomously; the user manages dependency decisions rather than routine technical choices.\n\nBuild the reusable component in RelationalUi using the existing self-contained text editor and suggestion presentation. Compose language and domain-value suggestions within PredicateComposer, leaving repository text editing free of domain-value providers. PredicateComposer must provide or interface with compilation and execution when requested by the caller, keeping view glue minimal.\n\nReplace all five inventoried QueryComposer usage sites, preserving their full-data filtering, paging, saved filters, sorting and view behavior. Add the Graph editor predicates agreed in the preceding review. Keep input contracts and data in their owning providers; no Harness domain dependency in reusable UI and no ProjectTools dependency in the TypeScript contributor. Surface any required dependency changes before introducing them.\n\nRemove the superseded QueryComposer and artifacts belonging exclusively to it. Verify the reusable component and its consumers before human review. Keep future navigation toward the running application's compiled code possible without requiring the entire compilation UI in this round.",
+        "title": "8. Implement PredicateComposer and replace QueryComposer",
+        "updatedAt": "2026-10-29T03:30:13.747Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/15e40ed5-6a82-43ee-84cc-ad360dc72bbf.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/15e40ed5-6a82-43ee-84cc-ad360dc72bbf.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/72d72683-1623-4685-870c-edcf1bb6eeff.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/15e40ed5-6a82-43ee-84cc-ad360dc72bbf.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/72d72683-1623-4685-870c-edcf1bb6eeff.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/15e40ed5-6a82-43ee-84cc-ad360dc72bbf.json"
+}

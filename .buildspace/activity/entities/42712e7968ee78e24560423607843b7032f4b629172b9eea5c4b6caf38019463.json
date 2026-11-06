@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0c3bec5-c184-48f4-b006-b7cc4b0cb61a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0c3bec5-c184-48f4-b006-b7cc4b0cb61a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T21:48:38.024Z",
+        "createdBy": "agent:codex",
+        "description": "Seed multiple local repositories, representative board history and long chat through disposable code; normal buildspace/versioning only. Test restart, stale writes, invalid transitions, annotation capture/delivery, agent edit/test/review loop and narrow/fullscreen ergonomics. Deliver review and evidence covering Perso Template, Btr Template and TheBroccoli on existing task timeline. Keep explicit deferred features out of MVP and await user's acceptance.\n\n## Serial acceptance scope\nThis existing integration/demonstration task now contains the earlier implementation records in one dependency chain. Verify their recorded work and remaining feedback before completing this demonstration. The existing planning/chat/annotation review targets this containing task, captures every child, and retains its required reviewer and repository checks. Do not treat regrouping as completion or approval.",
+        "title": "Verify and present the MVP in an ordinary seeded demo buildspace",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0c3bec5-c184-48f4-b006-b7cc4b0cb61a.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0c3bec5-c184-48f4-b006-b7cc4b0cb61a.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d0c3bec5-c184-48f4-b006-b7cc4b0cb61a.json"
+}

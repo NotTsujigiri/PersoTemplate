@@ -1,0 +1,356 @@
+{
+  "title": "Complete property structure verification",
+  "date": "2026-10-20",
+  "commit": "ccc4f51a9907d59e44196312451c7a21c652fefc",
+  "task": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+  "idea": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/05aff937-7fd0-4b3f-b426-764df8ce7914.json",
+  "scope": [
+    "Removed required and hidden from property declarations, reflection metadata and consumers.",
+    "Optional value types represent absence; all declared properties remain visible, including read-only properties without values.",
+    "Nullable values remain distinct from absent optional values.",
+    "Updated native compilation, value validation, query traversal, planning and visual preview editing for optional value types.",
+    "Preserved property headings above values and Title-first Activity board entry ordering.",
+    "The property/component merger remains an unprocessed Idea input."
+  ],
+  "recordedRegressions": [
+    {
+      "behavior": "Property metadata and declared value validation",
+      "before": ".harness/property-structure/before-structure.json",
+      "after": "Systems/Depth0/RelationEngine/test-results/property-structure/structure.json",
+      "result": "Exact expected output passes; required and hidden removed; invalid missing non-optional values rejected."
+    },
+    {
+      "behavior": "Missing read-only Description stays visible",
+      "before": ".harness/property-structure/before-headings.json",
+      "result": "Exact heading comparison passes for populated and absent values; browser verifies full declaration list and Not set."
+    },
+    {
+      "behavior": "Optional preview fields do not acquire duplicate optional wrappers",
+      "before": ".harness/property-structure/preview-optional-before.log",
+      "after": ".harness/property-structure/preview-optional-after.log",
+      "result": "Pass."
+    },
+    {
+      "behavior": "Removing an optional preview value clears the actual runtime property",
+      "before": ".harness/property-structure/preview-clear-before.log",
+      "after": ".harness/property-structure/preview-clear-after.log",
+      "result": "Exact result passes: editorShowsAbsent=true and runtimeHasValue=false."
+    },
+    {
+      "behavior": "Activity stage choices resolve through optional enum types",
+      "before": ".harness/property-structure/stage-choices-before.log",
+      "after": ".harness/property-structure/stage-choices-after.log",
+      "result": "Exact choice list, selected value and persisted change pass."
+    }
+  ],
+  "finalValidation": {
+    "build": {
+      "command": ".\\build.ps1",
+      "exitCode": 0,
+      "log": ".harness/property-structure/final-build-checked.log"
+    },
+    "typeSafety": {
+      "authoredFiles": 1069,
+      "violations": 0
+    },
+    "modelCheckpoint": {
+      "passed": 45,
+      "failed": 0,
+      "log": ".harness/property-structure/models-final.log"
+    },
+    "rebuiltCatalog": {
+      "passed": 5,
+      "failed": 0,
+      "log": ".harness/property-structure/catalog-final.log"
+    },
+    "focusedChecks": [
+      {
+        "scope": "Engine correction",
+        "passed": 32,
+        "log": ".harness/property-structure/engine-tests.log"
+      },
+      {
+        "scope": "Engine consumers after expectation updates",
+        "passed": 41,
+        "log": ".harness/property-structure/engine-recheck.log"
+      },
+      {
+        "scope": "Schema form",
+        "passed": 24,
+        "log": ".harness/property-structure/schema-tests.log"
+      },
+      {
+        "scope": "Planning",
+        "passed": 32,
+        "log": ".harness/property-structure/planning-tests.log"
+      },
+      {
+        "scope": "Planning final",
+        "passed": 7,
+        "log": ".harness/property-structure/planning-final.log"
+      },
+      {
+        "scope": "Harness affected consumers",
+        "passed": 9,
+        "log": ".harness/property-structure/harness-recheck.log"
+      },
+      {
+        "scope": "Preview contract",
+        "passed": 8,
+        "log": ".harness/property-structure/preview-contract-final.log"
+      },
+      {
+        "scope": "Project tools and testing",
+        "passed": 33,
+        "log": ".harness/property-structure/tools-testing-final.log"
+      },
+      {
+        "scope": "Browser editing",
+        "passed": 16,
+        "log": ".harness/property-structure/browser-editing.log"
+      },
+      {
+        "scope": "Browser final reruns",
+        "passed": 5,
+        "log": ".harness/property-structure/browser-final-reruns.log"
+      },
+      {
+        "scope": "Browser checkpoint reruns",
+        "passed": 2,
+        "log": ".harness/property-structure/browser-checkpoint-reruns.log"
+      }
+    ],
+    "fullCheckpoint": {
+      "command": ".\\test.ps1 followed by remaining checkpoint stages and focused corrections",
+      "green": false,
+      "applicationUnitInitial": {
+        "total": 275,
+        "passed": 263,
+        "failed": 12
+      },
+      "applicationUnitResolution": "Four stale catalog checks and four affected expectation checks pass after rebuild/correction. Four previously tracked Windows process cancellation/deadline timing failures remain.",
+      "remainingFailures": [
+        "Cancellation of a descendant while its parent exits",
+        "Deadline behavior during Windows process startup",
+        "Prompt return at an explicit deadline",
+        "Prompt return after manual cancellation"
+      ],
+      "browserInitial": {
+        "total": 272,
+        "passed": 263,
+        "failed": 9
+      },
+      "browserResolution": "All nine failing cases subsequently pass focused reruns; no claim of a completely green rerun of the whole suite.",
+      "browserReruns": [
+        {
+          "case": "Round 5 optional semantic types",
+          "log": ".harness/property-structure/stage-choices-after.log"
+        },
+        {
+          "case": "Round 6 optional enum traversal",
+          "log": ".harness/property-structure/browser-consumers-final.log"
+        },
+        {
+          "case": "Composition directory visible unset metadata",
+          "log": ".harness/property-structure/browser-consumers-final.log"
+        },
+        {
+          "case": "Planning CRUD",
+          "log": ".harness/property-structure/browser-checkpoint-reruns.log"
+        },
+        {
+          "case": "Withdraw rejects absent reason through owner validation",
+          "log": ".harness/property-structure/browser-final-reruns.log"
+        },
+        {
+          "case": "Task reference editing with Title first",
+          "log": ".harness/property-structure/browser-final-reruns.log"
+        },
+        {
+          "case": "Visual definition authoring",
+          "log": ".harness/property-structure/browser-final-reruns.log"
+        },
+        {
+          "case": "First unset preview property and runtime removal",
+          "log": ".harness/property-structure/preview-clear-after.log"
+        },
+        {
+          "case": "Non-component preview",
+          "log": ".harness/property-structure/browser-checkpoint-reruns.log"
+        }
+      ]
+    }
+  },
+  "liveVerification": {
+    "appRestarted": true,
+    "node": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f8bea499-6091-4dfc-b3cf-0c7b699e9d3b.json",
+    "revision": 890,
+    "properties": [
+      "title",
+      "context",
+      "createdRevision",
+      "createdAt",
+      "createdByNode",
+      "updatedAt",
+      "updatedByNode",
+      "createdBy",
+      "updatedBy",
+      "description"
+    ],
+    "description": "Not set",
+    "declarationFlags": "No required or hidden",
+    "visualReview": "Reviewed the regenerated screenshot showing property name/help/type/read-only above the value, Description Not set and separate Task transition component.",
+    "screenshot": "Systems/Depth3/HarnessApp/test-results/property-final-reruns/activity-entry-ui-activity-24ecb-es-on-transition-inspection/absent-description.png"
+  },
+  "recordedOutputs": {
+    "structureBefore": {
+      "bug": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+      "inputs": [
+        {
+          "title": "Task",
+          "description": "Details"
+        },
+        {
+          "title": "Transition",
+          "description": null
+        },
+        {
+          "description": null
+        },
+        {
+          "title": "Transition"
+        }
+      ],
+      "expected": {
+        "properties": [
+          "key",
+          "label",
+          "comment",
+          "dataType",
+          "readOnly",
+          "derived",
+          "maxLength",
+          "reference"
+        ],
+        "accepted": [
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      "actual": {
+        "properties": [
+          "key",
+          "label",
+          "comment",
+          "dataType",
+          "required",
+          "readOnly",
+          "hidden",
+          "derived",
+          "maxLength",
+          "reference"
+        ],
+        "accepted": [
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "structureAfter": {
+      "bug": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+      "inputs": [
+        {
+          "title": "Task",
+          "description": "Details"
+        },
+        {
+          "title": "Transition",
+          "description": null
+        },
+        {
+          "description": null
+        },
+        {
+          "title": "Transition"
+        }
+      ],
+      "expected": {
+        "properties": [
+          "key",
+          "label",
+          "comment",
+          "dataType",
+          "readOnly",
+          "derived",
+          "maxLength",
+          "reference"
+        ],
+        "accepted": [
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      "actual": {
+        "properties": [
+          "key",
+          "label",
+          "comment",
+          "dataType",
+          "readOnly",
+          "derived",
+          "maxLength",
+          "reference"
+        ],
+        "accepted": [
+          true,
+          true,
+          false,
+          false
+        ]
+      }
+    },
+    "headingsBefore": {
+      "bug": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9a150d92-2b73-4068-b34a-5ac2d2ec869e.json",
+      "inputs": [
+        {
+          "title": "Task",
+          "description": "Details",
+          "createdAt": "today"
+        },
+        {
+          "title": "Transition",
+          "createdAt": "today"
+        }
+      ],
+      "expected": [
+        [
+          "title",
+          "description",
+          "createdAt"
+        ],
+        [
+          "title",
+          "description",
+          "createdAt"
+        ]
+      ],
+      "actual": [
+        [
+          "title",
+          "description",
+          "createdAt"
+        ],
+        [
+          "title",
+          "createdAt"
+        ]
+      ]
+    }
+  }
+}

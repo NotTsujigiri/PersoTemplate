@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5433f08e-5cee-4f8c-b367-5dde66817058.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5433f08e-5cee-4f8c-b367-5dde66817058.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T12:28:58.154Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 371,
+        "description": "Deferred investigation requested during the Task timeline / Task graph layout discussion. Keep this task in the top-level backlog for later user review.\n\nFacts established in the conversation\n- A task's canonical runtime ID is its full graph address: graph://<graph>/entries/<UUID>.json.\n- A UUID is generated once when the task is created. It is persisted through the filename, not regenerated when a page or application reloads.\n- The UUID determines the <UUID>.json entry filename. The full graph address is also serialized in the task's id field.\n- On loading, the storage owner derives the runtime ID from the entry address and overwrites the serialized id value with that address.\n- The graph layout currently sorts equal-rank tasks lexicographically by this persisted ID. This is stable across reloads but arbitrary: it conveys no chronology, priority, dependency order or user intent.\n- Row-capacity packing then uses that order to decide which tasks spill into later rows; this helped explain seemingly arbitrary vertical positions. Layout ordering and task identity are distinct concerns.\n\nInvestigate later\n- Confirm the intended authority for task identity: entry address, persisted id field, and UUID; assess whether serializing the same identity is unnecessary duplication.\n- Inspect behavior on move, rename, copy, import/export and references, including what should happen if the serialized id disagrees with the entry address.\n- Determine where stable identity is required versus where an explicit ordering rule is required. Do not treat random UUID ordering as meaningful task sequencing.\n- Review findings with the user before choosing an identity/storage change. No UID redesign or data migration has been agreed.\n\nCode inspected in this discussion\n- HarnessApp/planning.ts: id() generates the UUID and builds its graph entry address.\n- HarnessApp/planning-store.ts: uri(), entryName(), node serialization, and loading with id: entry.uri.\n- RelationalUi/Depth2/RangeGraph/index.ts: ID-based tie-breaking and row-capacity overflow.\n\nDiscussion context: Persistent planning and review MVP; user asked whether the UID is the persisted filename or a field inside the task file. The answer was that the filename carries the UUID, the full address is also written in id, and loading uses the address as identity.",
+        "title": "Investigate task UID",
+        "updatedAt": "2026-10-08T12:28:58.314Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5433f08e-5cee-4f8c-b367-5dde66817058.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5433f08e-5cee-4f8c-b367-5dde66817058.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "investigation",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5433f08e-5cee-4f8c-b367-5dde66817058.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5433f08e-5cee-4f8c-b367-5dde66817058.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-24T22:51:09.739Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-08T12:28:58.314Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5433f08e-5cee-4f8c-b367-5dde66817058.json"
+}

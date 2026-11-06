@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a0be1e6b-f70c-4dc8-b213-3c30ccff87b6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a0be1e6b-f70c-4dc8-b213-3c30ccff87b6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-11T20:14:17.204Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 470,
+        "description": "Review phase 2 with the user through the UI editor. Exercise authored sample data, property/event behavior, service substitutes and call inspection. Check that editing sample state cannot mutate real buildspace data and that save/discard behavior is explicit. Verify the editor remains generic and existing controls are reused. Iterate on feedback; author submits and the user records the outcome.",
+        "title": "Review component sample data and service substitutes — phase 2",
+        "updatedAt": "2026-10-11T20:14:57.599Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a0be1e6b-f70c-4dc8-b213-3c30ccff87b6.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a0be1e6b-f70c-4dc8-b213-3c30ccff87b6.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a0be1e6b-f70c-4dc8-b213-3c30ccff87b6.json"
+}

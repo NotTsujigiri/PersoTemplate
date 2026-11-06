@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/80285e78-b7ee-430f-9292-5f4d5d871d5b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/80285e78-b7ee-430f-9292-5f4d5d871d5b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T12:14:54.373Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 529,
+        "description": "Immutable attached evidence",
+        "title": "Repository bush and native element selection.png",
+        "updatedAt": "2026-10-17T12:15:04.609Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/80285e78-b7ee-430f-9292-5f4d5d871d5b.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/80285e78-b7ee-430f-9292-5f4d5d871d5b.json",
+      "properties": {
+        "artifact": {
+          "hash": "32bdac6865314d6e5f1e987240357a2f7743741df402c49fb68f13c574fa63eb",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/32bdac6865314d6e5f1e987240357a2f7743741df402c49fb68f13c574fa63eb",
+          "mime": "image/png",
+          "size": 62631
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/80285e78-b7ee-430f-9292-5f4d5d871d5b.json"
+}

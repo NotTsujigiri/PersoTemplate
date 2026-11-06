@@ -1,0 +1,73 @@
+{
+  "phase": "Final focused verification of corrected fixtures, workspace isolation and affected consumers",
+  "tests": 37,
+  "passed": 37,
+  "failed": 0,
+  "groups": [
+    {
+      "name": "browser-diagnostics-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "check-execution-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "component-gallery-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "conversation-settings-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "data-model-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "files-model-scope-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "image-editor-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "lsp-text-editor-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "node-editor-presentation-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "planning-plan-review-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "repository-actions-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "repository-entity-filter-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "repository-memory-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "repository-node-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "systems-ui.spec.ts",
+      "status": "Passed"
+    },
+    {
+      "name": "work-view-switch-ui.spec.ts",
+      "status": "Passed"
+    }
+  ],
+  "failures": []
+}

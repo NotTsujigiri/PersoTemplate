@@ -1,0 +1,37 @@
+# Annotation round 3
+
+Status: accepted as directional references with reservations on 29 September 2026. User requirements and the [annotation needs](../../annotation-system-needs.md) override generated pixels. No application behavior was implemented or verified by these mockups.
+
+## Final user review — binding reservations
+
+- Embedded review (image index 1): the surrounding Overview panel does not match the previously defined Overview design. Acceptance applies to reuse of the annotation component; retain the established Overview layout when implementing.
+- Batch overlay (image index 2): use the full available panel height. The shortened floating list in the image is not the intended geometry. Keep each annotation editor compact within that full-height host.
+- All three images are accepted direction, not pixel-perfect specifications. Apply recorded corrections and the shared component architecture despite image-generation noise.
+
+| Generated image index (zero-based, this response) | Scenario | Saved image |
+| --- | --- | --- |
+| 0 | Annotate a rendered task-card issue using a compact HTML-context overlay. Generic context choices, hierarchy icons, screenshot offsets, typed feedback, destination, Stack and Create. | [Compact HTML overlay](01-compact-html.png) |
+| 1 | Embed the same annotation component in Review Overview, with two typed feedback items and a review destination. | [Embedded review](02-embedded-review.png) |
+| 2 | Reuse the component twice in the pencil-toggled batch overlay: a UI issue going to Broccoli Inputs and a selected passage going to the General composer. | [Batch overlay](03-reused-batch.png) |
+
+## Changes from the reviewed round
+
+- Remove annotation headers, the Context label, HTML paths and visible page-URL metadata. Keep the context selector and icon-only HTML navigation on one row; include Selection as a generic context option.
+- Use two screenshot-offset spinboxes. Retain the screenshot and pointed bubble; metadata remains captured even when hidden from the editor.
+- Restore compact review-comment rows with a type dropdown, comment, removal action and Add feedback. Multiple feedback items belong to one annotation.
+- Keep Stack and Create wording independent of destination. Each batch item has its own destination; numbering is an external gutter. No global destination, header/close row or Keep collecting action.
+- Show the same editor structure in overlay, embedded and batch hosts. The batch host supplies one Create action instead of repeating individual action footers; it is not a separate annotation editor.
+
+## Reservations for review and implementation
+
+- The standalone and embedded versions remain more spacious than the requested compact implementation. The batch is the better density reference; do not reproduce generous generated padding as a requirement.
+- Image 0 labels its feedback choice Bug report rather than the requested Fix. This is generation drift, not a decision to change the review-comment taxonomy.
+- Image 1's surrounding review-page layout and repeated title are incidental. It demonstrates embedding, not a redesign of the accepted review architecture.
+- Images are static: open selectors overlapping previews do not establish actual overlay positioning or keyboard behavior. Context navigation, highlighting, URL-label resolution and coordinate handling still require implementation.
+- Offset axes/units and pointer percentages must have explicit, distinct semantics. The pictured X/Y values are illustrative.
+- Background text, avatars, timing values and tool totals contain generation drift. They do not change the accepted board/chat specifications or establish that the depicted preview bug was fixed.
+- The compact typed feedback pattern was checked against the saved real review capture at `round4-final/review-context.png`. A distinct earlier PR-comment generated reference was not located; do not claim an exact match to that missing reference.
+- Composer destinations persist an annotation and insert an ordinary URL/Markdown link into the draft; Create does not send a chat message. No custom annotation rendering is added to the MVP composer.
+- Batch partial-failure/retry behavior remains implementation design work. Nothing was delivered to Inputs, review or chat during generation.
+
+Exact generation instructions are retained in [prompts](prompts.md). Earlier rounds and their user corrections remain preserved.

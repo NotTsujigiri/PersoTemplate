@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8c71b1d4-590b-4529-8120-e95713107b64.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8c71b1d4-590b-4529-8120-e95713107b64.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Make review and observation work with actual results rather than sample content.\n\nScope\n\n• Reuse session/turn-range, current diff, captured snapshot and check-run evidence.\n\n• Review ordinary tasks against definitions/results or exact code snapshots; support blocked/revise/approve/abandon outcomes.\n\n• Keep reviewed scope frozen, block dependants and preserve independent work choices.\n\n• Project automatic/semantic/deterministic requirements and author-owned comment closure into a unified review check collection; requirement provenance and submitted revision are retained.\n\n• Build on the basic gate enforcement delivered in T01/T02 for R02; integrate richer file/session/check evidence and unified presentation without creating a second owner.\n\n• Detect/aggregate existing repository-owned checks and wire one granular run-checks operation through shared UI/MCP; attach existing coverage/report evidence without building the shared-check framework.\n\n• Adapt freshness gates so the human can explicitly accept an earlier passed run for the selected revision; show both the mismatch and acceptance, never a fabricated fresh pass.\n\n• Wire header run-all/mandatory/selected and scoped cancellation to the shared check owner; preserve partial evidence and distinguish unsupported cancellation.\n\nSuccess criteria\n\n1. Planning-only review does not require a fake Git diff or code checks.\n\n2. Code review shows the exact submitted revision and run provenance. Stale results are flagged and block passage unless the human records target-specific acceptance of earlier passed evidence; changed snapshot identity is never silently substituted.\n\n3. All comments must close and all required reviewers approve; generic edits cannot bypass gates.\n\n4. Sessions may span attempts via turn ranges; evidence links open the correct existing viewer.\n\n5. Shared checkout limits are visible, without falsely promising automatic parallel isolation.\n\n6. Reviewer decisions and comment/input closure derive from their owners. Generic metadata changes cannot manufacture passage; open comments remain blocking. Stale passed evidence can be accepted only by an explicit human decision bound to the target revision.\n\n7. One run-checks call resolves repository-owned applicable checks at the requested granularity and aggregates their results without requiring the agent to choose individual commands.\n\n8. Execution record distinguishes selected/run/skipped/not-run checks, versions and when each ran. Later changes preserve the old result and reveal the mismatch.\n\n9. Coverage exposes measured result and effective threshold with available scope/provenance. No line/file/function coverage explorer, shared pipeline engine or agent-review harness is required.\n\n10. All/mandatory/selected deduplicate runnable targets and never invoke reviewer/closure rows. Stop records affected run IDs and observed cancellation/partial results; cancelled/missing evidence never becomes mandatory pass.\n\n11. Latest nested check evidence and chronological run events reference the same stored execution; neither rewrites policy or hides stale results.\n\n12. Failed-R02 replacement scenario passes end to end, including required-actor finish boundary, overlapping freeze protection, unresolved comment carry-forward and no generic-unlink gate bypass.\n\nEvidence\n\n• Review/evidence integration tests\n\n• Blocked-dependant and snapshot mismatch demonstrations\n\n",
+        "title": "Connect real evidence and review gates",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8c71b1d4-590b-4529-8120-e95713107b64.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8c71b1d4-590b-4529-8120-e95713107b64.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "integration"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8c71b1d4-590b-4529-8120-e95713107b64.json"
+}

@@ -1,0 +1,15 @@
+{
+  "saveIcon": true,
+  "onlyRoots": true,
+  "nestedOpen": true,
+  "timelineLabel": true,
+  "directTimeline": true,
+  "queuedDraggable": true,
+  "returnDestination": true,
+  "returnPersisted": true,
+  "revisionBeforeTabs": true,
+  "authorSelect": true,
+  "authorCompact": true,
+  "pickerRemoved": true,
+  "repositoryCollapsed": true
+}

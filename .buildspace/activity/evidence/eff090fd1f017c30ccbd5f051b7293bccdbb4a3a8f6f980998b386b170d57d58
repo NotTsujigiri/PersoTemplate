@@ -1,0 +1,208 @@
+{
+  "date": "2026-10-24",
+  "branch": "codex/overnight-board",
+  "mockBranch": {
+    "name": "codex/query-composer-mock",
+    "commit": "8004102edbc7203d261936b1c8c22e407acadfa5",
+    "includes": "Deleting a token selects the next token."
+  },
+  "base": "927cf3e",
+  "implementationCommits": [
+    "b80339b",
+    "8c291a8",
+    "ba26f64",
+    "275de1c",
+    "e24b0a8",
+    "c957885"
+  ],
+  "migration": {
+    "revision": 1045,
+    "convertedCurrentTasks": 406,
+    "restoredHistoricalActivity": 99,
+    "activityUnset": 307,
+    "placementChanges": 0,
+    "capturedTaskValues": 18,
+    "compatibilityRetained": false,
+    "report": ".harness/activity-migration-verification-20261024.json",
+    "appliedFiles": 308939
+  },
+  "initialCheckpoint": {
+    "command": "npm run test:all",
+    "exitCode": 1,
+    "nonBrowserPassed": 666,
+    "browserPassed": 288,
+    "browserFailed": 6,
+    "log": ".harness/overnight-checkpoint-retry.log"
+  },
+  "firstFollowup": {
+    "passed": 11,
+    "failed": 0,
+    "productionChanges": false,
+    "assertionChanges": "Update group inventory for four Inputs processing groups and pane extents for one merged 2px rail.",
+    "unchangedCasesPassed": [
+      "component checks",
+      "repository entity filtering",
+      "review acceptance"
+    ],
+    "log": ".harness/overnight-followup-browser.log"
+  },
+  "readinessCorrections": [
+    "Wait for completed application requests before recording repository filter rows.",
+    "Wait for check busy and lock states to clear, then for UI requests to complete, before opening the next action.",
+    "Wait for the check lock to clear before opening contribution review."
+  ],
+  "runtimeDependencyChanges": false,
+  "nativeWorker": {
+    "fixed": false,
+    "initialFullRun": "Passed, including afterEach and following tests.",
+    "evidence": ".harness/native-worker-full-run-20261024",
+    "cause": "Unconfirmed. Exit 0xC0000409 recurred after authentication shutdown was fixed, with no closed-database error.",
+    "availableCrashDump": false,
+    "phaseInterpretation": "Unknown: Playwright 1.62.1 initializes duration to zero; unexpected worker exit can report this value without testEnd. Zero duration does not prove the test body never started.",
+    "phaseSources": [
+      "node_modules/playwright/lib/common/index.js:2849",
+      "node_modules/playwright/lib/runner/index.js:5543"
+    ],
+    "thirdRun": {
+      "evidence": ".harness/native-worker-third-full-run-20261024",
+      "exactRecordingMatched": true,
+      "afterEachRecorded": true,
+      "afterEachAvailableMemoryBytes": 1888468992,
+      "finalRunnerStatus": "Both prior crash scenarios passed; a different component-preview case lost the worker.",
+      "reviewCase": {
+        "evidence": ".harness/native-worker-third-full-review-20261024",
+        "exactRecordingMatched": true,
+        "subsequentCasesRan": true
+      },
+      "isolatedFailedCase": {
+        "passed": true,
+        "durationMs": 7019
+      },
+      "nativeFailureFile": "component-gallery-ui.spec.ts"
+    }
+  },
+  "screenshots": ".harness/overnight-ui-evidence",
+  "scheduling": "No active overnight schedule; existing heartbeat remains paused.",
+  "verificationCommit": "c313ed0",
+  "readinessFocused": {
+    "passed": 11,
+    "failed": 0,
+    "log": ".harness/overnight-readiness-focused.log"
+  },
+  "readinessTypeGate": {
+    "authoredFiles": 1163,
+    "violations": 0,
+    "log": ".harness/overnight-readiness-types.log"
+  },
+  "secondFullRun": {
+    "passed": 291,
+    "failed": 3,
+    "log": ".harness/overnight-readiness-full-browser.log",
+    "nativeFailure": ".harness/native-worker-new-failure-20261024.json"
+  },
+  "finalFollowup": {
+    "passed": 4,
+    "failed": 0,
+    "log": ".harness/overnight-final-followup-browser.log"
+  },
+  "authenticationShutdown": {
+    "beforeFailed": 2,
+    "afterPassed": 6,
+    "causalLinkToNativeCrash": "Unconfirmed",
+    "recordings": "Systems/Depth3/HarnessApp/.harness/recordings/local-auth-shutdown/",
+    "commit": "6a04fdf",
+    "report": ".harness/authentication-shutdown-verification-20261024.json",
+    "attachedEvidence": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/51aca715-ddb7-41c8-8eb9-8d803e7291e4.json",
+    "fullSuiteTestsPassed": true,
+    "fullBrowserClosedDatabaseErrors": 0
+  },
+  "followupCommits": [
+    "c313ed0",
+    "ca9b164",
+    "6a04fdf"
+  ],
+  "status": "Six approved tasks complete; native worker crash and newly recorded review-acceptance timeout remain open.",
+  "head": "6a04fdf",
+  "completedTasks": 6,
+  "openTask": "Bug: Native Windows browser worker exits during full-suite component inspection",
+  "currentCheckpoint": {
+    "command": "npm run test:all",
+    "log": ".harness/overnight-shutdown-checkpoint.log",
+    "build": "passed",
+    "typeSafety": {
+      "authoredFiles": 1164,
+      "violations": 0
+    },
+    "modelTests": {
+      "passed": 44,
+      "failed": 0
+    },
+    "remaining": null,
+    "nonBrowserTests": {
+      "passed": 668,
+      "failed": 0
+    },
+    "exitCode": 1,
+    "browserTests": {
+      "passed": 292,
+      "failed": 2,
+      "nativeExits": 1,
+      "closedDatabaseErrors": 0
+    },
+    "browserResults": ".harness/overnight-third-full-browser-results-20261024.json",
+    "failures": [
+      {
+        "case": "components use the shared repository tree and generic Visual preview",
+        "durationMs": 0,
+        "error": "Native worker exit 0xC0000409",
+        "phase": "Unknown",
+        "file": "component-gallery-ui.spec.ts"
+      },
+      {
+        "case": "agent and human edits remain reviewable through named checks and full-file views",
+        "durationMs": 60052,
+        "error": "Review-acceptance response timeout",
+        "evidence": ".harness/review-acceptance-full-failure-20261024",
+        "isolatedDurationMs": 15174
+      }
+    ]
+  },
+  "boardRevision": 1058,
+  "screenshotsReviewed": [
+    ".harness/overnight-ui-evidence/input-processing-final.png",
+    ".harness/overnight-ui-evidence/nested-headers-final.png",
+    ".harness/overnight-ui-evidence/collapsed-drag-final.png",
+    ".harness/overnight-ui-evidence/activity-placement-final.png"
+  ],
+  "finalIsolatedFollowup": {
+    "passed": 2,
+    "failed": 0,
+    "unchanged": true,
+    "log": ".harness/overnight-final-isolation.log",
+    "results": ".harness/overnight-final-isolation-results-20261024.json",
+    "evidence": ".harness/overnight-final-isolation-evidence-20261024"
+  },
+  "followupTasks": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/75e14305-b312-468e-85b9-210b9873ca28.json",
+      "title": "Bug: Native Windows browser worker exits during full-suite component inspection",
+      "placement": "queued"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/36126dab-1416-4344-bee1-1447836b5dd0.json",
+      "title": "Bug: Review acceptance times out with accumulated changed files",
+      "placement": "queued"
+    }
+  ],
+  "approvedTasks": 7,
+  "additionalFollowupTasks": 1,
+  "commitsSaved": 9,
+  "liveApplication": {
+    "restarted": true,
+    "url": "http://localhost:43130",
+    "planningApiVerified": true,
+    "branch": "codex/overnight-board",
+    "commit": "6a04fdf"
+  },
+  "workingTree": "clean"
+}

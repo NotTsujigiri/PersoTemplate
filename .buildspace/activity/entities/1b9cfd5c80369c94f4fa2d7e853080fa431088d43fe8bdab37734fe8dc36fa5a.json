@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fe1ae0b7-7153-467a-9570-cac405113f7a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fe1ae0b7-7153-467a-9570-cac405113f7a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T03:02:46.923Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 610,
+        "description": "",
+        "title": "Agent boundary review: distinguish type owner, instance writer and containing node. Refresh only the writer's complete contribution slice; preserve foreign and ",
+        "updatedAt": "2026-10-18T07:35:15.696Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fe1ae0b7-7153-467a-9570-cac405113f7a.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fe1ae0b7-7153-467a-9570-cac405113f7a.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Agent boundary review: distinguish type owner, instance writer and containing node. Refresh only the writer's complete contribution slice; preserve foreign and repeated instances. Stage registry and graph validation atomically. Retain native validators and live view subscriptions during lazy registration; metadata alone is not an executable validator."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fe1ae0b7-7153-467a-9570-cac405113f7a.json"
+}

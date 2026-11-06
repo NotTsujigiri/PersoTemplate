@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9b556fa2-552a-4efe-bc60-99891da115ac.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9b556fa2-552a-4efe-bc60-99891da115ac.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T20:14:00.989Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1339,
+        "description": "Discuss how Broccoli should present errors, warnings and information consistently, including transient failures and incomplete graph coverage. Avoid permanent status strips consuming view space. Decide the presentation before implementation.",
+        "title": "Define a shared strategy for user errors, warnings and information",
+        "updatedAt": "2026-11-04T07:47:21.435Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9b556fa2-552a-4efe-bc60-99891da115ac.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9b556fa2-552a-4efe-bc60-99891da115ac.json",
+      "properties": {
+        "placement": "backlog",
+        "priority": 1,
+        "purpose": "planning",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9b556fa2-552a-4efe-bc60-99891da115ac.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9b556fa2-552a-4efe-bc60-99891da115ac.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-03T22:35:30.670Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-11-03T21:07:59.705Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9b556fa2-552a-4efe-bc60-99891da115ac.json"
+}

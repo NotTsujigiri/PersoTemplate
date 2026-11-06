@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6e19334-71a3-4dcc-a11c-02fc7f81ae23.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6e19334-71a3-4dcc-a11c-02fc7f81ae23.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.388Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "After the Checks view is reviewed, record repeatable baselines for representative initial loads and subsequent user actions. Use the improved check visibility and appropriate profiling to distinguish time spent in service/data work, transport and browser work; report evidence, uncertainty, and the highest-impact causes. Use scenarios and acceptance goals discussed with the user. Do not treat test suite duration alone as proof of app responsiveness.",
+        "title": "Measure first-load and UI-action performance bottlenecks",
+        "updatedAt": "2026-10-09T12:54:50.289Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6e19334-71a3-4dcc-a11c-02fc7f81ae23.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6e19334-71a3-4dcc-a11c-02fc7f81ae23.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "investigation",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e6e19334-71a3-4dcc-a11c-02fc7f81ae23.json"
+}

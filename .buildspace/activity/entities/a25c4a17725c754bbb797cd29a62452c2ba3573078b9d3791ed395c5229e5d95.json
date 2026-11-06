@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/483468b7-12f6-47ac-bdbd-06f2e7272a57.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/483468b7-12f6-47ac-bdbd-06f2e7272a57.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-06T05:44:13.013Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1414,
+        "description": "Run required type/dependency checks, focused storage/Git/conflict tests and the checkpoint across affected repositories. Verify current data and stable URLs before and after cutover; inspect Activity board, repository and editing UI. Leave the live service running. Document commits, outcomes and remaining limitations without claiming unverified performance improvements.",
+        "title": "Verify persistence migration and repository consumers",
+        "updatedAt": "2026-11-06T05:44:13.300Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/483468b7-12f6-47ac-bdbd-06f2e7272a57.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/483468b7-12f6-47ac-bdbd-06f2e7272a57.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/483468b7-12f6-47ac-bdbd-06f2e7272a57.json"
+}

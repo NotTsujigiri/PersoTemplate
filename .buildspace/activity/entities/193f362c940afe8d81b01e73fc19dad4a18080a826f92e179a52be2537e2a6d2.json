@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14c0e2a3-af23-43ae-8a90-ec9054c9d06b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14c0e2a3-af23-43ae-8a90-ec9054c9d06b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-11T20:14:17.198Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 470,
+        "description": "After phase 1 is reviewed, develop the additional setup needed for components requiring data or services. Users and agents author sample data; automatic generation is lowest priority. Use existing or purposefully authored data models. Services expose APIs with substitutable implementations and inspectable calls. Decide save/discard behavior with the user before implementation and keep sample state separate from real buildspace data. Real data remains deferred until strict read-only guarantees are designed. Preserve generic contributor ownership and no per-component editor adapters.",
+        "title": "Develop component sample data and service substitutes — phase 2",
+        "updatedAt": "2026-10-11T20:14:57.599Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14c0e2a3-af23-43ae-8a90-ec9054c9d06b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14c0e2a3-af23-43ae-8a90-ec9054c9d06b.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2a9c92f-338e-4570-a478-77b0e27c6457.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14c0e2a3-af23-43ae-8a90-ec9054c9d06b.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2a9c92f-338e-4570-a478-77b0e27c6457.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14c0e2a3-af23-43ae-8a90-ec9054c9d06b.json"
+}

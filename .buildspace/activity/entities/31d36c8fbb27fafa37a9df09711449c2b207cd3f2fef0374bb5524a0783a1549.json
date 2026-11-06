@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f75cc7-d21f-4b85-acbe-7ad3f6043861.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f75cc7-d21f-4b85-acbe-7ad3f6043861.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T07:09:59.843Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 619,
+        "description": "",
+        "title": "Independent inspection review found save/validation races, foreign-component property leakage, missing native validators and lost return-navigation controls. Co",
+        "updatedAt": "2026-10-18T07:41:48.315Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f75cc7-d21f-4b85-acbe-7ad3f6043861.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f75cc7-d21f-4b85-acbe-7ad3f6043861.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "Independent inspection review found save/validation races, foreign-component property leakage, missing native validators and lost return-navigation controls. Corrected in a857cbd; exact regression recordings and focused engine/browser suites pass."
+          },
+          {
+            "kind": "fix",
+            "text": "Further review found owner-restricted properties editable, type inspection using editing restrictions, and cross-form errors disappearing. Kept owner restrictions in the editing overlay, restored authoritative declarations and rendered diagnostics unless an actual connector replaces them; before/after recordings pass."
+          },
+          {
+            "kind": "explain",
+            "text": "Shutdown review required draining every accepted response before closing sockets. Added a per-socket counter before request handlers; 3 lifecycle cases and 3 repeated browser shutdown cases pass. Fixture review preserves relations, real Waiting prerequisites and nested annotation contexts. Full rerun remains in progress."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a5f75cc7-d21f-4b85-acbe-7ad3f6043861.json"
+}

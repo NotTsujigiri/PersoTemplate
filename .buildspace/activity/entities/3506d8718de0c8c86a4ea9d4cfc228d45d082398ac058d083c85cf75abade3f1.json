@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2253888-5596-4ff4-b72c-12be89c3378b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2253888-5596-4ff4-b72c-12be89c3378b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-28T17:17:50.675Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1213,
+        "description": "Support Ctrl + mouse wheel to zoom within the text editor in text and expression modes, preserving the viewed location and editing context.\n\nImplemented in commit `6331198` and live in the restarted service. Zoom is local to each editor; selection, source position, coloring, gutter alignment and undo history remain intact. Ordinary wheel scrolling is unchanged.\n\nValidation: exact before/after recordings and focused editor regressions pass. The full checkpoint passed build, type, model, unit and integration checks; browser results were 379 passed and one pre-existing CRLF/LF failure in private-space-recovery-ui.spec.ts. Report: `.harness/checkpoints/run-zMLbCh/report.json`. Evidence is attached.",
+        "title": "Zoom the text editor with Ctrl + mouse wheel",
+        "updatedAt": "2026-10-29T06:25:12.069Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2253888-5596-4ff4-b72c-12be89c3378b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2253888-5596-4ff4-b72c-12be89c3378b.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "task",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c2253888-5596-4ff4-b72c-12be89c3378b.json"
+}

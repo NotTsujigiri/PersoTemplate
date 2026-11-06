@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5f48fb5b-930a-4d40-a405-97bd4dd16577.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5f48fb5b-930a-4d40-a405-97bd4dd16577.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T15:10:16.367Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 432,
+        "description": "After graph-editing needs analysis, produce a separate durable UI and technical proposal artifact linked to this task. Keep this description as the assignment; do not put the proposal itself into the task description or leave it only in chat.\n\nFor this proposal, provide a well-constructed document with a table of contents, image-generation mockups and progressive disclosure. Present the artifact in Review → Changes so the user can inspect changes and annotate text and visuals. This output choice applies to this work only; future proposals may take other forms.\n\nCover the agreed CRUD interactions, drag/drop gestures, feedback and cancellation, containment and dependency semantics, model-owned atomic mutations, protected review data, stale edits, persistence and independent view refresh. Explain component reuse and contract ownership.\n\nInclude operation-by-operation impact analysis for creation, updates, deletion, reparenting and dependency changes: affected tasks and relations, inherited prerequisites and readiness, sibling boundaries, cycles and indirect dependencies, review coverage and snapshots, invariant violations, rejection or explicit resolution, and what the user sees before and after committing. Preserve evidence and task identity; do not silently repair relations on the user's behalf.\n\nSeparate accepted needs, proposed choices and unresolved questions. Link a versioned candidate for the following human review; development waits for approval.",
+        "title": "Propose task and dependency editing in Task graph",
+        "updatedAt": "2026-10-09T15:28:24.283Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5f48fb5b-930a-4d40-a405-97bd4dd16577.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5f48fb5b-930a-4d40-a405-97bd4dd16577.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "design",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5f48fb5b-930a-4d40-a405-97bd4dd16577.json"
+}

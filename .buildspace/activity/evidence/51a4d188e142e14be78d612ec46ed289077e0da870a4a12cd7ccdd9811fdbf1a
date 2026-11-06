@@ -1,0 +1,11 @@
+# Top-level review blocking
+
+The Activity board now places Persistent planning and review MVP in Blocked. Its acceptance review remains submitted and unfinished, with its review payload unchanged. Review tasks remain excluded from the board, including standalone reviews.
+
+Review submission follows the target's containment ancestry and atomically blocks each reviewed top-level task. Queued roots leave their priority groups and close their current queue episode. All owner transactions enforce this invariant, so direct, batch and internal writes cannot move the root out of Blocked while a submitted or blocked review remains active.
+
+Overlapping reviews preserve already blocked frozen targets. Resolving or withdrawing one review cannot release another review's block. Resolving all reviews does not automatically complete or resume the top-level task; a later explicit transition is required.
+
+Validation: the authored reproduction failed before the fix and passes with exactly the same expected recording. The final npm run test:all checkpoint passed build validation, 73 backend tests and 80 browser tests. Regression coverage includes nested targets, standalone reviews, multiple top-level targets, queue cleanup, retry idempotency, overlap, restart, immutable targets and denied UI saves. The browser screenshot and live board were inspected.
+
+Only this fix task is being completed. The MVP and its review remain unfinished.

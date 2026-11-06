@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e3f631a-cf5c-47cb-a85d-df777fc5adba.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e3f631a-cf5c-47cb-a85d-df777fc5adba.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T13:57:52.655Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 334,
+        "description": "## Your checkpoint\nInspect the contributed model, live registration and rejection evidence before the views switch over.\n\n## Decision being requested\nDoes this use the intended compiler contracts and the correct runtime boundary? Can a consumer still depend on the old Harness schema or bypass admission?\n\n## Blocks\nUI cutover. Review the source-contribution and admission tasks together, including any limitation the tests cannot prove.",
+        "title": "Review admission and enforcement evidence",
+        "updatedAt": "2026-10-08T18:16:16.601Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e3f631a-cf5c-47cb-a85d-df777fc5adba.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e3f631a-cf5c-47cb-a85d-df777fc5adba.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2e3f631a-cf5c-47cb-a85d-df777fc5adba.json"
+}

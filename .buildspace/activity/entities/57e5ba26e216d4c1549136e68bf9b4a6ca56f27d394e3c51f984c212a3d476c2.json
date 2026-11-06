@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1317212f-66f7-435d-9148-37808482bb34.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1317212f-66f7-435d-9148-37808482bb34.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T21:41:25.250Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 709,
+        "description": "- Right-click any rendered element to open the component source responsible for creating it.\n- Derive ownership centrally across Lit rendering, nested components, slots and shadow DOM; no manual contributor tagging.\n- Define ambiguous/unavailable provenance behavior and checks that enforce consistent coverage before implementation.",
+        "title": "Navigate from rendered UI elements to their owning component source",
+        "updatedAt": "2026-10-18T22:18:13.292Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1317212f-66f7-435d-9148-37808482bb34.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1317212f-66f7-435d-9148-37808482bb34.json",
+      "properties": {
+        "placement": "queued",
+        "priority": -1,
+        "purpose": "design",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1317212f-66f7-435d-9148-37808482bb34.json"
+}

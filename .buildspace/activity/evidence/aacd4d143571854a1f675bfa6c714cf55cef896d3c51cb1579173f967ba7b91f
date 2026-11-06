@@ -1,0 +1,427 @@
+{
+  "candidate": "9c06556bf13ad32a6abcc467a118a775abe7a49f",
+  "repositories": [
+    {
+      "commits": [
+        {
+          "hash": "448dc40cd48da90ef5f73a2e49f555a083bd2748",
+          "title": "Implement typed component entities and lazy predicate views"
+        },
+        {
+          "hash": "7cfa174bfa6b1b479c699856fc50fc5febadb0ce",
+          "title": "Persist planning components and inspect component properties in the node editor"
+        },
+        {
+          "hash": "fcf6cf22e5a76c817dc79f8786d366c634cfdab4",
+          "title": "Migrate contributors and inspectors to entity components"
+        },
+        {
+          "hash": "a857cbda2aaae59b56cfb6dff3657dd1deafd878",
+          "title": "Enforce component ownership and preserve inspector navigation"
+        },
+        {
+          "hash": "bc817116e01003fce352da6a04c4fb40c4344115",
+          "title": "Store buildspace history as component entities"
+        },
+        {
+          "hash": "26bfec3b9a70f89d5a10844a4f7753361afc3972",
+          "title": "Complete component inspection and migration regression coverage"
+        },
+        {
+          "hash": "ccca084b47610d9763eb2ea69f9ff642e80412cb",
+          "title": "Stabilize component migration browser verification"
+        },
+        {
+          "hash": "5cc2572dee1d383886aad3a59c48c036166b8720",
+          "title": "Avoid redundant planning snapshot validation and historical reads"
+        },
+        {
+          "hash": "11f5607b7f29f40ef299de713a9cc86b1eb6f1ad",
+          "title": "Report check fixture startup failures without hanging"
+        },
+        {
+          "hash": "73821eed3a4a8798f3b24a128c3d0cb25ece960f",
+          "title": "Bound concurrent harness verification workers"
+        },
+        {
+          "hash": "a51e11fefdd423f6063d7c0ba63606d560459ce8",
+          "title": "Preserve check discovery with bounded Node test workers"
+        },
+        {
+          "hash": "1f2c3854ac1e061b383c1326b40f28b408c64020",
+          "title": "Preserve the first property editor during planning startup"
+        },
+        {
+          "hash": "3da490e10a52909becbae99b0d215a21ed6c056d",
+          "title": "Use the supported typed fixture gate in startup regression"
+        },
+        {
+          "hash": "33113db491a5ba55a5bdf360dad897925f3a880c",
+          "title": "Wait for rendered board revisions between drag gestures"
+        },
+        {
+          "hash": "d4e8a60ca64027f2aacce9d18dac7cf41f9f9bdb",
+          "title": "Observe completed editor refreshes in browser recordings"
+        },
+        {
+          "hash": "eb61a948d7ca9d623c82d589843e86a33e3126db",
+          "title": "Keep newer component drafts when preview acknowledgements arrive late"
+        },
+        {
+          "hash": "e4c718b177620ff57dacd0c8bdb3d8abff9465fa",
+          "title": "Make browser recordings observe completed lifecycle boundaries"
+        },
+        {
+          "hash": "d9a611e3a192de691091e97c15092d0bad762d7a",
+          "title": "Restore self-relation deduplication browser coverage"
+        },
+        {
+          "hash": "3694c9b535e1f272ee03f84f9d85306c8ab5de48",
+          "title": "Test self-edge inspection at the generic engine boundary"
+        },
+        {
+          "hash": "222950480b2c4dacdeb5d542a7b9a97c5e05d8cd",
+          "title": "Keep refreshed feeds current and oversized graph ranges stable"
+        },
+        {
+          "hash": "d28fffa2bf7ac646544b0daadbd9ead4d81aa17b",
+          "title": "Preserve component observations and authoring state across updates"
+        },
+        {
+          "hash": "8f780ea5dd117c74d160f93122cab628b6d924a6",
+          "title": "Remove obsolete planning node-type identity helper"
+        },
+        {
+          "hash": "e5e9ed20691c4ae8fcfb628f44fef9ca16ab5a20",
+          "title": "Wait for owned work in final migration browser recordings"
+        },
+        {
+          "hash": "3185bf2e2b94bfc3bc4eb43020490fd5f86603ec",
+          "title": "Validate graph measurement readiness and record browser worker phases"
+        },
+        {
+          "hash": "2b07dd6126e9802238777577dc6d70f2edb6ffc3",
+          "title": "Publish planning refreshes atomically to preserve live component editors"
+        },
+        {
+          "hash": "de2b5fa92e7d7190f4316ef9298d726dd126365a",
+          "title": "Await the compiled filter preview before checking shell readiness"
+        },
+        {
+          "hash": "9c06556bf13ad32a6abcc467a118a775abe7a49f",
+          "title": "Record completed planning operations and validated viewport samples"
+        }
+      ],
+      "repository": "TheBroccoli",
+      "baseline": "1a61b2ad10fa079dcefb7f75a3310c13983552cb",
+      "head": "9c06556bf13ad32a6abcc467a118a775abe7a49f"
+    },
+    {
+      "commits": [
+        {
+          "hash": "35f32a4d81692b98287d283f980f09db66cb460e",
+          "title": "Refresh declared template component dependencies"
+        },
+        {
+          "hash": "4fe314d17f8e728bec1cce184b3ba452611f0609",
+          "title": "Store template buildspace history as component entities"
+        }
+      ],
+      "repository": "BtrTemplate",
+      "baseline": "cd2baeb201d93eb7f8127c76ff2d0492eb8a099f",
+      "head": "4fe314d17f8e728bec1cce184b3ba452611f0609"
+    },
+    {
+      "commits": [
+        {
+          "hash": "c2e9a0fedd6de2b6f2e6a491f0577a158d904701",
+          "title": "Consume engine components in the personal template"
+        },
+        {
+          "hash": "0a77019cf69e05b5c864a4994fefb6ad7b551dde",
+          "title": "Store personal buildspace history as component entities"
+        }
+      ],
+      "repository": "PersoTemplate",
+      "baseline": "e85bd3be2cd5a23b0d0dbdea074f1e26cef798a5",
+      "head": "0a77019cf69e05b5c864a4994fefb6ad7b551dde"
+    }
+  ],
+  "architecture": {
+    "nodes": "Identity plus zero or more independently identified components; repeated component types are supported.",
+    "componentTypes": "Owner-defined typed properties and inspectable property data types; no universal engine node-kind or node-type discriminator.",
+    "views": "Reusable predicates with demand-driven cached membership and scoped observer invalidation.",
+    "mutations": "Validated atomic engine operations preserve edge constraints and coherent observer reads."
+  },
+  "inspection": {
+    "liveService": "http://localhost:43130/",
+    "existingNode": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+    "verified": [
+      "Existing planning entity exposes Planning identity and Task components.",
+      "Component type navigation exposes declared properties and data types.",
+      "Repeated independent component instances retain separate property values.",
+      "Preview observations distinguish observed, unset and unavailable values without changing source definitions."
+    ],
+    "steps": [
+      "Open the existing migration task in Node editor; its Components section contains Planning identity and Task.",
+      "Select a component heading to inspect its definition and declared properties.",
+      "Follow a property’s data-type link, then use Return to return to the component or entity."
+    ]
+  },
+  "storage": {
+    "audit": ".harness/component-cutover-audit.json",
+    "planningReport": ".harness/planning/conversion-report.json",
+    "stores": 5,
+    "generations": [
+      617,
+      3,
+      4,
+      4,
+      1
+    ],
+    "evidenceArtifactsPreserved": 222,
+    "rollbackDirectory": ".harness/component-migration-rollback",
+    "rollbackNote": "Restore matching original data stores with the baseline commits; changing code alone does not revert the storage format."
+  },
+  "review": {
+    "boundaryAgent": "/root/migration_boundary_review",
+    "inspectionAgent": "/root/component_inspection_review",
+    "record": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json",
+    "humanReview": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e19648b5-2baf-4c8a-9770-c76600c4accd.json",
+    "finalVerdicts": [
+      {
+        "agent": "/root/component_inspection_review",
+        "outcome": "approved",
+        "basis": "Component/property/type inspection, screenshots, exact recordings and live existing-node inspection; final strict check and committed diff conditions satisfied."
+      },
+      {
+        "agent": "/root/migration_boundary_review",
+        "outcome": "approved",
+        "basis": "Engine, storage, ownership and predecessor-removal review; multi-stage verification accepted; final strict check and committed diff conditions satisfied."
+      }
+    ]
+  },
+  "priorCheckpoint": {
+    "log": ".harness/migration-acceptance-checkpoint.log",
+    "modelsPassed": 41,
+    "unitIntegrationPassed": 571,
+    "browserPassed": 248,
+    "browserTotal": 250,
+    "failures": [
+      "Premature feed recorder sample before awaited intake refresh.",
+      "Fixture route interception removed before its pending enrichment settled."
+    ]
+  },
+  "focusedCorrections": {
+    "log": ".harness/migration-final-fixture-after.log",
+    "passed": 2,
+    "total": 2,
+    "exactRecordings": true,
+    "productionChanges": false
+  },
+  "trackedLimitations": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a5e2c6-7f3e-4fbc-83d8-fab3eb95c0f9.json",
+      "description": "Intermittent native Windows test-worker exits remain under investigation. The previous full checkpoint had one exit 3221226505; a later pass does not establish its cause or a fix."
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b5e13805-c049-4f4a-88ae-c117aa8b1c78.json",
+      "description": "Earlier orphaned cancellation process remains separately tracked; do not claim a root-cause fix from passing later checks."
+    }
+  ],
+  "diagnostics": {
+    "expectedCompilerRejectionReport": ".harness/migration-native-reports/report.20261018.165258.15808.0.001.json",
+    "classification": "Independent reviewer matched it to the deliberate invalid TypeScript child in register-typescript.test.ts, not a native crash."
+  },
+  "latestFailedCheckpoint": {
+    "candidate": "de2b5fa92e7d7190f4316ef9298d726dd126365a",
+    "command": "npm run test:browser",
+    "log": ".harness/migration-final-browser-checkpoint.log",
+    "evidence": ".harness/migration-browser-de2b-evidence",
+    "exitCode": 1,
+    "browserPassed": 249,
+    "browserTotal": 251,
+    "failures": [
+      "Viewport recorder discarded a valid visibility sample and re-read a detached element; all pan values matched.",
+      "Review approval UI convergence assertion expired before fixture established outcome operation completion; original mutation chronology was not recorded, so root cause is not established."
+    ]
+  },
+  "focusedGeometryCorrection": {
+    "log": ".harness/migration-worker-phase-after.log",
+    "passed": 6,
+    "total": 6,
+    "baseline": {
+      "initialZoom": 100,
+      "width": 444,
+      "height": 844,
+      "connected": true
+    },
+    "expectedZoomPercent": 75,
+    "exactRepeatedComponents": true,
+    "reviewer": "/root/component_inspection_review",
+    "productionChanges": false
+  },
+  "failedCheckpoints": [
+    {
+      "candidate": "e5e9ed20691c4ae8fcfb628f44fef9ca16ab5a20",
+      "log": ".harness/migration-final-green-checkpoint.log",
+      "exitCode": 1,
+      "modelsPassed": 41,
+      "unitIntegrationPassed": 571,
+      "browserPassed": 248,
+      "browserTotal": 250,
+      "skipped": 0,
+      "failures": [
+        "Native Windows worker exit 3221226505 before a repeated-component recording.",
+        "Zoom ratio sampled zero initial SVG height and returned Infinity."
+      ]
+    },
+    {
+      "candidate": "3185bf2e2b94bfc3bc4eb43020490fd5f86603ec",
+      "log": ".harness/migration-instrumented-checkpoint.log",
+      "exitCode": 1,
+      "modelsPassed": 41,
+      "unitIntegrationPassed": 571,
+      "browserPassed": 246,
+      "browserTotal": 250,
+      "failures": [
+        "Native Windows worker exit 3221226505 during repeated-component inspection.",
+        "Unset property acknowledgement fixture lost its preview frame.",
+        "Delayed acknowledgement fixture lost its preview frame.",
+        "Incomplete numeric draft recorded detached inspector and preview."
+      ]
+    },
+    {
+      "candidate": "2b07dd6126e9802238777577dc6d70f2edb6ffc3",
+      "log": ".harness/migration-node2420-checkpoint.log",
+      "exitCode": 1,
+      "modelsPassed": 41,
+      "unitIntegrationPassed": 571,
+      "browserPassed": 250,
+      "browserTotal": 251,
+      "failures": [
+        "The filter fixture's 15-second shell-readiness assertion failed before its own 60-second component-preview readiness check; the notification scenario was never reached."
+      ]
+    },
+    {
+      "candidate": "de2b5fa92e7d7190f4316ef9298d726dd126365a",
+      "command": "npm run test:browser",
+      "log": ".harness/migration-final-browser-checkpoint.log",
+      "evidence": ".harness/migration-browser-de2b-evidence",
+      "exitCode": 1,
+      "browserPassed": 249,
+      "browserTotal": 251,
+      "failures": [
+        "Viewport recorder discarded a valid visibility sample and re-read a detached element; all pan values matched.",
+        "Review approval UI convergence assertion expired before fixture established outcome operation completion; original mutation chronology was not recorded, so root cause is not established."
+      ]
+    }
+  ],
+  "atomicRefreshCorrection": {
+    "before": ".harness/migration-overlap-before",
+    "after": ".harness/migration-overlap-after",
+    "passed": 5,
+    "total": 5,
+    "exactRecordings": true,
+    "reviewer": "/root/component_inspection_review",
+    "cause": "Overlapping planning refreshes exposed an empty detail cache and replaced an unchanged mounted review editor.",
+    "fix": "Prepare detail without shared cache mutation and atomically publish after refresh and selection guards."
+  },
+  "runtimeComparison": {
+    "previousNode": "24.15.0",
+    "comparisonNode": "24.20.0",
+    "npm": "11.12.1",
+    "binary": "C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.harness/runtime/node-v24.20.0/node.exe",
+    "sha256": "5c976096e04e5c2c1f091938926234cc9fbebfe9787ddd149351b3b0ecc707b5",
+    "authenticode": "Valid",
+    "source": "https://nodejs.org/en/blog/release/v24.20.0",
+    "hypothesis": "Upstream Windows assertion fix may explain native exits; no matching native assertion or stack has been captured.",
+    "isolation": "No installed runtime or global settings changed. npm remains 11.12.1; runtime directory is prepended only for comparison process descendants. The current candidate also contains the independently reproduced planning-refresh correction, so this full-run comparison cannot establish the native crash's cause.",
+    "candidate": "2b07dd6126e9802238777577dc6d70f2edb6ffc3",
+    "verifiedDescendants": true
+  },
+  "readinessCorrection": {
+    "scope": "Browser fixture only",
+    "failedBoundary": "waitForApplicationReady #prompt enabled, 15000ms, before the fixture reached its component-preview readiness check",
+    "before": ".harness/migration-ready-before",
+    "after": ".harness/migration-ready-after",
+    "focusedPassed": 2,
+    "focusedTotal": 2,
+    "assertionsUnchanged": true
+  },
+  "repeatedComponents": {
+    "exactMatch": true,
+    "values": [
+      {
+        "title": "First note",
+        "description": "First detail"
+      },
+      {
+        "title": "Second note",
+        "description": "Second detail"
+      }
+    ],
+    "workerDrained": true,
+    "workerAfterEach": true
+  },
+  "verification": {
+    "acceptance": "Multi-stage verification; no single final test:all invocation passed.",
+    "runtime": "Isolated Node.js 24.20.0, npm 11.12.1; no global runtime changes.",
+    "productCommit": "2b07dd6126e9802238777577dc6d70f2edb6ffc3",
+    "models": {
+      "passed": 41,
+      "total": 41
+    },
+    "unitIntegration": {
+      "passed": 571,
+      "total": 571
+    },
+    "browser": {
+      "covered": 251,
+      "total": 251,
+      "fullRunPassed": 249,
+      "focusedCorrectedPassed": 2
+    },
+    "strict": {
+      "exitCode": 0,
+      "authoredFiles": 1041,
+      "log": ".harness/migration-final-reviewed-types.log"
+    },
+    "logs": [
+      ".harness/migration-node2420-checkpoint.log",
+      ".harness/migration-final-browser-checkpoint.log",
+      ".harness/migration-final-recorders-reviewed.log"
+    ],
+    "recordings": ".harness/migration-final-recorders-reviewed",
+    "exactViewportRecording": true,
+    "approval": {
+      "receipt": "passed",
+      "persisted": "passed",
+      "visible": "passed",
+      "forcedReloadOrNotification": false
+    },
+    "failedFullRunsRetained": true
+  },
+  "liveInspection": {
+    "revision": 686,
+    "existingNode": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/29808b15-b270-4a91-bba3-8d29848e54b5.json",
+    "nodeComponents": [
+      "Planning identity",
+      "Task"
+    ],
+    "verified": [
+      "Existing entity identity and revision history preserved.",
+      "Planning identity component type exposes declared properties, data types and read-only flags.",
+      "String property type exposes identity and description.",
+      "Task component type links Purpose to Purpose enum; expanded enumeration contains all nine declared purpose values.",
+      "Component instance / component type return navigation works."
+    ],
+    "tabId": "3",
+    "url": "http://localhost:43130/?template=personal&community=private&channel=99a62c14-535f-4d9a-9ab2-642ed280b795&space=99a62c14-535f-4d9a-9ab2-642ed280b795&area=timeline&node=graph%3A%2F%2Fplanning-26535745-4644-4770-af7c-1980c773377b%2Fentries%2F29808b15-b270-4a91-bba3-8d29848e54b5.json"
+  },
+  "finalRecorderCorrections": {
+    "viewport": "Retain the successful connected visibility poll sample; remove the detached second sample. Expected recording unchanged.",
+    "approval": "Wait for the actual queued outcome response; validate its receipt and persisted status before the unchanged UI assertion. Original full-run timing cause remains unestablished.",
+    "chronology": "Close accepted 259ms; outcome passed revision 7 at 1162ms; persisted passed at 1173ms; UI confirmed 1283ms."
+  }
+}

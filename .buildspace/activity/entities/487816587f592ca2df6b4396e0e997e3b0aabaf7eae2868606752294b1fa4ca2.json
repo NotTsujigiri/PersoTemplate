@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1db9a72c-08e4-4501-bf34-eeeddb251345.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1db9a72c-08e4-4501-bf34-eeeddb251345.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T09:35:37.832Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 243,
+        "description": "User reproduction: send a chat question from the Broccoli buildspace while the MVP review is submitted. Observed: This checkout is frozen for review. Expected: conversation and source inspection remain available while source-changing tools remain protected. Reproduced with exact output comparison in planning-integration.test.mjs, including a second chat sharing the same repositories.",
+        "title": "Chat messages are blocked while the checkout awaits review",
+        "updatedAt": "2026-09-30T09:42:21.787Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1db9a72c-08e4-4501-bf34-eeeddb251345.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1db9a72c-08e4-4501-bf34-eeeddb251345.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1db9a72c-08e4-4501-bf34-eeeddb251345.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1db9a72c-08e4-4501-bf34-eeeddb251345.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:36:04.580Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-30T09:42:21.787Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1db9a72c-08e4-4501-bf34-eeeddb251345.json"
+}

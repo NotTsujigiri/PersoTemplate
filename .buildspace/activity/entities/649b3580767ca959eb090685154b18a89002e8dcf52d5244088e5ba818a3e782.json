@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea72ed4a-20c7-4e68-b8b2-43a49de7cf4b.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea72ed4a-20c7-4e68-b8b2-43a49de7cf4b.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T13:57:52.650Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 334,
+        "description": "## Output\nA concrete proposal for System/package identity and the contracts owned by RepositoryOrganisation, SoftwareStructure and SystemsEngineering.\n\n## Work\nTrace the existing source contribution, authored specifications and live Harness inspection path. Distinguish declared dependencies, observed imports and authored semantic dependencies. Propose one owner for each fact, with consumer imports and TypeScript references made explicit.\n\n## Why first\nAdmitting the wrong abstraction into the engine would preserve the semantic duplication behind a validated API.\n\n## Evidence for your review\nA small before/after dependency diagram, proposed exported types and examples of invalid consumer code the compiler will reject. Mark runtime-only invariants separately. No implementation before the boundary checkpoint.",
+        "title": "Define ownership and compiler contracts",
+        "updatedAt": "2026-10-08T18:16:16.601Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea72ed4a-20c7-4e68-b8b2-43a49de7cf4b.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea72ed4a-20c7-4e68-b8b2-43a49de7cf4b.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "design",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fb0ee946-a35c-4bfa-aaf0-086fd973f5e9.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea72ed4a-20c7-4e68-b8b2-43a49de7cf4b.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fb0ee946-a35c-4bfa-aaf0-086fd973f5e9.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ea72ed4a-20c7-4e68-b8b2-43a49de7cf4b.json"
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Visual authoring feedback validation",
+  "date": "2026-10-17",
+  "scope": [
+    "Repository bush owns authored component structure",
+    "Native HTML and custom component insertion",
+    "Visual edits directly; Preview runs interactions",
+    "Source-linked hover and selection outlines including shadow roots, repeated instances and top-layer popups"
+  ],
+  "results": {
+    "build": "Final build.ps1 passed; 1023 authored files, zero type-safety violations",
+    "componentUnitTests": "28 passed",
+    "focusedBrowserTests": "28 passed in combined repository actions, repository memory and UI editor run. Final UI editor rerun passed 12/13; the catalog-loading navigation issue was fixed and its focused rerun passed.",
+    "generatedModels": "All 5 fresh model coverage and inspection tests passed",
+    "organisation": "Passed",
+    "regression": "Identical simulated input failed before implementation and matches the exact expected recording after implementation.",
+    "live": "Broccoli restarted. Native HTML insert/remove draft roundtrip passed; production QueryComposer source remained unchanged."
+  },
+  "checkpoint": {
+    "command": "npm run test:all",
+    "status": "Failed on four pre-existing planning test cases after fresh-model failures were resolved",
+    "remainingFailures": [
+      "planning-state-history: ordinary backlog operations atomically record linked state transitions",
+      "range-placement: connected ranges reuse nearby columns and unknown history retains dependency rows",
+      "review-placement: active reviews block top-level reviewed task across transitions, overlap and restart",
+      "review-placement: review submission blocks every top-level target and closes queue membership atomically"
+    ],
+    "limitation": "The full checkpoint stopped before its broad browser suite."
+  },
+  "evidence": "Exact before/after recording and inspected screenshot are attached separately.",
+  "next": "User reloads Broccoli, opens QueryComposer in Preview, switches to Visual, selects composition in the repository bush, and tries cosmetic native or custom button edits."
+}

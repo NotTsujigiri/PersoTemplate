@@ -1,0 +1,46 @@
+# TypeScript autocomplete and expression editing — verification
+
+Branch: `codex/typescript-autocomplete`, implementation commits `51323e3`, `e115453` and `13ace5b`.
+
+## Delivered
+
+- Existing IconRadioButton controls in the text editor view toolbar select Text mode or Expression mode.
+- TypeScript language support supplies project-aware completion, resolved edits, tokens, expression rows, row actions and an optional evaluation outline.
+- The reusable completion panel has no language or LSP dependency; its consumer supplies the suggestion area and its behavior.
+- Token replacement, insertion gaps, entered text, full-input Copy, Paste, Remove, row insertion/removal, nested operation numbering, wrapping and shared undo/redo are implemented.
+- Document versions, cancellation and stale response rejection remain in the shared LSP boundary. Editing traffic uses the existing direct relay rather than per-edit graph mutations.
+- No external dependency was added. Unsupported documents remain editable in Text mode; JSON autocomplete remains deferred.
+
+## Verification
+
+- Root build, organization and engine-boundary checks, model build and model tests passed.
+- Root type-safety check passed: 1,203 authored files, zero violations. The affected RelationalUi compiler project also passed after the final focus correction.
+- Lsp, TypeScript, JSON, RelationalUi, WebComponent, ProjectTools, Testing and verification-runner checks passed.
+- The final combined autocomplete, language-coloring and layout run passed all 14 browser cases. It also covered unrelated suggestion content, cross-file completions, stale responses, undo/redo, wrapping and unsupported files.
+- After the last focus correction, the exact selection-retention recording and both autocomplete cases passed together (3/3).
+- The real application was inspected using `application.ts`: both toolbar choices, token presentation, member completion and coloring were visible. With a native horizontal scrollbar, text and gutter viewport heights were both 674px and scroll offsets matched exactly.
+
+## Broad checkpoint results and follow-up
+
+The broad checkpoint is not fully green. Its original reports remain unchanged.
+
+- Harness unit tests: 293/294 passed. The populated planning save exceeded its existing 1,000ms limit during the concurrent suite. Its isolated rerun passed all three cases, with the measured save taking 827.4ms. No threshold was relaxed.
+- Full browser suite: 356/361 passed. The five failures were investigated individually:
+  - File-pane layout: temporary autocomplete files polluted the shared fixture. Their cleanup was corrected; autocomplete followed by layout now passes.
+  - Selection retained while expanding a repository tree: initial editor autofocus moved the selection to the end. Focus is now requested only on an explicit mode change. The unchanged input records `{connected:true,start:1,end:3}` and passes exact comparison.
+  - Planning CRUD: timed out locating Open timeline in the broad run; both cases passed in the focused rerun.
+  - Preview observation: the broad run reported a connection reset; the same case passed on its own.
+  - Private-space recovery: still fails because its native textarea changes CRLF to LF while the assertion expects the original CRLF bytes. This uses a separate recovery editor; its implementation and test are unchanged from `70db5e2`.
+
+## Evidence locations
+
+- Original checkpoint: `.harness/checkpoints/run-JFjBRe/report.json`.
+- Isolated planning timing: `.harness/recordings/planning-performance/run-kb7ZGr/timings.json`.
+- Full browser recordings: HarnessApp `test-results/run-1793073105110-e7b3031d`, `run-1793074118245-a8993bc3` and `run-1793074764947-fd6d2270`.
+- Fourteen-case focused recording: HarnessApp `test-results/run-1793074500364-50985c9b`.
+- Final selection and autocomplete recording: HarnessApp `test-results/run-1793075441185-d780dcbc`.
+- Real application screenshot: `final-expression-mode.png`, attached separately to this task.
+
+## Review boundaries
+
+The evaluation display is a static explanation, not execution or a debugger. Optional chains, assignments, increment/decrement, delete and typeof expressions stay whole until their distinct evaluation semantics can be shown accurately. No breakpoint control is advertised without a debugger. Human acceptance remains pending, and the subsequent execution-system stage remains gated on that review.

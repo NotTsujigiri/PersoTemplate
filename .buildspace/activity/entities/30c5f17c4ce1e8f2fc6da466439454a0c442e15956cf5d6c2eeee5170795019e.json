@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5d669db2-f038-447e-9f7f-99cbd97bebfc.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5d669db2-f038-447e-9f7f-99cbd97bebfc.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-10T09:48:39.973Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 444,
+        "description": "The user reviews the UI editor's own mockup through the implemented UI editor in Review → Changes. Use this final task to try the real workflow: inspect the editor design, make the agreed kinds of mockup changes, compare revisions, annotate and discuss feedback, and revisit the saved work.\n\nIterate on the editor and its mockup using that same surface until the user is satisfied. Identify any capability that still requires leaving the editor and decide its scope with the user. Preserve feedback and versions; require an explicit human review outcome before this block is accepted. This is a review task, not an automatic demonstration by the agent.",
+        "title": "Review the UI editor inside the UI editor",
+        "updatedAt": "2026-10-26T07:21:36.763Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5d669db2-f038-447e-9f7f-99cbd97bebfc.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5d669db2-f038-447e-9f7f-99cbd97bebfc.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5d669db2-f038-447e-9f7f-99cbd97bebfc.json"
+}

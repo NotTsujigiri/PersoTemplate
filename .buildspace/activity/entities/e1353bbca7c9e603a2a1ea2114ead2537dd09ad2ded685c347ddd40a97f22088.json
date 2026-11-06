@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad2a312-3aa1-4f77-8fd8-37b9e36e5a54.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad2a312-3aa1-4f77-8fd8-37b9e36e5a54.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T23:05:18.585Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 303,
+        "description": "Immutable attached evidence",
+        "title": "Shared Splitter: seven passing owner tests.txt",
+        "updatedAt": "2026-09-30T23:05:18.676Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad2a312-3aa1-4f77-8fd8-37b9e36e5a54.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad2a312-3aa1-4f77-8fd8-37b9e36e5a54.json",
+      "properties": {
+        "artifact": {
+          "hash": "738ceb3b833c554097af2689a4f9d920f71d0e9bed9e7770483d25db97642ff1",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/738ceb3b833c554097af2689a4f9d920f71d0e9bed9e7770483d25db97642ff1",
+          "mime": "text/plain",
+          "size": 715
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2ad2a312-3aa1-4f77-8fd8-37b9e36e5a54.json"
+}

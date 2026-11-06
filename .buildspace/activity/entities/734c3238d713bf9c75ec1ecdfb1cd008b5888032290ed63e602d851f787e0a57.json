@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/340b3e0e-a9a2-4e73-9cbd-3e8810c86e1f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/340b3e0e-a9a2-4e73-9cbd-3e8810c86e1f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:15:52.279Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 389,
+        "description": "# Deliverable\nA criterion-by-criterion whole-MVP readback with current evidence, remaining gaps and a usable seeded buildspace walkthrough across TheBroccoli, BtrTemplate and PersoTemplate.\n\n## Coverage\nTask execution and review, recursive graph and navigation, typed model/invariant inspection, contributor ownership, buildspaces and privacy, chat, contextual annotations, UI/MCP parity, restart/reload/stale writes, and required TypeScript/build/check evidence.\n\n## Previous work\nInspect the existing submitted planning/chat/annotation candidate independently. Do not infer acceptance from its code or tests, overwrite it with the newer plan, or mark its pending review passed. Bring forward any unresolved criteria and corrections into this final audit.\n\n## Completion\nSurface incomplete or unverified requirements explicitly. The final review decides acceptance; this audit does not complete the MVP automatically.",
+        "title": "Audit and demonstrate the complete MVP acceptance criteria",
+        "updatedAt": "2026-10-17T15:54:17.854Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/340b3e0e-a9a2-4e73-9cbd-3e8810c86e1f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/340b3e0e-a9a2-4e73-9cbd-3e8810c86e1f.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "integration",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/340b3e0e-a9a2-4e73-9cbd-3e8810c86e1f.json"
+}

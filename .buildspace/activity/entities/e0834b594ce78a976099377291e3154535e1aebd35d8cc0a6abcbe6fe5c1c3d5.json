@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2a4ed89-77e8-45ec-ac13-389d4d1df546.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2a4ed89-77e8-45ec-ac13-389d4d1df546.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.381Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Required human review after development. The user saves completion for eligible reviewed work, observes Task graph and other applicable views, reloads/reopens, and confirms the placement persisted. Exercise a rejected/ineligible completion and verify clear feedback. Confirm the design has no direct notification from Node editor to Task graph. Approval closes this fix stage.",
+        "title": "Test completion persistence and graph refresh in the UI",
+        "updatedAt": "2026-10-09T12:58:26.264Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2a4ed89-77e8-45ec-ac13-389d4d1df546.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2a4ed89-77e8-45ec-ac13-389d4d1df546.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2a4ed89-77e8-45ec-ac13-389d4d1df546.json"
+}

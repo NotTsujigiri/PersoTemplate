@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dad59b22-c823-4fb7-acb8-f4e28bebc9fd.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dad59b22-c823-4fb7-acb8-f4e28bebc9fd.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T01:04:43.719Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1217,
+        "description": "Inventory complete. Section 6 of C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/planning/predicate-composer-reference/README.md records all five active QueryComposer usage sites, their entry points, intended behavior, input/result signatures and supplied context. Searches covered the active TheBroccoli workspaces, BtrTemplate and PersoTemplate; templates add no separate composer instances.\n\nThe inventory distinguishes four boolean filters from the graph-producing function, and accounts for service-side paging, saved filters, sorting, ancestor preservation and component drafts. It identifies the existing reusable editor/suggestion tree and the missing compilation/execution capability, with domain types kept in their owning providers.\n\nSource locations and document links were checked. An immutable ZIP of the current document and pictures is attached. No production code changed. The following review covers usage scope and additional Graph editor predicates; implementation choices are delegated to Codex, with dependency decisions governed by the user.",
+        "title": "6. Inventory QueryComposer usages and define predicate signatures",
+        "updatedAt": "2026-10-30T19:13:04.815Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dad59b22-c823-4fb7-acb8-f4e28bebc9fd.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dad59b22-c823-4fb7-acb8-f4e28bebc9fd.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "investigation",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5dc0dd1f-fb32-4c18-8fec-fe33af6bdf1b.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dad59b22-c823-4fb7-acb8-f4e28bebc9fd.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/5dc0dd1f-fb32-4c18-8fec-fe33af6bdf1b.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/dad59b22-c823-4fb7-acb8-f4e28bebc9fd.json"
+}

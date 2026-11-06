@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e402af03-dea4-4296-a372-81336c2c1a62.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e402af03-dea4-4296-a372-81336c2c1a62.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-01T02:41:22.486Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1303,
+        "description": "Introduce reusable IconButtonGroup composition in RelationalUi for related clickable actions. Match the visual grouping approach of IconRadioButton, without mutually exclusive selection or radio/toggle behavior.\n\nStart with two reusable purpose-specific groups:\n- Expand all / Collapse all.\n- Save / Discard (reload), preserving existing dirty-state indications and unsaved-change protection.\n\nOnce these components exist, inventory existing individual-button usages and replace applicable usages with the shared groups, removing superseded local composition. Add the Expand all / Collapse all group to the text editor when the currently viewed document has foldable regions.\n\nKeep this as one top-level task: the component work, usage inventory and adoption form one coherent change. The unresolved feedback about individual folding controls and expression-mode presentation is recorded separately and does not prescribe a redesign here.",
+        "title": "Add reusable icon button groups for expansion and save/reload actions",
+        "updatedAt": "2026-11-03T06:00:13.844Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e402af03-dea4-4296-a372-81336c2c1a62.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e402af03-dea4-4296-a372-81336c2c1a62.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e402af03-dea4-4296-a372-81336c2c1a62.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/43cd2ba3-7c6a-4a1d-ac48-b1f02f143061.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/43cd2ba3-7c6a-4a1d-ac48-b1f02f143061.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-09T12:54:46.378Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 420,
+        "description": "Capture the reported Node editor save/reload and unchanged Task graph discrepancy using authored simulated input and persistent recorded output under the bug-fixing workflow. Include the actual task's placement, required review state, mutation response, persisted result, and view observation. Do not assume whether the cause is rejected completion, failed persistence, or stale presentation. Establish valid and invalid completion expectations without approving or completing the user's actual work on their behalf.",
+        "title": "Reproduce task completion loss and stale graph state",
+        "updatedAt": "2026-10-09T12:54:50.289Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/43cd2ba3-7c6a-4a1d-ac48-b1f02f143061.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/43cd2ba3-7c6a-4a1d-ac48-b1f02f143061.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "investigation",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/43cd2ba3-7c6a-4a1d-ac48-b1f02f143061.json"
+}

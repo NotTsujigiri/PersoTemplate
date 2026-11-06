@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-26T00:25:50.538Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1151,
+        "description": "Implement this serial plan, with one item per contributor and application composition separate:\n\n1. **LspContributor:** Own the reusable language-independent graph contracts, discovery and selection, server-instance management, LSP client/session machinery, and token-to-color provider mechanism. Factories and server instances are graph nodes. The instance manager coordinates creation, project-scoped reuse, consumer tracking and cleanup; the client synchronizes document versions, cancels obsolete requests, rejects stale results and preserves server provenance. After discovery and instance acquisition, editing traffic uses an established LSP connection. Where a server needs a relay, LspContributor supplies the minimal forwarding bridge through the existing host capabilities: no graph query, graph materialization or persistence for each edit. Color-provider selection and conversion can execute in the frontend. Contributor ownership does not force service-side execution.\n2. **TypeScriptContributor:** Own TypeScript applicability rules, project-scope resolution, concrete server creation and token classification, including dependencies in other repository files. Register its server factories and token-to-color provider, with their applicability rules, through LspContributor when activated. All TypeScript-specific integration stays in this contributor.\n3. **JsonContributor:** Own JSON applicability rules, project-scope resolution, concrete server creation and token classification. Register its server factories and token-to-color provider, with their applicability rules, through the same LspContributor contracts when activated. This separate language implementation proves the shared system is reusable.\n4. **RelationalUi:** Own the reusable text-editor integration that requests language support and token colors through LspContributor and renders available results. Typing stays local; coloring updates asynchronously. Keep ordinary editing available without a server or color provider and preserve selection, scrolling and responsive incremental updates. The editor binding is part of RelationalUi and works for every template that uses it.\n5. **Application composition:** Enable the four contributors and provide deployment-specific settings and existing hosting capabilities through their declared contracts. Contributors themselves install their factories, providers, relay handlers and editor integration. Templates contain no LSP-specific orchestration, forwarding, lifecycle, document-synchronization or coloring logic. Another template obtains the same feature by enabling these contributors and supplying supported settings, without recreating their behavior.\n\nToken-to-color mappings are contributed implementations for this step. No color/theme configuration files or theme-file format are required. Completion, diagnostics and other editor features can use the shared system in later tasks.\n\nImplementation decisions: reuse Microsoft's LSP protocol and JSON-RPC packages and typescript-language-server with the existing TypeScript tooling. Do not use the VS Code extension client. JsonContributor uses Microsoft's JSON language-service parsing information to distinguish property keys, string values, numbers, booleans and null, and supplies the token-classification output missing from the upstream JSON server. Include structural punctuation in coloring. Keep language-specific classification and color mappings in their owning contributors, and reuse existing hosting/transport capabilities. Declare only directly used dependencies in their owning packages. The other candidates from the earlier dependency inventory remain deferred.\n\nProceed directly with implementation and normal focused verification; do not add another POC or preliminary evaluation task. Keep the serial contributor tasks and the required human coloring review. Folding/unfolding is a separate backlog task.",
+        "title": "Introduce reusable LSP services and color TypeScript and JSON in the text editor",
+        "updatedAt": "2026-10-27T02:19:53.210Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7a9c1ca6-dd89-4576-b40b-2cad15881061.json"
+}

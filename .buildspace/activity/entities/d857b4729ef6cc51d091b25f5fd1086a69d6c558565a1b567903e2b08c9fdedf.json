@@ -1,0 +1,78 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b20e1948-b50f-48fa-bf98-1ac2916aacd1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b20e1948-b50f-48fa-bf98-1ac2916aacd1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T01:12:27.411Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 517,
+        "description": "Human acceptance exercise: open the shared QueryComposer/filter in Repositories → UI editor, insert and arrange existing button components for Clear all and Remove token, configure icons/labels/tooltips, save and reopen. Inspect the source diff and preview. Existing filter behavior must survive; new button behavior remains for a subsequent implementation request. Verify the development task's recorded criteria, including definition/instance distinction, reusable composition, undo/redo, guarded saves and preserved bindings. The user authors the cosmetic changes and records acceptance.",
+        "title": "Review visual component authoring by editing the filter",
+        "updatedAt": "2026-10-20T01:53:47.642Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b20e1948-b50f-48fa-bf98-1ac2916aacd1.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b20e1948-b50f-48fa-bf98-1ac2916aacd1.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "submitted",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b0189e12-f3ff-406b-8684-b3f63e91ed59.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b0189e12-f3ff-406b-8684-b3f63e91ed59.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b0189e12-f3ff-406b-8684-b3f63e91ed59.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-17T01:11:53.887Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 516,
+                      "description": "Make the repository UI editor author existing Lit component definitions. The user will add the filter buttons themselves, then request their behavior separately.\n\nSuccess criteria:\n1. Inspect and select authored composition nodes, including content not currently rendered.\n2. Insert existing components, move/remove them and edit literal properties using the shared node editor; support undo/redo.\n3. Save to the actual TypeScript definition; reopening and application rendering use the saved composition.\n4. Preserve expressions, event handlers, imports and existing behavior. Unsupported edits must be explicit.\n5. Reference existing component definitions through declared package dependencies, without copying implementations.\n6. Distinguish definition editing from temporary preview-instance values.\n7. Reject stale source writes and preserve unsaved work.\n8. Author deterministic round-trip, binding-preservation, reuse and history checks before production changes; run focused browser recordings and inspect screenshots.\n\nHuman exercise: open shared QueryComposer/filter, add and arrange Clear all and Remove token buttons, set icons/labels/tooltips, save and reopen. Leave that cosmetic work and human acceptance to the user. This detour uses authoring to reveal RelationalUi gaps; broad cleanup/framework replacement is outside this iteration.",
+                      "title": "Author existing UI component compositions visually",
+                      "updatedAt": "2026-10-17T02:06:42.751Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b0189e12-f3ff-406b-8684-b3f63e91ed59.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b0189e12-f3ff-406b-8684-b3f63e91ed59.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b0189e12-f3ff-406b-8684-b3f63e91ed59.json"
+              }
+            },
+            "revision": 523,
+            "sessions": [],
+            "submittedAt": "2026-10-17T02:06:58.415Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b20e1948-b50f-48fa-bf98-1ac2916aacd1.json"
+}

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9feb3879-e5b8-4fe0-8437-7092109d9dfe.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9feb3879-e5b8-4fe0-8437-7092109d9dfe.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T14:02:15.805Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 342,
+        "description": "",
+        "title": "Addressed: the timeline stays beside the selected task or review. Tasks now have a readable Markdown summary, with Waits for and Unblocks relations. The graph d",
+        "updatedAt": "2026-10-06T14:02:15.899Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9feb3879-e5b8-4fe0-8437-7092109d9dfe.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9feb3879-e5b8-4fe0-8437-7092109d9dfe.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9d7ef63b-c4b4-408e-876d-e62035a299f7.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Addressed: the timeline stays beside the selected task or review. Tasks now have a readable Markdown summary, with Waits for and Unblocks relations. The graph distinguishes planned work and exposes fit/zoom controls. Node editor remains available for the exact underlying fields."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9feb3879-e5b8-4fe0-8437-7092109d9dfe.json"
+}

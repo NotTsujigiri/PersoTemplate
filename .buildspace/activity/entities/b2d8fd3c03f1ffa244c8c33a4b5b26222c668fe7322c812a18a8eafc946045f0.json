@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26431573-47a1-451d-bb45-5a57c09b8b87.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26431573-47a1-451d-bb45-5a57c09b8b87.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-19T18:15:43.833Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 758,
+        "description": "- Observed when reading task summaries for The Broccoli: the operation rejects an item whose optional stage is absent.\n- Error: planning:read output result data.items[6].stage must not be undefined.\n- Reproduce with a task lacking a stage; fix the owning summary/output contract and retain exact regression coverage.\n\nVerified 2026-10-24: b80339b omits absent optional summary fields. The authored exact regression failed unchanged and passes after the fix; all 13 focused summary/integration checks pass. The full checkpoint passed all 286 Harness tests and all 666 non-browser tests. The restarted live summary API paged all 1,452 tasks, including 333 without authored activity. Type validation passes. Completed.\n\nFinal checkpoint, 2026-10-24, commit 6a04fdf: build and type checks passed (1,164 authored files, zero violations); all 668 non-browser tests passed. This task's affected browser scenarios passed and UI screenshots were inspected where applicable. The full browser run passed 292/294, with separate native-worker and review-acceptance failures retained as queued investigations. Both failed cases passed unchanged in isolation. Live application restarted successfully. Detailed report: .harness/overnight-verification-20261024.json.",
+        "title": "Bug: Compact task listing rejects tasks without a stage",
+        "updatedAt": "2026-10-24T08:08:34.366Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26431573-47a1-451d-bb45-5a57c09b8b87.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26431573-47a1-451d-bb45-5a57c09b8b87.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 5,
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26431573-47a1-451d-bb45-5a57c09b8b87.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26431573-47a1-451d-bb45-5a57c09b8b87.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-24T19:17:35.980Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-24T08:08:34.366Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/26431573-47a1-451d-bb45-5a57c09b8b87.json"
+}

@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1125ee76-6ae7-4176-9b2a-3b416880ee1f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1125ee76-6ae7-4176-9b2a-3b416880ee1f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T20:14:00.990Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1339,
+        "description": "User accepts the action tooltips but rejects the current toggle styling. Revisit the reusable component visual distinction between on, off and unavailable states, using word wrap as the review example. Keep the accepted Click to enable/disable word wrap tooltips.",
+        "title": "Improve IconToggleButton visual styling",
+        "updatedAt": "2026-11-04T08:29:29.323Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1125ee76-6ae7-4176-9b2a-3b416880ee1f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1125ee76-6ae7-4176-9b2a-3b416880ee1f.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 2,
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1125ee76-6ae7-4176-9b2a-3b416880ee1f.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1125ee76-6ae7-4176-9b2a-3b416880ee1f.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-03T22:37:18.532Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-11-03T20:14:01.308Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1125ee76-6ae7-4176-9b2a-3b416880ee1f.json"
+}

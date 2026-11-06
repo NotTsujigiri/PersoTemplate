@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cac864d1-4acc-4f1c-aa1f-8ecccb0ec006.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cac864d1-4acc-4f1c-aa1f-8ecccb0ec006.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.899Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Provide small typed configuration contracts and ordinary composition functions, explicit conflicts, environment-compatible contributions and separate assembly/startup. Reuse configuration without implicitly sharing instances; defer inherited contributor removal/replacement.\n\nImplementation progress: Default, Btr and Perso now own composable TypeScript configuration modules. The repository composition root selects them; the reusable host accepts configuration and no longer constructs Personal vault storage or reads downstream relational-host JSON. Template browser entries are resolved by their owners and checked against public exports. The shell loads the generic template contract and Personal profile operations use its local engine connection. Preview storage is selected by the same composition with a separate runtime directory. HTTP engine bridge integration and focused configuration/authentication tests are in progress; do not mark this slice complete yet.\n\nFurther progress: configuration now composes declared frontend contributor factory modules as well as service contributors. The browser bundler validates public exports and installs the same composition in isolated tabs and shared workers. Local operations execute in the owning frontend engine; navigation destinations are a Default-owned computed contribution rather than UI-only records. Refresh of an explicitly acquired materialized scope now removes deleted nodes (exact recorded regression passes). Navigation overview and full-tree replacement of pins are in implementation; browser acceptance remains pending.\n\nSource-owned build preparation now follows manifest dependencies before loading template exports. Removed the host-owned downstream template builder and unused Btr dependency; Personal is a fixture-only host dev dependency. Public export preparation, additive configuration and explicit module ownership pass focused tests and a complete dependency build. Remaining startup launcher/control-path integration is tracked before completion.\n\nSlice verification completed: Implemented and verified additive service/browser configuration, public export ownership, composed Default/Btr/Perso startup, independent preview storage, and caller-supplied configuration extensions. Dependency preparation, strict type checks, and organisation checks pass.",
+        "title": "Define composable TypeScript configuration",
+        "updatedAt": "2026-10-22T22:16:28.039Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cac864d1-4acc-4f1c-aa1f-8ecccb0ec006.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cac864d1-4acc-4f1c-aa1f-8ecccb0ec006.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cac864d1-4acc-4f1c-aa1f-8ecccb0ec006.json"
+}

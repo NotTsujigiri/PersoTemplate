@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35e60e58-2416-4a24-9754-92d7d9394a3f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35e60e58-2416-4a24-9754-92d7d9394a3f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T01:04:43.752Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1217,
+        "description": "Preserve the Node editor's selected component expansion mode across task selection changes and apply it to the newly selected node.\n\nImplemented in commit `6331198` and live in the restarted service. Collapsed, expanded and smart modes retain their behavior across repeated Task graph selections. Verified in the live UI as well as the recorded regression.\n\nValidation: exact before/after recordings and focused editor regressions pass. The full checkpoint passed build, type, model, unit and integration checks; browser results were 379 passed and one pre-existing CRLF/LF failure in private-space-recovery-ui.spec.ts. Report: `.harness/checkpoints/run-zMLbCh/report.json`. Evidence is attached.",
+        "title": "Bug: Preserve Node editor expansion mode when changing the selected node",
+        "updatedAt": "2026-10-29T06:25:12.069Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35e60e58-2416-4a24-9754-92d7d9394a3f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35e60e58-2416-4a24-9754-92d7d9394a3f.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/35e60e58-2416-4a24-9754-92d7d9394a3f.json"
+}

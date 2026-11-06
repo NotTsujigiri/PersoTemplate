@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.291Z",
+        "createdBy": "agent:codex",
+        "description": "Use Broccoli itself to plan, inspect, discuss, implement and review real software work on Windows without requiring a Codex subscription. Pi supplies the initial one-human/one-replying-agent execution loop; the UI retains participant/run identities for future shared conversations.\n\nAccepted scope and success criteria\n1. Relational Engine owns extensible data types, typed reference fields, atomic field/record/graph invariants and typed composable queries. Relational UI owns reusable renderers, field framing, validation presentation, querying, scrolling and annotation components. Public APIs enforce these boundaries for agents and UI.\n2. Inputs / Active / Closed is compact and scalable. Waiting, In progress, Queued and Backlog scroll independently with splitters. Explicit New/Later/acknowledgement preserves attention across changes; only agreed sections have time groups. Priority inherits with child overrides; parent stage reflects descendants. Review tasks stay off the board and pending review puts the top-level task in Waiting.\n3. The node editor truthfully exposes persisted fields and references, help comments, read-only values, per-field feedback and cross-field invariant links. Fields and Additional relations use separate adjustable areas.\n4. Chat remains the left work pane. Long histories, Markdown, multi-range references, reply/quote/copy/edit, five-pane chat selection, tool/model timing and instance-specific stop/jump are usable. Pi provider setup supports a locally supplied compatible key; deterministic adapter verification does not count as a live provider test.\n5. One compact annotation editor works in overlays, embedded review and batches. Ranked generic contexts, selection source text, screenshot/page/pointer metadata, per-item destinations and persisted annotation links preserve traceability. Creating a composer link does not send a message.\n6. Scheduled/event-triggered task definitions retain occurrence identity, safe execution state and explicit enablement. No real recurring job is enabled merely by delivering this capability.\n7. An ordinary isolated demo buildspace uses several local repositories and seeded placeholder tasks plus long chat history. No demo-specific product subsystem is required.\n8. A single immutable candidate covers TheBroccoli, BtrTemplate and PersoTemplate, with repository checks, accepted visual references and their reservations. Review preview and annotation iteration happen inside Broccoli at the top of this timeline. No commit/merge or human approval is performed by the implementing agent.\n9. Independent architecture and implementation review findings are resolved and verified. User acceptance remains outstanding until the user reviews this iteration and demonstrates they can bootstrap subsequent work through Broccoli.\n\nExplicit deferrals\nFull multi-human/multi-agent orchestration and programmable agent activation, stage extensibility, query folders, the generic view request/connection inspector, a dedicated past-work view, complete human/tool parity, and polished text/node diffs. Manual relation editing is not promoted above annotation, workflow reliability and core ergonomics.\n\nVisual authority\nThe linked accepted image references establish direction, with their associated reservation comments taking precedence over generation noise. The current review must not treat imperfect image pixels as literal requirements.\n\nCritical data model requirements are owned by the child tasks \"Enforce data model encapsulation and invariants across contributors\" and \"Inspect composed data models and their invariants at runtime\". Their completion is required for MVP acceptance.",
+        "title": "Persistent planning and review MVP",
+        "updatedAt": "2026-10-26T07:21:36.763Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json",
+      "properties": {
+        "placement": "blocked",
+        "priority": 0,
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T04:48:28.522Z",
+            "disposition": "later",
+            "observedUpdatedAt": "2026-10-20T03:04:35.915Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json"
+}

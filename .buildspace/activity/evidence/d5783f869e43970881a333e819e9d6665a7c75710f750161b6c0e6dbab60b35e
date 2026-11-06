@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-08",
+  "scope": "Replace Review Plan tab with the recursive Task graph from the agreed mockups; preserve Changes for captured plan comparison.",
+  "checks": {
+    "build": "passed",
+    "strictTypeSafety": {
+      "TheBroccoli": "passed",
+      "BtrTemplate": "passed",
+      "PersoTemplate": "passed"
+    },
+    "modelTests": {
+      "passed": 22,
+      "failed": 0
+    },
+    "focusedLogic": {
+      "passed": 8,
+      "failed": 0
+    },
+    "affectedBrowser": {
+      "passed": 14,
+      "failed": 0
+    },
+    "checkpointCore": {
+      "passed": 196,
+      "failed": 3,
+      "failures": [
+        "planning-state-history.test.ts: blocker-free Waiting normalized to Queued instead of recorded blocked",
+        "review-placement.test.ts: incomplete children forbid parent completion",
+        "review-task-completion.test.ts: required approval guard precedes expected reviewer-authority error"
+      ]
+    },
+    "fullBrowserStage": "not reached after core failures"
+  },
+  "live": {
+    "mainGraphAndPlanTabRemoval": "loaded and inspected",
+    "compactParentHeader": "implemented and browser-tested; live restart awaiting user approval"
+  },
+  "screenshots": [
+    "test-results/nested-task-graph-ui-neste-d3af5-al-endpoints-when-expanding/nested-task-graph-overview.png",
+    "test-results/nested-task-graph-ui-neste-d3af5-al-endpoints-when-expanding/nested-task-graph.png",
+    "test-results/nested-task-graph-ui-neste-d3af5-al-endpoints-when-expanding/nested-task-graph-collapsed.png"
+  ],
+  "policy": "No human approval or task acceptance recorded. Existing parent state/iteration model is rendered from owner data; future semantics remain for model design review."
+}

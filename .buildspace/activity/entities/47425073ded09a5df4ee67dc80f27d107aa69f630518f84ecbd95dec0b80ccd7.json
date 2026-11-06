@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T15:53:51.482Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 564,
+        "description": "- Fixed in 9733e18: capture textarea/input selection before menu focus changes.\n- Exact text, property identity and range remain in annotation context.",
+        "title": "Bug: Annotating selected Description text loses the selection",
+        "updatedAt": "2026-10-19T18:03:14.628Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 3,
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:17:36.175Z",
+            "disposition": "later",
+            "observedUpdatedAt": "2026-10-19T18:03:14.628Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json"
+}

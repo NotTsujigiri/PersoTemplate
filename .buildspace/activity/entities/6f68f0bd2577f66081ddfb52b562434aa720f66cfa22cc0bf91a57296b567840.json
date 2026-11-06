@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d2241ad-8f07-428c-b1f9-29ac6d5c504d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d2241ad-8f07-428c-b1f9-29ac6d5c504d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T17:09:11.903Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1068,
+        "description": "User annotations, 2026-10-24:\n1. Remove outer insets around nested New/Later/Acknowledged headings and Inputs processing groups, including Processed and Rejected; retain useful padding inside headings and card content.\n2. Try white for the dedicated splitter border color in the current dark theme.\n3. Normalize nesting colors along each branch: roots reach the minimum-depth color and leaf headers the maximum-depth color. Closed/New must match Active/Waiting/New despite its shallower branch.\n4. Merge coincident nested splitter borders with higher-level borders instead of stacking their width.\n5. While dragging merged collapsed borders, show a contextual dropdown that selects which border is resized; scrolling during the held drag changes the selection.\nPreserve the verified behavior: only the dragged border moves, follows the cursor direction and displacement exactly within pane bounds, and Escape restores the layout. Reproduce each defect in persistent actual/expected recordings before modifying behavior. Final response must contain five numbered summaries of one or two lines each.\n\nCompleted in ce8479e on codex/overnight-board. All 53 focused board/splitter checks passed, and all 53 also passed in the full checkpoint. Coverage includes exact cursor geometry, both axes and edges, boundary selection with the wheel, release, Escape, pane minima and restoration. Reviewed focused and full-run screenshots and restarted the local application. Live group outer padding is 0px; Closed/New and Waiting/New both use rgb(23, 56, 31); splitter rails use rgb(245, 245, 245).\n\nFull checkpoint: build, type safety, 44 model tests and 624 unit tests passed. Browser result was 315/322 passing. The existing native Windows worker crash and end-to-end review timeout recurred. Of the five other failures, graph refresh, historical source, planning CRUD and graph wheel scrolling passed on focused rerun; private-space recovery still failed with a Windows EPERM file-rename error. The full suite therefore remains non-green; these failures are recorded rather than hidden or weakened.\n\nAttached immutable evidence: five-annotations-verification.json, including full results and follow-up diagnostics. Reproduction recordings: .harness/five-before-recordings. Focused expected/actual recordings: .harness/five-consumers and .harness/five-modes-pass. Follow-up artifacts: .harness/five-followup-evidence. Working tree clean.",
+        "title": "Fix five Activity board layout and splitter annotations",
+        "updatedAt": "2026-10-24T18:51:33.519Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d2241ad-8f07-428c-b1f9-29ac6d5c504d.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d2241ad-8f07-428c-b1f9-29ac6d5c504d.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d2241ad-8f07-428c-b1f9-29ac6d5c504d.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d2241ad-8f07-428c-b1f9-29ac6d5c504d.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-24T19:19:31.731Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-24T18:51:33.519Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8d2241ad-8f07-428c-b1f9-29ac6d5c504d.json"
+}

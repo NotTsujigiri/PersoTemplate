@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3aaffd9-489a-4ba9-b3d1-6be045e0d923.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3aaffd9-489a-4ba9-b3d1-6be045e0d923.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-10T09:48:39.969Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 444,
+        "description": "Implement the UI editor from the agreed needs and structural image-generation rounds, in small scoped increments. Use existing reusable components and keep ownership, dependencies and saved artifact contracts explicit. Deliver the agreed editing, persistence, revision and review behaviors needed for the first self-review; additional capabilities are refined through later user feedback.\n\nProvide a durable mockup of the editor itself that opens in the UI editor in Review → Changes. Verify the agreed flows, cancellation and invalid/stale operations where applicable, and inspect the actual UI. Prepare the candidate and evidence for the following human review. Do not treat development completion as user approval.",
+        "title": "Develop the first UI editor in Review Changes",
+        "updatedAt": "2026-10-10T12:53:51.317Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3aaffd9-489a-4ba9-b3d1-6be045e0d923.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3aaffd9-489a-4ba9-b3d1-6be045e0d923.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e3aaffd9-489a-4ba9-b3d1-6be045e0d923.json"
+}

@@ -1,0 +1,52 @@
+{
+  "boardRenamed": true,
+  "editorRenamed": true,
+  "toolbarClean": true,
+  "semanticTypes": [
+    {
+      "key": "createdAt",
+      "type": "timestamp"
+    },
+    {
+      "key": "updatedAt",
+      "type": "timestamp"
+    },
+    {
+      "key": "title",
+      "type": "string"
+    },
+    {
+      "key": "description",
+      "type": "string"
+    }
+  ],
+  "typeLabels": {
+    "createdAt": "Type: Timestamp",
+    "updatedAt": "Type: Timestamp",
+    "title": "Type: String",
+    "description": "Type: String"
+  },
+  "boardScroll": {
+    "fits": true,
+    "oneHorizontalOwner": true,
+    "withinViewport": true
+  },
+  "structuredPanel": {
+    "headingOnFirstLine": true,
+    "boundary": true
+  },
+  "editorPadding": [
+    {
+      "mode": "source",
+      "zero": true
+    },
+    {
+      "mode": "inline",
+      "zero": true
+    },
+    {
+      "mode": "split",
+      "zero": true
+    }
+  ]
+}

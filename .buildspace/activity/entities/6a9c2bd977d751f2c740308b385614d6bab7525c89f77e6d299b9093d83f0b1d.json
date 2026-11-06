@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/79a59e7a-8ad6-4eeb-a8ee-f219c10d9533.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/79a59e7a-8ad6-4eeb-a8ee-f219c10d9533.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-29T21:48:38.019Z",
+        "createdBy": "agent:codex",
+        "description": "Relational Engine owns semantic data types, typed query operators and validation at value, field, cross-field and cross-node scope. Contributors declare types and rules through enforcing APIs; Relational UI discovers renderers and displays diagnostics. Replace generic planning-node projection and hidden queue brackets with faithful declarations. Required field comments, read-only fields, inherited priority, stages and review consistency must be enforced through UI and tools.",
+        "title": "Enforce contributor-owned types, references and invariants",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/79a59e7a-8ad6-4eeb-a8ee-f219c10d9533.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/79a59e7a-8ad6-4eeb-a8ee-f219c10d9533.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/79a59e7a-8ad6-4eeb-a8ee-f219c10d9533.json"
+}

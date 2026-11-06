@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/305d3ab7-96da-45ae-8b4f-f0eb68e3621e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/305d3ab7-96da-45ae-8b4f-f0eb68e3621e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.914Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Share in-memory acquisition, pending requests and revisions across configured compatible tabs while keeping per-tab UI state separate. Closing one tab must not break others. Reopening after all tabs close may reacquire data; durable frontend data remains distinct.\n\nImplementation progress: a configured SharedWorker now owns the frontend engine, HTTP connections and acquisition/evaluation caches. Each tab keeps a rendering mirror and independent UI state. The tab configuration still permits separate engines. Browser recording shared-engine-ui.spec.ts proves shared identity, cross-tab acquired-node visibility, one owner evaluation for unchanged reads, independent acquisition in isolated mode, and survival when one shared tab closes. Remaining verification: full graph consumer refresh, bounded data freshness across mirrored routes, restart identity and lifecycle cleanup. No persisted cache was added.\n\nFurther verification: Activity board acquisition/retention, graph manual and automatic refresh, and compatible/isolated-tab sharing pass together (3 browser tests). The worker is the single acquisition owner; rendering mirrors no longer retain a competing operation snapshot. Service engine identities are unique per runtime, observed connections are engine-owned graph edges, and the startup generation separates worker sharing after a service restart. The deterministic application boundary scan reports zero current bypasses; its negative fixtures still fail as expected. Full completion remains gated by composition, consumer freshness coverage, and checkpoint verification.\n\nFour shared-engine browser tests now pass, covering configured frontend contributors, shared/isolated acquisition ownership, and connections to an additional service by explicit URL. Local credentials are not forwarded. Test synchronization is being migrated from obsolete domain routes and network-idle waits to actual engine operations and request lifecycle events.\n\nSlice verification completed: Four browser recordings verify configured local contributors, compatible-tab sharing, isolated-tab configuration, a surviving tab, deduplicated unchanged reads, and explicit remote connections. No persisted materialization cache was introduced.",
+        "title": "Share compatible frontend engines across tabs",
+        "updatedAt": "2026-10-22T22:16:28.039Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/305d3ab7-96da-45ae-8b4f-f0eb68e3621e.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/305d3ab7-96da-45ae-8b4f-f0eb68e3621e.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/305d3ab7-96da-45ae-8b4f-f0eb68e3621e.json"
+}

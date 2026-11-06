@@ -1,0 +1,19 @@
+# MVP delivery walkthrough
+
+The approved sixteen-record plan is persisted in the application and available through the same planning owner to the UI and installed Broccoli MCP endpoint.
+
+## Verified
+
+- Independent software design review converged before implementation.
+- Independent backend and UI implementation reviews found and resolved material issues; R02 is independently approved, with no human approval manufactured.
+- Actual browser input create -> installed MCP read -> MCP edit -> browser read -> browser delete -> MCP read succeeded. The temporary probe was removed.
+- Restart preserved the real graph, R02 outcome, original inputs and sessions, and portable graph identities.
+- The reusable independent-column board, task graph, Node editor and Review Overview/Changes/Preview surfaces use the imported plan.
+- Focused owner/browser coverage exercises relation/delete/priority controls, historical read-only behavior, concurrent drafts, immutable exact diffs, feedback author controls, review gates, evidence and import/export.
+- Existing source and user work were preserved. The review source snapshot includes the current three-repository state, including changes that predate this MVP; baseline evidence distinguishes this delivery.
+
+## Review this delivery
+
+The final review requires your approval. Overview provides the feedback composer and Checks tree; Changes provides the captured repository files and diffs. Its mandatory full suite executes in isolated captured repositories, and its result is attached natively to this review. A passed automated run does not approve the review for you.
+
+The wider shared/versioned cross-repository check framework remains the B01 backlog task. No duration, cost, synthetic coverage results or agent orchestration is claimed. Preview remains a live application preview and is explicitly distinguished from the immutable reviewed source.

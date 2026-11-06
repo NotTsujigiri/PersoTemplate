@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T20:49:53.547Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 575,
+        "description": "- Committed the verified migration in intermediate checkpoints across TheBroccoli, BtrTemplate and PersoTemplate; final code checkpoint: 9c06556bf13ad32a6abcc467a118a775abe7a49f.\n- Both independent agent reviews passed; strict checking and multi-stage verification evidence are attached to the final agent review.\n- Service running; existing nodes, component instances, definitions, properties and linked data types inspected live.\n- Ready for the final human review of the completed experience; storage rollback requires the matching recorded baseline and backup.",
+        "title": "Commit checkpoint 3: verified migration ready for inspection",
+        "updatedAt": "2026-10-18T18:47:28.557Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "integration",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f4c49414-7e57-426d-989d-6dc5e85f199f.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f4c49414-7e57-426d-989d-6dc5e85f199f.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a40ff28d-e7b5-4b1f-81dc-624410427a8f.json"
+}

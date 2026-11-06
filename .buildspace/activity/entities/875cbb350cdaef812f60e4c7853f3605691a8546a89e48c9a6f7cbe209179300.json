@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfa83e6e-33a3-42c0-a332-7ab4d7adeecb.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfa83e6e-33a3-42c0-a332-7ab4d7adeecb.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T12:29:05.495Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 671,
+        "description": "- Start work from Inputs, switch to Feed → Questions while it starts.\n- A completed refresh can update hub data while the visible feed remains empty.\n- Record owner question state and the settled UI; require the question to appear without reopening Feed.",
+        "title": "Feed can omit a question after an intake refresh",
+        "updatedAt": "2026-10-19T05:28:07.949Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfa83e6e-33a3-42c0-a332-7ab4d7adeecb.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfa83e6e-33a3-42c0-a332-7ab4d7adeecb.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfa83e6e-33a3-42c0-a332-7ab4d7adeecb.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfa83e6e-33a3-42c0-a332-7ab4d7adeecb.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:15:05.808Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T05:28:07.949Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfa83e6e-33a3-42c0-a332-7ab4d7adeecb.json"
+}

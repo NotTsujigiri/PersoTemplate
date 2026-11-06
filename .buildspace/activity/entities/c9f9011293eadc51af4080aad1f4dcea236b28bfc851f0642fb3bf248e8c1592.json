@@ -1,0 +1,66 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b6e5329-6df7-485e-8296-8b32c09d6e48.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b6e5329-6df7-485e-8296-8b32c09d6e48.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T06:57:45.459Z",
+        "createdBy": "agent:codex",
+        "description": "Height, I want passive tracability so why things were made can be found if needed but doesn't require extra effort to maintain that tracability from the user nor the agent.",
+        "title": "Passive traceability",
+        "updatedAt": "2026-09-29T22:37:05.018Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b6e5329-6df7-485e-8296-8b32c09d6e48.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b6e5329-6df7-485e-8296-8b32c09d6e48.json",
+      "properties": {
+        "capture": {
+          "context": {
+            "kind": "source",
+            "label": "Recorded harness needs",
+            "path": ".runtime/planning/01a0c5f4-7593-7072-8985-289e55a9faf9/harness-effects.md",
+            "quote": "Height, I want passive tracability so why things were made can be found if needed but doesn't require extra effort to maintain that tracability from the user nor the agent."
+          },
+          "createdAt": "2026-09-24T14:56:10.172Z",
+          "description": "Height, I want passive tracability so why things were made can be found if needed but doesn't require extra effort to maintain that tracability from the user nor the agent.",
+          "history": [
+            {
+              "actor": "agent",
+              "description": "Height, I want passive tracability so why things were made can be found if needed but doesn't require extra effort to maintain that tracability from the user nor the agent.",
+              "status": "open",
+              "time": "2026-09-24T14:56:10.172Z",
+              "title": "Passive traceability"
+            }
+          ],
+          "id": "aa42f40c-adab-4bbc-9034-ab7129712464",
+          "root": "C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli",
+          "status": "open",
+          "title": "Passive traceability",
+          "type": "user story"
+        },
+        "meaning": "user story"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b6e5329-6df7-485e-8296-8b32c09d6e48.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b6e5329-6df7-485e-8296-8b32c09d6e48.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:52:13.294Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-29T22:37:05.018Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4b6e5329-6df7-485e-8296-8b32c09d6e48.json"
+}

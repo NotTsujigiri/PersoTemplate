@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2db4ed7-de09-43d4-ab1e-28488b985c96.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2db4ed7-de09-43d4-ab1e-28488b985c96.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-05T06:43:42.104Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1376,
+        "description": "Loading a detail view, particularly Check details while selecting repository roots, currently blocks selection/view changes. Make loading asynchronous and cancellable. Immediately accept a new selection or view choice, cancel obsolete work where supported, and prevent late results from restoring the previous selection or view. Preserve unsaved-edit handling. Reproduce delayed loading and rapid repository/view switches in a persistent exact browser recording.",
+        "title": "Keep repository selection and view switching responsive during loading",
+        "updatedAt": "2026-11-05T18:09:38.871Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2db4ed7-de09-43d4-ab1e-28488b985c96.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2db4ed7-de09-43d4-ab1e-28488b985c96.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b2db4ed7-de09-43d4-ab1e-28488b985c96.json"
+}

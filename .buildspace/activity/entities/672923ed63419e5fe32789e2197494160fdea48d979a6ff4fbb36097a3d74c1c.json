@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-27T01:40:47.483Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1188,
+        "description": "Implement TypeScript autocomplete and token editing using [the portable behavior reference](C:/Users/vince/Documents/GitHub/Btr/QueryComposerContext/README.md). Screenshots are beside the README. Written behavior takes precedence; the mock is an explanatory aid, never a reference implementation.\n\nAccepted ownership:\n- LspContributor owns reusable language-completion contracts, capability discovery, request coordination with document versions, cancellation, stale-result rejection and server provenance.\n- TypeScriptContributor owns TypeScript/project semantics, server completions, suggested edits, token ranges and expression/evaluation structure.\n- RelationalUi owns the reusable completion panel and text-editor integration. The panel has no LSP or language dependency; its consumer supplies suggestion content, layout, styling, filtering and action triggers. The editor applies supplied edits with selection, focus and undo/redo.\n\nIn the text editor view's tool panel, use the existing IconRadioButton component with two icon choices: Text mode and Expression mode. Text mode retains ordinary character editing. Expression mode shows numbered expression rows, separate tokens and insertion gaps, wrapping within each row without rewriting source layout. Keep the mode controls at the view toolbar and use optional language capabilities; unsupported documents remain editable in Text mode.\n\nDeliver the referenced insertion/replacement, expression-row actions, contextual completion, raw input, keyboard/pointer interaction, full-input Copy, Paste, Remove and continued editing behavior. Token mode exposes useful evaluation breakdown with nested numbering when supplied by the language. Coloring stays owned by the existing coloring system. Debugger execution and functioning breakpoints require separate debugging capabilities; do not imply their presence from a gutter.\n\nFocus implementation and human acceptance on real TypeScript files and project dependencies, including incomplete text, stale asynchronous results, undo/redo and switching modes. JSON autocomplete with optional JSON Schema support remains a separate backlog task.\n\nDevelopment is authorized. Complete the serial child tasks, then prepare the assigned human review before reusable function and query execution starts.",
+        "title": "3. Add TypeScript autocomplete and token editing to the text editor",
+        "updatedAt": "2026-10-27T04:33:13.185Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/724d8935-d90e-45f1-be03-325d4473a3fb.json"
+}

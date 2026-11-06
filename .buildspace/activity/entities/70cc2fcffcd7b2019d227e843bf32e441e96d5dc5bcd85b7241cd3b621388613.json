@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a5e2c6-7f3e-4fbc-83d8-fab3eb95c0f9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a5e2c6-7f3e-4fbc-83d8-fab3eb95c0f9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T10:42:17.404Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 660,
+        "description": "- Investigation completed: after the confirmed host reboot, the full browser run reproduced one native worker exit 0xC0000409; 262/263 tests passed.\n- The unchanged repeated-component case passes alone with its exact recording; no worker fix is claimed and the full checkpoint is not green.\n- Unresolved native failure is tracked in related Backlog task 75e14305; low available memory is evidence, not an established cause.\n- Attached final report contains all 13 task-linked commits, three rollback checkpoints and verification evidence; the queue is stopped.",
+        "title": "Investigate native Windows browser-test worker termination",
+        "updatedAt": "2026-10-19T17:51:48.866Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a5e2c6-7f3e-4fbc-83d8-fab3eb95c0f9.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a5e2c6-7f3e-4fbc-83d8-fab3eb95c0f9.json",
+      "properties": {
+        "placement": "completed",
+        "priority": 3,
+        "purpose": "investigation",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a5e2c6-7f3e-4fbc-83d8-fab3eb95c0f9.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a5e2c6-7f3e-4fbc-83d8-fab3eb95c0f9.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T05:17:43.891Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T17:51:48.866Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/86a5e2c6-7f3e-4fbc-83d8-fab3eb95c0f9.json"
+}

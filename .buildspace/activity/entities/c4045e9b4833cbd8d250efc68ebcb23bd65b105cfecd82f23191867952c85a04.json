@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25991bf-6dd2-40f9-b8c4-808520b94eec.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25991bf-6dd2-40f9-b8c4-808520b94eec.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T23:56:25.168Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 720,
+        "description": "- Design one inspectable event stream including current and historical Broccoli logs.\n- Reuse QueryComposer for event queries and filtering; preserve event provenance and timestamps.\n- Define retention, streaming, sensitive-data handling and navigation before implementation.",
+        "title": "Rework the events panel with live and historical logs",
+        "updatedAt": "2026-10-19T05:28:07.949Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25991bf-6dd2-40f9-b8c4-808520b94eec.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25991bf-6dd2-40f9-b8c4-808520b94eec.json",
+      "properties": {
+        "placement": "queued",
+        "priority": -1,
+        "purpose": "design",
+        "stage": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e25991bf-6dd2-40f9-b8c4-808520b94eec.json"
+}

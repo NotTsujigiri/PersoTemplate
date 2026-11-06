@@ -1,0 +1,16 @@
+{
+  "graphUsesAvailablePane": true,
+  "graphControlsVisible": true,
+  "graphCanvasOwnsScrolling": true,
+  "expansionKeepsTree": true,
+  "expansionKeepsRow": true,
+  "expansionKeepsEditor": true,
+  "expansionReadsNoFiles": true,
+  "fileSplitterPresent": true,
+  "fileSplitterResizes": true,
+  "revisionIdentityRemoved": true,
+  "filterBoundary": true,
+  "inverseRelationLabel": true,
+  "selfRelationOnce": true,
+  "incomingBadgeRemoved": true
+}

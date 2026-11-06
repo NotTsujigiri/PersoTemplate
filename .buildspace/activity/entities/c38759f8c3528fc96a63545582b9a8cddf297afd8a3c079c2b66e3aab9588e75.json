@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b4449372-d9f2-42a9-a79c-9f6780f97a93.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b4449372-d9f2-42a9-a79c-9f6780f97a93.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-22T09:02:16.920Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 992,
+        "description": "Support creating/joining spaces and creating/composing buildspaces as data through configured capabilities, without recompiling or restarting. Startup scripts seed the initial setup rather than becoming the entire live inventory.\n\nImplementation progress: Implemented a contributor-owned, revision-checked space catalog seeded once by configuration. Spaces and cross-template buildspace memberships can be edited live, survive reload, and materialize canonical space nodes through the local engine. Focused persistence/stale-write and dynamic-space browser checks pass; final integration verification remains.\n\nSlice verification completed: The owner catalog and browser recordings verify live space creation, editing and cross-template buildspace membership, persisted across reload with stale writes rejected. These operations require no application restart.",
+        "title": "Keep spaces and buildspaces live and composable",
+        "updatedAt": "2026-10-22T22:28:42.574Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b4449372-d9f2-42a9-a79c-9f6780f97a93.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b4449372-d9f2-42a9-a79c-9f6780f97a93.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b4449372-d9f2-42a9-a79c-9f6780f97a93.json"
+}

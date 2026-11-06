@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63914f28-6a35-4586-bd88-694fb0181ae1.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63914f28-6a35-4586-bd88-694fb0181ae1.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:15:52.274Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 389,
+        "description": "Inspect the implementation, deterministic isolation results, Git composition limits, cross-machine round-trip and merge evidence. Distinguish implemented guarantees from untested assumptions. This gate precedes the final whole-MVP acceptance audit.",
+        "title": "Review buildspace isolation, persistence and composition evidence",
+        "updatedAt": "2026-10-08T21:30:58.251Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63914f28-6a35-4586-bd88-694fb0181ae1.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63914f28-6a35-4586-bd88-694fb0181ae1.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/63914f28-6a35-4586-bd88-694fb0181ae1.json"
+}

@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e203329-4305-49bd-9f1a-2f4615161f15.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e203329-4305-49bd-9f1a-2f4615161f15.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T12:13:25.025Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 669,
+        "description": "",
+        "title": "- The added browser seed failed before rendering: the current planning model rejects self-relations, including related edges. The review recommendation incorrec",
+        "updatedAt": "2026-10-18T12:13:45.917Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e203329-4305-49bd-9f1a-2f4615161f15.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e203329-4305-49bd-9f1a-2f4615161f15.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/10e577d8-ad17-4b9b-9240-0d90c756c7cc.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- The added browser seed failed before rendering: the current planning model rejects self-relations, including related edges. The review recommendation incorrectly assumed they were permitted.\n- Preserve that validation and the existing reverse-relation browser checks; remove the invalid fixture seed.\n- Cover valid self-edge deduplication through the generic engine/editor contract instead, then re-run the affected cases and checkpoint.\n- The failing run is retained. No product rule will be weakened to make this fixture pass."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/8e203329-4305-49bd-9f1a-2f4615161f15.json"
+}

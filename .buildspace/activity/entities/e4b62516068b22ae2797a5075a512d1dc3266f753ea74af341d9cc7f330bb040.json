@@ -1,0 +1,45 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f83c60d3-ef80-43d5-be33-9598b5218e41.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f83c60d3-ef80-43d5-be33-9598b5218e41.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-03T17:37:04.313Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1337,
+        "description": "Render TypeScript hover code in a reusable text-editor panel for semantic coloring and the appropriate editor capabilities. Use available viewport width instead of needlessly narrow previews with horizontal scrollbars. This redesign is deferred; preserve the current hover content until then.",
+        "title": "Use a text-editor panel for TypeScript hover previews and available width",
+        "updatedAt": "2026-11-03T17:37:04.638Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f83c60d3-ef80-43d5-be33-9598b5218e41.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f83c60d3-ef80-43d5-be33-9598b5218e41.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f83c60d3-ef80-43d5-be33-9598b5218e41.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f83c60d3-ef80-43d5-be33-9598b5218e41.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-03T22:39:42.425Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-11-03T17:37:04.638Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f83c60d3-ef80-43d5-be33-9598b5218e41.json"
+}

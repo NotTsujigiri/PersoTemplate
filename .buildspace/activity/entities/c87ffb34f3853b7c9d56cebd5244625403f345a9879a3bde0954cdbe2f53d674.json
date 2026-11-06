@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9dcceb67-a0e4-4a2f-b6e0-b5567848cd2a.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9dcceb67-a0e4-4a2f-b6e0-b5567848cd2a.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-06T00:59:58.722Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1390,
+        "description": "Deferred idea, outside the first iteration of decentralized persistence and Git versioning. Explore deterministic commit-time processing through Git hooks so commits made through external tools can apply the same consistency rules as Broccoli. Committing must not require a Broccoli instance to be running. Consider automatic removal of relations targeting a deleted resource within the commit; deleting a relation must not automatically delete the referenced resource. Operate on the commit contents without including unrelated worktree changes. Graph inspection and error/warning reporting remain complementary, and Broccoli retains its user-friendly consistency handling for operations performed through it.\n\nContext: graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c7d19914-628c-46e6-9f15-cefd0eb23b22.json",
+        "title": "Explore Git hooks for persistence consistency when committing through external tools",
+        "updatedAt": "2026-11-06T00:59:59.052Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9dcceb67-a0e4-4a2f-b6e0-b5567848cd2a.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9dcceb67-a0e4-4a2f-b6e0-b5567848cd2a.json",
+      "properties": {
+        "meaning": "idea",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/9dcceb67-a0e4-4a2f-b6e0-b5567848cd2a.json"
+}

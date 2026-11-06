@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d6376296-be0e-418f-b91e-3ec867bae5b5.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d6376296-be0e-418f-b91e-3ec867bae5b5.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-30T19:12:33.219Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1280,
+        "description": "After the required human review of the RelationalEngine Api folder is approved, extend use of that API to areas not already affected by the Api/Impl split. Task 6b owns the rename, boundary enforcement and all consumer/configuration changes required to keep affected systems working. This task owns broader adoption of the reviewed API across the active TheBroccoli, BtrTemplate and PersoTemplate composition. Replace remaining engine bypasses with intentional public operations and contracts, without exposing internal state or duplicating engine behavior. Remove superseded paths and unused dependencies. Complete focused behavior verification and relevant repository checks with no boundary violations. Refresh the existing predicate inventory where API adoption changes its assumptions; then resume the existing human review of view predicates.",
+        "title": "6c. Move relational engine consumers onto its public API",
+        "updatedAt": "2026-11-02T21:12:12.414Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d6376296-be0e-418f-b91e-3ec867bae5b5.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d6376296-be0e-418f-b91e-3ec867bae5b5.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "integration",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0b8ce229-7ed9-4a57-9591-8a3a70632b22.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d6376296-be0e-418f-b91e-3ec867bae5b5.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0b8ce229-7ed9-4a57-9591-8a3a70632b22.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d6376296-be0e-418f-b91e-3ec867bae5b5.json"
+}

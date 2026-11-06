@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ae7a9dae-97de-4644-9846-c4518d6caa35.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ae7a9dae-97de-4644-9846-c4518d6caa35.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T11:34:12.715Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 667,
+        "description": "",
+        "title": "- The two preview fixture corrections passed focused recordings: replacement waits for frame detachment; stale delivery holds the real fetched response and drai",
+        "updatedAt": "2026-10-18T11:34:30.586Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ae7a9dae-97de-4644-9846-c4518d6caa35.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ae7a9dae-97de-4644-9846-c4518d6caa35.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64b47fca-020d-4ec5-9b8a-c4f77c844a77.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "- The two preview fixture corrections passed focused recordings: replacement waits for frame detachment; stale delivery holds the real fetched response and drains its handler.\n- Component reviewer approved all five fixture files; boundary reviewer approved both preview changes. Commit e4c718b records the corrections.\n- Original expectations and test budgets are unchanged. Logs: migration-fixture-boundaries-focused, migration-fixture-completion-focused and migration-fixture-directory-focused.\n- This closes the fixture corrections only. Final full verification remains pending; native worker exit 86a5e2c6 stays open separately."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/ae7a9dae-97de-4644-9846-c4518d6caa35.json"
+}

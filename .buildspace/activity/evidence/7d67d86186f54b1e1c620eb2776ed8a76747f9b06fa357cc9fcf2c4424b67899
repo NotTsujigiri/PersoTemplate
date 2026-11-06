@@ -1,0 +1,9 @@
+# Required field documentation verification
+
+Every declared field requires a non-empty string comment. Missing, blank, whitespace-only and non-string comments are rejected by the node-type factory, raw contributor registration and field validation. The registry exposes declareFields for validated declarations; comments remain part of the projected node type. The shared editor uses the comment for the field label tooltip, value tooltip and accessible description, including contributed renderers.
+
+Application, review-policy, personal-template and existing shared-form consumers were updated with meaningful source-owned comments. Created at explains that the value is the UTC instant of first persistence and is assigned by the system. Data-type explanations remain separate.
+
+The exact authored reproduction failed on the unchanged implementation and passed with the same expected output after the fix. Checks passed: 68 engine tests, 219 shared UI tests, 73 app backend tests, 81 browser tests and the full build. Browser screenshots and the live editor were inspected. Existing editor values were captured before refresh and the differing draft was restored without saving it.
+
+The accompanying regrouping assessment is a proposal for the user's review, not an approved new plan. Only this fix/assessment task is completed; the MVP stays Blocked and its acceptance review stays submitted and unchanged.

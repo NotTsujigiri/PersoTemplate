@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e389917-f3f1-479f-b4ed-2957c67cd1b3.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e389917-f3f1-479f-b4ed-2957c67cd1b3.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T19:54:55.614Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 284,
+        "description": "Immutable attached evidence",
+        "title": "Better Auth final checkpoint: 135 backend and 108 browser tests.txt",
+        "updatedAt": "2026-09-30T19:54:55.701Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e389917-f3f1-479f-b4ed-2957c67cd1b3.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e389917-f3f1-479f-b4ed-2957c67cd1b3.json",
+      "properties": {
+        "artifact": {
+          "hash": "6b222aabc523d4505bbfd4c56984ba1f62b6346017d44506e7570574a014b1c8",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/6b222aabc523d4505bbfd4c56984ba1f62b6346017d44506e7570574a014b1c8",
+          "mime": "text/plain",
+          "size": 30898
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e389917-f3f1-479f-b4ed-2957c67cd1b3.json"
+}

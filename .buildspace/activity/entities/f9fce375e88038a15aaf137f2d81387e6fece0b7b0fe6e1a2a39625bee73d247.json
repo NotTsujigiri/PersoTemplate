@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0974862f-0a14-4041-895d-3e1c7382a64c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0974862f-0a14-4041-895d-3e1c7382a64c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-04T01:08:23.339Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1349,
+        "description": "Support collapse/expand of JSON regions in the regular text editor. Provide individual fold controls in the editor margin and the reusable Expand all / Collapse all icon-button group in the view tool panel when folding is available. Obtain JSON structure through its language contributor.",
+        "title": "Add JSON folding in the text editor and its toolbar",
+        "updatedAt": "2026-11-04T07:50:28.852Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0974862f-0a14-4041-895d-3e1c7382a64c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0974862f-0a14-4041-895d-3e1c7382a64c.json",
+      "properties": {
+        "placement": "backlog",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0974862f-0a14-4041-895d-3e1c7382a64c.json"
+}

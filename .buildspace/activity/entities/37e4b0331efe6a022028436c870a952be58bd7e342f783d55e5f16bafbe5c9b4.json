@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/437ed83f-0421-4077-b62e-bc5a88be165e.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/437ed83f-0421-4077-b62e-bc5a88be165e.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T01:58:56.781Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 602,
+        "description": "",
+        "title": "migration_plan_review: two additional reproduced foundation defects.\n- P1: ComponentInstance properties are only shallow Readonly<P>. Nested writes and array.pu",
+        "updatedAt": "2026-10-18T02:13:20.505Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/437ed83f-0421-4077-b62e-bc5a88be165e.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/437ed83f-0421-4077-b62e-bc5a88be165e.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "fix",
+            "text": "migration_plan_review: two additional reproduced foundation defects.\n- P1: ComponentInstance properties are only shallow Readonly<P>. Nested writes and array.push compile with zero diagnostics although stored values are frozen; require recursively readonly reads and exact compiler rejection cases.\n- P2: after a branch reads a new missing dependency then throws, only previous dependencies remain tracked. Creating the missing component emits no recovery event (events stay 1), though manual read recovers; retain new failed-read dependencies until success.\nRead-only TypeScript probes reproduced both against rebuilt output. Foundation acceptance remains pending these corrections."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/437ed83f-0421-4077-b62e-bc5a88be165e.json"
+}

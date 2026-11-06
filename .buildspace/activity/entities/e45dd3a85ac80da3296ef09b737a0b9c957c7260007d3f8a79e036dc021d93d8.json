@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7553cae6-5b46-41df-916f-4e56c7c969c9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7553cae6-5b46-41df-916f-4e56c7c969c9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T22:03:29.822Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 712,
+        "description": "Immutable attached evidence",
+        "title": "Shared Node editor controls and retained draft",
+        "updatedAt": "2026-10-18T22:03:55.515Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7553cae6-5b46-41df-916f-4e56c7c969c9.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7553cae6-5b46-41df-916f-4e56c7c969c9.json",
+      "properties": {
+        "artifact": {
+          "hash": "da21f8176927ce6c3183cf1100fa7b11e39b1929b6663d7544be1a7d573752c6",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/da21f8176927ce6c3183cf1100fa7b11e39b1929b6663d7544be1a7d573752c6",
+          "mime": "image/png",
+          "size": 21502
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7553cae6-5b46-41df-916f-4e56c7c969c9.json"
+}

@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d12ed0d0-0f36-4378-865c-4d522e7d35dc.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d12ed0d0-0f36-4378-865c-4d522e7d35dc.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T23:00:23.883Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 717,
+        "description": "Immutable attached evidence",
+        "title": "Save click lost when the toolbar scroll resets",
+        "updatedAt": "2026-10-18T23:00:50.295Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d12ed0d0-0f36-4378-865c-4d522e7d35dc.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d12ed0d0-0f36-4378-865c-4d522e7d35dc.json",
+      "properties": {
+        "artifact": {
+          "hash": "5daed1a3a9ea00310409d9bd9c525bf2fb559a9d4c3ff806ea713f81ef5484b4",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/5daed1a3a9ea00310409d9bd9c525bf2fb559a9d4c3ff806ea713f81ef5484b4",
+          "mime": "application/json",
+          "size": 11624
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d12ed0d0-0f36-4378-865c-4d522e7d35dc.json"
+}

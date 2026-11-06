@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b617bbb1-7dc3-49cd-a409-ded6a501a8aa.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b617bbb1-7dc3-49cd-a409-ded6a501a8aa.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:15:52.270Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 389,
+        "description": "Inspect the gap inventory, proposed contracts, open decisions and rejection cases. Agree on the remaining implementation scope before behavior changes. Review with the Data models surface where applicable and the linked evidence; no automatic approval.",
+        "title": "Review buildspace ownership, composition and privacy design",
+        "updatedAt": "2026-10-08T18:17:21.766Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b617bbb1-7dc3-49cd-a409-ded6a501a8aa.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b617bbb1-7dc3-49cd-a409-ded6a501a8aa.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b617bbb1-7dc3-49cd-a409-ded6a501a8aa.json"
+}

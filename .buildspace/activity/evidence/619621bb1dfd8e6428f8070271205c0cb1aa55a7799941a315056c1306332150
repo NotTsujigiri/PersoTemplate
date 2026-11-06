@@ -1,0 +1,22 @@
+{
+  "time": "2026-09-27T09:53:46.545Z",
+  "app": "http://127.0.0.1:43130",
+  "root": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4f076d08-0ea0-4cfa-bac6-6872dcd379d6.json",
+  "review": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/04a48ac6-3f02-4dee-8148-7af28470b357.json",
+  "targetRevision": 50,
+  "fingerprint": "eaa0cee9fa524b0bb4c195fb309e6591a21641ea36d92643c85dc2bc54b13dcd",
+  "runId": "b0d3a84e-c664-4a1b-8bf1-eb81553c3c35",
+  "status": "passed",
+  "sourceUnchanged": true,
+  "independentDesignReview": "passed",
+  "independentBackendReview": "passed",
+  "independentUiReview": "passed",
+  "humanAcceptance": "pending",
+  "testTotals": [
+    "ℹ tests 66",
+    "ℹ pass 66",
+    "ℹ fail 0",
+    "  67 passed (3.1m)"
+  ],
+  "taskCount": 16
+}

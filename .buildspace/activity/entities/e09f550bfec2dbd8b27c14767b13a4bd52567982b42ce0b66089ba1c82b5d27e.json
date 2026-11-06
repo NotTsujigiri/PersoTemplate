@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14d10dc9-9e59-4772-aad4-620e8a5d9532.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14d10dc9-9e59-4772-aad4-620e8a5d9532.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T14:03:56.727Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 349,
+        "description": "",
+        "title": "Captured from your planning-review discussion: Keep feedback, answers and unresolved points in the review; direct human contribution can wait beyond the MVP.",
+        "updatedAt": "2026-10-06T14:10:33.517Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14d10dc9-9e59-4772-aad4-620e8a5d9532.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14d10dc9-9e59-4772-aad4-620e8a5d9532.json",
+      "properties": {
+        "anchor": {
+          "taskId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64d9a2ce-2007-4dc2-b23b-ea8fd1112976.json",
+          "taskTitle": "Route Systems inspection through a validated relational contribution"
+        },
+        "discussion": {
+          "closed": true,
+          "rootId": null
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Captured from your planning-review discussion: Keep feedback, answers and unresolved points in the review; direct human contribution can wait beyond the MVP."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/14d10dc9-9e59-4772-aad4-620e8a5d9532.json"
+}

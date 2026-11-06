@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e07c42ea-d872-4ba1-baa0-73ecf3ecce66.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e07c42ea-d872-4ba1-baa0-73ecf3ecce66.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-21T21:14:05.745Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 945,
+        "description": "Immutable attached evidence",
+        "title": "Solid node shapes with toggle dropdown.jpg",
+        "updatedAt": "2026-10-21T21:14:05.987Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e07c42ea-d872-4ba1-baa0-73ecf3ecce66.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e07c42ea-d872-4ba1-baa0-73ecf3ecce66.json",
+      "properties": {
+        "artifact": {
+          "hash": "4130c8e0221bd4872943eca3d38f7dbd6fc8653be7304ea1a6e451b065a2fca4",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/4130c8e0221bd4872943eca3d38f7dbd6fc8653be7304ea1a6e451b065a2fca4",
+          "mime": "image/jpeg",
+          "size": 59827
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e07c42ea-d872-4ba1-baa0-73ecf3ecce66.json"
+}

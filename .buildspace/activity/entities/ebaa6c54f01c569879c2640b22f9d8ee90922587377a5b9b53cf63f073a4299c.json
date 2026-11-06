@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/af974474-bcbc-4144-b4a2-2300a9e8add8.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/af974474-bcbc-4144-b4a2-2300a9e8add8.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-29T01:04:43.721Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1217,
+        "description": "Review section 6 of C:/Users/vince/Documents/GitHub/Btr/TheBroccoli/.runtime/planning/predicate-composer-reference/README.md: five usage sites, replacement signatures and behavior to preserve. The completed inventory task has an immutable ZIP of the original inventory version.\n\nReview the coverage and discuss the additional Graph editor predicates the user wants. Technical implementation choices are delegated to Codex; bring dependency decisions to the user. Update this same concise document for accepted changes before implementation.\r\n\r\nResume this predicate review after the relational engine API/implementation organization is agreed, its boundary is enforced, and all offending consumers are corrected. The final consumer-remediation task must refresh this same inventory for any changed API assumptions and supply the review evidence. Resubmit this review when that work is ready.",
+        "title": "7. Human review: predicate inventory and Graph editor additions",
+        "updatedAt": "2026-10-30T19:13:14.252Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/af974474-bcbc-4144-b4a2-2300a9e8add8.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/af974474-bcbc-4144-b4a2-2300a9e8add8.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "review",
+        "review": {
+          "outcomes": {},
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "draft",
+          "target": null
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/af974474-bcbc-4144-b4a2-2300a9e8add8.json"
+}

@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f80fdf7e-b282-46b9-ad72-047cd602d05d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f80fdf7e-b282-46b9-ad72-047cd602d05d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T12:29:05.497Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 671,
+        "description": "- Select a review in the task graph, open Help, narrow the viewport, return to Private.\n- Checkpoint recording shows only 118px of the selected range in a 163px pane; the required visible area is 131px.\n- Preserve selected-range visibility and later manual pan without relaxing the geometry assertion.",
+        "title": "Selected graph range is clipped after returning from hidden resize",
+        "updatedAt": "2026-10-19T06:07:43.450Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f80fdf7e-b282-46b9-ad72-047cd602d05d.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f80fdf7e-b282-46b9-ad72-047cd602d05d.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f80fdf7e-b282-46b9-ad72-047cd602d05d.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f80fdf7e-b282-46b9-ad72-047cd602d05d.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:13:18.801Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-19T06:07:43.450Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f80fdf7e-b282-46b9-ad72-047cd602d05d.json"
+}

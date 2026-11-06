@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64d9a2ce-2007-4dc2-b23b-ea8fd1112976.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64d9a2ce-2007-4dc2-b23b-ea8fd1112976.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T13:11:01.492Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 333,
+        "description": "# Deliverable\nA concrete source-model contribution and admission proposal after the nested task execution package is reviewed. Inspect System/package identity, fact ownership, compiler boundaries, engine admission and the cutover approach before implementation.\n\n## Serial sequence\nReview this approach, define ownership contracts, design enforcement cases, review the boundary and cases, contribute source facts, admit them into the engine, review admission evidence, switch views and remove the old path, then review cutover.\n\n## Criteria\nPreserve source-package coverage, buildspace scope, graph orientation, selection, zoom, filtering and both directions of Focus. Source facts come from one owner with explicit dependencies. Derive Instance of from authoritative node types. Separate declared dependencies, observed imports and semantic dependencies.\n\n## Open decisions\nWhether System and package are one identity; which existing contributor owns each fact; the precise boundary between compiler rejection and runtime admission. This task does not pre-approve those designs or move task/review ownership implicitly.",
+        "title": "Define the Systems contribution and admission approach",
+        "updatedAt": "2026-10-08T21:30:58.251Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64d9a2ce-2007-4dc2-b23b-ea8fd1112976.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64d9a2ce-2007-4dc2-b23b-ea8fd1112976.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "planning",
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/64d9a2ce-2007-4dc2-b23b-ea8fd1112976.json"
+}

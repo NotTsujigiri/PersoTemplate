@@ -1,0 +1,16 @@
+# Candidate dependency boundary verification
+
+The first submitted candidate (target revision 199) was withdrawn without human review after its isolated build exposed a stale nested-package dependency. Its earlier working-directory checkpoint passed 120 server and 101 browser tests, but did not establish correctness of isolated dependency preparation.
+
+Captured workspace and local directory dependency declarations now determine package scopes recursively. Local packages link only to captured source, with package-name and containment validation. Broken dependency copies fail explicitly. Shared manifest-only discovery orders owned builds before their consumers, detects cycles and missing owners, and does not run third-party package build scripts.
+
+Verification after the correction:
+
+- Five build-planner tests passed, including a cold TypeScript declaration/consumer regression.
+- Ten materialization and Preview tests passed; the final recursive-scope refinement also passed its two affected isolation tests.
+- A fresh actual build of TheBroccoli, BtrTemplate and PersoTemplate passed in 184 seconds. All three source fingerprints remained unchanged.
+- Independent engine, harness and UI reviews accepted the final dependency boundary. Source was then frozen.
+
+The new submitted candidate's mandatory checks are the final full checkpoint. Their authoritative results appear in the review itself; the earlier 120/101 run is not presented as the final result after this correction.
+
+This isolates captured source and local package ownership. Installed third-party dependencies are copied into isolation; this does not claim a fresh lockfile-verified dependency installation. No human approval, source-repository commit or merge has occurred.

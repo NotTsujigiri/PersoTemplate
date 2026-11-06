@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0df5e7cc-4f06-4641-8871-5ad337f6730c.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0df5e7cc-4f06-4641-8871-5ad337f6730c.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-14T12:39:44.221Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 507,
+        "description": "Added the Expand one level icon button beside the Checks filter. It opens the currently rendered branches without recursively opening newly revealed branches, while retaining filtering and selection. Extracted the existing one-level expansion behavior into the shared Tree module and reused it in the existing tree representation. Added its glyph to the shared Icon component.\n\nValidation: 8 focused shared Tree/Icon/representation checks and 4 Checks browser checks passed. Browser verification exercises consecutive expansion levels and existing filtering/selection. Inspected screenshots under Systems/Depth3/HarnessApp/test-results-expand-level. build.ps1 passed with zero type-safety violations. Activated through the guarded local restart API.\n\nThe wider Files/Checks/Review/Data models/UI components/Systems merger remains a proposal in chat; no merger was implemented.",
+        "title": "Add Expand one level to Checks",
+        "updatedAt": "2026-10-14T12:53:29.744Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0df5e7cc-4f06-4641-8871-5ad337f6730c.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0df5e7cc-4f06-4641-8871-5ad337f6730c.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0df5e7cc-4f06-4641-8871-5ad337f6730c.json"
+}

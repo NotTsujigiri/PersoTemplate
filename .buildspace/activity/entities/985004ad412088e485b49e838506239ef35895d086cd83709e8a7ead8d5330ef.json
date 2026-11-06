@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f69082c-f7a1-43b3-88fc-da6a1cab6750.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f69082c-f7a1-43b3-88fc-da6a1cab6750.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-06T05:44:13.005Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1414,
+        "description": "Move file access and watching out of HarnessApp into a configured filesystem contributor. Expose owned contracts and engine operations independent of agent sessions. Retain all visible paths, canonical file identities, stale-write rejection, deletion validation and watch invalidation. Update existing consumers and verify focused file/repository regressions.\n\nImplemented as @super-app/filesystem-contributor: configured roots, graph operations, root-scoped guarded access and native change observation. Existing Workspace and watcher consumers use the extracted contracts. Verified filesystem/engine, deletion, document identity, watcher and application-owner regressions; repository type safety and dependency-depth checks passed.",
+        "title": "Extract reusable filesystem access and observation",
+        "updatedAt": "2026-11-06T06:01:51.736Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f69082c-f7a1-43b3-88fc-da6a1cab6750.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f69082c-f7a1-43b3-88fc-da6a1cab6750.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0f69082c-f7a1-43b3-88fc-da6a1cab6750.json"
+}

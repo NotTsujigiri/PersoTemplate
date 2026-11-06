@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a038359-5823-4fe1-9434-ba4313f17fd9.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a038359-5823-4fe1-9434-ba4313f17fd9.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-06T05:44:13.009Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1414,
+        "description": "Use filesystem contributor capabilities to persist configured engine entities and relations as separate files updated in place. Save is distinct from commit. Detect invalid input and unsaved same-record conflicts; reconcile external changes through engine primitives. Include optional Git history/commit/conflict integration and LFS-aware assets. No domain vocabulary or revision-directory copies.\n\nImplemented in a2a55c52. One entity/relation file per record; engine-predicate selection, guarded batches, same-record conflict resolution, filesystem observation, optional isolated Git commits and on-demand committed snapshots. Non-Git operation is supported. Git uses native filters for configured LFS. Verification: 7 persistence scenarios, 4 filesystem scenarios, package TypeScript compilation, repository organization and full type-safety check. Activity-board adoption and real-data migration are the next task.",
+        "title": "Implement decentralized graph persistence with optional Git",
+        "updatedAt": "2026-11-06T07:08:51.818Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a038359-5823-4fe1-9434-ba4313f17fd9.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a038359-5823-4fe1-9434-ba4313f17fd9.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4a038359-5823-4fe1-9434-ba4313f17fd9.json"
+}

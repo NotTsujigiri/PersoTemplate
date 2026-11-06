@@ -1,0 +1,85 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-17T13:56:31.280Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 534,
+        "description": "- Audit final scope, removal evidence, strict compiler checks and complete checkpoint results across affected active packages.\n- Verify stored-data/runtime safety and accurate instance → component type → property → data type navigation.\n- Record findings, fixes and re-review until accepted; no intermediate human gate or weakened checks.\n- Approve only the verified candidate for checkpoint 3; provide a concise verdict and any remaining limitations.",
+        "title": "Agent review: migration completeness",
+        "updatedAt": "2026-10-18T18:44:45.146Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "agent:codex": {
+              "reason": "Independent boundary and inspection reviewers approve the committed migration. Final strict checking passes; 41 model tests, 571 unit/integration tests and 251 browser scenarios are covered across full plus focused runs. Existing live nodes expose components, properties and linked data types. Review iterations, failed full runs, storage audit and runtime limitations are preserved in the attached final evidence. Commit: 9c06556bf13ad32a6abcc467a118a775abe7a49f.",
+              "time": "2026-10-18T18:44:16.607Z",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "agent:codex",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-17T13:56:31.271Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 534,
+                      "description": "- Verify typed entities, repeated components, lazy views and observer consistency; remove predecessor APIs and owned data.\n- Passed: strict types, 41 model tests, 571 unit/integration tests and 251 browser scenarios across full plus focused runs; failed full runs remain recorded.\n- Existing nodes, component definitions, properties and data types inspected live; both independent agents approve.\n- Final checkpoint: 9c06556bf13ad32a6abcc467a118a775abe7a49f; evidence and review iterations attached to Agent review: migration completeness.",
+                      "title": "Verify migration, lazy updates and predecessor removal",
+                      "updatedAt": "2026-10-18T18:35:42.059Z"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "verification"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 693,
+            "sessions": [],
+            "submittedAt": "2026-10-18T18:38:00.221Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "review"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json"
+}

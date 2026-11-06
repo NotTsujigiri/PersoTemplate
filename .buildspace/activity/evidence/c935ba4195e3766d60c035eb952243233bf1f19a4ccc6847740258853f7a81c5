@@ -1,0 +1,274 @@
+{
+  "finding": "Full browser verification exposed source Git state missing from Check and Composition entities; filtering correctly honored the incomplete projection and hid review content.",
+  "decision": "Expose known source Git state independently of File identity. A false value means known unchanged; an absent value means no source/Git information.",
+  "review": "Kept original memory, node-editor and authoring assertions; reviewed explicit component identities and true/false query memberships before changing production.",
+  "beforeInput": [
+    {
+      "id": "check:changed",
+      "name": "Changed source check",
+      "repository": "fixture",
+      "path": "src/changed.ts",
+      "kind": "check",
+      "changed": true,
+      "status": "Not run",
+      "children": [],
+      "definition": {
+        "id": "check:changed",
+        "repository": "fixture",
+        "name": "Changed source check",
+        "command": "check changed",
+        "declaration": {
+          "uri": "src/changed.ts"
+        }
+      }
+    },
+    {
+      "id": "check:unchanged",
+      "name": "Unchanged source check",
+      "repository": "fixture",
+      "path": "src/unchanged.ts",
+      "kind": "check",
+      "changed": false,
+      "status": "Not run",
+      "children": [],
+      "definition": {
+        "id": "check:unchanged",
+        "repository": "fixture",
+        "name": "Unchanged source check",
+        "command": "check unchanged",
+        "declaration": {
+          "uri": "src/unchanged.ts"
+        }
+      }
+    },
+    {
+      "id": "composition:changed",
+      "name": "Changed source element",
+      "repository": "fixture",
+      "path": "src/changed.ts",
+      "kind": "composition",
+      "changed": true,
+      "status": "",
+      "children": []
+    },
+    {
+      "id": "composition:unchanged",
+      "name": "Unchanged source element",
+      "repository": "fixture",
+      "path": "src/unchanged.ts",
+      "kind": "composition",
+      "changed": false,
+      "status": "",
+      "children": []
+    }
+  ],
+  "beforeActual": {
+    "components": [
+      {
+        "id": "check:changed",
+        "typeIds": [
+          "repository:check",
+          "repository:source"
+        ],
+        "git": []
+      },
+      {
+        "id": "check:unchanged",
+        "typeIds": [
+          "repository:check",
+          "repository:source"
+        ],
+        "git": []
+      },
+      {
+        "id": "composition:changed",
+        "typeIds": [
+          "repository:composition",
+          "repository:source"
+        ],
+        "git": []
+      },
+      {
+        "id": "composition:unchanged",
+        "typeIds": [
+          "repository:composition",
+          "repository:source"
+        ],
+        "git": []
+      }
+    ],
+    "filters": [
+      {
+        "expression": "hasComponent(\"repository:file\")",
+        "matches": []
+      },
+      {
+        "expression": "\"repository:git.changed\":true",
+        "matches": []
+      },
+      {
+        "expression": "\"repository:git.changed\":false",
+        "matches": []
+      }
+    ]
+  },
+  "expected": {
+    "components": [
+      {
+        "id": "check:changed",
+        "typeIds": [
+          "repository:check",
+          "repository:git",
+          "repository:source"
+        ],
+        "git": [
+          {
+            "changed": true
+          }
+        ]
+      },
+      {
+        "id": "check:unchanged",
+        "typeIds": [
+          "repository:check",
+          "repository:git",
+          "repository:source"
+        ],
+        "git": [
+          {
+            "changed": false
+          }
+        ]
+      },
+      {
+        "id": "composition:changed",
+        "typeIds": [
+          "repository:composition",
+          "repository:git",
+          "repository:source"
+        ],
+        "git": [
+          {
+            "changed": true
+          }
+        ]
+      },
+      {
+        "id": "composition:unchanged",
+        "typeIds": [
+          "repository:composition",
+          "repository:git",
+          "repository:source"
+        ],
+        "git": [
+          {
+            "changed": false
+          }
+        ]
+      }
+    ],
+    "filters": [
+      {
+        "expression": "hasComponent(\"repository:file\")",
+        "matches": []
+      },
+      {
+        "expression": "\"repository:git.changed\":true",
+        "matches": [
+          "check:changed",
+          "composition:changed"
+        ]
+      },
+      {
+        "expression": "\"repository:git.changed\":false",
+        "matches": [
+          "check:unchanged",
+          "composition:unchanged"
+        ]
+      }
+    ]
+  },
+  "afterActual": {
+    "components": [
+      {
+        "id": "check:changed",
+        "typeIds": [
+          "repository:check",
+          "repository:git",
+          "repository:source"
+        ],
+        "git": [
+          {
+            "changed": true
+          }
+        ]
+      },
+      {
+        "id": "check:unchanged",
+        "typeIds": [
+          "repository:check",
+          "repository:git",
+          "repository:source"
+        ],
+        "git": [
+          {
+            "changed": false
+          }
+        ]
+      },
+      {
+        "id": "composition:changed",
+        "typeIds": [
+          "repository:composition",
+          "repository:git",
+          "repository:source"
+        ],
+        "git": [
+          {
+            "changed": true
+          }
+        ]
+      },
+      {
+        "id": "composition:unchanged",
+        "typeIds": [
+          "repository:composition",
+          "repository:git",
+          "repository:source"
+        ],
+        "git": [
+          {
+            "changed": false
+          }
+        ]
+      }
+    ],
+    "filters": [
+      {
+        "expression": "hasComponent(\"repository:file\")",
+        "matches": []
+      },
+      {
+        "expression": "\"repository:git.changed\":true",
+        "matches": [
+          "check:changed",
+          "composition:changed"
+        ]
+      },
+      {
+        "expression": "\"repository:git.changed\":false",
+        "matches": [
+          "check:unchanged",
+          "composition:unchanged"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "queue": "Original unchanged queue test passed isolated after one full-run deadline miss",
+    "focusedBrowser": "31 passed, 0 failed, 0 skipped across repository entity filter, composition, memory, node editor and UI editor",
+    "types": "Harness test project compilation passed",
+    "modelTests": "2 passed; identical known-source input and expected recordings; after actual exactly equals expected"
+  },
+  "metadataAudit": "Primary browser regressions declare reproduces metadata. Active Node reporter does not support reproduces diagnostics; no ineffective diagnostic or adapter expansion is retained."
+}

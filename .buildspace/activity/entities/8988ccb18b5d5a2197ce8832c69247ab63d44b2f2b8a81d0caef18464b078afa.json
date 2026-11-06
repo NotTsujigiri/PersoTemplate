@@ -1,0 +1,40 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6d8deaa9-151c-4968-b9ab-3e5479d2f9fe.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6d8deaa9-151c-4968-b9ab-3e5479d2f9fe.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-18T09:39:07.223Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 650,
+        "description": "",
+        "title": "Independent component reviewer confirmed fixture sequencing: the deliberately stale drag was followed by another gesture before the refreshed board rendered. Th",
+        "updatedAt": "2026-10-18T09:39:17.808Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6d8deaa9-151c-4968-b9ab-3e5479d2f9fe.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6d8deaa9-151c-4968-b9ab-3e5479d2f9fe.json",
+      "properties": {
+        "anchor": null,
+        "discussion": {
+          "closed": false,
+          "rootId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/12055bf2-2569-4047-b161-cb99c11cfaee.json"
+        },
+        "meaning": "feedback",
+        "processing": "unprocessed",
+        "rows": [
+          {
+            "kind": "explain",
+            "text": "Independent component reviewer confirmed fixture sequencing: the deliberately stale drag was followed by another gesture before the refreshed board rendered. The fixture now waits for the uniquely identified new notification card and the earlier Queued card; production and all stale-write/priority/Waiting assertions are unchanged. Focused rerun passed; reviewer inspected the final Waiting/Backlog screenshot. Full-suite acceptance remains pending."
+          }
+        ]
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6d8deaa9-151c-4968-b9ab-3e5479d2f9fe.json"
+}

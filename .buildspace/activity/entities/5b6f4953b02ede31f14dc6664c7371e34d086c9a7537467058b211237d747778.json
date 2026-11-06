@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1b0e1712-37dd-4821-acdc-ea715b6e3840.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1b0e1712-37dd-4821-acdc-ea715b6e3840.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T07:49:03.292Z",
+        "createdBy": "agent:codex",
+        "description": "Agree a usable complete operation surface before implementing the contextual views.\n\nScope\n\n• Apply the full accepted visual direction and latest written corrections; record reusable component/CRUD coverage. Design only, no runtime implementation.\n\nSuccess criteria\n\n1. Images plus written requirements cover the agreed board, Node, graph and Review surfaces; missing interactions are explicitly specified rather than claimed from screenshots.\n\n2. Operation parity and reusable component boundaries are documented.\n\n3. User explicitly accepted the design as good enough, including final small corrections, before development.\n\nEvidence\n\n• Final user annotation message: Make one more generation... I confirm its good enough.\n\n• Accepted images and authoritative corrections in imageReview\n\n• Component map and acceptance contract\n\nExplicit user design acceptance; app behavior remains unimplemented.",
+        "title": "Review coherent MVP CRUD images and component coverage",
+        "updatedAt": "2026-09-30T09:21:53.006Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1b0e1712-37dd-4821-acdc-ea715b6e3840.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1b0e1712-37dd-4821-acdc-ea715b6e3840.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "design"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1b0e1712-37dd-4821-acdc-ea715b6e3840.json"
+}

@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4d0bf7bb-87a7-4f9e-92e0-428268de6104.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4d0bf7bb-87a7-4f9e-92e0-428268de6104.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-27T23:39:00.058Z",
+        "createdBy": "agent:codex",
+        "description": "Independent review found an existing selection race in planning Changes: when two file detail reads finish out of order, the older read can reach inspectFile after the newer selection. Reproduce with delayed responses before fixing; preserve selected file, pending drafts and immutable anchors. This was not introduced by the 14 annotation corrections.",
+        "title": "Protect review-file selection against out-of-order responses",
+        "updatedAt": "2026-10-09T12:17:26.926Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4d0bf7bb-87a7-4f9e-92e0-428268de6104.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4d0bf7bb-87a7-4f9e-92e0-428268de6104.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4d0bf7bb-87a7-4f9e-92e0-428268de6104.json"
+}

@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e08330e-0730-47e7-894e-8d15e3fa8cd6.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e08330e-0730-47e7-894e-8d15e3fa8cd6.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T06:56:02.842Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1050,
+        "description": "Immutable attached evidence",
+        "title": "Native worker new full-suite failure 2026-10-24.json",
+        "updatedAt": "2026-10-24T06:56:03.191Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e08330e-0730-47e7-894e-8d15e3fa8cd6.json#planning%3Aevidence",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e08330e-0730-47e7-894e-8d15e3fa8cd6.json",
+      "properties": {
+        "artifact": {
+          "hash": "5f5378f7017b29eeaba962666f721ab475ee841ac01b7aff808a9e62ef5e4449",
+          "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/evidence/5f5378f7017b29eeaba962666f721ab475ee841ac01b7aff808a9e62ef5e4449",
+          "mime": "application/json",
+          "size": 3225
+        }
+      },
+      "typeId": "planning:evidence"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7e08330e-0730-47e7-894e-8d15e3fa8cd6.json"
+}

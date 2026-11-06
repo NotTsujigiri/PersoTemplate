@@ -1,0 +1,390 @@
+{
+  "name": "Windows cancellation verification",
+  "date": "2026-10-24",
+  "commits": [
+    "ba26f64",
+    "e24b0a8"
+  ],
+  "before": {
+    "record": "Systems/Depth3/HarnessApp/.harness/recordings/windows-cancellation/before.log",
+    "checks": 22,
+    "passed": 20,
+    "failed": 2
+  },
+  "after": {
+    "focused": {
+      "checks": 22,
+      "passed": 22
+    },
+    "fullApplicationSuite": {
+      "checks": 286,
+      "passed": 286
+    },
+    "limitsChanged": false
+  },
+  "recordings": [
+    {
+      "scenario": "concurrent",
+      "actual": [
+        {
+          "attempt": 0,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 1,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 2,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 3,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        }
+      ],
+      "expected": [
+        {
+          "attempt": 0,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 1,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 2,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 3,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        }
+      ]
+    },
+    {
+      "scenario": "startup",
+      "actual": [
+        {
+          "attempt": 0,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 1,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 2,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 3,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 4,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 5,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 6,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 7,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 8,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 9,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 10,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 11,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 12,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 13,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 14,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 15,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 16,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 17,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 18,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 19,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 20,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 21,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 22,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 23,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        }
+      ],
+      "expected": [
+        {
+          "attempt": 0,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 1,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 2,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 3,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 4,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 5,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 6,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 7,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 8,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 9,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 10,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 11,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 12,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 13,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 14,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 15,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 16,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 17,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 18,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 19,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 20,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 21,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 22,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        },
+        {
+          "attempt": 23,
+          "stopped": true,
+          "completedPromptly": true,
+          "descendantAlive": false
+        }
+      ]
+    },
+    {
+      "scenario": "orphan",
+      "actual": {
+        "cancelled": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      },
+      "expected": {
+        "cancelled": true,
+        "completedPromptly": true,
+        "descendantAlive": false
+      }
+    }
+  ]
+}

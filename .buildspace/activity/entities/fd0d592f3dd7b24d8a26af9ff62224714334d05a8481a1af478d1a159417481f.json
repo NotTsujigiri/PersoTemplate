@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/05aff937-7fd0-4b3f-b426-764df8ce7914.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/05aff937-7fd0-4b3f-b426-764df8ce7914.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-20T10:00:36.491Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 889,
+        "description": "Explore whether property and component can share one model. This is an idea for further thought, not an accepted merger design.\n\nDiscussion context\nProperty declarations are already represented as components in reflection. This raises the possibility of using the same composition, type declaration and validation machinery instead of maintaining parallel concepts.\n\nA distinction worth preserving or explicitly resolving: a property is a named, typed position within an owner. For example, start: Timestamp and end: Timestamp use the same type but play different roles because their keys differ. A component is currently an identifiable instance attached to a node; multiple instances can coexist, and it has no corresponding property key. The user found this key distinction persuasive and wants to think further before deciding.\n\nConsider ownership, instance identity, attachment, lifetime, repeated components, and the distinction between a property declaration and its value. Unifying representation need not erase useful role vocabulary. Determine whether a single composition mechanism can express these roles without duplicating authorities.\n\nSeparate accepted correction: every declared property is present; optionality belongs to its value data type. Property declarations should have neither hidden nor required. That correction is being implemented independently.",
+        "title": "Merge property and component",
+        "updatedAt": "2026-10-20T10:00:36.733Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/05aff937-7fd0-4b3f-b426-764df8ce7914.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/05aff937-7fd0-4b3f-b426-764df8ce7914.json",
+      "properties": {
+        "meaning": "idea",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/05aff937-7fd0-4b3f-b426-764df8ce7914.json"
+}

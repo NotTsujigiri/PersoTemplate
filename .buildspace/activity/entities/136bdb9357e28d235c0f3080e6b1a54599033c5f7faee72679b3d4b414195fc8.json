@@ -1,0 +1,39 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1cfcdd52-e6cb-4e34-a415-d66fc1138974.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1cfcdd52-e6cb-4e34-a415-d66fc1138974.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-06T13:57:52.653Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 334,
+        "description": "## Output\nThe agreed contributor exposes package/source facts using its exported contract, reusing ProjectTools discovery.\n\n## Work\nPreserve declared production-dependency coverage and discovered source packages outside the configured build. Keep observed import evidence distinct. Remove duplicate knowledge within this slice; do not introduce a second synchronized representation.\n\n## Why here\nThe boundary review determines the owner and contract before discovery code is moved or reworked.\n\n## Evidence\nFocused discovery tests, typed consumer examples and compile-time rejection cases from the reviewed strategy. Record any invariant that cannot be compiler-enforced and its runtime owner.",
+        "title": "Contribute source facts through owned types",
+        "updatedAt": "2026-10-08T18:16:16.601Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1cfcdd52-e6cb-4e34-a415-d66fc1138974.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1cfcdd52-e6cb-4e34-a415-d66fc1138974.json",
+      "properties": {
+        "placement": "blocked",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f4b19459-b17e-4702-99d3-59e265250072.json#policy",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1cfcdd52-e6cb-4e34-a415-d66fc1138974.json",
+      "properties": {
+        "gate": true,
+        "relation": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/f4b19459-b17e-4702-99d3-59e265250072.json"
+      },
+      "typeId": "planning:relation-policy"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1cfcdd52-e6cb-4e34-a415-d66fc1138974.json"
+}

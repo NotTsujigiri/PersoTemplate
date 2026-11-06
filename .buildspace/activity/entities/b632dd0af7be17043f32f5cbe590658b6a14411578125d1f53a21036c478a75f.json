@@ -1,0 +1,86 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a18fde6-8497-4332-acc9-3245ad04363d.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a18fde6-8497-4332-acc9-3245ad04363d.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-24T22:38:13.002Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1085,
+        "description": "Review the completed capability and dependency inventory with this limited decision:\n\n- Continue using the native TypeScript compiler tooling already used by the POC.\n- Every other candidate remains unapproved and deferred for later discussion.\n- Approval of this review does not approve those candidates or authorize starting the remaining query composer plan; we will discuss adjustments together.",
+        "title": "Human review: confirm existing TypeScript tooling and defer other dependency choices",
+        "updatedAt": "2026-10-27T02:19:53.210Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a18fde6-8497-4332-acc9-3245ad04363d.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a18fde6-8497-4332-acc9-3245ad04363d.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "review",
+        "review": {
+          "outcomes": {
+            "human:user": {
+              "reason": "",
+              "time": "2026-10-25T22:41:44.488Z",
+              "value": "approved"
+            }
+          },
+          "reviewers": [
+            {
+              "actorId": "human:user",
+              "required": true
+            }
+          ],
+          "runnables": [],
+          "status": "passed",
+          "target": {
+            "nodes": {
+              "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bfa4f56-9567-4060-9141-3c046cb2b0c9.json": {
+                "components": [
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bfa4f56-9567-4060-9141-3c046cb2b0c9.json#planning%3Aidentity",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bfa4f56-9567-4060-9141-3c046cb2b0c9.json",
+                    "properties": {
+                      "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+                      "createdAt": "2026-10-24T21:46:52.152Z",
+                      "createdBy": "agent:codex",
+                      "createdRevision": 1081,
+                      "description": "1. Tokenization: identify TypeScript tokens, comments and whitespace with exact source ranges.\n2. Parsing: expose expression structure, grouping and operator precedence, including while code is incomplete.\n3. Token classification: identify syntax and semantic categories so our theme can assign token colors.\n4. Type and symbol analysis: resolve names, scopes, members and inferred types from the declarations exposed by each host.\n5. Declaration resolution: load the permitted standard-library, module and application types used by the edited function.\n6. Contextual autocomplete: provide candidates, descriptions and insertion or replacement ranges for the current position and expected type.\n7. Type and signature help: expose inferred types, function parameters, return types and documentation.\n8. Diagnostics: report syntax and type errors with precise source ranges and actionable explanations.\n9. Syntax-tree editing and printing: generate source from structured edits with correct grouping, precedence and formatting.\n10. Compilation: turn checked TypeScript into executable JavaScript and prevent execution when compilation fails.\n11. Source mapping: relate generated JavaScript and runtime errors back to the user's TypeScript body.\n12. Incremental analysis: update tokens, types, diagnostics and completions after edits without rebuilding the entire language session.\n13. Browser and service support: make the same language capabilities available without depending on a graphical editor, including for MCP consumers.\n14. Controlled execution: run compiled lambdas with explicit host capabilities and support cancellation and time limits.\n15. Debugging: set breakpoints, pause/resume, step into/over/out, inspect call stacks, locals and watches, ideally down to each operator's operands and result.\n\nAvailable tools and alternatives are listed below; coverage refers to the numbered items, and these are candidates for review rather than approved dependency choices.\n\n- **TypeScript compiler API — already installed (POC: 5.9.3). Covers 1, 2, 4, 5, 8, 9, 10, 12; supplies source-map generation for 11 and host APIs for 13.** Scanner, parser, type checker, declaration/module resolver, syntax-tree factories, printer, compiler and incremental builders are in the same package. Browser/service integration and our editing commands remain ours. [GitHub](https://github.com/microsoft/TypeScript) · [Compiler API](https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API).\n- **TypeScript Language Service — included in that same package. Covers 3, 6, 7, 8, 12; formatting support for 9 and shared analysis for 13.** Provides syntactic/semantic token categories, completion entries and edits, type/signature/documentation help and diagnostics. Our theme assigns colors; our provider adapts suggestions for the language-independent autocomplete UI and MCP. [API definitions](https://github.com/microsoft/TypeScript/blob/v5.9.3/src/services/types.ts) · [Language Service](https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API).\n- **@typescript/vfs — optional host helper for 5, 12 and 13.** Supplies an in-memory file system and language-service environment for source and declaration files; an alternative to maintaining our own TypeScript host. It uses TypeScript for analysis. [GitHub](https://github.com/microsoft/TypeScript-Website/tree/v2/packages/typescript-vfs).\n- **Shiki — optional alternative for the syntax-coloring part of 3.** Offers TextMate grammars and ready-made themes across languages; it does not replace TypeScript's semantic analysis or the source tokens used for editing. Useful only if those grammar/theme capabilities justify an extra dependency. [GitHub](https://github.com/shikijs/shiki) · [Capabilities](https://shiki.style/guide/).\n- **@jridgewell/trace-mapping — optional helper for 11 and source positions in 15.** Reads compiler-generated maps in both directions to connect runtime locations and requested breakpoints to the authored body; it does not provide execution control or variable inspection. [GitHub](https://github.com/jridgewell/sourcemaps/tree/main/packages/trace-mapping).\n- **Web Workers / Node.js worker_threads — platform facilities covering the background execution and termination parts of 14.** Support message-based execution and stopping a worker, as demonstrated in the browser POC; workers alone do not restrict code to only our explicitly exposed capabilities. [Web Worker standard](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-terminate) · [Node.js GitHub](https://github.com/nodejs/node) · [Node worker API](https://nodejs.org/api/worker_threads.html).\n- **quickjs-emscripten — alternative execution engine for 14.** Embeds a JavaScript runtime in WebAssembly for browser and service use, with explicit host-function exposure, memory/stack limits and interruption hooks. Its documented debug mode is logging, not a ready breakpoint/call-stack/locals debugger for 15. [GitHub](https://github.com/justjake/quickjs-emscripten) · [Runtime controls](https://github.com/justjake/quickjs-emscripten/blob/main/doc/quickjs-emscripten/classes/QuickJSRuntime.md).\n- **Chrome DevTools Protocol + Node.js Inspector — native debugging route for 15.** Provide breakpoints, stepping, paused call frames, scopes and value inspection. Node exposes Inspector by default as an API; browser integration needs an attached debugger host, such as an extension or desktop bridge, rather than an ordinary page API. Stops at every individual operator are not guaranteed. [Protocol GitHub](https://github.com/ChromeDevTools/devtools-protocol) · [Node Inspector](https://nodejs.org/api/inspector.html) · [Browser debugger access](https://developer.chrome.com/docs/extensions/reference/api/debugger).\n- **JS-Interpreter — alternative to investigate for 14 and fine-grained stepping in 15.** Runs ES5 JavaScript one operation at a time and retains execution state/scopes; we would still build breakpoint handling and call-stack/locals presentation. Its ES5 language/runtime limitations and mapping back from compiled TypeScript need evaluation before adoption. [GitHub](https://github.com/NeilFraser/JS-Interpreter) · [Stepping documentation](https://neil.fraser.name/software/JS-Interpreter/docs.html).\n\nOperator-level debugging remains unproven: built-in operators such as === do not create function call frames. To show each operator's operands and result, investigate interpreter steps or instrumentation inserted with TypeScript's syntax-tree tools; this would be additional implementation, not a debugger included with TypeScript.\n\nThe next comparison should resolve the runtime/debugger fit for 14–15 before selecting an execution engine; the language-independent autocomplete UI remains separate from all language-specific tooling.\n\nResearch is enough, final verdict is deferred.\n\nCurrent decision: continue with only the native TypeScript compiler tooling already used by the POC. Every other candidate in this inventory remains unapproved and deferred. Completing this research task does not authorize adopting those candidates or starting the remaining plan.",
+                      "title": "Compare and select the compiler and language-service dependencies using the reviewed POC",
+                      "updatedAt": "2026-10-25T22:33:41.138Z",
+                      "updatedBy": "agent:codex"
+                    },
+                    "typeId": "planning:identity"
+                  },
+                  {
+                    "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bfa4f56-9567-4060-9141-3c046cb2b0c9.json#planning%3Atask",
+                    "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bfa4f56-9567-4060-9141-3c046cb2b0c9.json",
+                    "properties": {
+                      "placement": "completed",
+                      "purpose": "development",
+                      "stage": "planning"
+                    },
+                    "typeId": "planning:task"
+                  }
+                ],
+                "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/4bfa4f56-9567-4060-9141-3c046cb2b0c9.json"
+              }
+            },
+            "reviewerActed": true,
+            "revision": 1146,
+            "sessions": [],
+            "submittedAt": "2026-10-25T22:34:19.083Z"
+          }
+        },
+        "sessionIds": [],
+        "stage": "planning"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/0a18fde6-8497-4332-acc9-3245ad04363d.json"
+}

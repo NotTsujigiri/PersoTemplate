@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-02",
+  "branch": "codex/typescript-native-model-poc",
+  "baseline": "a6d988d",
+  "fullCheckpoint": {
+    "command": "npm run test:all",
+    "build": "passed",
+    "modelTests": 17,
+    "harnessTests": 163,
+    "graphTestsAtCheckpoint": 3,
+    "browserPassed": 121,
+    "browserFailed": 3
+  },
+  "corrections": [
+    {
+      "case": "buildspace collection view list",
+      "reason": "Update independently reviewed expected view list to include Data model; other expectations unchanged."
+    },
+    {
+      "case": "Data model toolbar entry",
+      "reason": "Use an isolated directory fixture; exact expected selection recording unchanged."
+    },
+    {
+      "case": "queue acceptance",
+      "reason": "Wait for the matching acceptance HTTP response; original semantic assertions and overall deadline unchanged."
+    }
+  ],
+  "finalFocusedRuns": [
+    {
+      "command": "npm --workspace @broccoli/harness run test:browser -- data-model-ui buildspace-layout-ui --output=test-results/model-focused",
+      "passed": 4
+    },
+    {
+      "command": "npm --workspace @broccoli/harness run test:browser -- review-queue-ui --output=test-results/queue-recheck",
+      "passed": 1
+    },
+    {
+      "command": "node --test Systems/Depth1/RelationalUi/dependency-graph.test.mjs",
+      "passed": 4
+    }
+  ],
+  "review": "Independent design, plan and implementation review found no remaining blockers. Desktop and narrow screenshots visually inspected; existing live service restarted and opened on the engine DataTypeDescriptor.",
+  "limitations": [
+    "Only explicit native validator bindings are listed; factory/runtime engine constraints are not exhaustively extracted.",
+    "Cross-type invariant inspection is deferred.",
+    "Model view is read-only; owning TypeScript remains authoritative."
+  ]
+}

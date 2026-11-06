@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-10-08T18:02:37.927Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 386,
+        "description": "# Task graph preparation\n\n## Delivered\nRecursive Task graph with retained parent title/type/state, actor identity, child count, expansion and collapse. Expanded parents now have a start circle below their children and an end circle above them. Containment supplies entry paths to children without a sibling predecessor and exit paths from children without a sibling successor. Every child lies on a forward path through its parent, recursively. Curves connect circle ports; sibling dependencies enter a composite task through its start and leave through its end. Focus keeps the real parent boundary and shows its immediate external sibling connections.\n\nThe model rejects dependency and review relations between tasks with different immediate parents, including invalid reparenting. Existing cycle validation plus containment entry/exit paths prevent floating child branches. The graph uses the same boundary diagnostics and the theme error color. Draft cross-boundary review gates can be lifted only after their sibling replacement exists in the same atomic mutation; ordinary gate removal and edits to submitted reviews remain forbidden.\n\nReview has Overview, Changes and Preview only. Changes compares captured task definitions and relations; there is no Plan tab. Local Now dividers, real review outcomes and recorded check runs remain. The implementation does not invent tasks, approvals, check results or assignments.\n\n## Approved plan repair\nAt revision 407, six cross-boundary prerequisites were replaced atomically with four sibling links. The outer sequence is sign-in/editor review → nested task execution package → contributor-owned models package → buildspace/privacy package → MVP acceptance audit. The duplicate child prerequisite on contributor encapsulation was removed because it is already required by its parent readiness task. The user explicitly approved these changes. The live MVP read then reported zero boundary violations and no model errors.\n\n## Verification\nThree new boundary tests cover atomic rejection, valid group reparenting, recursive reachability, upward route control points and guarded gate lifting. Related layout, dependency, readiness and editing tests pass. Six affected browser scenarios pass; expanded, collapsed and focused screenshots were inspected. The live graph shows both parent circles, 84 visible paths and zero backward paths. The authorized application restart loaded this work, including the earlier compact parent-header adjustment. The full checkpoint result is recorded in the attached boundary verification evidence when complete.\n\n## Model scope\nParent placement still comes from the current owner model. Parent-state aggregation, optional titles and the replacement review-iteration model remain for their planned design review. Author/reviewer icons show their recorded roles. Duration and scheduling remain deferred.\n\n## Acceptance\nInspect the MVP Task graph and compare the updated candidate through Changes. This task remains awaiting your acceptance; no human approval has been recorded.",
+        "title": "Make the MVP plan reviewable in the nested Task graph",
+        "updatedAt": "2026-10-09T14:53:00.944Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "need-analysis"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e7093d04-7c33-4187-ac7b-f3d9adc8db6f.json"
+}

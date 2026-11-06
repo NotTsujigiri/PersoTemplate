@@ -1,0 +1,179 @@
+{
+  "kind": "Derived high-level planning candidate",
+  "sourceRevision": 541,
+  "reviewScope": "Scope, order and gates only; not a detailed type API or implementation approval.",
+  "scopeInventory": [
+    {
+      "owner": "RelationEngine",
+      "path": "Systems/Depth0/RelationEngine",
+      "responsibility": "Entity/type identity, component attachment/access, queries, validation and model inspection",
+      "currentBoundary": "GraphNode has one typeNodeId and presentation fields; type definitions and runtime validation already exist."
+    },
+    {
+      "owner": "WebComponent",
+      "path": "Systems/Depth1/WebComponent",
+      "responsibility": "Discovered UI component and authored composition facts; preserve source ownership and edit guards"
+    },
+    {
+      "owner": "HarnessApp",
+      "path": "Systems/Depth3/HarnessApp",
+      "responsibility": "Current repository projection and authoring integration; central RepositoryNode.kind and caller-built schemas are replacement targets"
+    },
+    {
+      "owner": "RelationalUi",
+      "path": "Systems/Depth1/RelationalUi",
+      "responsibility": "Shared node editor and query/tree presentation; consume contributed definitions without domain enums"
+    },
+    {
+      "owner": "Filesystem and Git facts",
+      "path": "Declared owning packages and active composition",
+      "responsibility": "Map current providers before moving ownership; consumers must not duplicate facts"
+    },
+    {
+      "owner": "ProjectTools and model compiler",
+      "path": "Systems/Depth0/ProjectTools; engine model compiler",
+      "responsibility": "Strict TypeScript/project-reference checks and source-derived model output"
+    },
+    {
+      "owner": "Active consumers",
+      "path": "Root package.json workspaces, TSConfig references and the three active repository compositions",
+      "responsibility": "Derive complete impact closure before implementation; do not treat every source directory as an active project"
+    }
+  ],
+  "scopeLimits": [
+    "No game-loop or ECS scheduling framework is implied.",
+    "Do not redesign hover/state authoring or unrelated UI during the migration.",
+    "Detailed contract, persistence and model-compiler proof belongs to the first technical gate.",
+    "Inventory above is a source-based starting boundary; the implementation impact closure must be mechanically established."
+  ],
+  "tasks": [
+    {
+      "sequence": 1,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json",
+      "title": "Plan the compiler-guided migration",
+      "purpose": "planning",
+      "description": "- Bound the migration and list owners, consumers and predecessor APIs.\n- Sequence compiler checks, runtime checks, cutover and removal.\n- Give each human checkpoint at most three observable decisions.\n- Attach the concise candidate plan; no product migration before human approval.",
+      "prerequisites": [],
+      "diagnostics": []
+    },
+    {
+      "sequence": 2,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json",
+      "title": "Agent review: migration plan",
+      "purpose": "investigation",
+      "description": "- An independent subagent checks compiler leverage, ownership, sequencing and missing runtime guarantees.\n- Pin the reviewed plan revision and attach findings in Broccoli.\n- For changes requested, add correction and re-review children; retain each round.\n- Complete only after the subagent accepts the revised candidate; no human approval is implied.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/df800a02-92bf-4abd-ae10-a69d7ddf1dc8.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 3,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68af9814-29e9-4abf-a29d-8de1baab943c.json",
+      "title": "Human review: migration plan",
+      "purpose": "review",
+      "description": "- Review the short plan and the subagent findings/correction rounds.\n- Decide: is scope bounded, are checkpoints understandable, and is the first File + UI + Git exercise useful?\n- Code correctness belongs to compiler checks and technical review.\n- Approval gates implementation; this review does not approve future results.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/fcded66a-c31c-4397-a107-aa3ce5a9e536.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 4,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json",
+      "title": "Define typed contracts and compiler rejection checks",
+      "purpose": "development",
+      "description": "- Define typed entity/component contracts and ownership; settle type/component and relation semantics.\n- Compile valid consumers and require exact rejection diagnostics for wrong payloads, missing presence checks and invalid dependencies; no suppressions.\n- Prove existing model-compiler compatibility, including generic/recursive-type limits; derive runtime/inspection metadata from the same owned definitions.\n- Pass runtime rejection checks and rehearse affected persistence cutover on disposable data: stable identities/references, atomicity and failed-write recovery.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/68af9814-29e9-4abf-a29d-8de1baab943c.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 5,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4797236-6544-4184-97e4-c89efca8a8c6.json",
+      "title": "Agent review: contracts and compiler checks",
+      "purpose": "investigation",
+      "description": "- Independent subagent reviews compiler fixtures, declared dependencies and the existing model-compiler proof.\n- Require successful runtime checks and persistence rehearsal before any live cutover.\n- Pin results; record findings and correction/re-review children in Broccoli.\n- Accept only with one authoritative definition, derived validation/inspection, and no weakened types or compatibility APIs.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/973d9b81-4ed8-46df-9c24-c62d14515085.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 6,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json",
+      "title": "Cut over the repository and editor workflow",
+      "purpose": "development",
+      "description": "- After contract/compiler/data evidence passes technical review, replace core APIs and fix all compiler-reported callers without adapters.\n- Supply File, UiComponent and Git contributions to one entity without mutual domain dependencies.\n- Derive hasComponent filtering, fields and definition navigation from the same contributed model.\n- Require a compiling application and recordings for inspect, edit, save/reopen and stale-write rejection before demonstration.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/a4797236-6544-4184-97e4-c89efca8a8c6.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 7,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json",
+      "title": "Agent review: composed-node workflow",
+      "purpose": "investigation",
+      "description": "- Independent subagent reviews actual contracts, dependencies, compiler/runtime results and rendered behavior.\n- Verify one authoritative model serves repository bush, filtering and node editor.\n- Pin the candidate and record findings plus correction/re-review children in Broccoli.\n- Prepare a short, reproducible human exercise after technical acceptance.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/269b0bd7-f2b1-4bac-b099-424e932a58a2.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 8,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json",
+      "title": "Human review: File, UI component and Git workflow",
+      "purpose": "review",
+      "description": "- Select one source file and inspect its File, UI component and Git information together.\n- Filter by attached components; open their definitions and edit an allowed field, then save/reopen.\n- Decide whether identity, filtering and editing are understandable and useful.\n- Inspect the subagent verdict and unresolved limitations; no source audit required.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/561d99d3-edff-4e19-b6a9-b56b26321936.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 9,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json",
+      "title": "Complete semantic migration and remove predecessor",
+      "purpose": "development",
+      "description": "- Audit remaining contributors, queries, persistence and tools, including dynamic paths the compiler cannot find.\n- Remove the old kind enum, superseded APIs, schemas, adapters, tests, configuration and unused dependencies.\n- Repeat the approved cutover rehearsal and prove existing user data survives; retain no permanent legacy format.\n- Run strict type/dependency checks, full checkpoint tests and rendered UI verification; resolve affected regressions.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1ff82d11-33ae-4110-9d95-2055b6da8b08.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 10,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json",
+      "title": "Agent review: migration completeness",
+      "purpose": "investigation",
+      "description": "- Independent subagent audits all affected packages and removal evidence against the approved scope.\n- Check compiler coverage, runtime/storage behavior and absence of duplicated or compatibility contracts.\n- Record every finding and correction/re-review round in Broccoli.\n- Provide a concise final verdict and remaining risks before human acceptance.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/7cd2b765-5ccf-4c57-913f-5f62b42e72e3.json"
+      ],
+      "diagnostics": []
+    },
+    {
+      "sequence": 11,
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/e19648b5-2baf-4c8a-9770-c76600c4accd.json",
+      "title": "Human review: migration acceptance",
+      "purpose": "review",
+      "description": "- Repeat the File + UI + Git exercise and a normal UI-editor save/reopen workflow.\n- Review the short change summary, subagent verdict and remaining limitations.\n- Decide whether normal work is preserved and the migration can be accepted.\n- Only acceptance releases the remaining UI-editor work.",
+      "prerequisites": [
+        "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/697f94c3-9bd9-4221-8c37-179cfddf0d22.json"
+      ],
+      "diagnostics": []
+    }
+  ],
+  "humanDecisions": [
+    "Is scope bounded?",
+    "Are the checkpoints understandable?",
+    "Is File + UiComponent + Git the useful first exercise?"
+  ],
+  "reviewChanges": [
+    "R1: runtime/data cutover checks and disposable rehearsal now gate the first live cutover; final verification repeats them.",
+    "R2: contract work must prove compatibility with the current model compiler, including generic/recursive-type limits and one source for runtime/inspection metadata."
+  ]
+}

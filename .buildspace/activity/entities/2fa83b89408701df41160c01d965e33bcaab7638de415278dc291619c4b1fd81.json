@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239b744d-db32-44b5-9f14-e2e94789e856.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239b744d-db32-44b5-9f14-e2e94789e856.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-28T14:22:28.774Z",
+        "createdBy": "agent:codex",
+        "description": "Future idea, explicitly outside the MVP. Provide a dedicated view for finding past work, reachable contextually from Completed history. Recent history stays flat in Today / Yesterday / Last week / Last month / Last year groups. Add nesting only when a configurable count threshold warrants it; expanding groups triggers lazy fetching instead of Show more. Keep newly completed or changed items in explicit attention groups until acknowledged. User feedback on mockup Image 1, comments 1, 3, 5–7.",
+        "title": "Explore a dedicated view for finding past work",
+        "updatedAt": "2026-10-20T06:38:26.567Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239b744d-db32-44b5-9f14-e2e94789e856.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239b744d-db32-44b5-9f14-e2e94789e856.json",
+      "properties": {
+        "meaning": "idea",
+        "processing": "rejected"
+      },
+      "typeId": "planning:input"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/239b744d-db32-44b5-9f14-e2e94789e856.json"
+}

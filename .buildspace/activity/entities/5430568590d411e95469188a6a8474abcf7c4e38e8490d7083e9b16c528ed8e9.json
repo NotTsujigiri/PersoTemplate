@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a717392-6a47-434b-b867-2f434f38a440.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a717392-6a47-434b-b867-2f434f38a440.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-04T01:08:23.341Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 1349,
+        "description": "The current class RelationalEngine node represents a constructor call but its label does not make that clear. Proposed display format, to be reviewed by the user before this task is queued: new ClassName(parameter: Type, ...): ClassName. Concrete example from the current constructor: new RelationalEngine(options: RelationalEngineOptions): RelationalEngine. Derive parameter names/types and generic, optional and rest information from TypeScript. Keep the full construction signature instead of a class-only label.",
+        "title": "Show constructor signatures explicitly in the call graph",
+        "updatedAt": "2026-11-04T08:34:51.870Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a717392-6a47-434b-b867-2f434f38a440.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a717392-6a47-434b-b867-2f434f38a440.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/2a717392-6a47-434b-b867-2f434f38a440.json"
+}

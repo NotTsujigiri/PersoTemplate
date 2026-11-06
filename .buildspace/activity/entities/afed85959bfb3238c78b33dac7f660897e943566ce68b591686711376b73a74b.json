@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/577ee3c0-8f71-4ca3-a9c1-40442ce2b883.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/577ee3c0-8f71-4ca3-a9c1-40442ce2b883.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-09-30T13:08:55.753Z",
+        "createdBy": "agent:codex",
+        "createdRevision": 268,
+        "description": "Creating a task returns only a canonical graph identifier. Callers construct app URLs manually, which can select the wrong channel; a new browser tab cannot reuse the existing authenticated app session. Expected: tool read/create results supply canonical identity plus an app-owned credential-free browser link that opens the exact node in an authenticated browser. Never embed app or MCP bearer credentials in tool output.",
+        "title": "Task tools omit usable app links and links fail across browser tabs",
+        "updatedAt": "2026-09-30T13:08:55.865Z",
+        "updatedBy": "agent:codex"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/577ee3c0-8f71-4ca3-a9c1-40442ce2b883.json#planning%3Ainput",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/577ee3c0-8f71-4ca3-a9c1-40442ce2b883.json",
+      "properties": {
+        "meaning": "issue",
+        "processing": "unprocessed"
+      },
+      "typeId": "planning:input"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/577ee3c0-8f71-4ca3-a9c1-40442ce2b883.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/577ee3c0-8f71-4ca3-a9c1-40442ce2b883.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-10-20T06:34:07.713Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-09-30T13:08:55.865Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/577ee3c0-8f71-4ca3-a9c1-40442ce2b883.json"
+}

@@ -1,0 +1,380 @@
+{
+  "commit": "ce8479e",
+  "scope": "Five Activity board annotations",
+  "focusedTests": [
+    {
+      "name": "board and node editor share stable green nesting endpoints",
+      "status": "Passed",
+      "durationMs": 4056
+    },
+    {
+      "name": "Buildspace composes multi-pane groups and independently restores collapsed content",
+      "status": "Passed",
+      "durationMs": 7650
+    },
+    {
+      "name": "catalog panes use the global system",
+      "status": "Passed",
+      "durationMs": 2545
+    },
+    {
+      "name": "Chat and the only visible activity column share surplus proportionally",
+      "status": "Passed",
+      "durationMs": 2048
+    },
+    {
+      "name": "Chat Min fills Buildspace when the other content panes are hidden",
+      "status": "Passed",
+      "durationMs": 2734
+    },
+    {
+      "name": "Chat Min retains a usable conversation and composer width",
+      "status": "Passed",
+      "durationMs": 2048
+    },
+    {
+      "name": "collapsed borders share a rail and wheel switches the resized pane during a held drag",
+      "status": "Passed",
+      "durationMs": 1523
+    },
+    {
+      "name": "collapsed columns leading divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1137
+    },
+    {
+      "name": "collapsed columns middle divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1226
+    },
+    {
+      "name": "collapsed columns trailing divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1219
+    },
+    {
+      "name": "collapsed middle and trailing panes remain selectable on columns",
+      "status": "Passed",
+      "durationMs": 1722
+    },
+    {
+      "name": "collapsed middle and trailing panes remain selectable on rows",
+      "status": "Passed",
+      "durationMs": 2091
+    },
+    {
+      "name": "collapsed rows leading divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1117
+    },
+    {
+      "name": "collapsed rows middle divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1158
+    },
+    {
+      "name": "collapsed rows trailing divider follows the pointer exactly while switching panes",
+      "status": "Passed",
+      "durationMs": 1296
+    },
+    {
+      "name": "collapsing columns pane in direction -1 keeps the other dividers fixed",
+      "status": "Passed",
+      "durationMs": 968
+    },
+    {
+      "name": "collapsing columns pane in direction 1 keeps the other dividers fixed",
+      "status": "Passed",
+      "durationMs": 941
+    },
+    {
+      "name": "collapsing rows pane in direction -1 keeps the other dividers fixed",
+      "status": "Passed",
+      "durationMs": 973
+    },
+    {
+      "name": "collapsing rows pane in direction 1 keeps the other dividers fixed",
+      "status": "Passed",
+      "durationMs": 1007
+    },
+    {
+      "name": "columns middle collapsed borders share a draggable choice",
+      "status": "Passed",
+      "durationMs": 1390
+    },
+    {
+      "name": "columns nested edge borders share a draggable choice",
+      "status": "Passed",
+      "durationMs": 1210
+    },
+    {
+      "name": "columns trailing nested boundaries merge and retain the chosen resize on release",
+      "status": "Passed",
+      "durationMs": 1477
+    },
+    {
+      "name": "empty nested groups release columns space and remain restorable",
+      "status": "Passed",
+      "durationMs": 3191
+    },
+    {
+      "name": "empty nested groups release rows space and remain restorable",
+      "status": "Passed",
+      "durationMs": 2677
+    },
+    {
+      "name": "global mini layout keeps nesting and directional controls when live ancestors collapse",
+      "status": "Passed",
+      "durationMs": 1040
+    },
+    {
+      "name": "homogeneous columns modes fill space using content minimum proportions",
+      "status": "Passed",
+      "durationMs": 2667
+    },
+    {
+      "name": "homogeneous rows modes fill space using content minimum proportions",
+      "status": "Passed",
+      "durationMs": 2618
+    },
+    {
+      "name": "leaf width modes govern sharing through nested column groups",
+      "status": "Passed",
+      "durationMs": 2917
+    },
+    {
+      "name": "mini layout anchors a responsive dropdown at bottom right",
+      "status": "Passed",
+      "durationMs": 4748
+    },
+    {
+      "name": "mini layout anchors a responsive dropdown at center",
+      "status": "Passed",
+      "durationMs": 3416
+    },
+    {
+      "name": "mini layout anchors a responsive dropdown at top left",
+      "status": "Passed",
+      "durationMs": 3376
+    },
+    {
+      "name": "multi-pane columns allocation, thin collapse, drag and restore",
+      "status": "Passed",
+      "durationMs": 1774
+    },
+    {
+      "name": "multi-pane rows allocation, thin collapse, drag and restore",
+      "status": "Passed",
+      "durationMs": 1542
+    },
+    {
+      "name": "nested columns allocation follows restored modes before opening the menu",
+      "status": "Passed",
+      "durationMs": 3389
+    },
+    {
+      "name": "nested columns inner:0 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1189
+    },
+    {
+      "name": "nested columns inner:0 drag follows the pointer without moving other dividers and Escape restores allocations",
+      "status": "Passed",
+      "durationMs": 1224
+    },
+    {
+      "name": "nested columns outer:0 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1135
+    },
+    {
+      "name": "nested columns outer:0 drag follows the pointer without moving other dividers at pane limits",
+      "status": "Passed",
+      "durationMs": 1123
+    },
+    {
+      "name": "nested columns outer:1 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1139
+    },
+    {
+      "name": "nested columns outer:1 drag follows the pointer without moving other dividers at pane limits",
+      "status": "Passed",
+      "durationMs": 1149
+    },
+    {
+      "name": "nested rows allocation follows restored modes before opening the menu",
+      "status": "Passed",
+      "durationMs": 2881
+    },
+    {
+      "name": "nested rows inner:0 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1172
+    },
+    {
+      "name": "nested rows inner:0 drag follows the pointer without moving other dividers and Escape restores allocations",
+      "status": "Passed",
+      "durationMs": 1272
+    },
+    {
+      "name": "nested rows outer:0 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1266
+    },
+    {
+      "name": "nested rows outer:0 drag follows the pointer without moving other dividers at pane limits",
+      "status": "Passed",
+      "durationMs": 1139
+    },
+    {
+      "name": "nested rows outer:1 drag follows the pointer without moving other dividers",
+      "status": "Passed",
+      "durationMs": 1170
+    },
+    {
+      "name": "nested rows outer:1 drag follows the pointer without moving other dividers at pane limits",
+      "status": "Passed",
+      "durationMs": 1135
+    },
+    {
+      "name": "rows middle collapsed borders share a draggable choice",
+      "status": "Passed",
+      "durationMs": 1229
+    },
+    {
+      "name": "rows nested edge borders share a draggable choice",
+      "status": "Passed",
+      "durationMs": 1285
+    },
+    {
+      "name": "rows trailing nested boundaries merge and retain the chosen resize on release",
+      "status": "Passed",
+      "durationMs": 1565
+    },
+    {
+      "name": "tree and field minima follow visible content through nested splitters",
+      "status": "Passed",
+      "durationMs": 2695
+    },
+    {
+      "name": "unequal columns minima lose equal amounts and recover after a shortage",
+      "status": "Passed",
+      "durationMs": 3306
+    },
+    {
+      "name": "unequal rows minima lose equal amounts and recover after a shortage",
+      "status": "Passed",
+      "durationMs": 2741
+    }
+  ],
+  "live": {
+    "closedNewColor": "rgb(23, 56, 31)",
+    "groupPadding": "0px",
+    "splitterColor": "rgb(245, 245, 245)",
+    "waitingNewColor": "rgb(23, 56, 31)"
+  },
+  "beforeRecordings": ".harness/five-before-recordings",
+  "afterRecordings": [
+    ".harness/five-consumers",
+    ".harness/five-modes-pass"
+  ],
+  "fullCheckpoint": {
+    "command": "npm run test:all",
+    "exitCode": 1,
+    "build": "Passed",
+    "typeSafety": "Passed",
+    "modelsPassed": 44,
+    "unitTestsPassed": 624,
+    "browser": {
+      "total": 322,
+      "passed": 315,
+      "failed": 7,
+      "skipped": 0,
+      "failures": [
+        {
+          "name": "components use the shared repository tree and generic Visual preview",
+          "key": "browser:5d2afb2faac50a7593a5-e237c7922235c5d4536a",
+          "durationMs": 0,
+          "output": "Error: worker process exited unexpectedly (code=3221226505, signal=null)"
+        },
+        {
+          "name": "real graph uses explicit queries, selected-node inspection, refresh and shared navigation",
+          "key": "browser:c053dcb08e4c1d460d20-fcfe6d55a33dec88f21d",
+          "durationMs": 10767,
+          "output": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('region', { name: 'Graph editor viewport', exact: true }).getByRole('status', { name: 'Refresh available' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'Graph editor viewport', exact: true }).getByRole('status', { name: 'Refresh available' })\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\graph-editor-ui.spec.ts:68:73"
+        },
+        {
+          "name": "historical source stays at the selected revision and review-only chrome is absent",
+          "key": "browser:e6ac3eb71553202224f4-c11e3fef554e4bbcf63d",
+          "durationMs": 20189,
+          "output": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#prompt')\nExpected: enabled\nReceived: disabled\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeEnabled\" with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('#prompt')\u001b[22m\n\u001b[2m    3 × locator resolved to <textarea disabled rows=\"3\" id=\"prompt\" required=\"\" placeholder=\"What would you like to improve?\"></textarea>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\u001b[2m    30 × locator resolved to <textarea disabled rows=\"1\" id=\"prompt\" required=\"\" title=\"Message\" placeholder=\"Message\"></textarea>\u001b[22m\n\u001b[2m       - unexpected value \"disabled\"\u001b[22m\n\n    at waitForApplicationReady (C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\review-fixture.test-support.ts:10:41)\n    at selectReview (C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\review-fixture.test-support.ts:38:9)\n    at C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\historical-source-ui.spec.ts:66:5"
+        },
+        {
+          "name": "planning board CRUD, graph review, grouped feedback, exact changes and history",
+          "key": "browser:53b549d3b4338b8298e6-e57929de789e940a1acd",
+          "durationMs": 30125,
+          "output": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m\nError: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('menuitem', { name: 'Open timeline', exact: true })\u001b[22m\n\n    at C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\planning-ui.spec.ts:90:6"
+        },
+        {
+          "name": "recovery opens independently of a broken private script and edits it through the local engine",
+          "key": "browser:dd70813018efd847486e-b07bf2203e6e6d1da86f",
+          "durationMs": 9226,
+          "output": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 7\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[32m- import type {PrivateSpaceContext,PrivateSpaceDefinition} from '@super-app/default-super-app-template/private-space-contract';\u001b[39m\n\u001b[32m-\u001b[39m\n\u001b[32m- /** Initial data only: spaces and buildspaces can subsequently be created in the UI. */\u001b[39m\n\u001b[32m- export default function privateSpace(context:PrivateSpaceContext):PrivateSpaceDefinition {\u001b[39m\n\u001b[32m-  return context.defaults;\u001b[39m\n\u001b[32m- }\u001b[39m\n\u001b[32m-\u001b[39m\n\u001b[31m+ broken TypeScript !\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\private-space-recovery-ui.spec.ts:25:68"
+        },
+        {
+          "name": "task graph Ctrl+wheel preserves the pointed content and plain wheel scrolls",
+          "key": "browser:4ce0919089c48debb70a-67c0883b8889f9115bca",
+          "durationMs": 7537,
+          "output": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m400\u001b[39m\nReceived:   \u001b[31m400\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\task-graph-zoom-ui.spec.ts:85:6"
+        },
+        {
+          "name": "agent and human edits remain reviewable through named checks and full-file views",
+          "key": "browser:d425444c687fa36b5882-e474b5b4cb86d53a6781",
+          "durationMs": 60062,
+          "output": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m\nError: page.waitForResponse: Test timeout of 60000ms exceeded.\n    at C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\ui.spec.ts:69:25"
+        }
+      ]
+    },
+    "log": ".harness/five-checkpoint.log"
+  },
+  "followup": {
+    "total": 5,
+    "passed": 4,
+    "failed": 1,
+    "results": [
+      {
+        "name": "real graph uses explicit queries, selected-node inspection, refresh and shared navigation",
+        "status": "Passed",
+        "output": ""
+      },
+      {
+        "name": "historical source stays at the selected revision and review-only chrome is absent",
+        "status": "Passed",
+        "output": ""
+      },
+      {
+        "name": "planning board CRUD, graph review, grouped feedback, exact changes and history",
+        "status": "Passed",
+        "output": ""
+      },
+      {
+        "name": "recovery opens independently of a broken private script and edits it through the local engine",
+        "status": "Failed",
+        "output": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n\u001b[32m- Expected  - 7\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[32m- import type {PrivateSpaceContext,PrivateSpaceDefinition} from '@super-app/default-super-app-template/private-space-contract';\u001b[39m\n\u001b[32m-\u001b[39m\n\u001b[32m- /** Initial data only: spaces and buildspaces can subsequently be created in the UI. */\u001b[39m\n\u001b[32m- export default function privateSpace(context:PrivateSpaceContext):PrivateSpaceDefinition {\u001b[39m\n\u001b[32m-  return context.defaults;\u001b[39m\n\u001b[32m- }\u001b[39m\n\u001b[32m-\u001b[39m\n\u001b[31m+ broken TypeScript !\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at C:\\Users\\vince\\Documents\\GitHub\\Btr\\TheBroccoli\\Systems\\Depth3\\HarnessApp\\private-space-recovery-ui.spec.ts:25:68"
+      },
+      {
+        "name": "task graph Ctrl+wheel preserves the pointed content and plain wheel scrolls",
+        "status": "Passed",
+        "output": ""
+      }
+    ],
+    "diagnosis": "The remaining private-space recovery failure displays EPERM renaming private-space.ts.lock/private-space.ts to private-space.ts. The four other new full-suite failures pass on rerun.",
+    "log": ".harness/five-checkpoint-followup.log"
+  },
+  "affectedChecksInFullSuite": {
+    "passed": 53,
+    "total": 53
+  },
+  "screenshotReview": "Reviewed focused and full-run board colors/spacing plus merged splitter drag-selector screenshots; verified the live board after restarting the application."
+}
