@@ -8,9 +8,9 @@
         "createdAt": "2026-11-06T05:44:13.013Z",
         "createdBy": "agent:codex",
         "createdRevision": 1414,
-        "description": "Run required type/dependency checks, focused storage/Git/conflict tests and the checkpoint across affected repositories. Verify current data and stable URLs before and after cutover; inspect Activity board, repository and editing UI. Leave the live service running. Document commits, outcomes and remaining limitations without claiming unverified performance improvements.",
+        "description": "Run required type/dependency checks, focused storage/Git/conflict tests and the checkpoint across affected repositories. Verify current data and stable URLs before and after cutover; inspect Activity board, repository and editing UI. Leave the live service running. Document commits, outcomes and remaining limitations without claiming unverified performance improvements.\n\nCompleted verification\n\n- Migration preserved 3,224 entities (including 8 definitions), 1,024 relations and 274 evidence files. Current graph URLs remain stable. Ownership follows buildspace definitions and repository dependencies, not displayed names.\n- Final build, type-safety, organization and RelationalEngine API-boundary checks passed across the composed repositories. Type check: 1,905 authored files, zero violations.\n- DecentralizedPersistence: 15/15 tests passed, covering external edits, stale writes, conflicts, rollback, non-Git storage, optional Git, subscription lifetime and commits preserving unrelated staged/unstaged source changes.\n- The complete browser checkpoint exercised 425 cases: 389 initially passed and 36 failed. The failed scenarios were investigated and passed in focused follow-up runs after fixes and fixture corrections. This is not a claim of a clean single full-suite run. Recorded evidence remains in HarnessApp test-results and .harness/checkpoints/run-S68fQH/report.json.\n- Planning performance passed 3/3 when run in isolation with unchanged thresholds; the full checkpoint had a timing failure under concurrent load. No general speedup is claimed.\n- Live service rebuilt and restarted; migrated task graph, Activity board, Git revision choices, Repositories and regular file editor inspected. Cold startup and initial repository loading remain slow.\n- Historical snapshots were preserved in C:/Users/vince/.TheBroccoli/history/planning.git before removing the duplicated generation directories. The new history selector reads repository Git commits on demand; the pre-migration archive is separate and is not integrated into that selector.\n\nFinal implementation/verification commits: TheBroccoli 4c46c6a5 (preceded by 3527a5e3, 3e9cfec4, 923c9966, e943f271, c5ec2285, 2fd0c788 and e0443e42); migration commits TheBroccoli c17249fa, BtrTemplate ae06e42b, PersoTemplate 7ba91f04.\n\nHarnessContributor consolidation remains deferred for the agreed joint review of what remains after this extraction.",
         "title": "Verify persistence migration and repository consumers",
-        "updatedAt": "2026-11-06T05:44:13.300Z",
+        "updatedAt": "2026-11-06T18:59:39.824Z",
         "updatedBy": "agent:codex"
       },
       "typeId": "planning:identity"
@@ -19,9 +19,9 @@
       "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/483468b7-12f6-47ac-bdbd-06f2e7272a57.json#planning%3Atask",
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/483468b7-12f6-47ac-bdbd-06f2e7272a57.json",
       "properties": {
-        "placement": "blocked",
+        "placement": "completed",
         "purpose": "development",
-        "stage": "planning"
+        "stage": "verification"
       },
       "typeId": "planning:task"
     }
