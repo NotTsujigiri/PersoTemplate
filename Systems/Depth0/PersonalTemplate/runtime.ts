@@ -10,6 +10,11 @@ import {browserModule,composeApplicationConfiguration} from '@super-app/default-
 
 /** Compose the personal application and restore its private space through the Btr template. */
 export async function start(options:StartOptions&{home?:string}={}):Promise<ApplicationRuntime> {
+ const inheritedReady=options.browserReady;
+ options={...options,browserReady:async page=>{
+  await page.waitForFunction(()=>![...document.querySelectorAll('[aria-label="Personal information"]')].some(node=>node.textContent==='Loading personal information…'),null,{timeout:20000});
+  await inheritedReady?.(page);
+ }};
  const home=options.home??os.homedir(),root=options.root??process.cwd();
  const compose:NonNullable<StartOptions['configure']>=(base,context)=>{
   const configured=composePersonalConfiguration(base,{profilePath:path.join(context.storageDirectory,'personal-information.json')});
