@@ -4,10 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run check:types --prefix ../../.. && tsc -p tsconfig.json",
+    "build": "npm run check:types --prefix ../../.. && tsc -p tsconfig.runtime.json && tsc -p tsconfig.json",
     "test": "npm run check:types --prefix ../../.. && node --experimental-strip-types --test vault.test.ts"
   },
   "exports": {
+    "./runtime/source": "./runtime.ts",
     "./configuration": {"types":"./dist/configuration.d.ts","import":"./dist/configuration.js"},
     "./application/source": "./Depth0/Template/application.ts",
     ".": {
@@ -24,7 +25,9 @@
     "dist",
     "Depth0/Template",
     "tsconfig.json",
-    "vault.ts"
+    "vault.ts",
+    "runtime.ts",
+    "tsconfig.runtime.json"
   ],
   "dependencies": {
     "@btr/template": "file:../../../../../Btr/BtrTemplate",
@@ -34,7 +37,8 @@
   },
   "devDependencies": {
     "typescript": "^5.9.2",
-    "@types/node": "24.19.1"
+    "@types/node": "24.19.1",
+    "bun-types": "1.4.2"
   },
   "broccoli": {
     "compositionRoot": "../../.."
