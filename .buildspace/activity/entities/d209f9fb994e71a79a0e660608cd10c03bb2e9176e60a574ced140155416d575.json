@@ -10,8 +10,8 @@
         "createdRevision": 1386,
         "description": "Keep the text editor's rendered/raw Markdown toggle preference when switching between files. Returning to a Markdown file or opening another Markdown file must use the selected presentation; visiting a non-Markdown file must not reset the preference. Preserve unsaved drafts and existing save/reload behavior. Verify through the Repositories view with both rendered and raw preferences.",
         "title": "Preserve Markdown preview mode across file switches",
-        "updatedAt": "2026-11-05T21:30:16.978Z",
-        "updatedBy": "agent:codex"
+        "updatedAt": "2026-11-07T01:43:01.334Z",
+        "updatedBy": "human:user"
       },
       "typeId": "planning:identity"
     },
@@ -19,7 +19,7 @@
       "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfec14d5-8011-4f9e-9175-25a441f1e232.json#planning%3Atask",
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/cfec14d5-8011-4f9e-9175-25a441f1e232.json",
       "properties": {
-        "placement": "queued",
+        "placement": "completed",
         "purpose": "development",
         "stage": "implementation"
       },

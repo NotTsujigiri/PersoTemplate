@@ -24,6 +24,21 @@
         "stage": "need-analysis"
       },
       "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07892750-4700-4700-be15-c274883d269b.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07892750-4700-4700-be15-c274883d269b.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-07T04:38:25.693Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-10-28T17:54:01.614Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
     }
   ],
   "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/07892750-4700-4700-be15-c274883d269b.json"

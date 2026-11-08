@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f3007ef-5091-4bb8-b982-f71093555142.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f3007ef-5091-4bb8-b982-f71093555142.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-07T01:35:23.861Z",
+        "createdBy": "human:user",
+        "createdRevision": 1429,
+        "description": "Moving a task from Closed/New to Closed/Acknowledged can fail on the first attempted action with an obscure global stale-revision error. Reproduce a concurrent unrelated update and fix concurrency handling at its owning boundary so unaffected actions succeed while genuinely conflicting edits remain protected. Retain stale-write protection, preserve drafts, and make real conflict feedback understandable. Verify unrelated-record updates, same-record conflicts, rapid actions, and external persisted changes.",
+        "title": "Bug: Prevent unrelated changes from rejecting Activity board actions",
+        "updatedAt": "2026-11-07T02:07:33.503Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f3007ef-5091-4bb8-b982-f71093555142.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f3007ef-5091-4bb8-b982-f71093555142.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "verification"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1f3007ef-5091-4bb8-b982-f71093555142.json"
+}

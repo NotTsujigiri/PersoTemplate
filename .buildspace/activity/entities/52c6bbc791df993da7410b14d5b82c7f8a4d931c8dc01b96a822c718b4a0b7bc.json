@@ -10,8 +10,8 @@
         "createdRevision": 1349,
         "description": "Add Delete to the Repositories right-click menu for files and folders. Define directory deletion and unsaved-open-file behavior before implementation, use the owning workspace operation, and refresh the tree and selected detail after a successful deletion.",
         "title": "Delete repository files and folders from the context menu",
-        "updatedAt": "2026-11-04T09:41:54.339Z",
-        "updatedBy": "agent:codex"
+        "updatedAt": "2026-11-07T00:46:43.148Z",
+        "updatedBy": "human:user"
       },
       "typeId": "planning:identity"
     },
@@ -19,7 +19,7 @@
       "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1688e457-dc5b-472c-8bfc-d0776f9af609.json#planning%3Atask",
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/1688e457-dc5b-472c-8bfc-d0776f9af609.json",
       "properties": {
-        "placement": "completed",
+        "placement": "abandoned",
         "purpose": "development",
         "stage": "implementation"
       },

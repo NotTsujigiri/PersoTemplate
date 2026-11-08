@@ -10,8 +10,8 @@
         "createdRevision": 732,
         "description": "- Commits 0b917bf and 0edb2d0 fetch selected nodes and session-scoped review summaries instead of entire planning graphs.\n- Fresh browser recording confirms zero full planning-graph reads on repository startup; lazy editor and review scenarios pass.\n- Build and 623 model/application tests pass; browser suite is 262/263 with one native worker crash tracked separately.\n- Bulky session-history startup remains Backlog task 722e1434; work stopped at the user's return.",
         "title": "Improve application performance with progressive loading and lazy fetching",
-        "updatedAt": "2026-10-19T19:34:43.432Z",
-        "updatedBy": "agent:codex"
+        "updatedAt": "2026-11-07T00:48:54.561Z",
+        "updatedBy": "human:user"
       },
       "typeId": "planning:identity"
     },
@@ -19,7 +19,7 @@
       "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d10e8778-9757-436e-93e7-479f4b914743.json#planning%3Atask",
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/d10e8778-9757-436e-93e7-479f4b914743.json",
       "properties": {
-        "placement": "completed",
+        "placement": "abandoned",
         "priority": 4,
         "purpose": "development",
         "stage": "verification"

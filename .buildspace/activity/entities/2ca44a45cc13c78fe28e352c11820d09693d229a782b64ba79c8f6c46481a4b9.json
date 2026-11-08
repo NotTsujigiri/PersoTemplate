@@ -24,6 +24,21 @@
         "stage": "implementation"
       },
       "typeId": "planning:task"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97996f21-ebf0-4140-96b8-b4943ed49021.json#attention",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97996f21-ebf0-4140-96b8-b4943ed49021.json",
+      "properties": {
+        "acknowledgements": [
+          {
+            "acknowledgedAt": "2026-11-07T08:28:09.979Z",
+            "disposition": "acknowledged",
+            "observedUpdatedAt": "2026-11-03T07:04:14.831Z",
+            "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
+          }
+        ]
+      },
+      "typeId": "planning:attention"
     }
   ],
   "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/97996f21-ebf0-4140-96b8-b4943ed49021.json"

@@ -10,7 +10,7 @@
         "createdRevision": 1387,
         "description": "",
         "title": "Rework persistence of activity board entry / relation / revision",
-        "updatedAt": "2026-11-06T18:59:39.824Z",
+        "updatedAt": "2026-11-07T14:53:26.384Z",
         "updatedBy": "agent:codex"
       },
       "typeId": "planning:identity"

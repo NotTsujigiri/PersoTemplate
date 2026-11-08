@@ -32,9 +32,9 @@
       "properties": {
         "acknowledgements": [
           {
-            "acknowledgedAt": "2026-11-03T22:37:18.532Z",
+            "acknowledgedAt": "2026-11-07T07:58:25.440Z",
             "disposition": "acknowledged",
-            "observedUpdatedAt": "2026-11-03T20:14:01.308Z",
+            "observedUpdatedAt": "2026-11-04T08:29:29.323Z",
             "user": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"
           }
         ]

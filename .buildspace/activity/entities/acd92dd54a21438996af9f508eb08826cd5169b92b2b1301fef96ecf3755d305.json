@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/53d9adf5-fc49-418f-86dc-8109f6cf4099.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/53d9adf5-fc49-418f-86dc-8109f6cf4099.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-07T01:04:49.622Z",
+        "createdBy": "human:user",
+        "createdRevision": 1428,
+        "description": "Selecting an Activity board task takes too long to update the Node editor. Reproduce and measure the delay, then make selection feedback and loading responsive. The latest selection must win: obsolete requests must not block switching or replace the newly selected task. Avoid making ordinary selection wait unnecessarily for history or unrelated graph work. Preserve unsaved edits and stale-write protection. Verify rapid consecutive selections as well as the first selection after loading the board.",
+        "title": "Improve Node editor responsiveness when selecting Activity board tasks",
+        "updatedAt": "2026-11-07T01:58:06.140Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/53d9adf5-fc49-418f-86dc-8109f6cf4099.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/53d9adf5-fc49-418f-86dc-8109f6cf4099.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/53d9adf5-fc49-418f-86dc-8109f6cf4099.json"
+}

@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c438384d-cbc7-40a1-90e0-3b1aef389815.json#planning%3Aidentity",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c438384d-cbc7-40a1-90e0-3b1aef389815.json",
+      "properties": {
+        "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
+        "createdAt": "2026-11-07T01:35:23.859Z",
+        "createdBy": "human:user",
+        "createdRevision": 1429,
+        "description": "The Node editor commit selector currently lists planning-wide commits for every selected entry. Show commits affecting the selected Activity board entry, with relevant persisted relations considered deliberately, rather than unrelated records or repositories. History is an optional capability: nodes without a versioned persistence owner must not offer misleading history. Preserve Current for saved but uncommitted state. Verify two entries with different commits, selection changes, and a node without Git history support.",
+        "title": "Bug: Show Git history for the selected Activity board entry",
+        "updatedAt": "2026-11-07T01:54:28.638Z",
+        "updatedBy": "human:user"
+      },
+      "typeId": "planning:identity"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c438384d-cbc7-40a1-90e0-3b1aef389815.json#planning%3Atask",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c438384d-cbc7-40a1-90e0-3b1aef389815.json",
+      "properties": {
+        "placement": "completed",
+        "purpose": "development",
+        "stage": "implementation"
+      },
+      "typeId": "planning:task"
+    }
+  ],
+  "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/c438384d-cbc7-40a1-90e0-3b1aef389815.json"
+}

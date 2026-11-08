@@ -10,8 +10,8 @@
         "createdRevision": 564,
         "description": "- Fixed in 9733e18: capture textarea/input selection before menu focus changes.\n- Exact text, property identity and range remain in annotation context.",
         "title": "Bug: Annotating selected Description text loses the selection",
-        "updatedAt": "2026-10-19T18:03:14.628Z",
-        "updatedBy": "agent:codex"
+        "updatedAt": "2026-11-07T07:59:19.928Z",
+        "updatedBy": "human:user"
       },
       "typeId": "planning:identity"
     },
@@ -19,8 +19,8 @@
       "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json#planning%3Atask",
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/6524e8ea-79cc-41d1-8a07-742850ba329c.json",
       "properties": {
-        "placement": "completed",
-        "priority": 3,
+        "placement": "abandoned",
+        "priority": 4,
         "purpose": "development",
         "stage": "implementation"
       },

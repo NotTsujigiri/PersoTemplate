@@ -10,8 +10,8 @@
         "createdRevision": 1066,
         "description": "Keep draft/save interactive in a populated 400-task graph under concurrent checks without increasing the 1,000 ms save limit or weakening validation, immutable publication, stale-write rejection or idempotency.\n\nFour concurrent runs on the unchanged implementation reproduced two failures at 1,111 and 1,391 ms while saved data and validation matched. Publication used fixed 16-file batches, each waiting for its slowest file. Replaced those barriers with 16 continuously replenished writers. All writers drain before returning an error, and CURRENT advances only after the complete generation exists. No storage-format change; slower hard-link/copy experiments were removed.\n\nAll 12 saves across three concurrent rounds passed at 886–971 ms, and all 19 focused owner tests passed. Subsequent full-run saves also remained below the unchanged limit, including 799.23 ms in run-PMHhAv. Each performance run retains separate raw timing and resource evidence.\n\nEvidence: .harness/planning-concurrent-samples-20261025/, planning-pool-after-20261025/, planning-focused-after-20261025.log and HarnessApp/.harness/recordings/planning-performance/run-gkyAQl, run-Nn8HLG.\n\nCompleted in d762505. Final checkpoint .harness/checkpoints/run-RPaAAX/report.json passed in 38.34 minutes: 676 model/unit/tooling tests, 331 browser tests, zero failures and zero native crashes. Type, organisation, boundary and build checks passed. Source hashes remained unchanged throughout verification. Completion receipt: .harness/queued-work-completion-20261025.json. Changes are committed on codex/queued-work; the worktree is clean and the managed app is running on Node 24.22.1. The final 400-task save measured 831.08 ms.",
         "title": "Investigate planning save timing failure under concurrent checks",
-        "updatedAt": "2026-10-25T05:54:00.774Z",
-        "updatedBy": "agent:codex"
+        "updatedAt": "2026-11-07T08:00:04.774Z",
+        "updatedBy": "human:user"
       },
       "typeId": "planning:identity"
     },
@@ -19,7 +19,7 @@
       "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b36b8289-82ac-4afa-b677-d6b4b3848393.json#planning%3Atask",
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/b36b8289-82ac-4afa-b677-d6b4b3848393.json",
       "properties": {
-        "placement": "completed",
+        "placement": "abandoned",
         "priority": 2,
         "purpose": "investigation",
         "stage": "verification"
