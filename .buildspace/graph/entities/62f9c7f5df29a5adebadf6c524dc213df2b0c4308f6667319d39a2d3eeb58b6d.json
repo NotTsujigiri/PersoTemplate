@@ -13,12 +13,15 @@
       "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json#planning%3Aactor",
       "nodeId": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json",
       "properties": {
-        "actorId": "human:user",
-        "components": [
-          "actor:human"
-        ]
+        "actorId": "human:user"
       },
       "typeId": "planning:actor"
+    },
+    {
+      "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json#actor%3Ahuman",
+      "nodeId": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json",
+      "properties": {},
+      "typeId": "actor:human"
     }
   ],
   "id": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json"

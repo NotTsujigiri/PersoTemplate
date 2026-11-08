@@ -13,12 +13,15 @@
       "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json#planning%3Aactor",
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json",
       "properties": {
-        "actorId": "human:user",
-        "components": [
-          "actor:human"
-        ]
+        "actorId": "human:user"
       },
       "typeId": "planning:actor"
+    },
+    {
+      "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json#actor%3Ahuman",
+      "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json",
+      "properties": {},
+      "typeId": "actor:human"
     }
   ],
   "id": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json"

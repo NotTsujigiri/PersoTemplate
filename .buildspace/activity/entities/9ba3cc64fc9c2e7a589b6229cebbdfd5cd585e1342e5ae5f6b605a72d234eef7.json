@@ -6,11 +6,11 @@
       "properties": {
         "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
         "createdAt": "2026-09-27T23:35:12.889Z",
-        "createdBy": "system:schema-alignment",
+        "createdBy": "contributor://system-engineering/schema-alignment",
         "description": "Immutable evidence accompanying the original captured inputs.",
         "title": "Original input capture",
         "updatedAt": "2026-09-29T22:37:05.019Z",
-        "updatedBy": "system:schema-alignment"
+        "updatedBy": "contributor://system-engineering/schema-alignment"
       },
       "typeId": "planning:identity"
     },

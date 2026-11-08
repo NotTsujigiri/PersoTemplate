@@ -6,11 +6,11 @@
       "properties": {
         "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
         "createdAt": "2026-09-27T07:49:03.293Z",
-        "createdBy": "system:authorized-bootstrap",
+        "createdBy": "contributor://system-engineering/authorized-bootstrap",
         "description": "Immutable planning source and design evidence",
         "title": "images/V4-revision-2.png",
         "updatedAt": "2026-09-29T22:37:05.019Z",
-        "updatedBy": "system:authorized-bootstrap"
+        "updatedBy": "contributor://system-engineering/authorized-bootstrap"
       },
       "typeId": "planning:identity"
     },

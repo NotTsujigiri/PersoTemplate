@@ -6,11 +6,11 @@
       "properties": {
         "context": "99a62c14-535f-4d9a-9ab2-642ed280b795",
         "createdAt": "2026-10-06T17:28:30.390Z",
-        "createdBy": "system:state-history",
+        "createdBy": "contributor://system-engineering/state-history",
         "createdRevision": 364,
         "title": "blocked",
         "updatedAt": "2026-10-06T17:28:30.487Z",
-        "updatedBy": "system:state-history"
+        "updatedBy": "contributor://system-engineering/state-history"
       },
       "typeId": "planning:identity"
     },
