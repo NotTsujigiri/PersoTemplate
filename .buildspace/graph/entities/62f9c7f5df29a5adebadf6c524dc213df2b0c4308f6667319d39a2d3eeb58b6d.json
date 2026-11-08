@@ -14,7 +14,9 @@
       "nodeId": "graph://buildspaces-9a9f436c-ec9b-4a11-b083-4cf0a417efac/entries/actor-human%253Auser.json",
       "properties": {
         "actorId": "human:user",
-        "actorKind": "human"
+        "components": [
+          "actor:human"
+        ]
       },
       "typeId": "planning:actor"
     }

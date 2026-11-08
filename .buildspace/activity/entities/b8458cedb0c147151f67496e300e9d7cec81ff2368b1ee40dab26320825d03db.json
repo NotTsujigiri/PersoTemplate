@@ -14,7 +14,9 @@
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-human-user.json",
       "properties": {
         "actorId": "human:user",
-        "actorKind": "human"
+        "components": [
+          "actor:human"
+        ]
       },
       "typeId": "planning:actor"
     }

@@ -14,7 +14,7 @@
       "nodeId": "graph://planning-26535745-4644-4770-af7c-1980c773377b/entries/actor-agent-codex.json",
       "properties": {
         "actorId": "agent:codex",
-        "actorKind": "agent"
+        "components": []
       },
       "typeId": "planning:actor"
     }
