@@ -24,7 +24,7 @@
     "@perso/template": "0.1.0"
   },
   "devDependencies": {
-    "@super-app/web-component-contributor": "file:../../Btr/TheBroccoli/Systems/Depth1/WebComponent",
+    "@super-app/system-engineering-contributor": "file:../../Btr/TheBroccoli/Systems/Depth4/SystemEngineering",
     "@super-app/project-tools": "file:../../Btr/TheBroccoli/Systems/Depth0/ProjectTools"
   },
   "broccoli": {
