@@ -8,9 +8,10 @@
   ],
   "scripts": {
     "test": "npm run check:types && npm run test --workspace @perso/template",
+    "test:browser": "npm run test:browser --workspace @perso/template",
     "build": "npm run check:types && npm run check:organisation && npm run build --workspace @perso/template",
     "check:organisation": "check-system-organisation",
-    "check:types": "check-type-safety",
+    "check:types": "node Systems/Depth0/PersonalTemplate/generate-browser-types.ts && check-type-safety",
     "check:components:single-file": "check-web-components single-file . .harness/component-checks",
     "check:components:identity": "check-web-components identity . .harness/component-checks",
     "check:components:construction": "check-web-components construction . .harness/component-checks",

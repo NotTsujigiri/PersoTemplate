@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "npm run check:types --prefix ../../.. && tsc -p tsconfig.runtime.json && tsc -p tsconfig.json",
-    "test": "npm run check:types --prefix ../../.. && node --experimental-strip-types --test vault.test.ts"
+    "test": "npm run check:types --prefix ../../.. && node --experimental-strip-types --test \"*.test.ts\"",
+    "test:browser": "npm run check:types --prefix ../../.. && playwright test -c playwright.config.ts"
   },
   "exports": {
     "./runtime/source": "./runtime.ts",
@@ -37,6 +38,8 @@
     "@super-app/relational-engine": "file:../../../../../Btr/TheBroccoli/Systems/Depth0/RelationalEngine"
   },
   "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@super-app/relational-engine-web-bridge-contributor": "file:../../../../../Btr/TheBroccoli/Systems/Depth1/RelationalEngineWebBridge",
     "typescript": "^5.9.2",
     "@types/node": "24.19.1",
     "bun-types": "1.4.2"
