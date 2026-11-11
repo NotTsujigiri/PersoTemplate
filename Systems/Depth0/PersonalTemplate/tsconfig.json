@@ -11,7 +11,7 @@
     "declaration": true,
     "outDir": "dist",
     "rootDir": ".",
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "types": [
       "node"
     ],
