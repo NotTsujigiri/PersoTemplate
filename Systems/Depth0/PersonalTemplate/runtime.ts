@@ -3,12 +3,12 @@ import os from 'node:os';
 
 
 import {composePersonalConfiguration} from './configuration.ts';
-import {start as startHost,type StartOptions,type ApplicationRuntime} from '@btr/template/runtime/source';
+import {start as startHost,type StartOptions,type ApplicationRuntime} from '@super-app/application/runtime/source';
 import {openPrivateSpaceRepository} from '@super-app/default-super-app-template/private-space/source';
 import {createPrivateSpaceRecovery} from '@super-app/default-super-app-template/private-space-recovery/source';
 import {browserModule,composeApplicationConfiguration} from '@super-app/default-super-app-template/application-configuration';
 
-/** Compose the personal application and restore its private space through the Btr template. */
+/** Compose the personal application and restore its private space through the Broccoli's application runner. */
 export async function start(options:StartOptions&{home?:string}={}):Promise<ApplicationRuntime> {
  const inheritedReady=options.browserReady;
  options={...options,browserReady:async page=>{
