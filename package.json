@@ -10,7 +10,10 @@
     "Systems/Depth0/PersonalTemplate"
   ],
   "scripts": {
-    "test": "npm run check:types && npm run test --workspace @perso/template",
+    "start": "broccoli start Systems/Depth0/PersonalTemplate/runtime.ts",
+    "stop": "broccoli stop",
+    "mcp:register": "node Systems/Depth0/PersonalTemplate/runtime.ts register-mcp-client",
+    "test":"npm run check:types && npm run test --workspace @perso/template",
     "test:browser": "npm run test:browser --workspace @perso/template",
     "build": "npm run check:types && npm run check:organisation && npm run build --workspace @perso/template",
     "check:organisation": "check-system-organisation",
@@ -28,6 +31,7 @@
     "@perso/template": "0.1.0"
   },
   "devDependencies": {
+    "@super-app/application": "file:../../Btr/TheBroccoli/Systems/Depth6/Application",
     "@super-app/system-engineering-contributor": "file:../../Btr/TheBroccoli/Systems/Depth4/SystemEngineering",
     "@super-app/project-tools": "file:../../Btr/TheBroccoli/Systems/Depth0/ProjectTools"
   },

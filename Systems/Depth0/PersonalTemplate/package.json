@@ -9,7 +9,6 @@
     "test:browser": "npm run check:types --prefix ../../.. && playwright test -c playwright.config.ts"
   },
   "exports": {
-    "./runtime/source": "./runtime.ts",
     "./configuration": {"types":"./dist/configuration.d.ts","import":"./dist/configuration.js"},
     "./application/source": "./Depth0/Template/application.ts",
     ".": {
@@ -26,9 +25,7 @@
     "dist",
     "Depth0/Template",
     "tsconfig.json",
-    "vault.ts",
-    "runtime.ts",
-    "tsconfig.runtime.json"
+    "vault.ts"
   ],
   "dependencies": {
     "@btr/template": "file:../../../../../Btr/BtrTemplate",
