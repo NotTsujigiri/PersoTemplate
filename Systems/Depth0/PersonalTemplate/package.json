@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.62.1",
-    "@super-app/relational-engine-web-bridge-contributor": "file:../../../../../Btr/TheBroccoli/Systems/Depth1/RelationalEngineWebBridge",
+    "@super-app/relational-engine-web-bridge-contributor": "file:../../../../../Btr/TheBroccoli/Systems/Depth1/WebBridge",
     "typescript": "^5.9.2",
     "@types/node": "24.19.1",
     "bun-types": "1.4.2"
