@@ -30,8 +30,8 @@
   "dependencies": {
     "@btr/template": "file:../../../../../Btr/BtrTemplate",
     "@super-app/application": "file:../../../../../Btr/TheBroccoli/Systems/Depth6/Application",
-    "@super-app/default-super-app-template": "file:../../../../../Btr/TheBroccoli/Systems/Depth3/DefaultSuperAppTemplate",
-    "@super-app/relational-ui-contributor": "file:../../../../../Btr/TheBroccoli/Systems/Depth2/RelationalUi",
+    "@super-app/default-super-app-template": "file:../../../../../Btr/TheBroccoli/Systems/Depth4/DefaultSuperAppTemplate",
+    "@super-app/relational-ui-contributor": "file:../../../../../Btr/TheBroccoli/Systems/Depth3/RelationalUi",
     "@super-app/relational-engine": "file:../../../../../Btr/TheBroccoli/Systems/Depth0/RelationalEngine"
   },
   "devDependencies": {
