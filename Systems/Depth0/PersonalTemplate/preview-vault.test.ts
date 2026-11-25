@@ -4,7 +4,7 @@ import type { OperationInvocation } from "@super-app/relational-engine/Depth1/Co
 import { start } from "@super-app/application/runtime/source";
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, rm } from "node:fs/promises";
+import { mkdir, mkdtemp, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { composePersonalConfiguration } from "./configuration.ts";
@@ -21,9 +21,11 @@ async function invoke(origin:string,token:string,invocation:OperationInvocation)
 }
 
 test("personal information saved in a preview stays out of production", async () => {
-  const root = await mkdtemp(path.join(os.tmpdir(), "perso-preview-"));
+  const directory = await mkdtemp(path.join(os.tmpdir(), "perso-preview-")), root = path.join(directory, "repository");
+  await mkdir(root);
   const app = await start({
     root,
+    store: path.join(directory, "runtime"),
     port: 0,
     configure:(base,context)=>composePersonalConfiguration(base,{profilePath:path.join(context.storageDirectory,'profile.json')}),
     adapter: { models: [], create: async () => { throw Error("Agent execution is outside this test."); } },
@@ -38,6 +40,6 @@ test("personal information saved in a preview stays out of production", async ()
     assert.notDeepEqual(original.values.experience,['Preview only']);
   } finally {
     await app.close();
-    await rm(root, { recursive: true, force: true });
+    await rm(directory, { recursive: true, force: true });
   }
 });

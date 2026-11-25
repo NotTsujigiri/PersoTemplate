@@ -1,5 +1,5 @@
 {
-  "extends": ["./tsconfig.json", "../../../.runtime/browser-types.json"],
+  "extends": ["./tsconfig.json", "./dist/browser-types.json"],
   "compilerOptions": {
     "noEmit": true,
     "types": ["node", "bun-types/sqlite"],

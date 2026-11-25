@@ -10,22 +10,22 @@
     "Systems/Depth0/PersonalTemplate"
   ],
   "scripts": {
-    "start": "broccoli start Systems/Depth0/PersonalTemplate/runtime.ts",
-    "stop": "broccoli stop",
+    "start": "node Systems/Depth0/PersonalTemplate/runtime.ts start",
+    "stop": "node Systems/Depth0/PersonalTemplate/runtime.ts stop",
     "mcp:register": "node Systems/Depth0/PersonalTemplate/runtime.ts register-mcp-client",
     "test": "npm run check:types && npm run test --workspace @perso/template",
     "test:browser": "npm run test:browser --workspace @perso/template",
     "build": "npm run check:types && npm run check:organisation && npm run build --workspace @perso/template",
     "check:organisation": "check-system-organisation",
     "check:types": "node Systems/Depth0/PersonalTemplate/generate-browser-types.ts && check-type-safety",
-    "check:components:single-file": "check-web-components single-file . .harness/component-checks",
-    "check:components:identity": "check-web-components identity . .harness/component-checks",
-    "check:components:construction": "check-web-components construction . .harness/component-checks",
-    "check:components:empty-default": "check-web-components empty-default . .harness/component-checks",
-    "check:components:lit": "check-web-components lit . .harness/component-checks",
-    "check:components:decorators": "check-web-components decorators . .harness/component-checks",
-    "check:components:element-interfaces": "check-web-components element-interfaces . .harness/component-checks",
-    "check:components:documentation": "check-web-components documentation . .harness/component-checks"
+    "check:components:single-file": "check-web-components single-file .",
+    "check:components:identity": "check-web-components identity .",
+    "check:components:construction": "check-web-components construction .",
+    "check:components:empty-default": "check-web-components empty-default .",
+    "check:components:lit": "check-web-components lit .",
+    "check:components:decorators": "check-web-components decorators .",
+    "check:components:element-interfaces": "check-web-components element-interfaces .",
+    "check:components:documentation": "check-web-components documentation ."
   },
   "dependencies": {
     "@perso/template": "0.1.0"
